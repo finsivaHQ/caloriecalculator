@@ -1,0 +1,149 @@
+---
+import Button from "../../../components/ui/Button.astro";
+import ContentLayout from "../../../layouts/ContentLayout.astro";
+import ArticleImage from "../../../components/ui/ArticleImage.astro";
+import type { FaqItem } from "../../../lib/seo";
+
+const faqs: FaqItem[] = [
+  { 
+    q: "¿Cuántas calorías debo comer para perder peso?", 
+    a: "No existe un número universal. Debes comer menos calorías de las que tu cuerpo gasta (déficit calórico). Generalmente, las personas comienzan restando entre 300 y 500 calorías de su mantenimiento diario estimado." 
+  },
+  { 
+    q: "¿Qué es un déficit calórico?", 
+    a: "Es el estado en el que tu cuerpo se encuentra cuando consumes menos energía (calorías) de la que utiliza para sus funciones básicas y la actividad física, obligándolo a usar sus reservas de energía, como la grasa corporal." 
+  },
+  { 
+    q: "¿Cuántas calorías debo restar para adelgazar?", 
+    a: "Aunque las necesidades individuales varían, una reducción moderada de 300 a 500 calorías suele utilizarse como punto de partida. Reducciones extremas pueden dificultar la adherencia y causar fatiga." 
+  },
+  { 
+    q: "¿Es necesario contar calorías para perder peso?", 
+    a: "No. Contar calorías es una herramienta muy útil, pero muchas personas pierden peso modificando el tamaño de sus porciones, priorizando proteínas y vegetales, y aumentando su nivel de actividad física diaria." 
+  },
+  { 
+    q: "¿Por qué no estoy perdiendo peso aunque tengo un déficit?", 
+    a: "Si el peso en la báscula no baja después de varias semanas, es probable que no estés realmente en un déficit calórico. Esto puede ocurrir al sobreestimar el gasto energético, subestimar la ingesta de alimentos o por fluctuaciones temporales de líquidos." 
+  },
+  { 
+    q: "¿Las calorías calculadas por una fórmula son exactas?", 
+    a: "No, las calculadoras y fórmulas matemáticas proporcionan una estimación inicial. Siempre debes monitorear tus resultados y ajustar gradualmente tu ingesta de acuerdo a tu progreso real." 
+  },
+  {
+    q: "¿Puedo perder peso comiendo cualquier alimento si estoy en déficit?",
+    a: "Técnicamente sí, el déficit calórico determina la pérdida de peso. Sin embargo, para mantener la salud, la energía y la saciedad, es fundamental basar tu dieta en alimentos ricos en nutrientes, proteínas y fibra."
+  }
+];
+
+const seoTitle = "Calorías para Perder Peso: ¿Cuántas Necesito?";
+const seoDescription = "Descubre cuántas calorías para perder peso necesitas consumir. Aprende cómo establecer un déficit calórico de manera moderada, sostenible y sin extremos.";
+---
+
+<ContentLayout
+  title={seoTitle}
+  h1="Calorías para Perder Peso: ¿Cuántas Necesito?"
+  description={seoDescription}
+  path="/country/spain/calorias-para-perder-peso/"
+  category="Guías"
+  categoryPath="/country/spain/calculadora-de-calorias/"
+  lead="Si tu objetivo es reducir tu porcentaje de grasa, el balance energético es la base del proceso. Descubre cómo calcular y aplicar las calorías para perder peso de forma razonable."
+  updated="Septiembre 2026"
+  faqs={faqs}
+  lang="es"
+>
+  <ArticleImage src="/assets/images/articles/calorie-surplus.svg" alt="Gráfico conceptual sobre el déficit calórico y las calorías para perder peso." />
+
+  <p>Cuando te planteas mejorar tu composición corporal, la primera pregunta que suele surgir es directa: ¿cuántas <strong>calorías para perder peso</strong> necesito consumir cada día? En un mundo lleno de dietas complejas y reglas contradictorias, el principio fundamental detrás de la pérdida de peso es sorprendentemente sencillo: el déficit de energía.</p>
+
+  <p>Para perder peso, generalmente necesitas encontrarte en un déficit calórico. Esto significa consumir, a lo largo del tiempo, menos calorías de las que tu cuerpo gasta en sus funciones vitales y movimientos diarios. Sin embargo, encontrar la cifra adecuada para tu cuerpo requiere entender algunos conceptos básicos para evitar enfoques extremos.</p>
+
+  <p class="text-sm text-mute italic border-l-4 border-brand pl-4 my-6">Nota: La información de esta guía tiene fines educativos. Si tienes condiciones médicas, antecedentes de trastornos alimentarios o necesidades nutricionales especiales, busca la orientación de un profesional de la salud debidamente cualificado.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Cuántas calorías necesito para perder peso?</h2>
+  <p>No existe un único número mágico de calorías para perder peso que funcione para todo el mundo. Tus requerimientos de energía son completamente individuales y dependen de varios factores, como tu peso inicial, edad, sexo, composición corporal y, sobre todo, tu nivel de actividad física diaria.</p>
+  
+  <p>Para comprender tus necesidades, primero debes conocer tus <strong>calorías de mantenimiento</strong>. Estas son las calorías que tu cuerpo requiere para mantener su peso actual (conformadas por tu <a href="/country/spain/como-calcular-mis-calorias-diarias/" class="text-brand hover:underline">Tasa Metabólica Basal y tu nivel de actividad física</a>). Si consumes sistemáticamente una cantidad de energía por debajo de tus calorías de mantenimiento, tu cuerpo se verá obligado a obtener la energía faltante utilizando sus reservas almacenadas, principalmente el tejido adiposo (grasa).</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Cómo saber cuántas calorías puedo consumir para perder peso?</h2>
+  <p>El proceso para determinar tu objetivo calórico consta de cuatro pasos generales:</p>
+
+  <ol class="list-decimal pl-6 space-y-3 mb-6">
+    <li><strong>Estima tus calorías de mantenimiento:</strong> Utiliza una fórmula matemática o una calculadora para obtener un punto de partida sobre cuánta energía gastas al día.</li>
+    <li><strong>Elige un déficit razonable:</strong> Resta una cantidad moderada de calorías a tu mantenimiento estimado.</li>
+    <li><strong>Monitorea los resultados a lo largo del tiempo:</strong> Observa la tendencia de tu peso y tus medidas durante un periodo de dos a cuatro semanas. No te centres en las fluctuaciones diarias.</li>
+    <li><strong>Ajusta si es necesario:</strong> Si tu peso se mantiene igual después de un tiempo prudencial, es posible que el cálculo inicial fuera demasiado alto y debas realizar un pequeño ajuste a la baja.</li>
+  </ol>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Cuánto déficit calórico necesito?</h2>
+  <p>En el ámbito de la nutrición deportiva, a menudo se habla de reducir entre 300 y 500 calorías diarias por debajo del mantenimiento. Esta cantidad <strong>puede utilizarse como punto de partida</strong> razonable para muchas personas que buscan una reducción de peso progresiva, pero <strong>no es una cantidad adecuada para todas las personas</strong>.</p>
+  
+  <p>Las necesidades individuales varían enormemente. Una persona de gran tamaño y muy activa puede tolerar un déficit mayor que una persona pequeña o inactiva cuyo mantenimiento ya es relativamente bajo. La clave es elegir un déficit que te permita seguir rindiendo en tu día a día, comer suficientes nutrientes y no sentir un hambre incontrolable que te lleve a abandonar tus hábitos.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Qué pasa si como muy pocas calorías?</h2>
+  <p>Es común pensar que, si un pequeño déficit es bueno, un déficit enorme será mejor y más rápido. Sin embargo, las dietas extremadamente restrictivas con muy pocas calorías pueden presentar varias dificultades:</p>
+
+  <ul class="list-disc pl-6 space-y-3 mb-6">
+    <li><strong>Hambre y fatiga:</strong> La falta severa de energía puede dejarte agotado, dificultando tu rendimiento en el trabajo o durante el ejercicio físico.</li>
+    <li><strong>Deficiencias nutricionales:</strong> Al comer muy poca cantidad de alimentos, resulta sumamente difícil alcanzar las recomendaciones diarias de vitaminas, minerales y fibra.</li>
+    <li><strong>Baja adherencia:</strong> Las dietas demasiado estrictas suelen ser insostenibles a largo plazo. Muchas veces resultan en abandono rápido y posterior recuperación del peso.</li>
+  </ul>
+  
+  <p>Por lo tanto, la moderación suele ser una estrategia más prudente para la mayoría de las personas.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Cuánto tiempo tardaré en perder peso?</h2>
+  <p>El ritmo al que tu cuerpo responde a un déficit calórico varía de forma considerable entre diferentes personas. Tu peso de partida, composición corporal actual, genética, consistencia con la dieta y fluctuaciones de agua (por sodio, carbohidratos, estrés u hormonas) juegan un papel importante.</p>
+
+  <p>Es fundamental entender que los cambios a corto plazo en la báscula no siempre representan verdaderos cambios en el porcentaje de grasa corporal. Darle tiempo al proceso y centrarse en la tendencia mensual suele ofrecer una perspectiva mucho más realista y menos frustrante.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Necesito contar calorías para perder peso?</h2>
+  <p><strong>No necesariamente.</strong> El recuento de calorías es una herramienta sumamente precisa e instructiva, pero no es el único camino hacia el déficit calórico. Muchas personas logran reducir su ingesta energética total de forma indirecta mediante otras estrategias:</p>
+
+  <ul class="list-disc pl-6 space-y-3 mb-6">
+    <li>Reducir el tamaño de las porciones de alimentos altamente calóricos.</li>
+    <li>Aumentar el consumo de proteínas magras y vegetales ricos en fibra, lo cual incrementa la saciedad.</li>
+    <li>Disminuir el consumo de calorías líquidas y alimentos ultraprocesados.</li>
+    <li>Aumentar significativamente el nivel de actividad física diaria.</li>
+  </ul>
+  <p>Dicho esto, contar calorías temporalmente puede ayudarte a ser más consciente de cuánta energía aportan realmente tus comidas favoritas.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Ejemplo hipotético</h2>
+  <p>Para entender los números, observemos un ejemplo puramente ilustrativo (no es una recomendación universal):</p>
+
+  <div class="bg-surface-elevated border border-hairline rounded-xl p-6 my-8">
+    <p>Imaginemos a una persona adulta ficticia cuyo Gasto Energético Total Diario (mantenimiento estimado) es de <strong>2,400 calorías al día</strong>.</p>
+    <ul class="list-disc pl-6 space-y-2 mt-4">
+      <li>Si esta persona desea mantener su peso, su objetivo rondará las 2,400 calorías.</li>
+      <li>Si decide aplicar un déficit moderado de 400 calorías como punto de partida:</li>
+    </ul>
+    <p class="font-bold text-xl mt-4 text-center">2,400 - 400 = 2,000 calorías diarias</p>
+    <p class="mt-4">Este individuo consumiría aproximadamente 2,000 calorías diarias. Pasadas unas semanas, evaluaría su progreso físico y su nivel de energía para decidir si debe mantener la ingesta o realizar un ajuste.</p>
+  </div>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Calculadora de Calorías para Perder Peso</h2>
+  <p>Si prefieres no hacer los cálculos matemáticos de tu Tasa Metabólica Basal y tu nivel de actividad manualmente, puedes utilizar nuestra herramienta gratuita. Nuestra <a href="/country/spain/calculadora-de-calorias/" class="text-brand hover:underline font-medium">Calculadora de Calorías</a> estima rápidamente:</p>
+
+  <ul class="list-disc pl-6 space-y-3 mb-6">
+    <li>Tu Tasa Metabólica Basal (TMB).</li>
+    <li>Tu Gasto Energético Total (GET) o calorías de mantenimiento.</li>
+    <li>Estimaciones de calorías para perder peso o ganar peso de forma moderada.</li>
+  </ul>
+
+  <div class="text-center my-10">
+    <Button href="/country/spain/calculadora-de-calorias/" variant="primary" size="lg" class="w-full sm:w-auto">
+      Calculadora de Calorías
+    </Button>
+  </div>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Consejos para interpretar el resultado</h2>
+  <p>Finalmente, cuando obtengas tus números o comiences a aplicar un déficit, mantén estas expectativas racionales en mente:</p>
+
+  <ul class="list-disc pl-6 space-y-3 mb-6">
+    <li><strong>Son solo estimaciones:</strong> Trata cualquier resultado de una calculadora como un punto de partida inicial, no como un dato biométrico médicamente exacto.</li>
+    <li><strong>Observa las tendencias, no el peso diario:</strong> El cuerpo retiene líquidos por diversas razones. Compara promedios semanales para una visión clara.</li>
+    <li><strong>Date tiempo:</strong> No cambies tu objetivo de calorías a los tres días simplemente porque la báscula no se ha movido. Otorga al cuerpo al menos un par de semanas para adaptarse.</li>
+    <li><strong>Ajustes graduales:</strong> Si determinas que necesitas ajustar tus calorías después de semanas sin progreso en tu tendencia de peso, hazlo en pequeños bloques (ej. 100-200 calorías) en lugar de recortes drásticos.</li>
+  </ul>
+
+  <p>Comprender tus <a href="/country/spain/cuantas-calorias-debo-consumir-al-dia/" class="text-brand hover:underline">necesidades diarias de energía</a> es el primer paso. El segundo, y el más valioso, es aplicar esa información con paciencia, consistencia y sentido común.</p>
+
+</ContentLayout>
