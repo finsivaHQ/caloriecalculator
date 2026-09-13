@@ -1,0 +1,181 @@
+const fs = require('fs');
+
+const content = `---
+import Button from "../../../components/ui/Button.astro";
+import ContentLayout from "../../../layouts/ContentLayout.astro";
+import ArticleImage from "../../../components/ui/ArticleImage.astro";
+import type { FaqItem } from "../../../lib/seo";
+
+const faqs: FaqItem[] = [
+  { 
+    q: "¿Cómo calculo mis calorías diarias?", 
+    a: "Para calcular tus calorías diarias, primero debes estimar tu Tasa Metabólica Basal (TMB) mediante una fórmula como Mifflin-St Jeor. Luego, multiplicas ese número por un factor que represente tu nivel de actividad física para obtener tu Gasto Energético Total (GET)." 
+  },
+  { 
+    q: "¿Qué diferencia hay entre TMB y TDEE/GET?", 
+    a: "La TMB (Tasa Metabólica Basal) es la energía que tu cuerpo requiere para sobrevivir en completo reposo. El TDEE (Gasto Energético Total Diario) o GET incluye la TMB más todas las calorías que quemas al moverte, hacer ejercicio y digerir los alimentos a lo largo del día." 
+  },
+  { 
+    q: "¿Qué fórmula se utiliza para calcular las calorías?", 
+    a: "Existen varias ecuaciones matemáticas, pero una de las más comunes y estudiadas actualmente es la fórmula de Mifflin-St Jeor, ya que proporciona una estimación inicial fiable para la mayoría de los adultos sanos." 
+  },
+  { 
+    q: "¿Necesito contar las calorías todos los días?", 
+    a: "No es estrictamente necesario a largo plazo. Muchas personas cuentan calorías de manera temporal para aprender sobre el valor energético de los alimentos y comprender sus porciones, para luego transicionar a hábitos de alimentación más intuitivos basados en esas estimaciones." 
+  },
+  { 
+    q: "¿Las calorías calculadas son exactas?", 
+    a: "No. Todas las calculadoras y fórmulas matemáticas proporcionan una estimación o punto de partida. Tu metabolismo real puede variar según la genética, el estrés, el historial de dietas, los cambios hormonales y el margen de error al clasificar tu nivel de actividad física real." 
+  },
+  { 
+    q: "¿Cómo calculo las calorías para perder peso?", 
+    a: "Una vez que hayas calculado tu gasto energético total (GET), puedes restarle un porcentaje o una cantidad fija (generalmente entre 300 y 500 calorías) para crear un déficit calórico que promueva una pérdida de peso gradual y sostenible." 
+  },
+];
+
+const seoTitle = "¿Cómo Calcular Mis Calorías Diarias? Guía Paso a Paso";
+const seoDescription = "Aprende cómo calcular tus calorías diarias paso a paso. Conoce la diferencia entre TMB y GET, y cómo ajustar tu dieta para mantener, perder o ganar peso.";
+---
+
+<ContentLayout
+  title={seoTitle}
+  h1="¿Cómo Calcular Mis Calorías Diarias? Guía Paso a Paso"
+  description={seoDescription}
+  path="/country/spain/como-calcular-mis-calorias-diarias/"
+  category="Guías"
+  categoryPath="/country/spain/calculadora-de-calorias/"
+  lead="Saber calcular calorías diarias es fundamental si buscas optimizar tu nutrición. Descubre paso a paso el proceso matemático para estimar cuánta energía gasta tu cuerpo."
+  updated="Septiembre 2026"
+  faqs={faqs}
+  lang="es"
+>
+  <ArticleImage src="/assets/images/articles/basal-metabolism.svg" alt="Ilustración matemática que muestra cómo se calculan las calorías diarias." />
+
+  <p>Cuando te propones alcanzar una meta física o nutricional, a menudo surge una pregunta fundamental: ¿Cómo averiguar exactamente cuánta energía utilizo cada día? Aunque es tentador buscar un número universal y aplicarlo sin más, tus necesidades energéticas dependen de múltiples factores biológicos y de estilo de vida.</p>
+
+  <p>En este artículo, detallaremos el método manual sobre cómo calcular mis calorías diarias paso a paso. También puedes consultar nuestra guía complementaria sobre <a href="/country/spain/cuantas-calorias-debo-consumir-al-dia/" class="text-brand hover:underline font-medium">cuántas calorías debo consumir al día</a> para entender más a fondo qué variables alteran tus necesidades totales.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Qué necesitas para calcular tus calorías diarias?</h2>
+  <p>Antes de comenzar con cualquier ecuación matemática, necesitas reunir datos específicos sobre ti. No hay un solo número de calorías aplicable a todo el mundo. Las fórmulas requieren la siguiente información básica:</p>
+  
+  <ul class="list-disc pl-6 space-y-3 mb-6">
+    <li><strong>Edad:</strong> El metabolismo cambia con el paso de los años.</li>
+    <li><strong>Sexo:</strong> Generalmente afecta a las proporciones de masa muscular y grasa.</li>
+    <li><strong>Peso:</strong> Influye en cuánta energía necesitas para sostener y mover tu cuerpo.</li>
+    <li><strong>Altura:</strong> Afecta a la superficie corporal total y a la masa general.</li>
+    <li><strong>Actividad física:</strong> Desde el trabajo de escritorio hasta los deportes de resistencia.</li>
+    <li><strong>Objetivo:</strong> Si deseas mantener el peso, perder grasa corporal o aumentar tu masa muscular.</li>
+  </ul>
+  
+  <p>Con estos seis datos en mente, estás listo para aplicar el cálculo de calorías diarias en la práctica. Todo se resume en cuatro pasos fundamentales.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Paso 1 — Calcular la Tasa Metabólica Basal (TMB)</h2>
+  <p>El primer paso es descubrir tu Tasa Metabólica Basal (TMB). La TMB representa la energía mínima aproximada que tu cuerpo necesita para mantener las funciones fisiológicas básicas en completo reposo (como respirar, mantener la temperatura corporal, la circulación de la sangre y la regeneración celular).</p>
+
+  <p>Existen diferentes fórmulas matemáticas creadas a lo largo de las últimas décadas. Una de las más habituales en el ámbito de la nutrición contemporánea es la <strong>ecuación de Mifflin-St Jeor</strong>, desarrollada en 1990. Se considera una buena estimación inicial para adultos sanos, aunque, por supuesto, no existe ninguna fórmula universal que sea "perfecta" o "100% exacta".</p>
+
+  <div class="bg-canvas-soft border border-hairline rounded-xl p-6 my-8">
+    <h3 class="font-bold text-lg mb-4">Ecuación de Mifflin-St Jeor (Sistema métrico)</h3>
+    <ul class="space-y-4">
+      <li><strong>Hombres:</strong> <br> TMB = (10 &times; peso en kg) + (6.25 &times; altura en cm) - (5 &times; edad en años) + 5</li>
+      <li><strong>Mujeres:</strong> <br> TMB = (10 &times; peso en kg) + (6.25 &times; altura en cm) - (5 &times; edad en años) - 161</li>
+    </ul>
+  </div>
+
+  <p>Al aplicar estos números, obtendrás las calorías que quemarías si pasaras 24 horas descansando en la cama sin realizar el más mínimo esfuerzo. Evidentemente, la mayoría de nosotros no vivimos así, por lo que debemos avanzar al siguiente paso.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Paso 2 — Tener en cuenta la actividad física</h2>
+  <p>Tu TMB no representa tu Gasto Energético Total. Cada movimiento que realizas suma un costo calórico adicional. Esto se denomina termogénesis por actividad (NEAT, por sus siglas en inglés, para los movimientos no relacionados con el ejercicio, y el ejercicio estructurado).</p>
+  
+  <p>Para estimar este gasto extra, utilizamos multiplicadores de actividad. Generalmente se agrupan en estas categorías comunes:</p>
+
+  <ul class="list-disc pl-6 space-y-3 mb-6">
+    <li><strong>Sedentario (TMB &times; 1.2):</strong> Poco o nulo ejercicio, trabajo de escritorio (por ejemplo, trabajar frente a un ordenador todo el día y relajarse en el sofá).</li>
+    <li><strong>Actividad ligera (TMB &times; 1.375):</strong> Ejercicio ligero o deporte 1-3 días a la semana, o un trabajo que implique estar de pie ocasionalmente.</li>
+    <li><strong>Actividad moderada (TMB &times; 1.55):</strong> Ejercicio o deporte moderado 3-5 días a la semana (ej. trotar, ir al gimnasio de forma consistente).</li>
+    <li><strong>Muy activo (TMB &times; 1.725):</strong> Ejercicio intenso o deportes 6-7 días a la semana, o trabajos que requieran esfuerzo físico constante (ej. albañilería, camareros muy activos).</li>
+    <li><strong>Extremadamente activo (TMB &times; 1.9):</strong> Ejercicio muy intenso diario, entrenamientos dobles, o un trabajo físico extremadamente exigente y exhaustivo.</li>
+  </ul>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Paso 3 — Calcular el TDEE o GET</h2>
+  <p>Al juntar los dos elementos anteriores, obtenemos la cifra más importante: tu <strong>TDEE (Total Daily Energy Expenditure)</strong>, conocido en español como <strong>Gasto Energético Total (GET)</strong>.</p>
+  
+  <p class="text-xl font-medium text-center p-6 bg-brand/5 rounded-xl my-6">
+    TMB &times; Factor de actividad física &approx; TDEE / GET
+  </p>
+  
+  <p>Este número, el TDEE, es el estimado de tus calorías de mantenimiento. Representa la cantidad aproximada de energía que puedes consumir diariamente sin subir ni bajar de peso con tu nivel de actividad actual.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Paso 4 — Ajustar las calorías según tu objetivo</h2>
+  <p>Una vez que sabes cuál es tu mantenimiento (TDEE), puedes manipular este número según tus metas personales.</p>
+
+  <h3 class="text-2xl font-semibold text-ink mt-8 mb-4">Mantener el peso</h3>
+  <p>Si deseas mantener tu peso actual, tu objetivo debe ser consumir una cantidad de calorías diaria que ronde tu TDEE estimado. Si tu peso fluctúa significativamente tras un par de semanas, significa que el cálculo inicial estaba sobreestimado o subestimado.</p>
+
+  <h3 class="text-2xl font-semibold text-ink mt-8 mb-4">Perder peso</h3>
+  <p>Para perder grasa, necesitas consumir menos calorías de las que tu cuerpo requiere, lo que se conoce como déficit calórico. Generalmente, una reducción de entre 300 y 500 calorías por debajo de tu TDEE suele considerarse un enfoque moderado que favorece la sostenibilidad y minimiza la pérdida de masa muscular. Evita los déficits extremos, ya que pueden tener impactos metabólicos negativos a largo plazo.</p>
+
+  <h3 class="text-2xl font-semibold text-ink mt-8 mb-4">Ganar peso</h3>
+  <p>Si tu propósito es la hipertrofia o aumentar tu peso corporal, debes aportar un superávit calórico. Sumar alrededor de 250 a 500 calorías a tu TDEE estimado le otorga al cuerpo la energía adicional necesaria para construir nuevos tejidos (especialmente cuando se combina con entrenamiento de fuerza). Al igual que en la pérdida de peso, la moderación es clave para minimizar la acumulación de grasa no deseada.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Ejemplo de cálculo de calorías diarias</h2>
+  <p>Para ilustrar el proceso, veamos un ejemplo hipotético paso a paso:</p>
+
+  <div class="bg-surface-elevated border border-hairline p-6 rounded-xl my-8">
+    <p><strong>Perfil de ejemplo (Ficticio)</strong></p>
+    <ul class="list-disc pl-6 space-y-2 my-4">
+      <li><strong>Sexo:</strong> Hombre</li>
+      <li><strong>Edad:</strong> 30 años</li>
+      <li><strong>Peso:</strong> 80 kg</li>
+      <li><strong>Altura:</strong> 180 cm</li>
+      <li><strong>Actividad:</strong> Actividad ligera (entrena suavemente 2-3 días por semana)</li>
+    </ul>
+    
+    <p class="font-bold mt-4">1. Cálculo de TMB (Mifflin-St Jeor):</p>
+    <p>(10 &times; 80) + (6.25 &times; 180) - (5 &times; 30) + 5 <br>
+    800 + 1125 - 150 + 5 = <strong>1,780 calorías</strong> (TMB)</p>
+
+    <p class="font-bold mt-4">2. Aplicación del factor de actividad:</p>
+    <p>1,780 (TMB) &times; 1.375 (Actividad ligera) = <strong>2,447 calorías</strong> (TDEE/GET de mantenimiento estimado)</p>
+
+    <p class="font-bold mt-4">3. Ajuste por objetivo (Ejemplo: Pérdida de peso moderada):</p>
+    <p>2,447 - 400 (Déficit propuesto) = <strong>2,047 calorías diarias recomendadas como meta inicial.</strong></p>
+  </div>
+  
+  <p><em>Nota: Este es un ejemplo teórico. No debes utilizar estas cifras para tu propia dieta sin calcular primero tus valores individuales.</em></p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Puedo calcular mis calorías sin hacer las cuentas?</h2>
+  <p>Absolutamente. Hacer las matemáticas de forma manual usando papel y lápiz puede resultar tedioso, y es fácil equivocarse al multiplicar los decimales. Si quieres conocer tus resultados de forma inmediata, puedes utilizar nuestra <a href="/country/spain/calculadora-de-calorias/" class="text-brand hover:underline font-medium">Calculadora de Calorías</a> gratuita. </p>
+  
+  <p>Nuestra herramienta se encarga de procesar la ecuación de Mifflin-St Jeor y aplicar el multiplicador de actividad automáticamente basándose en los datos precisos que introduzcas, facilitándote una estimación útil en cuestión de segundos, tanto para mantenimiento, pérdida o ganancia de peso.</p>
+
+  <div class="text-center my-10">
+    <Button href="/country/spain/calculadora-de-calorias/" variant="primary" size="lg" class="w-full sm:w-auto">
+      Utilizar la Calculadora Ahora
+    </Button>
+  </div>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Qué tan exacto es calcular las calorías diarias?</h2>
+  <p>Al adentrarte en el mundo del cálculo energético, debes recordar un principio fundamental: <strong>calcular calorías al día es siempre una estimación</strong>.</p>
+  
+  <p>Ninguna calculadora en internet o fórmula matemática sobre el papel puede garantizar una precisión perfecta. El gasto energético real puede variar por una multitud de razones:</p>
+  <ul class="list-disc pl-6 space-y-3 mb-6">
+    <li><strong>Diferencias en composición corporal:</strong> Dos personas pueden pesar 80 kg, pero una podría tener mucha más masa muscular (que requiere más energía) que la otra.</li>
+    <li><strong>Fluctuaciones diarias de actividad (NEAT):</strong> Caminar un poco más en la oficina un martes frente a un jueves afecta a tus necesidades diarias.</li>
+    <li><strong>Adaptación metabólica:</strong> Tras un periodo prolongado de dieta restrictiva, tu cuerpo puede volverse más eficiente y gastar menos energía de forma natural.</li>
+  </ul>
+  <p>Las fórmulas matemáticas sirven como el mejor punto de apoyo empírico. Calcula tu cifra, aplícala con consistencia durante dos a tres semanas, y monitoriza si la tendencia de tu peso se alinea con tu objetivo. Si no lo hace, es totalmente razonable ajustar tus calorías en 100 o 200 calorías hasta encontrar el rango óptimo.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Errores comunes al calcular las calorías</h2>
+  <p>Finalmente, cuando intentes establecer tu ingesta energética, ten cuidado con estos errores frecuentes:</p>
+  <ul class="list-disc pl-6 space-y-3 mb-6">
+    <li><strong>Usar una cifra universal:</strong> Asumir que necesitas 2,000 calorías simplemente porque es el estándar genérico que se imprime en los paquetes de alimentos.</li>
+    <li><strong>Confundir TMB con TDEE:</strong> Intentar sobrevivir consumiendo únicamente las calorías de tu Tasa Metabólica Basal, ignorando que quemas más calorías al estar despierto y moverte.</li>
+    <li><strong>Sobreestimar la actividad física:</strong> Elegir la opción "Muy Activo" en las calculadoras porque haces ejercicio una hora al día, a pesar de pasar las restantes 23 horas sentado o durmiendo.</li>
+    <li><strong>Exigir exactitud absoluta:</strong> Perder la paciencia si las matemáticas no se traducen en resultados lineales exactos en la báscula día tras día.</li>
+  </ul>
+
+</ContentLayout>
+`;
+
+fs.writeFileSync('src/pages/country/spain/como-calcular-mis-calorias-diarias.astro', content, 'utf8');
