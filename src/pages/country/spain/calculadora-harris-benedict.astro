@@ -1,0 +1,164 @@
+---
+import Button from "../../../components/ui/Button.astro";
+import ContentLayout from "../../../layouts/ContentLayout.astro";
+import ArticleImage from "../../../components/ui/ArticleImage.astro";
+import type { FaqItem } from "../../../lib/seo";
+
+const faqs: FaqItem[] = [
+  { 
+    q: "¿Qué es la fórmula de Harris-Benedict?", 
+    a: "Es una ecuación matemática creada a principios del siglo XX que se utiliza para estimar la Tasa Metabólica Basal (TMB), es decir, la energía que el cuerpo necesita en reposo." 
+  },
+  { 
+    q: "¿Para qué sirve Harris-Benedict?", 
+    a: "Sirve como punto de partida para estimar las calorías mínimas que una persona necesita para sobrevivir, lo cual es útil para calcular posteriormente el gasto energético total diario." 
+  },
+  { 
+    q: "¿Cómo se calcula la TMB con Harris-Benedict?", 
+    a: "Se utilizan fórmulas diferentes para hombres y mujeres, las cuales multiplican el peso, la altura y la edad por coeficientes específicos y luego suman los resultados." 
+  },
+  { 
+    q: "¿Cuál es la diferencia entre Harris-Benedict y Mifflin-St Jeor?", 
+    a: "Ambas estiman el gasto energético en reposo usando edad, sexo, peso y altura, pero emplean coeficientes matemáticos distintos. Mifflin-St Jeor fue desarrollada más recientemente." 
+  },
+  { 
+    q: "¿Harris-Benedict calcula las calorías diarias?", 
+    a: "No de forma directa. La fórmula solo calcula la Tasa Metabólica Basal. Para obtener las calorías diarias totales (GET), el resultado debe multiplicarse por un factor de actividad física." 
+  },
+  { 
+    q: "¿La fórmula de Harris-Benedict es exacta?", 
+    a: "No, ninguna fórmula matemática proporciona un resultado 100 % exacto para todos los individuos. Solo ofrece una estimación aproximada que puede variar según la composición corporal de cada persona." 
+  },
+  {
+    q: "¿Qué fórmula utiliza la calculadora de CalorieCalculatorFree?",
+    a: "Nuestra calculadora interactiva utiliza la ecuación de Mifflin-St Jeor como base para estimar la Tasa Metabólica Basal y los requerimientos diarios de energía."
+  }
+];
+
+const seoTitle = "Calculadora Harris-Benedict: Qué Es y Cómo Se Calcula";
+const seoDescription = "Descubre qué es la ecuación de Harris-Benedict, cómo estima la Tasa Metabólica Basal (TMB) y cuáles son sus diferencias con otras fórmulas matemáticas.";
+---
+
+<ContentLayout
+  title={seoTitle}
+  h1="Calculadora Harris-Benedict: Qué Es y Cómo Se Calcula"
+  description={seoDescription}
+  path="/country/spain/calculadora-harris-benedict/"
+  category="Guías"
+  categoryPath="/country/spain/calculadora-de-calorias/"
+  lead="La ecuación de Harris-Benedict es una de las fórmulas más conocidas en el mundo de la nutrición para estimar el metabolismo basal. Descubre cómo funciona y para qué se utiliza."
+  updated="Septiembre 2026"
+  faqs={faqs}
+  lang="es"
+>
+  <ArticleImage src="/assets/images/articles/calories-burned.svg" alt="Ilustración sobre el cálculo de la Tasa Metabólica Basal mediante fórmulas matemáticas." />
+
+  <p>Al investigar sobre <a href="/country/spain/cuantas-calorias-debo-consumir-al-dia/" class="text-brand hover:underline">necesidades diarias de energía</a> o al intentar planificar una dieta, es muy probable que te encuentres con el término <strong>calculadora Harris Benedict</strong>. Durante décadas, esta fórmula ha sido un estándar en las ciencias de la salud para intentar comprender el gasto calórico del cuerpo humano.</p>
+
+  <p>Sin embargo, es importante entender desde el principio que la ecuación de Harris-Benedict es un método de estimación matemática. No es una herramienta que diagnostique directamente el metabolismo de una persona ni una prueba de laboratorio, sino un punto de partida para comprender nuestros requerimientos energéticos.</p>
+
+  <p class="text-sm text-mute italic border-l-4 border-brand pl-4 my-6">Nota: La información contenida en esta guía tiene fines estrictamente educativos. No sustituye el consejo, diagnóstico o tratamiento médico profesional. Consulta siempre a un profesional de la salud antes de realizar cambios drásticos en tu alimentación.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Qué es la fórmula de Harris-Benedict?</h2>
+  <p>La fórmula de Harris-Benedict es una ecuación diseñada para estimar la <strong>Tasa Metabólica Basal (TMB)</strong>. La TMB representa la cantidad mínima de energía (calorías) que el cuerpo necesita para mantener sus funciones vitales en completo reposo, como la respiración, la circulación sanguínea y la regulación de la temperatura corporal.</p>
+  
+  <p>Para realizar esta estimación, la fórmula requiere cuatro datos personales básicos:</p>
+  <ul class="list-disc pl-6 space-y-2 mb-6">
+    <li><strong>Sexo biológico</strong></li>
+    <li><strong>Peso</strong> (en kilogramos)</li>
+    <li><strong>Estatura</strong> (en centímetros)</li>
+    <li><strong>Edad</strong> (en años)</li>
+  </ul>
+
+  <p>La ecuación original fue desarrollada y publicada a principios del siglo XX (entre 1918 y 1919) por los investigadores James Arthur Harris y Francis Gano Benedict. Con el paso de las décadas, y a medida que el estilo de vida y la composición corporal de la población cambiaron, otros científicos crearon versiones revisadas de la fórmula original para intentar adaptarla a las poblaciones modernas.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Cómo se calcula la TMB con Harris-Benedict?</h2>
+  <p>A continuación, detallamos la estructura matemática. Es crucial diferenciar entre la ecuación original de 1919 y una de las revisiones más populares, publicada por Roza y Shizgal en 1984.</p>
+
+  <h3 class="text-xl font-bold text-ink mt-8 mb-4">Ecuación original de Harris-Benedict (1919)</h3>
+  <div class="bg-surface-elevated border border-hairline rounded-xl p-6 mb-6 overflow-x-auto">
+    <p><strong>Hombres:</strong><br/>
+    TMB = 66.4730 + (13.7516 × peso en kg) + (5.0033 × altura en cm) - (6.7550 × edad en años)</p>
+    <p class="mt-4"><strong>Mujeres:</strong><br/>
+    TMB = 655.0955 + (9.5634 × peso en kg) + (1.8496 × altura en cm) - (4.6756 × edad en años)</p>
+  </div>
+
+  <h3 class="text-xl font-bold text-ink mt-8 mb-4">Ecuación revisada de Harris-Benedict (Roza y Shizgal, 1984)</h3>
+  <div class="bg-surface-elevated border border-hairline rounded-xl p-6 mb-6 overflow-x-auto">
+    <p><strong>Hombres:</strong><br/>
+    TMB = 88.362 + (13.397 × peso en kg) + (4.799 × altura en cm) - (5.677 × edad en años)</p>
+    <p class="mt-4"><strong>Mujeres:</strong><br/>
+    TMB = 447.593 + (9.247 × peso en kg) + (3.098 × altura en cm) - (4.330 × edad en años)</p>
+  </div>
+  <p>Al utilizar estas fórmulas de forma manual, es fundamental no mezclar los coeficientes de la versión original con los de la versión revisada.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Ejemplo de cálculo</h2>
+  <p>Para ilustrar el proceso, observemos un ejemplo hipotético paso a paso utilizando la <strong>fórmula revisada</strong> de 1984.</p>
+
+  <div class="bg-surface-elevated border border-hairline rounded-xl p-6 my-8">
+    <p><strong>Datos del individuo ficticio:</strong></p>
+    <ul class="list-disc pl-6 space-y-2 mt-2 mb-4">
+      <li>Sexo: Hombre</li>
+      <li>Peso: 75 kg</li>
+      <li>Estatura: 180 cm</li>
+      <li>Edad: 30 años</li>
+    </ul>
+    
+    <p><strong>Cálculo paso a paso:</strong></p>
+    <ul class="list-none space-y-2 mt-2">
+      <li>1. Peso: 13.397 × 75 = 1,004.775</li>
+      <li>2. Estatura: 4.799 × 180 = 863.82</li>
+      <li>3. Edad: 5.677 × 30 = 170.31</li>
+      <li>4. Suma y resta final: 88.362 + 1,004.775 + 863.82 - 170.31 = <strong>1,786.647</strong></li>
+    </ul>
+    <p class="mt-4">La Tasa Metabólica Basal estimada para este individuo ficticio sería de aproximadamente <strong>1,787 calorías diarias</strong>. Esto representa únicamente la energía basal, no sus calorías diarias totales.</p>
+  </div>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Harris-Benedict y las calorías diarias</h2>
+  <p>Un error muy común es confundir la TMB calculada por la ecuación de Harris-Benedict con las calorías totales que una persona debe consumir en su día a día. La TMB es solo el primer paso.</p>
+
+  <p>Para averiguar el Gasto Energético Total (GET), también conocido como calorías de mantenimiento, la TMB debe multiplicarse por un factor que represente la <strong>actividad física</strong> de la persona (por ejemplo, trabajo sedentario, ejercicio moderado o trabajo físico intenso). El proceso completo sobre <a href="/country/spain/como-calcular-mis-calorias-diarias/" class="text-brand hover:underline">cómo calcular las calorías diarias</a> siempre requerirá tener en cuenta el movimiento diario, no solo el reposo basal. Si una persona utiliza estas calorías como base para <a href="/country/spain/calorias-para-perder-peso/" class="text-brand hover:underline">establecer un déficit para perder peso</a>, es el GET (y no la TMB sola) lo que se utiliza como referencia inicial.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Harris-Benedict es la fórmula más precisa?</h2>
+  <p>Al explorar diversas herramientas nutricionales, es natural preguntarse si Harris-Benedict es la ecuación definitiva. La respuesta es que diferentes ecuaciones pueden producir estimaciones distintas, y los requerimientos energéticos individuales varían de forma natural.</p>
+
+  <p>En el ámbito de la nutrición clínica y deportiva moderna, la ecuación de Mifflin-St Jeor es otra fórmula ampliamente utilizada y citada. En lugar de considerarlas como "correctas" o "incorrectas", es preferible entenderlas como herramientas de estimación que ofrecen resultados ligeramente diferentes basados en la población con la que fueron desarrolladas.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Harris-Benedict vs. Mifflin-St Jeor</h2>
+  <p>A modo de comparación concisa entre ambos métodos:</p>
+  <ul class="list-disc pl-6 space-y-3 mb-6">
+    <li><strong>Similitudes:</strong> Ambas fórmulas intentan estimar el gasto energético en reposo utilizando las mismas variables principales (edad, sexo, peso y altura). Ninguna de las dos mide directamente el metabolismo real de una persona.</li>
+    <li><strong>Diferencias:</strong> Emplean coeficientes matemáticos distintos. Dado que Mifflin-St Jeor fue formulada varias décadas después (en 1990), algunos profesionales consideran que refleja mejor los patrones corporales contemporáneos, lo que puede resultar en pequeñas diferencias calóricas al comparar ambos resultados para un mismo individuo.</li>
+  </ul>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Qué fórmula utiliza nuestra calculadora?</h2>
+  <p>Debido a su extendido uso en guías nutricionales modernas, nuestra <a href="/country/spain/calculadora-de-calorias/" class="text-brand hover:underline font-medium">Calculadora de Calorías</a> implementa la ecuación de <strong>Mifflin-St Jeor</strong> como algoritmo principal para estimar la Tasa Metabólica Basal.</p>
+
+  <p>Si deseas obtener una estimación rápida y automatizada de tu TMB y de tu Gasto Energético Total sin tener que realizar las operaciones matemáticas a mano, puedes utilizar nuestra herramienta:</p>
+
+  <div class="text-center my-10">
+    <Button href="/country/spain/calculadora-de-calorias/" variant="primary" size="lg" class="w-full sm:w-auto">
+      Ir a la Calculadora de Calorías
+    </Button>
+  </div>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Cuándo puede ser útil Harris-Benedict?</h2>
+  <p>A pesar de la existencia de nuevas fórmulas, estudiar y comprender la calculadora Harris Benedict sigue siendo muy útil en varios contextos:</p>
+  <ul class="list-disc pl-6 space-y-3 mb-6">
+    <li>Para comprender los fundamentos históricos de cómo se desarrollaron los métodos de estimación calórica.</li>
+    <li>Para comparar los resultados entre diferentes fórmulas matemáticas y observar los márgenes de variación.</li>
+    <li>Para entender, de forma teórica, cómo variables como la edad y la estatura influyen en el requerimiento energético de reposo.</li>
+  </ul>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Limitaciones de la fórmula</h2>
+  <p>Para concluir, es esencial recordar las limitaciones inherentes a cualquier ecuación matemática de este tipo. La fórmula de Harris-Benedict no puede dar cuenta de factores altamente individualizados, tales como:</p>
+
+  <ul class="list-disc pl-6 space-y-3 mb-6">
+    <li><strong>La composición corporal:</strong> La fórmula utiliza el peso total, pero no diferencia entre masa muscular y tejido adiposo. Dos personas con el mismo peso y altura pueden tener una TMB real muy distinta si su porcentaje de masa muscular es diferente.</li>
+    <li><strong>La genética y variabilidad individual:</strong> El metabolismo humano es complejo y puede variar naturalmente entre personas, incluso si comparten las mismas estadísticas físicas.</li>
+    <li><strong>Factores hormonales y de salud:</strong> Condiciones médicas específicas pueden alterar la tasa a la que el cuerpo consume energía.</li>
+  </ul>
+
+  <p>Por lo tanto, sea cual sea la fórmula de estimación que decidas analizar, el resultado debe ser tratado siempre como una aproximación y un punto de partida inicial.</p>
+
+</ContentLayout>
