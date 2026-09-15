@@ -48,7 +48,7 @@ const jsonLd = [
   ...(faqs.length ? [faqSchema(faqs)] : []),
 ];
 
-const relatedTools = ALL_CALCULATORS.filter(c => c.lang === lang).slice(0, 6);
+const relatedTools = ALL_CALCULATORS.filter(c => c.lang === lang && c.href !== path).slice(0, 6);
 const showRelated = relatedTools.length > 0;
 ---
 
