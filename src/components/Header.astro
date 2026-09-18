@@ -5,8 +5,7 @@ import Button from "./ui/Button.astro";
 ---
 
 <header class="sticky top-0 z-40 border-b border-hairline bg-canvas/70 backdrop-blur-xl backdrop-saturate-150">
-  <!-- Decorative background glow -->
-  <div class="pointer-events-none absolute left-1/2 top-0 -z-10 h-32 w-[600px] -translate-x-1/2 rounded-full opacity-[0.08] blur-[80px]" style="background: radial-gradient(circle, #007cf0, transparent 70%);" aria-hidden="true"></div>
+  <!-- Decorative background glow removed -->
 
   <!-- Trust Bar -->
   <div class="hidden bg-canvas-soft border-b border-hairline text-xs font-medium text-mute py-1.5 sm:block">
@@ -33,7 +32,7 @@ import Button from "./ui/Button.astro";
     <!-- Brand -->
     <a href="/" class="flex items-center gap-2.5 font-semibold text-ink">
       <span
-        class="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-[#007cf0] to-[#00dfd8] text-white shadow-md shadow-brand/20"
+        class="grid h-8 w-8 place-items-center rounded-md bg-brand text-white"
         aria-hidden="true"
       >
         <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
