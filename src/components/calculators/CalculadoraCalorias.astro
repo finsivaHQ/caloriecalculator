@@ -10,216 +10,224 @@ const selectCls = inputCls + " appearance-none bg-no-repeat pr-9";
 ---
 
 <div
-  class="grid gap-6 lg:grid-cols-[minmax(0,420px)_1fr]"
+  class="grid gap-8 lg:grid-cols-[minmax(0,380px)_1fr]"
   id="calc-root"
   data-calc="calorie"
 >
   <!-- ── Form ───────────────────────────────────────────────── -->
-  <form id="calc-form" class="card p-5 sm:p-6" novalidate>
-    <!-- Helper note: clarifies the pre-filled example values -->
-    <p role="note" class="mb-4 text-xs leading-relaxed text-mute">
-      Introduce tus propios datos para obtener resultados personalizados.
-    </p>
+  <form id="calc-form" class="flex flex-col rounded-xl border border-hairline bg-surface p-5 sm:p-7 shadow-sm" novalidate>
+    <div class="mb-6">
+      <h2 class="text-lg font-semibold text-ink">Tus datos</h2>
+      <p role="note" class="mt-1 text-sm text-mute">
+        Ingresa tus datos para calcular tus necesidades energéticas diarias.
+      </p>
+    </div>
+
     <!-- Unit system -->
     <div
-      class="mb-5 grid grid-cols-2 gap-1 rounded-full border border-hairline bg-canvas-soft p-1"
+      class="mb-6 grid grid-cols-2 gap-1 rounded-md border border-hairline bg-canvas-soft p-1"
       role="tablist"
       aria-label="Unit system"
     >
-      <button type="button" data-unit="metric" class="unit-tab h-9 rounded-full text-sm font-medium transition-colors" role="tab" aria-selected="true">Métrico</button>
-      <button type="button" data-unit="imperial" class="unit-tab h-9 rounded-full text-sm font-medium transition-colors" role="tab" aria-selected="false">Imperial</button>
+      <button type="button" data-unit="metric" class="unit-tab h-8 rounded text-sm font-medium transition-colors" role="tab" aria-selected="true">Metric</button>
+      <button type="button" data-unit="imperial" class="unit-tab h-8 rounded text-sm font-medium transition-colors" role="tab" aria-selected="false">Imperial</button>
     </div>
 
-    <!-- Sexo -->
-    <fieldset class="mb-4">
-      <legend class="mb-1.5 block text-sm font-medium text-ink">Sexo</legend>
-      <div class="grid grid-cols-2 gap-2">
-        <label class="sex-opt flex h-11 cursor-pointer items-center justify-center gap-2 rounded-lg border border-hairline text-sm font-medium text-body transition-colors has-[:checked]:border-brand has-[:checked]:bg-brand/10 has-[:checked]:text-ink">
+    <!-- Sex -->
+    <fieldset class="mb-5">
+      <legend class="mb-2 block text-sm font-medium text-ink">Sexo Biológico</legend>
+      <div class="grid grid-cols-2 gap-3">
+        <label class="flex h-10 cursor-pointer items-center justify-center gap-2 rounded-md border border-hairline bg-surface text-sm font-medium text-body transition-colors has-[:checked]:border-brand has-[:checked]:bg-brand/5 has-[:checked]:text-ink hover:bg-canvas-soft has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-brand has-[:focus-visible]:ring-offset-1">
           <input type="radio" name="sex" value="male" class="sr-only" checked />
           Hombre
         </label>
-        <label class="sex-opt flex h-11 cursor-pointer items-center justify-center gap-2 rounded-lg border border-hairline text-sm font-medium text-body transition-colors has-[:checked]:border-brand has-[:checked]:bg-brand/10 has-[:checked]:text-ink">
+        <label class="flex h-10 cursor-pointer items-center justify-center gap-2 rounded-md border border-hairline bg-surface text-sm font-medium text-body transition-colors has-[:checked]:border-brand has-[:checked]:bg-brand/5 has-[:checked]:text-ink hover:bg-canvas-soft has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-brand has-[:focus-visible]:ring-offset-1">
           <input type="radio" name="sex" value="female" class="sr-only" />
           Mujer
         </label>
       </div>
     </fieldset>
 
-    <div class="mb-4 grid grid-cols-2 gap-3">
+    <div class="mb-5 grid grid-cols-2 gap-4">
       <!-- Edad -->
       <div class="space-y-1.5">
-        <label for="age" class="block text-sm font-medium text-ink">Edad</label>
-        <input id="age" name="age" type="number" inputmode="numeric" min="15" max="100" value="30" class={inputCls} />
+        <label for="age" class="form-label">Edad</label>
+        <input id="age" name="age" type="number" inputmode="numeric" min="15" max="100" value="30" class="form-input" />
       </div>
-      <!-- Weight -->
+      <!-- Peso -->
       <div class="space-y-1.5">
-        <label for="weight" class="block text-sm font-medium text-ink">
-          Peso <span class="weight-unit text-mute">(kg)</span>
+        <label for="weight" class="form-label">
+          Peso <span class="weight-unit font-normal text-mute">(kg)</span>
         </label>
-        <input id="weight" name="weight" type="number" inputmode="decimal" min="20" step="0.1" value="70" class={inputCls} />
+        <input id="weight" name="weight" type="number" inputmode="decimal" min="20" step="0.1" value="70" class="form-input" />
       </div>
     </div>
 
-    <!-- Height -->
-    <div class="mb-4">
-      <label class="mb-1.5 block text-sm font-medium text-ink">
-        Altura <span class="height-unit text-mute">(cm)</span>
+    <!-- Altura -->
+    <div class="mb-8">
+      <label class="form-label mb-1.5">
+        Altura <span class="height-unit font-normal text-mute">(cm)</span>
       </label>
       <div id="height-metric">
-        <input id="height-cm" type="number" inputmode="numeric" min="100" max="250" value="175" class={inputCls} aria-label="Altura en centímetros" />
+        <input id="height-cm" type="number" inputmode="numeric" min="100" max="250" value="175" class="form-input" aria-label="Altura in centimetres" />
       </div>
       <div id="height-imperial" class="hidden grid-cols-2 gap-3">
         <div class="relative">
-          <input id="height-ft" type="number" inputmode="numeric" min="3" max="8" value="5" class={inputCls} aria-label="Altura en pies" />
-          <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-mute">ft</span>
+          <input id="height-ft" type="number" inputmode="numeric" min="3" max="8" value="5" class="form-input pr-8" aria-label="Altura in feet" />
+          <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-sm text-mute">ft</span>
         </div>
         <div class="relative">
-          <input id="height-in" type="number" inputmode="numeric" min="0" max="11" value="9" class={inputCls} aria-label="Altura en pulgadas" />
-          <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-mute">in</span>
+          <input id="height-in" type="number" inputmode="numeric" min="0" max="11" value="9" class="form-input pr-8" aria-label="Altura in inches" />
+          <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-sm text-mute">in</span>
         </div>
       </div>
     </div>
 
     <!-- Activity -->
-    <div class="mb-5 space-y-1.5">
-      <label for="activity" class="block text-sm font-medium text-ink">Nivel de actividad</label>
+    <div class="mb-6 space-y-1.5">
+      <label for="activity" class="form-label">Nivel de actividad</label>
       <div class="relative">
-        <select id="activity" name="activity" class={selectCls}>
+        <select id="activity" name="activity" class="form-input pr-9">
           <option value="sedentary">Sedentario — poco o ningún ejercicio</option>
-          <option value="light">Actividad ligera — 1 a 3 días por semana</option>
-          <option value="moderate" selected>Actividad moderada — 3 a 5 días por semana</option>
-          <option value="active">Muy activo — 6 a 7 días por semana</option>
-          <option value="athlete">Extremadamente activo — ejercicio duro o trabajo físico</option>
+          <option value="light">Ligeramente activo — 1–3 días/semana</option>
+          <option value="moderate" selected>Moderadamente activo — 3–5 días/semana</option>
+          <option value="active">Muy activo — 6–7 días/semana</option>
+          <option value="athlete">Extra activo — ejercicio intenso + trabajo físico</option>
         </select>
         <svg class="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6" /></svg>
       </div>
     </div>
 
-    <button type="submit" id="calc-btn" class="shimmer-btn inline-flex h-12 w-full items-center justify-center rounded-full bg-ink text-base font-medium text-canvas transition-all hover:opacity-90 active:scale-[0.99]">
-      Calcular
-    </button>
+    <div class="mt-auto">
+      <button type="submit" id="calc-btn" class="inline-flex h-11 w-full items-center justify-center rounded-md bg-brand text-base font-medium text-white transition-colors hover:bg-brand-hover focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2">
+        Calcular calorías
+      </button>
+    </div>
   </form>
 
   <!-- ── Results ────────────────────────────────────────────── -->
-  <div id="calc-results" class="space-y-5">
-    <!-- Headline -->
-    <div class="card relative overflow-hidden p-6 sm:p-8">
-      <div class="bg-grid pointer-events-none absolute inset-0 opacity-40" aria-hidden="true"></div>
-      <div class="relative">
-        <div class="flex flex-wrap items-end justify-between gap-3">
-          <div>
-            <p class="text-sm text-mute">Tus calorías diarias para <span id="goal-label" class="text-ink">mantener peso</span></p>
-            <p class="mt-1">
-              <span id="result-calories" class="text-display-md text-ink tracking-tight tabular-nums">-</span>
-              <span class="text-lg text-mute">kcal/día</span>
-            </p>
-          </div>
-          <div class="text-right">
-            <p class="text-xs text-mute">Semanal</p>
-            <p id="result-weekly" class="text-display-sm text-ink tabular-nums">14,000</p>
-          </div>
+  <div id="calc-results" class="flex flex-col rounded-xl border border-hairline bg-surface shadow-sm overflow-hidden">
+    <!-- Primary Result -->
+    <div class="p-6 sm:p-8">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h3 class="text-sm font-semibold text-ink">Tus calorías diarias</h3>
+          <p class="mt-2 flex items-baseline gap-2">
+            <span id="result-calories" class="text-display-lg text-ink font-bold tabular-nums tracking-tight">2,000</span>
+            <span class="text-lg font-medium text-mute">kcal / día</span>
+          </p>
+          <p class="mt-1.5 text-sm text-body">Para <span id="goal-label" class="font-medium text-ink">mantener peso</span></p>
         </div>
+      </div>
 
-        <!-- Objetivo selector -->
-        <div class="mt-5 space-y-1.5">
-          <label for="goal" class="block text-xs font-medium text-mute">Ajustar objetivo</label>
-          <div class="relative">
-            <select id="goal" class="h-11 w-full appearance-none rounded-lg border border-hairline bg-canvas px-3.5 pr-9 text-sm text-ink focus:border-brand focus:outline-none">
-              <option value="maintain" selected>Mantener mi peso</option>
-              <option value="mildLoss">Pérdida de peso leve — 0.25 kg/semana</option>
-              <option value="loss">Pérdida de peso — 0.5 kg/semana</option>
-              <option value="extremeLoss">Pérdida extrema — 1 kg/semana</option>
-              <option value="mildGain">Ganancia de peso leve — 0.25 kg/semana</option>
-              <option value="gain">Ganancia de peso — 0.5 kg/semana</option>
-              <option value="extremeGain">Ganancia extrema — 1 kg/semana</option>
-            </select>
-            <svg class="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6" /></svg>
-          </div>
-        </div>
-
-        <!-- Actions -->
-        <div class="mt-4 flex flex-wrap gap-2">
-          <button type="button" id="copy-btn" class="inline-flex h-9 items-center gap-1.5 rounded-full border border-hairline px-3 text-xs font-medium text-body transition-colors hover:border-ink hover:text-ink">
-            <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            <span id="copy-label">Copiar</span>
-          </button>
-          <button type="button" id="print-btn" class="inline-flex h-9 items-center gap-1.5 rounded-full border border-hairline px-3 text-xs font-medium text-body transition-colors hover:border-ink hover:text-ink">
-            <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg>
-            Imprimir / PDF
-          </button>
-          <button type="button" id="share-btn" class="inline-flex h-9 items-center gap-1.5 rounded-full border border-hairline px-3 text-xs font-medium text-body transition-colors hover:border-ink hover:text-ink">
-            <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
-            <span id="share-label">Compartir</span>
-          </button>
+      <!-- Objetivo selector -->
+      <div class="mt-8 max-w-sm space-y-1.5">
+        <label for="goal" class="text-sm font-medium text-ink">Ajustar objetivo</label>
+        <div class="relative">
+          <select id="goal" class="form-input bg-canvas-soft pr-9 text-sm text-ink focus:bg-surface">
+            <option value="maintain" selected>Mantener peso</option>
+            <option value="mildLoss">Pérdida de peso leve — 0.25 kg/semana</option>
+            <option value="loss">Peso loss — 1 lb/week</option>
+            <option value="extremeLoss">Pérdida extrema — 1 kg/semana</option>
+            <option value="mildGain">Ganancia de peso leve — 0.25 kg/semana</option>
+            <option value="gain">Peso gain — 1 lb/week</option>
+            <option value="extremeGain">Ganancia extrema — 1 kg/semana</option>
+          </select>
+          <svg class="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6" /></svg>
         </div>
       </div>
     </div>
 
-    <!-- BMR + TDEE -->
-    <div class="grid grid-cols-2 gap-4">
-      <div class="card p-5">
-        <p class="text-xs uppercase tracking-wide text-mute">BMR</p>
-        <p id="result-bmr" class="mt-1 text-display-sm text-ink tabular-nums">1,600</p>
-        <p class="mt-1 text-xs text-mute">Tasa metabólica basal</p>
-      </div>
-      <div class="card p-5">
-        <p class="text-xs uppercase tracking-wide text-mute">TDEE</p>
-        <p id="result-tdee" class="mt-1 text-display-sm text-ink tabular-nums">2,000</p>
-        <p class="mt-1 text-xs text-mute">Energía diaria total</p>
-      </div>
-    </div>
+    <!-- Secondary Results (BMR/TDEE & Macros) -->
+    <div class="grid sm:grid-cols-2 border-y border-hairline">
+       <!-- Perfil de energía -->
+       <div class="p-6 border-b sm:border-b-0 sm:border-r border-hairline space-y-4">
+          <h4 class="text-sm font-semibold text-ink">Perfil de energía</h4>
+          <div class="flex justify-between items-center">
+             <span class="text-sm text-body">Tasa Metabólica Basal</span>
+             <span class="text-sm font-medium text-ink tabular-nums"><span id="result-bmr">1,600</span></span>
+          </div>
+          <div class="flex justify-between items-center">
+             <span class="text-sm text-body">Energía Diaria Total</span>
+             <span class="text-sm font-medium text-ink tabular-nums"><span id="result-tdee">2,000</span></span>
+          </div>
+          <div class="flex justify-between items-center">
+             <span class="text-sm text-body">Calorías Semanales</span>
+             <span class="text-sm font-medium text-ink tabular-nums"><span id="result-weekly">14,000</span></span>
+          </div>
+       </div>
 
-    <!-- Macros -->
-    <div class="card p-5 sm:p-6">
-      <div class="flex items-center justify-between">
-        <h3 class="text-sm font-semibold text-ink">Macros recomendados</h3>
-        <span class="text-xs text-mute">30P / 40C / 30F</span>
-      </div>
-      <div class="mt-4 flex flex-col items-center gap-6 sm:flex-row">
-        <!-- Donut -->
-        <svg viewBox="0 0 120 120" class="h-32 w-32 shrink-0 -rotate-90" role="img" aria-label="Macro distribution">
-          <circle cx="60" cy="60" r="52" fill="none" stroke="var(--color-hairline)" stroke-width="14" />
-          <circle id="arc-protein" cx="60" cy="60" r="52" fill="none" stroke="var(--color-protein)" stroke-width="14" stroke-linecap="round" stroke-dasharray="0 327" />
-          <circle id="arc-carbs" cx="60" cy="60" r="52" fill="none" stroke="var(--color-carbs)" stroke-width="14" stroke-linecap="round" stroke-dasharray="0 327" />
-          <circle id="arc-fat" cx="60" cy="60" r="52" fill="none" stroke="var(--color-fat)" stroke-width="14" stroke-linecap="round" stroke-dasharray="0 327" />
-        </svg>
-        <!-- Legend -->
-        <ul class="w-full space-y-3">
-          <li class="flex items-center justify-between gap-3">
-            <span class="flex items-center gap-2 text-sm text-body"><span class="h-3 w-3 rounded-full bg-protein"></span>Proteínas</span>
-            <span class="text-sm font-medium text-ink"><span id="macro-protein" class="tabular-nums">150</span> g</span>
-          </li>
-          <li class="flex items-center justify-between gap-3">
-            <span class="flex items-center gap-2 text-sm text-body"><span class="h-3 w-3 rounded-full bg-carbs"></span>Carbohidratos</span>
-            <span class="text-sm font-medium text-ink"><span id="macro-carbs" class="tabular-nums">200</span> g</span>
-          </li>
-          <li class="flex items-center justify-between gap-3">
-            <span class="flex items-center gap-2 text-sm text-body"><span class="h-3 w-3 rounded-full bg-fat"></span>Grasas</span>
-            <span class="text-sm font-medium text-ink"><span id="macro-fat" class="tabular-nums">67</span> g</span>
-          </li>
-        </ul>
-      </div>
+       <!-- Macros -->
+       <div class="p-6">
+          <div class="flex justify-between items-center mb-5">
+             <h4 class="text-sm font-semibold text-ink">Macros</h4>
+             <span class="text-xs font-medium text-mute">30P / 40C / 30F</span>
+          </div>
+          <div class="flex items-center gap-5">
+            <!-- Donut -->
+            <svg viewBox="0 0 120 120" class="h-16 w-16 shrink-0 -rotate-90" role="img" aria-label="Macro distribution">
+              <circle cx="60" cy="60" r="52" fill="none" stroke="var(--color-hairline)" stroke-width="14" />
+              <circle id="arc-protein" cx="60" cy="60" r="52" fill="none" stroke="var(--color-protein)" stroke-width="14" stroke-linecap="round" stroke-dasharray="0 327" />
+              <circle id="arc-carbs" cx="60" cy="60" r="52" fill="none" stroke="var(--color-carbs)" stroke-width="14" stroke-linecap="round" stroke-dasharray="0 327" />
+              <circle id="arc-fat" cx="60" cy="60" r="52" fill="none" stroke="var(--color-fat)" stroke-width="14" stroke-linecap="round" stroke-dasharray="0 327" />
+            </svg>
+            <!-- Legend -->
+            <ul class="w-full space-y-2">
+              <li class="flex items-center justify-between gap-3">
+                <span class="flex items-center gap-2 text-xs text-body"><span class="h-2 w-2 rounded-sm bg-protein"></span>Proteínas</span>
+                <span class="text-xs font-medium text-ink"><span id="macro-protein" class="tabular-nums">150</span>g</span>
+              </li>
+              <li class="flex items-center justify-between gap-3">
+                <span class="flex items-center gap-2 text-xs text-body"><span class="h-2 w-2 rounded-sm bg-carbs"></span>Carbohidratos</span>
+                <span class="text-xs font-medium text-ink"><span id="macro-carbs" class="tabular-nums">200</span>g</span>
+              </li>
+              <li class="flex items-center justify-between gap-3">
+                <span class="flex items-center gap-2 text-xs text-body"><span class="h-2 w-2 rounded-sm bg-fat"></span>Grasas</span>
+                <span class="text-xs font-medium text-ink"><span id="macro-fat" class="tabular-nums">67</span>g</span>
+              </li>
+            </ul>
+          </div>
+       </div>
     </div>
 
     <!-- All goals table -->
-    <div class="card overflow-hidden">
-      <table class="w-full text-sm">
-        <caption class="sr-only">Calorías diarias para cada objetivo de peso</caption>
-        <thead>
-          <tr class="border-b border-hairline text-left text-xs uppercase tracking-wide text-mute">
-            <th scope="col" class="px-4 py-3 font-medium">Objetivo</th>
-            <th scope="col" class="px-4 py-3 text-right font-medium">Por día</th>
-            <th scope="col" class="hidden px-4 py-3 text-right font-medium sm:table-cell">Per week</th>
-          </tr>
-        </thead>
-        <tbody id="goals-table"></tbody>
-      </table>
+    <div class="p-6 border-b border-hairline">
+      <h4 class="mb-4 text-sm font-semibold text-ink">Todos los objetivos</h4>
+      <div class="overflow-x-auto rounded border border-hairline">
+        <table class="w-full text-sm">
+          <caption class="sr-only">Calorías diarias para cada objetivo de peso</caption>
+          <thead class="bg-canvas-soft border-b border-hairline">
+            <tr class="text-left text-xs uppercase tracking-wide text-mute">
+              <th scope="col" class="px-4 py-2 font-medium">Objetivo</th>
+              <th scope="col" class="px-4 py-2 text-right font-medium">Por día</th>
+              <th scope="col" class="hidden px-4 py-2 text-right font-medium sm:table-cell">Por semana</th>
+            </tr>
+          </thead>
+          <tbody id="goals-table" class="divide-y divide-hairline bg-surface"></tbody>
+        </table>
+      </div>
     </div>
 
-    <p class="text-xs leading-relaxed text-mute">
-      Las estimaciones utilizan la ecuación de Mifflin-St Jeor. Las necesidades individuales varían —
-      usa esto como un punto de partida y ajusta según tus resultados en el mundo real.
-    </p>
+    <!-- Actions -->
+    <div class="mt-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-canvas p-4 sm:p-6">
+      <p class="text-xs text-mute max-w-xs">
+        Las estimaciones utilizan la ecuación de Mifflin-St Jeor. Los resultados son estimados.
+      </p>
+      <div class="flex flex-wrap gap-2 w-full sm:w-auto">
+        <button type="button" id="copy-btn" class="flex-1 sm:flex-none inline-flex h-8 items-center justify-center gap-1.5 rounded border border-hairline bg-surface px-3 text-xs font-medium text-ink transition-colors hover:border-hairline-strong hover:bg-canvas-soft focus:outline-none focus:ring-2 focus:ring-brand">
+          <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <span id="copy-label">Copiar</span>
+        </button>
+        <button type="button" id="print-btn" class="flex-1 sm:flex-none inline-flex h-8 items-center justify-center gap-1.5 rounded border border-hairline bg-surface px-3 text-xs font-medium text-ink transition-colors hover:border-hairline-strong hover:bg-canvas-soft focus:outline-none focus:ring-2 focus:ring-brand">
+          <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg>
+          Imprimir
+        </button>
+        <button type="button" id="share-btn" class="flex-1 sm:flex-none inline-flex h-8 items-center justify-center gap-1.5 rounded border border-hairline bg-surface px-3 text-xs font-medium text-ink transition-colors hover:border-hairline-strong hover:bg-canvas-soft focus:outline-none focus:ring-2 focus:ring-brand">
+          <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
+          <span id="share-label">Compartir</span>
+        </button>
+      </div>
+    </div>
   </div>
 </div>
 

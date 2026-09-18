@@ -10,7 +10,7 @@ const { activities, defaultIndex = 0 } = Astro.props;
 ---
 
 <div class="grid gap-6 lg:grid-cols-[minmax(0,380px)_1fr]" id="calc-root">
-  <form id="calc-form" class="card p-5 sm:p-6" novalidate>
+  <form id="calc-form" class="flex flex-col rounded-xl border border-hairline bg-surface p-5 sm:p-7 shadow-sm" novalidate>
     <p role="note" class="mb-4 text-xs leading-relaxed text-mute">
       Example values are pre-filled. Enter your own details for accurate results.
     </p>
@@ -39,16 +39,16 @@ const { activities, defaultIndex = 0 } = Astro.props;
         <input id="duration" type="number" inputmode="numeric" min="1" max="600" value="30" class={inputCls} />
       </div>
     </div>
-    <button type="submit" id="calc-btn" class="shimmer-btn mt-5 inline-flex h-12 w-full items-center justify-center rounded-full bg-ink text-base font-medium text-canvas transition-all hover:opacity-90 active:scale-[0.99]">Calculate Calories Burned</button>
+    <button type="submit" id="calc-btn" class="mt-auto inline-flex h-11 w-full items-center justify-center rounded-md bg-brand text-base font-medium text-white transition-colors hover:bg-brand-hover focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2">Calculate Calories Burned</button>
   </form>
 
-  <div class="space-y-5">
-    <div id="result-box" class="card p-6 sm:p-8 text-center transition-all duration-300">
+  <div id="calc-results" class="flex flex-col rounded-xl border border-hairline bg-surface shadow-sm overflow-hidden">
+    <div id="result-box" class="p-6 sm:p-8 text-center transition-all duration-300 border-b border-hairline">
       <p class="text-sm text-mute">Calories burned</p>
       <p class="mt-1"><span id="cb-value" class="text-display-xl text-ink tabular-nums">149</span> <span class="text-lg text-mute">kcal</span></p>
       <p class="mt-2 text-sm text-body">≈ <span id="cb-perhour" class="text-ink">298</span> kcal per hour at this pace.</p>
     </div>
-    <div class="card overflow-hidden">
+    <div class="overflow-x-auto">
       <div class="border-b border-hairline px-5 py-3"><h2 class="text-sm font-semibold text-ink">Calories burned by duration</h2></div>
       <table class="w-full text-sm"><tbody id="cb-table"></tbody></table>
     </div>

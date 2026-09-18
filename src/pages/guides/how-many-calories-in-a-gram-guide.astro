@@ -7,7 +7,15 @@ const seoTitle = "How Many Calories in a Gram: The Complete Guide | Kcal Calcula
 const seoDescription = "Discover an estimate of how many calories are in a gram of fat, protein, and carbohydrates. Use our cal calculator to optimize your nutrition and reach your fitness goals.";
 ---
 
-<ContentLayout title={seoTitle} description={seoDescription}>
+<ContentLayout
+  title={seoTitle}
+  description={seoDescription}
+  h1="How Many Calories Are in a Gram?"
+  path="/guides/how-many-calories-in-a-gram-guide/"
+  category="Nutrition Guides"
+  categoryPath="/guides/"
+  lead="Mastering the fundamentals of nutritional science begins with knowing exactly how many calories in a gram of each macronutrient. Whether your goal is to lose stubborn body fat, build lean muscle mass, or maintain a healthy lifestyle, understanding these numbers is the critical first step."
+>
   <Fragment slot="head">
     <script type="application/ld+json">
       {
@@ -67,212 +75,205 @@ const seoDescription = "Discover an estimate of how many calories are in a gram 
     </script>
   </Fragment>
 
-  <main class="max-w-4xl mx-auto px-4 py-12 space-y-12 text-body text-ink antialiased font-sans bg-white/80 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden">
-    
-    <section class="text-center space-y-6 p-8 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl">
-      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
-        How Many Calories Are in a Gram? The Ultimate Macronutrient Guide
-      </h1>
-      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-        Mastering the fundamentals of nutritional science begins with knowing exactly <strong>how many calories in a gram</strong> of each macronutrient. Whether your goal is to lose stubborn body fat, build lean muscle mass, or maintain a healthy lifestyle, understanding these numbers is the critical first step.
-      </p>
-    </section>
 
-    <section class="p-8 space-y-6">
-      <h2 class="text-3xl font-bold text-gray-800 border-b pb-2">The Energy Value of Macronutrients Explained</h2>
-      <p class="text-lg leading-relaxed text-gray-700">
-        Every single time you consume food, you are ingesting chemical energy measured in calories (commonly referred to as kcal). If you have ever wondered how to utilize a <a href="/" class="text-indigo-600 font-semibold hover:underline">calculator calories</a> effectively, you must first comprehend how the foods you eat break down into the three primary macronutrients: proteins, carbohydrates, and fats. Each of these macronutrients plays a unique and essential role in physiological functions.
+
+
+
+    <section>
+      <h2>The Energy Value of Macronutrients Explained</h2>
+      <p>
+        Every single time you consume food, you are ingesting chemical energy measured in calories (commonly referred to as kcal). If you have ever wondered how to utilize a <a href="/" class="text-brand font-semibold hover:underline">calculator calories</a> effectively, you must first comprehend how the foods you eat break down into the three primary macronutrients: proteins, carbohydrates, and fats. Each of these macronutrients plays a unique and essential role in physiological functions.
       </p>
-      
+
       <ArticleImage src="/assets/images/articles/macros-plate.svg" alt="Healthy macronutrients on a table" />
 
-      <p class="text-lg leading-relaxed text-gray-700 mt-6">
-        When evaluating dietary intake, it's paramount to look beyond just the total caloric value and consider the macro composition. For instance, consuming 100 calories of pure table sugar will have a vastly different metabolic impact compared to consuming 100 calories of lean chicken breast. The thermic effect of food (TEF), satiety signaling, and insulin response vary significantly among the different macronutrient profiles. 
+      <p>
+        When evaluating dietary intake, it's paramount to look beyond just the total caloric value and consider the macro composition. For instance, consuming 100 calories of pure table sugar will have a vastly different metabolic impact compared to consuming 100 calories of lean chicken breast. The thermic effect of food (TEF), satiety signaling, and insulin response vary significantly among the different macronutrient profiles.
       </p>
 
-      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mt-8">
-        <table class="w-full text-left border-collapse">
+      <div class="overflow-x-auto my-6">
+        <table>
           <thead>
-            <tr class="bg-gray-50 text-gray-700 text-lg">
-              <th class="py-4 px-6 font-semibold border-b border-hairline">Macronutrient</th>
-              <th class="py-4 px-6 font-semibold border-b border-hairline">Calories per Gram</th>
-              <th class="py-4 px-6 font-semibold border-b border-hairline">Primary Biological Role</th>
+            <tr>
+              <th>Macronutrient</th>
+              <th>Calories per Gram</th>
+              <th>Primary Biological Role</th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-gray-100">
-            <tr class="hover:bg-gray-50 transition-colors">
-              <td class="py-4 px-6 font-medium">Dietary Fats</td>
-              <td class="py-4 px-6 text-indigo-600 font-bold">9 kcal</td>
-              <td class="py-4 px-6 text-gray-600">Long-term energy storage, hormone synthesis, cell membrane integrity</td>
+          <tbody>
+            <tr>
+              <td>Dietary Fats</td>
+              <td>9 kcal</td>
+              <td>Long-term energy storage, hormone synthesis, cell membrane integrity</td>
             </tr>
-            <tr class="hover:bg-gray-50 transition-colors">
-              <td class="py-4 px-6 font-medium">Proteins</td>
-              <td class="py-4 px-6 text-indigo-600 font-bold">4 kcal</td>
-              <td class="py-4 px-6 text-gray-600">Muscle tissue repair, enzyme production, immune system support</td>
+            <tr>
+              <td>Proteins</td>
+              <td>4 kcal</td>
+              <td>Muscle tissue repair, enzyme production, immune system support</td>
             </tr>
-            <tr class="hover:bg-gray-50 transition-colors">
-              <td class="py-4 px-6 font-medium">Carbohydrates</td>
-              <td class="py-4 px-6 text-indigo-600 font-bold">4 kcal</td>
-              <td class="py-4 px-6 text-gray-600">Primary rapid energy source, central nervous system fuel</td>
+            <tr>
+              <td>Carbohydrates</td>
+              <td>4 kcal</td>
+              <td>Primary rapid energy source, central nervous system fuel</td>
             </tr>
-            <tr class="hover:bg-gray-50 transition-colors">
-              <td class="py-4 px-6 font-medium">Alcohol (Non-essential)</td>
-              <td class="py-4 px-6 text-red-500 font-bold">7 kcal</td>
-              <td class="py-4 px-6 text-gray-600">Provides 'empty calories' without significant metabolic benefit</td>
+            <tr>
+              <td>Alcohol (Non-essential)</td>
+              <td>7 kcal</td>
+              <td>Provides 'empty calories' without significant metabolic benefit</td>
             </tr>
-            <tr class="hover:bg-gray-50 transition-colors">
-              <td class="py-4 px-6 font-medium">Fiber (Soluble)</td>
-              <td class="py-4 px-6 text-green-600 font-bold">~2 kcal</td>
-              <td class="py-4 px-6 text-gray-600">Gut microbiome health, slow digestion, blood sugar regulation</td>
+            <tr>
+              <td>Fiber (Soluble)</td>
+              <td>~2 kcal</td>
+              <td>Gut microbiome health, slow digestion, blood sugar regulation</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <section class="p-8 bg-indigo-50 rounded-3xl shadow-inner my-12">
-      <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">Optimize Your Nutrition with Our Cal Calculator</h2>
-      <p class="text-center text-gray-700 mb-8 max-w-xl mx-auto">
+    <section class="rounded-xl border border-hairline bg-canvas-soft p-6">
+      <h2>Optimize Your Nutrition with Our Cal Calculator</h2>
+      <p>
         Do not leave your health and fitness results to chance. Utilize our advanced <strong>kcal calculator</strong> to precisely determine how much you need to eat based on your daily metabolic requirements and long-term objectives.
       </p>
       <div class="bg-white rounded-2xl shadow-lg p-6">
-        
+
     <div class="my-8 rounded-2xl border border-hairline bg-canvas-soft p-6 text-center sm:p-8">
-      <h3 class="mt-0 text-xl font-semibold text-ink">Ready to calculate your needs?</h3>
-      <p class="mt-2 mb-6 text-body">Use our free, science-backed calculator to find your exact calorie and macro targets.</p>
+      <h3>Ready to calculate your needs?</h3>
+      <p>Use our free, science-backed calculator to find your exact calorie and macro targets.</p>
       <Button href="/" size="lg" class="w-full sm:w-auto">Open Calorie Calculator</Button>
     </div>
-    
+
       </div>
     </section>
 
-    <section class="p-8 space-y-6">
-      <h2 class="text-3xl font-bold text-gray-800">A Step-by-Step Guide to Calculating Your Macros</h2>
-      <p class="text-lg leading-relaxed text-gray-700">
+    <section>
+      <h2>A Step-by-Step Guide to Calculating Your Macros</h2>
+      <p>
         Now that you understand the caloric density of each macronutrient, the next phase is application. Balancing your macros efficiently ensures that you are providing your body with the optimal fuel mix for performance, recovery, and overall longevity. Follow these scientific steps:
       </p>
       <div class="space-y-6 mt-6">
         <div class="flex items-start gap-4">
           <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-lg">1</div>
           <div>
-            <h3 class="text-xl font-semibold text-gray-900">Determine Your Total Daily Energy Expenditure (TDEE)</h3>
-            <p class="text-gray-700 mt-2">Use an <a href="https://www.niddk.nih.gov/health-information/weight-management/body-weight-planner" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">official health calculator</a> or our integrated tool to establish your TDEE. This represents the total number of calories your body burns in a 24-hour period, accounting for basal metabolic rate (BMR) and physical activity.</p>
+            <h3>Determine Your Total Daily Energy Expenditure (TDEE)</h3>
+            <p>Use an <a href="https://www.niddk.nih.gov/health-information/weight-management/body-weight-planner" target="_blank" rel="noopener noreferrer" class="text-brand hover:underline">official health calculator</a> or our integrated tool to establish your TDEE. This represents the total number of calories your body burns in a 24-hour period, accounting for basal metabolic rate (BMR) and physical activity.</p>
           </div>
         </div>
         <div class="flex items-start gap-4">
           <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-lg">2</div>
           <div>
-            <h3 class="text-xl font-semibold text-gray-900">Establish Your Daily Protein Target</h3>
-            <p class="text-gray-700 mt-2">To preserve muscle mass, particularly in a caloric deficit, aim to consume between 1.6 and 2.2 grams of protein per kilogram of body weight. Because every gram provides 4 calories, you can easily calculate the caloric contribution of protein to your daily budget.</p>
+            <h3>Establish Your Daily Protein Target</h3>
+            <p>To preserve muscle mass, particularly in a caloric deficit, aim to consume between 1.6 and 2.2 grams of protein per kilogram of body weight. Because every gram provides 4 calories, you can easily calculate the caloric contribution of protein to your daily budget.</p>
           </div>
         </div>
         <div class="flex items-start gap-4">
           <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-lg">3</div>
           <div>
-            <h3 class="text-xl font-semibold text-gray-900">Allocate Your Dietary Fats</h3>
-            <p class="text-gray-700 mt-2">Dietary fats are vital for absorbing fat-soluble vitamins (A, D, E, and K) and regulating hormones like testosterone and estrogen. Reserve approximately 20-30% of your total calories for fats. Divide those specific calories by 9 to find out how many grams of fat you should consume daily.</p>
+            <h3>Allocate Your Dietary Fats</h3>
+            <p>Dietary fats are vital for absorbing fat-soluble vitamins (A, D, E, and K) and regulating hormones like testosterone and estrogen. Reserve approximately 20-30% of your total calories for fats. Divide those specific calories by 9 to find out how many grams of fat you should consume daily.</p>
           </div>
         </div>
         <div class="flex items-start gap-4">
           <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-lg">4</div>
           <div>
-            <h3 class="text-xl font-semibold text-gray-900">Fill the Remaining Calories with Carbohydrates</h3>
-            <p class="text-gray-700 mt-2">Once protein and fat requirements are met, the remainder of your daily caloric budget is allocated to carbohydrates. Simply take the leftover calories and divide them by 4 to determine your target carbohydrate intake in grams. These carbs will fuel your workouts and daily mental tasks.</p>
+            <h3>Fill the Remaining Calories with Carbohydrates</h3>
+            <p>Once protein and fat requirements are met, the remainder of your daily caloric budget is allocated to carbohydrates. Simply take the leftover calories and divide them by 4 to determine your target carbohydrate intake in grams. These carbs will fuel your workouts and daily mental tasks.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="p-8">
-      <h2 class="text-3xl font-bold text-gray-800 mb-6">Frequently Asked Questions (FAQ)</h2>
+    <section>
+      <h2>Frequently Asked Questions (FAQ)</h2>
       <div class="space-y-4">
-        
+
         <details class="group bg-gray-50 rounded-xl p-6 cursor-pointer border border-hairline">
-          <summary class="font-semibold text-lg text-gray-900 flex justify-between items-center">
+          <summary class="font-semibold text-lg  flex justify-between items-center">
             How many calories are in a gram of fat?
             <span class="transition group-open:rotate-180">
               <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
             </span>
           </summary>
-          <p class="text-gray-700 mt-4 leading-relaxed">
+          <p>
             There are approximately 9 calories in a single gram of fat. This high energy density makes dietary fats the most calorically dense macronutrient available. Fat molecules contain more carbon-hydrogen bonds than carbohydrates or proteins, which release a larger amount of energy upon oxidation in the human body.
           </p>
         </details>
 
         <details class="group bg-gray-50 rounded-xl p-6 cursor-pointer border border-hairline">
-          <summary class="font-semibold text-lg text-gray-900 flex justify-between items-center">
+          <summary class="font-semibold text-lg  flex justify-between items-center">
             How many calories are in a gram of protein?
             <span class="transition group-open:rotate-180">
               <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
             </span>
           </summary>
-          <p class="text-gray-700 mt-4 leading-relaxed">
+          <p>
             There are approximately 4 calories in one gram of protein. Protein is crucial for muscle repair, enzymatic functions, and overall bodily maintenance. Moreover, protein boasts a high thermic effect (TEF), meaning your body actually burns a significant percentage of those calories just to digest and process the macronutrient.
           </p>
         </details>
 
         <details class="group bg-gray-50 rounded-xl p-6 cursor-pointer border border-hairline">
-          <summary class="font-semibold text-lg text-gray-900 flex justify-between items-center">
+          <summary class="font-semibold text-lg  flex justify-between items-center">
             How many calories are in a gram of carbohydrates?
             <span class="transition group-open:rotate-180">
               <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
             </span>
           </summary>
-          <p class="text-gray-700 mt-4 leading-relaxed">
+          <p>
             Similar to protein, there are 4 calories in a gram of carbohydrates. Carbohydrates serve as the body's primary and most preferred energy source. Your brain and nervous system rely heavily on glucose, derived from carbs, to function optimally throughout the day.
           </p>
         </details>
 
         <details class="group bg-gray-50 rounded-xl p-6 cursor-pointer border border-hairline">
-          <summary class="font-semibold text-lg text-gray-900 flex justify-between items-center">
+          <summary class="font-semibold text-lg  flex justify-between items-center">
             How many calories are in a gram of alcohol?
             <span class="transition group-open:rotate-180">
               <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
             </span>
           </summary>
-          <p class="text-gray-700 mt-4 leading-relaxed">
+          <p>
             There are 7 calories in a gram of alcohol. It is important to note that these are often considered "empty calories" because they provide raw energy but entirely lack vitamins, minerals, and overall nutritional value essential for health and fitness.
           </p>
         </details>
-        
+
         <details class="group bg-gray-50 rounded-xl p-6 cursor-pointer border border-hairline">
-          <summary class="font-semibold text-lg text-gray-900 flex justify-between items-center">
+          <summary class="font-semibold text-lg  flex justify-between items-center">
             Why is it important to know how many calories are in a gram of food?
             <span class="transition group-open:rotate-180">
               <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
             </span>
           </summary>
-          <p class="text-gray-700 mt-4 leading-relaxed">
+          <p>
             Understanding caloric density per gram helps you track your macros accurately, ensuring that you achieve a proper caloric deficit or surplus depending on your personal fitness goals. Being aware of the hidden calories in fats or alcohol can make the vital difference between hitting a plateau and seeing consistent results.
           </p>
         </details>
-        
+
         <details class="group bg-gray-50 rounded-xl p-6 cursor-pointer border border-hairline">
-          <summary class="font-semibold text-lg text-gray-900 flex justify-between items-center">
+          <summary class="font-semibold text-lg  flex justify-between items-center">
             Does fiber contain calories?
             <span class="transition group-open:rotate-180">
               <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
             </span>
           </summary>
-          <p class="text-gray-700 mt-4 leading-relaxed">
+          <p>
             Yes, but generally fewer than regular carbohydrates. While regular carbs have 4 kcal per gram, soluble fiber ferments in the gut and provides about 2 calories per gram. In contrast, insoluble fiber often passes directly through the digestive tract without contributing any significant caloric energy.
           </p>
         </details>
       </div>
     </section>
 
-    <section class="mt-16 p-8 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-3xl text-white text-center shadow-xl">
-      <h2 class="text-3xl font-bold mb-4">Suggested Content</h2>
-      <p class="mb-8 text-indigo-100 max-w-2xl mx-auto">Continue your journey in nutritional science and caloric tracking with our highly-rated educational resources.</p>
-      
+    <section class="mt-12 rounded-xl border border-hairline bg-surface p-6 shadow-sm text-center">
+      <h2>Suggested Content</h2>
+      <p>Continue your journey in nutritional science and caloric tracking with our highly-rated educational resources.</p>
+
       <div class="grid md:grid-cols-2 gap-6 mb-10">
         <a href="/guides/calorie-deficit-guide/" class="block p-6 bg-white/10 hover:bg-white/20 transition-all rounded-2xl backdrop-blur-sm border border-white/20">
-          <h3 class="text-xl font-bold mb-2">How to Calculate Your Caloric Deficit</h3>
-          <p class="text-sm text-indigo-100">A comprehensive, science-backed guide to losing body fat sustainably and efficiently.</p>
+          <h3>How to Calculate Your Caloric Deficit</h3>
+          <p>A comprehensive, science-backed guide to losing body fat sustainably and efficiently.</p>
         </a>
         <a href="/guides/protein-guide/" class="block p-6 bg-white/10 hover:bg-white/20 transition-all rounded-2xl backdrop-blur-sm border border-white/20">
-          <h3 class="text-xl font-bold mb-2">The Best Sources of High-Quality Protein</h3>
-          <p class="text-sm text-indigo-100">Discover which foods yield the highest amount of bioavailable protein per serving.</p>
+          <h3>The Best Sources of High-Quality Protein</h3>
+          <p>Discover which foods yield the highest amount of bioavailable protein per serving.</p>
         </a>
       </div>
 
@@ -281,5 +282,5 @@ const seoDescription = "Discover an estimate of how many calories are in a gram 
       </a>
     </section>
 
-  </main>
+
 </ContentLayout>

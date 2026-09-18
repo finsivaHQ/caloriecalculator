@@ -59,15 +59,14 @@ const faqSchema = {
     </p>
   </section>
 
-  <section class="relative overflow-hidden rounded-xl bg-white/80 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-hairline p-8 md:p-12 my-12">
-    <div class="absolute top-0 right-0 -z-10 w-full h-full bg-gradient-to-br from-indigo-50/60 via-transparent to-blue-50/60"></div>
-    
+  <section class="relative overflow-hidden rounded-xl bg-surface/80 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-hairline p-8 md:p-12 my-12">
+
     <h2 class="text-3xl font-bold tracking-tight text-ink mb-6">The Four Pillars of TDEE Explained</h2>
     <div class="space-y-5 text-body">
       <p>
         Your Total Daily Energy Expenditure is not a monolithic entity; rather, it is a composite amalgamation of four distinct metabolic pathways. Understanding these distinct components is vital for manipulating your total daily burn.
       </p>
-      
+
       <ul class="list-disc pl-6 space-y-4 mb-6">
         <li><strong>BMR (Basal Metabolic Rate):</strong> Comprising approximately 60-75% of your total TDEE, BMR represents the sheer physiological cost of existing. It is the caloric expenditure required to maintain cellular homeostasis, respiratory function, cardiac output, and neurological activity while entirely at rest.</li>
         <li><strong>NEAT (Non-Exercise Activity Thermogenesis):</strong> This highly variable component accounts for 15-20% of TDEE. NEAT encapsulates all non-volitional and subconscious physical movement: pacing, fidgeting, maintaining posture, typing, and generalized daily ambulatory activities.</li>
@@ -84,34 +83,34 @@ const faqSchema = {
   </section>
 
   <h2 class="text-3xl font-bold text-ink mt-16 mb-8">Step-by-Step Clinical Protocol for Calculating TDEE</h2>
-  
+
   <div class="grid gap-6 mb-12">
-    <div class="flex gap-4 p-6 bg-white rounded-xl shadow-sm border border-hairline hover:shadow-md transition-shadow">
-      <div class="flex-shrink-0 w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center font-bold text-xl">1</div>
+    <div class="flex gap-4 p-6 bg-surface rounded-xl shadow-sm border border-hairline hover:shadow-md transition-shadow">
+      <div class="flex-shrink-0 w-12 h-12 bg-canvas-soft text-brand rounded-xl flex items-center justify-center font-bold text-xl">1</div>
       <div>
         <h3 class="text-xl font-bold text-ink mb-2">Determine Your Basal Metabolic Rate (BMR)</h3>
         <p class="text-body">Leverage the clinically validated Mifflin-St Jeor equation, widely regarded in nutritional epidemiology as a modern and reliable standard. <br/> For Men: <code>10 × weight(kg) + 6.25 × height(cm) − 5 × age + 5</code>. <br/> For Women: <code>10 × weight(kg) + 6.25 × height(cm) − 5 × age − 161</code>. Alternatively, our <a href="/" class="text-indigo-600 underline">BMR</a> instantly computes this metric.</p>
       </div>
     </div>
 
-    <div class="flex gap-4 p-6 bg-white rounded-xl shadow-sm border border-hairline hover:shadow-md transition-shadow">
-      <div class="flex-shrink-0 w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center font-bold text-xl">2</div>
+    <div class="flex gap-4 p-6 bg-surface rounded-xl shadow-sm border border-hairline hover:shadow-md transition-shadow">
+      <div class="flex-shrink-0 w-12 h-12 bg-canvas-soft text-brand rounded-xl flex items-center justify-center font-bold text-xl">2</div>
       <div>
         <h3 class="text-xl font-bold text-ink mb-2">Quantify Your Activity Multiplier Accurately</h3>
         <p class="text-body">Maintain clinical objectivity; empirical data shows humans grossly overestimate their daily ambulation. If you occupy a sedentary desk job but attend the gymnasium thrice weekly, you are functionally "Lightly Active", not "Highly Active".</p>
       </div>
     </div>
 
-    <div class="flex gap-4 p-6 bg-white rounded-xl shadow-sm border border-hairline hover:shadow-md transition-shadow">
-      <div class="flex-shrink-0 w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center font-bold text-xl">3</div>
+    <div class="flex gap-4 p-6 bg-surface rounded-xl shadow-sm border border-hairline hover:shadow-md transition-shadow">
+      <div class="flex-shrink-0 w-12 h-12 bg-canvas-soft text-brand rounded-xl flex items-center justify-center font-bold text-xl">3</div>
       <div>
         <h3 class="text-xl font-bold text-ink mb-2">Apply the Mathematical Activity Factor</h3>
         <p class="text-body">Multiply your calculated BMR by the corresponding activity quotient: Sedentary (1.2), Lightly Active (1.375), Moderately Active (1.55), Very Active (1.725), or Professional Athlete/Extremely Active (1.9).</p>
       </div>
     </div>
 
-    <div class="flex gap-4 p-6 bg-white rounded-xl shadow-sm border border-hairline hover:shadow-md transition-shadow">
-      <div class="flex-shrink-0 w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center font-bold text-xl">4</div>
+    <div class="flex gap-4 p-6 bg-surface rounded-xl shadow-sm border border-hairline hover:shadow-md transition-shadow">
+      <div class="flex-shrink-0 w-12 h-12 bg-canvas-soft text-brand rounded-xl flex items-center justify-center font-bold text-xl">4</div>
       <div>
         <h3 class="text-xl font-bold text-ink mb-2">Empirical Verification and Titration</h3>
         <p class="text-body">The calculated TDEE is a robust estimation, not a thermodynamic law. Track your extrapolated TDEE intake for 14 to 21 days while recording median weekly body weight. If your weight is stable, the calculation is highly accurate. If you systematically gain weight, your TDEE was overestimated; reduce intake by 150-250 kcal and observe.</p>
@@ -130,7 +129,7 @@ const faqSchema = {
           <th scope="col" class="px-6 py-4 font-semibold text-indigo-600">Final TDEE Output</th>
         </tr>
       </thead>
-      <tbody class="divide-y divide-gray-200 bg-white">
+      <tbody class="divide-y divide-gray-200 bg-surface">
         <tr class="hover:bg-gray-50/50 transition-colors">
           <td class="px-6 py-4 text-body">Female, 25 years, 165cm, 65kg</td>
           <td class="px-6 py-4 text-body">~1,400 kcal</td>
@@ -160,22 +159,22 @@ const faqSchema = {
   </div>
 
   <div class="grid md:grid-cols-3 gap-8 mb-16">
-    <div class="bg-gradient-to-b from-rose-50 to-white rounded-xl p-8 border border-rose-100 shadow-sm">
-      <h3 class="text-xl font-bold text-rose-900 mb-3">TDEE for Fat Loss (Cutting)</h3>
+    <div class="rounded-xl border border-hairline bg-surface p-8 shadow-sm">
+      <h3 class="text-xl font-bold text-ink mb-3">TDEE for Fat Loss (Cutting)</h3>
       <p class="text-body text-sm leading-relaxed mb-4">To systematically catalyze adipose tissue reduction while preserving lean mass, implement a clinical deficit of 300-500 kcal below your precise TDEE. This magnitude ensures optimal endocrine function and prevents metabolic adaptation (adaptive thermogenesis) from crashing your metabolism.</p>
-      <a href="/" class="text-rose-600 text-sm font-semibold hover:underline">Launch Caloric Deficit Calculator &rarr;</a>
-    </div>
-    
-    <div class="bg-gradient-to-b from-blue-50 to-white rounded-xl p-8 border border-blue-100 shadow-sm">
-      <h3 class="text-xl font-bold text-blue-900 mb-3">TDEE for Hypertrophy (Bulking)</h3>
-      <p class="text-body text-sm leading-relaxed mb-4">To synthesize new contractile myofibrillar tissue (muscle), establish a targeted surplus of 200-400 kcal above your TDEE. Pair this hypercaloric environment with progressive overload resistance training and optimal protein biosynthesis protocols.</p>
-      <a href="/" class="text-blue-600 text-sm font-semibold hover:underline">Launch Macronutrient Calculator &rarr;</a>
+      <a href="/" class="text-brand text-sm font-semibold hover:underline">Launch Caloric Deficit Calculator &rarr;</a>
     </div>
 
-    <div class="bg-gradient-to-b from-emerald-50 to-white rounded-xl p-8 border border-emerald-100 shadow-sm">
-      <h3 class="text-xl font-bold text-emerald-900 mb-3">TDEE for Equilibrium (Maintenance)</h3>
+    <div class="rounded-xl border border-hairline bg-surface p-8 shadow-sm">
+      <h3 class="text-xl font-bold text-ink mb-3">TDEE for Hypertrophy (Bulking)</h3>
+      <p class="text-body text-sm leading-relaxed mb-4">To synthesize new contractile myofibrillar tissue (muscle), establish a targeted surplus of 200-400 kcal above your TDEE. Pair this hypercaloric environment with progressive overload resistance training and optimal protein biosynthesis protocols.</p>
+      <a href="/" class="text-brand text-sm font-semibold hover:underline">Launch Macronutrient Calculator &rarr;</a>
+    </div>
+
+    <div class="rounded-xl border border-hairline bg-surface p-8 shadow-sm">
+      <h3 class="text-xl font-bold text-ink mb-3">TDEE for Equilibrium (Maintenance)</h3>
       <p class="text-body text-sm leading-relaxed mb-4">Maintaining your physiological stasis is an active, ongoing endeavor. Consume your exact calculated TDEE daily. Note that as your body composition gradually shifts, your TDEE will subtly morph, requiring periodic clinical recalibration.</p>
-      <a href="/guides/maintenance-calories/" class="text-emerald-600 text-sm font-semibold hover:underline">Read the Comprehensive Maintenance Guide &rarr;</a>
+      <a href="/guides/maintenance-calories/" class="text-brand text-sm font-semibold hover:underline">Read the Comprehensive Maintenance Guide &rarr;</a>
     </div>
   </div>
 
@@ -185,13 +184,13 @@ const faqSchema = {
   </p>
 
   <div class="my-12">
-    
+
     <div class="my-8 rounded-2xl border border-hairline bg-canvas-soft p-6 text-center sm:p-8">
       <h3 class="mt-0 text-xl font-semibold text-ink">Ready to calculate your needs?</h3>
       <p class="mt-2 mb-6 text-body">Use our free, science-backed calculator to find your exact calorie and macro targets.</p>
       <Button href="/" size="lg" class="w-full sm:w-auto">Open Calorie Calculator</Button>
     </div>
-    
+
   </div>
 
   <Sources sources={[
@@ -204,17 +203,17 @@ const faqSchema = {
   <section class="mt-20 pt-12 border-t border-hairline">
     <h2 class="text-2xl font-bold text-ink mb-8 text-center">Curated Scientific Literature</h2>
     <div class="grid md:grid-cols-2 gap-6 mb-12">
-      <a href="/guides/calorie-deficit-guide/" class="group block p-6 bg-white rounded-xl border border-hairline shadow-sm hover:shadow-lg hover:border-indigo-200 transition-all">
+      <a href="/guides/calorie-deficit-guide/" class="group block p-6 bg-surface rounded-xl border border-hairline shadow-sm hover:shadow-lg hover:border-indigo-200 transition-all">
         <h3 class="text-lg font-bold text-ink group-hover:text-indigo-600 mb-2">The Definitive Guide to Caloric Deficits</h3>
         <p class="text-body text-sm">Explore evidence-based protocols to sustain a clinical calorie deficit while mitigating psychological fatigue, mitigating muscle catabolism, and avoiding ubiquitous dietary pitfalls.</p>
       </a>
-      <a href="/guides/calorie-surplus-guide/" class="group block p-6 bg-white rounded-xl border border-hairline shadow-sm hover:shadow-lg hover:border-indigo-200 transition-all">
+      <a href="/guides/calorie-surplus-guide/" class="group block p-6 bg-surface rounded-xl border border-hairline shadow-sm hover:shadow-lg hover:border-indigo-200 transition-all">
         <h3 class="text-lg font-bold text-ink group-hover:text-indigo-600 mb-2">The Science of Caloric Surpluses</h3>
         <p class="text-body text-sm">Master the biological mechanisms of the 'lean-bulk', an advanced nutritional framework designed to maximize muscular hypertrophy while severely curtailing concurrent lipogenesis (fat accumulation).</p>
       </a>
     </div>
     <div class="text-center">
-      <a href="/" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full shadow-lg hover:from-indigo-700 hover:to-purple-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-200">
+      <a href="/" class="inline-flex h-12 items-center justify-center rounded-md bg-brand px-6 text-base font-medium text-white transition-colors hover:bg-brand-hover focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2">
         Access the Master Calorie Calculator
         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
       </a>
