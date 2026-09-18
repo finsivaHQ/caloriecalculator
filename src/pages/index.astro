@@ -5,7 +5,6 @@ import Button from "../components/ui/Button.astro";
 import CalorieCalculator from "../components/calculators/CalorieCalculator.astro";
 import FaqSection from "../components/FaqSection.astro";
 import Sources from "../components/ui/Sources.astro";
-import ArticleImage from "../components/ui/ArticleImage.astro";
 import { HOME_FAQS } from "../data/faqs";
 import {
   organizationSchema,
@@ -44,43 +43,35 @@ const jsonLd = [
   ]}
 >
   <!-- 📈 Calculator (Top) -->
-  <section class="relative overflow-hidden pt-12 pb-12">
-    <div class="bg-grid pointer-events-none absolute inset-0 -z-10" aria-hidden="true"></div>
-    <div
-      class="pointer-events-none absolute left-1/2 top-0 -z-10 h-[400px] w-[800px] -translate-x-1/2 rounded-full opacity-20 blur-[120px]"
-      style="background: radial-gradient(circle, #007cf0, transparent 70%);"
-      aria-hidden="true"
-    >
-    </div>
-    
+  <section class="pt-12 pb-12">
     <div class="container-page">
       <div class="mb-10 text-center">
         <h1 class="mx-auto text-display-xl tracking-tight text-ink">
-          Free <span class="text-gradient">Calorie Calculator</span>
+          Calorie Calculator
         </h1>
         <p class="mx-auto mt-4 max-w-2xl text-lg text-body">
           Enter your metrics below to estimate your daily calorie needs for weight loss, maintenance, or muscle gain. You'll instantly receive a personalized starting point, including your TDEE, BMR, and macro breakdown.
         </p>
       </div>
       
-      <div id="calculator" class="mx-auto max-w-4xl scroll-mt-20">
+      <div id="calculator" class="mx-auto max-w-5xl scroll-mt-20">
         <CalorieCalculator />
       </div>
     </div>
   </section>
 
   <!-- 🛡️ Key Points (Trust) -->
-  <Section class="border-t border-hairline bg-canvas-soft/30">
+  <Section class="border-t border-hairline bg-canvas-soft">
     <div class="grid gap-6 sm:grid-cols-3 max-w-5xl mx-auto">
       {trust.map((t) => (
-        <div class="card p-6 flex flex-col items-center text-center bg-canvas hover:border-ink transition-colors">
-          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-canvas-soft text-brand">
-            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="flex flex-col items-center text-center">
+          <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-md bg-surface border border-hairline shadow-sm text-brand">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d={t.icon} />
             </svg>
           </div>
-          <h3 class="text-base font-semibold text-ink">{t.label}</h3>
-          <p class="mt-2 text-sm text-body">{t.description}</p>
+          <h3 class="text-sm font-semibold text-ink">{t.label}</h3>
+          <p class="mt-1.5 text-sm text-mute max-w-xs">{t.description}</p>
         </div>
       ))}
     </div>
@@ -183,15 +174,9 @@ const jsonLd = [
 
   <!-- 🚀 CTA banner -->
   <Section class="border-t border-hairline">
-    <div class="card relative overflow-hidden p-8 text-center sm:p-14">
-      <div
-        class="pointer-events-none absolute inset-0 opacity-[0.12]"
-        style="background: linear-gradient(120deg, #007cf0, #00dfd8, #7928ca, #ff0080);"
-        aria-hidden="true"
-      >
-      </div>
+    <div class="card p-8 text-center sm:p-14 max-w-4xl mx-auto">
       <div class="relative">
-      <h2 class="text-display-md text-gradient">Ready to calculate your daily calories?</h2>
+      <h2 class="text-display-md text-ink">Ready to calculate your daily calories?</h2>
         <p class="mx-auto mt-3 max-w-lg text-body">
           Enter your height, weight, age, and activity level for an instant, private
           calorie target and macro split.

@@ -4,87 +4,87 @@
  * Renders a form + results panel. All computation runs client-side in the
  * <script> below, importing the shared lib so the math has one source of truth.
  */
-const inputCls =
-  "w-full h-11 rounded-lg border border-hairline bg-canvas px-3.5 text-sm text-ink placeholder:text-mute transition-colors focus:border-brand focus:outline-none";
-const selectCls = inputCls + " appearance-none bg-no-repeat pr-9";
 ---
 
 <div
-  class="grid gap-6 lg:grid-cols-[minmax(0,420px)_1fr]"
+  class="grid gap-8 lg:grid-cols-[minmax(0,380px)_1fr]"
   id="calc-root"
   data-calc="calorie"
 >
   <!-- ── Form ───────────────────────────────────────────────── -->
-  <form id="calc-form" class="card p-5 sm:p-6" novalidate>
-    <!-- Helper note: clarifies the pre-filled example values -->
-    <p role="note" class="mb-4 text-xs leading-relaxed text-mute">
-      Example values are pre-filled. Enter your own details for accurate results.
-    </p>
+  <form id="calc-form" class="flex flex-col rounded-xl border border-hairline bg-surface p-5 sm:p-7 shadow-sm" novalidate>
+    <div class="mb-6">
+      <h2 class="text-lg font-semibold text-ink">Your details</h2>
+      <p role="note" class="mt-1 text-sm text-mute">
+        Enter your metrics to calculate your daily energy needs.
+      </p>
+    </div>
+
     <!-- Unit system -->
     <div
-      class="mb-5 grid grid-cols-2 gap-1 rounded-full border border-hairline bg-canvas-soft p-1"
+      class="mb-6 grid grid-cols-2 gap-1 rounded-md border border-hairline bg-canvas-soft p-1"
       role="tablist"
       aria-label="Unit system"
     >
-      <button type="button" data-unit="metric" class="unit-tab h-9 rounded-full text-sm font-medium transition-colors" role="tab" aria-selected="true">Metric</button>
-      <button type="button" data-unit="imperial" class="unit-tab h-9 rounded-full text-sm font-medium transition-colors" role="tab" aria-selected="false">Imperial</button>
+      <button type="button" data-unit="metric" class="unit-tab h-8 rounded text-sm font-medium transition-colors" role="tab" aria-selected="true">Metric</button>
+      <button type="button" data-unit="imperial" class="unit-tab h-8 rounded text-sm font-medium transition-colors" role="tab" aria-selected="false">Imperial</button>
     </div>
 
     <!-- Sex -->
-    <fieldset class="mb-4">
-      <legend class="mb-1.5 block text-sm font-medium text-ink">Gender</legend>
-      <div class="grid grid-cols-2 gap-2">
-        <label class="sex-opt flex h-11 cursor-pointer items-center justify-center gap-2 rounded-lg border border-hairline text-sm font-medium text-body transition-colors has-[:checked]:border-brand has-[:checked]:bg-brand/10 has-[:checked]:text-ink">
+    <fieldset class="mb-5">
+      <legend class="mb-2 block text-sm font-medium text-ink">Biological Sex</legend>
+      <div class="grid grid-cols-2 gap-3">
+        <label class="flex h-10 cursor-pointer items-center justify-center gap-2 rounded-md border border-hairline bg-surface text-sm font-medium text-body transition-colors has-[:checked]:border-brand has-[:checked]:bg-brand/5 has-[:checked]:text-ink hover:bg-canvas-soft">
           <input type="radio" name="sex" value="male" class="sr-only" checked />
           Male
         </label>
-        <label class="sex-opt flex h-11 cursor-pointer items-center justify-center gap-2 rounded-lg border border-hairline text-sm font-medium text-body transition-colors has-[:checked]:border-brand has-[:checked]:bg-brand/10 has-[:checked]:text-ink">
+        <label class="flex h-10 cursor-pointer items-center justify-center gap-2 rounded-md border border-hairline bg-surface text-sm font-medium text-body transition-colors has-[:checked]:border-brand has-[:checked]:bg-brand/5 has-[:checked]:text-ink hover:bg-canvas-soft">
           <input type="radio" name="sex" value="female" class="sr-only" />
           Female
         </label>
       </div>
     </fieldset>
 
-    <div class="mb-4 grid grid-cols-2 gap-3">
+    <div class="mb-5 grid grid-cols-2 gap-4">
       <!-- Age -->
       <div class="space-y-1.5">
-        <label for="age" class="block text-sm font-medium text-ink">Age</label>
-        <input id="age" name="age" type="number" inputmode="numeric" min="15" max="100" value="30" class={inputCls} />
+        <label for="age" class="form-label">Age</label>
+        <input id="age" name="age" type="number" inputmode="numeric" min="15" max="100" value="30" class="form-input" />
       </div>
       <!-- Weight -->
       <div class="space-y-1.5">
-        <label for="weight" class="block text-sm font-medium text-ink">
-          Weight <span class="weight-unit text-mute">(kg)</span>
+        <label for="weight" class="form-label">
+          Weight <span class="weight-unit font-normal text-mute">(kg)</span>
         </label>
-        <input id="weight" name="weight" type="number" inputmode="decimal" min="20" step="0.1" value="70" class={inputCls} />
+        <input id="weight" name="weight" type="number" inputmode="decimal" min="20" step="0.1" value="70" class="form-input" />
       </div>
     </div>
 
     <!-- Height -->
-    <div class="mb-4">
-      <label class="mb-1.5 block text-sm font-medium text-ink">
-        Height <span class="height-unit text-mute">(cm)</span>
+    <div class="mb-8">
+      <label class="form-label mb-1.5">
+        Height <span class="height-unit font-normal text-mute">(cm)</span>
       </label>
       <div id="height-metric">
-        <input id="height-cm" type="number" inputmode="numeric" min="100" max="250" value="175" class={inputCls}  aria-label="Height in centimetres" />
+        <input id="height-cm" type="number" inputmode="numeric" min="100" max="250" value="175" class="form-input" aria-label="Height in centimetres" />
       </div>
       <div id="height-imperial" class="hidden grid-cols-2 gap-3">
         <div class="relative">
-          <input id="height-ft" type="number" inputmode="numeric" min="3" max="8" value="5" class={inputCls}  aria-label="Height in feet" />
-          <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-mute">ft</span>
+          <input id="height-ft" type="number" inputmode="numeric" min="3" max="8" value="5" class="form-input pr-8" aria-label="Height in feet" />
+          <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-sm text-mute">ft</span>
         </div>
         <div class="relative">
-          <input id="height-in" type="number" inputmode="numeric" min="0" max="11" value="9" class={inputCls}  aria-label="Height in inches" />
-          <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-mute">in</span>
+          <input id="height-in" type="number" inputmode="numeric" min="0" max="11" value="9" class="form-input pr-8" aria-label="Height in inches" />
+          <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-sm text-mute">in</span>
         </div>
       </div>
     </div>
 
     <!-- Activity -->
-    <div class="mb-5 space-y-1.5">
-      <label for="activity" class="block text-sm font-medium text-ink">Activity level</label>
+    <div class="mb-6 space-y-1.5">
+      <label for="activity" class="form-label">Activity level</label>
       <div class="relative">
-        <select id="activity" name="activity" class={selectCls}>
+        <select id="activity" name="activity" class="form-input pr-9">
           <option value="sedentary">Sedentary — little or no exercise</option>
           <option value="light">Lightly active — 1–3 days/week</option>
           <option value="moderate" selected>Moderately active — 3–5 days/week</option>
@@ -95,131 +95,136 @@ const selectCls = inputCls + " appearance-none bg-no-repeat pr-9";
       </div>
     </div>
 
-    <button type="submit" id="calc-btn" class="shimmer-btn inline-flex h-12 w-full items-center justify-center rounded-full bg-ink text-base font-medium text-canvas transition-all hover:opacity-90 active:scale-[0.99]">
-      Calculate
-    </button>
+    <div class="mt-auto">
+      <button type="submit" id="calc-btn" class="inline-flex h-11 w-full items-center justify-center rounded-md bg-brand text-base font-medium text-white transition-colors hover:bg-brand-hover focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2">
+        Calculate calories
+      </button>
+    </div>
   </form>
 
   <!-- ── Results ────────────────────────────────────────────── -->
-  <div id="calc-results" class="space-y-5">
-    <!-- Headline -->
-    <div class="card relative overflow-hidden p-6 sm:p-8">
-      <div class="bg-grid pointer-events-none absolute inset-0 opacity-40" aria-hidden="true"></div>
-      <div class="relative">
-        <div class="flex flex-wrap items-end justify-between gap-3">
-          <div>
-            <p class="text-sm text-mute">Your daily calories to <span id="goal-label" class="text-ink">maintain weight</span></p>
-            <p class="mt-1">
-              <span id="result-calories" class="text-display-lg text-ink tabular-nums">2,000</span>
-              <span class="text-lg text-mute">kcal/day</span>
-            </p>
-          </div>
-          <div class="text-right">
-            <p class="text-xs text-mute">Weekly</p>
-            <p id="result-weekly" class="text-display-sm text-ink tabular-nums">14,000</p>
-          </div>
+  <div id="calc-results" class="flex flex-col rounded-xl border border-hairline bg-surface shadow-sm">
+    <!-- Primary Result -->
+    <div class="p-6 sm:p-8">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h3 class="text-sm font-semibold text-ink">Your daily calorie needs</h3>
+          <p class="mt-2 flex items-baseline gap-2">
+            <span id="result-calories" class="text-display-lg text-ink font-bold tabular-nums tracking-tight">2,000</span>
+            <span class="text-lg font-medium text-mute">kcal / day</span>
+          </p>
+          <p class="mt-1.5 text-sm text-body">To <span id="goal-label" class="font-medium text-ink">maintain weight</span></p>
         </div>
+      </div>
 
-        <!-- Goal selector -->
-        <div class="mt-5 space-y-1.5">
-          <label for="goal" class="block text-xs font-medium text-mute">Adjust goal</label>
-          <div class="relative">
-            <select id="goal" class="h-11 w-full appearance-none rounded-lg border border-hairline bg-canvas px-3.5 pr-9 text-sm text-ink focus:border-brand focus:outline-none">
-              <option value="maintain" selected>Maintain weight</option>
-              <option value="mildLoss">Mild weight loss — 0.5 lb/week</option>
-              <option value="loss">Weight loss — 1 lb/week</option>
-              <option value="extremeLoss">Extreme loss — 2 lb/week</option>
-              <option value="mildGain">Mild weight gain — 0.5 lb/week</option>
-              <option value="gain">Weight gain — 1 lb/week</option>
-              <option value="extremeGain">Extreme gain — 2 lb/week</option>
-            </select>
-            <svg class="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6" /></svg>
-          </div>
-        </div>
-
-        <!-- Actions -->
-        <div class="mt-4 flex flex-wrap gap-2">
-          <button type="button" id="copy-btn" class="inline-flex h-9 items-center gap-1.5 rounded-full border border-hairline px-3 text-xs font-medium text-body transition-colors hover:border-ink hover:text-ink">
-            <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            <span id="copy-label">Copy</span>
-          </button>
-          <button type="button" id="print-btn" class="inline-flex h-9 items-center gap-1.5 rounded-full border border-hairline px-3 text-xs font-medium text-body transition-colors hover:border-ink hover:text-ink">
-            <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg>
-            Print / PDF
-          </button>
-          <button type="button" id="share-btn" class="inline-flex h-9 items-center gap-1.5 rounded-full border border-hairline px-3 text-xs font-medium text-body transition-colors hover:border-ink hover:text-ink">
-            <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
-            <span id="share-label">Share</span>
-          </button>
+      <!-- Goal selector -->
+      <div class="mt-8 max-w-sm space-y-1.5">
+        <label for="goal" class="text-sm font-medium text-ink">Adjust your goal</label>
+        <div class="relative">
+          <select id="goal" class="form-input bg-canvas-soft pr-9 text-sm text-ink focus:bg-surface">
+            <option value="maintain" selected>Maintain weight</option>
+            <option value="mildLoss">Mild weight loss — 0.5 lb/week</option>
+            <option value="loss">Weight loss — 1 lb/week</option>
+            <option value="extremeLoss">Extreme loss — 2 lb/week</option>
+            <option value="mildGain">Mild weight gain — 0.5 lb/week</option>
+            <option value="gain">Weight gain — 1 lb/week</option>
+            <option value="extremeGain">Extreme gain — 2 lb/week</option>
+          </select>
+          <svg class="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6" /></svg>
         </div>
       </div>
     </div>
 
-    <!-- BMR + TDEE -->
-    <div class="grid grid-cols-2 gap-4">
-      <div class="card p-5">
-        <p class="text-xs uppercase tracking-wide text-mute">BMR</p>
-        <p id="result-bmr" class="mt-1 text-display-sm text-ink tabular-nums">1,600</p>
-        <p class="mt-1 text-xs text-mute">Basal metabolic rate</p>
-      </div>
-      <div class="card p-5">
-        <p class="text-xs uppercase tracking-wide text-mute">TDEE</p>
-        <p id="result-tdee" class="mt-1 text-display-sm text-ink tabular-nums">2,000</p>
-        <p class="mt-1 text-xs text-mute">Total daily energy</p>
-      </div>
-    </div>
+    <!-- Secondary Results (BMR/TDEE & Macros) -->
+    <div class="grid sm:grid-cols-2 border-y border-hairline">
+       <!-- Energy Profile -->
+       <div class="p-6 border-b sm:border-b-0 sm:border-r border-hairline space-y-4">
+          <h4 class="text-sm font-semibold text-ink">Energy Profile</h4>
+          <div class="flex justify-between items-center">
+             <span class="text-sm text-body">Basal Metabolic Rate</span>
+             <span class="text-sm font-medium text-ink tabular-nums"><span id="result-bmr">1,600</span></span>
+          </div>
+          <div class="flex justify-between items-center">
+             <span class="text-sm text-body">Total Daily Energy</span>
+             <span class="text-sm font-medium text-ink tabular-nums"><span id="result-tdee">2,000</span></span>
+          </div>
+          <div class="flex justify-between items-center">
+             <span class="text-sm text-body">Weekly Calories</span>
+             <span class="text-sm font-medium text-ink tabular-nums"><span id="result-weekly">14,000</span></span>
+          </div>
+       </div>
 
-    <!-- Macros -->
-    <div class="card p-5 sm:p-6">
-      <div class="flex items-center justify-between">
-        <h3 class="text-sm font-semibold text-ink">Recommended macros</h3>
-        <span class="text-xs text-mute">30P / 40C / 30F</span>
-      </div>
-      <div class="mt-4 flex flex-col items-center gap-6 sm:flex-row">
-        <!-- Donut -->
-        <svg viewBox="0 0 120 120" class="h-32 w-32 shrink-0 -rotate-90" role="img" aria-label="Macro distribution">
-          <circle cx="60" cy="60" r="52" fill="none" stroke="var(--color-hairline)" stroke-width="14" />
-          <circle id="arc-protein" cx="60" cy="60" r="52" fill="none" stroke="var(--color-protein)" stroke-width="14" stroke-linecap="round" stroke-dasharray="0 327" />
-          <circle id="arc-carbs" cx="60" cy="60" r="52" fill="none" stroke="var(--color-carbs)" stroke-width="14" stroke-linecap="round" stroke-dasharray="0 327" />
-          <circle id="arc-fat" cx="60" cy="60" r="52" fill="none" stroke="var(--color-fat)" stroke-width="14" stroke-linecap="round" stroke-dasharray="0 327" />
-        </svg>
-        <!-- Legend -->
-        <ul class="w-full space-y-3">
-          <li class="flex items-center justify-between gap-3">
-            <span class="flex items-center gap-2 text-sm text-body"><span class="h-3 w-3 rounded-full bg-protein"></span>Protein</span>
-            <span class="text-sm font-medium text-ink"><span id="macro-protein" class="tabular-nums">150</span> g</span>
-          </li>
-          <li class="flex items-center justify-between gap-3">
-            <span class="flex items-center gap-2 text-sm text-body"><span class="h-3 w-3 rounded-full bg-carbs"></span>Carbs</span>
-            <span class="text-sm font-medium text-ink"><span id="macro-carbs" class="tabular-nums">200</span> g</span>
-          </li>
-          <li class="flex items-center justify-between gap-3">
-            <span class="flex items-center gap-2 text-sm text-body"><span class="h-3 w-3 rounded-full bg-fat"></span>Fat</span>
-            <span class="text-sm font-medium text-ink"><span id="macro-fat" class="tabular-nums">67</span> g</span>
-          </li>
-        </ul>
-      </div>
+       <!-- Macros -->
+       <div class="p-6">
+          <div class="flex justify-between items-center mb-5">
+             <h4 class="text-sm font-semibold text-ink">Macros</h4>
+             <span class="text-xs font-medium text-mute">30P / 40C / 30F</span>
+          </div>
+          <div class="flex items-center gap-5">
+            <!-- Donut -->
+            <svg viewBox="0 0 120 120" class="h-16 w-16 shrink-0 -rotate-90" role="img" aria-label="Macro distribution">
+              <circle cx="60" cy="60" r="52" fill="none" stroke="var(--color-hairline)" stroke-width="14" />
+              <circle id="arc-protein" cx="60" cy="60" r="52" fill="none" stroke="var(--color-protein)" stroke-width="14" stroke-linecap="round" stroke-dasharray="0 327" />
+              <circle id="arc-carbs" cx="60" cy="60" r="52" fill="none" stroke="var(--color-carbs)" stroke-width="14" stroke-linecap="round" stroke-dasharray="0 327" />
+              <circle id="arc-fat" cx="60" cy="60" r="52" fill="none" stroke="var(--color-fat)" stroke-width="14" stroke-linecap="round" stroke-dasharray="0 327" />
+            </svg>
+            <!-- Legend -->
+            <ul class="w-full space-y-2">
+              <li class="flex items-center justify-between gap-3">
+                <span class="flex items-center gap-2 text-xs text-body"><span class="h-2 w-2 rounded-sm bg-protein"></span>Protein</span>
+                <span class="text-xs font-medium text-ink"><span id="macro-protein" class="tabular-nums">150</span>g</span>
+              </li>
+              <li class="flex items-center justify-between gap-3">
+                <span class="flex items-center gap-2 text-xs text-body"><span class="h-2 w-2 rounded-sm bg-carbs"></span>Carbs</span>
+                <span class="text-xs font-medium text-ink"><span id="macro-carbs" class="tabular-nums">200</span>g</span>
+              </li>
+              <li class="flex items-center justify-between gap-3">
+                <span class="flex items-center gap-2 text-xs text-body"><span class="h-2 w-2 rounded-sm bg-fat"></span>Fat</span>
+                <span class="text-xs font-medium text-ink"><span id="macro-fat" class="tabular-nums">67</span>g</span>
+              </li>
+            </ul>
+          </div>
+       </div>
     </div>
 
     <!-- All goals table -->
-    <div class="card overflow-hidden">
-      <table class="w-full text-sm">
-        <caption class="sr-only">Daily calories for each weight goal</caption>
-        <thead>
-          <tr class="border-b border-hairline text-left text-xs uppercase tracking-wide text-mute">
-            <th scope="col" class="px-4 py-3 font-medium">Goal</th>
-            <th scope="col" class="px-4 py-3 text-right font-medium">Per day</th>
-            <th scope="col" class="hidden px-4 py-3 text-right font-medium sm:table-cell">Per week</th>
-          </tr>
-        </thead>
-        <tbody id="goals-table"></tbody>
-      </table>
+    <div class="p-6 border-b border-hairline">
+      <h4 class="mb-4 text-sm font-semibold text-ink">All Goals Overview</h4>
+      <div class="overflow-x-auto rounded border border-hairline">
+        <table class="w-full text-sm">
+          <caption class="sr-only">Daily calories for each weight goal</caption>
+          <thead class="bg-canvas-soft border-b border-hairline">
+            <tr class="text-left text-xs uppercase tracking-wide text-mute">
+              <th scope="col" class="px-4 py-2 font-medium">Goal</th>
+              <th scope="col" class="px-4 py-2 text-right font-medium">Per day</th>
+              <th scope="col" class="hidden px-4 py-2 text-right font-medium sm:table-cell">Per week</th>
+            </tr>
+          </thead>
+          <tbody id="goals-table" class="divide-y divide-hairline bg-surface"></tbody>
+        </table>
+      </div>
     </div>
 
-    <p class="text-xs leading-relaxed text-mute">
-      Estimates use the Mifflin-St Jeor equation. Individual needs vary —
-      use these as a starting point and adjust based on real-world results.
-    </p>
+    <!-- Actions -->
+    <div class="mt-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-canvas p-4 sm:p-6">
+      <p class="text-xs text-mute max-w-xs">
+        Calculations use the Mifflin-St Jeor equation. Results are estimates.
+      </p>
+      <div class="flex flex-wrap gap-2 w-full sm:w-auto">
+        <button type="button" id="copy-btn" class="flex-1 sm:flex-none inline-flex h-8 items-center justify-center gap-1.5 rounded border border-hairline bg-surface px-3 text-xs font-medium text-ink transition-colors hover:border-hairline-strong hover:bg-canvas-soft focus:outline-none focus:ring-2 focus:ring-brand">
+          <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <span id="copy-label">Copy</span>
+        </button>
+        <button type="button" id="print-btn" class="flex-1 sm:flex-none inline-flex h-8 items-center justify-center gap-1.5 rounded border border-hairline bg-surface px-3 text-xs font-medium text-ink transition-colors hover:border-hairline-strong hover:bg-canvas-soft focus:outline-none focus:ring-2 focus:ring-brand">
+          <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg>
+          Print
+        </button>
+        <button type="button" id="share-btn" class="flex-1 sm:flex-none inline-flex h-8 items-center justify-center gap-1.5 rounded border border-hairline bg-surface px-3 text-xs font-medium text-ink transition-colors hover:border-hairline-strong hover:bg-canvas-soft focus:outline-none focus:ring-2 focus:ring-brand">
+          <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
+          <span id="share-label">Share</span>
+        </button>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -265,7 +270,7 @@ const selectCls = inputCls + " appearance-none bg-no-repeat pr-9";
 
     const form = $("calc-form") as HTMLFormElement;
     form.addEventListener("input", markDirty);
-    
+
     const goalSelect = $("goal") as HTMLSelectElement;
 
     function readInputs() {
@@ -329,10 +334,10 @@ const selectCls = inputCls + " appearance-none bg-no-repeat pr-9";
         .map((k) => {
           const c = goalCalories(tdeeVal, k, sex);
           const active = k === goal;
-          return `<tr class="border-b border-hairline last:border-0 ${active ? "bg-brand/5" : ""}">
-            <td class="px-4 py-2.5 ${active ? "text-ink font-medium" : "text-body"}">${GOALS[k].label}</td>
-            <td class="px-4 py-2.5 text-right tabular-nums ${active ? "text-ink font-medium" : "text-body"}">${fmt(c)}</td>
-            <td class="hidden px-4 py-2.5 text-right tabular-nums text-mute sm:table-cell">${fmt(c * 7)}</td>
+          return `<tr class="last:border-0 ${active ? "bg-brand/5" : ""}">
+            <td class="px-4 py-2 ${active ? "text-ink font-medium" : "text-body"}">${GOALS[k].label}</td>
+            <td class="px-4 py-2 text-right tabular-nums ${active ? "text-ink font-medium" : "text-body"}">${fmt(c)}</td>
+            <td class="hidden px-4 py-2 text-right tabular-nums text-mute sm:table-cell">${fmt(c * 7)}</td>
           </tr>`;
         })
         .join("");
@@ -396,9 +401,11 @@ const selectCls = inputCls + " appearance-none bg-no-repeat pr-9";
         root.querySelectorAll<HTMLButtonElement>(".unit-tab").forEach((b) => {
           const on = b.dataset.unit === unit;
           b.setAttribute("aria-pressed", String(on));
-          b.classList.toggle("bg-canvas", on);
+          b.classList.toggle("bg-surface", on);
           b.classList.toggle("text-ink", on);
           b.classList.toggle("shadow-sm", on);
+          b.classList.toggle("border-hairline", on);
+          b.classList.toggle("border", on);
           b.classList.toggle("text-mute", !on);
         });
         // toggle height inputs + unit labels
@@ -406,7 +413,7 @@ const selectCls = inputCls + " appearance-none bg-no-repeat pr-9";
         $("height-imperial").classList.toggle("hidden", unit === "metric");
         $("height-imperial").classList.toggle("grid", unit === "imperial");
         const wU = unit === "metric" ? "(kg)" : "(lb)";
-        const hU = unit === "metric" ? "(cm)" : "(ft / in)";
+        const hU = unit === "metric" ? "(cm)" : "(ft/in)";
         document.querySelectorAll(".weight-unit").forEach((e) => (e.textContent = wU));
         document.querySelectorAll(".height-unit").forEach((e) => (e.textContent = hU));
         // convert current weight value
@@ -462,7 +469,7 @@ const selectCls = inputCls + " appearance-none bg-no-repeat pr-9";
     });
 
     // Init: set metric tab active styles
-    root.querySelector<HTMLButtonElement>('.unit-tab[data-unit="metric"]')?.classList.add("bg-canvas", "text-ink", "shadow-sm");
+    root.querySelector<HTMLButtonElement>('.unit-tab[data-unit="metric"]')?.classList.add("bg-surface", "text-ink", "shadow-sm", "border", "border-hairline");
     root.querySelector<HTMLButtonElement>('.unit-tab[data-unit="imperial"]')?.classList.add("text-mute");
 
     form.addEventListener("submit", (e) => {
