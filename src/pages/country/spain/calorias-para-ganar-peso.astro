@@ -1,0 +1,143 @@
+---
+import ContentLayout from '../../../layouts/ContentLayout.astro';
+import Button from '../../../components/ui/Button.astro';
+
+const seoTitle = "Calorías para Ganar Peso: ¿Cuántas Necesito?";
+const seoDescription = "Descubre cómo calcular las calorías para ganar peso. Aprende qué es un superávit calórico, cómo funciona y estimaciones para aumentar de peso.";
+
+const faqs = [
+  {
+    q: "¿Cuántas calorías debo consumir para ganar peso?",
+    a: "Para ganar peso, debes consumir más calorías de las que gastas, lo que se conoce como superávit calórico. Como punto de partida, se suele estimar tu gasto total y añadir de forma moderada, dependiendo de la persona y sus objetivos."
+  },
+  {
+    q: "¿Qué es un superávit calórico?",
+    a: "Un superávit calórico ocurre cuando consumes más energía (calorías) a través de los alimentos de la que tu cuerpo utiliza. Este exceso de energía puede contribuir al aumento de peso."
+  },
+  {
+    q: "¿Cuántas calorías más necesito para aumentar de peso?",
+    a: "En nutrición deportiva, muchas veces se utiliza un incremento aproximado de 250 a 500 calorías por encima del mantenimiento como punto de partida. Esta cantidad puede variar enormemente según el metabolismo individual y el nivel de actividad."
+  },
+  {
+    q: "¿Cómo calculo mis calorías de mantenimiento?",
+    a: "Las calorías de mantenimiento se estiman calculando tu Tasa Metabólica Basal (TMB) y multiplicándola por tu factor de actividad física. Puedes utilizar calculadoras online para obtener esta estimación inicial."
+  },
+  {
+    q: "¿Puedo ganar peso solo aumentando las calorías?",
+    a: "Sí, un superávit calórico sostenido resulta en un aumento de peso corporal. Sin embargo, para que parte de ese peso sea masa muscular, generalmente se requiere acompañarlo de entrenamiento de fuerza adecuado."
+  },
+  {
+    q: "¿Ganar peso significa ganar músculo?",
+    a: "No necesariamente. El peso ganado puede distribuirse entre tejido muscular, grasa, glucógeno y líquidos. Un estímulo adecuado como el entrenamiento ayuda a que el peso ganado favorezca al músculo."
+  },
+  {
+    q: "¿Qué alimentos ayudan a aumentar las calorías?",
+    a: "Alimentos densos en nutrientes y energía pueden facilitar el proceso. Ejemplos incluyen frutos secos, crema de cacahuete, aceite de oliva, aguacate, lácteos, arroz, avena, legumbres y huevos."
+  },
+  {
+    q: "¿Cuánto tiempo se tarda en ganar peso?",
+    a: "El ritmo varía significativamente entre individuos debido a la genética, alimentación y entrenamiento. Es un proceso gradual y los cambios iniciales en la báscula también pueden deberse a variaciones temporales de agua."
+  },
+  {
+    q: "¿La calculadora de calorías puede decirme cuántas calorías necesito para ganar peso?",
+    a: "Sí, una calculadora de calorías puede proporcionarte una estimación inicial de mantenimiento y sugerirte un superávit calórico, aunque luego deberás monitorear y ajustar las calorías según cómo responda tu cuerpo a lo largo del tiempo."
+  }
+];
+---
+
+<ContentLayout
+  title={seoTitle}
+  description={seoDescription}
+  h1="Calorías para Ganar Peso: ¿Cuántas Necesito?"
+  lead="Comprender el balance energético es esencial si buscas aumentar tu masa corporal. Descubre cómo funciona el superávit calórico y cómo estimar tus necesidades de energía."
+  faqs={faqs}
+  relatedTools={["calculadora-de-calorias"]}
+>
+
+  <p>Cuando el objetivo es modificar la composición corporal o subir de talla, a menudo surge la pregunta clave: <em>¿cuántas calorías para ganar peso realmente necesito?</em></p>
+
+  <p>El cuerpo humano opera bajo los principios del balance de energía. Mientras que perder peso requiere consumir menos energía de la que se gasta, ganar peso de manera sostenida exige generalmente lo opuesto. En este artículo explicaremos los conceptos fundamentales, cómo se calculan las estimaciones y cómo iniciar el proceso de forma estructurada.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Qué es un superávit calórico?</h2>
+  <p>En el centro de cualquier etapa de aumento de peso se encuentra el concepto del <strong>superávit calórico</strong>. Esto significa, en términos simples, consumir más energía a través de los alimentos de la que tu cuerpo utiliza en sus funciones diarias y actividad física.</p>
+  
+  <p>Cuando te encuentras en un superávit calórico sostenido, el cuerpo almacena esa energía excedente. Dependiendo del estímulo que reciba tu cuerpo (como el entrenamiento) y tu respuesta individual, estos cambios en el peso corporal pueden incluir diversas proporciones de tejido muscular, grasa corporal, glucógeno almacenado y otros componentes celulares.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Cuántas calorías necesito para ganar peso?</h2>
+  <p>No existe un número único que funcione para todas las personas. Los requerimientos de calorías varían enormemente debido a factores como el sexo, la edad, la estatura, el peso actual y la cantidad de actividad física diaria.</p>
+
+  <p>Para determinar una estimación, se utiliza habitualmente un proceso por etapas:</p>
+
+  <ol class="list-decimal pl-6 space-y-3 mb-6">
+    <li><strong>TMB (Tasa Metabólica Basal):</strong> La energía mínima estimada que tu cuerpo necesita en reposo.</li>
+    <li><strong>Ajuste por actividad física:</strong> Se aplica un factor a la TMB para encontrar tu Gasto Energético Total (GET) o calorías de mantenimiento estimadas.</li>
+    <li><strong>Superávit calórico:</strong> Se añade una cantidad moderada de energía adicional a ese mantenimiento para crear el ambiente propicio para subir de peso.</li>
+  </ol>
+
+  <p>Para aprender más sobre el proceso completo, puedes revisar <a href="/country/spain/como-calcular-mis-calorias-diarias/" class="text-brand hover:underline">cómo calcular tus calorías diarias</a>.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Cuántas calorías debo añadir para ganar peso?</h2>
+  <p>El incremento que se añade a las <a href="/country/spain/cuantas-calorias-debo-consumir-al-dia/" class="text-brand hover:underline">calorías de mantenimiento</a> es simplemente un punto de partida. En muchos protocolos nutricionales, se sugiere añadir <strong>aproximadamente entre 250 y 500 calorías diarias</strong> por encima del mantenimiento para lograr un aumento paulatino y controlado.</p>
+
+  <p>Sin embargo, es fundamental comprender que este rango <strong>no es una regla universal</strong>. Si bien añadir energía es necesario, la respuesta de tu propio cuerpo y nivel de actividad dicta los resultados. Algunas personas muy activas podrían necesitar incrementar su consumo en cantidades mayores tras observar la tendencia, mientras que otras podrían requerir un superávit menor.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Ejemplo hipotético</h2>
+  <p>A modo puramente ilustrativo, veamos cómo funciona la estimación del superávit en un caso ficticio (no representa una recomendación médica ni personalizada):</p>
+
+  <div class="bg-surface-elevated border border-hairline rounded-xl p-6 my-8">
+    <p>Supongamos un adulto (30 años, 75 kg, 180 cm de estatura) con un nivel de actividad ligera. Tras utilizar una fórmula de estimación, determinamos que sus calorías de mantenimiento rondan las <strong>2,400 calorías al día</strong>.</p>
+    <ul class="list-disc pl-6 space-y-2 mt-4">
+      <li><strong>Mantenimiento estimado:</strong> 2,400 calorías</li>
+      <li><strong>Superávit sugerido como punto de partida:</strong> +300 calorías</li>
+    </ul>
+    <p class="font-bold text-xl mt-4 text-center">2,400 + 300 = 2,700 calorías diarias</p>
+    <p class="mt-4">Esta persona podría comenzar consumiendo alrededor de 2,700 calorías y evaluar su respuesta al cabo de un tiempo prudencial antes de realizar otros ajustes.</p>
+  </div>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Cómo saber si estoy comiendo suficientes calorías?</h2>
+  <p>Dado que cualquier fórmula proporciona una estimación inicial, la mejor manera de saber si estás comiendo suficientes calorías es prestar atención a los resultados a lo largo del tiempo.</p>
+  
+  <p>Monitoriza la tendencia de tu peso corporal durante algunas semanas. Si la báscula se mantiene completamente estable, probablemente solo estés cubriendo tu mantenimiento. En ese caso, un pequeño aumento calórico podría ser útil. La variación individual, los cambios en el apetito y la adaptación del gasto energético requieren ajustes periódicos y paciencia.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Ganar peso significa ganar músculo?</h2>
+  <p>Es importante distinguir entre aumentar de peso y desarrollar específicamente la masa muscular. Un superávit energético sostenido contribuye al aumento de peso, pero gran parte de ese peso ganado dependerá de factores externos a las calorías mismas.</p>
+
+  <p>Para favorecer el desarrollo del músculo, el aumento de calorías debe acompañarse de un estímulo como el entrenamiento de fuerza o resistencia progresiva. Asimismo, las proteínas son necesarias para mantener y reparar tejidos. No obstante, un superávit por sí solo no garantiza resultados específicos en tu composición corporal.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Qué alimentos pueden ayudar a aumentar las calorías?</h2>
+  <p>Alcanzar un objetivo calórico más alto puede resultar un desafío al principio. Incrementar las calorías no implica que debas depender exclusivamente de alimentos ultraprocesados de baja calidad nutricional. Seleccionar alimentos más densos en energía puede facilitar el proceso manteniendo un enfoque balanceado:</p>
+
+  <ul class="list-disc pl-6 space-y-3 mb-6">
+    <li><strong>Alimentos grasos saludables:</strong> Aceite de oliva, aguacate, frutos secos, mantequilla de cacahuete.</li>
+    <li><strong>Carbohidratos y cereales:</strong> Avena, arroz, pan, legumbres, patata y pasta.</li>
+    <li><strong>Fuentes ricas en nutrientes:</strong> Huevos, lácteos, carnes, pescados.</li>
+  </ul>
+  
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Cuánto tiempo se tarda en ganar peso?</h2>
+  <p>El ritmo al que cada persona aumenta de peso difiere sustancialmente. Las primeras semanas de comer en superávit pueden generar fluctuaciones y saltos rápidos en la báscula, muchas veces originados por el glucógeno muscular y líquidos asociados, además de una mayor presencia de alimentos en el cuerpo.</p>
+
+  <p>Con el paso del tiempo, el proceso suele ralentizarse y hacerse gradual. Es fundamental recordar que los cambios a corto plazo en la báscula no siempre reflejan únicamente aumentos de tejido.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Errores comunes al intentar subir de peso</h2>
+  <ul class="list-disc pl-6 space-y-3 mb-6">
+    <li><strong>Asumir requerimientos fijos:</strong> Creer que todas las personas necesitan el mismo superávit calórico ignorando su contexto individual.</li>
+    <li><strong>Confundir TMB con mantenimiento:</strong> Intentar aplicar un superávit basándose solo en la TMB generará probablemente una pérdida de peso debido a que se está ignorando el gasto por actividad (TDEE).</li>
+    <li><strong>Descuidar la calidad de la comida:</strong> Depender enteramente de la "comida chatarra" para subir las calorías.</li>
+    <li><strong>Falta de paciencia:</strong> Esperar cambios drásticos de un día para otro o cambiar rápidamente el aporte calórico si la báscula no responde inmediatamente.</li>
+  </ul>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Limitaciones y cuándo consultar a un profesional</h2>
+  <p>Cualquier fórmula o cálculo de calorías ofrece únicamente una aproximación. Las estimaciones son herramientas que actúan como puntos de partida, pero no pueden sustituir el juicio profesional para el cuidado de la salud.</p>
+  
+  <p>Si experimentas pérdida de peso inexplicable, síntomas molestos, o tienes dificultades persistentes para ganar peso a pesar de una mayor ingesta energética, siempre es prudente consultar con un profesional de la salud o un dietista registrado para investigar causas subyacentes.</p>
+
+  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Estima tus necesidades calóricas</h2>
+  <p>Si buscas un punto de referencia para iniciar, puedes usar nuestra herramienta. La <a href="/country/spain/calculadora-de-calorias/" class="text-brand hover:underline font-medium">Calculadora de Calorías</a> estima rápidamente tu metabolismo basal, tus calorías de mantenimiento y te provee estimaciones de superávit o déficit para apoyarte en el proceso.</p>
+
+  <div class="text-center my-10">
+    <Button href="/country/spain/calculadora-de-calorias/" variant="primary" size="lg" class="w-full sm:w-auto">
+      Calculadora de Calorías
+    </Button>
+  </div>
+
+</ContentLayout>
