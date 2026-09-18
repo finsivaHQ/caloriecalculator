@@ -16,32 +16,25 @@ const selectCls = inputCls + " appearance-none bg-no-repeat pr-9";
 >
   <!-- ── Form ───────────────────────────────────────────────── -->
   <form id="calc-form" class="flex flex-col rounded-xl border border-hairline bg-surface p-5 sm:p-7 shadow-sm" novalidate>
-    <div class="mb-6">
-      <h2 class="text-lg font-semibold text-ink">Tus datos</h2>
-      <p role="note" class="mt-1 text-sm text-mute">
-        Ingresa tus datos para calcular tus necesidades energéticas diarias.
-      </p>
-    </div>
-
     <!-- Unit system -->
     <div
       class="mb-6 grid grid-cols-2 gap-1 rounded-md border border-hairline bg-canvas-soft p-1"
       role="tablist"
       aria-label="Unit system"
     >
-      <button type="button" data-unit="metric" class="unit-tab h-8 rounded text-sm font-medium transition-colors" role="tab" aria-selected="true">Metric</button>
-      <button type="button" data-unit="imperial" class="unit-tab h-8 rounded text-sm font-medium transition-colors" role="tab" aria-selected="false">Imperial</button>
+      <button type="button" data-unit="metric" class="unit-tab h-10 rounded text-sm font-medium transition-colors" role="tab" aria-selected="true">Métrico</button>
+      <button type="button" data-unit="imperial" class="unit-tab h-10 rounded text-sm font-medium transition-colors" role="tab" aria-selected="false">Imperial</button>
     </div>
 
     <!-- Sex -->
     <fieldset class="mb-5">
       <legend class="mb-2 block text-sm font-medium text-ink">Sexo Biológico</legend>
       <div class="grid grid-cols-2 gap-3">
-        <label class="flex h-10 cursor-pointer items-center justify-center gap-2 rounded-md border border-hairline bg-surface text-sm font-medium text-body transition-colors has-[:checked]:border-brand has-[:checked]:bg-brand/5 has-[:checked]:text-ink hover:bg-canvas-soft has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-brand has-[:focus-visible]:ring-offset-1">
+        <label class="flex h-11 cursor-pointer items-center justify-center gap-2 rounded-md border border-hairline bg-surface text-sm font-medium text-body transition-colors has-[:checked]:border-brand has-[:checked]:bg-brand/5 has-[:checked]:text-ink hover:bg-canvas-soft has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-brand has-[:focus-visible]:ring-offset-1">
           <input type="radio" name="sex" value="male" class="sr-only" checked />
           Hombre
         </label>
-        <label class="flex h-10 cursor-pointer items-center justify-center gap-2 rounded-md border border-hairline bg-surface text-sm font-medium text-body transition-colors has-[:checked]:border-brand has-[:checked]:bg-brand/5 has-[:checked]:text-ink hover:bg-canvas-soft has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-brand has-[:focus-visible]:ring-offset-1">
+        <label class="flex h-11 cursor-pointer items-center justify-center gap-2 rounded-md border border-hairline bg-surface text-sm font-medium text-body transition-colors has-[:checked]:border-brand has-[:checked]:bg-brand/5 has-[:checked]:text-ink hover:bg-canvas-soft has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-brand has-[:focus-visible]:ring-offset-1">
           <input type="radio" name="sex" value="female" class="sr-only" />
           Mujer
         </label>
@@ -69,15 +62,15 @@ const selectCls = inputCls + " appearance-none bg-no-repeat pr-9";
         Altura <span class="height-unit font-normal text-mute">(cm)</span>
       </label>
       <div id="height-metric">
-        <input id="height-cm" type="number" inputmode="numeric" min="100" max="250" value="175" class="form-input" aria-label="Altura in centimetres" />
+        <input id="height-cm" type="number" inputmode="numeric" min="100" max="250" value="175" class="form-input" aria-label="Altura en centímetros" />
       </div>
       <div id="height-imperial" class="hidden grid-cols-2 gap-3">
         <div class="relative">
-          <input id="height-ft" type="number" inputmode="numeric" min="3" max="8" value="5" class="form-input pr-8" aria-label="Altura in feet" />
+          <input id="height-ft" type="number" inputmode="numeric" min="3" max="8" value="5" class="form-input pr-8" aria-label="Altura en pies" />
           <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-sm text-mute">ft</span>
         </div>
         <div class="relative">
-          <input id="height-in" type="number" inputmode="numeric" min="0" max="11" value="9" class="form-input pr-8" aria-label="Altura in inches" />
+          <input id="height-in" type="number" inputmode="numeric" min="0" max="11" value="9" class="form-input pr-8" aria-label="Altura en pulgadas" />
           <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-sm text-mute">in</span>
         </div>
       </div>
@@ -88,18 +81,18 @@ const selectCls = inputCls + " appearance-none bg-no-repeat pr-9";
       <label for="activity" class="form-label">Nivel de actividad</label>
       <div class="relative">
         <select id="activity" name="activity" class="form-input pr-9">
-          <option value="sedentary">Sedentario — poco o ningún ejercicio</option>
+          <option value="sedentary">Sedentario — poco o nada de ejercicio</option>
           <option value="light">Ligeramente activo — 1–3 días/semana</option>
           <option value="moderate" selected>Moderadamente activo — 3–5 días/semana</option>
           <option value="active">Muy activo — 6–7 días/semana</option>
-          <option value="athlete">Extra activo — ejercicio intenso + trabajo físico</option>
+          <option value="athlete">Extra activo — ejercicio muy intenso</option>
         </select>
         <svg class="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6" /></svg>
       </div>
     </div>
 
-    <div class="mt-auto">
-      <button type="submit" id="calc-btn" class="inline-flex h-11 w-full items-center justify-center rounded-md bg-brand text-base font-medium text-white transition-colors hover:bg-brand-hover focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2">
+    <div class="mt-auto pt-2">
+      <button type="submit" id="calc-btn" class="inline-flex h-12 w-full items-center justify-center rounded-md bg-brand text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2">
         Calcular calorías
       </button>
     </div>
