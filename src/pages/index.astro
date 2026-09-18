@@ -43,14 +43,14 @@ const jsonLd = [
   ]}
 >
   <!-- 📈 Calculator (Top) -->
-  <section class="pt-12 pb-12">
-    <div class="container-page">
-      <div class="mb-10 text-center">
-        <h1 class="mx-auto text-display-xl tracking-tight text-ink">
+  <section class="pt-12 pb-16 sm:pt-16 sm:pb-24">
+    <div class="px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center mb-10">
+        <h1 class="text-display-xl text-ink">
           Calorie Calculator
         </h1>
-        <p class="mx-auto mt-4 max-w-2xl text-lg text-body">
-          Enter your metrics below to estimate your daily calorie needs for weight loss, maintenance, or muscle gain. You'll instantly receive a personalized starting point, including your TDEE, BMR, and macro breakdown.
+        <p class="mx-auto mt-4 max-w-xl text-lg text-body">
+          Calculate your daily energy needs. Uses the Mifflin-St Jeor equation.
         </p>
       </div>
       
@@ -62,16 +62,16 @@ const jsonLd = [
 
   <!-- 🛡️ Key Points (Trust) -->
   <Section class="border-t border-hairline bg-canvas-soft">
-    <div class="grid gap-6 sm:grid-cols-3 max-w-5xl mx-auto">
+    <div class="grid gap-8 sm:grid-cols-3 max-w-5xl mx-auto">
       {trust.map((t) => (
         <div class="flex flex-col items-center text-center">
-          <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-md bg-surface border border-hairline shadow-sm text-brand">
-            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div class="mb-3 text-brand">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d={t.icon} />
             </svg>
           </div>
           <h3 class="text-sm font-semibold text-ink">{t.label}</h3>
-          <p class="mt-1.5 text-sm text-mute max-w-xs">{t.description}</p>
+          <p class="mt-1 text-sm text-mute max-w-xs">{t.description}</p>
         </div>
       ))}
     </div>
@@ -168,23 +168,8 @@ const jsonLd = [
   </Section>
 
   <!-- ❓ FAQ -->
-  <Section class="border-t border-hairline">
+  <Section class="border-t border-hairline bg-canvas-soft">
     <FaqSection items={HOME_FAQS} />
   </Section>
 
-  <!-- 🚀 CTA banner -->
-  <Section class="border-t border-hairline">
-    <div class="card p-8 text-center sm:p-14 max-w-4xl mx-auto">
-      <div class="relative">
-      <h2 class="text-display-md text-ink">Ready to calculate your daily calories?</h2>
-        <p class="mx-auto mt-3 max-w-lg text-body">
-          Enter your height, weight, age, and activity level for an instant, private
-          calorie target and macro split.
-        </p>
-        <div class="mt-7">
-          <Button href="#calculator" size="lg">Calculate My Calories</Button>
-        </div>
-      </div>
-    </div>
-  </Section>
 </Layout>

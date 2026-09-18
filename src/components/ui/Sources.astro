@@ -17,14 +17,14 @@ const {
 
 {
   sources.length > 0 && (
-    <section class="card border-hairline p-5 sm:p-6">
-      <h2 class="text-display-sm text-ink">{title}</h2>
-      <p class="mt-1 text-sm leading-relaxed text-body">
+    <div class="mt-12 border-l-4 border-hairline bg-canvas-soft p-5 sm:p-6 rounded-r-md">
+      <h2 class="text-sm font-semibold uppercase tracking-wide text-ink mt-0">{title}</h2>
+      <p class="mt-2 text-sm leading-relaxed text-body">
         These independent, authoritative sources inform the methods used on this page.
       </p>
-      <ul class="mt-4 space-y-2">
+      <ul class="mt-4 space-y-2 list-none pl-0">
         {sources.map((s) => (
-          <li>
+          <li class="pl-0 before:hidden">
             <a
               href={s.href}
               target="_blank"
@@ -37,6 +37,6 @@ const {
           </li>
         ))}
       </ul>
-    </section>
+    </div>
   )
 }

@@ -11,14 +11,14 @@ const { items, title = "Frequently asked questions", hideSidebar = false } = Ast
 <div class="mx-auto max-w-5xl grid lg:grid-cols-[1fr_320px] gap-12 items-start">
   <div>
     <h2 class="text-display-md text-ink">{title}</h2>
-    <div class="mt-8 divide-y divide-hairline border-t border-hairline">
+    <div class="mt-6 divide-y divide-hairline border-t border-hairline">
       {
         items.map((item) => (
           <details class="group py-2">
             <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-3 text-left">
               <span class="text-base font-medium text-ink">{item.q}</span>
-              <span class="grid h-7 w-7 shrink-0 place-items-center rounded-full border border-hairline text-mute transition-transform group-open:rotate-45">
-                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" /></svg>
+              <span class="grid h-6 w-6 shrink-0 place-items-center text-mute transition-transform group-open:rotate-180">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6" /></svg>
               </span>
             </summary>
             <p class="pb-4 pr-10 text-sm leading-relaxed text-body">{item.a}</p>
@@ -28,18 +28,12 @@ const { items, title = "Frequently asked questions", hideSidebar = false } = Ast
     </div>
   </div>
 
-  {!hideSidebar && <aside class="hidden lg:block sticky top-24">
-    <div class="rounded-2xl border border-hairline bg-canvas-soft p-6 shadow-sm">
-      <h3 class="font-semibold text-lg text-ink">Still have questions?</h3>
-      <p class="text-sm text-body mt-2 mb-4 leading-relaxed">
-        We're here to help you understand your health journey. Check out our detailed guides or learn about our medical review process.
+  {!hideSidebar && <aside class="hidden lg:block sticky top-24 pt-2">
+    <div class="border-l border-hairline pl-6">
+      <h3 class="font-semibold text-sm text-ink uppercase tracking-wide">Help & Resources</h3>
+      <p class="text-sm text-body mt-2 mb-4 leading-relaxed max-w-xs">
+        Check out our detailed guides or learn about our medical review process.
       </p>
-      <img 
-        src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" 
-        alt="Medical professional consulting" 
-        class="w-full h-40 object-cover rounded-xl mb-5 shadow-sm"
-        loading="lazy" 
-      />
       <div class="space-y-3">
         <a href="/guides/" class="flex items-center text-sm font-medium text-brand hover:underline">
           <svg class="w-4 h-4 mr-2 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" /></svg>
