@@ -1,4 +1,4 @@
----
+﻿---
 import CalculatorLayout from "../layouts/CalculatorLayout.astro";
 import { inputCls } from "../lib/ui";
 import Button from "../components/ui/Button.astro";
@@ -19,7 +19,7 @@ const faqs: FaqItem[] = [
 ---
 
 <CalculatorLayout
-  title="Recipe Calorie Calculator — Calories Per Serving Calculator (Free)"
+  title="Recipe Calorie Calculator â€” Calories Per Serving Calculator (Free)"
   h1="Recipe Calorie Calculator"
   description="Free recipe calorie calculator. Add ingredients and servings to estimate total recipe calories and calories per serving."
   intro="Estimate the calorie count for any homemade recipe. Enter your ingredients and portions to get an instant breakdown."
@@ -55,15 +55,15 @@ const faqs: FaqItem[] = [
     <ArticleImage src="/assets/images/articles/recipe-book.svg" alt="Illustration of a recipe book with ingredients list for calculating recipe calories." />
 
     <h2>How to use the Recipe Calorie Calculator</h2>
-    <p>Set your number of servings, then add ingredients with their calorie amounts. If you don't know the calories, use our <a href="/food-calories-search/">food calories search</a> to look them up first. The calculator sums total calories and divides by servings.</p>
+    <p>Set your number of servings, then add ingredients with their calorie amounts. If you don't know the calories, look them up online first. The calculator sums total calories and divides by servings.</p>
 
     <h2>How to count recipe calories</h2>
-    <p>The easiest way to estimate homemade recipe calories is to add up the calories for each ingredient and divide by servings. Use the <a href="/food-calories-search/">food calories search</a> to look up ingredient calories, then plug them into this calculator.</p>
+    <p>The easiest way to estimate homemade recipe calories is to add up the calories for each ingredient and divide by servings. Look up ingredient calories online, then plug them into this calculator.</p>
 
     <h2>Step-by-step guide to calculating calories in a recipe</h2>
     <ol>
-      <li><strong>List every ingredient.</strong> Include oils, sauces, and garnishes — they add hidden calories.</li>
-      <li><strong>Find calories per amount.</strong> Use the <a href="/food-calories-search/">food calories search</a> for each item. If a label gives calories per 100 g, scale it to the amount you use.</li>
+      <li><strong>List every ingredient.</strong> Include oils, sauces, and garnishes â€” they add hidden calories.</li>
+      <li><strong>Find calories per amount.</strong> Look up calories for each item online. If a label gives calories per 100 g, scale it to the amount you use.</li>
       <li><strong>Add them up.</strong> Sum all ingredient calories for the total.</li>
       <li><strong>Divide by servings.</strong> Split the total by the number of portions to get calories per serving.</li>
       <li><strong>Adjust for cooking loss.</strong> Some water evaporates during cooking, slightly concentrating calories per gram. Weighing cooked portions gives a more accurate per-serving count than raw weights.</li>
@@ -72,7 +72,7 @@ const faqs: FaqItem[] = [
     <h2>Tips for accurate recipe calorie counting</h2>
     <ul>
       <li>Use a kitchen scale for ingredient portions.</li>
-      <li>Log sauces and cooking oils — they add hidden calories.</li>
+      <li>Log sauces and cooking oils â€” they add hidden calories.</li>
       <li>Batch cook and divide into portions using the serving count.</li>
       <li>Pair recipes with the <a href="/">Calorie Calculator</a> for protein, carbs, and fat balance.</li>
       <li>Save frequent recipes as templates so you don't have to recalculate every time.</li>
@@ -85,15 +85,9 @@ const faqs: FaqItem[] = [
     <p>Once you know the calories per serving, multiply by the number of portions you plan to eat. Use the <a href="/meal-calorie-calculator/">meal calorie calculator</a> to distribute those calories across your daily eating schedule. If you follow a specific split, the <a href="/">Calorie Calculator</a> helps you hit your protein, carb, and fat targets from the same recipe.</p>
 
     <h2>Sample recipe calculation walkthrough</h2>
-    <p>Consider a simple chicken and rice bowl: 200 g chicken breast (330 kcal), 150 g cooked rice (195 kcal), 50 g broccoli (55 kcal), 1 tsp olive oil (40 kcal). Total = 620 calories across 2 servings = 310 calories per serving. Use this method for any homemade meal — the <a href="/recipe-calorie-calculator/">recipe calorie calculator</a> automates the math once you enter the ingredient calories.</p>
+    <p>Consider a simple chicken and rice bowl: 200 g chicken breast (330 kcal), 150 g cooked rice (195 kcal), 50 g broccoli (55 kcal), 1 tsp olive oil (40 kcal). Total = 620 calories across 2 servings = 310 calories per serving. Use this method for any homemade meal â€” the <a href="/recipe-calorie-calculator/">recipe calorie calculator</a> automates the math once you enter the ingredient calories.</p>
 
-    <div class="card relative overflow-hidden p-6 sm:p-8">
-      <div class="pointer-events-none absolute right-0 top-0 -z-0 h-64 w-64 rounded-full opacity-20 blur-[100px]" style="background: radial-gradient(circle, #007cf0, transparent 70%);" aria-hidden="true"></div>
-      <div class="relative">
-        <h2 class="text-display-sm text-ink">Don't know the calories in an ingredient?</h2>
-        <p class="mt-2 max-w-xl text-body">Use our <a class="text-brand underline" href="/food-calories-search/">food calories search</a> to look up nutrition facts, calories, protein, carbs, and fats for thousands of foods. Find the exact calories for each ingredient, then plug them into this recipe calculator.</p>
-        <div class="mt-4"><Button href="/food-calories-search/" size="md">Search Food Calories</Button></div>
-      </div>
+    
     </div>
 
     <h2>Related guides</h2>
@@ -109,8 +103,8 @@ const faqs: FaqItem[] = [
     </div>
 
     <Sources sources={[
-      { label: "USDA FoodData Central — nutrition data", href: "https://fdc.nal.usda.gov/" },
-      { label: "Academy of Nutrition and Dietetics — How to Count Calories", href: "https://www.niddk.nih.gov/health-information/weight-management/myplate-mywins" },
+      { label: "USDA FoodData Central â€” nutrition data", href: "https://fdc.nal.usda.gov/" },
+      { label: "Academy of Nutrition and Dietetics â€” How to Count Calories", href: "https://www.niddk.nih.gov/health-information/weight-management/myplate-mywins" },
     ]} />
   </Fragment>
 </CalculatorLayout>
@@ -146,7 +140,7 @@ const faqs: FaqItem[] = [
     function addRow(name = "", calories = "") {
       const row = document.createElement("div");
       row.className = "grid grid-cols-[1fr_120px_auto] gap-2 items-center";
-      row.innerHTML = `<input class="ing-name w-full h-10 rounded-lg border border-hairline bg-canvas px-3 text-sm text-ink placeholder:text-mute focus:border-brand focus:outline-none" value="${name}" placeholder="Ingredient" /><input class="ing-cal w-full h-10 rounded-lg border border-hairline bg-canvas px-3 text-sm text-ink placeholder:text-mute focus:border-brand focus:outline-none" inputmode="numeric" value="${calories}" placeholder="Calories" /><button type="button" class="remove-row inline-flex h-10 w-10 items-center justify-center rounded-full border border-hairline text-body hover:text-ink">×</button>`;
+      row.innerHTML = `<input class="ing-name w-full h-10 rounded-lg border border-hairline bg-canvas px-3 text-sm text-ink placeholder:text-mute focus:border-brand focus:outline-none" value="${name}" placeholder="Ingredient" /><input class="ing-cal w-full h-10 rounded-lg border border-hairline bg-canvas px-3 text-sm text-ink placeholder:text-mute focus:border-brand focus:outline-none" inputmode="numeric" value="${calories}" placeholder="Calories" /><button type="button" class="remove-row inline-flex h-10 w-10 items-center justify-center rounded-full border border-hairline text-body hover:text-ink">Ã—</button>`;
       $("ingredients").appendChild(row);
       row.querySelector(".remove-row")?.addEventListener("click", () => { row.remove(); render(); });
     }
@@ -183,3 +177,5 @@ const faqs: FaqItem[] = [
     addRow("Broccoli", "55");
   }
 </script>
+
+
