@@ -7,11 +7,10 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "postbuild": "node scripts/submit-indexnow.js",
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
-    "deploy": "astro build && wrangler pages deploy dist --project-name caloriecalculator --branch main",
+    "deploy": "astro build && wrangler pages deploy dist --project-name caloriecalculator --branch main && node scripts/submit-indexnow.js",
     "deploy:nobuild": "wrangler pages deploy dist --project-name caloriecalculator --branch main"
   },
   "dependencies": {
