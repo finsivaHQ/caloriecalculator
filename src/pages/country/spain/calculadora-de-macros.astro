@@ -1,7 +1,6 @@
 ---
 import Button from "../../../components/ui/Button.astro";
 import ContentLayout from "../../../layouts/ContentLayout.astro";
-import CalculadoraCalorias from "../../../components/calculators/CalculadoraCalorias.astro";
 import type { FaqItem } from "../../../lib/seo";
 
 const faqs: FaqItem[] = [
@@ -156,8 +155,10 @@ const seoDescription = "Descubre qué son los macronutrientes, cómo calcular tu
       Antes de poder estimar tus macros, necesitas saber cuántas calorías gasta tu cuerpo. Puedes usar nuestra calculadora a continuación para encontrar ese punto de partida.
     </p>
 
-    <div class="my-10 bg-white p-6 rounded-3xl shadow-xl border border-slate-100">
-      <CalculadoraCalorias />
+    <div class="my-10 flex justify-center">
+      <Button href="/country/spain/calculadora-de-calorias/" variant="primary" size="lg" class="w-full sm:w-auto">
+        Ir a la Calculadora de Calorías
+      </Button>
     </div>
 
     <h2>Macros según tu objetivo</h2>
