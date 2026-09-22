@@ -58,22 +58,12 @@ for (const path in allPages) {
   });
 }
 
-// Manually append the Spanish/Korean files we moved
-categorizedPages['International & Regional'] = [
-  
-  
-  
-  
-  { title: 'Calculadora de Calor�as (Espa�a)', href: '/country/spain/calculadora-de-calorias/' },
-
-
-
-];
+// Removed manual append of International & Regional since dynamic routing captures 'Country - Spain' automatically.
 
 // Sort categories to put "Main Tools" first
 const sortedCategories = Object.keys(categorizedPages).sort((a, b) => {
   if (a === 'Main Tools & Calculators') return -1;
-  if (b === 'Main Tools & Calculators') return 1;
+  if (a === 'Main Tools & Calculators') return 1;
   return a.localeCompare(b);
 });
 ---
