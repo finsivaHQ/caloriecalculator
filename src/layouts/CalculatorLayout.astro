@@ -15,6 +15,7 @@ interface Props {
   path: string;
   faqs?: FaqItem[];
   lang?: string;
+  updated?: string;
 }
 
 const {
@@ -25,6 +26,7 @@ const {
   path,
   faqs = [],
   lang = 'en',
+  updated,
 } = Astro.props;
 
 const crumbs = [
@@ -35,6 +37,7 @@ const crumbs = [
 const jsonLd = [
   breadcrumbSchema(crumbs),
   calculatorSchema(h1, description, path),
+  ...(updated ? [{ "@context": "https://schema.org", "@type": "SoftwareApplication", "dateModified": updated }] : []),
   ...(faqs.length ? [faqSchema(faqs)] : []),
 ];
 

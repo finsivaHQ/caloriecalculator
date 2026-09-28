@@ -18,3 +18,4 @@ Allow: /
 
 
 
+Allow: /country/spain/
