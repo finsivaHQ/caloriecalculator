@@ -1,0 +1,164 @@
+---
+import ContentLayout from '../../../layouts/ContentLayout.astro';
+import Button from '../../../components/ui/Button.astro';
+
+const faqs = [
+  {
+    q: "¿Cuántas calorías de más necesito para un superávit calórico?",
+    a: "Para la mayoría de las personas que buscan ganar masa muscular magra, se recomienda un superávit de entre 250 y 500 kcal diarias. Esto permite un aumento de peso gradual y minimiza la acumulación de grasa corporal."
+  },
+  {
+    q: "¿Es lo mismo una dieta de volumen sucio que un superávit calórico controlado?",
+    a: "No. Un superávit controlado (volumen limpio) implica un ligero aumento calórico basado en alimentos nutritivos. El volumen sucio consiste en comer en exceso sin importar la calidad de los alimentos, lo que frecuentemente resulta en una ganancia excesiva de grasa, empeorando tu sensibilidad a la insulina y tu salud metabólica."
+  },
+  {
+    q: "¿Qué pasa si hago superávit calórico sin entrenar fuerza?",
+    a: "El excedente de calorías sin un estímulo para el crecimiento muscular (como el levantamiento de pesas intenso) se almacenará principalmente como tejido adiposo (grasa). El entrenamiento de hipertrofia es el interruptor indispensable en la dieta de volumen."
+  },
+  {
+    q: "¿Debo mantener el superávit los días de descanso?",
+    a: "Sí. La síntesis proteica muscular se mantiene elevada hasta 48-72 horas después de un entrenamiento intenso. La recuperación muscular ocurre durante el descanso, y tu cuerpo necesita ese extra de energía para reconstruir el tejido. Puedes ajustar ligeramente los carbohidratos, pero el balance global debe seguir siendo positivo."
+  },
+  {
+    q: "¿Puedo ganar masa muscular estando en déficit calórico?",
+    a: "En condiciones normales, la ganancia de músculo (anabolismo) requiere energía extra. Sin embargo, los principiantes absolutos, las personas con sobrepeso o quienes regresan tras un largo período de inactividad pueden experimentar 'recomposición corporal', ganando músculo y perdiendo grasa simultáneamente, pero esto no es sostenible a largo plazo para un atleta intermedio o avanzado."
+  }
+];
+
+const title = "Qué es el Superávit Calórico: Guía Clínica para la Dieta de Volumen";
+const description = "Descubre la base científica del superávit calórico, cómo calcular tus calorías para ganar masa muscular de forma limpia y cómo estructurar tu dieta de volumen con precisión.";
+const h1 = "Qué es el Superávit Calórico y Cómo Hacerlo Bien";
+const lead = "Entiende la ciencia fisiológica detrás del crecimiento muscular. Aprende exactamente cuántas calorías añadir a tu dieta de volumen para maximizar la hipertrofia sin acumular grasa innecesaria, optimizando así tu entorno anabólico hormonal.";
+---
+
+<ContentLayout
+  lang="es"
+  title={title}
+  description={description}
+  h1={h1}
+  lead={lead}
+  category="Guías"
+  categoryPath="/country/spain/calculadora-de-calorias/"
+  path="/country/spain/que-es-el-superavit-calorico/"
+  faqs={faqs}
+  showCta={false}
+>
+  <h2>El Motor Fisiológico del Crecimiento Muscular</h2>
+  <p>
+    En el ámbito de la nutrición clínica deportiva, se hace constante referencia al término <strong>superávit calórico</strong> cuando se diseña una "dieta de volumen". Pero, ¿qué significa realmente a nivel celular y metabólico?
+  </p>
+  <p>
+    Un superávit calórico se manifiesta cuando ingieres a través de tu dieta una cantidad de energía (calorías) que sobrepasa tu Gasto Energético Total Diario (GETD) —que comprende tu metabolismo basal, la termogénesis inducida por los alimentos y tu gasto calórico por actividad física. Esta energía excedente genera el entorno termodinámico necesario para fomentar la síntesis de nuevos tejidos. 
+  </p>
+  <p>
+    El tejido muscular es metabólicamente muy "caro" de construir y mantener. A diferencia del tejido adiposo, que actúa como reserva energética, el músculo esquelético requiere un alto peaje calórico. Si el organismo se encuentra en un estado de neutralidad energética o déficit, los sistemas de supervivencia inhiben el complejo mTORC1, una proteína quinasa vital que actúa como "interruptor maestro" de la hipertrofia. Por tanto, para activar a fondo la <strong>Síntesis de Proteína Muscular (MPS)</strong> por encima de la <strong>Degradación de Proteína Muscular (MPB)</strong>, es fisiológicamente imperativo estar en superávit.
+  </p>
+
+  <h2>Calorías para Ganar Masa Muscular: La Precisión Clínica</h2>
+  <p>
+    El error más perjudicial al iniciar una fase de ganancia (bulking) es asumir la mentalidad de "comer sin límite". Esta estrategia, coloquialmente conocida como <em>volumen sucio</em> (dirty bulking), desencadena una acumulación acelerada de triglicéridos en los adipocitos, provocando resistencia a la insulina y un perfil lipídico desfavorable.
+  </p>
+  <p>
+    La evidencia endócrina subraya que el cuerpo humano tiene una tasa límite de acreción de tejido contráctil. Añadir miles de calorías no acelerará la biología de tus miofibrillas; simplemente saturará los receptores insulínicos.
+  </p>
+
+  <h3>La Regla del Volumen Limpio (Lean Bulk)</h3>
+  <p>
+    Para optimizar el particionamiento de nutrientes (dirigir las calorías al músculo y no a la grasa), los nutricionistas deportivos prescriben superávits controlados basados en el nivel de desarrollo del individuo:
+  </p>
+  <ul>
+    <li><strong>Atletas Principiantes (0-1 años de entrenamiento):</strong> Un excedente de <strong>+300 a 500 kcal</strong> por encima del mantenimiento. La sensibilidad muscular al daño y la tensión mecánica está en su pico más alto.</li>
+    <li><strong>Atletas Intermedios (1-3 años de entrenamiento):</strong> Un excedente de <strong>+200 a 300 kcal</strong> diarios. La tasa de adaptación neurológica e hipertrófica se estabiliza.</li>
+    <li><strong>Atletas Avanzados (más de 3 años):</strong> Un ligero superávit de <strong>+100 a 200 kcal</strong> al día. La ganancia de músculo magro es extremadamente lenta y requiere una sobrecarga muy pautada para evitar una acumulación desproporcionada de grasa corporal.</li>
+  </ul>
+
+  <h2>Estructurando tu Dieta de Volumen: El Reparto Científico de Macronutrientes</h2>
+  <p>
+    Alcanzar tu número de calorías es el pilar de la termodinámica, pero la calidad de la masa que ganes dependerá íntimamente del balance de tus macronutrientes.
+  </p>
+
+  <div class="not-prose overflow-x-auto my-10 rounded-2xl bg-white/80 backdrop-blur-md shadow-sm border border-slate-100 p-1 md:p-4">
+    <table class="w-full text-left border-collapse text-sm md:text-base">
+      <thead>
+        <tr class="bg-slate-50 text-slate-800">
+          <th class="p-3 font-semibold border-b border-slate-200">Macronutriente</th>
+          <th class="p-3 font-semibold border-b border-slate-200">Dosis Clínica Recomendada</th>
+          <th class="p-3 font-semibold border-b border-slate-200">Función Biológica Fundamental</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="p-3 border-b border-slate-100 text-slate-800 font-medium">Proteínas</td>
+          <td class="p-3 border-b border-slate-100 text-slate-600">1.6g a 2.2g por kg de peso corporal</td>
+          <td class="p-3 border-b border-slate-100 text-slate-600">Aportan los aminoácidos esenciales (especialmente leucina) indispensables para estimular mTOR y la creación de nuevas fibras musculares.</td>
+        </tr>
+        <tr class="bg-slate-50/50">
+          <td class="p-3 border-b border-slate-100 text-slate-800 font-medium">Grasas</td>
+          <td class="p-3 border-b border-slate-100 text-slate-600">0.8g a 1.2g por kg de peso corporal</td>
+          <td class="p-3 border-b border-slate-100 text-slate-600">Vitales para la síntesis endógena de colesterol y hormonas androgénicas como la testosterona, claves en el anabolismo.</td>
+        </tr>
+        <tr>
+          <td class="p-3 text-slate-800 font-medium">Carbohidratos</td>
+          <td class="p-3 text-slate-600">Restante calórico (generalmente 3g - 6g / kg)</td>
+          <td class="p-3 text-slate-600">Preservan el glucógeno muscular y hepático, inhiben la ruta catabólica del cortisol e inducen la secreción de insulina.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>El Impacto de las Hormonas en tu Superávit Calórico</h2>
+  <p>
+    En una <strong>dieta de volumen</strong> correctamente estructurada, la insulina juega a tu favor. Al consumir carbohidratos, especialmente en el peri-entrenamiento (antes y después de entrenar), la insulina se eleva y estimula el paso de nutrientes hacia el tejido muscular, promoviendo una recuperación mucho más eficiente tras el estrés mecánico. No obstante, un superávit crónico descontrolado o el consumo excesivo de alimentos ultraprocesados genera un entorno de resistencia a la insulina, derivando en inflamación de bajo grado y un ambiente endocrino muy pobre para desarrollar hipertrofia de calidad.
+  </p>
+
+  <h2>5 Recomendaciones Clave para un Superávit Exitoso</h2>
+  <p>
+    Implementar este enfoque científico requiere más que cumplir calorías. Toma nota de los factores clave:
+  </p>
+  
+  <ol>
+    <li><strong>Sobrecarga Progresiva Irrenunciable:</strong> El superávit energético por sí mismo no crea músculo. Si el cuerpo no recibe una exigencia biomecánica incremental (aumento de tonelaje, estrés metabólico, o tensión mecánica mediante el entrenamiento de fuerza), ese extra calórico se acumulará como grasa.</li>
+    <li><strong>Alimentos de Alta Densidad Nutricional:</strong> Cuando debes ingerir 3500 kcal o más, los vegetales fibrosos provocarán una saciedad extrema prematura. Es fundamental incluir alimentos calóricamente densos como aceite de oliva virgen extra, mantequillas de frutos secos, avena, pasta, aguacate y pescados grasos como el salmón.</li>
+    <li><strong>Timing de Nutrientes Estratégico:</strong> Agrupa una buena parte de tus carbohidratos en las horas cercanas a tu entrenamiento de fuerza. Esto asegura que la energía se dirija a la reposición de glucógeno y al rendimiento en lugar del tejido adiposo perimetral.</li>
+    <li><strong>Ciclo del Sueño y Ritmos Circadianos:</strong> El pico de hormona de crecimiento humana (HGH) ocurre durante las fases de sueño profundo (NREM y REM). Dormir menos de 7-8 horas reduce drásticamente la testosterona libre e incrementa el cortisol, arruinando por completo tu superávit calórico.</li>
+    <li><strong>Monitoreo Biométrico:</strong> La báscula es solo una herramienta. Combina el peso medio semanal con medidas de circunferencia (cintura, brazos, piernas) y fotografías. Una ganancia aceptable se sitúa en torno a un 1-1.5% del peso corporal total al mes para atletas no principiantes.</li>
+  </ol>
+
+  <h2>¿Cuándo y Cómo Finalizar la Dieta de Volumen?</h2>
+  <p>
+    Ningún superávit calórico es sostenible indefinidamente. Al elevar tu peso y porcentaje graso total, el cuerpo aumenta la aromatización (conversión de testosterona en estrógenos) y reduce la eficiencia en el transporte de la glucosa (resistencia a la insulina).
+  </p>
+  <p>
+    A nivel general, la fisiología clínica recomienda finalizar la etapa de volumen cuando los hombres sobrepasan un 16-18% de grasa corporal, y las mujeres un 24-26%. En ese momento, se debe instaurar un <em>déficit calórico estratégico (mini-cut)</em> que permita reducir la adiposidad preservando la musculatura ganada. Este "reseteo" metabólico reactivará tus receptores, devolviendo a tu cuerpo a un estado prístino para comenzar la siguiente fase anabólica con garantías.
+  </p>
+
+  <div class="not-prose my-12 text-center flex flex-col items-center justify-center p-8 md:p-12 bg-gradient-to-br from-indigo-50 via-white to-blue-50 rounded-3xl border border-indigo-100 shadow-sm">
+    <h3 class="text-2xl md:text-3xl font-bold text-slate-800 mb-4">¿Listo para construir masa muscular de verdad?</h3>
+    <p class="text-slate-600 mb-8 max-w-2xl text-lg">
+      Deja de calcular a ciegas. Descubre exactamente cuántas calorías y cuántos gramos de proteína necesitas consumir diariamente para alcanzar tu objetivo de volumen de forma eficiente, científica y completamente limpia.
+    </p>
+    <Button href="/country/spain/calculadora-de-calorias/" size="lg" class="shadow-md hover:shadow-lg transition-shadow">Calcula tus Calorías de Volumen</Button>
+  </div>
+
+  <div class="not-prose mt-16 pt-12 border-t border-slate-200">
+    <h3 class="text-2xl font-bold mb-8 text-slate-800">Contenido Sugerido</h3>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <a href="/country/spain/que-es-el-deficit-calorico/" class="block p-6 bg-white rounded-3xl border border-slate-100 hover:border-brand/30 hover:shadow-md transition-all group">
+        <span class="text-sm font-medium text-brand mb-2 block uppercase tracking-wider">La Fase de Definición</span>
+        <h4 class="font-semibold text-slate-800 text-xl group-hover:text-brand transition-colors mb-2">Qué es el Déficit Calórico</h4>
+        <p class="text-slate-500">Aprende la ciencia de la pérdida de grasa y cómo estructurar correctamente tu fase de definición para quemar lípidos sin sacrificar masa muscular magra.</p>
+      </a>
+      <a href="/country/spain/metabolismo-basal-explicado/" class="block p-6 bg-white rounded-3xl border border-slate-100 hover:border-brand/30 hover:shadow-md transition-all group">
+        <span class="text-sm font-medium text-brand mb-2 block uppercase tracking-wider">Tu Motor Interno</span>
+        <h4 class="font-semibold text-slate-800 text-xl group-hover:text-brand transition-colors mb-2">Entendiendo el Metabolismo Basal</h4>
+        <p class="text-slate-500">Descubre cuántas calorías quema tu cuerpo en reposo total y por qué es el pilar de cualquier transformación física y planificación nutricional exitosa.</p>
+      </a>
+    </div>
+    
+    <div class="mt-12 text-center flex flex-col items-center p-8 md:p-10 bg-white/80 backdrop-blur-md rounded-3xl border border-slate-200 shadow-sm">
+      <h4 class="text-2xl font-bold mb-4 text-slate-800">Obtén tu Plan Nutricional Gratuito</h4>
+      <p class="text-slate-600 mb-8 max-w-lg text-lg">No dejes tus ganancias al azar. Accede a la calculadora principal y genera tus macros en menos de un minuto.</p>
+      <Button href="/country/spain/calculadora-de-calorias/" size="lg">Ir a la Calculadora Principal</Button>
+    </div>
+  </div>
+</ContentLayout>
