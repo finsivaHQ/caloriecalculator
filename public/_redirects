@@ -4,8 +4,8 @@
 
 /sitemap.xml /sitemap-index.xml 301
 
-/guides/protein-to-kcal/ /guides/how-many-calories-in-a-gram-guide/ 301
-/resources/protein-to-calories/ /guides/how-many-calories-in-a-gram-guide/ 301
+/guides/protein-to-kcal/ /protein-to-calories-calculator/ 301
+/resources/protein-to-calories/ /protein-to-calories-calculator/ 301
 /guides/accurate-tdee-calculator-men-women/ /guides/whats-my-tdee/ 301
 /guides/are-calorie-calculators-accurate/ /guides/calorie-calculator-accuracy/ 301
 /guides/best-calorie-counter-macro-tracking-apps/ /guides/macro-guide/ 301

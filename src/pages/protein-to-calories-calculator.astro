@@ -1,0 +1,124 @@
+---
+import CalculatorLayout from "../layouts/CalculatorLayout.astro";
+import Section from "../components/ui/Section.astro";
+import Button from "../components/ui/Button.astro";
+
+const faqs = [
+  {
+    q: "How many calories are in 1 gram of protein?",
+    a: "There are exactly 4 calories (kcal) in 1 gram of protein. This is the standard Atwater factor used globally for nutritional calculations."
+  },
+  {
+    q: "How many calories is 150 grams of protein?",
+    a: "150 grams of protein contains 600 calories. (150g \u00d7 4 kcal/g = 600 kcal)."
+  },
+  {
+    q: "How many calories is 160g of protein?",
+    a: "160 grams of protein equals 640 calories. (160g \u00d7 4 kcal/g = 640 kcal)."
+  },
+  {
+    q: "How many calories is 170 grams of protein?",
+    a: "170 grams of protein is equal to 680 calories. (170g \u00d7 4 kcal/g = 680 kcal)."
+  },
+  {
+    q: "How many calories is 180 grams of protein?",
+    a: "180 grams of protein provides 720 calories. (180g \u00d7 4 kcal/g = 720 kcal)."
+  },
+  {
+    q: "How many grams is 6 oz of protein?",
+    a: "6 ounces of cooked meat (like chicken breast) yields roughly 42 to 50 grams of actual protein. However, if you are asking about a pure protein powder supplement, 6 dry ounces equals 170 grams of weight, which would provide roughly 680 calories."
+  },
+  {
+    q: "How to calculate calories from protein?",
+    a: "To calculate the calories from any amount of protein, simply multiply the total grams of protein by 4. For example, if your meal has 30g of protein, the protein calories are 30 \u00d7 4 = 120 kcal."
+  }
+];
+
+const inputCls = "w-full rounded-xl border border-hairline bg-canvas px-4 py-2.5 text-ink transition-colors focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand";
+---
+
+<CalculatorLayout
+  title="Protein to Calories Calculator (Grams to Kcal Converter)"
+  exactTitle={true}
+  h1="Protein to Calories Calculator"
+  description="Convert protein grams to calories instantly. Find out how many kilocalories are in a gram of protein, and calculate the exact energy ratio of your meals."
+  intro="Quickly calculate the caloric value of your protein intake. Since protein provides 4 kcal per gram, this simple converter instantly tells you how many calories come specifically from protein."
+  path="/protein-to-calories-calculator/"
+  faqs={faqs}
+>
+  <div class="grid gap-8 lg:grid-cols-2 items-start">
+    <div class="card p-6 md:p-8">
+      <form id="converter-form" class="space-y-6" onsubmit="event.preventDefault();">
+        <div class="space-y-2">
+          <label for="protein-grams" class="block text-sm font-semibold text-ink">Protein Amount (Grams)</label>
+          <input 
+            type="number" 
+            id="protein-grams" 
+            class={inputCls} 
+            placeholder="e.g. 150" 
+            min="0" 
+            step="1"
+            value="150"
+          />
+        </div>
+        
+        <div class="rounded-2xl bg-canvas-soft border border-hairline p-6 text-center">
+          <p class="text-sm font-medium text-mute mb-2 uppercase tracking-wider">Total Protein Calories</p>
+          <div class="text-5xl font-extrabold text-brand tracking-tight mb-2" id="result-calories">600</div>
+          <p class="text-sm text-body">kcal</p>
+        </div>
+        
+        <p class="text-xs text-mute text-center">
+          Based on the standard energy value of <strong>4 kilocalories per 1 gram of protein</strong>.
+        </p>
+      </form>
+    </div>
+
+    <div class="prose-content">
+      <h2>How the Protein Grams to Calories Calculator Works</h2>
+      <p>
+        If you are tracking your macros, you frequently need to perform a <strong>protein to cal</strong> conversion. 
+        Biologically, the human body extracts roughly 4 kilocalories of usable energy from every single gram of dietary protein.
+      </p>
+      <p>
+        To perform a manual <strong>macro to calorie calculator</strong> conversion:
+      </p>
+      <ul>
+        <li>Take your total protein intake in grams.</li>
+        <li>Multiply that number by 4.</li>
+        <li>The result is your total protein-derived calories.</li>
+      </ul>
+      <p>
+        For instance, if you are asking "<em>1gm protein how many calories?</em>", the answer is 4. If you eat a chicken breast containing 40g of protein, that meat contributes 160 kcal toward your daily energy budget.
+      </p>
+      
+      <h3>Why This Ratio Matters for Weight Loss</h3>
+      <p>
+        Protein is highly thermogenic. When you use a <strong>protein calorie calculator</strong>, you should also factor in the Thermic Effect of Food (TEF). While protein technically contains 4 calories per gram, your body expends up to 30% of those calories just to break down and digest the amino acids. This makes high-protein diets incredibly effective for fat loss.
+      </p>
+      
+      <div class="not-prose mt-8">
+        <Button href="/protein-calculator/" class="w-full justify-center">
+          Go to the Full Daily Protein Calculator
+        </Button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const input = document.getElementById('protein-grams') as HTMLInputElement;
+    const result = document.getElementById('result-calories');
+
+    function calculate() {
+      if (!input || !result) return;
+      const grams = parseFloat(input.value) || 0;
+      const cals = grams * 4;
+      result.textContent = cals.toLocaleString();
+    }
+
+    if (input) {
+      input.addEventListener('input', calculate);
+    }
+  </script>
+
+</CalculatorLayout>
