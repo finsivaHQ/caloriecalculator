@@ -8,8 +8,10 @@ import MedicalNote from "../../components/ui/MedicalNote.astro";
 
 const faqs: FaqItem[] = [
   { q: "Is it possible to lose fat and build muscle at the same time?", a: "Yes, this process is known as body recomposition. It is most effective for beginners, detrained individuals, or those with higher body fat percentages who eat high protein in a slight calorie deficit while strength training." },
-  { q: "How many calories should I eat for body recomposition?", a: "You should aim for a very slight calorie deficit�typically 200 to 300 calories below your maintenance (TDEE). A massive deficit will prevent muscle growth, while a surplus will add fat." },
+  { q: "How many calories should I eat for body recomposition?", a: "You should aim for a very slight calorie deficit—typically 200 to 300 calories below your maintenance (TDEE). A massive deficit will prevent muscle growth, while a surplus will add fat." },
   { q: "How much protein do I need for body recomposition?", a: "Aim for at least 0.8 to 1 gram of protein per pound of body weight to provide the building blocks necessary for muscle synthesis while in a calorie deficit." },
+  { q: "How long does body recomposition take to show results?", a: "Body recomposition is a slow and sustainable process. You may start noticing changes in strength and how your clothes fit within 4 to 6 weeks, but significant visual changes usually take 3 to 6 months of consistency." },
+  { q: "Can advanced athletes achieve body recomposition?", a: "It is significantly harder for advanced athletes, as they are closer to their genetic potential for muscle growth. However, with meticulous diet control, supplementation, and training periodization, it is still possible to achieve simultaneous improvements at a slower rate." }
 ];
 ---
 
@@ -26,51 +28,255 @@ const faqs: FaqItem[] = [
 >
   <MedicalNote />
 
-  <p>If you have ever tried to get in shape, you have likely been told that you must undergo cyclical phases of "bulking" (eating a calorie surplus to build muscle, accepting some fat gain) and "cutting" (eating a calorie deficit to lose fat, accepting some muscle loss). But modern sports science tells a different story.</p>
+  <div class="prose prose-lg max-w-none text-gray-800">
+    <p class="text-xl leading-relaxed text-gray-600 mb-8 mt-6">
+      If you have ever tried to get in shape, you have likely been told that you must undergo cyclical phases of "bulking" (eating in a calorie surplus to build muscle, accepting an inevitable gain in fat) and "cutting" (eating in a calorie deficit to lose fat, accepting a loss of muscle mass). However, modern sports science and advanced nutrition tell us a completely different and much more promising story.
+    </p>
+    
+    <p>
+      <strong>Body recomposition</strong> is considered the holy grail of physical transformation: the physiological process by which you can lose accumulated body fat and develop lean muscle tissue simultaneously. Although it requires a much higher level of precision than traditional bodybuilding phases, it is a completely achievable goal for the vast majority of people, and is especially effective for beginners, those returning to the gym after a break, or individuals with a higher body fat percentage.
+    </p>
 
-  <p><strong>Body recomposition</strong> is the holy grail of fitness: losing body fat and building lean muscle tissue simultaneously. While it requires precision, it is completely achievable for most people�especially beginners, those returning from a break, or individuals carrying excess body fat.</p>
+    <ArticleImage src="/assets/images/articles/energy-level.svg" alt="Illustration representing energy balance, metabolism, and body recomposition" priority={true} />
 
-  <ArticleImage src="/assets/images/articles/energy-level.svg" alt="Illustration representing energy balance and metabolism" priority={true} />
+    <h2 class="text-3xl font-bold mt-12 mb-6 text-gray-900">The Great Myth of the "Bulk and Cut" Cycle</h2>
+    <p>
+      For decades, conventional wisdom dictated that the human body could only be in one of two absolute states: anabolic (building, which supposedly requires an excess of calories) or catabolic (breaking down, which requires a caloric restriction). According to this reductionist theory, gaining muscle mass and burning adipose tissue at the same time was a biological contradiction impossible to resolve.
+    </p>
+    <p>
+      This extremist approach dragged millions of people into endless cycles of "yo-yo" dieting. During the "dirty bulk" phase, people would ingest massive amounts of calories, building muscle but also accumulating excessive and unhealthy deposits of visceral and subcutaneous fat. Later, during the "cut", they would subject themselves to rigorous extreme diets with endless hours of cardio, managing to lose the acquired fat but, sadly, sacrificing a large amount of the hard-earned muscle mass. The end result was often a stagnant physique that looked practically the same year after year, coupled with a damaging relationship with food.
+    </p>
+    <p>
+      Fortunately, current scientific literature has dismantled this myth. The absolute key to understanding why recomposition is a real phenomenon lies in accepting one key concept: <strong>fat storage and muscle protein synthesis are two separate, compartmentalized biological processes in the human body</strong>. Your body possesses the incredible ability to extract the calories stored in your adipocytes (fat cells) to "fund" the energy-expensive process of building new muscle tissue, provided you supply the training stimulus and the right nutrients.
+    </p>
 
-  <h2>The 3 Pillars of Body Recomposition</h2>
-  <p>To successfully pull off body recomposition, your body needs a very specific environment. If you miss any of these three pillars, your results will stall.</p>
+    <h2 class="text-3xl font-bold mt-12 mb-6 text-gray-900">The Scientific Basis: How Exactly Does It Work?</h2>
+    <p>
+      To unravel the mechanism of body recomposition, we must closely analyze thermodynamics and nitrogen balance in our body. We know from unbreakable physical laws that overall body weight or fat loss is determined by a <em>negative energy balance</em> (burning more calories than you consume). In direct contrast, muscle synthesis or hypertrophy is dictated by an intense local signal (weight training) and the systemic availability of essential amino acids.
+    </p>
+    <p>
+      When you subject yourself to a calorie deficit, your body is forced to mobilize alternative sources of energy. If you lead a sedentary lifestyle and don't provide enough protein in your diet, your body will take the easy route and break down both your stored fat and your muscle mass. However, if you manage to aggressively trigger the adaptation signal in your muscles through resistance training, while simultaneously flooding your bloodstream with a steady supply of amino acids, muscle breakdown is blocked. Because the body still needs extra energy due to the deficit and the cost of building muscle, it has no choice but to aggressively empty its fat reserves. You are literally using your own adipose tissue as building fuel.
+    </p>
 
-  <h3>1. The "Goldilocks" Calorie Deficit</h3>
-  <p>To lose fat, you absolutely must be in a calorie deficit. However, to build muscle at the same time, the deficit cannot be too large, or your body will shut down muscle synthesis to conserve energy.</p>
-  <p>You need to find your <a href="/tdee-calculator/">Total Daily Energy Expenditure (TDEE)</a> and subtract a very modest amount�around <strong>200 to 300 calories per day</strong>. This slight deficit forces your body to burn stored fat for energy without starving the muscles.</p>
+    <div class="my-12 p-8 md:p-10 bg-white/80 backdrop-blur-md rounded-3xl border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden">
+      <!-- Background decorations -->
+      <div class="absolute -top-24 -right-24 w-64 h-64 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+      <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+      
+      <h2 class="text-3xl font-extrabold text-gray-900 mb-6 relative z-10">The 3 Fundamental Pillars of Recomposition</h2>
+      <p class="text-lg text-gray-600 mb-8 relative z-10">
+        To orchestrate this complex physiological dance, it is imperative to establish a pristine hormonal and nutritional environment. If you miss even one of these three pillars, the system will fail.
+      </p>
 
-  <h3>2. High Protein Intake</h3>
-  <p>When you are in a calorie deficit, muscle building is hormonally difficult. You must overcompensate by providing an abundance of amino acids (the building blocks of muscle).</p>
-  <p>Research consistently shows that eating <strong>0.8 to 1 gram of protein per pound of body weight</strong> (or 1.8 to 2.2 grams per kg) is required to build muscle during a deficit. Use our <a href="/protein-calculator/">Protein Calculator</a> to find your exact daily target, and split it evenly across 4 to 5 meals to maximize muscle protein synthesis.</p>
+      <div class="space-y-8 relative z-10">
+        <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-200">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-bold text-xl">1</div>
+            <h3 class="text-2xl font-bold text-gray-900 m-0">The "Goldilocks" Calorie Deficit</h3>
+          </div>
+          <p class="text-gray-700 mb-4">
+            Losing fat without being in a calorie deficit is physically impossible. But if you cut your calories too aggressively (500 to 1000 calories less per day), you will trigger your metabolism's alarm bells. Your body, sensing a possible "famine," will almost immediately shut down protein synthesis—an expensive biological function it considers an unnecessary "luxury" in times of crisis.
+          </p>
+          <p class="text-gray-700 m-0">
+            You must adjust the deficit to a perfect, moderate level: the famous "Goldilocks" calorie deficit. The most effective strategy is to calculate your Total Daily Energy Expenditure (TDEE) and apply a modest cut of just <strong>200 to 300 daily calories</strong> (roughly a 10% to 15% deficit). This subtle deficit is enough to promote sustained fat oxidation, but light enough for the body to feel "safe" allowing muscle cellular proliferation.
+          </p>
+        </div>
 
-  <h3>3. Progressive Overload Resistance Training</h3>
-  <p>Your body has no reason to build muscle if you do not challenge it. To trigger muscle growth, you must engage in resistance training (lifting weights, calisthenics) and practice <strong>progressive overload</strong>�lifting slightly heavier weights or doing more reps over time.</p>
+        <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-200">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center font-bold text-xl">2</div>
+            <h3 class="text-2xl font-bold text-gray-900 m-0">Hyper-Optimal Protein Intake</h3>
+          </div>
+          <p class="text-gray-700 mb-4">
+            Under normal conditions of a caloric surplus, the body is generous with tissue building. But under a deficit, building muscle is swimming against the current. To achieve it, you must oversaturate your body with the fundamental "bricks": amino acids, obtained from the protein you consume.
+          </p>
+          <p class="text-gray-700 m-0">
+            Multiple clinical trials have corroborated that the standard recommendation for maintenance falls short. To recompose your physique, you need to push intake toward the higher recommended limits, aiming for a range of <strong>0.8 to 1 gram of protein per pound of body weight</strong> consistently every day. If you suffer from obesity, you should use your "estimated lean body mass" to make this calculation. Additionally, it is highly advisable to divide this intake across 4 or 5 evenly spaced meals to maximally stimulate the mTOR pathway, which is responsible for hypertrophy.
+          </p>
+        </div>
 
-  
+        <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-200">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center font-bold text-xl">3</div>
+            <h3 class="text-2xl font-bold text-gray-900 m-0">Relentless Progressive Overload</h3>
+          </div>
+          <p class="text-gray-700 mb-4">
+            You could have the perfect calorie deficit and drink hundreds of protein shakes, but if you don't give your muscles a compelling reason to grow, they simply won't. Weight training is the switch that turns on the entire anabolic machinery.
+          </p>
+          <p class="text-gray-700 m-0">
+            It is not enough to simply "sweat" or "move." You must implement a scheme of <strong>progressive overload</strong>, which consists of systematically challenging your muscles by forcing them to do more work than they did the previous week. This is achieved by increasing the load (weight), volume (sets and reps), or radically improving your technical execution on multi-joint exercises (squats, overhead press, bench press, pull-ups, and deadlifts). Training with high intensity and taking sets very close to muscle failure (1-2 reps in reserve) is the only way to force your muscles to thicken during a deficit.
+          </p>
+        </div>
+      </div>
+    </div>
 
-  <h2>Who is Body Recomposition Best For?</h2>
-  <p>While almost anyone can achieve some level of body recomposition, it happens fastest for four specific groups of people:</p>
-  <ul class="list-disc pl-5 space-y-2 mt-4">
-    <li><strong>Beginners:</strong> The "newbie gains" phenomenon allows untrained individuals to build muscle rapidly even in a steep calorie deficit.</li>
-    <li><strong>Detrained Lifters:</strong> If you used to lift weights but stopped, "muscle memory" allows you to regain lost muscle quickly while losing fat.</li>
-    <li><strong>High Body Fat:</strong> Individuals with excess fat stores have ample reserved energy, allowing the body to build muscle easily even when food intake is lowered.</li>
-    <li><strong>Sub-Optimally Trained:</strong> If you have been working out for years but eating poorly or following bad programming, fixing your macros will trigger sudden recomposition.</li>
-  </ul>
+    <h2 class="text-3xl font-bold mt-12 mb-6 text-gray-900">The Invisible Fourth Pillar: Sleep and Recovery</h2>
+    <p>
+      While we tend to obsess solely over our macro metrics and our gym volume, actual tissue rebuilding never occurs while we are lifting weights, but rather while we are resting deeply in bed. Sleep is, without a doubt, the most potent natural steroid in existence.
+    </p>
+    <p>
+      Science has overwhelmingly shown that sleep restriction completely sabotages your efforts. A famous clinical study divided a group of people into a calorie deficit: the first group slept 8.5 hours and the second only 5.5 hours. The astonishing result showed that both groups lost the same amount of weight on the scale, but <strong>those who slept poorly lost 55% less fat and 60% more muscle mass</strong> compared to those who slept adequately. If you neglect rest, your hormonal environment will collapse: cortisol will rise, testosterone will drop, your hunger will skyrocket (due to ghrelin spikes), and body recomposition will become an unattainable dream.
+    </p>
 
-  <h2>How to Measure Your Progress</h2>
-  <p>The biggest mistake people make during body recomposition is relying on the bathroom scale. Since muscle is denser than fat, you could lose 3 pounds of fat and gain 3 pounds of muscle. The scale will say you made zero progress, but you will look significantly leaner in the mirror.</p>
-  <p>Instead of the scale, track your <a href="/">body fat percentage</a>, take weekly progress photos in the same lighting, and monitor how your clothes fit. If your strength in the gym is going up while your waist measurement is going down, body recomposition is happening.</p>
+    <h2 class="text-3xl font-bold mt-12 mb-6 text-gray-900">Who is the Ideal Candidate for Recomposition?</h2>
+    <p>
+      Although advanced athletes and professional competitors have great difficulty gaining muscle in a deficit (because they are close to their natural genetic potential), the vast majority of the normal population will experience spectacular results if they belong to any of these four predominant profiles:
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+      <div class="p-8 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+        <div class="text-5xl mb-4">🌱</div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">The Absolute Beginner</h3>
+        <p class="text-gray-600">
+          In the fitness community, this phenomenon is affectionately known as "newbie gains". If you have never systematically touched a weight, your body is extremely sensitive to mechanical stimulus. It will respond to training by adding pounds of muscle at a speed that will never be repeated again in your life, even tolerating large calorie deficits in the process.
+        </p>
+      </div>
+      
+      <div class="p-8 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+        <div class="text-5xl mb-4">🔄</div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">The Returning Athlete (Detrained)</h3>
+        <p class="text-gray-600">
+          Were you in great physical shape, but stopped training due to work, stress, or an injury? You have a huge biological advantage on your side: "muscle memory". The cell nuclei (myonuclei) you formed in the past are still in your fibers, ready to awaken. You can regain all that muscle in record time and burn fat simultaneously with astonishing ease.
+        </p>
+      </div>
+
+      <div class="p-8 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+        <div class="text-5xl mb-4">⚖️</div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">People with High Body Fat</h3>
+        <p class="text-gray-600">
+          Individuals who carry a significant excess of body fat (>25% in men, >35% in women) have immense energy reserves readily available. For this profile, the body does not interpret a sharp calorie deficit as a life-threatening crisis. It will release those fatty acids to build the muscle the person desperately needs.
+        </p>
+      </div>
+
+      <div class="p-8 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+        <div class="text-5xl mb-4">📉</div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">The Stalled or Sub-optimal Lifter</h3>
+        <p class="text-gray-600">
+          Have you been going to the gym for three years performing the same 3 exercises with light weight, or consuming barely 50 grams of protein a day? Congratulations: biologically, you are still a beginner. The moment you optimize your routine by introducing aggressive overload and doubling your protein intake, your physique will drastically recompose in a matter of weeks.
+        </p>
+      </div>
+    </div>
+
+    <h2 class="text-3xl font-bold mt-16 mb-8 text-gray-900">Practical Step-by-Step Guide to Start Your Recomposition</h2>
+    
+    <div class="space-y-6 mb-12 relative before:absolute before:inset-0 before:ml-6 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-1 before:bg-gradient-to-b before:from-transparent before:via-gray-200 before:to-transparent">
+      
+      <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+        <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-blue-500 shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-white font-black text-xl z-10">1</div>
+        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
+          <h3 class="font-bold text-xl mb-2 text-gray-900">Calculate Your Maintenance</h3>
+          <p class="text-gray-600 m-0">Use our calculator to accurately determine your TDEE (Total Daily Energy Expenditure). Be completely honest about your true physical activity level; overestimating it will ruin your results.</p>
+        </div>
+      </div>
+
+      <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+        <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-purple-500 shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-white font-black text-xl z-10">2</div>
+        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
+          <h3 class="font-bold text-xl mb-2 text-gray-900">Impose the Slight Deficit</h3>
+          <p class="text-gray-600 m-0">From that calculated maintenance number, strictly subtract between 200 and 300 calories. Do not be tempted to restrict more food thinking it will speed up the process. Muscle requires patience.</p>
+        </div>
+      </div>
+
+      <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+        <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-teal-500 shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-white font-black text-xl z-10">3</div>
+        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
+          <h3 class="font-bold text-xl mb-2 text-gray-900">Set and Protect Your Protein</h3>
+          <p class="text-gray-600 m-0">Aim for a range of 0.8 to 1 gram of protein per pound of body weight. This will be your daily and sacred goal of protein grams. This macronutrient is non-negotiable, hit it daily regardless of the situation.</p>
+        </div>
+      </div>
+
+      <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+        <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-indigo-500 shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-white font-black text-xl z-10">4</div>
+        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
+          <h3 class="font-bold text-xl mb-2 text-gray-900">Adopt a Strength Routine</h3>
+          <p class="text-gray-600 m-0">Abandon the endless cardio sessions and start a proven strength training program 3 or 4 days a week (e.g., Push/Pull/Legs or Upper/Lower routines). Make sure to perform progressive overload in every session.</p>
+        </div>
+      </div>
+      
+      <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+        <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-rose-500 shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-white font-black text-xl z-10">5</div>
+        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
+          <h3 class="font-bold text-xl mb-2 text-gray-900">Measure with Laser Precision</h3>
+          <p class="text-gray-600 m-0">Banish the bathroom scale and rely on the mirror, weekly photos, tape measurements around your waist and chest, and strength increases during your lifts.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-3xl font-bold mt-16 mb-6 text-gray-900">The Biggest Mistake: The Bathroom Scale Fallacy</h2>
+    <p>
+      On a psychological level, the deadliest obstacle that destroys body recomposition programs is an unhealthy addiction to the traditional bathroom scale. You must understand a key concept of human physiology: <strong>muscle tissue is significantly denser than body fat</strong>. To be exact, muscle is approximately 18% more compact. This implies that a pound of muscle takes up much less physical volume than a pound of adiposity.
+    </p>
+    <p>
+      If you follow the instructions in this guide to the letter, it is a highly likely scenario that, after 4 or 6 full weeks of iron-clad effort and total discipline, you will lose exactly 3 pounds of fat and gain exactly 3 pounds of clean muscle mass. If, after all this work, you step on the scale, you will see a net loss of zero pounds. Your untrained mind will scream "absolute failure!". However, if you evaluate reality objectively, you will have shed an immense layer of soft volume and gained a hard tissue that completely stylizes your figure; you will drop two pants sizes and look phenomenal and athletic in the mirror.
+    </p>
+
+    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-600 p-8 rounded-r-2xl my-10 shadow-sm">
+      <h4 class="text-2xl font-bold text-blue-900 mb-4 mt-0">Your New Progress Measurement Kit</h4>
+      <ul class="list-disc pl-6 text-blue-800 space-y-3 m-0">
+        <li><strong>The Body Measuring Tape:</strong> Weekly measure the circumference at your navel, hips, thighs, and flexed biceps. A reduction in waist size accompanied by a maintenance or increase in arm perimeter is undeniable confirmation of recomposition.</li>
+        <li><strong>Front and Side Photos:</strong> Human memory will betray you when looking in the mirror every day. Take identical photos every Sunday first thing in the morning, fasting, and with exactly the same lighting in your room.</li>
+        <li><strong>Gym Performance:</strong> If you are supposedly eating in a deficit, losing abdominal measurements, and managing to add 10 extra pounds to the squat bar... the muscle is in unquestionable anabolic growth.</li>
+      </ul>
+    </div>
+
+    <h2 class="text-3xl font-bold mt-16 mb-8 text-center text-gray-900">Frequently Asked Questions (FAQ)</h2>
+    <div class="space-y-6 mb-16">
+      <div class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 hover:shadow-md transition-shadow">
+        <h3 class="text-xl font-bold mb-3 text-gray-900 mt-0">How long does it take for body recomposition to become visually noticeable?</h3>
+        <p class="text-gray-700 m-0">Body recomposition is a sustainable, balanced process, but undoubtedly slow if you compare it with extreme starvation "miracle diets". You should start noticing notable increases in your strength, vitality, and a better fit in your clothes within the first 4 to 6 weeks. However, the drastic visual changes that surprise you when you look in the mirror and that others begin to strongly notice usually require a minimum commitment of 3 to 6 months of absolute consistency.</p>
+      </div>
+      <div class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 hover:shadow-md transition-shadow">
+        <h3 class="text-xl font-bold mb-3 text-gray-900 mt-0">Must I do cardio to achieve recomposition?</h3>
+        <p class="text-gray-700 m-0">Chronic intense cardio is not strictly necessary and, in fact, abusing it (like running long marathons) can negatively interfere with muscle growth signaling pathways (the interference effect). However, staying active with NEAT is key. It is strongly recommended to incorporate Low-Intensity Steady State (LISS) cardio, such as an undeniable goal of 8,000 to 10,000 daily steps. This keeps your cardiovascular system healthy and subtly elevates your energy expenditure, allowing you to consume more nutrients while remaining in your strategic deficit.</p>
+      </div>
+      <div class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 hover:shadow-md transition-shadow">
+        <h3 class="text-xl font-bold mb-3 text-gray-900 mt-0">Should I take supplements to help this process?</h3>
+        <p class="text-gray-700 m-0">Although the foundation should always be solid, whole food and your resistance training, two supplements have Grade A scientific evidence to support recomposition: Whey Protein, which easily and economically facilitates hitting your high daily requirements; and Creatine Monohydrate, which improves high-intensity performance in the gym and increases intramuscular water, thus accelerating and facilitating a greater hypertrophic stimulus during workouts in a deficit.</p>
+      </div>
+    </div>
+  </div>
 
   <Sources sources={[
     { label: "Campbell, B. I., et al. (2015). International Society of Sports Nutrition position stand: diets and body composition.", href: "https://jissn.biomedcentral.com/articles/10.1186/s12970-017-0174-y" },
-    { label: "Barakat, C., et al. (2020). Body Recomposition: Can Trained Individuals Build Muscle and Lose Fat at the Same Time?", href: "https://journals.lww.com/nsca-scj/fulltext/2020/10000/body_recomposition__can_trained_individuals_build.3.aspx" }
+    { label: "Barakat, C., et al. (2020). Body Recomposition: Can Trained Individuals Build Muscle and Lose Fat at the Same Time?", href: "https://journals.lww.com/nsca-scj/fulltext/2020/10000/body_recomposition__can_trained_individuals_build.3.aspx" },
+    { label: "Slater, G. J., et al. (2019). Is an Energy Surplus Required to Maximize Skeletal Muscle Hypertrophy Associated With Resistance Training.", href: "https://www.frontiersin.org/articles/10.3389/fnut.2019.00131/full" }
   ]} />
-<div class='my-10'>
-    <div class="my-8 rounded-2xl border border-hairline bg-canvas-soft p-6 text-center sm:p-8">
-      <h3 class="mt-0 text-xl font-semibold text-ink">Ready to calculate your needs?</h3>
-      <p class="mt-2 mb-6 text-body">Use our free, science-backed calculator to find your exact calorie and macro targets.</p>
-      <Button href="/" size="lg" class="w-full sm:w-auto">Open Calorie Calculator</Button>
-    </div>
-    </div>
-</ContentLayout>
 
+  <!-- Section: Suggested Content and Call to Action -->
+  <div class="mt-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50 p-8 md:p-12 rounded-[2.5rem] border border-indigo-100 shadow-xl mb-12 relative overflow-hidden">
+    <!-- Decorative circles -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-purple-200 to-transparent rounded-full opacity-40 -translate-y-1/2 translate-x-1/3"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-blue-200 to-transparent rounded-full opacity-40 translate-y-1/3 -translate-x-1/4"></div>
+
+    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8 text-center relative z-10 tracking-tight">Boost Your Results: Suggested Content</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 relative z-10">
+      <a href="/guides/protein-guide/" class="group flex flex-col p-8 bg-white/70 backdrop-blur-md rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 border border-transparent hover:border-indigo-300 hover:-translate-y-1">
+        <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-3">The Master Protein Guide</h3>
+        <p class="text-gray-600 flex-grow leading-relaxed">Expertly delve into how much protein you really need according to your biotype, and discover the highest bioavailability food sources to maximize muscle synthesis in record time.</p>
+        <span class="inline-flex items-center text-indigo-600 font-bold mt-6 group-hover:text-indigo-700">Read Article <svg class="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
+      </a>
+      
+      <a href="/guides/tdee-guide/" class="group flex flex-col p-8 bg-white/70 backdrop-blur-md rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 border border-transparent hover:border-purple-300 hover:-translate-y-1">
+        <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-3">The Science of Metabolism and TDEE</h3>
+        <p class="text-gray-600 flex-grow leading-relaxed">Learn step-by-step and with scientific rigor how to estimate your true Total Daily Energy Expenditure (TDEE). The indispensable knowledge to plot your "Goldilocks" deficit to the millimeter.</p>
+        <span class="inline-flex items-center text-purple-600 font-bold mt-6 group-hover:text-purple-700">Read Article <svg class="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
+      </a>
+    </div>
+    
+    <div class="text-center bg-white/80 backdrop-blur-xl rounded-[2rem] p-10 md:p-14 shadow-2xl border border-white relative z-10 mx-auto max-w-4xl">
+      <h3 class="mt-0 text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 tracking-tight">Are You Ready to Transform Your Body?</h3>
+      <p class="mb-10 text-gray-600 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">Stop trying to guess. Use our free, highly accurate calculator powered by the latest metabolic equations, and get your immovable daily calorie and protein goals in seconds.</p>
+      <a href="/country/spain/calculadora-de-calorias.html" class="inline-flex justify-center items-center px-10 py-5 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white text-xl font-bold rounded-2xl shadow-xl shadow-indigo-200 hover:shadow-2xl hover:shadow-indigo-300 hover:-translate-y-1 transition-all duration-300">
+        <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+        Go to Calorie Calculator
+      </a>
+    </div>
+  </div>
+</ContentLayout>

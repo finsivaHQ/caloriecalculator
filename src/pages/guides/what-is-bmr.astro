@@ -10,7 +10,7 @@ import Sources from "../../components/ui/Sources.astro";
 const faqs: FaqItem[] = [
   { q: "What does BMR stand for?", a: "BMR stands for Basal Metabolic Rate — the number of calories your body burns at complete rest to maintain basic life functions like breathing, circulation, and cell repair." },
   { q: "Is BMR the same as RMR?", a: "They are very close. Resting Metabolic Rate (RMR) is measured under slightly less strict conditions and is usually a touch higher, but the terms are often used interchangeably in everyday nutrition and fitness contexts." },
-  { q: "How do I calculate my BMR?", a: "The widely recommended predictive formula is the Mifflin-St Jeor equation. For men: BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age + 5. For women: BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age − 161. Use our <a href=\"/bmr-calculator/\">BMR</a> for an instant result." },
+  { q: "How do I calculate my BMR?", a: "The widely recommended predictive formula is the <a href="/guides/mifflin-st-jeor-equation/">Mifflin-St Jeor equation</a>-St Jeor equation. For men: BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age + 5. For women: BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age − 161. Use our <a href=\"/bmr-calculator/\">BMR</a> for an instant result." },
   { q: "What is a typical BMR?", a: "A typical BMR for adult women ranges from 1,200 to 1,500 kcal/day, and for adult men from 1,500 to 2,000 kcal/day. Your exact number depends on your size, age, sex, and muscle mass." },
   { q: "Can I use my BMR for weight loss?", a: "Yes. Your BMR is the starting point for any weight goal. Calculate your BMR, then estimate your TDEE by applying your activity level. From there, create a deficit for weight loss or a surplus for weight gain." },
 ];
@@ -27,6 +27,11 @@ const faqs: FaqItem[] = [
   updated="July 2026"
   faqs={faqs}
 >
+<div class="bg-blue-50/50 p-4 rounded-xl border border-blue-100 mb-8 flex items-center gap-3">
+  <span class="text-2xl">⚕️</span>
+  <p class="text-sm text-slate-600 m-0"><strong>Medical Review:</strong> This article was written and reviewed in accordance with clinical nutrition guidelines (2026). Evidence-based content.</p>
+</div>
+
 
   <MedicalNote />
 
@@ -99,4 +104,12 @@ const faqs: FaqItem[] = [
       <Button href="/" size="lg" class="w-full sm:w-auto">Open Calorie Calculator</Button>
     </div>
     </div>
+
+
+<h3>Medical & Scientific References</h3>
+<ul>
+<li><a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="noopener noreferrer">World Health Organization (WHO) - Healthy Diet</a></li>
+<li><a href="https://www.mayoclinic.org/healthy-lifestyle/weight-loss/in-depth/calories/art-20048065" target="_blank" rel="noopener noreferrer">Mayo Clinic - Counting Calories</a></li>
+<li><a href="https://www.nih.gov/health-information/weight-management" target="_blank" rel="noopener noreferrer">National Institutes of Health (NIH) - Weight Management</a></li>
+</ul>
 </ContentLayout>

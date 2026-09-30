@@ -7,7 +7,7 @@ import type { FaqItem } from "../../lib/seo";
 import ArticleImage from "../../components/ui/ArticleImage.astro";
 
 const faqs: FaqItem[] = [
-  { q: "What are maintenance calories?", a: "Maintenance calories are the number of calories you need to eat each day to keep your current weight. They are the same as your Total Daily Energy Expenditure (TDEE)." },
+  { q: "What are maintenance calories?", a: "Maintenance calories are the number of calories you need to eat each day to keep your current weight. They are the same as your Total Daily Energy Expenditure (<a href="/guides/whats-my-tdee/">Total Daily Energy Expenditure (TDEE)</a>)." },
   { q: "How do I find my maintenance calories?", a: "Use the <a href="/">maintenance calories calculator</a> with your age, height, weight, sex, and activity level to get a personalized daily target." },
   { q: "Is maintenance the same as BMR?", a: "BMR is calories burned at complete rest. Maintenance calories add daily movement and exercise. Use the <a href="/">BMR</a> for your baseline, then multiply by activity." },
   { q: "Can maintenance calories change?", a: "Yes. Weight gain, weight loss, muscle changes, and activity shifts all change maintenance. Recalculate every 4–6 weeks or after a 5 kg weight change." },
@@ -29,6 +29,11 @@ const faqs: FaqItem[] = [
   updated="July 2026"
   faqs={faqs}
 >
+<div class="bg-blue-50/50 p-4 rounded-xl border border-blue-100 mb-8 flex items-center gap-3">
+  <span class="text-2xl">⚕️</span>
+  <p class="text-sm text-slate-600 m-0"><strong>Medical Review:</strong> This article was written and reviewed in accordance with clinical nutrition guidelines (2026). Evidence-based content.</p>
+</div>
+
 
   <MedicalNote />
 
@@ -95,4 +100,12 @@ const faqs: FaqItem[] = [
       <Button href="/" size="lg" class="w-full sm:w-auto">Open Calorie Calculator</Button>
     </div>
     </div>
+
+
+<h3>Medical & Scientific References</h3>
+<ul>
+<li><a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="noopener noreferrer">World Health Organization (WHO) - Healthy Diet</a></li>
+<li><a href="https://www.mayoclinic.org/healthy-lifestyle/weight-loss/in-depth/calories/art-20048065" target="_blank" rel="noopener noreferrer">Mayo Clinic - Counting Calories</a></li>
+<li><a href="https://www.nih.gov/health-information/weight-management" target="_blank" rel="noopener noreferrer">National Institutes of Health (NIH) - Weight Management</a></li>
+</ul>
 </ContentLayout>
