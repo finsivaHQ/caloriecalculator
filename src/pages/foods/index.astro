@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { foods } from '../../data/foods';
+
+const title = "Food Calorie Database | Track Macros & Calories per 100g";
+const description = "Explore our comprehensive database of foods. Find out exactly how many calories, protein, carbs, and fats are in 100g of your favorite foods.";
+
+// Group foods by category for a better directory layout
+const foodsByCategory = foods.reduce((acc, food) => {
+  if (!acc[food.category]) {
+    acc[food.category] = [];
+  }
+  acc[food.category].push(food);
+  return acc;
+}, {} as Record<string, typeof foods>);
+
+const categories = Object.keys(foodsByCategory).sort();
+---
+
+<Layout title={title} description={description} path="/foods/">
+  <div class="max-w-5xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    
+    <div class="text-center mb-16">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+        The Ultimate <span class="text-brand">Food Database</span>
+      </h1>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+        Search our directory to find exactly how many calories and macronutrients are in 100g of your favorite foods.
+      </p>
+    </div>
+
+    <div class="space-y-16">
+      {categories.map((category) => (
+        <section>
+          <div class="flex items-center gap-4 mb-8 border-b pb-4">
+            <h2 class="text-3xl font-bold text-slate-900">{category}</h2>
+            <span class="bg-slate-100 text-slate-600 text-sm font-bold px-3 py-1 rounded-full">
+              {foodsByCategory[category].length} items
+            </span>
+          </div>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {foodsByCategory[category].map((food) => (
+              <a href={`/foods/${food.slug}/`} class="block group h-full">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition-all group-hover:-translate-y-1 h-full flex flex-col justify-between">
+                  <div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-brand transition-colors">{food.name}</h3>
+                    <p class="text-slate-500 text-sm line-clamp-2 mb-4">{food.description}</p>
+                  </div>
+                  <div class="flex justify-between items-center pt-4 border-t border-slate-100">
+                    <span class="font-black text-slate-800 text-lg">{food.calories} <span class="text-sm text-slate-400 font-normal">kcal</span></span>
+                    <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-md">{food.protein}g Protein</span>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+
+  </div>
+</Layout>
