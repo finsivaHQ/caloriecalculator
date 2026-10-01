@@ -40,6 +40,7 @@ export const ALL_CALCULATORS: NavLink[] = [
 /** Header dropdown groups. */
 export const NAV: { label: string; href?: string; children?: NavLink[] }[] = [
   { label: "Home", href: "/" },
+  { label: "Food Database", href: "/foods/" },
   { label: "Guides", href: "/guides/" },
   { label: "Resources", href: "/resources/" },
 ];
