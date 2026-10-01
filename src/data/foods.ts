@@ -34,7 +34,7 @@ export const foods: FoodData[] = [
   { name: "Olive Oil", slug: "olive-oil", category: "Fats", calories: 884, protein: 0, carbs: 0, fats: 100, description: "A pure fat source, foundational to the Mediterranean diet and heart health." },
   { name: "Black Beans", slug: "black-beans", category: "Legumes", calories: 132, protein: 8.9, carbs: 24, fats: 0.5, description: "A highly satiating legume offering a great mix of protein and dietary fiber." },
   { name: "Potato", slug: "potato", category: "Vegetables", calories: 77, protein: 2, carbs: 17, fats: 0.1, description: "One of the most satiating foods on the planet when boiled or baked." },
-  { name: "Pork Chops", slug: "pork-chops", category: "Meat", calories: 231, protein: 24, carbs: 0, fats: 14, description: "A dense source of protein and B-vitamins for maintaining lean mass." }
+  { name: "Pork Chops", slug: "pork-chops", category: "Meat", calories: 231, protein: 24, carbs: 0, fats: 14, description: "A dense source of protein and B-vitamins for maintaining lean mass." },
   { name: "Ground Beef (80% Lean)", slug: "ground-beef-80", category: "Meat", calories: 254, protein: 17, carbs: 0, fats: 20, description: "A rich, flavorful meat often used in burgers and tacos, containing high fats." },
   { name: "Turkey Breast", slug: "turkey-breast", category: "Meat", calories: 135, protein: 30, carbs: 0, fats: 1, description: "Extremely lean poultry, perfect for high-protein diets." },
   { name: "Tuna (Canned in Water)", slug: "canned-tuna", category: "Fish", calories: 86, protein: 19, carbs: 0, fats: 1, description: "A budget-friendly, high-protein seafood staple." },
