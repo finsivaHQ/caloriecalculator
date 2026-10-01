@@ -8,6 +8,7 @@ Allow: /cycling-calories-calculator/
 Allow: /swimming-calories-calculator/
 Allow: /guides/
 Allow: /resources/
+Allow: /foods/
 Sitemap: https://caloriecalculatorfree.com/sitemap-index.xml
 # Google-specific
 User-agent: Googlebot
