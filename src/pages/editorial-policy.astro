@@ -1,64 +1,53 @@
 ---
 import ContentLayout from "../layouts/ContentLayout.astro";
 ---
-
 <ContentLayout
-  title="Editorial Policy — Calorie Calculator Free"
-  h1="Editorial Policy"
-  description="How Calorie Calculator Free creates, reviews, and updates its nutrition, fitness, and health content — and our commitment to accuracy."
+  title="Editorial Policy - Calorie Calculator Free"
+  h1="Our Editorial Policy"
+  description="Learn about our strict editorial standards, our commitment to scientific accuracy (E-E-A-T), and how we fact-check our nutritional content."
   path="/editorial-policy/"
-  updated="August 2026"
-  showCta={false}
+  lead="Our commitment to Experience, Expertise, Authoritativeness, and Trustworthiness (E-E-A-T)."
 >
-  <p>This editorial policy explains how the content and calculators on caloriecalculatorfree.com are created, reviewed, and maintained. We publish it so you can understand the standards behind the information you rely on.</p>
+  <div class="prose max-w-none text-brand-dark/80 dark:text-white/80 space-y-6">
+    <section>
+      <p>In a digital landscape overflowing with fad diets, pseudo-science, and conflicting nutritional claims, <strong>Calorie Calculator Free</strong> holds itself to a rigorous standard of scientific integrity. Our users rely on our tools to make decisions about their health, and we take that responsibility very seriously.</p>
+      <p>This Editorial Policy outlines how we research, write, review, and update the content on our platform to ensure it aligns with the highest standards of medical and nutritional science.</p>
+    </section>
 
-  <h2>Our purpose</h2>
-  <p>Calorie Calculator Free exists to make accurate, science-based nutrition and fitness math freely available to everyone. We aim to give you clear explanations and dependable estimates — not medical advice, diagnosis, or treatment. For anything personal, always consult a qualified healthcare professional.</p>
+    <section>
+      <h2>1. The E-E-A-T Standard</h2>
+      <p>We adhere closely to Google's standard of <strong>Experience, Expertise, Authoritativeness, and Trustworthiness (E-E-A-T)</strong>. This framework guides every article, calculator, and guide we publish:</p>
+      <ul>
+        <li><strong>Expertise:</strong> Our mathematical algorithms are based on clinical studies published in leading medical journals. We do not invent formulas; we digitize established clinical math.</li>
+        <li><strong>Authoritativeness:</strong> When discussing physiological concepts (like BMR, TDEE, or TEF), we cite primary sources such as the National Institutes of Health (NIH), the World Health Organization (WHO), and peer-reviewed literature.</li>
+        <li><strong>Trustworthiness:</strong> We maintain a strict boundary between factual science and opinion. We do not accept sponsored content that alters our algorithms, nor do we sell "diet pills" or quick-fix weight loss supplements.</li>
+      </ul>
+    </section>
 
-  <h2>Who creates and reviews the content</h2>
-  <p>Our content is developed by a dedicated team of health communicators and software engineers, and every calculator and guide implements standard formulas publicly documented in academic literature or government guidelines, but also correctly contextualized for our users. We name each formula and link to its primary source on the relevant calculator page.</p>
+    <section>
+      <h2>2. Sourcing and Fact-Checking</h2>
+      <p>Every piece of content on our site goes through a multi-layered review process:</p>
+      <ol>
+        <li><strong>Primary Source Reliance:</strong> Our writers and researchers are required to cite primary clinical literature rather than secondary blogs or fitness magazines.</li>
+        <li><strong>Algorithm Verification:</strong> Before a calculator (such as the <a href="/guides/katch-mcardle-equation/">Katch-McArdle tool</a>) is pushed live, the underlying JavaScript is mathematically tested against control data sets from original studies to ensure zero calculation deviation.</li>
+        <li><strong>Regular Audits:</strong> Nutritional science evolves. We conduct quarterly audits of our most popular guides to ensure the citations and recommendations are still supported by current scientific consensus.</li>
+      </ol>
+    </section>
 
-  <h2>How our content is created</h2>
-  <p>Our articles and guides are written in plain English and grounded in established, peer-reviewed methods used by dietitians and researchers. The formulas behind our tools are named and explained on each relevant page, including:</p>
-  <ul>
-    <li><a href="/">Mifflin-St Jeor equation</a> for basal metabolic rate (the current standard for the general population)</li>
-    <li>Standard activity multipliers for <a href="/tdee-calculator/">Total Daily Energy Expenditure</a></li>
-    <li>The U.S. Navy circumference method for <a href="/">body fat percentage</a></li>
-    <li>The Boer formula for <a href="/">lean body mass</a></li>
-    <li>The MET (Metabolic Equivalent) method for <a href="/calories-burned-calculator/">calories burned during exercise</a></li>
+    <section>
+      <h2>3. The "No Fad" Guarantee</h2>
+      <p>We believe in the fundamental laws of thermodynamics (energy balance). As such, our editorial team will never promote unscientific fad diets. We will objectively explain diets (like Keto, Paleo, or Veganism) as potential methods for achieving a <a href="/calorie-deficit-calculator/">calorie deficit</a>, but we will not endorse any specific diet as a "magic bullet" that bypasses basic metabolic laws.</p>
+    </section>
 
+    <section>
+      <h2>4. Corrections and Updates</h2>
+      <p>Transparency is a core value. If a user, medical professional, or our internal audit team discovers an error in our content or a bug in a formula, we are committed to correcting it rapidly. When a significant correction is made to an educational guide, we will add an "Updated" dateline at the top of the article.</p>
+      <p>If you believe you have found an error, please report it via our <a href="/contact/">Contact Page</a>.</p>
+    </section>
 
-    <li>The U.S. Army tape test method for <a href="/">body fat assessment</a></li>
-  </ul>
-
-  <h2>How information is reviewed</h2>
-  <p>Before publication, every page is checked for:</p>
-  <ul>
-    <li>Formula accuracy — inputs, units, and outputs verified against the original source</li>
-    <li>Internal consistency — results match across related calculators</li>
-    <li>Clarity — assumptions and limitations stated plainly</li>
-  </ul>
-  <p>We prefer primary and authoritative references — such as government health agencies (NIH, CDC, USDA), academic sources (PubMed, Google Scholar), and established textbooks — and link to them where they add value. When a claim depends on a specific study or guideline, we point you to the original source rather than repeat it secondhand.</p>
-
-  <h2>Our commitment to accuracy</h2>
-  <p>Predictive equations estimate, they do not measure. We state the limits of each tool plainly and encourage you to treat results as a starting point, then adjust based on your real-world progress. We do not promise specific outcomes, and we avoid language that overstates what a calculator can do.</p>
-  <p>Specifically:</p>
-  <ul>
-    <li>BMR and TDEE calculators are estimates within ±10-15% for most people</li>
-    <li>Body fat calculators using circumference methods have higher error rates (±3-5%) than DEXA or hydrostatic weighing</li>
-    <li>1RM formulas are most accurate at 2-10 reps and can deviate for advanced lifters</li>
-    <li>Exercise calorie burn (MET method) varies significantly by individual efficiency</li>
-  </ul>
-
-  <h2>How updates are handled</h2>
-  <p>Nutrition science evolves, and so do we. When guidance changes or we find an error, we correct it and update the "last updated" date shown on the page. Significant changes to our policies are reflected in the relevant document — see our <a href="/privacy-policy/">Privacy Policy</a> and <a href="/terms/">Terms and Conditions</a>.</p>
-
-  <h2>Independence and advertising</h2>
-  <p>Our calculators and educational content are free to use. Advertising, where present, is kept separate from editorial content and never influences the formulas, recommendations, or rankings on this site. We do not accept payment to alter a calculator's results or to favor a particular product within our explanations.</p>
-
-  <h2>Corrections and feedback</h2>
-  <p>If you spot an error or have a suggestion, we want to hear from you. Reach the team through our <a href="/contact/">contact page</a>, and we will review credible concerns promptly.</p>
-
-  <h2>Disclaimer</h2>
-  <p>The calculators and content on this site are for general educational and informational purposes only. They are not a substitute for professional medical, nutritional, or fitness advice. Read our full <a href="/disclaimer/">Disclaimer</a> for details.</p>
+    <section>
+      <h2>5. Advertising and Independence</h2>
+      <p>To keep our calculators free, we display advertisements. However, there is a strict separation between our advertising team and our editorial content. Advertisers have absolutely no influence over the mathematical outputs of our tools or the information in our guides. We do not alter facts to satisfy commercial partners.</p>
+    </section>
+  </div>
 </ContentLayout>

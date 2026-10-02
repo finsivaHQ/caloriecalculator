@@ -1,42 +1,72 @@
 ---
 import ContentLayout from "../layouts/ContentLayout.astro";
 ---
-
 <ContentLayout
-  title="Privacy Policy — Calorie Calculator Free"
+  title="Privacy Policy - Calorie Calculator Free"
   h1="Privacy Policy"
-  description="How Calorie Calculator Free handles your data. Spoiler: calculations run in your browser and we don't collect your health information."
+  description="Read our comprehensive Privacy Policy to understand how Calorie Calculator Free protects your personal data, handles cookies, and respects your privacy."
   path="/privacy-policy/"
-  updated="January 2025"
-  showCta={false}
+  lead="Your health data is your business. We are committed to radical transparency and strict data protection."
 >
-  <p>Your privacy matters to us. This policy explains what information Calorie Calculator Free ("we", "us") does and does not collect when you use caloriecalculatorfree.com.</p>
+  <div class="prose max-w-none text-brand-dark/80 dark:text-white/80 space-y-6">
+    <p><strong>Effective Date:</strong> January 1, 2024</p>
 
-  <h2>Calculations stay on your device</h2>
-  <p>All of our calculators run entirely in your web browser using client-side JavaScript. The personal details you enter — age, height, weight, measurements, and goals — are never transmitted to or stored on our servers. When you close the tab, that data is gone unless your browser has saved a recent result locally for your own convenience.</p>
+    <section>
+      <h2>1. Introduction and Core Philosophy</h2>
+      <p>Welcome to Calorie Calculator Free. Your privacy is not just an afterthought to us; it is a foundational pillar of how we build our software. We understand that physical metrics—such as your weight, height, age, and health goals—are highly sensitive personal information.</p>
+      <p>This Privacy Policy clearly outlines what information we collect, how we use it, and, most importantly, what we <em>do not</em> collect when you use our website at caloriecalculatorfree.com.</p>
+    </section>
 
-  <h2>Local storage</h2>
-  <p>To improve your experience, we may store small pieces of data in your browser's local storage, such as your theme preference (light or dark) and your most recent calculation results. This information lives only on your device, is never sent to us, and can be cleared at any time through your browser settings.</p>
+    <section>
+      <h2>2. Data We Do NOT Collect</h2>
+      <p>We employ a "Client-Side First" architecture for all of our calculators. This means:</p>
+      <ul>
+        <li><strong>No Server Transmission:</strong> When you input your age, gender, height, and weight into our <a href="/">Calorie Calculator</a> or <a href="/tdee-calculator/">TDEE Calculator</a>, that data is processed <strong>entirely within your own web browser</strong>.</li>
+        <li><strong>No Health Data Storage:</strong> We do not transmit this physiological data to our servers, nor do we store it in any database.</li>
+        <li><strong>No Account Required:</strong> You do not need to create an account, provide an email address, or log in to use our core services.</li>
+      </ul>
+      <p>If you choose to use our "Save Results" feature, the data is saved in your browser's <em>Local Storage</em>. It remains on your physical device and can be deleted by you at any time simply by clearing your browser cache.</p>
+    </section>
 
-  <h2>Advertising and third-party vendors</h2>
-  <p>This site may display advertising served by third-party networks such as Google AdSense. These vendors may use cookies, web beacons, or similar technologies to serve ads based on your prior visits to this and other websites. The advertising identifiers we use include the Google publisher ID <code>pub-5576608603923233</code>.</p>
-  <p>Google and other third-party vendors may use advertising cookies (including the <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">DoubleClick cookie</a>) to serve ads based on your interests. You can opt out of personalized advertising by visiting the <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>, and you can control cookies through your browser settings or industry opt-out tools such as <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">YourAdChoices</a>.</p>
+    <section>
+      <h2>3. Information We Collect Automatically (Log Data & Analytics)</h2>
+      <p>Like almost all websites, we collect standard, non-personally identifiable log data to ensure our servers function correctly and to understand how our site is used. This may include:</p>
+      <ul>
+        <li>Your IP address (anonymized where required by law).</li>
+        <li>Your browser type and version.</li>
+        <li>The pages you visit (e.g., whether you visited the <a href="/protein-calculator/">Protein Calculator</a> or the <a href="/guides/">Guides section</a>).</li>
+        <li>The time and date of your visit, and the time spent on those pages.</li>
+      </ul>
+      <p>We utilize third-party analytics services (such as Google Analytics) to process this aggregated traffic data. This helps us improve the user experience and identify which tools are most valuable to our community.</p>
+    </section>
 
-  <h2>Analytics</h2>
-  <p>We may use privacy-respecting, aggregated analytics to understand which pages are popular and how the site performs. Where used, this data is anonymized and cannot be used to identify you individually. We do not sell or share personal data.</p>
+    <section>
+      <h2>4. Cookies and Web Beacons</h2>
+      <p>We use "cookies"—small data files placed on your device—to collect information and improve our Service. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, some minor features of our site may not function optimally.</p>
+      <h3>Third-Party Ad Networks</h3>
+      <p>To keep our site 100% free, we rely on advertising revenue. Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to our website or other websites. Google's use of advertising cookies enables it and its partners to serve ads based on your browsing history. You may opt out of personalized advertising by visiting <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>.</p>
+    </section>
 
-  <h2>Cookies</h2>
-  <p>Our core calculators do not require cookies to function. Any cookies present are limited to essential functionality, anonymous analytics, or advertising personalization as described above. You can clear or block cookies in your browser at any time; doing so may affect how ads are served but will not break the calculators.</p>
+    <section>
+      <h2>5. GDPR & CCPA Compliance (Your Data Rights)</h2>
+      <p>If you are a resident of the European Economic Area (EEA) under the General Data Protection Regulation (GDPR), or a resident of California under the California Consumer Privacy Act (CCPA), you have specific data protection rights. Because we do not store personal health data, there is virtually no data for us to delete. However, you maintain the right to:</p>
+      <ul>
+        <li>Request access to any personal data we may hold (e.g., if you emailed our support team).</li>
+        <li>Request correction of inaccurate data.</li>
+        <li>Request erasure of your personal data.</li>
+        <li>Opt-out of the sale of personal information (Note: We do not sell personal data).</li>
+      </ul>
+    </section>
 
-  <h2>Third-party links</h2>
-  <p>Our content may link to external websites. We are not responsible for the privacy practices of those sites and encourage you to review their policies.</p>
+    <section>
+      <h2>6. Links to Other Sites</h2>
+      <p>Our website may contain links to authoritative external sites (such as the NIH, Mayo Clinic, or WHO) for educational purposes. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party sites or services.</p>
+    </section>
 
-  <h2>Children's privacy</h2>
-  <p>Our services are intended for general audiences and are not directed at children under 13. We do not knowingly collect personal information from children.</p>
-
-  <h2>Changes to this policy</h2>
-  <p>We may update this policy from time to time. Material changes will be reflected by the "last updated" date above.</p>
-
-  <h2>Contact</h2>
-  <p>Questions about privacy? Email <a href="mailto:calgroupofficial@gmail.com">calgroupofficial@gmail.com</a> (or our alternate, <a href="mailto:topg8086@gmail.com">topg8086@gmail.com</a>).</p>
+    <section>
+      <h2>7. Changes to This Privacy Policy</h2>
+      <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Effective Date" at the top. You are advised to review this Privacy Policy periodically for any changes.</p>
+      <p>If you have any questions about this Privacy Policy, please contact us via our <a href="/contact/">Contact Page</a>.</p>
+    </section>
+  </div>
 </ContentLayout>

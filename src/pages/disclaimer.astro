@@ -1,29 +1,59 @@
 ---
 import ContentLayout from "../layouts/ContentLayout.astro";
 ---
-
 <ContentLayout
-  title="Disclaimer — Calorie Calculator Free"
-  h1="Disclaimer"
-  description="Important health disclaimer for Calorie Calculator Free. Our tools provide estimates and are not a substitute for medical advice."
+  title="Medical Disclaimer - Calorie Calculator Free"
+  h1="Medical Disclaimer"
+  description="Important medical disclaimer regarding the use of our calculators. The content on Calorie Calculator Free is for informational purposes only and is not medical advice."
   path="/disclaimer/"
-  updated="January 2025"
-  showCta={false}
+  lead="Crucial information regarding your health, safety, and the limitations of metabolic mathematics."
 >
-  <h2>Not medical advice</h2>
-  <p>The information and calculators provided on caloriecalculatorfree.com are for general educational and informational purposes only. They are <strong>not</strong> intended to be, and should not be taken as, medical advice, diagnosis, or treatment. Always seek the guidance of a qualified physician, registered dietitian, or other healthcare professional with any questions about your health, nutrition, or fitness.</p>
+  <div class="prose max-w-none text-brand-dark/80 dark:text-white/80 space-y-6">
+    
+    <section class="bg-brand/10 p-6 rounded-xl border border-brand/20 my-8">
+      <h2 class="text-brand-dark dark:text-brand-light mt-0">Not Medical Advice</h2>
+      <p class="mb-0 text-brand-dark/80 dark:text-white/80 font-medium">The information provided on Calorie Calculator Free, including all mathematical outputs from our calculators, articles, and guides, is intended for general educational and informational purposes only. It is <strong>NOT</strong> a substitute for professional medical advice, diagnosis, or treatment.</p>
+    </section>
 
-  <h2>Estimates, not exact figures</h2>
-  <p>Our calculators use established predictive equations to produce estimates. Real energy needs and body-composition values vary between individuals due to genetics, muscle mass, medical conditions, medications, and other factors. Results should be treated as a starting point and validated against your own real-world progress.</p>
+    <section>
+      <h2>1. The Limitations of Predictive Equations</h2>
+      <p>The calculators on this website (such as the BMR, TDEE, and Macro calculators) utilize widely accepted, peer-reviewed clinical formulas (e.g., Mifflin-St Jeor, Harris-Benedict, Katch-McArdle). However, it is critical to understand that these are <strong>population-based statistical averages</strong>.</p>
+      <p>A mathematical equation cannot account for the vast complexities of human biology. Your actual metabolic rate can deviate significantly from these estimates due to:</p>
+      <ul>
+        <li><strong>Genetics and Epigenetics:</strong> Individual variations in metabolic efficiency.</li>
+        <li><strong>Hormonal Imbalances:</strong> Conditions such as hypothyroidism, PCOS, or insulin resistance.</li>
+        <li><strong>Metabolic Adaptation:</strong> Previous cycles of severe calorie restriction (often incorrectly termed "starvation mode") can temporarily lower your basal metabolic rate.</li>
+        <li><strong>Medications:</strong> Prescription drugs that impact appetite, fluid retention, or energy expenditure.</li>
+        <li><strong>NEAT Variations:</strong> Non-Exercise Activity Thermogenesis (fidgeting, posture) varies wildly between individuals.</li>
+      </ul>
+      <p>Therefore, the numbers provided should be treated strictly as a <strong>starting baseline</strong> for an adult individual, not a rigid medical prescription.</p>
+    </section>
 
-  <h2>Individual circumstances</h2>
-  <p>Do not use these tools to self-diagnose or to make significant changes to your diet or exercise routine without professional supervision — particularly if you are pregnant or breastfeeding, under 18, elderly, have a history of disordered eating, or have a medical condition such as diabetes, heart disease, or kidney disease.</p>
+    <section>
+      <h2>2. Always Consult a Professional</h2>
+      <p>Never disregard professional medical advice or delay in seeking it because of something you have read or calculated on this website. You should always consult with your physician, a registered dietitian (RD), or another qualified healthcare provider before:</p>
+      <ul>
+        <li>Starting any new diet or severe calorie restriction.</li>
+        <li>Beginning a new exercise or weight-training program.</li>
+        <li>Attempting to manipulate your macronutrients to treat or manage a disease (e.g., diabetes, hypertension).</li>
+      </ul>
+      <p>If you think you may have a medical emergency, call your doctor, go to the emergency department, or call emergency services immediately.</p>
+    </section>
 
-  <h2>No guarantee of results</h2>
-  <p>Following any calorie target or recommendation from this Site does not guarantee any specific outcome. Health and weight outcomes depend on many factors beyond calorie intake.</p>
+    <section>
+      <h2>3. Special Populations</h2>
+      <p>The formulas used on this site are generally designed for standard adult populations. They are <strong>highly inaccurate and potentially dangerous</strong> if applied to:</p>
+      <ul>
+        <li><strong>Children and Adolescents:</strong> Growing bodies have vastly different, unpredictable caloric needs.</li>
+        <li><strong>Pregnant or Nursing Women:</strong> Caloric and nutrient requirements increase significantly and must be managed by an obstetrician.</li>
+        <li><strong>Individuals with Eating Disorders:</strong> Calorie counting and tracking can trigger or exacerbate disordered eating behaviors (e.g., Anorexia Nervosa, Bulimia). If you struggle with an eating disorder, please seek help from a specialized mental health professional and avoid using our calculators.</li>
+      </ul>
+    </section>
 
-  <h2>Assumption of risk</h2>
-  <p>By using this Site, you acknowledge that you do so at your own risk and that Calorie Calculator Free is not liable for any actions taken based on the information provided.</p>
+    <section>
+      <h2>4. Assumption of Risk</h2>
+      <p>Reliance on any information provided by Calorie Calculator Free, our employees, or others appearing on the site at our invitation is solely at your own risk. By using this site, you acknowledge that Calorie Calculator Free and its operators are not liable for any health complications, injuries, or damages resulting from the use of our tools or content.</p>
+    </section>
 
-  <p>If you are experiencing a medical emergency, contact your local emergency services immediately.</p>
+  </div>
 </ContentLayout>
