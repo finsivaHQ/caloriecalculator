@@ -8,40 +8,87 @@ import ContentLayout from "../layouts/ContentLayout.astro";
   path="/about/"
   lead="Empowering your health journey with science-backed, 100% free nutritional tools."
 >
-  <div class="prose max-w-none text-brand-dark/80 dark:text-white/80 space-y-6">
+  <div class="prose max-w-none text-brand-dark/80 dark:text-white/80 space-y-8">
     <section>
-      <h2>Our Core Mission</h2>
-      <p>Welcome to <strong>Calorie Calculator Free</strong>. Our mission was born from a fundamental belief: access to highly accurate, scientifically validated nutritional data should be a universal right, not a premium privilege locked behind expensive subscriptions, invasive sign-ups, or aggressive paywalls. The fitness and diet industry is unfortunately flooded with misinformation, predatory pricing models, and opaque algorithms designed to sell supplements rather than inform the user.</p>
-      <p>We are here to radically change that paradigm. Our goal is to build the internet's most comprehensive, transparent, and easy-to-use repository of metabolic math. Whether you are a professional athlete aiming to optimize performance, someone embarking on a weight-loss journey, a clinician needing quick access to verified formulas, or simply a health-conscious individual wanting to understand your body better, we provide the exact mathematical frameworks used by certified dietitians and medical professionals—absolutely free of charge.</p>
-    </section>
-    
-    <section>
-      <h2>Our Scientific Commitment</h2>
-      <p>We do not rely on guesswork or proprietary "magic algorithms." The fitness world is plagued by apps that hide their formulas to create a false sense of value. At Calorie Calculator Free, we are fully transparent. Every single calculator on this platform is meticulously built upon established, peer-reviewed clinical research. Our tools utilize globally recognized metabolic formulas, including:</p>
-      <ul>
-        <li><strong>The Mifflin-St Jeor Equation:</strong> Developed in 1990 and endorsed by the American Dietetic Association, this is widely considered the most accurate modern predictive equation for Resting Metabolic Rate (RMR) in modern lifestyles.</li>
-        <li><strong>The Harris-Benedict Formula:</strong> A classic, foundational algorithm updated in 1984 by Roza and Shizgal for broader accuracy, which remains highly effective for broad population modeling.</li>
-        <li><strong>The Katch-McArdle Formula:</strong> The gold standard used for individuals who know their precise body fat percentage, relying strictly on Lean Body Mass rather than total weight.</li>
-      </ul>
-      <p>By offering transparent access to these formulas, we empower you to make informed, data-driven decisions about your <a href="/calorie-deficit-calculator/">calorie deficit</a>, <a href="/protein-calculator/">protein intake</a>, and overall <a href="/tdee-calculator/">Total Daily Energy Expenditure (TDEE)</a>. We believe that when you understand the math, you can control the outcome.</p>
+      <h2>The Story Behind Our Mission</h2>
+      <p>Welcome to <strong>Calorie Calculator Free</strong>. To understand why we built this platform, you have to look back at the moment of frustration that started it all. Years ago, our founding team—a small group of software developers, fitness nerds, and data analysts—embarked on our own personal health journeys. Some of us were trying to shed stubborn body fat after years of sedentary office work, while others were athletes striving to dial in their macronutrients for peak performance.</p>
+      <p>What did we all have in common? We were completely overwhelmed and deeply frustrated by the digital fitness landscape. When we went searching for simple, accurate tools to calculate our Total Daily Energy Expenditure (TDEE) and basal metabolic rate, we found a broken system. Almost every app and website demanded an email address before revealing a single number. Worse, they locked the most basic, decades-old scientific formulas behind exorbitant monthly paywalls, premium subscriptions, and invasive data-harvesting schemes. We saw platforms deliberately obfuscating the math—using proprietary "black box" algorithms designed to make you feel like you couldn't possibly understand your own metabolism without their expensive guidance.</p>
+      <p>It didn't sit right with us. The fundamental mathematics of human energy expenditure—formulas like Mifflin-St Jeor and Harris-Benedict—were developed by scientists and researchers for the benefit of public health, not to be hoarded by tech conglomerates. We realized that access to highly accurate, scientifically validated nutritional data should be a universal right, not a premium privilege. And from that realization, <strong>Calorie Calculator Free</strong> was born.</p>
+      <p>We set out to create the exact opposite of everything we hated in the industry. We wanted a site that was blindingly fast, fiercely transparent, completely respectful of user privacy, and—most importantly—100% free. No hidden fees. No sneaky subscriptions. Just pure, unadulterated science, available to anyone with an internet connection.</p>
     </section>
 
     <section>
-      <h2>Our Strict Privacy Policy</h2>
-      <p>In the digital age, your personal health data—including your weight, age, and dietary habits—is your most sensitive asset. At Calorie Calculator Free, we have engineered our platform with a strict "Privacy First" architecture from day one. <strong>Every calculation occurs locally on your device within your browser.</strong></p>
-      <p>We do not transmit, harvest, or store your physiological data on our servers. The only data saved is kept in your browser's local storage solely for your convenience, ensuring that your health journey remains completely anonymous and secure. You never have to worry about a data breach exposing your weight loss goals, because we simply do not possess that data. For more detailed information, please review our comprehensive <a href="/privacy-policy/">Privacy Policy</a>.</p>
+      <h2>Our Core Philosophy: Health is a Right, Not a Luxury</h2>
+      <p>We believe that understanding your body's energy needs is the foundational step toward any health or fitness goal. Whether you are a competitive bodybuilder mapping out a stringent cutting phase, a busy parent trying to find a sustainable way to lose weight without giving up family dinners, or a clinical practitioner who needs a reliable reference point for a patient, you deserve access to the best tools available.</p>
+      <p>The diet industry often thrives on confusion. By creating endless fad diets, complicated point systems, and pseudoscientific jargon, companies manufacture a problem so they can sell you the solution. At Calorie Calculator Free, our philosophy is rooted in radical simplicity and education. We strip away the marketing fluff and give you the raw data. We want you to understand the <em>why</em> behind the numbers. When you understand the basic thermodynamics of energy balance—calories in versus calories out—you reclaim the power to shape your own health destiny.</p>
+      <p>We don't sell supplements. We don't push magic detox teas. We just provide the mathematical reality of your metabolic framework. Our goal is to build the internet's most comprehensive, transparent, and easy-to-use repository of metabolic math, giving you the autonomy to make informed, data-driven decisions about your lifestyle.</p>
+    </section>
+    
+    <section>
+      <h2>Our Unwavering Commitment to Scientific Accuracy</h2>
+      <p>We absolutely refuse to rely on guesswork or proprietary "magic algorithms." The fitness world is already plagued by applications that hide their internal logic to create a false sense of exclusivity and value. At Calorie Calculator Free, we are fully, unabashedly transparent. Every single calculator on this platform is meticulously built upon established, peer-reviewed clinical research. Our tools utilize globally recognized metabolic formulas that are taught in medical schools and dietetics programs worldwide, including:</p>
+      <ul>
+        <li><strong>The Mifflin-St Jeor Equation:</strong> Developed in 1990 and endorsed by the Academy of Nutrition and Dietetics, this is widely considered the most accurate modern predictive equation for Resting Metabolic Rate (RMR). It takes into account the realities of modern, largely sedentary lifestyles better than older formulas, making it our default recommendation for the vast majority of our users.</li>
+        <li><strong>The Harris-Benedict Formula:</strong> A classic, foundational algorithm originally published in 1919 and subsequently revised in 1984 by Roza and Shizgal for broader accuracy. While slightly older, it remains highly effective for broad population modeling and is a trusted tool in clinical settings.</li>
+        <li><strong>The Katch-McArdle Formula:</strong> The undisputed gold standard for individuals who know their precise body fat percentage. Because fat tissue is much less metabolically active than muscle tissue, standard formulas can overestimate the calorie needs of those with high body fat and underestimate the needs of the very lean. Katch-McArdle bypasses this entirely by relying strictly on Lean Body Mass (LBM), providing a razor-sharp estimate for athletes and fitness enthusiasts.</li>
+      </ul>
+      <p>By offering transparent access to these formulas and allowing you to choose between them, we empower you to make informed decisions about your <a href="/calorie-deficit-calculator/">calorie deficit</a>, your <a href="/protein-calculator/">protein intake</a>, and your overall <a href="/tdee-calculator/">Total Daily Energy Expenditure (TDEE)</a>. We firmly believe that when you understand the math behind the curtain, you can control the outcome.</p>
+    </section>
+
+    <section>
+      <h2>The "Privacy First" Guarantee</h2>
+      <p>In today's hyper-connected digital age, your personal health data—including your weight, your age, your biological sex, and your dietary habits—is your most sensitive and private asset. It is appalling how casually many health apps harvest this data, only to sell it to third-party advertisers or insurance companies.</p>
+      <p>At Calorie Calculator Free, we have engineered our platform with a strict, uncompromising "Privacy First" architecture from day one. What does that mean for you? <strong>Every single calculation occurs locally on your device, right within your web browser.</strong></p>
+      <p>When you enter your weight or your goals into our tools, that data is never transmitted to our servers. We do not harvest, intercept, or store your physiological data in any database. The only data ever saved is kept in your browser's local storage (using standard web technologies like cookies or localStorage) solely for your own convenience—so you don't have to re-enter your height and age every time you visit. This ensures that your health journey remains completely anonymous and secure.</p>
+      <p>You never have to worry about a catastrophic data breach exposing your weight loss goals or personal health metrics, because we simply do not possess that data in the first place. You are the sole owner of your information. For more detailed information about our data practices, please review our comprehensive <a href="/privacy-policy/">Privacy Policy</a>.</p>
     </section>
 
     <section>
       <h2>Who We Are & How We Work</h2>
-      <p>Calorie Calculator Free is maintained by a dedicated team of software engineers, data analysts, and fitness enthusiasts who are passionate about democratizing health information. We spend hundreds of hours researching clinical papers, designing intuitive user interfaces, and ensuring cross-platform compatibility so that anyone, on any device, can access professional-grade tools.</p>
-      <p>While we consult with nutritional experts to ensure mathematical accuracy, we always remind our users that our tools provide informational baselines, not medical diagnoses. Predictive metabolic equations are excellent starting points, but human biology is highly dynamic and subject to thousands of variables. We encourage you to use our numbers as a baseline, track your real-world results over a span of 2-4 weeks, and adjust accordingly. We firmly believe in working alongside your healthcare provider. For more details on how we review our content, see our <a href="/editorial-policy/">Editorial Policy</a>.</p>
+      <p>Calorie Calculator Free is maintained by a small, fiercely independent team of software engineers, data analysts, writers, and fitness enthusiasts. We are not backed by venture capital firms demanding explosive revenue growth, nor are we owned by a massive health conglomerate trying to cross-sell you fitness products. We are a passionate collective dedicated to democratizing health information.</p>
+      <p>We spend hundreds of hours diving deep into clinical papers, designing intuitive and accessible user interfaces, and ensuring cross-platform compatibility. Whether you are accessing our site from a high-end desktop computer or a five-year-old smartphone on a slow 3G connection, our site is designed to load instantly and work flawlessly.</p>
+      <p>While we frequently consult with certified nutritional experts and dietitians to ensure the mathematical accuracy of our tools, we want to be very clear: our tools provide informational baselines, not medical diagnoses. Predictive metabolic equations are excellent starting points—the absolute best tools science has given us—but human biology is profoundly complex, highly dynamic, and subject to thousands of variables ranging from genetics to daily stress levels.</p>
+      <p>We encourage you to use our numbers as an educated baseline. Try the recommended caloric intake, track your real-world results (such as scale weight, mirror reflections, and energy levels) over a span of two to four weeks, and then adjust your intake accordingly based on how your unique body responds. We also firmly believe in the value of professional medical guidance, and we always recommend working alongside your primary care physician or a registered dietitian before making drastic changes to your diet. For more details on how we maintain our standards, see our <a href="/editorial-policy/">Editorial Policy</a>.</p>
+    </section>
+    
+    <section>
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p>We receive a lot of great questions from our community. Below, we've compiled detailed answers to some of the most common inquiries we get regarding our philosophy, our tools, and how to best use the data we provide.</p>
+      
+      <div class="space-y-4 mt-6">
+        <div>
+          <h3 class="text-xl font-bold">How can this service possibly be 100% free? What’s the catch?</h3>
+          <p>There is no catch. We operate on a lean infrastructure model. Because we don't store user data or run massive backend server databases, our hosting costs are incredibly low. We cover our modest operational expenses through unobtrusive, ethical advertising and the occasional community donation. You will never encounter a paywall, a premium tier, or a hidden fee on this site.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold">Why do different calculators give me slightly different numbers?</h3>
+          <p>If you've noticed that the Mifflin-St Jeor equation gives you a different baseline than the Harris-Benedict formula, that is completely normal. These formulas were developed decades apart using different population samples. Mifflin-St Jeor tends to be more accurate for modern, less active populations, while Harris-Benedict might slightly overestimate needs. The Katch-McArdle formula will differ again because it uses your specific body fat percentage. None of them are "wrong"; they are just different scientific models estimating the same biological process. Pick one, stick with it for a few weeks, and adjust based on real-world results.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold">What is the difference between BMR and TDEE?</h3>
+          <p>This is one of the most important distinctions in nutrition! Your Basal Metabolic Rate (BMR) is the number of calories your body burns at absolute rest—just to keep your heart beating, your lungs breathing, and your brain functioning if you stayed in bed all day. Your Total Daily Energy Expenditure (TDEE) takes your BMR and multiplies it by an activity factor to account for your daily movement, exercise, and the energy required to digest your food. You should base your diet on your TDEE, not your BMR. Eating below your BMR is generally not recommended without medical supervision.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold">My calculated calories seem way too high/low. What should I do?</h3>
+          <p>Calculators provide an average based on population data. If you have an exceptionally fast metabolism, a history of prolonged chronic dieting, or a medical condition like hypothyroidism, your actual energy expenditure might deviate from the formula. Do not panic. Use the calculator's number as a two-week experiment. If your goal is weight loss and you aren't losing weight after two weeks at the calculated deficit, simply reduce your intake by another 100-200 calories and observe the next two weeks.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold">Do you have an app I can download?</h3>
+          <p>Currently, we are focusing all of our energy on making our web platform the absolute best it can be. Because our website is designed as a Progressive Web App (PWA), you can easily "Add to Home Screen" on both iOS and Android devices. This gives you an app-like experience—full screen, fast loading, and offline capabilities—without taking up precious storage space on your phone or requiring constant updates through an app store.</p>
+        </div>
+      </div>
     </section>
 
     <section>
       <h2>The Future of Calorie Calculator Free</h2>
-      <p>Our work is never truly finished. We are constantly expanding our offerings. Recently, we launched our massive <a href="/foods/">Programmatic Food Database</a>, containing highly accurate macronutrient profiles for hundreds of popular foods. We are also building out robust calculators for specialized athletic pursuits, such as our running and swimming energy expenditure tools.</p>
-      <p>We are constantly improving our algorithms and adding new features based directly on user feedback. If you have suggestions, questions, or just want to share your success story, we would love to hear from you. Your input directly shapes our development roadmap. Please visit our <a href="/contact/">Contact Page</a> to reach out to our team.</p>
+      <p>While we are incredibly proud of what we've built, our work is never truly finished. We are continually dreaming up new ways to provide value to our users and expand our offerings without ever compromising our core values of speed, privacy, and free access.</p>
+      <p>Recently, we launched our massive <a href="/foods/">Programmatic Food Database</a>, containing highly accurate, thoroughly vetted macronutrient profiles for hundreds of popular whole foods and ingredients. This allows our users not just to calculate their goals, but to actually begin planning how to meet them. We are also actively developing robust, specialized calculators for specific athletic pursuits, including cycling, swimming, and running energy expenditure tools that take into account heart rate and elevation.</p>
+      <p>More importantly, we are constantly improving our algorithms and adding new features based directly on user feedback. The evolution of this site is entirely driven by the community that uses it. If you have feature suggestions, encounter a bug, have questions about the science, or simply want to share a success story about how our tools helped you reach your health goals, we would absolutely love to hear from you. Your input directly shapes our development roadmap and gives us the motivation to keep building.</p>
+      <p>Thank you for trusting us with a small part of your health journey. Please feel free to visit our <a href="/contact/">Contact Page</a> to reach out to our team at any time. Here is to your health, your autonomy, and a future of free, transparent nutritional science!</p>
     </section>
   </div>
 </ContentLayout>

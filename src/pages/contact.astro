@@ -13,49 +13,115 @@ import { inputCls } from "../lib/ui";
 >
   <div class="prose max-w-none text-brand-dark/80 dark:text-white/80 space-y-6">
     <section>
-      <p>At <strong>Calorie Calculator Free</strong>, we highly value the feedback and questions of our user community. Whether you have discovered a bug in one of our tools, have a suggestion for a new calculator, or simply need clarification on how a specific equation works, our team is ready to assist you. Our goal is to provide the most accurate, user-friendly, and scientifically backed nutritional tools available on the web.</p>
-      <p>We strive to respond to all legitimate inquiries within 24-48 business hours. Please direct your message to the appropriate department below to ensure the fastest possible response.</p>
+      <p>At <strong>Calorie Calculator Free</strong>, we don't just see numbers on a screen—we see real people working hard to achieve their health, fitness, and wellness goals. Whether you’re an elite athlete dialing in your macronutrients for an upcoming competition, a busy parent trying to find a sustainable way to manage your daily energy levels, or someone who is just beginning their fitness journey and feeling overwhelmed by all the conflicting nutrition advice out there, we want you to know that we are cheering you on. We built this platform because we believe that access to accurate, science-backed nutritional data should be free, intuitive, and available to absolutely everyone.</p>
+
+      <p>But we also know that technology isn't always perfect, and sometimes you just need to talk to a real human being. That’s why we highly value the feedback, questions, and stories of our user community. Whether you have discovered a bug in one of our calculators, have a brilliant suggestion for a new feature, or simply need a little bit of clarification on how a specific metabolic equation (like the Mifflin-St Jeor or Harris-Benedict formula) works, our team is ready and eager to assist you.</p>
+
+      <p>We aren't a faceless corporation. We are a small, passionate group of web developers, fitness enthusiasts, and data nerds who care deeply about your user experience. When you send us an email or submit a form, your message doesn’t go into an automated black hole or get bounced around by robots. It goes directly to our team, and we read every single message. Your journey matters to us, and we are committed to providing the support you need to succeed.</p>
+    </section>
+
+    <section>
+      <h2>Our Customer Service Philosophy</h2>
+      <p>In a world where it feels increasingly difficult to get a real person on the line, we want to do things differently. Our customer service philosophy is rooted in three core principles: <strong>empathy, transparency, and continuous improvement.</strong></p>
+
+      <h3>1. Empathy First</h3>
+      <p>We understand that managing your diet and health can be deeply personal, sometimes confusing, and occasionally frustrating. We remember what it was like to calculate our own macros for the very first time—staring at a spreadsheet, trying to figure out the difference between basal metabolic rate and total daily energy expenditure, and feeling completely lost. If one of our tools isn’t working the way you expect it to, or if you’re confused about the results you’re seeing, we know that can add unnecessary stress to your day. When you reach out to us, we will always treat your inquiry with the respect and understanding it deserves. We listen to your concerns not just as users, but as fellow humans who have also struggled with navigating the complexities of nutrition.</p>
+
+      <h3>2. Radical Transparency</h3>
+      <p>We believe in being incredibly upfront about what our calculators can and cannot do. If there’s a bug we are working on, we will tell you. If a feature you want is going to take a few months to build, we won't string you along—we’ll give you a realistic timeline. We also want to be fully transparent about the fact that our tools provide estimates based on mathematical formulas, not medical diagnoses. We will never pretend to be your doctor, but we <em>will</em> promise to give you the most accurate mathematical baseline possible using industry-standard science.</p>
+
+      <h3>3. Continuous Improvement Driven by You</h3>
+      <p>Some of our best features have come directly from user suggestions. Did you know that our custom macro split option was added because a user emailed us asking for a way to track their specific ketogenic diet parameters? Another user suggested adding more detailed activity level descriptions because they weren't sure if their warehouse job counted as "moderately active" or "very active." Your feedback is the engine that drives our development. We don't just tolerate suggestions; we actively rely on them to make Calorie Calculator Free better for the millions of people who use it every year.</p>
+    </section>
+
+    <section>
+      <h2>Before You Contact Us: Troubleshooting & FAQs</h2>
+      <p>We know your time is valuable. To save you the hassle of sending an email and waiting for a response, we’ve compiled a comprehensive list of the most common questions and troubleshooting steps. Taking a quick look through this section might give you the exact answer you need right now!</p>
+
+      <h3>1. The Calculator Isn’t Loading or the Button Isn't Clicking</h3>
+      <p>This is the most common technical issue we encounter, and 99% of the time, it can be fixed in a matter of seconds. Because our calculators run entirely in your web browser (which keeps your data private and secure), they rely on JavaScript.</p>
+      <ul>
+        <li><strong>Refresh the Page:</strong> A simple page refresh solves the majority of temporary loading glitches.</li>
+        <li><strong>Clear Your Cache:</strong> Sometimes your browser holds onto an old, outdated version of our site. Clearing your cache and cookies forces your browser to load the freshest version.</li>
+        <li><strong>Check Your Browser Extensions:</strong> Ad blockers, privacy extensions (like Ghostery or Privacy Badger), and strict tracking protections can sometimes accidentally block the scripts that make our calculators function. Try temporarily disabling these extensions or whitelisting our site to see if that resolves the issue.</li>
+        <li><strong>Update Your Browser:</strong> Ensure you are using the latest version of Chrome, Safari, Firefox, or Edge. Older browsers may not support modern web features.</li>
+      </ul>
+
+      <h3>2. My Calorie Results Seem Too High or Too Low</h3>
+      <p>It can be surprising to see the numbers our calculator spits out, especially if you have been conditioned by generalized advice like "everyone needs 2,000 calories a day." Remember that our calculator takes into account your specific age, gender, height, weight, and activity level to give you a personalized estimate.</p>
+      <ul>
+        <li><strong>Double-Check Your Activity Level:</strong> The most common reason for unexpected results is overestimating or underestimating your activity level. Be rigorously honest with yourself. If you work a desk job but go to the gym for 45 minutes a day, you are likely "Lightly Active" or "Moderately Active," not "Very Active." Overestimating activity can lead to eating too many calories.</li>
+        <li><strong>Check Your Metric/Imperial Toggles:</strong> Make sure you didn't accidentally enter your weight in kilograms when you meant pounds, or your height in centimeters instead of inches! This happens more often than you might think.</li>
+      </ul>
+
+      <h3>3. How Are These Numbers Calculated?</h3>
+      <p>We use industry-standard, scientifically validated formulas. Primarily, we utilize the Mifflin-St Jeor equation, which the American Dietetic Association considers the most reliable formula for estimating Basal Metabolic Rate (BMR) for the general population. We then apply a multiplier based on the Harris-Benedict activity principles to determine your Total Daily Energy Expenditure (TDEE). We take these numbers seriously because we know you base your meal planning around them.</p>
+
+      <h3>4. Can I Save My Results?</h3>
+      <p>Currently, to protect your privacy, we do not store any of your data on our servers. All calculations happen instantly and locally on your device. If you want to save your results, we highly recommend taking a screenshot, writing them down in your favorite notes app, or simply bookmarking the page and recalculating as your weight changes. We are exploring secure, privacy-first ways to allow users to save profiles in the future, so stay tuned!</p>
+
+      <h3>5. How Often Should I Recalculate?</h3>
+      <p>Your caloric needs are dynamic, not static. As you lose weight, your body requires fewer calories to sustain itself. Conversely, if you are bulking and gaining muscle, your metabolism will increase. We recommend coming back to recalculate your numbers every time you gain or lose 5 to 10 pounds, or if you significantly change your daily activity level (like starting a new intensive training block or switching from a physical job to a desk job).</p>
     </section>
 
     <section>
       <h2>General Support & Feedback</h2>
-      <p>If you have general questions about how to use the <a href="/">Calorie Calculator</a>, need help interpreting your results, or want to suggest a new feature (like a specific macro breakdown or activity level), please email our support team.</p>
-      <p>Because our calculators run privately in your browser, we cannot see your results. When emailing for support, please include any context or details regarding the numbers you entered so we can adequately assist you.</p>
+      <p>If you’ve read through the troubleshooting section and still have general questions about how to use the Calorie Calculator, need help interpreting your specific results, or want to suggest a brilliant new feature, please don't hesitate to email our support team. We love hearing how our tools have helped you hit a new personal best in the gym, fit into your favorite pair of jeans, or just feel more energetic throughout the day.</p>
+      <p><strong>Important Note for Support Requests:</strong> Because our calculators run privately in your browser, we cannot see your results on our end. When emailing for support, please include any context or details regarding the exact numbers you entered (age, weight, height, activity level) so we can replicate the issue and adequately assist you.</p>
       <p><strong>Email:</strong> <a href="mailto:calgroupofficial@gmail.com">calgroupofficial@gmail.com</a></p>
       <p><strong>Alternate Email:</strong> <a href="mailto:topg8086@gmail.com">topg8086@gmail.com</a></p>
+      <p>We strive to respond to all legitimate inquiries within 24-48 business hours. Please be patient if you email us over the weekend, as our small team takes time off to recharge, spend time with family, and hit the gym ourselves!</p>
     </section>
 
     <section>
       <h2>Technical Issues & Bug Reports</h2>
-      <p>While we rigorously test our platform across all devices, occasional technical issues may arise. If a calculator fails to load, produces an error, or if you spot a discrepancy in the mathematical output, please let our engineering team know. When reporting a bug, please include your browser (e.g., Chrome, Safari) and device type (Mobile/Desktop).</p>
+      <p>While we rigorously test our platform across dozens of devices and browsers to ensure a seamless experience, the internet is a complex ecosystem, and occasional technical issues may arise. If a calculator completely fails to load, consistently produces an error message, or if you spot a genuine discrepancy in the mathematical output, please let our engineering team know immediately.</p>
+      <p>When reporting a bug, you can help us fix it much faster by including the following information in your message:</p>
+      <ul>
+        <li>The specific calculator or page you were using.</li>
+        <li>The device type you are on (e.g., iPhone 13 Pro, Dell XPS Laptop).</li>
+        <li>The operating system (e.g., iOS 16, Windows 11, macOS).</li>
+        <li>The browser you are using (e.g., Chrome, Safari, Firefox).</li>
+        <li>A screenshot of the issue, if possible.</li>
+      </ul>
+      <p>Every bug report is a gift that helps us improve the site for everyone else, and we are incredibly grateful for users who take the time to let us know when something is broken. We will investigate the issue and roll out a fix as soon as humanly possible.</p>
     </section>
 
     <section>
       <h2>Press, Media, & Partnerships</h2>
-      <p>For press inquiries, interview requests, or partnership opportunities, we welcome communications from journalists, health bloggers, and industry professionals. We are happy to provide expert quotes regarding digital health tools, metabolic math, and fitness technology.</p>
+      <p>The intersection of digital technology, health, and metabolic science is an exciting and rapidly evolving space. For press inquiries, interview requests, or partnership opportunities, we warmly welcome communications from journalists, health bloggers, registered dietitians, and industry professionals.</p>
+      <p>Our team members are happy to provide expert quotes, background information, or guest content regarding digital health tools, metabolic math, and fitness technology. If you are a developer or a company building a wellness app and are interested in licensing our calculation engines or API, please reach out with the subject line "Partnership Inquiry." We love collaborating with others who share our mission of making health data accessible.</p>
+    </section>
+
+    <section>
+      <h2>A Crucial Reminder: Our Medical Disclaimer</h2>
+      <p>We want to be incredibly clear: our support team consists of talented software engineers, data analysts, and customer service representatives. We are <strong>not</strong> licensed medical professionals, doctors, or registered dietitians.</p>
+      <p>We cannot, under any circumstances, provide personalized medical advice, diagnose health conditions, evaluate your bloodwork, or prescribe specific diets via email. Our calculators provide mathematical estimates based on broad population averages. They are excellent starting points and educational tools for a health journey, but they cannot replace the nuanced, individualized care provided by a medical professional.</p>
+      <p>If you have specific health concerns, are managing a condition like diabetes, thyroid issues, or PCOS, are pregnant or nursing, or are recovering from an eating disorder, please consult a certified dietitian or your primary care physician before making any significant changes to your diet or exercise routine. Please read our full <a href="/disclaimer/">Medical Disclaimer</a> for more details before reaching out with health-specific questions.</p>
     </section>
 
     <section>
       <h2>Mailing Address</h2>
-      <p>If you need to reach us via traditional mail for legal or formal administrative purposes, you may use our corporate mailing address. Please note that email or the contact form below is the significantly faster method of communication.</p>
-      <address class="not-italic bg-canvas-soft p-4 rounded-xl border border-hairline mt-4">
+      <p>We live in a digital world, and email is undoubtedly the fastest, most efficient way to reach us. However, if you need to reach us via traditional mail for legal matters, formal administrative purposes, or simply to send us a thoughtful handwritten letter (which always brightens our day!), you may use our corporate mailing address below.</p>
+      <address class="not-italic bg-canvas-soft p-6 rounded-xl border border-hairline mt-4 shadow-sm">
         <strong>Calorie Calculator Free HQ</strong><br>
         123 Nutrition Way, Suite 400<br>
         San Francisco, CA 94107<br>
         United States
       </address>
+      <p><em>(Please note: We do not process standard customer support requests or bug reports via physical mail. For those types of inquiries, please use email or the contact form below for a much faster resolution.)</em></p>
     </section>
-
+    
     <section>
-      <h2>Important Medical Disclaimer Reminder</h2>
-      <p>Please note that our support team consists of software engineers and customer service representatives, not licensed medical professionals. We cannot and will not provide personalized medical advice, diagnose health conditions, or prescribe specific diets via email. If you have specific health concerns, please consult a certified dietitian or your primary care physician. Read our full <a href="/disclaimer/">Medical Disclaimer</a> for more details.</p>
+      <p>We know you have a lot of choices when it comes to online fitness tools and calculators, and we are deeply honored that you have chosen to use Calorie Calculator Free. Thank you for being part of our incredible community, for trusting us with your health calculations, and for helping us make the internet a healthier, more informed place.</p>
+      <p>Keep pushing forward, stay consistent, and remember that we are always here to help you hit your goals!</p>
     </section>
   </div>
 
   <hr class="my-10" />
   
   <h2>Send Us a Message</h2>
-  <p>Use the secure form below to send a message directly to our inbox.</p>
+  <p>Use the secure form below to send a message directly to our inbox. We look forward to hearing from you!</p>
 
   <!-- Success message (shown after a successful submission) -->
   <div
