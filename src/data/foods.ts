@@ -233,5 +233,11 @@ export const foods: FoodData[] = [
   { name: "Gelatin", slug: "gelatin", category: "Sweets", calories: 62, protein: 1.2, carbs: 14, fats: 0, description: "A translucent, fruit-flavored dessert offering low calories and zero fats." },
   { name: "Graham Crackers", slug: "graham-crackers", category: "Snacks", calories: 428, protein: 7.1, carbs: 74, fats: 11, description: "Sweetened whole wheat crackers commonly used as a base for pies or s'mores." },
   { name: "Marshmallow", slug: "marshmallow", category: "Sweets", calories: 318, protein: 1.8, carbs: 81, fats: 0.2, description: "A spongy confection made of sugar, water, and gelatin, whipped to a solid consistency." },
-  { name: "Protein Powder (Whey)", slug: "whey-protein", category: "Supplements", calories: 352, protein: 78, carbs: 5, fats: 1.5, description: "The most widely consumed fitness supplement, delivering massive, bioavailable protein." }
+  { name: "Protein Powder (Whey)", slug: "whey-protein", category: "Supplements", calories: 352, protein: 78, carbs: 5, fats: 1.5, description: "The most widely consumed fitness supplement, delivering massive, bioavailable protein." },
+  { name: "Cooked Chicken Breast", slug: "cooked-chicken-breast", category: "Meat", calories: 165, protein: 31, carbs: 0, fats: 3.6, description: "Chicken breast cooked without added fats, an extremely lean source of high-quality protein." },
+  { name: "Cooked White Rice", slug: "cooked-white-rice", category: "Grains", calories: 130, protein: 2.7, carbs: 28, fats: 0.3, description: "A staple cooked grain that provides quick-digesting carbohydrates for energy." },
+  { name: "Paneer", slug: "paneer", category: "Dairy", calories: 265, protein: 14, carbs: 3.4, fats: 21, description: "A fresh, non-melting cheese common in South Asian cuisine, rich in protein and fats." },
+  { name: "Boiled Eggs", slug: "boiled-eggs", category: "Dairy/Protein", calories: 155, protein: 13, carbs: 1.1, fats: 11, description: "Hard-boiled eggs, offering a highly convenient and nutritious source of protein and healthy fats." },
+  { name: "Boiled Potatoes", slug: "boiled-potatoes", category: "Vegetables", calories: 87, protein: 1.9, carbs: 20, fats: 0.1, description: "Cooked potatoes, widely recognized as one of the most satiating carbohydrate sources." },
+  { name: "Cooked Lentils", slug: "cooked-lentils", category: "Legumes", calories: 116, protein: 9, carbs: 20, fats: 0.4, description: "A plant-based protein staple (dal), packed with slow-digesting carbs and dietary fiber." }
 ];
