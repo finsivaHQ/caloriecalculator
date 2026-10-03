@@ -1,0 +1,112 @@
+import json
+
+with open("d:\\TOOLS WEB TOOLS\\kiro calorie\\src\\pages\\disclaimer.astro", "r", encoding="utf-8") as f:
+    original = f.read()
+
+import re
+prefix = original.split("<div class=")[0]
+suffix = "\n</ContentLayout>\n"
+
+expanded_content = """<div class="prose max-w-none text-brand-dark/80 dark:text-white/80 space-y-8">
+    
+    <section class="bg-brand/10 p-8 rounded-2xl border border-brand/20 my-8 shadow-sm">
+      <h2 class="text-3xl text-brand-dark dark:text-brand-light mt-0 mb-4 font-bold tracking-tight">First Things First: Not Medical Advice</h2>
+      <p class="text-lg mb-0 text-brand-dark/80 dark:text-white/80 font-medium leading-relaxed">The information provided on Calorie Calculator Free, including all mathematical outputs from our calculators, articles, and guides, is intended for general educational and informational purposes only. It is <strong>NOT</strong> a substitute for professional medical advice, diagnosis, or treatment. We are data nerds, not doctors. Please talk to a professional before changing your diet.</p>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="text-3xl font-bold border-b border-brand/10 pb-2">1. Our Philosophy: Numbers Tell a Story, But Not the Whole Story</h2>
+      <p class="leading-relaxed">When we sat down to build Calorie Calculator Free, our team shared a single unifying vision: we wanted to create the most accurate, transparent, and user-friendly suite of metabolic calculators on the internet. But more importantly, we wanted to build a platform rooted in empathy and human connection. We've all been there—staring at a screen, typing in our age, height, and weight, hoping a formula will suddenly give us the magic answer to our health and fitness struggles.</p>
+      <p class="leading-relaxed">But here is the absolute truth, spoken from one human being to another: a mathematical equation cannot capture the entirety of who you are. The calculators on this website—such as the BMR, TDEE, and Macro calculators—utilize widely accepted, peer-reviewed clinical formulas like the Mifflin-St Jeor, Harris-Benedict, and Katch-McArdle equations. These are phenomenal tools for establishing a baseline. They represent decades of metabolic research. However, it is critical to understand that these are <strong>population-based statistical averages</strong>.</p>
+      <p class="leading-relaxed">Imagine walking into a clothing store where one size supposedly fits an entire population. It might fit perfectly on a few people, decently on many, and poorly on the rest. Predictive equations work similarly. Your actual metabolic rate can deviate significantly from these estimates due to a myriad of deeply personal, physiological, and psychological factors.</p>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="text-3xl font-bold border-b border-brand/10 pb-2">2. The Beautiful Complexity of Human Biology</h2>
+      <p class="leading-relaxed">A calculator only knows the data you feed it. It doesn't know what it feels like to live in your body. It cannot account for the vast, intricate complexities of human biology that make you uniquely you. Let’s dive into some of the primary reasons why your metabolic reality might differ from a spreadsheet’s prediction:</p>
+      <ul class="list-disc pl-6 space-y-3">
+        <li><strong>Genetics and Epigenetics:</strong> We all inherit a unique metabolic blueprint from our ancestors. Some of us are naturally more efficient at storing energy, a trait that was incredibly useful during famines but less helpful in the modern environment. Your genetic predispositions can alter how your body processes and partitions nutrients.</li>
+        <li><strong>Hormonal Milieu:</strong> Hormones are the messengers that dictate how your body uses energy. Conditions such as hypothyroidism (an underactive thyroid), Polycystic Ovary Syndrome (PCOS), or varying degrees of insulin resistance can drastically alter your basal metabolic rate (BMR). If your thyroid hormones are low, your metabolic engine is essentially running in a lower gear.</li>
+        <li><strong>Metabolic Adaptation (Adaptive Thermogenesis):</strong> Have you ever dieted aggressively, only to find that losing weight becomes increasingly difficult? This is metabolic adaptation in action. Previous cycles of severe calorie restriction can temporarily lower your basal metabolic rate as your body attempts to conserve energy. The formulas on this site assume a "healthy," unadapted metabolism and cannot account for this physiological defense mechanism.</li>
+        <li><strong>Medications and Therapeutics:</strong> Countless prescription drugs impact appetite, fluid retention, gastric emptying, or overall energy expenditure. Beta-blockers, certain antidepressants, corticosteroids, and antipsychotic medications can all profoundly influence your metabolic baseline.</li>
+        <li><strong>NEAT Variations:</strong> Non-Exercise Activity Thermogenesis (NEAT) encompasses the energy you burn doing everything that isn't sleeping, eating, or sports-like exercise. This includes walking to work, typing, gardening, and even fidgeting. NEAT can vary wildly—by hundreds, sometimes over a thousand calories—between two individuals of the same size and weight, fundamentally skewing TDEE calculations.</li>
+      </ul>
+      <p class="leading-relaxed font-semibold">Therefore, we urge you to treat the numbers provided by our calculators strictly as a <strong>starting baseline</strong> for an adult individual, not a rigid, immutable medical prescription.</p>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="text-3xl font-bold border-b border-brand/10 pb-2">3. The Imperative of Professional Consultation</h2>
+      <p class="leading-relaxed">Never disregard professional medical advice or delay in seeking it because of something you have read, calculated, or estimated on this website. Our tools are meant to empower your conversations with healthcare professionals, not replace them.</p>
+      <p class="leading-relaxed">You should always, without exception, consult with your primary care physician, a registered dietitian (RD), an endocrinologist, or another qualified healthcare provider before:</p>
+      <ul class="list-disc pl-6 space-y-3">
+        <li>Starting any new diet, nutritional protocol, or severe calorie restriction.</li>
+        <li>Beginning a new exercise, resistance training, or cardiovascular conditioning program.</li>
+        <li>Attempting to manipulate your macronutrients (fats, carbohydrates, proteins) to treat, manage, or mitigate a chronic disease such as type 2 diabetes, hypertension, cardiovascular disease, or kidney disease.</li>
+        <li>Making drastic lifestyle changes following a recent surgery, illness, or medical diagnosis.</li>
+      </ul>
+      <p class="leading-relaxed bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-200 dark:border-red-800"><strong>Emergency Warning:</strong> If you think you may have a medical emergency, call your doctor, go to the emergency department, or call emergency services (like 911 or 112) immediately. Do not rely on electronic communications or web-based content for urgent medical needs.</p>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="text-3xl font-bold border-b border-brand/10 pb-2">4. Special Populations: When Formulas Fail</h2>
+      <p class="leading-relaxed">The clinical formulas used on Calorie Calculator Free were developed by studying relatively healthy, standard adult populations. They are notoriously poor predictors for specific demographics and can actually be <strong>highly inaccurate and potentially dangerous</strong> if applied inappropriately.</p>
+      <p class="leading-relaxed">Please exercise extreme caution or completely avoid using our calculators if you fall into any of the following categories:</p>
+      <ul class="list-disc pl-6 space-y-4">
+        <li>
+          <strong>Children, Adolescents, and Teenagers:</strong> Growing bodies have vastly different, unpredictable, and highly dynamic caloric needs to support physical development, brain growth, and hormonal maturation. Applying adult formulas to children is fundamentally flawed and irresponsible. Pediatric nutrition should always be managed by pediatricians and specialized dietitians.
+        </li>
+        <li>
+          <strong>Pregnant or Nursing Women:</strong> Creating a new human life is one of the most metabolically demanding processes imaginable. Caloric and specific micronutrient requirements increase significantly during pregnancy and lactation. These needs cannot be accurately calculated by a generic TDEE formula and must be meticulously managed by an obstetrician and maternal health provider.
+        </li>
+        <li>
+          <strong>Individuals with a History of Eating Disorders:</strong> We want to speak directly to anyone who struggles, or has struggled, with their relationship with food. Calorie counting, macro tracking, and focusing on numerical goals can be deeply triggering. It can exacerbate disordered eating behaviors associated with Anorexia Nervosa, Bulimia Nervosa, Binge Eating Disorder, and Orthorexia. If you are in recovery or struggling, please prioritize your mental health over metabolic mathematics. Seek help from a specialized mental health professional, and please step away from our calculators. You are more than your caloric intake.
+        </li>
+        <li>
+          <strong>Athletes with Extreme Body Composition:</strong> Professional bodybuilders with very high muscle mass or elite endurance athletes with exceptionally low body fat percentages often fall outside the bell curve. While the Katch-McArdle formula (which uses body fat percentage) is better for these groups, professional metabolic testing (like indirect calorimetry) is recommended for extreme precision.
+        </li>
+      </ul>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="text-3xl font-bold border-b border-brand/10 pb-2">5. Understanding the "Assumption of Risk" (Without the Legalese)</h2>
+      <p class="leading-relaxed">We want to be incredibly transparent about responsibility. When lawyers draft these disclaimers, they use terms like "Assumption of Risk" and "Limitation of Liability." While we have those official terms too, we want to explain what they mean in plain English.</p>
+      <p class="leading-relaxed">By using Calorie Calculator Free, you are taking personal responsibility for how you use the data we provide. We guarantee that the math is correct according to the clinical formulas we've programmed. We do not, and cannot, guarantee that the resulting numbers will result in your desired weight loss, weight gain, or maintenance. We also cannot be held liable if you undertake an aggressive diet based on these numbers and experience adverse health effects.</p>
+      <p class="leading-relaxed">Reliance on any information provided by Calorie Calculator Free, our team of developers and writers, or others appearing on the site at our invitation is solely at your own risk. By navigating this site, engaging with our tools, and reading our content, you acknowledge that Calorie Calculator Free and its operators are not liable for any health complications, physical injuries, psychological distress, or damages resulting from the use of our platform.</p>
+      <p class="leading-relaxed">We provide the compass; you and your doctor must chart the course.</p>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="text-3xl font-bold border-b border-brand/10 pb-2">6. Frequently Asked Questions Regarding Medical Use</h2>
+      
+      <div class="space-y-4">
+        <h3 class="text-xl font-semibold">"But my doctor told me to calculate my TDEE. Can I use your site?"</h3>
+        <p class="leading-relaxed">Yes! If a healthcare professional has explicitly instructed you to find your Total Daily Energy Expenditure or calculate your macros as part of a supervised plan, our calculators are excellent tools for that purpose. Just be sure to share the results with them so they can adjust the numbers based on your clinical profile.</p>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="text-xl font-semibold">"Why do different sites give me different numbers?"</h3>
+        <p class="leading-relaxed">Different websites may use different baseline formulas (e.g., one might default to Harris-Benedict while we default to Mifflin-St Jeor). Furthermore, the multipliers used for activity levels (the "activity multiplier") can vary slightly between developers. This further highlights why these numbers are estimates, not absolute medical facts.</p>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="text-xl font-semibold">"I have diabetes. Will tracking my macros here cure it?"</h3>
+        <p class="leading-relaxed">No. We make no claims, explicit or implied, that tracking macronutrients or using our calculators will treat, cure, or prevent any disease, including diabetes. Managing chronic conditions requires personalized medical intervention, medication management, and clinical supervision.</p>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="text-xl font-semibold">"What if I feel dizzy, weak, or unwell while eating the calories suggested?"</h3>
+        <p class="leading-relaxed">Stop immediately. Do not stubbornly adhere to a calculator's output if your body is signaling distress. Dizziness, profound weakness, and feeling unwell are signs that your intake may be dangerously low or unbalanced. Consult a physician immediately.</p>
+      </div>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="text-3xl font-bold border-b border-brand/10 pb-2">7. Our Commitment to Your Well-Being</h2>
+      <p class="leading-relaxed">At Calorie Calculator Free, our ultimate goal is to foster a healthier, more informed relationship with nutrition and fitness. We believe that knowledge is power, but that power must be wielded responsibly. We promise to keep our calculators free, to continually refine our algorithms based on the latest scientific consensus, and to always remind you that you are more important than any mathematical equation.</p>
+      <p class="leading-relaxed">We update our content regularly, but the fields of nutrition and medicine are constantly evolving. Therefore, we cannot guarantee that all information on the site is entirely exhaustive or reflects the absolute most recent clinical findings.</p>
+      <p class="leading-relaxed">Thank you for trusting us to be part of your journey. Please tread carefully, listen to your body, consult the experts in your life, and use our tools as they were intended: as a helpful, educational starting point.</p>
+    </section>
+
+  </div>"""
+
+with open("d:\\TOOLS WEB TOOLS\\kiro calorie\\src\\pages\\disclaimer.astro", "w", encoding="utf-8") as f:
+    f.write(prefix + expanded_content + suffix)
