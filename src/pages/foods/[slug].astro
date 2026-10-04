@@ -131,10 +131,10 @@ const faqSchema = {
           <div>
             <div class="flex justify-between text-sm font-bold mb-2">
               <span class="text-slate-700">Protein (Muscle Building)</span>
-              <span class="text-brand">{food.protein}g</span>
+              <span class="text-protein">{food.protein}g</span>
             </div>
             <div class="w-full bg-slate-100 rounded-full h-4 overflow-hidden">
-              <div class="bg-canvas-soft h-4 rounded-full" style={`width: ${Math.min(100, (food.protein / 100) * 100)}%`}></div>
+              <div class="bg-protein h-4 rounded-full" style={`width: ${Math.min(100, (food.protein / 100) * 100)}%`}></div>
             </div>
           </div>
           
@@ -142,10 +142,10 @@ const faqSchema = {
           <div>
             <div class="flex justify-between text-sm font-bold mb-2">
               <span class="text-slate-700">Carbohydrates (Energy)</span>
-              <span class="text-emerald-600">{food.carbs}g</span>
+              <span class="text-carbs">{food.carbs}g</span>
             </div>
             <div class="w-full bg-slate-100 rounded-full h-4 overflow-hidden">
-              <div class="bg-emerald-500 h-4 rounded-full" style={`width: ${Math.min(100, (food.carbs / 100) * 100)}%`}></div>
+              <div class="bg-carbs h-4 rounded-full" style={`width: ${Math.min(100, (food.carbs / 100) * 100)}%`}></div>
             </div>
           </div>
 
@@ -153,10 +153,10 @@ const faqSchema = {
           <div>
             <div class="flex justify-between text-sm font-bold mb-2">
               <span class="text-slate-700">Dietary Fats (Hormone Health)</span>
-              <span class="text-amber-600">{food.fats}g</span>
+              <span class="text-fat">{food.fats}g</span>
             </div>
             <div class="w-full bg-slate-100 rounded-full h-4 overflow-hidden">
-              <div class="bg-amber-500 h-4 rounded-full" style={`width: ${Math.min(100, (food.fats / 100) * 100)}%`}></div>
+              <div class="bg-fat h-4 rounded-full" style={`width: ${Math.min(100, (food.fats / 100) * 100)}%`}></div>
             </div>
           </div>
         </div>

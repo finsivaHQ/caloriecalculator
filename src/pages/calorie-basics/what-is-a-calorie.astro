@@ -82,7 +82,7 @@ const faqs = [
         <!-- Proteins -->
         <div class="bg-white/80 backdrop-blur-md p-8 rounded-[2rem] shadow-lg border border-slate-100 hover:shadow-sm transition-all duration-300 group">
           <div class="flex items-center gap-4 mb-5">
-            <div class="bg-emerald-100 text-emerald-700 p-3 rounded-2xl font-black text-xl tracking-tight group-hover:scale-110 transition-transform">4 kcal/g</div>
+            <div class="bg-protein/10 text-protein p-3 rounded-2xl font-black text-xl tracking-tight group-hover:scale-110 transition-transform">4 kcal/g</div>
             <h3 class="text-2xl font-bold text-slate-900">Proteins</h3>
           </div>
           <p class="text-slate-600 mb-4 text-base leading-relaxed">
@@ -97,7 +97,7 @@ const faqs = [
         <!-- Carbohydrates -->
         <div class="bg-white/80 backdrop-blur-md p-8 rounded-[2rem] shadow-lg border border-slate-100 hover:shadow-sm transition-all duration-300 group">
           <div class="flex items-center gap-4 mb-5">
-            <div class="bg-canvas-soft border border-hairline text-brand p-3 rounded-2xl font-black text-xl tracking-tight group-hover:scale-110 transition-transform">4 kcal/g</div>
+            <div class="bg-carbs/10 text-carbs p-3 rounded-2xl font-black text-xl tracking-tight group-hover:scale-110 transition-transform">4 kcal/g</div>
             <h3 class="text-2xl font-bold text-slate-900">Carbohydrates</h3>
           </div>
           <p class="text-slate-600 mb-4 text-base leading-relaxed">
@@ -112,7 +112,7 @@ const faqs = [
         <!-- Fats -->
         <div class="bg-white/80 backdrop-blur-md p-8 rounded-[2rem] shadow-lg border border-slate-100 hover:shadow-sm transition-all duration-300 group">
           <div class="flex items-center gap-4 mb-5">
-            <div class="bg-amber-100 text-amber-700 p-3 rounded-2xl font-black text-xl tracking-tight group-hover:scale-110 transition-transform">9 kcal/g</div>
+            <div class="bg-fat/10 text-fat p-3 rounded-2xl font-black text-xl tracking-tight group-hover:scale-110 transition-transform">9 kcal/g</div>
             <h3 class="text-2xl font-bold text-slate-900">Fats (Lipids)</h3>
           </div>
           <p class="text-slate-600 mb-4 text-base leading-relaxed">
@@ -127,7 +127,7 @@ const faqs = [
         <!-- Alcohol -->
         <div class="bg-white/80 backdrop-blur-md p-8 rounded-[2rem] shadow-lg border border-slate-100 hover:shadow-sm transition-all duration-300 group">
           <div class="flex items-center gap-4 mb-5">
-            <div class="bg-canvas-soft border border-hairline text-brand p-3 rounded-2xl font-black text-xl tracking-tight group-hover:scale-110 transition-transform">7 kcal/g</div>
+            <div class="bg-canvas-soft border border-hairline text-ink p-3 rounded-2xl font-black text-xl tracking-tight group-hover:scale-110 transition-transform">7 kcal/g</div>
             <h3 class="text-2xl font-bold text-slate-900">Alcohol (Ethanol)</h3>
           </div>
           <p class="text-slate-600 mb-4 text-base leading-relaxed">
@@ -264,10 +264,10 @@ const faqs = [
         </div>
 
         <!-- Deficit -->
-        <div class="bg-white p-8 rounded-2xl border-2 border-emerald-100 shadow-lg text-center flex flex-col items-center hover:border-emerald-300 transition-colors">
-          <div class="bg-surface text-white w-20 h-20 rounded-2xl flex items-center justify-center font-black text-4xl mb-6 shadow-md shadow-emerald-200 transform rotate-3">-</div>
+        <div class="bg-white p-8 rounded-2xl border-2 border-hairline-strong shadow-lg text-center flex flex-col items-center hover:border-brand/40 transition-colors">
+          <div class="bg-surface text-white w-20 h-20 rounded-2xl flex items-center justify-center font-black text-4xl mb-6 shadow-md shadow-brand/20 transform rotate-3">-</div>
           <h3 class="text-2xl font-bold text-slate-900 mb-3">Caloric Deficit</h3>
-          <p class="text-emerald-700 mb-5 text-xs font-black uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full">Calories In < Calories Out</p>
+          <p class="text-brand mb-5 text-xs font-black uppercase tracking-widest bg-brand/10 px-3 py-1 rounded-full">Calories In < Calories Out</p>
           <p class="text-slate-600 text-base leading-relaxed">You do not provide enough external energy through food to cover daily demands. The body is forced to mobilize and oxidize its internal reserves (stored fat) to make up the difference. <strong>Final result: Guaranteed weight loss.</strong></p>
         </div>
       </div>
@@ -290,7 +290,7 @@ const faqs = [
             </p>
           </div>
           <div>
-            <h3 class="text-2xl font-bold text-emerald-700 mb-4 border-b-2 border-emerald-100 pb-2">For Health and Body Composition</h3>
+            <h3 class="text-2xl font-bold text-ink mb-4 border-b-2 border-hairline-strong pb-2">For Health and Body Composition</h3>
             <p class="text-slate-700 leading-relaxed mb-6">
               <strong>No, calories are not at all equal.</strong> This is where the body's endocrine (hormonal) response comes into play. The source of calories dictates whether you feel famished or satiated, whether your body burns fat or muscle, and whether your internal inflammation goes up or down. 500 calories of wild salmon and broccoli will provoke a stable insulin response, massive satiety, and provide neuroprotective micronutrients. 500 calories of high-fructose corn syrup will cause dramatic insulin spikes, cellular resistance, acute inflammation, and an insatiable hunger rebound an hour later.
             </p>
@@ -394,14 +394,14 @@ const faqs = [
                 <span class="text-2xl">🥦</span> Cooked Broccoli
               </td>
               <td class="p-5 border-b border-slate-100">35 kcal</td>
-              <td class="p-5 border-b border-slate-100 text-emerald-600 font-black"><span class="bg-emerald-50 px-3 py-1 rounded-md">Very Low</span></td>
+              <td class="p-5 border-b border-slate-100 text-brand font-black"><span class="bg-brand/10 px-3 py-1 rounded-md">Very Low</span></td>
             </tr>
             <tr class="hover:bg-slate-50 transition-colors group">
               <td class="p-5 border-b border-slate-100 font-semibold flex items-center gap-3">
                 <span class="text-2xl">🍓</span> Fresh Strawberries
               </td>
               <td class="p-5 border-b border-slate-100">32 kcal</td>
-              <td class="p-5 border-b border-slate-100 text-emerald-600 font-black"><span class="bg-emerald-50 px-3 py-1 rounded-md">Very Low</span></td>
+              <td class="p-5 border-b border-slate-100 text-brand font-black"><span class="bg-brand/10 px-3 py-1 rounded-md">Very Low</span></td>
             </tr>
             <tr class="hover:bg-slate-50 transition-colors group">
               <td class="p-5 border-b border-slate-100 font-semibold flex items-center gap-3">
