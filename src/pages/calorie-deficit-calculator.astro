@@ -29,7 +29,7 @@ const faqs: FaqItem[] = [
   faqs={faqs}
 >
   <div class="grid gap-6 lg:grid-cols-[minmax(0,380px)_1fr]" id="calc-root">
-    <form id="calc-form" class="bg-canvas p-6 rounded-xl border border-hairline p-5 sm:p-6" novalidate>
+    <form id="calc-form" class="card p-5 sm:p-6" novalidate>
     <p role="note" class="mb-4 text-xs leading-relaxed text-mute">
       Example values are pre-filled. Enter your own details for accurate results.
     </p>
@@ -73,11 +73,11 @@ const faqs: FaqItem[] = [
     </form>
 
     <div class="space-y-5">
-      <div id="result-box" class="bg-canvas p-6 rounded-xl border border-hairline p-6 sm:p-8 text-center transition-all duration-300">
+      <div id="result-box" class="card p-6 sm:p-8 text-center transition-all duration-300">
         <p class="text-sm text-mute">Your TDEE (maintenance)</p>
         <p class="mt-1"><span id="tdee-value" class="text-display-xl text-ink tabular-nums">2,556</span> <span class="text-lg text-mute">kcal/day</span></p>
       </div>
-      <div class="bg-canvas p-6 rounded-xl border border-hairline overflow-hidden">
+      <div class="card overflow-hidden">
         <div class="border-b border-hairline px-5 py-3"><h2 class="text-sm font-semibold text-ink">Your calorie deficit targets</h2></div>
         <table class="w-full text-sm">
           <tbody id="deficit-table">
@@ -187,19 +187,19 @@ const faqs: FaqItem[] = [
 
     <h2>Tools to Pair With Your Calorie Deficit Plan</h2>
     <div class="grid gap-4 sm:grid-cols-2">
-      <div class="bg-canvas p-6 rounded-xl border border-hairline p-4">
+      <div class="card p-4">
         <h3 class="text-lg font-semibold text-ink"><a href="/tdee-calculator/">TDEE Calculator</a></h3>
         <p class="mt-1 text-sm text-body">Calculate your exact daily calorie burn to set proper deficit targets and understand your metabolism.</p>
       </div>
-      <div class="bg-canvas p-6 rounded-xl border border-hairline p-4">
+      <div class="card p-4">
         <h3 class="text-lg font-semibold text-ink"><a href="/">Calorie Calculator</a></h3>
         <p class="mt-1 text-sm text-body">Get personalized protein, carb, and fat targets to preserve lean muscle while losing body fat effectively.</p>
       </div>
-      <div class="bg-canvas p-6 rounded-xl border border-hairline p-4">
+      <div class="card p-4">
         <h3 class="text-lg font-semibold text-ink"><a href="/protein-calculator/">Protein Calculator</a></h3>
         <p class="mt-1 text-sm text-body">Ensure you are eating adequate protein to support recovery and maintain your metabolic rate during weight loss.</p>
       </div>
-      <div class="bg-canvas p-6 rounded-xl border border-hairline p-4">
+      <div class="card p-4">
         <h3 class="text-lg font-semibold text-ink">Home Workouts</h3>
         <p class="mt-1 text-sm text-body">Burn extra calories and preserve muscle mass with efficient, equipment-free bodyweight exercise routines.</p>
       </div>

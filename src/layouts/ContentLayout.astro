@@ -55,16 +55,16 @@ const showRelated = relatedTools.length > 0;
 ---
 
 <Layout title={title} description={description} canonical={path} ogType="article" jsonLd={jsonLd} lang={lang} hreflangs={hreflangs}>
-  <nav aria-label="Breadcrumb" class="bg-canvas border-b border-hairline/50">
-    <ol class="container-page flex flex-wrap items-center gap-2 py-4 text-[0.6875rem] font-medium uppercase tracking-widest text-mute">
+  <nav aria-label="Breadcrumb" class="border-b border-hairline bg-canvas-soft/40">
+    <ol class="container-page flex flex-wrap items-center gap-2 py-3 text-xs text-mute">
       {
         crumbs.map((c, i) => (
           <li class="flex items-center gap-2">
-            {i > 0 && <span aria-hidden="true" class="text-hairline-strong">/</span>}
+            {i > 0 && <span aria-hidden="true">/</span>}
             {i < crumbs.length - 1 ? (
               <a href={c.path} class="transition-colors hover:text-ink">{c.name}</a>
             ) : (
-              <span class="text-ink" aria-current="page">{c.name}</span>
+              <span class="text-body" aria-current="page">{c.name}</span>
             )}
           </li>
         ))
@@ -72,63 +72,62 @@ const showRelated = relatedTools.length > 0;
     </ol>
   </nav>
 
-  <header class="bg-canvas border-b border-hairline">
-    <div class="container-page max-w-[760px] py-12 sm:py-20 text-center">
-      {category && <p class="text-xs font-bold uppercase tracking-widest text-success mb-4">{category}</p>}
-      <h1 class="text-[2.5rem] sm:text-[3.5rem] font-bold text-ink leading-tight tracking-tight">{h1}</h1>
-      {lead && <p class="mt-6 text-xl text-body leading-relaxed max-w-2xl mx-auto">{lead}</p>}
+  <header class="relative overflow-hidden border-b border-hairline">
 
-      <div class="mt-8 flex flex-wrap justify-center gap-4 text-xs font-medium uppercase tracking-widest text-mute">
-        {updated && <span>Updated {updated}</span>}
-      </div>
+    <div class="container-page max-w-3xl py-12 sm:py-16">
+      {category && <p class="text-sm font-medium text-brand">{category}</p>}
+      <h1 class="mt-2 text-display-lg text-ink">{h1}</h1>
+      {lead && <p class="mt-4 text-lg text-body">{lead}</p>}
+
+      <div class="mt-4 flex flex-wrap gap-4 text-sm text-mute">
+         </div>
     </div>
   </header>
 
-  <div class="bg-surface py-12 sm:py-20">
-    <article class="prose-content mx-auto max-w-[760px] px-4 sm:px-6">
+  <div class="container-page py-12 sm:py-16">
+    <article class="prose-content mx-auto max-w-3xl">
       <slot />
+
+
+
     </article>
   </div>
 
   {
     faqs.length > 0 && (
-      <Section class="bg-canvas-soft border-t border-hairline py-16 sm:py-24">
-        <div class="mx-auto max-w-3xl px-4 sm:px-6">
-          <div class="mb-10 text-center">
-            <h2 class="text-2xl sm:text-3xl font-bold text-ink tracking-tight">Frequently Asked Questions</h2>
-          </div>
-          <FaqSection items={faqs} />
-        </div>
+      <Section class="border-t border-hairline">
+        <FaqSection items={faqs} />
       </Section>
     )
   }
 
   {
     showCta && (
-      <Section class="bg-brand py-20 text-center border-t border-hairline">
-        <div class="mx-auto max-w-2xl px-4">
-          <h2 class="text-3xl font-bold text-brand-fg mb-4 tracking-tight">{lang === 'es' ? 'Calcula tus números' : 'Calculate your numbers'}</h2>
-          <p class="text-brand-fg/80 text-lg mb-8 max-w-lg mx-auto">{lang === 'es' ? 'Pon esto en práctica: obtén tus objetivos personalizados de calorías y macros gratis.' : 'Put this into practice - get your personalized calorie and macro targets free.'}</p>
-          <Button href={lang === 'es' ? "/country/spain/calculadora-de-calorias/#calculator" : "/#calculator"} size="lg" variant="secondary" class="bg-surface text-brand hover:bg-canvas">
-            {lang === 'es' ? 'Abrir la calculadora' : 'Open the calculator'}
-          </Button>
+      <Section class="border-t border-hairline">
+        <div class="flex flex-col items-center justify-center rounded-xl border border-hairline bg-surface p-8 sm:p-12 shadow-sm">
+
+          <div class="relative">
+            <h2 class="text-display-sm text-ink">{lang === 'es' ? 'Calcula tus números' : 'Calculate your numbers'}</h2>
+            <p class="mx-auto mt-2 max-w-md text-body">{lang === 'es' ? 'Pon esto en práctica: obtén tus objetivos personalizados de calorías y macros gratis.' : 'Put this into practice - get your personalized calorie and macro targets free.'}</p>
+            <div class="mt-6"><Button href={lang === 'es' ? "/country/spain/calculadora-de-calorias/#calculator" : "/#calculator"} size="lg">{lang === 'es' ? 'Abrir la calculadora' : 'Open the calculator'}</Button></div>
+          </div>
         </div>
       </Section>
     )
   }
   {
     showCta && showRelated && (
-      <Section class="bg-surface py-16 sm:py-24 border-t border-hairline">
-        <div class="container-page max-w-5xl">
-          <div class="text-center mb-12 border-b border-hairline pb-4">
-            <h2 class="text-2xl sm:text-3xl font-bold text-ink tracking-tight">{lang === 'es' ? 'Explora Herramientas Populares' : 'Explore Popular Tools'}</h2>
-            <p class="text-mute mt-2">{lang === 'es' ? 'Descubre más calculadoras gratuitas para optimizar tu viaje fitness.' : 'Discover more free calculators to optimize your fitness journey.'}</p>
+      <Section class="border-t border-hairline bg-canvas-soft">
+        <div class="container-page">
+          <div class="text-center mb-8">
+            <h2 class="text-2xl font-bold text-ink">{lang === 'es' ? 'Explora Herramientas Populares' : 'Explore Popular Tools'}</h2>
+            <p class="text-body mt-2">{lang === 'es' ? 'Descubre más calculadoras gratuitas para optimizar tu viaje fitness.' : 'Discover more free calculators to optimize your fitness journey.'}</p>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {relatedTools.map(c => (
-              <a href={c.href} class="group flex flex-col rounded-2xl border border-hairline bg-canvas p-6 shadow-sm transition-all hover:border-brand/30 hover:shadow-md">
-                <h3 class="font-semibold text-lg text-ink group-hover:text-brand">{c.label}</h3>
-                <p class="text-sm text-body leading-relaxed mt-2">{c.desc}</p>
+              <a href={c.href} class="card p-5 transition-colors hover:border-hairline-strong hover:bg-canvas-soft block">
+                <h3 class="font-bold text-ink text-base">{c.label}</h3>
+                <p class="text-sm text-mute mt-1">{c.desc}</p>
               </a>
             ))}
           </div>
