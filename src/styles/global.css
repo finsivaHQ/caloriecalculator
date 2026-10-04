@@ -7,31 +7,31 @@
 /* ------------------------------------------------------------------ */
 :root {
   /* Light theme (Warm, neutral, high readability) */
-  --bg: #fdfdfc; /* Very subtle warm off-white */
-  --bg-soft: #f4f4f3; /* For secondary areas */
-  --bg-soft-2: #eae9e8;
-  --surface: #ffffff;
-  --surface-elevated: #ffffff;
+  --bg: #F7F6F1;
+  --bg-soft: #E6F7FA;
+  --bg-soft-2: #E6F7FA;
+  --surface: #FFFFFF;
+  --surface-elevated: #FFFFFF;
 
-  --ink: #18181b; /* Zinc 900 - readable, not pure black */
-  --body: #3f3f46; /* Zinc 700 - comfortable reading text */
-  --mute: #71717a; /* Zinc 500 - secondary text */
+  --ink: #17232B;
+  --body: #17232B;
+  --mute: #64727A;
 
-  --hairline: #e4e4e7; /* Zinc 200 - subtle borders */
-  --hairline-strong: #d4d4d8; /* Zinc 300 */
+  --hairline: #DCE5E8;
+  --hairline-strong: #DCE5E8;
 
   /* Brand/Accent - Calming health-appropriate blue */
-  --primary: #0284c7; /* Sky 600 */
-  --primary-hover: #0369a1; /* Sky 700 */
-  --primary-soft: #e0f2fe; /* Sky 100 */
+  --primary: #08A9D6;
+  --primary-hover: #078DB5;
+  --primary-soft: #E6F7FA;
 
   /* Status Colors */
-  --success: #16a34a; /* Green 600 */
-  --warning: #d97706; /* Amber 600 */
-  --error: #dc2626; /* Red 600 */
+  --success: #16a34a;
+  --warning: #d97706;
+  --error: #dc2626;
 
-  --selection-bg: #bae6fd;
-  --selection-fg: #0c4a6e;
+  --selection-bg: #E6F7FA;
+  --selection-fg: #075B82;
 
   --shadow-color: 240deg 5% 65%;
   --shadow-strength: 0.08;
@@ -39,31 +39,31 @@
 
 .dark {
   /* Dark theme (Intentional near-black, professional) */
-  --bg: #09090b; /* Zinc 950 */
-  --bg-soft: #18181b; /* Zinc 900 */
-  --bg-soft-2: #27272a; /* Zinc 800 */
-  --surface: #18181b;
-  --surface-elevated: #27272a;
+  --bg: #08151C;
+  --bg-soft: #0D2029;
+  --bg-soft-2: #122A34;
+  --surface: #0D2029;
+  --surface-elevated: #122A34;
 
-  --ink: #f4f4f5; /* Zinc 100 */
-  --body: #d4d4d8; /* Zinc 300 */
-  --mute: #a1a1aa; /* Zinc 400 */
+  --ink: #EDF7F9;
+  --body: #EDF7F9;
+  --mute: #A9BBC2;
 
-  --hairline: #3f3f46; /* Zinc 700 */
-  --hairline-strong: #52525b; /* Zinc 600 */
+  --hairline: #28424C;
+  --hairline-strong: #28424C;
 
   /* Brand/Accent - Adjusted for dark mode contrast */
-  --primary: #38bdf8; /* Sky 400 */
-  --primary-hover: #7dd3fc; /* Sky 300 */
-  --primary-soft: #0c4a6e; /* Sky 900 */
+  --primary: #16B8E3;
+  --primary-hover: #39C5E8;
+  --primary-soft: #123641;
 
   /* Status Colors */
   --success: #22c55e;
   --warning: #f59e0b;
   --error: #ef4444;
 
-  --selection-bg: #0369a1;
-  --selection-fg: #f0f9ff;
+  --selection-bg: #0A6E96;
+  --selection-fg: #EDF7F9;
 
   --shadow-color: 0deg 0% 0%;
   --shadow-strength: 0.3;
