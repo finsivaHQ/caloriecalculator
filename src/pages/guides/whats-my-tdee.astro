@@ -42,7 +42,7 @@ const faqSchema = {
   faqs={faqs}
 >
 
-<div class="mb-8 p-6 bg-blue-50 dark:bg-blue-900 rounded-lg shadow-sm border border-blue-100 dark:border-blue-800">
+<div class="mb-8 p-6 bg-canvas-soft dark:bg-canvas-soft rounded-lg shadow-sm border border-hairline dark:border-hairline">
     <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Expert Insight: The Psychology Behind the Frustration</h2>
     <p class="text-gray-700 dark:text-gray-200 mb-4">
         Before we dive into the technical details, let's be incredibly honest for a moment. Navigating these guidelines can cause serious compliance fatigue. Whether you're trying to figure out the exact mathematical sizing for a perfect fit or dialing in complex daily metabolic metrics, the pressure to get it "exactly right" often leads to decision paralysis. 
@@ -55,7 +55,7 @@ const faqSchema = {
     </p>
 </div>
 
-<div class="bg-blue-50/50 p-4 rounded-xl border border-blue-100 mb-8 flex items-center gap-3">
+<div class="bg-canvas-soft p-4 rounded-xl border border-hairline mb-8 flex items-center gap-3">
   <span class="text-2xl">⚕️</span>
   <p class="text-sm text-slate-600 m-0"><strong>Medical Review:</strong> This article was written and reviewed in accordance with clinical nutrition guidelines (2026). Evidence-based content.</p>
 </div>
@@ -66,10 +66,10 @@ const faqSchema = {
 
   <section class="prose-lg max-w-none mb-12 text-body leading-relaxed">
     <p class="text-xl font-light text-ink mb-8">
-      If you are relentlessly wondering <strong>"what is my TDEE?"</strong>, you are targeting the foundational cornerstone of nutritional science and body recomposition. TDEE, or <em>Total Daily Energy Expenditure</em>, encapsulates the comprehensive sum of calories your biological system oxidizes throughout an entire 24-hour cycle. It serves as the most critical metric in weight management because it fundamentally represents your <a href="/" class="text-indigo-600 hover:text-indigo-800 transition-colors">baseline maintenance calories</a>. Once you precisely quantify this figure, you can engineer a dietary protocol to systematically lose fat, hypertrophy muscle tissue, or maintain your current physique with surgical precision.
+      If you are relentlessly wondering <strong>"what is my TDEE?"</strong>, you are targeting the foundational cornerstone of nutritional science and body recomposition. TDEE, or <em>Total Daily Energy Expenditure</em>, encapsulates the comprehensive sum of calories your biological system oxidizes throughout an entire 24-hour cycle. It serves as the most critical metric in weight management because it fundamentally represents your <a href="/" class="text-brand hover:text-brand transition-colors">baseline maintenance calories</a>. Once you precisely quantify this figure, you can engineer a dietary protocol to systematically lose fat, hypertrophy muscle tissue, or maintain your current physique with surgical precision.
     </p>
 
-    <div class="my-10 rounded-xl overflow-hidden shadow-2xl border-hairline">
+    <div class="my-10 rounded-xl overflow-hidden shadow-sm border-hairline">
       <ArticleImage src="/assets/images/articles/energy-balance.svg" alt="Scientific representation of macro-nutrients and metabolic energy expenditure" />
     </div>
 
@@ -93,7 +93,7 @@ const faqSchema = {
         <li><strong>EAT (Exercise Activity Thermogenesis):</strong> Often heavily overestimated by the general populace, EAT typically comprises just 5-10% of total TDEE for non-athletes. This accounts for volitional, structured physical exertion such as weightlifting, running, or cycling.</li>
       </ul>
 
-      <div class="p-6 mt-6 bg-indigo-50/50 rounded-xl border border-hairline">
+      <div class="p-6 mt-6 bg-canvas-soft rounded-xl border border-hairline">
         <p class="font-medium text-ink mb-0">
           <strong>Your TDEE is the mathematical summation of BMR + <a href="/guides/what-is-neat-calories/" class="text-brand hover:underline font-medium">NEAT</a> + <a href="/guides/thermic-effect-of-food-tef/" class="text-brand hover:underline font-medium">TEF</a> + EAT.</strong> A ubiquitous error is conflating BMR with TDEE. Remember: if your BMR calculates to 1,500 calories and you are moderately active, your authentic TDEE is approximately 1,500 × 1.55 = <strong>2,325 calories</strong>. This final aggregate number is your physiological compass.
         </p>
@@ -108,7 +108,7 @@ const faqSchema = {
       <div class="flex-shrink-0 w-12 h-12 bg-canvas-soft text-brand rounded-xl flex items-center justify-center font-bold text-xl">1</div>
       <div>
         <h3 class="text-xl font-bold text-ink mb-2">Determine Your Basal Metabolic Rate (BMR)</h3>
-        <p class="text-body">Leverage the clinically validated Mifflin-St Jeor equation, widely regarded in nutritional epidemiology as a modern and reliable standard. <br/> For Men: <code>10 × weight(kg) + 6.25 × height(cm) − 5 × age + 5</code>. <br/> For Women: <code>10 × weight(kg) + 6.25 × height(cm) − 5 × age − 161</code>. Alternatively, our <a href="/" class="text-indigo-600 underline">BMR</a> instantly computes this metric.</p>
+        <p class="text-body">Leverage the clinically validated Mifflin-St Jeor equation, widely regarded in nutritional epidemiology as a modern and reliable standard. <br/> For Men: <code>10 × weight(kg) + 6.25 × height(cm) − 5 × age + 5</code>. <br/> For Women: <code>10 × weight(kg) + 6.25 × height(cm) − 5 × age − 161</code>. Alternatively, our <a href="/" class="text-brand underline">BMR</a> instantly computes this metric.</p>
       </div>
     </div>
 
@@ -145,7 +145,7 @@ const faqSchema = {
           <th scope="col" class="px-6 py-4 font-semibold text-ink">User Biometrics</th>
           <th scope="col" class="px-6 py-4 font-semibold text-ink">Estimated BMR</th>
           <th scope="col" class="px-6 py-4 font-semibold text-ink">Activity Coefficient</th>
-          <th scope="col" class="px-6 py-4 font-semibold text-indigo-600">Final TDEE Output</th>
+          <th scope="col" class="px-6 py-4 font-semibold text-brand">Final TDEE Output</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-gray-200 bg-surface">
@@ -222,12 +222,12 @@ const faqSchema = {
   <section class="mt-20 pt-12 border-t border-hairline">
     <h2 class="text-2xl font-bold text-ink mb-8 text-center">Curated Scientific Literature</h2>
     <div class="grid md:grid-cols-2 gap-6 mb-12">
-      <a href="/guides/calorie-deficit-guide/" class="group block p-6 bg-surface rounded-xl border border-hairline shadow-sm hover:shadow-lg hover:border-indigo-200 transition-all">
-        <h3 class="text-lg font-bold text-ink group-hover:text-indigo-600 mb-2">The Definitive Guide to Caloric Deficits</h3>
+      <a href="/guides/calorie-deficit-guide/" class="group block p-6 bg-surface rounded-xl border border-hairline shadow-sm hover:shadow-lg hover:border-hairline transition-all">
+        <h3 class="text-lg font-bold text-ink group-hover:text-brand mb-2">The Definitive Guide to Caloric Deficits</h3>
         <p class="text-body text-sm">Explore evidence-based protocols to sustain a clinical calorie deficit while mitigating psychological fatigue, mitigating muscle catabolism, and avoiding ubiquitous dietary pitfalls.</p>
       </a>
-      <a href="/guides/calorie-surplus-guide/" class="group block p-6 bg-surface rounded-xl border border-hairline shadow-sm hover:shadow-lg hover:border-indigo-200 transition-all">
-        <h3 class="text-lg font-bold text-ink group-hover:text-indigo-600 mb-2">The Science of Caloric Surpluses</h3>
+      <a href="/guides/calorie-surplus-guide/" class="group block p-6 bg-surface rounded-xl border border-hairline shadow-sm hover:shadow-lg hover:border-hairline transition-all">
+        <h3 class="text-lg font-bold text-ink group-hover:text-brand mb-2">The Science of Caloric Surpluses</h3>
         <p class="text-body text-sm">Master the biological mechanisms of the 'lean-bulk', an advanced nutritional framework designed to maximize muscular hypertrophy while severely curtailing concurrent lipogenesis (fat accumulation).</p>
       </a>
     </div>

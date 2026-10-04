@@ -92,7 +92,7 @@ const faqSchema = {
 <Layout title={title} description={description} path={`/foods/${food.slug}/`}>
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
-  <div class="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+  <div class="max-w-[760px] mx-auto px-4 py-12 sm:px-6 lg:px-8">
     
     <!-- Hero / Headline -->
     <div class="text-center mb-12">
@@ -106,12 +106,12 @@ const faqSchema = {
     </div>
 
     <!-- Data Visualization / Macro Ring -->
-    <div class="bg-white rounded-[2.5rem] p-8 shadow-xl border border-slate-100 mb-12 relative overflow-hidden">
+    <div class="bg-white rounded-[2.5rem] p-8 shadow-sm border border-slate-100 mb-12 relative overflow-hidden">
       <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand to-brand-light"></div>
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <!-- Big Number -->
-        <div class="text-center p-8 bg-slate-50 rounded-3xl border border-slate-100 shadow-inner">
+        <div class="text-center p-8 bg-slate-50 rounded-2xl border border-slate-100 shadow-inner">
           <p class="text-slate-500 font-medium mb-2 uppercase tracking-wide">Calories per 100g</p>
           <div class="text-7xl font-black text-slate-900 mb-4">{food.calories} <span class="text-3xl text-slate-400 font-bold">kcal</span></div>
           
@@ -131,10 +131,10 @@ const faqSchema = {
           <div>
             <div class="flex justify-between text-sm font-bold mb-2">
               <span class="text-slate-700">Protein (Muscle Building)</span>
-              <span class="text-blue-600">{food.protein}g</span>
+              <span class="text-brand">{food.protein}g</span>
             </div>
             <div class="w-full bg-slate-100 rounded-full h-4 overflow-hidden">
-              <div class="bg-blue-500 h-4 rounded-full" style={`width: ${Math.min(100, (food.protein / 100) * 100)}%`}></div>
+              <div class="bg-canvas-soft h-4 rounded-full" style={`width: ${Math.min(100, (food.protein / 100) * 100)}%`}></div>
             </div>
           </div>
           
@@ -164,7 +164,7 @@ const faqSchema = {
     </div>
 
     <!-- Dynamic In-Depth Analysis (Information Gain) -->
-    <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm mb-12 prose prose-slate max-w-none prose-h2:text-2xl prose-h2:mb-4 prose-p:text-slate-600 leading-relaxed">
+    <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm mb-12 prose prose-slate max-w-none prose-h2:text-2xl prose-h2:mb-4 prose-p:text-slate-600 leading-relaxed">
       <h2>Nutritional Analysis of {food.name}</h2>
       <p>
         When analyzing the macro profile of <strong>{food.name}</strong>, it's important to look beyond just the {food.calories} calorie count. 
@@ -193,7 +193,7 @@ const faqSchema = {
     </div>
 
     <!-- The Spiderweb (Internal Linking) -->
-    <div class="mt-16 bg-slate-50 p-8 rounded-3xl border border-slate-100">
+    <div class="mt-16 bg-slate-50 p-8 rounded-2xl border border-slate-100">
       <h3 class="text-2xl font-bold text-slate-900 mb-6 border-b border-slate-200 pb-4">Explore Similar Foods</h3>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
         {related.map((item) => (

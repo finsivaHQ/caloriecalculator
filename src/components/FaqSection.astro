@@ -11,17 +11,17 @@ const { items, title = "Frequently asked questions", hideSidebar = false } = Ast
 <div class="mx-auto max-w-5xl grid lg:grid-cols-[1fr_320px] gap-12 items-start">
   <div>
     <h2 class="text-display-md text-ink">{title}</h2>
-    <div class="mt-6 divide-y divide-hairline border-t border-hairline">
+    <div class="mt-8 border-t border-hairline/50">
       {
         items.map((item) => (
-          <details class="group py-2">
-            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-3 text-left">
-              <span class="text-base font-medium text-ink">{item.q}</span>
-              <span class="grid h-6 w-6 shrink-0 place-items-center text-mute transition-transform group-open:rotate-180">
-                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6" /></svg>
+          <details class="group py-2 border-b border-hairline/50 last:border-0">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-left group-hover:text-brand">
+              <span class="text-[17px] font-semibold text-ink transition-colors group-hover:text-brand">{item.q}</span>
+              <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand/5 text-brand transition-transform group-open:rotate-180 group-hover:bg-brand/10">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6" /></svg>
               </span>
             </summary>
-            <p class="pb-4 pr-10 text-sm leading-relaxed text-body">{item.a}</p>
+            <p class="pb-5 pr-10 text-[15px] leading-relaxed text-body">{item.a}</p>
           </details>
         ))
       }
