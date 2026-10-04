@@ -6,66 +6,66 @@
 /* Semantic color tokens — Professional, Trustworthy, Restrained      */
 /* ------------------------------------------------------------------ */
 :root {
-  /* Light theme (Premium Nutrition Science) */
-  --bg: #F7F6F2;
-  --bg-soft: #EFEDE7;
-  --bg-soft-2: #E5E3DC;
+  /* Light theme (Warm Ivory + Forest, Premium Nutrition) */
+  --bg: #F7F7F2; /* Warm Ivory */
+  --bg-soft: #EFEFE8; /* Soft beige/gray */
+  --bg-soft-2: #E5E5DE;
   --surface: #FFFFFF;
   --surface-elevated: #FFFFFF;
 
-  --ink: #171A18;
-  --body: #5F6762;
-  --mute: #858B87;
+  --ink: #1C2420; /* Graphite */
+  --body: #4A5550; /* Muted graphite/green-gray */
+  --mute: #7A8580; /* Sage-gray secondary text */
 
-  --hairline: #E1E2DD;
-  --hairline-strong: #CBCDC7;
+  --hairline: #DCE0DA; /* Soft warm-gray / sage-gray */
+  --hairline-strong: #C5CBC3;
 
-  /* Brand/Accent - Terracotta */
-  --primary: #C56A4A;
-  --primary-hover: #A95539;
-  --primary-soft: #F4E5DE;
-  --primary-fg: #FFFFFF;
+  /* Brand/Accent - Forest + Sage */
+  --primary: #173B2B; /* Deep Forest */
+  --primary-hover: #0F261C;
+  --primary-soft: #E3EAE6; /* Very light sage/forest tint */
+  --primary-fg: #FFFFFF; /* High contrast text on Deep Forest */
 
-  /* Semantic */
-  --success: #3F7658;
-  --warning: #B98232;
-  --error: #B8544A;
+  /* Status Colors */
+  --success: #2F6B4F; /* Green Accent */
+  --warning: #C88D36; /* Muted Gold */
+  --error: #9D4A43; /* Muted Brick */
 
-  --selection-bg: #E1E2DD;
-  --selection-fg: #171A18;
+  --selection-bg: #DCE0DA;
+  --selection-fg: #173B2B;
 
   --shadow-color: 140deg 10% 65%;
   --shadow-strength: 0.08;
 }
 
 .dark {
-  /* Dark theme (Charcoal/Neutral) */
-  --bg: #111312;
-  --bg-soft: #161816;
-  --bg-soft-2: #1D201D;
-  --surface: #191B19;
-  --surface-elevated: #222522;
+  /* Dark theme (Intentional Dark Forest) */
+  --bg: #0C1410;
+  --bg-soft: #121D17;
+  --bg-soft-2: #18251E;
+  --surface: #121D17;
+  --surface-elevated: #18251E;
 
-  --ink: #F3F2ED;
-  --body: #B6B8B2;
-  --mute: #898D88;
+  --ink: #F1F4F0;
+  --body: #B4C0B8;
+  --mute: #89978E;
 
-  --hairline: #2C302D;
-  --hairline-strong: #3A3E3A;
+  --hairline: #23332A; /* Dark forest-gray */
+  --hairline-strong: #2F4539;
 
-  /* Brand/Accent - Dark Mode Terracotta */
-  --primary: #D27A58;
-  --primary-hover: #E08A68;
-  --primary-soft: #34221C;
-  --primary-fg: #111312;
+  /* Brand/Accent - Dark Mode Forest */
+  --primary: #6F9F7D;
+  --primary-hover: #8BB797;
+  --primary-soft: #192B21; /* Deep muted forest green */
+  --primary-fg: #0C1410; /* Dark Graphite/Forest text on Soft Sage */
 
-  /* Semantic */
-  --success: #6F9A7D;
-  --warning: #D0A05A;
-  --error: #C96B61;
+  /* Status Colors */
+  --success: #6F9F7D;
+  --warning: #D9A05B;
+  --error: #C16A63;
 
-  --selection-bg: #34221C;
-  --selection-fg: #F3F2ED;
+  --selection-bg: #192B21;
+  --selection-fg: #F1F4F0;
 
   --shadow-color: 0deg 0% 0%;
   --shadow-strength: 0.3;
@@ -99,19 +99,19 @@
   --color-warning: var(--warning);
   --color-error: var(--error);
 
-  /* Macro / chart palette */
-  --color-protein: #2A4B7C;
-  --color-carbs: #B98232;
-  --color-fat: #B8544A;
-  --color-fiber: #6A4C73;
+  /* Macro / chart palette - harmonized with Forest + Graphite */
+  --color-protein: #2A4B7C; /* Muted Navy */
+  --color-carbs: #C88D36; /* Muted Gold */
+  --color-fat: #9D4A43; /* Muted Brick */
+  --color-fiber: #6A4C73; /* Muted Purple */
 
   /* Radius scale - More restrained */
   --radius-xs: 2px;
   --radius-sm: 4px;
-  --radius-md: 8px; /* Cards, containers */
-  --radius-lg: 12px; /* Major surfaces */
-  --radius-xl: 16px;
-  --radius-2xl: 20px;
+  --radius-md: 6px; /* Forms, controls */
+  --radius-lg: 10px; /* Small cards */
+  --radius-xl: 12px; /* Cards */
+  --radius-2xl: 16px; /* Major surfaces */
 
   /* Spacing Scale - Consistent predictable values */
   --spacing-1: 0.25rem; /* 4px */
@@ -124,26 +124,26 @@
   --spacing-16: 4rem;   /* 64px */
   --spacing-20: 5rem;   /* 80px */
 
-  /* Type scale — fluid display sizes (restored for backward compatibility) */
-  --text-display-xl: clamp(2.5rem, 1.6rem + 4vw, 4.5rem);
+  /* Type scale — fluid display sizes */
+  --text-display-xl: clamp(2.5rem, 1.6rem + 4vw, 4rem);
   --text-display-xl--line-height: 1.05;
-  --text-display-xl--letter-spacing: -0.04em;
-  --text-display-xl--font-weight: 600;
+  --text-display-xl--letter-spacing: -0.03em;
+  --text-display-xl--font-weight: 700;
 
   --text-display-lg: clamp(2rem, 1.4rem + 2.6vw, 3rem);
   --text-display-lg--line-height: 1.1;
-  --text-display-lg--letter-spacing: -0.03em;
-  --text-display-lg--font-weight: 600;
+  --text-display-lg--letter-spacing: -0.025em;
+  --text-display-lg--font-weight: 700;
 
   --text-display-md: clamp(1.5rem, 1.2rem + 1.4vw, 2rem);
   --text-display-md--line-height: 1.15;
-  --text-display-md--letter-spacing: -0.025em;
-  --text-display-md--font-weight: 600;
+  --text-display-md--letter-spacing: -0.02em;
+  --text-display-md--font-weight: 700;
 
   --text-display-sm: 1.25rem;
   --text-display-sm--line-height: 1.4;
-  --text-display-sm--letter-spacing: -0.02em;
-  --text-display-sm--font-weight: 600;
+  --text-display-sm--letter-spacing: -0.015em;
+  --text-display-sm--font-weight: 700;
 
   /* Easing */
   --ease-out-soft: cubic-bezier(0.2, 0.0, 0, 1.0);
@@ -191,7 +191,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-success);
+    outline: 2px solid var(--color-brand);
     outline-offset: 2px;
     border-radius: var(--radius-sm);
   }
@@ -360,17 +360,20 @@
     border: 1px solid var(--color-hairline-strong);
     background-color: var(--color-surface);
     color: var(--color-ink);
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-md);
     padding: 0.625rem 0.75rem;
     font-size: 1rem; /* Prevents iOS zoom */
     line-height: 1.5;
     transition: border-color 0.15s, box-shadow 0.15s;
     appearance: none;
   }
+  .form-input:hover:not(:focus) {
+    border-color: var(--color-mute);
+  }
   .form-input:focus {
     outline: none;
-    border-color: var(--color-success);
-    box-shadow: 0 0 0 1px var(--color-success);
+    border-color: var(--color-brand);
+    box-shadow: 0 0 0 1px var(--color-brand);
   }
   .form-input::placeholder { color: var(--color-mute); opacity: 0.7; }
 
