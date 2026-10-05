@@ -1,4 +1,4 @@
-/** site.ts - global site constants & navigation structure. */
+﻿/** site.ts - global site constants & navigation structure. */
 
 export const SITE = {
   name: "Calorie Calculator Free",
@@ -41,12 +41,17 @@ export const ALL_CALCULATORS: NavLink[] = [
 export const NAV: { label: string; href?: string; children?: NavLink[] }[] = [
   { label: "Home", href: "/" },
   { label: "Food Database", href: "/foods/" },
-  { label: "Guides", href: "/guides/" },
-  { label: "Resources", href: "/resources/" },
+  { label: "Blog", href: "/guides/" }
 ];
 
 /** Footer link groups. */
 export const FOOTER: { title: string; links: NavLink[] }[] = [
+  {
+    title: "Resources",
+    links: [
+      { label: "Resources", href: "/resources/" },
+    ],
+  },
   {
     title: "Company",
     links: [
@@ -60,3 +65,4 @@ export const FOOTER: { title: string; links: NavLink[] }[] = [
     ],
   },
 ];
+
