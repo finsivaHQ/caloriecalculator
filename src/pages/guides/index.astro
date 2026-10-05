@@ -52,7 +52,7 @@ const jsonLd = [breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Guides",
     <div class="mt-8 grid gap-3 sm:grid-cols-2">
       {
         guides.map((g) => (
-          <a href={g.href} class="bg-canvas p-6 rounded-xl border border-hairline group flex items-center justify-between gap-3 p-5 transition-all hover:border-hairline-strong hover:bg-canvas-soft">
+          <a href={g.href} class="card group flex items-center justify-between gap-3 p-5 transition-all hover:border-hairline-strong hover:bg-canvas-soft">
             <span class="text-base font-medium text-ink">{g.label}</span>
             <svg class="h-4 w-4 shrink-0 text-mute transition-transform group-hover:translate-x-0.5 group-hover:text-ink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
           </a>

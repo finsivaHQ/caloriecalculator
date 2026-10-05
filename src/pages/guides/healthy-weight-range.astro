@@ -46,7 +46,7 @@ const faqs: FaqItem[] = [
 
     <!-- Section 2: IMC -->
     <section>
-      <h2 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-surface mb-8 tracking-tight">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-700 mb-8 tracking-tight">
         1. Understanding the Body Mass Index (BMI) in Depth
       </h2>
       <p class="text-lg leading-relaxed text-slate-600 mb-6">
@@ -57,9 +57,9 @@ const faqs: FaqItem[] = [
       </p>
 
       <!-- Glassmorphism Table -->
-      <div class="relative overflow-hidden rounded-2xl bg-white/60 backdrop-blur-xl border border-slate-200/80 shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-8 md:p-12 my-12">
-        <div class="absolute -top-32 -right-32 w-96 h-96 bg-canvas-soft border border-hairline rounded-full blur-3xl mix-blend-multiply pointer-events-none"></div>
-        <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-canvas-soft border border-hairline rounded-full blur-3xl mix-blend-multiply pointer-events-none"></div>
+      <div class="relative overflow-hidden rounded-3xl bg-white/60 backdrop-blur-xl border border-slate-200/80 shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-8 md:p-12 my-12">
+        <div class="absolute -top-32 -right-32 w-96 h-96 bg-blue-100/50 rounded-full blur-3xl mix-blend-multiply pointer-events-none"></div>
+        <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-indigo-100/50 rounded-full blur-3xl mix-blend-multiply pointer-events-none"></div>
         
         <h3 class="text-2xl font-bold text-slate-800 mb-8 relative z-10 border-b border-slate-200 pb-4">Official BMI Categories established by the WHO</h3>
         <div class="overflow-x-auto relative z-10">
@@ -72,8 +72,8 @@ const faqs: FaqItem[] = [
               </tr>
             </thead>
             <tbody class="text-slate-700">
-              <tr class="border-b border-slate-100 hover:bg-canvas-soft transition-colors duration-200">
-                <td class="py-6 px-6 font-bold text-brand text-lg">Underweight</td>
+              <tr class="border-b border-slate-100 hover:bg-blue-50/60 transition-colors duration-200">
+                <td class="py-6 px-6 font-bold text-blue-600 text-lg">Underweight</td>
                 <td class="py-6 px-6 font-mono font-medium text-slate-800 text-lg">&lt; 18.5</td>
                 <td class="py-6 px-6 leading-relaxed">Higher clinical vulnerability. Elevated risk of severe nutritional deficiencies, anemia, a weakened immune system, and early osteoporosis due to suboptimal bone density.</td>
               </tr>
@@ -109,7 +109,7 @@ const faqs: FaqItem[] = [
       <p class="text-lg leading-relaxed text-slate-600 mb-6">
         The formula has no mechanism to distinguish between a kilogram of dense, metabolically active muscle tissue and a kilogram of stored adipose tissue (fat). This inherent limitation is exactly why an elite athlete, a natural bodybuilder, or even a regular gym-goer with a considerable amount of hypertrophied muscle mass can easily register a BMI of 28 or higher.
       </p>
-      <div class="bg-surface p-8 rounded-2xl border border-slate-200 mb-8">
+      <div class="bg-gradient-to-br from-slate-50 to-slate-100 p-8 rounded-3xl border border-slate-200 mb-8">
         <h4 class="text-xl font-bold text-slate-800 mb-4">The Athlete's Paradigm: A False Positive</h4>
         <p class="text-lg text-slate-700 leading-relaxed">
           According to the strict traditional medical table, this muscular individual would be instantly classified as an "overweight" or even "pre-obese" person, despite having an athletic body fat percentage (single digits) and optimal cardiovascular health. Skeletal muscle is, by volume, 18% denser and heavier than fat tissue, which severely distorts the calculation in people who practice strength training.
@@ -124,7 +124,7 @@ const faqs: FaqItem[] = [
 
     <!-- Section 4: Body Composition -->
     <section>
-      <h2 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-surface mb-8 tracking-tight mt-12">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-700 mb-8 tracking-tight mt-12">
         3. Body Composition: The True Medical Indicator of Health
       </h2>
       <p class="text-lg leading-relaxed text-slate-600 mb-6">
@@ -133,7 +133,7 @@ const faqs: FaqItem[] = [
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
         <!-- Card 1 -->
-        <div class="bg-white/80 backdrop-blur-md rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-sm transition-all duration-300">
+        <div class="bg-white/80 backdrop-blur-md rounded-3xl p-8 border border-slate-100 shadow-xl hover:shadow-2xl transition-all duration-300">
           <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6">
             <span class="text-3xl">💪</span>
           </div>
@@ -146,7 +146,7 @@ const faqs: FaqItem[] = [
           </p>
         </div>
         <!-- Card 2 -->
-        <div class="bg-white/80 backdrop-blur-md rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-sm transition-all duration-300">
+        <div class="bg-white/80 backdrop-blur-md rounded-3xl p-8 border border-slate-100 shadow-xl hover:shadow-2xl transition-all duration-300">
           <div class="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center mb-6">
             <span class="text-3xl">🧬</span>
           </div>
@@ -160,7 +160,7 @@ const faqs: FaqItem[] = [
         </div>
       </div>
 
-      <p class="text-lg leading-relaxed text-slate-600 font-medium bg-canvas-soft p-6 rounded-2xl border-l-4 border-blue-500">
+      <p class="text-lg leading-relaxed text-slate-600 font-medium bg-blue-50 p-6 rounded-2xl border-l-4 border-blue-500">
         💡 <strong>Medical Paradigm Shift:</strong> The most advanced clinical interventions today have abandoned the obsolete concept of "weight loss" in favor of "body recomposition." The supreme goal is to optimize physiology by exclusively losing fat mass while maintaining, protecting, and promoting the growth of lean muscle mass.
       </p>
     </section>
@@ -177,14 +177,14 @@ const faqs: FaqItem[] = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
         
         <!-- Male Ranges -->
-        <div class="rounded-2xl border border-slate-200 bg-white shadow-lg overflow-hidden">
-          <div class="bg-brand px-8 py-6">
+        <div class="rounded-3xl border border-slate-200 bg-white shadow-lg overflow-hidden">
+          <div class="bg-blue-600 px-8 py-6">
             <h3 class="text-2xl font-bold text-white">Physiological Ranges for Men</h3>
           </div>
           <div class="p-8">
             <ul class="space-y-6">
               <li class="flex items-start">
-                <div class="flex-shrink-0 w-32 font-bold text-brand">2% - 5%</div>
+                <div class="flex-shrink-0 w-32 font-bold text-blue-700">2% - 5%</div>
                 <div class="ml-4">
                   <span class="block font-semibold text-slate-800">Essential Biological Fat</span>
                   <p class="text-sm text-slate-600 mt-1">The absolute minimum for internal organ survival. Only temporarily achieved by bodybuilders on competition day. Extremely dangerous and unsustainable long term, causes drastic hormonal drops.</p>
@@ -223,14 +223,14 @@ const faqs: FaqItem[] = [
         </div>
 
         <!-- Female Ranges -->
-        <div class="rounded-2xl border border-slate-200 bg-white shadow-lg overflow-hidden">
-          <div class="bg-brand px-8 py-6">
+        <div class="rounded-3xl border border-slate-200 bg-white shadow-lg overflow-hidden">
+          <div class="bg-indigo-600 px-8 py-6">
             <h3 class="text-2xl font-bold text-white">Physiological Ranges for Women</h3>
           </div>
           <div class="p-8">
             <ul class="space-y-6">
               <li class="flex items-start">
-                <div class="flex-shrink-0 w-32 font-bold text-brand">10% - 13%</div>
+                <div class="flex-shrink-0 w-32 font-bold text-indigo-700">10% - 13%</div>
                 <div class="ml-4">
                   <span class="block font-semibold text-slate-800">Essential Female Fat</span>
                   <p class="text-sm text-slate-600 mt-1">The basal level. Dropping below this critical threshold almost certainly triggers severe dysfunctions like amenorrhea (total loss of the menstrual cycle) and an alarming drop in estrogen.</p>
@@ -307,14 +307,14 @@ const faqs: FaqItem[] = [
         </li>
       </ul>
 
-      <p class="text-lg leading-relaxed text-slate-800 font-bold text-center bg-slate-100 p-8 rounded-2xl">
+      <p class="text-lg leading-relaxed text-slate-800 font-bold text-center bg-slate-100 p-8 rounded-3xl">
         Clinical Verdict: Science recommends establishing a loose healthy weight range, with a 4 to 8 pound margin of oscillation, rather than a fixed and immobile goal. This provides indispensable mental flexibility, drastically reduces the anxiety related to daily weighing, and maturely and accurately reflects how normal human physiology truly works.
       </p>
     </section>
 
     <!-- Section 7: Practical Guide -->
     <section>
-      <h2 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-surface mb-8 tracking-tight mt-16">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-700 mb-8 tracking-tight mt-16">
         6. Scientific Step-by-Step Guide to Reaching Your Ideal Range
       </h2>
       <p class="text-lg leading-relaxed text-slate-600 mb-10">
@@ -323,8 +323,8 @@ const faqs: FaqItem[] = [
 
       <div class="space-y-8">
         <!-- Step 1 -->
-        <div class="flex flex-col md:flex-row gap-6 items-start bg-white p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-sm transition-shadow">
-          <div class="flex-shrink-0 w-16 h-16 bg-surface rounded-2xl flex items-center justify-center text-white font-bold text-3xl shadow-md">
+        <div class="flex flex-col md:flex-row gap-6 items-start bg-white p-8 rounded-3xl shadow-lg border border-slate-100 hover:shadow-xl transition-shadow">
+          <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white font-bold text-3xl shadow-md">
             1
           </div>
           <div>
@@ -339,8 +339,8 @@ const faqs: FaqItem[] = [
         </div>
 
         <!-- Step 2 -->
-        <div class="flex flex-col md:flex-row gap-6 items-start bg-white p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-sm transition-shadow">
-          <div class="flex-shrink-0 w-16 h-16 bg-surface rounded-2xl flex items-center justify-center text-white font-bold text-3xl shadow-md">
+        <div class="flex flex-col md:flex-row gap-6 items-start bg-white p-8 rounded-3xl shadow-lg border border-slate-100 hover:shadow-xl transition-shadow">
+          <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white font-bold text-3xl shadow-md">
             2
           </div>
           <div>
@@ -357,8 +357,8 @@ const faqs: FaqItem[] = [
         </div>
 
         <!-- Step 3 -->
-        <div class="flex flex-col md:flex-row gap-6 items-start bg-white p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-sm transition-shadow">
-          <div class="flex-shrink-0 w-16 h-16 bg-surface rounded-2xl flex items-center justify-center text-white font-bold text-3xl shadow-md">
+        <div class="flex flex-col md:flex-row gap-6 items-start bg-white p-8 rounded-3xl shadow-lg border border-slate-100 hover:shadow-xl transition-shadow">
+          <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white font-bold text-3xl shadow-md">
             3
           </div>
           <div>
@@ -373,8 +373,8 @@ const faqs: FaqItem[] = [
         </div>
 
         <!-- Step 4 -->
-        <div class="flex flex-col md:flex-row gap-6 items-start bg-white p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-sm transition-shadow">
-          <div class="flex-shrink-0 w-16 h-16 bg-surface rounded-2xl flex items-center justify-center text-white font-bold text-3xl shadow-md">
+        <div class="flex flex-col md:flex-row gap-6 items-start bg-white p-8 rounded-3xl shadow-lg border border-slate-100 hover:shadow-xl transition-shadow">
+          <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white font-bold text-3xl shadow-md">
             4
           </div>
           <div>
@@ -401,7 +401,7 @@ const faqs: FaqItem[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Myth 1 -->
-        <div class="bg-red-50/50 p-8 rounded-2xl border border-red-100 relative">
+        <div class="bg-red-50/50 p-8 rounded-3xl border border-red-100 relative">
           <div class="absolute -top-4 -left-4 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-600 text-2xl font-bold">❌</div>
           <h4 class="text-xl font-bold text-slate-800 mb-4 mt-2">Myth: "Carbohydrates, especially at night, block fat burning and make you instantly fat."</h4>
           <p class="text-slate-700 leading-relaxed">
@@ -410,7 +410,7 @@ const faqs: FaqItem[] = [
         </div>
 
         <!-- Myth 2 -->
-        <div class="bg-red-50/50 p-8 rounded-2xl border border-red-100 relative">
+        <div class="bg-red-50/50 p-8 rounded-3xl border border-red-100 relative">
           <div class="absolute -top-4 -left-4 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-600 text-2xl font-bold">❌</div>
           <h4 class="text-xl font-bold text-slate-800 mb-4 mt-2">Myth: "You can do specific and localized repetitive exercises to quickly burn stubborn belly fat."</h4>
           <p class="text-slate-700 leading-relaxed">
@@ -419,7 +419,7 @@ const faqs: FaqItem[] = [
         </div>
 
         <!-- Myth 3 -->
-        <div class="bg-red-50/50 p-8 rounded-2xl border border-red-100 relative md:col-span-2">
+        <div class="bg-red-50/50 p-8 rounded-3xl border border-red-100 relative md:col-span-2">
           <div class="absolute -top-4 -left-4 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-600 text-2xl font-bold">❌</div>
           <h4 class="text-xl font-bold text-slate-800 mb-4 mt-2">Myth: "Sweating excessively with neoprene belts on treadmills unequivocally equates to losing and melting a large amount of body fat."</h4>
           <p class="text-slate-700 leading-relaxed">
@@ -430,26 +430,26 @@ const faqs: FaqItem[] = [
     </section>
 
     <!-- Detailed FAQ Section to satisfy the "comprehensive FAQ" prompt while avoiding conflict with Astro frontmatter rendering -->
-    <section class="mt-16 bg-slate-50 p-8 md:p-12 rounded-2xl border border-slate-200">
+    <section class="mt-16 bg-slate-50 p-8 md:p-12 rounded-3xl border border-slate-200">
       <h2 class="text-3xl font-extrabold text-slate-900 mb-8">Detailed Frequently Asked Questions (FAQ)</h2>
       
       <div class="space-y-6">
         <div>
-          <h4 class="text-xl font-bold text-brand mb-2">Is it possible to be metabolically healthy if my BMI says I am overweight?</h4>
+          <h4 class="text-xl font-bold text-blue-700 mb-2">Is it possible to be metabolically healthy if my BMI says I am overweight?</h4>
           <p class="text-slate-700 leading-relaxed">
             Yes, absolutely and scientifically documented. This is often termed "metabolically healthy obesity," although in the case of active individuals, it is due to high lean muscle mass. If your cardiovascular markers (LDL/HDL cholesterol, triglycerides, fasting glucose, insulin sensitivity, and blood pressure) are completely optimal, and your actual body fat percentage (measured) is firmly anchored within athletic or healthy ranges, a high BMI derived exclusively from muscular hyperdevelopment poses zero clinical risk to your life expectancy.
           </p>
         </div>
         
         <div>
-          <h4 class="text-xl font-bold text-brand mb-2">How often should I really step on the scale to check my recomposition progress?</h4>
+          <h4 class="text-xl font-bold text-blue-700 mb-2">How often should I really step on the scale to check my recomposition progress?</h4>
           <p class="text-slate-700 leading-relaxed">
             Constant daily weighing can generate enormous psychological fatigue in a high percentage of individuals due to logical erratic fluctuations (water retention and digestive cycle). Expert nutritionists strongly recommend weighing yourself only under identical and strict biological and environmental conditions: completely fasted, right after the first morning bowel movement/urination, always wearing no clothes, and performing this check exactly 1 or 2 strict times a week, noting the weighted average over the prolonged monthly period to discern the true trend of the physical change.
           </p>
         </div>
 
         <div>
-          <h4 class="text-xl font-bold text-brand mb-2">How does the so-called "bone constitution," or the size of my skeleton, affect the medical goals of healthy weight ranges?</h4>
+          <h4 class="text-xl font-bold text-blue-700 mb-2">How does the so-called "bone constitution," or the size of my skeleton, affect the medical goals of healthy weight ranges?</h4>
           <p class="text-slate-700 leading-relaxed">
             Although standardized BMI estimates are rudimentarily designed to offer a good approximate fit for the vast general populations of individuals, they ignore biological exceptions. People genetically endowed with unusually wide shoulder girdles, long femurs, and highly thick joints will logically present significantly higher structural weights than others of their exact height. It is for this and no other reason that truly sophisticated clinical models strongly advise focusing patients' diagnostic resources on their exact proportions of fat and muscle tissue hypertrophy as infinitely superior metrics of objective long-term health, relegating statistical BMI to a second and less vital step of importance in serious consultations.
           </p>
@@ -460,7 +460,7 @@ const faqs: FaqItem[] = [
     <!-- Suggested Content (CTA) Area -->
     <section class="mt-24 border-t-2 border-slate-100 pt-16 mb-8">
       <!-- Mega CTA Banner -->
-      <div class="relative overflow-hidden rounded-2xl bg-surface shadow-sm p-8 md:p-14 text-center text-white">
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-indigo-900 to-blue-900 shadow-2xl p-8 md:p-14 text-center text-white">
         <div class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNmZmYiLz48L3N2Zz4=')]"></div>
         
         <h2 class="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight relative z-10">Ready to calculate your exact numbers and transform your physique?</h2>
@@ -477,36 +477,36 @@ const faqs: FaqItem[] = [
       <!-- Suggested Articles Grid -->
       <div class="mt-16">
         <div class="flex items-center gap-4 mb-8">
-          <div class="h-8 w-2 bg-brand rounded-full"></div>
+          <div class="h-8 w-2 bg-blue-600 rounded-full"></div>
           <h3 class="text-2xl md:text-3xl font-bold text-slate-900">Science-Based Suggested Content For You</h3>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <!-- Card 1 -->
-          <a href="/guides/calorie-deficit/" class="block group rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-sm transition-all duration-300 p-8 md:p-10 relative overflow-hidden">
+          <a href="/guides/calorie-deficit/" class="block group rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-300 p-8 md:p-10 relative overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div class="relative z-10">
-              <span class="text-sm font-bold tracking-wider text-brand uppercase mb-3 block">Step-by-Step Guide</span>
-              <h4 class="text-2xl font-extrabold text-slate-900 mb-4 group-hover:text-brand transition-colors">The Ultimate Guide to Caloric Deficits Explained</h4>
+              <span class="text-sm font-bold tracking-wider text-blue-600 uppercase mb-3 block">Step-by-Step Guide</span>
+              <h4 class="text-2xl font-extrabold text-slate-900 mb-4 group-hover:text-blue-700 transition-colors">The Ultimate Guide to Caloric Deficits Explained</h4>
               <p class="text-slate-600 leading-relaxed text-lg">
                 Learn the raw and proven science behind the first law of thermodynamics. Structure a safe and highly effective moderate deficit yourself that allows you to lose stubborn belly fat permanently. All this process achieved without sacrificing or unnecessarily destroying a single gram of your valuable and hard-earned lean muscle mass and without ever having to suffer and tolerate a severe state of perpetual psychological hunger.
               </p>
-              <div class="mt-6 flex items-center text-brand font-bold group-hover:translate-x-2 transition-transform">
+              <div class="mt-6 flex items-center text-blue-600 font-bold group-hover:translate-x-2 transition-transform">
                 Read full article →
               </div>
             </div>
           </a>
           
           <!-- Card 2 -->
-          <a href="/guides/macronutrients/" class="block group rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-sm transition-all duration-300 p-8 md:p-10 relative overflow-hidden">
+          <a href="/guides/macronutrients/" class="block group rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-300 p-8 md:p-10 relative overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div class="relative z-10">
-              <span class="text-sm font-bold tracking-wider text-brand uppercase mb-3 block">Nutritional Fundamentals</span>
-              <h4 class="text-2xl font-extrabold text-slate-900 mb-4 group-hover:text-brand transition-colors">Mastering and Intelligibly Understanding Basic Macronutrients</h4>
+              <span class="text-sm font-bold tracking-wider text-indigo-600 uppercase mb-3 block">Nutritional Fundamentals</span>
+              <h4 class="text-2xl font-extrabold text-slate-900 mb-4 group-hover:text-indigo-700 transition-colors">Mastering and Intelligibly Understanding Basic Macronutrients</h4>
               <p class="text-slate-600 leading-relaxed text-lg">
                 The most complete and enjoyable medical guide to read on the physiological structural synthesis of proteins, fats, and carbohydrates, demystified and explained with astonishing clinical rigor step by step. Discover the fascinating exact biological mechanisms that will tell you how to properly balance and interconnect them in a brilliantly intelligent way to achieve the absolute peak maximization of your daily cellular energy levels and your most dreamed aesthetic and visual physical results.
               </p>
-              <div class="mt-6 flex items-center text-brand font-bold group-hover:translate-x-2 transition-transform">
+              <div class="mt-6 flex items-center text-indigo-600 font-bold group-hover:translate-x-2 transition-transform">
                 Read full article →
               </div>
             </div>
