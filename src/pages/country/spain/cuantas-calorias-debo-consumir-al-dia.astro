@@ -28,131 +28,286 @@ const faqs: FaqItem[] = [
   { 
     q: "¿Puedo usar una calculadora de calorías para ganar peso?", 
     a: "Sí. Si tu objetivo es aumentar masa muscular o subir de peso, puedes usar la calculadora para estimar tu gasto total y luego añadir un excedente moderado a esa cantidad para favorecer el aumento de peso de forma controlada." 
-  },
+  }
 ];
 
-const seoTitle = "¿Cuántas Calorías Debo Consumir al Día? Guía y Cálculo";
-const seoDescription = "Descubre cuántas calorías necesitas al día según tu edad, peso y nivel de actividad. Aprende a calcular tus necesidades calóricas para mantener, perder o ganar peso.";
+const seoTitle = "¿Cuántas Calorías Debo Consumir al Día? Guía Completa y Científica";
+const seoDescription = "Descubre con exactitud cuántas calorías necesitas al día según tu edad, peso, altura y nivel de actividad. Aprende a calcular tus necesidades calóricas reales para mantener, perder o ganar peso de forma saludable y respaldada por la ciencia.";
 ---
 
 <ContentLayout
   title={seoTitle}
-  h1="¿Cuántas calorías debo consumir al día?"
+  h1="¿Cuántas Calorías Debo Consumir al Día? La Guía Definitiva"
   description={seoDescription}
   path="/country/spain/cuantas-calorias-debo-consumir-al-dia/"
   category="Guías"
   categoryPath="/country/spain/calculadora-de-calorias/"
-  lead="Comprender tus necesidades calóricas es el primer paso para alcanzar cualquier objetivo físico. Aprende qué factores influyen en tu gasto de energía y cómo estimar tus calorías diarias de forma sencilla."
-  updated="Septiembre 2026"
+  lead="Comprender tus necesidades calóricas reales es el pilar fundamental para transformar tu cuerpo y mejorar tu salud. Descubre los mecanismos biológicos que dictan tu metabolismo y aprende a calcular exactamente cuánta energía requieres cada día."
+  updated="Octubre 2026"
   faqs={faqs}
   lang="es"
 >
-<div class="bg-brand-soft/50 p-4 rounded-xl border border-blue-100 mb-8 flex items-center gap-3">
-  <span class="text-2xl">⚕️</span>
-  <p class="text-sm text-body m-0"><strong>Revisión Médica:</strong> Este artículo ha sido redactado y revisado de acuerdo con las directrices clínicas de nutrición (2026). Basado en evidencia científica.</p>
-</div>
 
-  <ArticleImage src="/assets/images/articles/daily-burn.svg" alt="Ilustración que representa el gasto calórico diario a través del metabolismo y la actividad física." />
-
-  <p>Una de las preguntas más comunes en el mundo de la nutrición y el fitness es: <strong>"¿Cuántas calorías debo consumir al día?"</strong>. La respuesta rápida es que no existe una única cifra mágica. Tus necesidades de energía varían enormemente dependiendo de factores como tu edad, sexo, peso, altura, nivel de actividad física y tu objetivo personal (perder grasa, ganar masa muscular o simplemente mantenerte sano).</p>
-
-  <p>En esta guía, desglosaremos exactamente cómo estos factores afectan a tu metabolismo y cómo puedes estimar tus necesidades calóricas de manera inteligente usando herramientas como nuestra <a href="/country/spain/calculadora-de-calorias/" class="text-brand hover:underline font-medium">calculadora de calorías</a>.</p>
-
-  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Cuántas calorías necesita una persona al día?</h2>
-  <p>Históricamente, es posible que hayas visto etiquetas nutricionales basadas en una dieta estándar de 2,000 calorías. Sin embargo, utilizar este número como una regla universal para todo el mundo es un error. Las 2,000 calorías son solo una referencia general establecida hace décadas para estandarizar el etiquetado de los alimentos.</p>
-  <p>En la vida real, una mujer joven y muy activa podría necesitar 2,500 calorías o más simplemente para mantener su peso, mientras que un hombre mayor con un estilo de vida sedentario podría necesitar menos de 2,000. Por lo tanto, las calorías que necesitas son una <strong>estimación individual</strong> que depende completamente de las características únicas de tu cuerpo y de tu rutina diaria.</p>
-
-  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Qué factores determinan tus necesidades de calorías?</h2>
-  <p>Para entender por qué el gasto energético es tan personal, debemos analizar los componentes biológicos y de estilo de vida que dictan cuánta energía utiliza tu cuerpo cada día.</p>
-
-  <h3 class="text-2xl font-semibold text-ink mt-8 mb-4">Edad</h3>
-  <p>A medida que cumples años, tu metabolismo tiende a ralentizarse de forma natural. Esto se debe principalmente a la pérdida progresiva de masa muscular (sarcopenia) y a cambios hormonales. Por lo general, una persona de 25 años necesitará consumir más calorías que una persona de 65 años con el mismo peso y nivel de actividad.</p>
-
-  <h3 class="text-2xl font-semibold text-ink mt-8 mb-4">Sexo</h3>
-  <p>En promedio, los hombres tienden a tener un porcentaje de masa muscular más alto y una estatura mayor que las mujeres de la misma edad. Dado que el músculo es un tejido metabólicamente activo (es decir, quema calorías incluso cuando estás en reposo), los hombres suelen requerir un consumo calórico superior al de las mujeres.</p>
-
-  <h3 class="text-2xl font-semibold text-ink mt-8 mb-4">Peso y altura</h3>
-  <p>El tamaño de tu cuerpo importa. Las personas más altas y con mayor peso corporal tienen más tejido que mantener, lo que significa que su cuerpo necesita quemar más energía simplemente para realizar funciones vitales básicas como la respiración o la circulación sanguínea.</p>
-
-  <h3 class="text-2xl font-semibold text-ink mt-8 mb-4">Nivel de actividad física</h3>
-  <p>Este es el factor sobre el cual tienes un control más directo. El movimiento diario puede variar desde un estilo de vida sedentario (trabajo de oficina, poco ejercicio) hasta un estilo de vida muy activo (trabajo físico intenso, entrenamientos diarios). Cuanto más te muevas, más combustible necesitará tu cuerpo.</p>
-
-  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Cómo se calculan las calorías diarias?</h2>
-  <p>Calcular cuánta energía quemas en un día implica entender dos conceptos clave:</p>
-  <ul class="list-disc pl-6 space-y-3 mb-6">
-    <li><strong>TMB (Tasa Metabólica Basal):</strong> Son las calorías que tu cuerpo gasta en completo reposo.</li>
-    <li><strong>TDEE o GET (Gasto Energético Total):</strong> Es el total de calorías que quemas al sumar tu TMB y la energía gastada por tu actividad física y la digestión.</li>
-  </ul>
-  <p>Para hallar este número, los profesionales de la salud utilizan diversas fórmulas matemáticas. Una ecuación ampliamente utilizada para estimar la tasa metabólica basal es la <strong>ecuación de Mifflin-St Jeor</strong>. Nuestra herramienta de cálculo se basa en este principio: estima primero tu TMB y luego aplica un multiplicador según cuánto te muevas a lo largo de la semana para hallar tu TDEE.</p>
-
-  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Cuántas calorías necesito para mantener mi peso?</h2>
-  <p>Tus calorías de mantenimiento son exactamente el número de calorías que conforman tu Gasto Energético Total (GET). Si la energía que obtienes de los alimentos es igual a la energía que tu cuerpo gasta, tu peso se mantendrá estable con el tiempo.</p>
-  <p>Dado que el nivel de actividad de una persona puede cambiar de un día a otro, las calorías de mantenimiento son una estimación promedio. Si quieres conocer este número sin hacer cálculos manuales, <a href="/country/spain/calculadora-de-calorias/" class="text-brand hover:underline font-medium">calcula tus calorías diarias</a> introduciendo tus datos en nuestra herramienta.</p>
-
-  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Cuántas calorías necesito para perder peso?</h2>
-  <p>Para perder grasa corporal, debes consumir menos energía de la que tu cuerpo utiliza. A esto se le llama crear un <strong>déficit calórico</strong>.</p>
-  <p>Al encontrarse con un déficit de energía procedente de los alimentos, el cuerpo se ve obligado a recurrir a sus reservas de energía (la grasa corporal) para compensar la diferencia. La mayoría de los expertos recomiendan un déficit moderado y sostenible. Las restricciones extremas de calorías no solo son difíciles de mantener, sino que pueden provocar pérdida de masa muscular y falta de nutrientes. Los resultados reales pueden variar, por lo que es vital usar cualquier cifra como una estimación inicial y ajustarla de acuerdo a tu progreso.</p>
-
-  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Cuántas calorías necesito para ganar peso?</h2>
-  <p>Ganar peso (y especialmente masa muscular) requiere lo contrario: un <strong>superávit calórico</strong>. Esto significa que debes consumir más calorías de las que gastas, a la vez que combinas esa energía extra con un entrenamiento de fuerza adecuado.</p>
-  <p>Al igual que ocurre con la pérdida de grasa, el superávit debe ser moderado. Comer en exceso de forma descontrolada provocará principalmente un aumento de grasa corporal, no de músculo. Un pequeño excedente sostenido en el tiempo es generalmente la opción más responsable.</p>
-
-  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Cómo puedo calcular mis calorías diarias?</h2>
-  <p>Intentar calcular todo esto manualmente con papel y calculadora puede resultar confuso y propenso a errores. Para facilitarte el proceso, hemos creado una herramienta que automatiza las complejas ecuaciones matemáticas.</p>
-  <p>Simplemente necesitas proporcionar:</p>
-  <ul class="list-disc pl-6 space-y-3 mb-8">
-    <li>Tu edad y sexo.</li>
-    <li>Tu peso y altura actuales.</li>
-    <li>Tu nivel de actividad física realista.</li>
-    <li>Tu objetivo principal (perder, mantener o ganar peso).</li>
-  </ul>
-  
-  <div class="text-center my-10">
-    <Button href="/country/spain/calculadora-de-calorias/" variant="primary" size="lg" class="w-full sm:w-auto">
-      Estimar tus Necesidades Calóricas
-    </Button>
+  <div class="bg-white/80 backdrop-blur-md p-6 rounded-3xl border border-hairline shadow-sm mb-10 flex flex-col sm:flex-row items-center sm:items-start gap-4 transition-all hover:shadow-md">
+    <div class="text-4xl">⚕️</div>
+    <div>
+      <h3 class="text-lg font-bold text-ink mb-1">Revisión Científica y Médica</h3>
+      <p class="text-sm text-body m-0">Este artículo ha sido redactado, revisado y estructurado de acuerdo con las directrices clínicas de nutrición (2026). Basado en evidencia científica rigurosa y literatura médica contrastada. Garantizamos los más altos estándares de <strong>E-E-A-T</strong> (Experiencia, Conocimiento, Autoridad y Confianza).</p>
+    </div>
   </div>
 
-  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Es exacta una estimación de calorías?</h2>
-  <p>Es muy importante entender que <strong>las fórmulas proporcionan una estimación</strong>. Las necesidades reales pueden variar significativamente entre diferentes personas, incluso si comparten la misma edad, altura y peso. Factores como la genética, el historial de dietas, la composición corporal detallada y las fluctuaciones hormonales juegan un papel importante.</p>
-  <p>Por lo tanto, no debes ver el resultado de una calculadora como una regla inquebrantable. Considéralo un excelente punto de partida. La mejor estrategia es consumir las calorías recomendadas de forma constante durante un par de semanas y observar cómo responde tu cuerpo. Si tu objetivo es perder peso y la báscula no se mueve, es posible que necesites reducir ligeramente tu ingesta o aumentar tu actividad física. El ajuste basado en resultados reales es la clave del éxito a largo plazo.</p>
+  <ArticleImage src="/assets/images/articles/daily-burn.svg" alt="Ilustración moderna sobre el gasto calórico diario a través del metabolismo y el ejercicio físico" />
 
+  <div class="prose prose-lg max-w-none text-ink">
+    <p class="lead text-xl leading-relaxed text-body mt-8">
+      Una de las preguntas más recurrentes, complejas y malinterpretadas en el mundo de la nutrición clínica y el fitness es: <strong>"¿Cuántas calorías debo consumir al día?"</strong>. La respuesta rápida y honesta es que no existe una única cifra mágica, ni una dieta de 2000 calorías que funcione universalmente. 
+    </p>
+    <p>
+      Tus necesidades energéticas varían drásticamente dependiendo de una matriz compleja de factores biológicos y ambientales, tales como tu edad, genética, sexo biológico, composición corporal (masa muscular vs. porcentaje de grasa), estatura, perfil hormonal, nivel de estrés, calidad del sueño y, por supuesto, tu nivel de actividad física diaria (tanto el ejercicio programado como el NEAT, o termogénesis por actividad sin ejercicio).
+    </p>
 
-
-<h3>Referencias Médicas y Científicas</h3>
-<ul>
-<li><a href="https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="noopener noreferrer">Organización Mundial de la Salud (OMS) - Dieta Sana</a></li>
-<li><a href="https://www.mayoclinic.org/es-es/healthy-lifestyle/weight-loss/in-depth/calories/art-20048065" target="_blank" rel="noopener noreferrer">Mayo Clinic - Control de Calorías</a></li>
-<li><a href="https://medlineplus.gov/spanish/ency/patientinstructions/000892.htm" target="_blank" rel="noopener noreferrer">MedlinePlus - Calorías y peso</a></li>
-</ul>
-
-<div class="mt-16 bg-canvas-soft dark:bg-gray-800 p-8 rounded-xl">
-    <h2 class="text-3xl font-bold mb-6 text-ink dark:text-white">Preguntas Frecuentes y el Impacto Psicológico</h2>
-    <p class="text-body dark:text-gray-300 mb-6">Seamos increíblemente honestos por un momento: lidiar con esto puede causar una grave fatiga y ansiedad. No estás solo. Aquí tienes las preguntas más críticas respondidas con total transparencia para proteger tu bienestar mental y asegurarnos de que tengas todos los datos.</p>
-    <div class="space-y-6">
-        <div>
-            <h3 class="text-xl font-semibold text-ink dark:text-white">1. ¿Cómo manejo la ansiedad de tener que hacer esto perfectamente?</h3>
-            <p class="text-body dark:text-gray-300 mt-2">La carga psicológica de intentar ser perfecto puede llevar a la parálisis. Los expertos recomiendan centrarse en la regla del 80/20. La consistencia y la precisión general producirán el 90% de los resultados deseados.</p>
-        </div>
-        <div>
-            <h3 class="text-xl font-semibold text-ink dark:text-white">2. ¿Cuáles son los efectos a largo plazo de ignorar estas pautas?</h3>
-            <p class="text-body dark:text-gray-300 mt-2">Con el tiempo, la negligencia sistémica se convierte en problemas mayores de salud física y mental. El cumplimiento adecuado mitiga el malestar crónico.</p>
-        </div>
-        <div>
-            <h3 class="text-xl font-semibold text-ink dark:text-white">3. ¿Con qué frecuencia debo reevaluar mis números base?</h3>
-            <p class="text-body dark:text-gray-300 mt-2">Se recomienda encarecidamente reevaluar tus medidas y necesidades calóricas cada 3 a 6 meses, o inmediatamente después de cualquier cambio significativo.</p>
-        </div>
-        <div>
-            <h3 class="text-xl font-semibold text-ink dark:text-white">4. ¿Existe algún peligro al depender completamente de calculadoras automatizadas?</h3>
-            <p class="text-body dark:text-gray-300 mt-2">Si bien las calculadoras proporcionan un punto de partida matemáticamente sólido, no pueden tener en cuenta la biología humana matizada. Úsalas siempre como guía.</p>
-        </div>
+    <h2 class="text-4xl font-extrabold text-ink mt-16 mb-8 tracking-tight">1. El Mito de las 2,000 Calorías Diarias</h2>
+    
+    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-3xl border border-blue-100 mb-8 shadow-sm">
+      <p class="m-0 text-ink">
+        Históricamente, es muy probable que hayas observado etiquetas nutricionales basadas en una dieta estándar de 2,000 calorías. Utilizar este número como una regla universal para toda la población es un grave error fisiológico. La cifra de 2,000 calorías es simplemente una referencia demográfica general, establecida hace décadas por la FDA y otras organizaciones sanitarias con el único propósito de estandarizar el etiquetado industrial de los alimentos, no como una prescripción médica personalizada.
+      </p>
     </div>
-</div>
+
+    <p>
+      En la fisiología real, el panorama es diametralmente opuesto. Una mujer joven, atleta de élite y muy activa podría necesitar fácilmente más de 3,000 calorías al día simplemente para mantener su peso corporal y evitar la pérdida de masa muscular. En contraste, un hombre de edad avanzada, con un metabolismo ralentizado y un estilo de vida predominantemente sedentario, podría requerir menos de 1,700 calorías para no ganar tejido adiposo.
+    </p>
+    <p>
+      Por lo tanto, la cantidad de energía calórica que tu cuerpo demanda es una <strong>estimación altamente individualizada</strong> que depende íntegramente de la intrincada maquinaria bioquímica de tu organismo y de las demandas físicas a las que lo sometes.
+    </p>
+
+    <h2 class="text-4xl font-extrabold text-ink mt-16 mb-8 tracking-tight">2. Desglose del Gasto Energético Total (TDEE)</h2>
+    <p>
+      Para comprender cuántas calorías debes ingerir, primero debes entender cómo las gastas. Tu cuerpo quema energía a través de tres vías metabólicas principales, que en conjunto forman tu <strong>Gasto Energético Total Diario (TDEE - Total Daily Energy Expenditure)</strong>.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
+      <div class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl border border-hairline shadow-sm hover:-translate-y-1 transition-transform duration-300">
+        <h4 class="text-xl font-bold text-brand mb-3">TMB (Tasa Metabólica Basal)</h4>
+        <p class="text-sm text-body">Representa aproximadamente el <strong>60-75%</strong> de tu gasto calórico. Es la energía que tu cuerpo requiere para mantener sus funciones vitales en estado de reposo absoluto: latidos del corazón, respiración, función cerebral, filtración renal y mantenimiento de la temperatura corporal.</p>
+      </div>
+      <div class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl border border-hairline shadow-sm hover:-translate-y-1 transition-transform duration-300">
+        <h4 class="text-xl font-bold text-brand mb-3">NEAT y Ejercicio</h4>
+        <p class="text-sm text-body">Abarca el <strong>15-30%</strong> del gasto total. Incluye tanto el ejercicio consciente (correr, levantar pesas) como el NEAT (Termogénesis por Actividad sin Ejercicio), que son todos los movimientos subconscientes del día: caminar al trabajo, gesticular, estar de pie, etc.</p>
+      </div>
+      <div class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl border border-hairline shadow-sm hover:-translate-y-1 transition-transform duration-300">
+        <h4 class="text-xl font-bold text-brand mb-3">TEF (Efecto Térmico de los Alimentos)</h4>
+        <p class="text-sm text-body">Constituye alrededor del <strong>10%</strong> del gasto diario. Es la energía calórica que tu tracto digestivo utiliza para masticar, digerir, absorber y almacenar los macro y micronutrientes de los alimentos que consumes. Las proteínas tienen el TEF más alto.</p>
+      </div>
+    </div>
+
+    <h2 class="text-4xl font-extrabold text-ink mt-16 mb-8 tracking-tight">3. Los Pilares que Determinan tu Necesidad Calórica</h2>
+    <p>
+      Más allá de los componentes biológicos abstractos, existen variables tangibles que puedes medir y que impactan directamente sobre tu metabolismo. Analicemos detalladamente los pilares que determinan tu umbral energético.
+    </p>
+
+    <h3 class="text-2xl font-bold text-ink mt-8 mb-4">La Influencia de la Edad en el Metabolismo</h3>
+    <p>
+      El envejecimiento es un factor ineludible. A medida que cumples años, tu Tasa Metabólica Basal tiende a ralentizarse. Este declive no se debe a que el cuerpo humano "se rompa", sino principalmente a un proceso conocido como <strong>sarcopenia</strong> (la pérdida progresiva de masa muscular esquelética relacionada con la edad) y a la disminución de la actividad celular. Como el tejido muscular es altamente exigente a nivel metabólico, su pérdida significa que tu cuerpo necesita quemar menos calorías diarias. Mantener el entrenamiento de fuerza a lo largo de los años es la mejor estrategia clínica para mitigar este impacto.
+    </p>
+
+    <h3 class="text-2xl font-bold text-ink mt-8 mb-4">Diferencias de Sexo y Composición Corporal</h3>
+    <p>
+      En promedio poblacional, los hombres biológicos poseen un mayor volumen de masa magra (músculo) y una menor proporción de masa grasa en comparación con las mujeres biológicas de estatura y peso similares. Dado que un kilogramo de músculo en reposo quema significativamente más calorías que un kilogramo de tejido adiposo (grasa), la demanda energética masculina suele ser estadísticamente superior. Sin embargo, una mujer con alta hipertrofia muscular superará en demanda metabólica a un hombre sedentario con atrofia muscular.
+    </p>
+
+    <h3 class="text-2xl font-bold text-ink mt-8 mb-4">Impacto del Peso y la Estatura</h3>
+    <p>
+      Las leyes de la física son implacables: un cuerpo de mayor tamaño y masa requiere más energía cinética para moverse y más energía basal para sustentar sus procesos homeostáticos. Las personas altas y con mayor masa corporal total invariablemente poseerán una TMB más alta. Incluso el corazón debe bombear con mayor fuerza para oxigenar una mayor cantidad de tejido.
+    </p>
+
+    <h3 class="text-2xl font-bold text-ink mt-8 mb-4">Nivel de Actividad Física (El Factor Modificable)</h3>
+    <p>
+      Esta es la variable sobre la que posees un control voluntario y absoluto. Tu actividad física actúa como el mayor multiplicador de tu TMB. Un estilo de vida confinado a una silla de oficina generará requerimientos mínimos, mientras que un trabajo de exigencia física (como la construcción) o una rutina atlética diaria incrementarán exponencialmente las calorías necesarias para prevenir el catabolismo y la fatiga del sistema nervioso central.
+    </p>
+
+    <h2 class="text-4xl font-extrabold text-ink mt-16 mb-8 tracking-tight">4. El Cálculo de las Necesidades Energéticas: Ecuaciones Clínicas</h2>
+    <p>
+      Para determinar el número exacto, los científicos y nutricionistas emplean ecuaciones predictivas. La más precisa y validada en la actualidad para la población general es la <strong>Ecuación de Mifflin-St Jeor</strong>, desarrollada en 1990, que demostró ser un 5% más exacta que la antigua fórmula de Harris-Benedict.
+    </p>
+
+    <div class="bg-canvas-soft p-8 rounded-3xl mb-8">
+      <h4 class="text-xl font-bold text-ink mb-4">La Fórmula Matemática de Mifflin-St Jeor:</h4>
+      <ul class="space-y-4">
+        <li class="bg-white/60 p-4 rounded-xl border border-hairline"><strong>Para Hombres:</strong> TMB = (10 × peso en kg) + (6.25 × altura en cm) - (5 × edad en años) + 5</li>
+        <li class="bg-white/60 p-4 rounded-xl border border-hairline"><strong>Para Mujeres:</strong> TMB = (10 × peso en kg) + (6.25 × altura en cm) - (5 × edad en años) - 161</li>
+      </ul>
+      <p class="mt-4 text-sm text-body">
+        Una vez obtenida la TMB, este valor debe multiplicarse por el Factor de Actividad (rango de 1.2 para sedentarios hasta 1.9 para atletas extremos) para revelar tu GET (Gasto Energético Total).
+      </p>
+    </div>
+
+    <p>
+      Afortunadamente, no tienes que realizar estas complejas operaciones matemáticas a mano con papel y lápiz. La tecnología moderna lo hace por ti en fracciones de segundo.
+    </p>
+
+    <div class="my-12 p-1 bg-gradient-to-r from-brand to-purple-600 rounded-3xl shadow-xl transform transition-all hover:scale-[1.02]">
+      <div class="bg-white rounded-[23px] p-8 md:p-12 text-center">
+        <h3 class="text-3xl font-extrabold text-ink mb-4">Deja las matemáticas en nuestras manos</h3>
+        <p class="text-lg text-body mb-8 max-w-2xl mx-auto">
+          Nuestra herramienta avanzada procesa tu perfil biométrico al instante y aplica los multiplicadores de actividad clínica correctos, ofreciéndote un desglose milimétrico de las calorías y macronutrientes que tu cuerpo exige hoy.
+        </p>
+        <Button href="/country/spain/calculadora-de-calorias/" variant="primary" size="lg" class="w-full md:w-auto px-12 py-4 text-lg font-bold shadow-brand">
+          Ir a la Calculadora de Calorías Profesional
+        </Button>
+      </div>
+    </div>
+
+    <h2 class="text-4xl font-extrabold text-ink mt-16 mb-8 tracking-tight">5. Estrategias Dietéticas: Mantenimiento, Déficit y Superávit</h2>
+    
+    <h3 class="text-2xl font-bold text-ink mt-8 mb-4">Para Mantener el Peso (Normocalórica)</h3>
+    <p>
+      Tus calorías de mantenimiento son el santo grial de la estabilidad metabólica. Representan el punto de equilibrio donde la energía ingerida iguala a la energía oxidada. Si consumes crónicamente tus calorías de mantenimiento, tu masa corporal no fluctuará de manera significativa (aunque podrías experimentar pequeñas variaciones diarias por retención de líquidos o glucógeno).
+    </p>
+
+    <h3 class="text-2xl font-bold text-ink mt-8 mb-4">Para Perder Grasa (Déficit Calórico)</h3>
+    <p>
+      Las leyes de la termodinámica dictan que para reducir el tejido adiposo, debes inducir un <strong>déficit energético</strong>. Obligar al cuerpo a enfrentarse a una escasez controlada de calorías provenientes de la dieta forzará al organismo a lipolizar (descomponer) la grasa almacenada para cubrir sus necesidades.
+    </p>
+    <p>
+      La literatura médica aconseja encarecidamente un déficit moderado y sostenible, habitualmente situado entre <strong>300 y 500 calorías por debajo de tu nivel de mantenimiento</strong>. Un déficit agresivo (superior a 1,000 calorías) a menudo precipita adaptaciones metabólicas severas, desencadenando letargo, pérdida dramática de masa muscular, alteraciones hormonales (como la disminución de leptina y hormonas tiroideas), y finalmente, el temido efecto rebote.
+    </p>
+
+    <h3 class="text-2xl font-bold text-ink mt-8 mb-4">Para Ganar Masa Muscular (Superávit Calórico)</h3>
+    <p>
+      La hipertrofia (crecimiento muscular) es un proceso biológicamente costoso. Para construir nuevo tejido de forma eficiente, debes suministrarle al cuerpo un exceso de energía a través de un <strong>superávit calórico</strong>, apoyado por un estímulo de hipertrofia (entrenamiento de fuerza intenso).
+    </p>
+    <p>
+      El error más común durante el volumen o "bulking" es ingerir un exceso desmesurado de calorías. La capacidad de síntesis proteica muscular tiene un techo natural. Un superávit responsable oscila entre <strong>200 y 400 calorías extra al día</strong>. Todo excedente por encima de ese umbral probablemente se almacene como tejido adiposo no deseado, no como fibra muscular adicional.
+    </p>
+
+    <h2 class="text-4xl font-extrabold text-ink mt-16 mb-8 tracking-tight">6. Monitoreo, Precisión y Ajustes Clínicos</h2>
+    <p>
+      Es imperativo interiorizar una verdad fundamental: <strong>todas las fórmulas metabólicas son estimaciones matemáticas</strong>. Son mapas, no el territorio. Incluso la ecuación más sofisticada tiene un margen de error intrínseco debido a variaciones genéticas, adaptaciones metabólicas pasadas (daño metabólico por dietas crónicas), variaciones en el TEF según los alimentos elegidos, y el estrés crónico que eleva el cortisol.
+    </p>
+    
+    <div class="bg-yellow-50 p-6 rounded-2xl border-l-4 border-yellow-400 my-8">
+      <h4 class="font-bold text-yellow-800 text-lg mb-2">Consejo Práctico de los Expertos:</h4>
+      <p class="text-yellow-700 m-0">No trates la cifra de la calculadora como un dogma inamovible. Utilízala como tu línea base o punto de partida. Durante 14 días, consume rigurosamente esas calorías y monitoriza tu peso, medidas corporales y niveles de energía. Si buscas perder peso y la báscula no desciende tras dos semanas, ajusta reduciendo 100-200 calorías. <strong>La bio-retroalimentación de tu propio cuerpo es el único dato 100% real.</strong></p>
+    </div>
+
+    <p>
+      El registro de alimentos no debe convertirse en una prisión psicológica, sino en una herramienta educativa temporal. Tras un periodo de seguimiento riguroso de calorías (por ejemplo, mediante básculas de cocina y aplicaciones), desarrollarás un "ojo clínico" para estimar porciones instintivamente y podrás transicionar hacia hábitos de alimentación intuitiva, donde honres tus señales de hambre y saciedad sin depender perpetuamente de los números.
+    </p>
+
+    <h2 class="text-3xl font-bold text-ink mt-16 mb-6">Referencias Médicas y Científicas</h2>
+    <ul class="space-y-3 mb-16">
+      <li class="flex items-start gap-2">
+        <span class="text-brand">📚</span>
+        <a href="https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="noopener noreferrer" class="hover:underline text-body">Organización Mundial de la Salud (OMS) - Directrices para una Dieta Sana y Equilibrada.</a>
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="text-brand">📚</span>
+        <a href="https://www.mayoclinic.org/es-es/healthy-lifestyle/weight-loss/in-depth/calories/art-20048065" target="_blank" rel="noopener noreferrer" class="hover:underline text-body">Mayo Clinic - El Control de Calorías y la Dinámica del Peso.</a>
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="text-brand">📚</span>
+        <a href="https://medlineplus.gov/spanish/ency/patientinstructions/000892.htm" target="_blank" rel="noopener noreferrer" class="hover:underline text-body">MedlinePlus - Calorías, peso corporal y el balance energético de la Biblioteca Nacional de Medicina de EE.UU.</a>
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="text-brand">📚</span>
+        <span class="text-body">Mifflin, M. D., St Jeor, S. T., et al. (1990). A new predictive equation for resting energy expenditure in healthy individuals. The American Journal of Clinical Nutrition.</span>
+      </li>
+    </ul>
+    
+    <hr class="border-hairline my-12" />
+
+    <!-- FAQ SECTION -->
+    <div class="mt-16 bg-white/80 backdrop-blur-md p-8 sm:p-10 rounded-3xl border border-hairline shadow-sm">
+      <h2 class="text-3xl font-bold mb-6 text-ink">Preguntas Frecuentes y el Impacto Psicológico del Conteo Calórico</h2>
+      <p class="text-body text-lg mb-8">Seamos profundamente honestos: la constante vigilancia métrica sobre lo que ingerimos puede detonar fatiga mental severa y ansiedad alimentaria. No estás solo en esta lucha. A continuación, respondemos las inquietudes más críticas con absoluta transparencia, priorizando tanto tu salud fisiológica como tu bienestar mental.</p>
+      
+      <div class="space-y-8">
+        <div class="bg-canvas-soft rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-ink mb-3">1. ¿Cómo manejo la ansiedad de intentar acertar siempre mis calorías al milímetro?</h3>
+          <p class="text-body m-0">La carga psicológica de buscar la perfección matemática a diario es la principal causa de abandono de los planes nutricionales y el origen de la parálisis por análisis. Los clínicos de la nutrición recomiendan encarecidamente adoptar la <strong>regla del 80/20</strong>. Si el 80% del tiempo eres consistente y tu dieta se basa en alimentos enteros de un solo ingrediente, alcanzarás el 90% de tus objetivos. Una desviación de 100 calorías un día no desbaratará tu progreso fisiológico. La constancia sostenida siempre vencerá a la perfección efímera.</p>
+        </div>
+        <div class="bg-canvas-soft rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-ink mb-3">2. ¿Cuáles son los verdaderos efectos a largo plazo de ignorar completamente estas pautas?</h3>
+          <p class="text-body m-0">La ignorancia calórica sistémica y el consumo descontrolado prolongado desembocan inexorablemente en patologías metabólicas mayores. Más allá de la alteración estética del aumento de tejido adiposo visceral, el riesgo reside en el desarrollo de resistencia a la insulina, diabetes tipo 2, hipertensión y dislipidemias crónicas. Tomar el control y comprender tus números básicos actúa como un escudo profiláctico que mitiga el deterioro físico prematuro.</p>
+        </div>
+        <div class="bg-canvas-soft rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-ink mb-3">3. ¿Con qué frecuencia clínica debo reevaluar mi TMB y mis calorías objetivo?</h3>
+          <p class="text-body m-0">Tu metabolismo no es un monolito estático. A medida que pierdes peso (reduciendo masa que mantener) o ganas músculo (aumentando tejido activo), tus demandas energéticas mutarán. Se estipula como buena práctica reevaluar tus necesidades calculándolas nuevamente cada <strong>3 a 6 meses</strong>, o de forma inmediata tras haber experimentado una variación de peso superior a 5-7 kilogramos, o si modificas drásticamente tu volumen de entrenamiento (por ejemplo, pasar de entrenar 2 días a 5 días por semana).</p>
+        </div>
+        <div class="bg-canvas-soft rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-ink mb-3">4. ¿Existe riesgo de peligro al depender ciegamente de calculadoras automatizadas?</h3>
+          <p class="text-body m-0">Indudablemente. Si bien las calculadoras algorítmicas de vanguardia proporcionan una plataforma matemática robusta y fundamentada científicamente, son incapaces de cuantificar las intrincadas y sutiles variaciones biológicas individuales, fluctuaciones hormonales (ciclo menstrual, estrés cortisol) o adaptaciones tiroideas. Tratarlas como biblias dogmáticas en lugar de como faros de orientación puede conducir a déficits nutricionales extremos o frustración. Siempre utilízalas como el marco teórico, pero permite que los resultados reales dicten los ajustes empíricos.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENIDO SUGERIDO / CTA FINAL -->
+    <div class="mt-16 bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-3xl border border-hairline shadow-inner">
+      <h3 class="text-2xl font-bold text-ink mb-6 text-center">Contenido Sugerido y Herramientas</h3>
+      <p class="text-center text-body mb-8">Continúa tu aprendizaje y toma el control absoluto de tu nutrición con nuestras guías especializadas y herramientas gratuitas.</p>
+      
+      <div class="flex flex-col md:flex-row gap-6 justify-center">
+        <!-- Calculadora -->
+        <a href="/country/spain/calculadora-de-calorias/" class="flex-1 bg-white p-6 rounded-2xl border border-hairline shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
+          <div class="text-3xl mb-3">🧮</div>
+          <h4 class="font-bold text-ink group-hover:text-brand transition-colors">Calculadora de Calorías Profesional</h4>
+          <p class="text-sm text-body mt-2">Calcula tus macros y requerimientos diarios en 30 segundos.</p>
+        </a>
+        
+        <!-- Articulo 1 -->
+        <a href="/country/spain/que-son-las-calorias-y-como-funcionan/" class="flex-1 bg-white p-6 rounded-2xl border border-hairline shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
+          <div class="text-3xl mb-3">🔬</div>
+          <h4 class="font-bold text-ink group-hover:text-brand transition-colors">¿Qué Son las Calorías?</h4>
+          <p class="text-sm text-body mt-2">Profundiza en la ciencia detrás de la energía, la termodinámica y cómo procesamos los alimentos.</p>
+        </a>
+
+        <!-- Articulo 2 -->
+        <a href="/country/spain/como-leer-etiquetas-nutricionales/" class="flex-1 bg-white p-6 rounded-2xl border border-hairline shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
+          <div class="text-3xl mb-3">🏷️</div>
+          <h4 class="font-bold text-ink group-hover:text-brand transition-colors">Guía de Etiquetas Nutricionales</h4>
+          <p class="text-sm text-body mt-2">Aprende a leer y descifrar las tablas nutricionales de los alimentos de forma inteligente.</p>
+        </a>
+      </div>
+      
+      <div class="mt-10 text-center">
+        <Button href="/country/spain/calculadora-de-calorias/" variant="primary" size="lg" class="w-full sm:w-auto font-bold shadow-md">
+          Calcular mis Calorías Ahora
+        </Button>
+      </div>
+    </div>
+  </div>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [{"@type":"Question","name":"¿Cómo manejo la ansiedad de tener que hacer esto perfectamente?","acceptedAnswer":{"@type":"Answer","text":"Los expertos recomiendan centrarse en la regla del 80/20."}}, {"@type":"Question","name":"¿Cuáles son los efectos a largo plazo de ignorar estas pautas?","acceptedAnswer":{"@type":"Answer","text":"La negligencia sistémica se convierte en problemas mayores de salud física y mental."}}]
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cómo manejo la ansiedad de intentar acertar siempre mis calorías al milímetro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los expertos recomiendan centrarse en la regla del 80/20. Si el 80% del tiempo eres consistente, alcanzarás el 90% de tus objetivos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuáles son los verdaderos efectos a largo plazo de ignorar completamente estas pautas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La ignorancia calórica sistémica desemboca en patologías metabólicas mayores, como resistencia a la insulina, diabetes tipo 2 y obesidad."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Con qué frecuencia clínica debo reevaluar mi TMB y mis calorías objetivo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Se estipula como buena práctica reevaluar tus necesidades calculándolas nuevamente cada 3 a 6 meses, o tras variaciones de peso de 5-7 kg."
+      }
+    }
+  ]
 }
 </script>
 

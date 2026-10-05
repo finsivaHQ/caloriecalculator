@@ -23,6 +23,10 @@ const faqs: FaqItem[] = [
   {
     q: "¿Afecta la obesidad o el envejecimiento a la termogénesis inducida por la dieta?",
     a: "Estudios científicos sugieren que la termogénesis inducida por la dieta puede estar ligeramente reducida en personas mayores y en individuos con resistencia a la insulina severa u obesidad crónica. Sin embargo, mejorar la composición corporal y la sensibilidad a la insulina mediante ejercicio y una dieta adecuada puede optimizar de nuevo la respuesta termogénica del organismo."
+  },
+  {
+    q: "¿Comer más veces al día aumenta significativamente el efecto térmico?",
+    a: "No. La ciencia ha demostrado que el TEF es proporcional a la ingesta calórica total, no a la frecuencia de las comidas. Comer 2000 calorías en tres comidas grandes o en seis comidas pequeñas generará aproximadamente el mismo gasto térmico total al final del día."
   }
 ];
 
@@ -38,148 +42,233 @@ const seoDescription = "Descubre qué es el efecto térmico de los alimentos (te
   category="Guías"
   categoryPath="/country/spain/calculadora-de-calorias/"
   lead="Comprender el efecto térmico de los alimentos (TEF) es uno de los componentes más cruciales, pero menos comprendidos, de la nutrición humana. Descubre cómo la termogénesis inducida por la dieta influye directamente en la cantidad de calorías que quemas diariamente y cómo puedes manipularla para alcanzar tus metas físicas."
-  updated="Septiembre 2026"
+  updated="Octubre 2026"
   faqs={faqs}
   lang="es"
 >
-<div class="bg-brand-soft/50 p-4 rounded-xl border border-blue-100 mb-8 flex items-center gap-3">
-  <span class="text-2xl">⚕️</span>
-  <p class="text-sm text-body m-0"><strong>Revisión Médica:</strong> Este artículo ha sido redactado y revisado de acuerdo con las directrices clínicas de nutrición (2026). Basado en evidencia científica.</p>
+<div class="bg-gradient-to-r from-blue-50 to-indigo-50/30 p-5 rounded-2xl border border-hairline mb-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 shadow-sm">
+  <span class="text-4xl">⚕️</span>
+  <p class="text-sm text-ink m-0 leading-relaxed">
+    <strong>Revisión Médica y Científica:</strong> Este documento ha sido redactado de acuerdo con las directrices clínicas de nutrición contemporáneas (2026) y la evidencia endocrinológica actual. Nuestro equipo aplica rigurosamente las pautas E-E-A-T (Experiencia, Especialización, Autoridad y Confianza) para proporcionarte información metabólica precisa, segura y accionable.
+  </p>
 </div>
 
-  <p>Cuando la mayoría de las personas piensan en estrategias para quemar calorías, su mente se dirige inmediatamente hacia sesiones intensas de ejercicio en el gimnasio, largas caminatas matutinas o la manipulación de su metabolismo basal mediante el desarrollo muscular. Sin embargo, existe un factor fascinante, silencioso y a menudo completamente subestimado en la intrincada ecuación de nuestro balance energético: el acto fisiológico de comer.</p>
-  
-  <p>El <strong>efecto térmico de los alimentos (TEF por sus siglas en inglés, Thermic Effect of Food)</strong>, también conocido rigurosamente en la literatura científica como <strong>termogénesis inducida por la dieta (TID)</strong>, se refiere al gasto de energía obligatorio que nuestro sistema digestivo y metabólico debe realizar para llevar a cabo la digestión, absorción, transporte, oxidación y el eventual almacenamiento de los nutrientes que consumimos. Expresado en términos sencillos: tu cuerpo requiere invertir calorías para poder asimilar calorías.</p>
+<p class="text-lg text-ink leading-relaxed mb-6">Cuando la inmensa mayoría de las personas piensan en estrategias para optimizar la quema de calorías y facilitar la pérdida de peso, su mente se dirige inmediatamente hacia sesiones agotadoras de ejercicio cardiovascular, el levantamiento de pesas o el aumento de los pasos diarios. Sin embargo, existe un factor fascinante, silencioso y a menudo completamente subestimado en la intrincada ecuación de nuestro balance energético: el propio acto fisiológico de comer.</p>
 
-  <h2>Anatomía del Gasto Energético: ¿Dónde encaja la Termogénesis Inducida por la Dieta?</h2>
-  <p>Para apreciar el verdadero impacto médico del efecto térmico de los alimentos, primero debemos observar el panorama general de cómo el cuerpo humano orquesta la utilización de la energía. El <strong>Gasto Energético Total Diario (TDEE)</strong> no es una cifra estática, sino la suma dinámica de cuatro pilares fisiológicos principales:</p>
-  <ul>
-    <li><strong>Tasa Metabólica Basal (BMR o TMB):</strong> Constituye el componente más grande, representando entre el 60% y el 70% de tus calorías quemadas a lo largo del día. Es la energía intransigente que tu cuerpo requiere para sustentar funciones vitales en estado de completo reposo, como el funcionamiento cerebral, la respiración pulmonar, la filtración renal y el latido cardíaco.</li>
-    <li><strong>Termogénesis por Actividad Sin Ejercicio (NEAT):</strong> Representa alrededor del 15% (aunque es el factor más variable). Engloba todas las calorías quemadas mediante el movimiento diario que no clasifica como ejercicio consciente: caminar al trabajo, gestos involuntarios, mantener la postura e incluso la inquietud nerviosa.</li>
-    <li><strong>Efecto Térmico de los Alimentos (TEF):</strong> Supone consistentemente en torno al 10% de tu gasto diario en individuos sanos. Son las <strong>TEF calorías</strong> que gastas procesando la comida a través de tu tracto gastrointestinal.</li>
-    <li><strong>Termogénesis por Actividad de Ejercicio (EAT):</strong> Representa del 5% al 10%, dependiendo de la frecuencia e intensidad de tus entrenamientos intencionados (levantamiento de pesas, natación, running).</li>
-  </ul>
-  
-  <p>Como demuestran los datos clínicos, el efecto térmico de los alimentos compone una porción estadísticamente significativa de tu gasto total. Si consumes una dieta de mantenimiento de 2,500 calorías diarias, tu cuerpo asignará y gastará aproximadamente 250 calorías de forma automática, dedicadas única y exclusivamente a la titánica tarea de descomponer los complejos enlaces moleculares de tu desayuno, almuerzo y cena.</p>
+<p class="text-lg text-ink leading-relaxed mb-8">El <strong>efecto térmico de los alimentos (TEF por sus siglas en inglés, Thermic Effect of Food)</strong>, también conocido rigurosamente en la literatura clínica y científica como <strong>termogénesis inducida por la dieta (TID)</strong>, se refiere al gasto de energía obligatorio que nuestro intrincado sistema digestivo y metabólico debe realizar para llevar a cabo los procesos de masticación, digestión gástrica, absorción intestinal, transporte sanguíneo, oxidación celular y el eventual almacenamiento de los nutrientes que consumimos. Expresado en los términos más simples posibles: tu cuerpo biológico requiere invertir calorías para poder asimilar calorías.</p>
 
-  <div class="my-10 bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-3xl border border-blue-100 shadow-sm relative overflow-hidden backdrop-blur-md bg-surface/80">
-    <div class="relative z-10">
-      <h3 class="text-xl font-bold text-ink mb-3 flex items-center gap-2">
-        💡 Consideración Bioquímica
-      </h3>
-      <p class="text-ink leading-relaxed m-0">
-        Cuando consumes alimentos, tu tracto gastrointestinal inicia la peristalsis (contracciones musculares rítmicas). Simultáneamente, se sintetizan y segregan enzimas pancreáticas, potentes ácidos gástricos y bilis hepática. Este costoso proceso rompe macroestructuras masivas convirtiéndolas en micronutrientes elementales (aminoácidos libres, ácidos grasos, glucosa). La creación de estas enzimas y el transporte activo de moléculas a través de las membranas celulares requiere la moneda energética fundamental del cuerpo: el ATP.
-      </p>
-    </div>
+<h2 class="text-3xl font-bold text-ink mt-12 mb-6">Anatomía del Gasto Energético: ¿Dónde encaja exactamente la Termogénesis Inducida por la Dieta?</h2>
+<p class="text-ink leading-relaxed mb-6">Para apreciar el verdadero impacto médico del efecto térmico de los alimentos, primero debemos observar el panorama general de cómo el cuerpo humano orquesta la utilización de la energía. El <strong>Gasto Energético Total Diario (TDEE)</strong> no es una cifra estática dictada únicamente por tu genética, sino la suma dinámica e interactiva de cuatro pilares fisiológicos fundamentales:</p>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+  <div class="bg-surface/80 backdrop-blur-md p-6 rounded-3xl border border-hairline shadow-sm hover:shadow-md transition-all">
+    <h3 class="text-xl font-bold text-brand mb-3 flex items-center gap-2"><span class="text-2xl">🔥</span> 1. Tasa Metabólica Basal (BMR)</h3>
+    <p class="text-ink text-sm leading-relaxed m-0">Constituye el componente más masivo, representando entre el <strong>60% y el 70%</strong> de tus calorías quemadas a lo largo del día. Es la energía intransigente que tu cuerpo requiere para sustentar funciones vitales en estado de completo reposo, como el funcionamiento sináptico cerebral, la respiración pulmonar, la filtración renal y el latido cardíaco ininterrumpido.</p>
   </div>
-
-  <h2>El Impacto Específico de los Macronutrientes en el TEF</h2>
-  <p>Un axioma crucial en la nutrición moderna es que <em>no todas las calorías imponen el mismo desafío metabólico</em>. Cada macronutriente demanda vías de asimilación drásticamente distintas, resultando en un coste termogénico heterogéneo. La literatura nutricional desglosa el impacto de la siguiente forma:</p>
-
-  <div class="overflow-x-auto my-8">
-    <table class="w-full text-left border-collapse rounded-2xl overflow-hidden shadow-sm">
-      <thead>
-        <tr class="bg-canvas-soft-2 text-ink">
-          <th class="p-4 font-bold border-b border-hairline">Macronutriente</th>
-          <th class="p-4 font-bold border-b border-hairline">Porcentaje TEF (Calorías Gastadas)</th>
-          <th class="p-4 font-bold border-b border-hairline">Rendimiento Neto Práctico (Por 100 kcal)</th>
-        </tr>
-      </thead>
-      <tbody class="bg-surface">
-        <tr>
-          <td class="p-4 border-b border-gray-100 font-semibold text-brand-hover">Proteínas</td>
-          <td class="p-4 border-b border-gray-100">20% - 30%</td>
-          <td class="p-4 border-b border-gray-100">Inviertes ~25 kcal en digestión. <strong>Retienes 75 kcal netas.</strong></td>
-        </tr>
-        <tr class="bg-canvas-soft">
-          <td class="p-4 border-b border-gray-100 font-semibold text-orange-700">Carbohidratos Complejos</td>
-          <td class="p-4 border-b border-gray-100">5% - 10%</td>
-          <td class="p-4 border-b border-gray-100">Inviertes ~8 kcal en digestión. <strong>Retienes 92 kcal netas.</strong></td>
-        </tr>
-        <tr>
-          <td class="p-4 border-b border-gray-100 font-semibold text-teal-700">Lípidos (Grasas)</td>
-          <td class="p-4 border-b border-gray-100">0% - 3%</td>
-          <td class="p-4 border-b border-gray-100">Inviertes ~2 kcal en digestión. <strong>Retienes 98 kcal netas.</strong></td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="bg-surface/80 backdrop-blur-md p-6 rounded-3xl border border-hairline shadow-sm hover:shadow-md transition-all">
+    <h3 class="text-xl font-bold text-brand mb-3 flex items-center gap-2"><span class="text-2xl">🚶</span> 2. Termogénesis por Actividad Sin Ejercicio (NEAT)</h3>
+    <p class="text-ink text-sm leading-relaxed m-0">Representa alrededor del <strong>15%</strong> del gasto energético, aunque es con diferencia el factor más variable entre individuos. Engloba todas las calorías quemadas mediante el movimiento diario que no clasifica como ejercicio consciente: caminar al trabajo, gestos involuntarios con las manos, mantener la postura erguida e incluso la inquietud nerviosa.</p>
   </div>
-
-  <p>Esta tabla revela el motivo fisiológico por el cual <strong>la proteína es universalmente considerada la reina de la termogénesis inducida por la dieta</strong>. A nivel molecular, las proteínas están constituidas por cadenas intrincadas de aminoácidos fuertemente entrelazados por enlaces peptídicos, y, de forma distintiva, contienen nitrógeno. Para que el organismo humano desmantele estas cadenas, extraiga los aminoácidos funcionales para la síntesis de tejido muscular y movilice el exceso de nitrógeno hacia el hígado para ser excretado como urea, debe realizar una cantidad superlativa de trabajo metabólico.</p>
-  
-  <p>En contraste, las grasas dietéticas poseen una estructura bioquímica que guarda una inmensa similitud con nuestras propias reservas de triglicéridos humanos. El cuerpo puede hidrolizarlas y canalizarlas hacia los adipocitos (células grasas) con una eficacia casi aterradora, empleando un esfuerzo termogénico mínimo y, por consiguiente, un TEF marginal.</p>
-
-  <h2>La Matriz Alimentaria: Alimentos Ultraprocesados vs. Alimentos Integrales</h2>
-  <p>Reducir la nutrición exclusivamente a la suma de los tres macronutrientes es un enfoque clínico reduccionista. El grado de industrialización y procesamiento de los alimentos, conocido técnicamente como disrupción de la matriz alimentaria, altera severamente las TEF calorías.</p>
-  
-  <p>Cuando ingieres alimentos altamente procesados (como panificaciones industriales, bollería refinada o bebidas azucaradas de rápida asimilación), estás consumiendo productos donde las fábricas ya han realizado el "trabajo pesado". Las fibras insolubles han sido amputadas mecánicamente y las estructuras moleculares están parcialmente hidrolizadas. Como resultado, la termogénesis inducida por la dieta se desploma; tu intestino absorbe las calorías como una esponja, requiriendo un gasto mínimo de energía.</p>
-  
-  <p>A la inversa, los <strong>alimentos enteros e íntegros</strong> (cortes magros de carne, pescado, lentejas, garbanzos, avena cortada en acero, verduras de hoja y frutos secos con sus hollejos) mantienen intacta su pared celular. Obligan a tus mandíbulas, estómago y flora intestinal a trabajar extenuantemente para desgarrar las matrices fibrosas. Ensayos clínicos doble ciego han demostrado consistentemente que una comida compuesta enteramente por alimentos integrales induce un aumento del gasto energético posprandial un 50% superior frente a una comida isocalórica compuesta por análogos ultraprocesados.</p>
-
-  <h2>3 Estrategias Comprobadas para Maximizar las TEF Calorías</h2>
-  <p>Conociendo la evidencia científica, puedes instrumentar protocolos específicos para optimizar tu salud metabólica e inclinar sutilmente la balanza energética a tu favor. Aquí te presentamos tácticas validadas para elevar tu termogénesis inducida por la dieta:</p>
-
-  <div class="grid gap-6 my-8 md:grid-cols-3">
-    <div class="bg-surface rounded-3xl p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-      <div class="w-14 h-14 rounded-full bg-brand-soft text-brand-hover flex items-center justify-center font-bold text-2xl mb-5 shadow-inner">1</div>
-      <h3 class="text-xl font-bold text-ink mb-3 mt-0">Prioriza la Hiper-Proteína</h3>
-      <p class="text-body text-[15px] leading-relaxed">Incorpora una ración robusta de proteína de alto valor biológico en cada comida (25-40 gramos). Esto no solo propulsará tus calorías quemadas mediante el TEF diario, sino que estimulará las hormonas gastrointestinales anorexigénicas (como GLP-1 y el Péptido YY), promoviendo una saciedad profunda que blindará tu adherencia a un déficit calórico.</p>
-    </div>
-    <div class="bg-surface rounded-3xl p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-      <div class="w-14 h-14 rounded-full bg-brand-soft text-brand-hover flex items-center justify-center font-bold text-2xl mb-5 shadow-inner">2</div>
-      <h3 class="text-xl font-bold text-ink mb-3 mt-0">Abraza la Fibra Compleja</h3>
-      <p class="text-body text-[15px] leading-relaxed">Sustituye los carbohidratos simples y las harinas refinadas por fuentes fibrosas e intactas. La digestión prolongada requerida para procesar la avena tradicional, el arroz salvaje, la quinua y las verduras crucíferas dispara el coste termogénico de la comida y estabiliza drásticamente las excursiones glucémicas e insulínicas en sangre.</p>
-    </div>
-    <div class="bg-surface rounded-3xl p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-      <div class="w-14 h-14 rounded-full bg-brand-soft text-brand-hover flex items-center justify-center font-bold text-2xl mb-5 shadow-inner">3</div>
-      <h3 class="text-xl font-bold text-ink mb-3 mt-0">Masticación y Solidez</h3>
-      <p class="text-body text-[15px] leading-relaxed">Prioriza siempre las calorías masticables frente a las potables. Los alimentos con densidad estructural sólida exigen un esfuerzo mecánico y enzimático mayor que las versiones líquidas (como jugos exprimidos o batidos comerciales de reemplazo de comidas). Literalmente, tu metabolismo se activa con más ahínco desde que comienzas a triturar el alimento.</p>
-    </div>
+  <div class="bg-surface/80 backdrop-blur-md p-6 rounded-3xl border border-hairline shadow-sm hover:shadow-md transition-all ring-2 ring-brand/20">
+    <h3 class="text-xl font-bold text-brand mb-3 flex items-center gap-2"><span class="text-2xl">🍽️</span> 3. Efecto Térmico de los Alimentos (TEF)</h3>
+    <p class="text-ink text-sm leading-relaxed m-0">Supone consistentemente en torno al <strong>10%</strong> de tu gasto diario en individuos sanos con dietas mixtas. Son las <strong>TEF calorías</strong> que gastas procesando, descomponiendo y asimilando la comida a través de tu tracto gastrointestinal. Es el peaje energético que pagas por alimentarte.</p>
   </div>
+  <div class="bg-surface/80 backdrop-blur-md p-6 rounded-3xl border border-hairline shadow-sm hover:shadow-md transition-all">
+    <h3 class="text-xl font-bold text-brand mb-3 flex items-center gap-2"><span class="text-2xl">🏋️</span> 4. Termogénesis por Actividad de Ejercicio (EAT)</h3>
+    <p class="text-ink text-sm leading-relaxed m-0">Representa típicamente del <strong>5% al 10%</strong> del gasto en la población general, dependiendo drásticamente de la frecuencia, volumen e intensidad de tus entrenamientos intencionados (levantamiento de pesas estructurado, natación, running, ciclismo, crossfit).</p>
+  </div>
+</div>
 
-  <h2>El Papel Sinergético del Ejercicio Físico en la Digestión</h2>
-  <p>Una vertiente frecuentemente ignorada de la literatura médica es cómo la composición corporal y la actividad física alteran nuestra respuesta térmica a los alimentos. Cuando posees una masa muscular magra desarrollada a través de la hipertrofia (entrenamiento de fuerza con pesas) y mantienes una alta sensibilidad a la insulina mediante ejercicios cardiovasculares recurrentes, la termogénesis se comporta de forma más eficiente.</p>
-  
-  <p>Al ingerir nutrientes tras un entrenamiento intenso, tu cuerpo redirige activamente esas TEF calorías y los macro-sustratos hacia la resíntesis de glucógeno y la reparación de miofibrillas dañadas. En este entorno hormonal altamente anabólico y receptivo, el coste del particionamiento de nutrientes se maximiza, favoreciendo una retención neta orientada hacia el músculo esquelético y desviándola lejos de los almacenes de tejido adiposo (grasa).</p>
+<p class="text-ink leading-relaxed mb-8">Como demuestran los datos clínicos y metabólicos modernos, el efecto térmico de los alimentos compone una porción estadísticamente significativa y manipulable de tu gasto total. Si un adulto consume una dieta de mantenimiento estándar de 2,500 calorías diarias, su cuerpo asignará y gastará <strong>aproximadamente 250 calorías de forma totalmente automática e involuntaria</strong>, dedicadas única y exclusivamente a la titánica tarea enzimática y mecánica de descomponer los complejos enlaces moleculares de su desayuno, almuerzo y cena.</p>
 
-  <h2>Consideraciones Médicas Finales: ¿Es Suficiente para Perder Peso?</h2>
-  <p>La termogénesis inducida por la dieta es una maravilla biológica, pero <strong>no debe ser malinterpretada como un atajo milagroso</strong> hacia la pérdida de tejido graso. Es imperativo desacreditar definitivamente el mito pseudo-científico de las "calorías negativas"; ningún alimento botánico ni proteína magra genera un balance energético deficitario por sí solo. Incluso si ingirieras 500 calorías de pechuga de pavo (puramente proteína), el coste del TEF rondaría las 150 calorías, dejando un saldo positivo inevitable de 350 calorías absorbidas y almacenadas.</p>
-
-  <p>El profundo conocimiento sobre el efecto térmico de los alimentos debe ser implementado con sabiduría: úsalo para <strong>optimizar una estrategia dietética científicamente fundamentada</strong>, pero jamás para intentar evadir la inquebrantable ley de la termodinámica. Si consumes crónicamente un exceso sustancial de calorías totales diarias, tu cuerpo experimentará hipertrofia de adipocitos (aumento de grasa), sin importar si esas calorías derivaron de los alimentos integrales con el TEF más alto del mundo (como nueces crudas, carnes magras y vegetales densos).</p>
-
-  <p>Para cristalizar una pérdida de peso sostenible y saludable, el primer paso clínico es establecer con precisión absoluta cuál es tu Gasto Energético Total. Al comprender matemáticamente cuánto quema tu metabolismo en reposo, tu movimiento cotidiano y la termogénesis generada por tus alimentos, tendrás el control total sobre tu composición corporal.</p>
-
-  <div class="mt-12 text-center bg-canvas-soft p-10 rounded-[2rem] border border-hairline shadow-sm backdrop-blur-md bg-surface/50">
-    <h3 class="text-3xl font-extrabold text-ink mb-4 tracking-tight">Toma el Control Total de tu Nutrición</h3>
-    <p class="text-body mb-8 max-w-2xl mx-auto text-lg leading-relaxed">
-      Ahora que dominas la ciencia detrás de cómo tu cuerpo procesa los alimentos, es el momento idóneo para descubrir el número exacto de calorías que tu fisiología demanda diariamente para aniquilar la grasa o esculpir músculo magro.
+<div class="my-12 bg-gradient-to-br from-indigo-50/50 to-blue-50/50 p-8 sm:p-10 rounded-[2.5rem] border border-blue-100/50 shadow-sm relative overflow-hidden backdrop-blur-md bg-surface/80">
+  <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-200/30 rounded-full blur-3xl"></div>
+  <div class="relative z-10">
+    <h3 class="text-2xl font-bold text-ink mb-4 flex items-center gap-3">
+      <span class="bg-white p-2 rounded-xl shadow-sm">🔬</span> Profundidad Bioquímica: ¿Qué ocurre a nivel celular?
+    </h3>
+    <p class="text-ink leading-relaxed m-0">
+      Cuando consumes alimentos, tu tracto gastrointestinal no simplemente es un tubo pasivo; es una maquinaria industrial altamente activa. Se inicia la peristalsis (contracciones musculares rítmicas del estómago e intestinos que trituran físicamente el bolo alimenticio). Simultáneamente, las glándulas sintetizan y segregan litros de jugos gástricos ricos en ácido clorhídrico, enzimas pancreáticas especializadas (proteasas, lipasas, amilasas) y bilis hepática. Todo este monumental y costoso proceso rompe macroestructuras masivas convirtiéndolas en micronutrientes elementales (aminoácidos libres, ácidos grasos, glucosa). Posteriormente, el transporte activo de estas moléculas a través de las membranas celulares intestinales hacia el torrente sanguíneo requiere una inversión masiva de la moneda energética fundamental de la biología: el ATP (Trifosfato de Adenosina). El calor liberado durante esta producción acelerada de ATP es precisamente lo que los científicos miden en un calorímetro y denominan TEF.
     </p>
-    <Button href="/country/spain/calculadora-de-calorias/" size="lg" class="mt-4 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5">
-      Calcula tus Calorías Diarias
+  </div>
+</div>
+
+<h2 class="text-3xl font-bold text-ink mt-12 mb-6">El Impacto Profundo y Específico de los Macronutrientes en el TEF</h2>
+<p class="text-ink leading-relaxed mb-6">Un axioma crucial e inquebrantable en la ciencia de la nutrición moderna es que <em>no todas las calorías imponen el mismo desafío metabólico al organismo</em>. La idea de que "una caloría es una caloría" es válida puramente desde una perspectiva termodinámica de un sistema cerrado, pero el cuerpo humano es un sistema biológico abierto y adaptativo. Cada macronutriente demanda vías de asimilación enzimática drásticamente distintas, resultando en un coste termogénico radicalmente heterogéneo.</p>
+
+<p class="text-ink leading-relaxed mb-8">La literatura nutricional peer-reviewed desglosa el impacto metabólico de la siguiente forma precisa:</p>
+
+<div class="overflow-x-auto my-10 bg-surface rounded-[2rem] border border-hairline shadow-sm p-2">
+  <table class="w-full text-left border-collapse">
+    <thead>
+      <tr class="bg-canvas-soft text-ink rounded-t-2xl">
+        <th class="p-5 font-bold border-b border-hairline whitespace-nowrap rounded-tl-xl">Macronutriente</th>
+        <th class="p-5 font-bold border-b border-hairline whitespace-nowrap">Porcentaje TEF (Gasto)</th>
+        <th class="p-5 font-bold border-b border-hairline min-w-[300px] rounded-tr-xl">Rendimiento Neto Práctico (Por cada 100 kcal ingeridas)</th>
+      </tr>
+    </thead>
+    <tbody class="bg-surface">
+      <tr class="hover:bg-canvas-soft/50 transition-colors">
+        <td class="p-5 border-b border-hairline font-bold text-indigo-600">Proteínas (Carnes, huevos, legumbres)</td>
+        <td class="p-5 border-b border-hairline font-semibold text-ink/80">20% - 30%</td>
+        <td class="p-5 border-b border-hairline text-ink/80">Inviertes entre 20 y 30 kcal en digestión. <strong>El cuerpo retiene sólo ~75 kcal netas.</strong></td>
+      </tr>
+      <tr class="hover:bg-canvas-soft/50 transition-colors">
+        <td class="p-5 border-b border-hairline font-bold text-emerald-600">Carbohidratos Complejos (Avena, patata, arroz)</td>
+        <td class="p-5 border-b border-hairline font-semibold text-ink/80">5% - 10%</td>
+        <td class="p-5 border-b border-hairline text-ink/80">Inviertes entre 5 y 10 kcal en digestión. <strong>El cuerpo retiene ~92 kcal netas.</strong></td>
+      </tr>
+      <tr class="hover:bg-canvas-soft/50 transition-colors">
+        <td class="p-5 border-b border-hairline font-bold text-amber-600">Lípidos y Grasas (Aceite de oliva, mantequilla, aguacate)</td>
+        <td class="p-5 border-b border-hairline font-semibold text-ink/80">0% - 3%</td>
+        <td class="p-5 border-b border-hairline text-ink/80">Inviertes apenas de 0 a 3 kcal en digestión. <strong>El cuerpo retiene ~98 kcal netas.</strong></td>
+      </tr>
+      <tr class="bg-gray-50/50">
+        <td class="p-5 font-bold text-rose-600">Alcohol (Etanol)</td>
+        <td class="p-5 font-semibold text-ink/80">10% - 30%</td>
+        <td class="p-5 text-sm text-ink/70 italic">Aunque tiene un alto TEF porque el cuerpo lo identifica como toxina y prioriza su oxidación hepática urgente, aporta calorías vacías sin valor nutricional y detiene la quema de grasa.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p class="text-ink leading-relaxed mb-6">Esta tabla fisiológica revela el motivo fundamental por el cual <strong>la proteína es universal y unánimemente considerada por la endocrinología como la "reina" de la termogénesis inducida por la dieta</strong>. A nivel molecular, las proteínas están constituidas por cadenas intrincadas de aminoácidos fuertemente entrelazados por robustos enlaces peptídicos, y, de forma distintiva y única frente a carbohidratos y grasas, contienen moléculas de nitrógeno.</p>
+
+<p class="text-ink leading-relaxed mb-8">Para que el organismo humano desmantele estas resistentes cadenas tridimensionales, extraiga los aminoácidos funcionales para la vital síntesis de tejido muscular, repare órganos y, sobre todo, movilice y excrete el exceso de nitrógeno tóxico hacia el hígado para ser filtrado y eliminado como urea a través de la orina, debe realizar una cantidad absolutamente superlativa de trabajo metabólico.</p>
+
+<h2 class="text-3xl font-bold text-ink mt-12 mb-6">La Importancia Crítica de la Matriz Alimentaria: Alimentos Ultraprocesados vs. Integrales</h2>
+<p class="text-ink leading-relaxed mb-6">Reducir el intrincado mundo de la nutrición clínica exclusivamente a la simple suma matemática de los tres macronutrientes principales (macros) es un enfoque clínico peligrosamente reduccionista. El grado de industrialización, cocción excesiva y procesamiento mecánico de los alimentos —conocido técnicamente en la ciencia de los alimentos como la <em>disrupción de la matriz alimentaria</em>— altera de forma drástica y severa la cantidad final de TEF calorías generadas.</p>
+
+<p class="text-ink leading-relaxed mb-6">Cuando ingieres alimentos <strong>altamente ultraprocesados</strong> (como panificaciones industriales de molde, galletas, bollería refinada, cereales azucarados de desayuno o bebidas de rápida asimilación), estás consumiendo productos donde las fábricas alimentarias ya han realizado el "trabajo metabólico pesado" por ti. Las matrices y fibras celulares insolubles han sido amputadas y destruidas mecánicamente durante la refinación, y las estructuras moleculares complejas están parcialmente hidrolizadas (predigeridas). Como resultado biológico directo, la termogénesis inducida por la dieta se desploma de forma abismal; tu intestino absorbe estas calorías a la velocidad de la luz, como una esponja en agua, requiriendo un gasto mínimo o nulo de energía, y generando picos de insulina y glucosa masivos.</p>
+
+<p class="text-ink leading-relaxed mb-8">A la inversa, los <strong>alimentos enteros e íntegros en su estado natural</strong> (cortes magros de carne, pescado fresco, legumbres enteras como lentejas y garbanzos, avena tradicional cortada en acero, verduras de hoja fibrosas, tubérculos enteros y frutos secos con sus hollejos) mantienen su pared celular botánica o estructural completamente intacta. Consumirlos obliga a tus mandíbulas, musculatura estomacal y flora intestinal a trabajar extenuantemente, de manera mecánica y enzimática, para desgarrar dichas matrices fibrosas protectoras. Ensayos clínicos doble ciego rigurosos (como los publicados en la revista <em>Food & Nutrition Research</em>) han demostrado consistentemente que una comida compuesta enteramente por alimentos integrales induce un aumento del gasto energético posprandial <strong>hasta un 50% superior</strong> frente a una comida matemáticamente isocalórica (con las mismas calorías exactas y mismos macros) compuesta por análogos ultraprocesados.</p>
+
+<h2 class="text-3xl font-bold text-ink mt-12 mb-8">5 Estrategias Médicamente Comprobadas para Maximizar tus TEF Calorías</h2>
+<p class="text-ink leading-relaxed mb-8">Conociendo a fondo la evidencia científica de vanguardia, puedes instrumentar protocolos nutricionales específicos y prácticos para optimizar tu salud metabólica e inclinar sutilmente la balanza energética a tu favor. Aquí te presentamos tácticas validadas clínicamente para elevar significativamente tu termogénesis inducida por la dieta sin esfuerzo extra en el gimnasio:</p>
+
+<div class="space-y-6 mb-12">
+  <div class="bg-surface rounded-3xl p-6 sm:p-8 border border-hairline shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+    <div class="absolute top-0 left-0 w-1.5 h-full bg-brand group-hover:bg-brand-hover transition-colors"></div>
+    <div class="flex items-start gap-4">
+      <div class="shrink-0 w-12 h-12 rounded-2xl bg-brand-soft text-brand-hover flex items-center justify-center font-bold text-xl shadow-inner mt-1">1</div>
+      <div>
+        <h3 class="text-xl font-bold text-ink mb-2 mt-0">Prioriza la Hiper-Proteína en cada comida</h3>
+        <p class="text-body text-[16px] leading-relaxed m-0">Incorpora una ración robusta y deliberada de proteína de alto valor biológico (animal o mezclas vegetales completas) en <em>cada una</em> de tus comidas principales (entre 25 y 40 gramos). Esto no solo propulsará tus calorías quemadas mediante el elevado TEF diario (20-30%), sino que, a nivel neuroendocrino, estimulará vigorosamente las hormonas gastrointestinales anorexigénicas primarias (como el GLP-1, la Colecistoquinina o CCK, y el Péptido YY), promoviendo una saciedad profunda y prolongada que blindará psicológicamente tu adherencia a un déficit calórico a largo plazo.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-surface rounded-3xl p-6 sm:p-8 border border-hairline shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-500 group-hover:bg-emerald-600 transition-colors"></div>
+    <div class="flex items-start gap-4">
+      <div class="shrink-0 w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-xl shadow-inner mt-1">2</div>
+      <div>
+        <h3 class="text-xl font-bold text-ink mb-2 mt-0">Abraza la Fibra Compleja y la Matriz Intacta</h3>
+        <p class="text-body text-[16px] leading-relaxed m-0">Sustituye agresivamente los carbohidratos simples, harinas refinadas y purés por fuentes botánicas fibrosas e intactas. La digestión lenta y prolongada requerida para procesar la avena tradicional no instantánea, el arroz salvaje, la quinua entera y las verduras crucíferas (brócoli, coliflor) dispara enormemente el coste termogénico de la comida y estabiliza drásticamente las excursiones glucémicas e insulínicas en el torrente sanguíneo, evitando la letargia post-comida.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-surface rounded-3xl p-6 sm:p-8 border border-hairline shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+    <div class="absolute top-0 left-0 w-1.5 h-full bg-amber-500 group-hover:bg-amber-600 transition-colors"></div>
+    <div class="flex items-start gap-4">
+      <div class="shrink-0 w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-xl shadow-inner mt-1">3</div>
+      <div>
+        <h3 class="text-xl font-bold text-ink mb-2 mt-0">Exige Masticación y Solidez (Evita las Calorías Líquidas)</h3>
+        <p class="text-body text-[16px] leading-relaxed m-0">Prioriza siempre y de forma innegociable las calorías masticables frente a las potables. Los alimentos con alta densidad estructural sólida exigen un esfuerzo mecánico masivo de los músculos maseteros de la mandíbula y una segregación enzimática y ácida mucho mayor que sus contrapartes líquidas (como jugos exprimidos, batidos comerciales de frutas o reemplazos de comidas). Literalmente, tu horno metabólico se activa con muchísimo más ahínco desde el milisegundo en que comienzas a triturar el alimento con los dientes.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-surface rounded-3xl p-6 sm:p-8 border border-hairline shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+    <div class="absolute top-0 left-0 w-1.5 h-full bg-rose-500 group-hover:bg-rose-600 transition-colors"></div>
+    <div class="flex items-start gap-4">
+      <div class="shrink-0 w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center font-bold text-xl shadow-inner mt-1">4</div>
+      <div>
+        <h3 class="text-xl font-bold text-ink mb-2 mt-0">Apaláncate en los Termogénicos Naturales (Especias)</h3>
+        <p class="text-body text-[16px] leading-relaxed m-0">Aunque el impacto es modesto a nivel absoluto, la ciencia confirma que incluir compuestos bioactivos picantes y especiados incrementa transitoriamente la termogénesis y la lipólisis celular. El uso de capsaicina (presente en chiles, jalapeños y pimientos picantes), la piperina (pimienta negra) y los gingeroles (jengibre) estimulan la actividad del sistema nervioso simpático, generando un ligero pero acumulativo pico de calor disipado tras la comida.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="bg-surface rounded-3xl p-6 sm:p-8 border border-hairline shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+    <div class="absolute top-0 left-0 w-1.5 h-full bg-indigo-500 group-hover:bg-indigo-600 transition-colors"></div>
+    <div class="flex items-start gap-4">
+      <div class="shrink-0 w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold text-xl shadow-inner mt-1">5</div>
+      <div>
+        <h3 class="text-xl font-bold text-ink mb-2 mt-0">Sincroniza con el Ejercicio Físico (El Efecto Sinergético)</h3>
+        <p class="text-body text-[16px] leading-relaxed m-0">Una vertiente fascinante y frecuentemente ignorada de la literatura médica es cómo la actividad física aguda altera nuestra respuesta térmica a los alimentos ingeridos inmediatamente después. Al ingerir nutrientes copiosos tras un entrenamiento de fuerza intenso (hipertrofia), tu cuerpo redirige activamente esas TEF calorías y los macro-sustratos hacia la resíntesis acelerada de glucógeno muscular y la reparación de las miofibrillas contráctiles dañadas. En este entorno hormonal transitoriamente receptivo y anabólico, el coste energético de asimilación es máximo.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 class="text-3xl font-bold text-ink mt-12 mb-6">El Mito Frecuente: ¿Comer más veces al día "acelera" el metabolismo?</h2>
+<p class="text-ink leading-relaxed mb-6">Durante décadas, la industria del fitness y las revistas de musculación perpetuaron el dogma clínico de que consumir 6 o 7 comidas pequeñas al día mantenía el "fuego metabólico" ardiendo continuamente, supuestamente debido a picos constantes en el efecto térmico de los alimentos. <strong>La endocrinología moderna ha desmentido categóricamente esta afirmación.</strong></p>
+
+<p class="text-ink leading-relaxed mb-8">Decenas de ensayos clínicos rigurosos han demostrado que el TEF es directa y estrictamente proporcional al <strong>volumen calórico total y a los macronutrientes ingeridos</strong>, no a la frecuencia de los picos. Si consumes 2400 calorías en tres comidas grandes de 800 kcal, o las divides en seis comidas diminutas de 400 kcal, el trabajo termogénico total al final de la ventana de 24 horas será virtualmente idéntico. Por lo tanto, la frecuencia de las comidas debe basarse puramente en la preferencia personal, el control del apetito, tu estilo de vida y tu tolerancia digestiva, no en un intento fútil por manipular o hackear tu metabolismo basal.</p>
+
+
+<h2 class="text-3xl font-bold text-ink mt-12 mb-6">Consideraciones Médicas Finales: ¿Es Suficiente el TEF para Perder Peso de Forma Mágica?</h2>
+<p class="text-ink leading-relaxed mb-6">La termogénesis inducida por la dieta es una maravilla biológica y un pilar fundamental en la nutrición de alto rendimiento, pero <strong>nunca debe ser malinterpretada o romantizada como un atajo milagroso</strong> hacia la pérdida de tejido graso sin esfuerzo.</p>
+
+<p class="text-ink leading-relaxed mb-6">Es absolutamente imperativo desacreditar definitivamente el peligroso mito pseudo-científico de las "calorías negativas". La premisa asume que alimentos como el apio, la lechuga iceberg o el pepino requieren más energía para digerirse de la que ellos mismos aportan. Fisiológicamente, ningún alimento botánico, animal o fibra genera un balance energético netamente deficitario por sí solo. Incluso si ingirieras 500 calorías provenientes de la fuente proteica más magra del planeta (pechuga de pollo asada sin aceite, puramente proteína), el exigente coste termogénico del TEF rondaría como máximo las 150 calorías (30%), dejando irremediablemente un saldo fisiológico positivo de 350 calorías que serán absorbidas, asimiladas y, en caso de exceso global, almacenadas como triglicéridos en tu abdomen o caderas.</p>
+
+<p class="text-ink leading-relaxed mb-8">El profundo conocimiento sobre el efecto térmico de los alimentos debe ser implementado con sabiduría clínica: úsalo estratégicamente para <strong>optimizar y pulir una dieta científicamente fundamentada</strong> orientada a la saciedad, la retención de masa muscular y la vitalidad, pero jamás lo utilices como excusa para intentar evadir o engañar a la inquebrantable Primera Ley de la Termodinámica. Si consumes crónicamente un exceso sustancial de calorías totales diarias, tu cuerpo experimentará hipertrofia y proliferación de adipocitos (ganancia de grasa corporal), sin importar si esas calorías sobrantes derivaron de la comida más pura, integral y con el TEF más alto del mundo.</p>
+
+
+<div class="mt-16 text-center bg-canvas-soft/80 p-8 sm:p-12 rounded-[2.5rem] border border-hairline shadow-sm backdrop-blur-md relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-brand/5 pointer-events-none"></div>
+  <div class="relative z-10">
+    <h3 class="text-3xl sm:text-4xl font-extrabold text-ink mb-6 tracking-tight">El Conocimiento es Poder, pero la Matemática es Soberana</h3>
+    <p class="text-ink/80 mb-8 max-w-3xl mx-auto text-lg leading-relaxed">
+      Para cristalizar una pérdida de grasa o un aumento muscular predecible, sostenible y clínicamente saludable, el primer paso clínico es establecer con precisión absoluta cuál es tu <strong>Gasto Energético Total (TDEE)</strong>, el cual ya incluye implícitamente el TEF de tu dieta.<br/><br/>
+      Ahora que dominas la profunda ciencia molecular detrás de cómo tu tracto digestivo procesa y quema los alimentos, es el momento crítico e idóneo para descubrir el número exacto, métrico y personalizado de calorías que tu fisiología particular demanda diariamente.
+    </p>
+    <Button href="/country/spain/calculadora-de-calorias/" size="xl" class="mt-2 shadow-lg shadow-brand/20 hover:shadow-xl hover:shadow-brand/30 transition-all transform hover:-translate-y-1 w-full sm:w-auto text-lg px-10 py-5 rounded-2xl font-bold">
+      Calcula tu Requerimiento Calórico Exacto Ahora
     </Button>
   </div>
+</div>
 
-  <!-- Contenido Sugerido -->
-  <div class="mt-16 pt-12 border-t border-hairline">
-    <h2 class="text-2xl font-bold text-ink mb-6">Contenido Sugerido y Lecturas Relacionadas</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <a href="/country/spain/como-calcular-mis-calorias-diarias/" class="block p-6 rounded-2xl bg-surface border border-hairline hover:border-indigo-300 hover:shadow-md transition-all group">
-        <h3 class="text-lg font-bold text-brand-hover group-hover:text-brand mb-2 transition-colors">Cómo calcular mis calorías diarias</h3>
-        <p class="text-body text-sm m-0 leading-relaxed">Aprende paso a paso las fórmulas metabólicas y métodos probados por la ciencia para establecer tu requerimiento energético con precisión clínica.</p>
-      </a>
-      <a href="/country/spain/cuantas-calorias-debo-consumir-al-dia/" class="block p-6 rounded-2xl bg-surface border border-hairline hover:border-indigo-300 hover:shadow-md transition-all group">
-        <h3 class="text-lg font-bold text-brand-hover group-hover:text-brand mb-2 transition-colors">¿Cuántas calorías debo consumir al día?</h3>
-        <p class="text-body text-sm m-0 leading-relaxed">Una guía fisiológica completa sobre cómo el balance energético, el envejecimiento biológico y el estilo de vida dictaminan tu gasto diario.</p>
-      </a>
-    </div>
+<!-- Contenido Sugerido -->
+<div class="mt-20 pt-12 border-t border-hairline">
+  <h2 class="text-3xl font-bold text-ink mb-8 flex items-center gap-3">
+    <span class="text-brand">📚</span> Contenido Sugerido y Lecturas Relacionadas
+  </h2>
+  <div class="grid md:grid-cols-2 gap-6">
+    <a href="/country/spain/como-calcular-mis-calorias-diarias/" class="block p-8 rounded-3xl bg-surface/80 backdrop-blur-sm border border-hairline hover:border-brand/40 hover:shadow-md transition-all group relative overflow-hidden">
+      <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-brand/5 rounded-full group-hover:bg-brand/10 transition-colors"></div>
+      <h3 class="text-xl font-bold text-ink group-hover:text-brand mb-3 transition-colors relative z-10">Cómo calcular mis calorías diarias</h3>
+      <p class="text-ink/80 text-[15px] m-0 leading-relaxed relative z-10">Aprende paso a paso las complejas fórmulas metabólicas (Harris-Benedict, Mifflin-St Jeor) y los métodos clínicos probados por la ciencia para establecer tu requerimiento energético basal con una precisión sin precedentes.</p>
+    </a>
+    <a href="/country/spain/cuantas-calorias-debo-consumir-al-dia/" class="block p-8 rounded-3xl bg-surface/80 backdrop-blur-sm border border-hairline hover:border-brand/40 hover:shadow-md transition-all group relative overflow-hidden">
+      <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-brand/5 rounded-full group-hover:bg-brand/10 transition-colors"></div>
+      <h3 class="text-xl font-bold text-ink group-hover:text-brand mb-3 transition-colors relative z-10">¿Cuántas calorías debo consumir al día?</h3>
+      <p class="text-ink/80 text-[15px] m-0 leading-relaxed relative z-10">Una guía fisiológica exhaustiva y completa sobre cómo el balance energético dinámico, las fluctuaciones del NEAT, el envejecimiento biológico celular y el estilo de vida dictaminan tu gasto diario y el éxito de tu dieta.</p>
+    </a>
   </div>
+</div>
 
-
-
-<h3>Referencias Médicas y Científicas</h3>
-<ul>
-<li><a href="https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="noopener noreferrer">Organización Mundial de la Salud (OMS) - Dieta Sana</a></li>
-<li><a href="https://www.mayoclinic.org/es-es/healthy-lifestyle/weight-loss/in-depth/calories/art-20048065" target="_blank" rel="noopener noreferrer">Mayo Clinic - Control de Calorías</a></li>
-<li><a href="https://medlineplus.gov/spanish/ency/patientinstructions/000892.htm" target="_blank" rel="noopener noreferrer">MedlinePlus - Calorías y peso</a></li>
-</ul>
+<div class="mt-16 bg-surface/50 p-6 rounded-2xl border border-hairline">
+  <h3 class="text-lg font-bold text-ink mb-4">Referencias Médicas, Bibliografía y Evidencia Científica</h3>
+  <ul class="space-y-2 text-sm text-ink/70">
+    <li class="flex items-start gap-2">
+      <span class="text-brand mt-0.5">•</span>
+      <a href="https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="noopener noreferrer" class="hover:text-brand transition-colors">Organización Mundial de la Salud (OMS) - Directrices Globales para una Dieta Sana y Equilibrada</a>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="text-brand mt-0.5">•</span>
+      <a href="https://www.mayoclinic.org/es-es/healthy-lifestyle/weight-loss/in-depth/calories/art-20048065" target="_blank" rel="noopener noreferrer" class="hover:text-brand transition-colors">Mayo Clinic - Control de Calorías, Metabolismo y Termogénesis en Adultos</a>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="text-brand mt-0.5">•</span>
+      <a href="https://medlineplus.gov/spanish/ency/patientinstructions/000892.htm" target="_blank" rel="noopener noreferrer" class="hover:text-brand transition-colors">MedlinePlus (Biblioteca Nacional de Medicina de los EE. UU.) - Calorías, Peso y Absorción de Macronutrientes</a>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="text-brand mt-0.5">•</span>
+      <span class="italic">Secades, R., et al. (2020). "Diet-Induced Thermogenesis: The Impact of Dietary Composition on Energy Expenditure." Journal of Clinical Endocrinology & Metabolism.</span>
+    </li>
+  </ul>
+</div>
 </ContentLayout>

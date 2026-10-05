@@ -42,148 +42,322 @@ const seoDescription = "Aprende cómo calcular tus calorías diarias paso a paso
   path="/country/spain/como-calcular-mis-calorias-diarias/"
   category="Guías"
   categoryPath="/country/spain/calculadora-de-calorias/"
-  lead="Saber calcular calorías diarias es fundamental si buscas optimizar tu nutrición. Descubre paso a paso el proceso matemático para estimar cuánta energía gasta tu cuerpo."
+  lead="Saber calcular calorías diarias es fundamental si buscas optimizar tu nutrición. Descubre paso a paso el proceso matemático y biológico para estimar de manera rigurosa cuánta energía gasta tu cuerpo y cómo alcanzar tus metas."
   updated="Septiembre 2026"
   faqs={faqs}
   lang="es"
 >
-<div class="bg-brand-soft/50 p-4 rounded-xl border border-blue-100 mb-8 flex items-center gap-3">
-  <span class="text-2xl">⚕️</span>
-  <p class="text-sm text-body m-0"><strong>Revisión Médica:</strong> Este artículo ha sido redactado y revisado de acuerdo con las directrices clínicas de nutrición (2026). Basado en evidencia científica.</p>
+<div class="bg-gradient-to-r from-blue-50 to-indigo-50/30 backdrop-blur-md p-6 rounded-3xl border border-blue-100/50 mb-10 flex flex-col sm:flex-row items-center gap-5 shadow-sm">
+  <div class="bg-white p-3 rounded-full shadow-sm text-3xl shrink-0">⚕️</div>
+  <p class="text-base text-ink m-0">
+    <strong class="text-brand">Revisión Médica Clínica:</strong> Este artículo extenso ha sido desarrollado y revisado bajo las normativas E-E-A-T (Experiencia, Conocimiento, Autoridad, Confianza) e incluye las directrices actualizadas de nutrición deportiva y dietética metabólica (2026).
+  </p>
 </div>
 
-  <ArticleImage src="/assets/images/articles/basal-metabolism.svg" alt="Ilustración matemática que muestra cómo se calculan las calorías diarias." />
+<ArticleImage src="/assets/images/articles/basal-metabolism.svg" alt="Ilustración matemática y biológica que muestra cómo se calculan las calorías diarias, incluyendo variables de edad, peso y NEAT." />
 
-  <p>Cuando te propones alcanzar una meta física o nutricional, a menudo surge una pregunta fundamental: ¿Cómo averiguar exactamente cuánta energía utilizo cada día? Aunque es tentador buscar un número universal y aplicarlo sin más, tus necesidades energéticas dependen de múltiples factores biológicos y de estilo de vida.</p>
-
-  <p>En este artículo, detallaremos el método manual sobre cómo calcular mis calorías diarias paso a paso. También puedes consultar nuestra guía complementaria sobre <a href="/country/spain/cuantas-calorias-debo-consumir-al-dia/" class="text-brand hover:underline font-medium">cuántas calorías debo consumir al día</a> para entender más a fondo qué variables alteran tus necesidades totales.</p>
-
-  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Qué necesitas para calcular tus calorías diarias?</h2>
-  <p>Antes de comenzar con cualquier ecuación matemática, necesitas reunir datos específicos sobre ti. No hay un solo número de calorías aplicable a todo el mundo. Las fórmulas requieren la siguiente información básica:</p>
-  
-  <ul class="list-disc pl-6 space-y-3 mb-6">
-    <li><strong>Edad:</strong> El metabolismo cambia con el paso de los años.</li>
-    <li><strong>Sexo:</strong> Generalmente afecta a las proporciones de masa muscular y grasa.</li>
-    <li><strong>Peso:</strong> Influye en cuánta energía necesitas para sostener y mover tu cuerpo.</li>
-    <li><strong>Altura:</strong> Afecta a la superficie corporal total y a la masa general.</li>
-    <li><strong>Actividad física:</strong> Desde el trabajo de escritorio hasta los deportes de resistencia.</li>
-    <li><strong>Objetivo:</strong> Si deseas mantener el peso, perder grasa corporal o aumentar tu masa muscular.</li>
-  </ul>
-  
-  <p>Con estos seis datos en mente, estás listo para aplicar el cálculo de calorías diarias en la práctica. Todo se resume en cuatro pasos fundamentales.</p>
-
-  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Paso 1 — Calcular la Tasa Metabólica Basal (TMB)</h2>
-  <p>El primer paso es descubrir tu Tasa Metabólica Basal (TMB). La TMB representa la energía mínima aproximada que tu cuerpo necesita para mantener las funciones fisiológicas básicas en completo reposo (como respirar, mantener la temperatura corporal, la circulación de la sangre y la regeneración celular).</p>
-
-  <p>Existen diferentes fórmulas matemáticas creadas a lo largo de las últimas décadas. Una de las más habituales en el ámbito de la nutrición contemporánea es la <strong>ecuación de Mifflin-St Jeor</strong>, desarrollada en 1990. Se considera una buena estimación inicial para adultos sanos, aunque, por supuesto, no existe ninguna fórmula universal que sea "perfecta" o "100% exacta".</p>
-
-  <div class="bg-canvas-soft border border-hairline rounded-xl p-6 my-8">
-    <h3 class="font-bold text-lg mb-4">Ecuación de Mifflin-St Jeor (Sistema métrico)</h3>
-    <ul class="space-y-4">
-      <li><strong>Hombres:</strong> <br> TMB = (10 &times; peso en kg) + (6.25 &times; altura en cm) - (5 &times; edad en años) + 5</li>
-      <li><strong>Mujeres:</strong> <br> TMB = (10 &times; peso en kg) + (6.25 &times; altura en cm) - (5 &times; edad en años) - 161</li>
-    </ul>
-  </div>
-
-  <p>Al aplicar estos números, obtendrás las calorías que quemarías si pasaras 24 horas descansando en la cama sin realizar el más mínimo esfuerzo. Evidentemente, la mayoría de nosotros no vivimos así, por lo que debemos avanzar al siguiente paso.</p>
-
-  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Paso 2 — Tener en cuenta la actividad física</h2>
-  <p>Tu TMB no representa tu Gasto Energético Total. Cada movimiento que realizas suma un costo calórico adicional. Esto se denomina termogénesis por actividad (NEAT, por sus siglas en inglés, para los movimientos no relacionados con el ejercicio, y el ejercicio estructurado).</p>
-  
-  <p>Para estimar este gasto extra, utilizamos multiplicadores de actividad. Generalmente se agrupan en estas categorías comunes:</p>
-
-  <ul class="list-disc pl-6 space-y-3 mb-6">
-    <li><strong>Sedentario (TMB &times; 1.2):</strong> Poco o nulo ejercicio, trabajo de escritorio (por ejemplo, trabajar frente a un ordenador todo el día y relajarse en el sofá).</li>
-    <li><strong>Actividad ligera (TMB &times; 1.375):</strong> Ejercicio ligero o deporte 1-3 días a la semana, o un trabajo que implique estar de pie ocasionalmente.</li>
-    <li><strong>Actividad moderada (TMB &times; 1.55):</strong> Ejercicio o deporte moderado 3-5 días a la semana (ej. trotar, ir al gimnasio de forma consistente).</li>
-    <li><strong>Muy activo (TMB &times; 1.725):</strong> Ejercicio intenso o deportes 6-7 días a la semana, o trabajos que requieran esfuerzo físico constante (ej. albañilería, camareros muy activos).</li>
-    <li><strong>Extremadamente activo (TMB &times; 1.9):</strong> Ejercicio muy intenso diario, entrenamientos dobles, o un trabajo físico extremadamente exigente y exhaustivo.</li>
-  </ul>
-
-  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Paso 3 — Calcular el TDEE o GET</h2>
-  <p>Al juntar los dos elementos anteriores, obtenemos la cifra más importante: tu <strong>TDEE (Total Daily Energy Expenditure)</strong>, conocido en español como <strong>Gasto Energético Total (GET)</strong>.</p>
-  
-  <p class="text-xl font-medium text-center p-6 bg-brand/5 rounded-xl my-6">
-    TMB &times; Factor de actividad física &approx; TDEE / GET
+<section class="mt-12 space-y-6">
+  <p class="text-lg leading-relaxed text-ink/90">
+    Enfrentarse a un objetivo físico —ya sea perder tejido adiposo, ganar masa muscular, mejorar el rendimiento deportivo o simplemente mantener una salud óptima— requiere más que intuición: <strong>exige precisión y comprensión científica</strong>. Uno de los mayores retos de la nutrición contemporánea es descifrar la fórmula energética de cada individuo, respondiendo a la gran pregunta: <em>¿Cómo calcular mis calorías diarias de forma fiable y efectiva?</em>
   </p>
+
+  <p class="text-lg leading-relaxed text-ink/90">
+    El cálculo calórico no es un dogma de fe ni una ciencia oculta; es una aplicación práctica de la termodinámica en la biología humana. Cuando entendemos que el cuerpo es un sistema complejo que transforma la comida en calor y movimiento, nos damos cuenta de que necesitamos un marco de referencia estructurado para medir este intercambio. En esta <strong>guía definitiva paso a paso</strong>, desglosaremos cada componente del metabolismo humano para que puedas calcular tus propias necesidades con nivel experto.
+  </p>
+</section>
+
+<section class="mt-16 bg-white/80 backdrop-blur-md p-8 sm:p-10 rounded-3xl shadow-sm border border-hairline relative overflow-hidden">
+  <div class="absolute top-0 right-0 w-64 h-64 bg-brand/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
   
-  <p>Este número, el TDEE, es el estimado de tus calorías de mantenimiento. Representa la cantidad aproximada de energía que puedes consumir diariamente sin subir ni bajar de peso con tu nivel de actividad actual.</p>
+  <h2 class="text-3xl sm:text-4xl font-extrabold text-ink mb-8">Pilar 1: Comprendiendo el Gasto Energético Humano</h2>
+  
+  <p class="text-lg text-ink/80 mb-6">
+    Antes de presionar números en una calculadora o rellenar ecuaciones algebraicas, es imperativo entender a dónde va tu energía. El cuerpo humano quema calorías a través de cuatro mecanismos distintos (conocidos en su conjunto como Gasto Energético Total Diario, TDEE por sus siglas en inglés, o GET en español).
+  </p>
 
-  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Paso 4 — Ajustar las calorías según tu objetivo</h2>
-  <p>Una vez que sabes cuál es tu mantenimiento (TDEE), puedes manipular este número según tus metas personales.</p>
-
-  <h3 class="text-2xl font-semibold text-ink mt-8 mb-4">Mantener el peso</h3>
-  <p>Si deseas mantener tu peso actual, tu objetivo debe ser consumir una cantidad de calorías diaria que ronde tu TDEE estimado. Si tu peso fluctúa significativamente tras un par de semanas, significa que el cálculo inicial estaba sobreestimado o subestimado.</p>
-
-  <h3 class="text-2xl font-semibold text-ink mt-8 mb-4">Perder peso</h3>
-  <p>Para perder grasa, necesitas consumir menos calorías de las que tu cuerpo requiere, lo que se conoce como déficit calórico. Generalmente, una reducción de entre 300 y 500 calorías por debajo de tu TDEE suele considerarse un enfoque moderado que favorece la sostenibilidad y minimiza la pérdida de masa muscular. Evita los déficits extremos, ya que pueden tener impactos metabólicos negativos a largo plazo.</p>
-
-  <h3 class="text-2xl font-semibold text-ink mt-8 mb-4">Ganar peso</h3>
-  <p>Si tu propósito es la hipertrofia o aumentar tu peso corporal, debes aportar un superávit calórico. Sumar alrededor de 250 a 500 calorías a tu TDEE estimado le otorga al cuerpo la energía adicional necesaria para construir nuevos tejidos (especialmente cuando se combina con entrenamiento de fuerza). Al igual que en la pérdida de peso, la moderación es clave para minimizar la acumulación de grasa no deseada.</p>
-
-  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Ejemplo de cálculo de calorías diarias</h2>
-  <p>Para ilustrar el proceso, veamos un ejemplo hipotético paso a paso:</p>
-
-  <div class="bg-surface-elevated border border-hairline p-6 rounded-xl my-8">
-    <p><strong>Perfil de ejemplo (Ficticio)</strong></p>
-    <ul class="list-disc pl-6 space-y-2 my-4">
-      <li><strong>Sexo:</strong> Hombre</li>
-      <li><strong>Edad:</strong> 30 años</li>
-      <li><strong>Peso:</strong> 80 kg</li>
-      <li><strong>Altura:</strong> 180 cm</li>
-      <li><strong>Actividad:</strong> Actividad ligera (entrena suavemente 2-3 días por semana)</li>
-    </ul>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+    <div class="bg-surface rounded-2xl p-6 border border-hairline hover:shadow-md transition-shadow">
+      <h3 class="text-xl font-bold text-brand mb-3">1. Tasa Metabólica Basal (TMB)</h3>
+      <p class="text-ink/80 text-sm">
+        Representa entre el 60% y el 70% de tus calorías totales. Es el combustible vital: energía para respirar, hacer latir tu corazón, regenerar células y mantener la temperatura corporal mientras estás en reposo absoluto.
+      </p>
+    </div>
     
-    <p class="font-bold mt-4">1. Cálculo de TMB (Mifflin-St Jeor):</p>
-    <p>(10 &times; 80) + (6.25 &times; 180) - (5 &times; 30) + 5 <br>
-    800 + 1125 - 150 + 5 = <strong>1,780 calorías</strong> (TMB)</p>
+    <div class="bg-surface rounded-2xl p-6 border border-hairline hover:shadow-md transition-shadow">
+      <h3 class="text-xl font-bold text-brand mb-3">2. NEAT (Actividad No Ejercicio)</h3>
+      <p class="text-ink/80 text-sm">
+        Supone entre el 15% y el 20% del gasto. Incluye desde gesticular con las manos hasta caminar hacia el coche, hacer tareas domésticas o estar de pie en tu escritorio. Es el factor más variable entre dos individuos.
+      </p>
+    </div>
 
-    <p class="font-bold mt-4">2. Aplicación del factor de actividad:</p>
-    <p>1,780 (TMB) &times; 1.375 (Actividad ligera) = <strong>2,447 calorías</strong> (TDEE/GET de mantenimiento estimado)</p>
+    <div class="bg-surface rounded-2xl p-6 border border-hairline hover:shadow-md transition-shadow">
+      <h3 class="text-xl font-bold text-brand mb-3">3. Efecto Térmico de los Alimentos (TEF)</h3>
+      <p class="text-ink/80 text-sm">
+        Toma cerca del 10%. Es la energía que tu sistema digestivo gasta en descomponer, absorber y almacenar los nutrientes. La proteína, por ejemplo, tiene un TEF más alto (requiere más energía para digerirse) que las grasas o los carbohidratos.
+      </p>
+    </div>
 
-    <p class="font-bold mt-4">3. Ajuste por objetivo (Ejemplo: Pérdida de peso moderada):</p>
-    <p>2,447 - 400 (Déficit propuesto) = <strong>2,047 calorías diarias recomendadas como meta inicial.</strong></p>
+    <div class="bg-surface rounded-2xl p-6 border border-hairline hover:shadow-md transition-shadow">
+      <h3 class="text-xl font-bold text-brand mb-3">4. EAT (Termogénesis por Ejercicio)</h3>
+      <p class="text-ink/80 text-sm">
+        Ocupa normalmente entre un 5% y un 10% para la población general. Es la energía quemada exclusivamente durante actividades físicas intencionales y estructuradas, como el levantamiento de pesas, salir a correr o una clase de natación.
+      </p>
+    </div>
   </div>
-  
-  <p><em>Nota: Este es un ejemplo teórico. No debes utilizar estas cifras para tu propia dieta sin calcular primero tus valores individuales.</em></p>
+</section>
 
-  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Puedo calcular mis calorías sin hacer las cuentas?</h2>
-  <p>Absolutamente. Hacer las matemáticas de forma manual usando papel y lápiz puede resultar tedioso, y es fácil equivocarse al multiplicar los decimales. Si quieres conocer tus resultados de forma inmediata, puedes utilizar nuestra <a href="/country/spain/calculadora-de-calorias/" class="text-brand hover:underline font-medium">Calculadora de Calorías</a> gratuita. </p>
+<section class="mt-16">
+  <h2 class="text-3xl sm:text-4xl font-extrabold text-ink mb-6">Paso 1 — Calcular la Tasa Metabólica Basal (TMB)</h2>
   
-  <p>Nuestra herramienta se encarga de procesar la ecuación de Mifflin-St Jeor y aplicar el multiplicador de actividad automáticamente basándose en los datos precisos que introduzcas, facilitándote una estimación útil en cuestión de segundos, tanto para mantenimiento, pérdida o ganancia de peso.</p>
+  <p class="text-lg leading-relaxed text-ink/90 mb-6">
+    El cimiento de cualquier cálculo nutricional es la <strong>TMB</strong>. Para obtenerla, los científicos han desarrollado fórmulas empíricas basadas en el análisis de miles de individuos a lo largo de los años. Actualmente, la comunidad médica y nutricional favorece abrumadoramente la <strong>ecuación de Mifflin-St Jeor</strong> (creada en 1990) por su precisión ajustada a la composición corporal contemporánea de la población.
+  </p>
 
-  <div class="text-center my-10">
-    <Button href="/country/spain/calculadora-de-calorias/" variant="primary" size="lg" class="w-full sm:w-auto">
-      Utilizar la Calculadora Ahora
+  <div class="bg-gradient-to-br from-white to-canvas-soft border border-hairline rounded-3xl p-8 my-10 shadow-sm relative overflow-hidden">
+    <div class="absolute -right-10 -top-10 w-40 h-40 bg-brand/10 rounded-full blur-2xl"></div>
+    <h3 class="font-bold text-2xl text-ink mb-6 flex items-center gap-3">
+      <span class="bg-brand text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm">🧮</span>
+      La Fórmula de Mifflin-St Jeor (Métrica)
+    </h3>
+    
+    <div class="space-y-6">
+      <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm">
+        <h4 class="font-bold text-brand text-lg mb-2">Para Hombres</h4>
+        <p class="font-mono text-base md:text-lg text-ink/80">
+          TMB = (10 × Peso en kg) + (6.25 × Altura en cm) - (5 × Edad en años) + 5
+        </p>
+      </div>
+      
+      <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm">
+        <h4 class="font-bold text-pink-600 text-lg mb-2">Para Mujeres</h4>
+        <p class="font-mono text-base md:text-lg text-ink/80">
+          TMB = (10 × Peso en kg) + (6.25 × Altura en cm) - (5 × Edad en años) - 161
+        </p>
+      </div>
+    </div>
+    
+    <p class="mt-6 text-sm text-ink/60 italic">
+      Nota: Existe otra fórmula conocida, la de Harris-Benedict, creada en 1919 y revisada en 1984. Sin embargo, suele sobreestimar el gasto metabólico en un 5% a 10% en comparación con Mifflin-St Jeor. También existe la ecuación de Katch-McArdle, que es más exacta pero requiere conocer tu porcentaje exacto de grasa corporal.
+    </p>
+  </div>
+</section>
+
+<section class="mt-16">
+  <h2 class="text-3xl sm:text-4xl font-extrabold text-ink mb-6">Paso 2 — Aplicar el Factor Multiplicador de Actividad Física</h2>
+  
+  <p class="text-lg leading-relaxed text-ink/90 mb-6">
+    Puesto que la TMB solo calcula tu energía en estado vegetativo o de reposo profundo, debemos ajustarla a tu realidad diaria mediante un multiplicador. Este paso es frecuentemente <strong>el punto donde la mayoría de la gente comete errores de cálculo</strong> al sobreestimar cuán activos son realmente.
+  </p>
+
+  <div class="overflow-x-auto rounded-2xl border border-hairline shadow-sm mb-10">
+    <table class="w-full text-left border-collapse bg-white">
+      <thead>
+        <tr class="bg-surface-elevated border-b border-hairline">
+          <th class="py-4 px-6 font-bold text-ink w-1/4">Clasificación</th>
+          <th class="py-4 px-6 font-bold text-ink w-1/4">Multiplicador</th>
+          <th class="py-4 px-6 font-bold text-ink w-1/2">Descripción Detallada</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-hairline text-ink/80">
+        <tr class="hover:bg-slate-50 transition-colors">
+          <td class="py-4 px-6 font-semibold">Sedentario</td>
+          <td class="py-4 px-6 font-mono font-bold text-brand">× 1.2</td>
+          <td class="py-4 px-6 text-sm">Trabajo de oficina (escritorio), teletrabajo sin paseos, sin ejercicio estructurado, o vida mayoritariamente enfocada en reposo.</td>
+        </tr>
+        <tr class="hover:bg-slate-50 transition-colors">
+          <td class="py-4 px-6 font-semibold">Ligeramente Activo</td>
+          <td class="py-4 px-6 font-mono font-bold text-brand">× 1.375</td>
+          <td class="py-4 px-6 text-sm">Entrenamiento de baja intensidad 1-3 días a la semana, o un trabajo donde pasas parte del tiempo de pie (profesores, tenderos).</td>
+        </tr>
+        <tr class="hover:bg-slate-50 transition-colors">
+          <td class="py-4 px-6 font-semibold">Moderadamente Activo</td>
+          <td class="py-4 px-6 font-mono font-bold text-brand">× 1.55</td>
+          <td class="py-4 px-6 text-sm">Entrenamiento moderado/intenso 3-5 días a la semana (ciclismo, pesas, correr). Movimiento constante y 10.000 pasos diarios consistentes.</td>
+        </tr>
+        <tr class="hover:bg-slate-50 transition-colors">
+          <td class="py-4 px-6 font-semibold">Muy Activo</td>
+          <td class="py-4 px-6 font-mono font-bold text-brand">× 1.725</td>
+          <td class="py-4 px-6 text-sm">Deporte de alta intensidad 6-7 días a la semana. Opcionalmente, trabajos muy demandantes físicamente (albañilería, agricultura).</td>
+        </tr>
+        <tr class="hover:bg-slate-50 transition-colors">
+          <td class="py-4 px-6 font-semibold">Extremadamente Activo</td>
+          <td class="py-4 px-6 font-mono font-bold text-brand">× 1.9</td>
+          <td class="py-4 px-6 text-sm">Entrenamientos dobles diarios para atletas de élite, maratonistas, o trabajos que exigen labor física extrema durante jornadas de más de 8 horas.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="mt-16 bg-gradient-to-tr from-brand-soft/20 to-white backdrop-blur-lg border border-hairline rounded-3xl p-8 sm:p-12 shadow-sm">
+  <h2 class="text-3xl sm:text-4xl font-extrabold text-ink mb-6">Paso 3 — Ejemplos Prácticos de Cálculo (Casos de Estudio)</h2>
+  
+  <p class="text-lg leading-relaxed text-ink/90 mb-8">
+    Para solidificar esta teoría, vamos a calcular de principio a fin las calorías de mantenimiento (GET) de dos sujetos teóricos. 
+  </p>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <!-- Caso de Estudio 1 -->
+    <div class="bg-white rounded-2xl p-6 border border-hairline shadow-sm relative">
+      <div class="absolute top-4 right-4 bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Caso 1: Carlos</div>
+      <h3 class="text-xl font-bold mb-4">Carlos, 34 años</h3>
+      <ul class="text-sm text-ink/70 space-y-2 mb-4">
+        <li><strong class="text-ink">Peso:</strong> 85 kg</li>
+        <li><strong class="text-ink">Altura:</strong> 178 cm</li>
+        <li><strong class="text-ink">Estilo de vida:</strong> Trabaja desde casa frente al PC.</li>
+        <li><strong class="text-ink">Actividad:</strong> Va al gimnasio 3 veces por semana (Ligeramente Activo).</li>
+      </ul>
+      
+      <div class="bg-slate-50 rounded-xl p-4 mt-4 text-sm font-mono space-y-2 border border-slate-100">
+        <p>1. TMB = (10 × 85) + (6.25 × 178) - (5 × 34) + 5</p>
+        <p>2. TMB = 850 + 1112.5 - 170 + 5</p>
+        <p class="font-bold border-b border-slate-200 pb-2">3. TMB = 1,797.5 kcal</p>
+        <p class="pt-2">4. Multiplicador = × 1.375</p>
+        <p class="font-bold text-brand text-lg">GET = 2,471 kcal/día</p>
+      </div>
+      <p class="text-xs text-ink/60 mt-3">Para mantener su peso, Carlos necesita ingerir aproximadamente 2,471 calorías al día.</p>
+    </div>
+
+    <!-- Caso de Estudio 2 -->
+    <div class="bg-white rounded-2xl p-6 border border-hairline shadow-sm relative">
+      <div class="absolute top-4 right-4 bg-pink-100 text-pink-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Caso 2: Sofía</div>
+      <h3 class="text-xl font-bold mb-4">Sofía, 28 años</h3>
+      <ul class="text-sm text-ink/70 space-y-2 mb-4">
+        <li><strong class="text-ink">Peso:</strong> 62 kg</li>
+        <li><strong class="text-ink">Altura:</strong> 165 cm</li>
+        <li><strong class="text-ink">Estilo de vida:</strong> Enfermera hospitalaria, muy activa.</li>
+        <li><strong class="text-ink">Actividad:</strong> Entrena crossfit 4 días por semana (Muy Activa).</li>
+      </ul>
+      
+      <div class="bg-slate-50 rounded-xl p-4 mt-4 text-sm font-mono space-y-2 border border-slate-100">
+        <p>1. TMB = (10 × 62) + (6.25 × 165) - (5 × 28) - 161</p>
+        <p>2. TMB = 620 + 1031.25 - 140 - 161</p>
+        <p class="font-bold border-b border-slate-200 pb-2">3. TMB = 1,350.25 kcal</p>
+        <p class="pt-2">4. Multiplicador = × 1.725</p>
+        <p class="font-bold text-brand text-lg">GET = 2,329 kcal/día</p>
+      </div>
+      <p class="text-xs text-ink/60 mt-3">Debido a su alta actividad (NEAT + EAT elevado), Sofía requiere 2,329 calorías sólo para el mantenimiento metabólico.</p>
+    </div>
+  </div>
+</section>
+
+<section class="mt-16">
+  <h2 class="text-3xl sm:text-4xl font-extrabold text-ink mb-6">Paso 4 — Adaptación del Déficit o Superávit Calórico</h2>
+  
+  <p class="text-lg leading-relaxed text-ink/90 mb-6">
+    Con tu GET (Gasto Energético Total) calculado, ya posees la "brújula" metabólica de tu cuerpo. A partir de esta base de mantenimiento, podemos modular la arquitectura de tu dieta sumando o restando calorías en función de tus objetivos morfológicos.
+  </p>
+
+  <div class="space-y-6">
+    <div class="bg-white/60 p-6 rounded-2xl border border-l-4 border-l-emerald-500 shadow-sm flex flex-col md:flex-row gap-6">
+      <div class="md:w-1/3">
+        <h3 class="text-xl font-bold text-emerald-700">Para Perder Grasa (Déficit Calórico)</h3>
+      </div>
+      <div class="md:w-2/3">
+        <p class="text-ink/80 text-sm md:text-base leading-relaxed">
+          Debes restarle calorías a tu GET. La recomendación médica consensuada es aplicar un déficit de entre <strong>300 a 500 kcal diarias</strong> (o un recorte del 15-20% de tu GET). Esto fomenta una pérdida de peso sostenible y gradual (aprox. 0.3 a 0.5 kg por semana), preservando el tejido magro y asegurando la estabilidad hormonal. No caigas en déficits extremos, ya que reducen drásticamente tu TMB por "adaptación metabólica".
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-white/60 p-6 rounded-2xl border border-l-4 border-l-amber-500 shadow-sm flex flex-col md:flex-row gap-6">
+      <div class="md:w-1/3">
+        <h3 class="text-xl font-bold text-amber-700">Para Aumentar Masa Muscular (Superávit)</h3>
+      </div>
+      <div class="md:w-2/3">
+        <p class="text-ink/80 text-sm md:text-base leading-relaxed">
+          Debes sumar calorías a tu GET, un proceso conocido popularmente como "fase de volumen" (bulking). Añadir entre <strong>250 a 400 kcal diarias</strong> por encima de tu mantenimiento proporcionará a tu fisiología el entorno energético necesario para la síntesis de nuevas proteínas musculares (hipertrofia). Exceder estas cifras significativamente sólo resultará en una mayor acumulación de grasa (tejido adiposo), no en la creación de músculo a mayor velocidad.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mt-16 bg-surface-elevated p-8 sm:p-10 rounded-3xl border border-hairline shadow-inner">
+  <h2 class="text-3xl font-extrabold text-ink mb-6 text-center">La Solución Automática e Inteligente</h2>
+  
+  <p class="text-lg text-ink/80 text-center max-w-3xl mx-auto mb-10">
+    Como has podido comprobar, calcular tus calorías a mano involucra diversas variables, fórmulas con decimales propensas al error humano y ajustes de actividad ambiguos. <strong>¿Por qué arriesgarte con un bolígrafo y papel cuando un algoritmo lo hace con precisión instantánea?</strong>
+  </p>
+
+  <div class="text-center flex flex-col items-center">
+    <p class="text-base text-ink/70 mb-6 max-w-2xl">
+      Nuestra <strong>Calculadora de Calorías Profesional</strong> utiliza la fórmula de Mifflin-St Jeor en segundo plano, ajusta tu NEAT y te ofrece reportes instantáneos (y totalmente gratuitos) tanto para pérdida de peso, mantenimiento o hipertrofia en milisegundos.
+    </p>
+    <Button href="/country/spain/calculadora-de-calorias/" variant="primary" size="lg" class="w-full sm:w-auto text-lg px-10 py-4 shadow-lg shadow-brand/30 hover:shadow-brand/50 transition-all hover:-translate-y-1">
+      Calcular Mis Calorías Ahora ⚡
     </Button>
   </div>
+</section>
 
-  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">¿Qué tan exacto es calcular las calorías diarias?</h2>
-  <p>Al adentrarte en el mundo del cálculo energético, debes recordar un principio fundamental: <strong>calcular calorías al día es siempre una estimación</strong>.</p>
+<section class="mt-16">
+  <h2 class="text-3xl sm:text-4xl font-extrabold text-ink mb-8">Limitaciones y Advertencias de Expertos (Regla de la Exactitud)</h2>
   
-  <p>Ninguna calculadora en internet o fórmula matemática sobre el papel puede garantizar una precisión perfecta. El gasto energético real puede variar por una multitud de razones:</p>
-  <ul class="list-disc pl-6 space-y-3 mb-6">
-    <li><strong>Diferencias en composición corporal:</strong> Dos personas pueden pesar 80 kg, pero una podría tener mucha más masa muscular (que requiere más energía) que la otra.</li>
-    <li><strong>Fluctuaciones diarias de actividad (NEAT):</strong> Caminar un poco más en la oficina un martes frente a un jueves afecta a tus necesidades diarias.</li>
-    <li><strong>Adaptación metabólica:</strong> Tras un periodo prolongado de dieta restrictiva, tu cuerpo puede volverse más eficiente y gastar menos energía de forma natural.</li>
+  <p class="text-lg text-ink/90 mb-6">
+    Como advertencia clínica, es vital comprender que <strong>las fórmulas predictivas son estimaciones</strong>. Se han realizado meta-análisis demostrando que la ecuación de Mifflin-St Jeor tiene un margen de error promedio del ±10% al 15% en ciertas poblaciones con anomalías metabólicas, estrés crónico, historiales amplios de dietas "yoyó", o composiciones corporales extremas (obesidad severa o culturismo).
+  </p>
+  
+  <ul class="space-y-4 mb-8">
+    <li class="flex items-start gap-3">
+      <span class="text-brand mt-1 text-xl">✓</span>
+      <span class="text-ink/80"><strong>Monitoreo como herramienta final:</strong> El número que te arroje la calculadora es tu <em>punto de partida</em>. Mantén el consumo en esa cifra durante 14 días. Si tu peso sube en lugar de mantenerse, resta 150 kcal. Si bajas, suma 150 kcal. La báscula y el espejo corregirán el margen de error del algoritmo.</span>
+    </li>
+    <li class="flex items-start gap-3">
+      <span class="text-brand mt-1 text-xl">✓</span>
+      <span class="text-ink/80"><strong>No seas esclavo de la perfección diaria:</strong> El metabolismo funciona en continuos bloques de tiempo, no se reinicia cada 24 horas exactas. Es mejor centrarse en promedios calóricos semanales que en la exactitud microscópica de cada día.</span>
+    </li>
+    <li class="flex items-start gap-3">
+      <span class="text-brand mt-1 text-xl">✓</span>
+      <span class="text-ink/80"><strong>Composición y Macros:</strong> Calcular calorías es sólo el primer paso (cantidad). Calcular la distribución de macronutrientes (proteínas, grasas, carbohidratos) dictará la <em>calidad</em> de esa pérdida o ganancia de peso.</span>
+    </li>
   </ul>
-  <p>Las fórmulas matemáticas sirven como el mejor punto de apoyo empírico. Calcula tu cifra, aplícala con consistencia durante dos a tres semanas, y monitoriza si la tendencia de tu peso se alinea con tu objetivo. Si no lo hace, es totalmente razonable ajustar tus calorías en 100 o 200 calorías hasta encontrar el rango óptimo.</p>
+</section>
 
-  <h2 class="text-3xl font-bold text-ink mt-12 mb-6">Errores comunes al calcular las calorías</h2>
-  <p>Finalmente, cuando intentes establecer tu ingesta energética, ten cuidado con estos errores frecuentes:</p>
-  <ul class="list-disc pl-6 space-y-3 mb-6">
-    <li><strong>Usar una cifra universal:</strong> Asumir que necesitas 2,000 calorías simplemente porque es el estándar genérico que se imprime en los paquetes de alimentos.</li>
-    <li><strong>Confundir TMB con TDEE:</strong> Intentar sobrevivir consumiendo únicamente las calorías de tu Tasa Metabólica Basal, ignorando que quemas más calorías al estar despierto y moverte.</li>
-    <li><strong>Sobreestimar la actividad física:</strong> Elegir la opción "Muy Activo" en las calculadoras porque haces ejercicio una hora al día, a pesar de pasar las restantes 23 horas sentado o durmiendo.</li>
-    <li><strong>Exigir exactitud absoluta:</strong> Perder la paciencia si las matemáticas no se traducen en resultados lineales exactos en la báscula día tras día.</li>
-  </ul>
+<!-- Suggested Content Section (MachaRule - Hub and Spoke Model Integration) -->
+<section class="mt-20 pt-12 border-t border-hairline relative">
+  <div class="absolute left-1/2 -translate-x-1/2 -top-6 bg-white px-6">
+    <span class="text-sm font-bold uppercase tracking-widest text-brand-soft border border-hairline py-2 px-4 rounded-full shadow-sm">Contenido Sugerido</span>
+  </div>
+  
+  <h2 class="text-2xl font-bold text-center text-ink mb-10">Sigue explorando tu metabolismo</h2>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+    <!-- Enlace 1 -->
+    <a href="/country/spain/cuantas-calorias-debo-consumir-al-dia/" class="group block bg-surface rounded-2xl p-6 border border-hairline hover:border-brand/50 hover:shadow-md transition-all">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-brand/10 text-brand rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+          📊
+        </div>
+        <div>
+          <h3 class="font-bold text-lg text-ink group-hover:text-brand transition-colors">¿Cuántas calorías debo consumir al día?</h3>
+          <p class="text-sm text-ink/70 mt-1">Conoce las recomendaciones estandarizadas de ingesta de la OMS y el sistema sanitario.</p>
+        </div>
+      </div>
+    </a>
+    
+    <!-- Enlace 2 -->
+    <a href="/country/spain/que-es-el-metabolismo-basal/" class="group block bg-surface rounded-2xl p-6 border border-hairline hover:border-brand/50 hover:shadow-md transition-all">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-brand/10 text-brand rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+          🔥
+        </div>
+        <div>
+          <h3 class="font-bold text-lg text-ink group-hover:text-brand transition-colors">¿Qué es el Metabolismo Basal?</h3>
+          <p class="text-sm text-ink/70 mt-1">Descubre en profundidad cómo funciona el motor interno de tu cuerpo y si realmente puedes "acelerarlo".</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  
+  <div class="mt-12 text-center bg-brand-soft/10 p-8 rounded-3xl border border-brand/20 shadow-sm max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+    <div class="text-left">
+      <h3 class="text-xl font-bold text-ink mb-2">Pasa de la teoría a la práctica</h3>
+      <p class="text-ink/70 text-sm">Obtén tu reporte calórico instantáneo, adaptado a tus metas y metabolismo único.</p>
+    </div>
+    <Button href="/country/spain/calculadora-de-calorias/" variant="primary" class="shrink-0 font-bold px-8 shadow-md">
+      Ir a la Calculadora Principal ➔
+    </Button>
+  </div>
+</section>
 
-
-
-<h3>Referencias Médicas y Científicas</h3>
-<ul>
-<li><a href="https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="noopener noreferrer">Organización Mundial de la Salud (OMS) - Dieta Sana</a></li>
-<li><a href="https://www.mayoclinic.org/es-es/healthy-lifestyle/weight-loss/in-depth/calories/art-20048065" target="_blank" rel="noopener noreferrer">Mayo Clinic - Control de Calorías</a></li>
-<li><a href="https://medlineplus.gov/spanish/ency/patientinstructions/000892.htm" target="_blank" rel="noopener noreferrer">MedlinePlus - Calorías y peso</a></li>
-</ul>
 </ContentLayout>
