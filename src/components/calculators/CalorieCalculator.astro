@@ -293,6 +293,16 @@
       el.setAttribute("stroke-dashoffset", `${-offset * C}`);
     }
 
+    function updateVal(id: string, val: string) {
+      const el = $(id);
+      if (el && el.textContent !== val) {
+        el.textContent = val;
+        el.classList.remove("animate-pop");
+        void el.offsetWidth; // trigger reflow
+        el.classList.add("animate-pop");
+      }
+    }
+
     function render() {
       clearDirty();
       const { sex, age, activity, weightKg, heightCm } = readInputs();
@@ -303,17 +313,17 @@
       const goal = goalSelect.value as GoalKey;
       const cals = goalCalories(tdeeVal, goal, sex);
 
-      $("result-bmr").textContent = fmt(bmr);
-      $("result-tdee").textContent = fmt(tdeeVal);
-      $("result-calories").textContent = fmt(cals);
-      $("result-weekly").textContent = fmt(cals * 7);
+      updateVal("result-bmr", fmt(bmr));
+      updateVal("result-tdee", fmt(tdeeVal));
+      updateVal("result-calories", fmt(cals));
+      updateVal("result-weekly", fmt(cals * 7));
       $("goal-label").textContent = GOALS[goal].label.toLowerCase();
 
       // Macros
       const m = macrosFromCalories(cals);
-      $("macro-protein").textContent = String(m.proteinG);
-      $("macro-carbs").textContent = String(m.carbsG);
-      $("macro-fat").textContent = String(m.fatG);
+      updateVal("macro-protein", String(m.proteinG));
+      updateVal("macro-carbs", String(m.carbsG));
+      updateVal("macro-fat", String(m.fatG));
       const pF = m.proteinKcal / cals;
       const cF = m.carbsKcal / cals;
       const fF = m.fatKcal / cals;
