@@ -99,7 +99,7 @@ const selectCls = inputCls + " appearance-none bg-no-repeat pr-9";
   </form>
 
   <!-- ── Results ────────────────────────────────────────────── -->
-  <div id="calc-results" class="flex flex-col rounded-xl border border-hairline bg-surface shadow-md transition-shadow hover:shadow-lg overflow-hidden">
+  <div id="calc-results" aria-live="polite" class="flex flex-col rounded-xl border border-hairline bg-surface shadow-md transition-shadow hover:shadow-lg overflow-hidden">
     <!-- Primary Result -->
     <div class="p-6 sm:p-8">
       <div class="flex flex-wrap items-end justify-between gap-4">
@@ -484,6 +484,9 @@ const selectCls = inputCls + " appearance-none bg-no-repeat pr-9";
         return;
       }
       render();
+      if (window.innerWidth < 1024) {
+        document.getElementById("calc-results")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     });
     prefillFromUrl();
   }
