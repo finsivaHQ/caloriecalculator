@@ -17,9 +17,9 @@ const categoryPath = "/guides/";
   category={category}
   categoryPath={categoryPath}
 >
-<div class="bg-blue-50/50 p-4 rounded-xl border border-blue-100 mb-8 flex items-center gap-3">
+<div class="bg-brand-soft/50 p-4 rounded-xl border border-blue-100 mb-8 flex items-center gap-3">
   <span class="text-2xl">⚕️</span>
-  <p class="text-sm text-slate-600 m-0"><strong>Medical Review:</strong> This article was written and reviewed in accordance with clinical nutrition guidelines (2026). Evidence-based content.</p>
+  <p class="text-sm text-body m-0"><strong>Medical Review:</strong> This article was written and reviewed in accordance with clinical nutrition guidelines (2026). Evidence-based content.</p>
 </div>
 
   <script type="application/ld+json">
@@ -63,7 +63,7 @@ const categoryPath = "/guides/";
     }
   </script>
 
-  <article class="prose lg:prose-xl max-w-none text-gray-800">
+  <article class="prose lg:prose-xl max-w-none text-ink">
     <p>
       When it comes to determining your nutritional needs, calculating your Basal Metabolic Rate (BMR) is the foundational first step. BMR represents the number of calories your body burns at complete rest, simply to maintain vital functions like breathing, circulating blood, and regulating body temperature. While there are several formulas available to estimate BMR, the <strong>Katch-McArdle equation</strong> stands out as uniquely accurate for specific populations, particularly those who have a precise understanding of their body composition. 
     </p>
@@ -72,10 +72,10 @@ const categoryPath = "/guides/";
       Unlike other ubiquitous formulas such as the Mifflin-St Jeor or the Harris-Benedict equations, the Katch-McArdle formula relies entirely on your <strong>Lean Body Mass (LBM)</strong>. This distinctive approach makes it the gold standard for athletes, bodybuilders, and fitness enthusiasts who have a body composition that significantly deviates from the average population. If you carry a significant amount of muscle mass, or conversely, if you are carrying a large amount of body fat, standard formulas can drastically miscalculate your caloric needs. The Katch-McArdle formula corrects for these variations by isolating the very tissue that burns the most calories at rest: your lean mass.
     </p>
 
-    <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8 rounded-r-lg shadow-sm">
-      <h3 class="text-2xl font-bold text-blue-900 mt-0 mb-2">Ready to calculate your total daily energy expenditure?</h3>
-      <p class="text-blue-800 mb-6 text-lg">Find out exactly how many calories you need to consume to lose weight, gain muscle, or maintain your current physique using our advanced calculator.</p>
-      <a href="/tdee-calculator/" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-md transition-all duration-200 no-underline text-lg">
+    <div class="bg-brand-soft border-l-4 border-brand p-6 my-8 rounded-r-lg shadow-sm">
+      <h3 class="text-2xl font-bold text-ink mt-0 mb-2">Ready to calculate your total daily energy expenditure?</h3>
+      <p class="text-ink mb-6 text-lg">Find out exactly how many calories you need to consume to lose weight, gain muscle, or maintain your current physique using our advanced calculator.</p>
+      <a href="/tdee-calculator/" class="inline-block bg-brand hover:bg-brand-hover text-white font-bold py-3 px-8 rounded-lg shadow-md transition-all duration-200 no-underline text-lg">
         Go to the TDEE Calculator &rarr;
       </a>
     </div>
@@ -90,7 +90,7 @@ const categoryPath = "/guides/";
       The formula itself is elegantly simple, provided you know your lean body mass in kilograms:
     </p>
 
-    <blockquote class="bg-gray-100 p-6 rounded-lg text-xl font-mono text-center my-6 border-l-0 shadow-inner">
+    <blockquote class="bg-canvas-soft-2 p-6 rounded-lg text-xl font-mono text-center my-6 border-l-0 shadow-inner">
       BMR = 370 + (21.6 &times; Lean Body Mass in kg)
     </blockquote>
 
@@ -122,7 +122,7 @@ const categoryPath = "/guides/";
       Once you have your LBM in kilograms, you can plug it into the Katch-McArdle equation to find your true Basal Metabolic Rate:
     </p>
 
-    <p class="text-center font-bold text-lg bg-gray-50 py-4 rounded">
+    <p class="text-center font-bold text-lg bg-canvas-soft py-4 rounded">
       BMR = 370 + (21.6 &times; 68) = 370 + 1468.8 = 1838.8 calories/day
     </p>
 
@@ -197,29 +197,29 @@ const categoryPath = "/guides/";
       Once you have calculated your TDEE, you can confidently set your macronutrient targets. If your goal is fat loss, you would typically subtract 300 to 500 calories from your TDEE to create a sustainable deficit. If your primary goal is muscle hypertrophy, you would add a surplus of 200 to 300 calories to provide the energy needed for new tissue growth. Because the Katch-McArdle equation provided such an incredibly accurate starting point based directly on your lean mass, these subsequent calculations will be far more effective in driving the body composition changes you desire.
     </p>
 
-    <hr class="my-10 border-gray-300" />
+    <hr class="my-10 border-hairline-strong" />
 
     <h2>Frequently Asked Questions</h2>
 
     <div class="faq-section space-y-6 mt-8">
-      <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-        <h3 class="text-xl font-bold mb-2 text-gray-900 mt-0">What is the Katch-McArdle equation?</h3>
-        <p class="text-gray-700 mb-0">The Katch-McArdle equation is a highly specialized formula used to calculate your Basal Metabolic Rate (BMR) based solely on your lean body mass (LBM). Unlike standard formulas that rely on total body weight, it ignores fat mass, making it incredibly precise for individuals who know their body fat percentage.</p>
+      <div class="bg-surface p-6 rounded-lg shadow-sm border border-gray-100">
+        <h3 class="text-xl font-bold mb-2 text-ink mt-0">What is the Katch-McArdle equation?</h3>
+        <p class="text-body mb-0">The Katch-McArdle equation is a highly specialized formula used to calculate your Basal Metabolic Rate (BMR) based solely on your lean body mass (LBM). Unlike standard formulas that rely on total body weight, it ignores fat mass, making it incredibly precise for individuals who know their body fat percentage.</p>
       </div>
 
-      <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-        <h3 class="text-xl font-bold mb-2 text-gray-900 mt-0">How does the Katch-McArdle equation differ from the Mifflin-St Jeor equation?</h3>
-        <p class="text-gray-700 mb-0">While the Mifflin-St Jeor equation uses total body weight, age, and height to estimate BMR, the Katch-McArdle equation requires only a single metric: lean body mass. This makes Katch-McArdle far more accurate for people with unusually high or low body fat percentages, such as bodybuilders or obese individuals, where total body weight skews the results.</p>
+      <div class="bg-surface p-6 rounded-lg shadow-sm border border-gray-100">
+        <h3 class="text-xl font-bold mb-2 text-ink mt-0">How does the Katch-McArdle equation differ from the Mifflin-St Jeor equation?</h3>
+        <p class="text-body mb-0">While the Mifflin-St Jeor equation uses total body weight, age, and height to estimate BMR, the Katch-McArdle equation requires only a single metric: lean body mass. This makes Katch-McArdle far more accurate for people with unusually high or low body fat percentages, such as bodybuilders or obese individuals, where total body weight skews the results.</p>
       </div>
 
-      <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-        <h3 class="text-xl font-bold mb-2 text-gray-900 mt-0">Who should use the Katch-McArdle equation?</h3>
-        <p class="text-gray-700 mb-0">The formula is highly recommended for athletes, bodybuilders, and anyone who has obtained a clinical measurement of their body fat percentage (such as via a DEXA scan). It accounts for the higher metabolic activity of muscle tissue, ensuring that muscular individuals aren't underfed by generic BMR estimates.</p>
+      <div class="bg-surface p-6 rounded-lg shadow-sm border border-gray-100">
+        <h3 class="text-xl font-bold mb-2 text-ink mt-0">Who should use the Katch-McArdle equation?</h3>
+        <p class="text-body mb-0">The formula is highly recommended for athletes, bodybuilders, and anyone who has obtained a clinical measurement of their body fat percentage (such as via a DEXA scan). It accounts for the higher metabolic activity of muscle tissue, ensuring that muscular individuals aren't underfed by generic BMR estimates.</p>
       </div>
 
-      <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-        <h3 class="text-xl font-bold mb-2 text-gray-900 mt-0">What is the exact formula for the Katch-McArdle equation?</h3>
-        <p class="text-gray-700 mb-0">The formula is straightforward: <strong>BMR = 370 + (21.6 &times; Lean Body Mass in kg)</strong>. To calculate your Lean Body Mass, you subtract your total fat mass from your overall body weight.</p>
+      <div class="bg-surface p-6 rounded-lg shadow-sm border border-gray-100">
+        <h3 class="text-xl font-bold mb-2 text-ink mt-0">What is the exact formula for the Katch-McArdle equation?</h3>
+        <p class="text-body mb-0">The formula is straightforward: <strong>BMR = 370 + (21.6 &times; Lean Body Mass in kg)</strong>. To calculate your Lean Body Mass, you subtract your total fat mass from your overall body weight.</p>
       </div>
     </div>
     
