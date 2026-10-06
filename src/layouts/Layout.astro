@@ -40,7 +40,8 @@ canonicalUrl.hash = '';
 canonicalUrl.hostname = SITE.domain;
 canonicalUrl.protocol = "https:";
 const canonicalUrlString = canonicalUrl.href;
-const fullTitle = exactTitle ? title : (title.includes(SITE.name) ? title : `${title} | ${SITE.name}`);
+const suffix = ` | ${SITE.name}`;
+const fullTitle = exactTitle ? title : (title.includes(SITE.name) ? title : (title.length + suffix.length > 70 ? title : `${title}${suffix}`));
 const ogImage = new URL("/og-default.svg", SITE.url).href;
 ---
 
