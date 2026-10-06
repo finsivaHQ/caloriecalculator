@@ -146,7 +146,7 @@ const ogImage = new URL("/og-default.svg", SITE.url).href;
         try {
           var stored = localStorage.getItem("theme-preference");
           // Default to light mode for all new visitors
-          var theme = stored || "light"; 
+          var theme = stored || "dark"; 
           document.documentElement.classList.toggle("dark", theme === "dark");
         } catch (e) {
           // document.documentElement.classList.add("dark");
