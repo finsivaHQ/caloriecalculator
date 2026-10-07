@@ -1,18 +1,18 @@
 ---
-import Button from "../../components/ui/Button.astro";
+import Button from"../../components/ui/Button.astro";
 
-import MedicalNote from "../../components/ui/MedicalNote.astro";
-import ContentLayout from "../../layouts/ContentLayout.astro";
-import type { FaqItem } from "../../lib/seo";
-import ArticleImage from "../../components/ui/ArticleImage.astro";
-import Sources from "../../components/ui/Sources.astro";
+import MedicalNote from"../../components/ui/MedicalNote.astro";
+import ContentLayout from"../../layouts/ContentLayout.astro";
+import type { FaqItem } from"../../lib/seo";
+import ArticleImage from"../../components/ui/ArticleImage.astro";
+import Sources from"../../components/ui/Sources.astro";
 
 const faqs: FaqItem[] = [
-  { q: "What does BMR stand for?", a: "BMR stands for Basal Metabolic Rate — the number of calories your body burns at complete rest to maintain basic life functions like breathing, circulation, and cell repair." },
-  { q: "Is BMR the same as RMR?", a: "They are very close. Resting Metabolic Rate (RMR) is measured under slightly less strict conditions and is usually a touch higher, but the terms are often used interchangeably in everyday nutrition and fitness contexts." },
-  { q: "How do I calculate my BMR?", a: "The widely recommended predictive formula is the <a href='/guides/mifflin-st-jeor-equation/'>Mifflin-St Jeor equation</a>-St Jeor equation. For men: BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age + 5. For women: BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age − 161. Use our <a href=\"/bmr-calculator/\'>BMR</a> for an instant result." },
-  { q: "What is a typical BMR?", a: "A typical BMR for adult women ranges from 1,200 to 1,500 kcal/day, and for adult men from 1,500 to 2,000 kcal/day. Your exact number depends on your size, age, sex, and muscle mass." },
-  { q: "Can I use my BMR for weight loss?", a: "Yes. Your BMR is the starting point for any weight goal. Calculate your BMR, then estimate your TDEE by applying your activity level. From there, create a deficit for weight loss or a surplus for weight gain." },
+  { q:"What does BMR stand for?", a:"BMR stands for Basal Metabolic Rate — the number of calories your body burns at complete rest to maintain basic life functions like breathing, circulation, and cell repair." },
+  { q:"Is BMR the same as RMR?", a:"They are very close. Resting Metabolic Rate (RMR) is measured under slightly less strict conditions and is usually a touch higher, but the terms are often used interchangeably in everyday nutrition and fitness contexts." },
+  { q:"How do I calculate my BMR?", a:"The widely recommended predictive formula is the <a href='/guides/mifflin-st-jeor-equation/'>Mifflin-St Jeor equation</a>-St Jeor equation. For men: BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age + 5. For women: BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age − 161. Use our <a href=\"/bmr-calculator/\'>BMR</a> for an instant result." },
+  { q:"What is a typical BMR?", a:"A typical BMR for adult women ranges from 1,200 to 1,500 kcal/day, and for adult men from 1,500 to 2,000 kcal/day. Your exact number depends on your size, age, sex, and muscle mass." },
+  { q:"Can I use my BMR for weight loss?", a:"Yes. Your BMR is the starting point for any weight goal. Calculate your BMR, then estimate your TDEE by applying your activity level. From there, create a deficit for weight loss or a surplus for weight gain." },
 ];
 ---
 
@@ -85,17 +85,17 @@ const faqs: FaqItem[] = [
   <p>Always use the <a href="/">Calorie Calculator</a> to ensure your protein intake is adequate, especially during weight loss, to preserve muscle mass.</p>
 
   <h2>Common misconceptions about BMR</h2>
-  <p><strong>Myth: "Skinny people have higher BMRs."</strong> Not necessarily. Larger bodies, even with higher body fat, often have higher BMRs because there is more total tissue to maintain. Muscle mass matters more than body weight alone.</p>
-  <p><strong>Myth: "You can dramatically boost your BMR with supplements."</strong> Most metabolism-boosting supplements have minimal real-world impact. Caffeine may raise BMR slightly and temporarily, but the effect is small and diminishes with tolerance.</p>
-  <p><strong>Myth: "Eating more meals speeds up your metabolism."</strong> The thermic effect of food depends on total calorie and protein intake, not meal frequency. Eating three meals or six meals produces the same total thermic effect for the same calories.</p>
-  <p><strong>Myth: "Your BMR is fixed and unchangeable."</strong> While your BMR has a genetic baseline, it is not fixed. Building muscle through resistance training, changing body composition, and improving hormonal health can all shift your BMR over time.</p>
+  <p><strong>Myth:"Skinny people have higher BMRs."</strong> Not necessarily. Larger bodies, even with higher body fat, often have higher BMRs because there is more total tissue to maintain. Muscle mass matters more than body weight alone.</p>
+  <p><strong>Myth:"You can dramatically boost your BMR with supplements."</strong> Most metabolism-boosting supplements have minimal real-world impact. Caffeine may raise BMR slightly and temporarily, but the effect is small and diminishes with tolerance.</p>
+  <p><strong>Myth:"Eating more meals speeds up your metabolism."</strong> The thermic effect of food depends on total calorie and protein intake, not meal frequency. Eating three meals or six meals produces the same total thermic effect for the same calories.</p>
+  <p><strong>Myth:"Your BMR is fixed and unchangeable."</strong> While your BMR has a genetic baseline, it is not fixed. Building muscle through resistance training, changing body composition, and improving hormonal health can all shift your BMR over time.</p>
 
   <h2>Try the Calorie Calculator</h2>
   <p>Now that you understand what BMR is and how it works, get your personal number with the <a href="/">BMR</a>. It uses the Mifflin-St Jeor equation and takes only a minute. Combine your BMR result with the <a href="/tdee-calculator/">TDEE calculator</a> to find your full daily calorie needs.</p>
 
   <Sources sources={[
-    { label: "A new predictive equation for resting energy expenditure — Mifflin & St Jeor (1990)", href: "https://pubmed.ncbi.nlm.nih.gov/2305711/" },
-    { label: "Basal metabolic rate — Wikipedia summary of methods", href: "https://en.wikipedia.org/wiki/Basal_metabolic_rate" },
+    { label:"A new predictive equation for resting energy expenditure — Mifflin & St Jeor (1990)", href:"https://pubmed.ncbi.nlm.nih.gov/2305711/" },
+    { label:"Basal metabolic rate — Wikipedia summary of methods", href:"https://en.wikipedia.org/wiki/Basal_metabolic_rate" },
   ]} />
 <div class='my-10'>
     <div class="my-8 rounded-2xl border border-hairline bg-canvas-soft p-6 text-center sm:p-8">

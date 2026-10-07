@@ -1,6 +1,6 @@
 ---
-import { inputCls, selectCls } from "../../lib/ui";
-import type { Activity } from "../../data/exercises";
+import { inputCls, selectCls } from"../../lib/ui";
+import type { Activity } from"../../data/exercises";
 
 interface Props {
   activities: Activity[];
@@ -55,8 +55,8 @@ const { activities, defaultIndex = 0 } = Astro.props;
 </div>
 
 <script>
-  import { caloriesBurned } from "../../lib/calculations";
-  import { lbToKg } from "../../lib/units";
+  import { caloriesBurned } from"../../lib/calculations";
+  import { lbToKg } from"../../lib/units";
 
   const root = document.getElementById("calc-root");
   if (root) {
@@ -69,7 +69,7 @@ const { activities, defaultIndex = 0 } = Astro.props;
       const box = document.getElementById("result-box") || document.getElementById("calc-results");
       if (box) {
         box.querySelectorAll(".tabular-nums").forEach((el) => {
-          el.textContent = "-.-";
+          el.textContent ="-.-";
         });
       }
       const btn = document.getElementById("calc-btn");
@@ -82,13 +82,13 @@ const { activities, defaultIndex = 0 } = Astro.props;
       if (btn) btn.classList.remove("is-dirty");
     }
     const fmt = (n: number) => Math.round(n).toLocaleString("en-US");
-    let unit: "metric" | "imperial" = "metric";
+    let unit:"metric" |"imperial" ="metric";
 
     function render() {
       clearDirty();
       const met = parseFloat(($("activity") as HTMLSelectElement).value) || 0;
       let w = parseFloat(($("weight") as HTMLInputElement).value) || 0;
-      if (unit === "imperial") w = lbToKg(w);
+      if (unit ==="imperial") w = lbToKg(w);
       const mins = parseFloat(($("duration") as HTMLInputElement).value) || 0;
       if (met <= 0 || w <= 0 || mins <= 0) return;
       $("cb-value").textContent = fmt(caloriesBurned(met, w, mins));
@@ -96,18 +96,18 @@ const { activities, defaultIndex = 0 } = Astro.props;
       const durations = [15, 30, 45, 60, 90];
       $("cb-table").innerHTML = durations.map((d) => {
         const hl = d === Math.round(mins);
-        return `<tr class="border-b border-hairline last:border-0 ${hl ? "bg-brand/5" : ""}"><td class="px-5 py-2.5 ${hl ? "font-medium text-ink" : "text-body"}">${d} minutes</td><td class="px-5 py-2.5 text-right font-medium tabular-nums ${hl ? "text-ink" : "text-body"}">${fmt(caloriesBurned(met, w, d))} kcal</td></tr>`;
+        return `<tr class="border-b border-hairline last:border-0 ${hl ?"bg-brand/5" :""}"><td class="px-5 py-2.5 ${hl ?"font-medium text-ink" :"text-body"}">${d} minutes</td><td class="px-5 py-2.5 text-right font-medium tabular-nums ${hl ?"text-ink" :"text-body"}">${fmt(caloriesBurned(met, w, d))} kcal</td></tr>`;
       }).join("");
     }
 
     root.querySelectorAll<HTMLButtonElement>(".unit-tab").forEach((btn) => {
       btn.addEventListener("click", () => {
-        const next = btn.dataset.unit as "metric" | "imperial";
+        const next = btn.dataset.unit as"metric" |"imperial";
         if (next === unit) return; unit = next;
         root.querySelectorAll<HTMLButtonElement>(".unit-tab").forEach((b) => { const on = b.dataset.unit === unit; b.setAttribute("aria-pressed", String(on)); b.classList.toggle("bg-surface", on); b.classList.toggle("border", on); b.classList.toggle("border-hairline", on); b.classList.toggle("text-ink", on); b.classList.toggle("shadow-sm", on); b.classList.toggle("text-mute", !on); });
-        document.querySelectorAll(".u-wt").forEach((e) => (e.textContent = unit === "metric" ? "(kg)" : "(lb)"));
+        document.querySelectorAll(".u-wt").forEach((e) => (e.textContent = unit ==="metric" ?"(kg)" :"(lb)"));
         const wi = $("weight") as HTMLInputElement; const cv = parseFloat(wi.value) || 0;
-        if (cv) wi.value = (unit === "imperial" ? cv * 2.2046226218 : cv / 2.2046226218).toFixed(1);
+        if (cv) wi.value = (unit ==="imperial" ? cv * 2.2046226218 : cv / 2.2046226218).toFixed(1);
         markDirty();
         render();
       });

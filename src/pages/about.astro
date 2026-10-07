@@ -1,5 +1,5 @@
 ---
-import ContentLayout from "../layouts/ContentLayout.astro";
+import ContentLayout from"../layouts/ContentLayout.astro";
 ---
 <ContentLayout
   title="About Us - Calorie Calculator Free"
@@ -8,11 +8,11 @@ import ContentLayout from "../layouts/ContentLayout.astro";
   path="/about/"
   lead="Empowering your health journey with science-backed, 100% free nutritional tools."
 >
-  <div class="prose max-w-none text-brand-dark/80 dark:text-white/80 space-y-8">
+  <div class="prose max-w-none text-brand-dark/80 /80 space-y-8">
     <section>
       <h2>The Story Behind Our Mission</h2>
       <p>Welcome to <strong>Calorie Calculator Free</strong>. To understand why we built this platform, you have to look back at the moment of frustration that started it all. Years ago, our founding team—a small group of software developers, fitness nerds, and data analysts—embarked on our own personal health journeys. Some of us were trying to shed stubborn body fat after years of sedentary office work, while others were athletes striving to dial in their macronutrients for peak performance.</p>
-      <p>What did we all have in common? We were completely overwhelmed and deeply frustrated by the digital fitness landscape. When we went searching for simple, accurate tools to calculate our Total Daily Energy Expenditure (TDEE) and basal metabolic rate, we found a broken system. Almost every app and website demanded an email address before revealing a single number. Worse, they locked the most basic, decades-old scientific formulas behind exorbitant monthly paywalls, premium subscriptions, and invasive data-harvesting schemes. We saw platforms deliberately obfuscating the math—using proprietary "black box" algorithms designed to make you feel like you couldn't possibly understand your own metabolism without their expensive guidance.</p>
+      <p>What did we all have in common? We were completely overwhelmed and deeply frustrated by the digital fitness landscape. When we went searching for simple, accurate tools to calculate our Total Daily Energy Expenditure (TDEE) and basal metabolic rate, we found a broken system. Almost every app and website demanded an email address before revealing a single number. Worse, they locked the most basic, decades-old scientific formulas behind exorbitant monthly paywalls, premium subscriptions, and invasive data-harvesting schemes. We saw platforms deliberately obfuscating the math—using proprietary"black box" algorithms designed to make you feel like you couldn't possibly understand your own metabolism without their expensive guidance.</p>
       <p>It didn't sit right with us. The fundamental mathematics of human energy expenditure—formulas like Mifflin-St Jeor and Harris-Benedict—were developed by scientists and researchers for the benefit of public health, not to be hoarded by tech conglomerates. We realized that access to highly accurate, scientifically validated nutritional data should be a universal right, not a premium privilege. And from that realization, <strong>Calorie Calculator Free</strong> was born.</p>
       <p>We set out to create the exact opposite of everything we hated in the industry. We wanted a site that was blindingly fast, fiercely transparent, completely respectful of user privacy, and—most importantly—100% free. No hidden fees. No sneaky subscriptions. Just pure, unadulterated science, available to anyone with an internet connection.</p>
     </section>
@@ -26,7 +26,7 @@ import ContentLayout from "../layouts/ContentLayout.astro";
     
     <section>
       <h2>Our Unwavering Commitment to Scientific Accuracy</h2>
-      <p>We absolutely refuse to rely on guesswork or proprietary "magic algorithms." The fitness world is already plagued by applications that hide their internal logic to create a false sense of exclusivity and value. At Calorie Calculator Free, we are fully, unabashedly transparent. Every single calculator on this platform is meticulously built upon established, peer-reviewed clinical research. Our tools utilize globally recognized metabolic formulas that are taught in medical schools and dietetics programs worldwide, including:</p>
+      <p>We absolutely refuse to rely on guesswork or proprietary"magic algorithms." The fitness world is already plagued by applications that hide their internal logic to create a false sense of exclusivity and value. At Calorie Calculator Free, we are fully, unabashedly transparent. Every single calculator on this platform is meticulously built upon established, peer-reviewed clinical research. Our tools utilize globally recognized metabolic formulas that are taught in medical schools and dietetics programs worldwide, including:</p>
       <ul>
         <li><strong>The Mifflin-St Jeor Equation:</strong> Developed in 1990 and endorsed by the Academy of Nutrition and Dietetics, this is widely considered the most accurate modern predictive equation for Resting Metabolic Rate (RMR). It takes into account the realities of modern, largely sedentary lifestyles better than older formulas, making it our default recommendation for the vast majority of our users.</li>
         <li><strong>The Harris-Benedict Formula:</strong> A classic, foundational algorithm originally published in 1919 and subsequently revised in 1984 by Roza and Shizgal for broader accuracy. While slightly older, it remains highly effective for broad population modeling and is a trusted tool in clinical settings.</li>
@@ -36,9 +36,9 @@ import ContentLayout from "../layouts/ContentLayout.astro";
     </section>
 
     <section>
-      <h2>The "Privacy First" Guarantee</h2>
+      <h2>The"Privacy First" Guarantee</h2>
       <p>In today's hyper-connected digital age, your personal health data—including your weight, your age, your biological sex, and your dietary habits—is your most sensitive and private asset. It is appalling how casually many health apps harvest this data, only to sell it to third-party advertisers or insurance companies.</p>
-      <p>At Calorie Calculator Free, we have engineered our platform with a strict, uncompromising "Privacy First" architecture from day one. What does that mean for you? <strong>Every single calculation occurs locally on your device, right within your web browser.</strong></p>
+      <p>At Calorie Calculator Free, we have engineered our platform with a strict, uncompromising"Privacy First" architecture from day one. What does that mean for you? <strong>Every single calculation occurs locally on your device, right within your web browser.</strong></p>
       <p>When you enter your weight or your goals into our tools, that data is never transmitted to our servers. We do not harvest, intercept, or store your physiological data in any database. The only data ever saved is kept in your browser's local storage (using standard web technologies like cookies or localStorage) solely for your own convenience—so you don't have to re-enter your height and age every time you visit. This ensures that your health journey remains completely anonymous and secure.</p>
       <p>You never have to worry about a catastrophic data breach exposing your weight loss goals or personal health metrics, because we simply do not possess that data in the first place. You are the sole owner of your information. For more detailed information about our data practices, please review our comprehensive <a href="/privacy-policy/">Privacy Policy</a>.</p>
     </section>
@@ -63,7 +63,7 @@ import ContentLayout from "../layouts/ContentLayout.astro";
         
         <div>
           <h3 class="text-xl font-bold">Why do different calculators give me slightly different numbers?</h3>
-          <p>If you've noticed that the Mifflin-St Jeor equation gives you a different baseline than the Harris-Benedict formula, that is completely normal. These formulas were developed decades apart using different population samples. Mifflin-St Jeor tends to be more accurate for modern, less active populations, while Harris-Benedict might slightly overestimate needs. The Katch-McArdle formula will differ again because it uses your specific body fat percentage. None of them are "wrong"; they are just different scientific models estimating the same biological process. Pick one, stick with it for a few weeks, and adjust based on real-world results.</p>
+          <p>If you've noticed that the Mifflin-St Jeor equation gives you a different baseline than the Harris-Benedict formula, that is completely normal. These formulas were developed decades apart using different population samples. Mifflin-St Jeor tends to be more accurate for modern, less active populations, while Harris-Benedict might slightly overestimate needs. The Katch-McArdle formula will differ again because it uses your specific body fat percentage. None of them are"wrong"; they are just different scientific models estimating the same biological process. Pick one, stick with it for a few weeks, and adjust based on real-world results.</p>
         </div>
         
         <div>
@@ -78,7 +78,7 @@ import ContentLayout from "../layouts/ContentLayout.astro";
         
         <div>
           <h3 class="text-xl font-bold">Do you have an app I can download?</h3>
-          <p>Currently, we are focusing all of our energy on making our web platform the absolute best it can be. Because our website is designed as a Progressive Web App (PWA), you can easily "Add to Home Screen" on both iOS and Android devices. This gives you an app-like experience—full screen, fast loading, and offline capabilities—without taking up precious storage space on your phone or requiring constant updates through an app store.</p>
+          <p>Currently, we are focusing all of our energy on making our web platform the absolute best it can be. Because our website is designed as a Progressive Web App (PWA), you can easily"Add to Home Screen" on both iOS and Android devices. This gives you an app-like experience—full screen, fast loading, and offline capabilities—without taking up precious storage space on your phone or requiring constant updates through an app store.</p>
         </div>
       </div>
     </section>

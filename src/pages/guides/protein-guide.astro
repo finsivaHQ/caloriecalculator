@@ -1,36 +1,36 @@
 ---
-import Button from "../../components/ui/Button.astro";
-import MedicalNote from "../../components/ui/MedicalNote.astro";
-import ContentLayout from "../../layouts/ContentLayout.astro";
-import type { FaqItem } from "../../lib/seo";
-import ArticleImage from "../../components/ui/ArticleImage.astro";
+import Button from"../../components/ui/Button.astro";
+import MedicalNote from"../../components/ui/MedicalNote.astro";
+import ContentLayout from"../../layouts/ContentLayout.astro";
+import type { FaqItem } from"../../lib/seo";
+import ArticleImage from"../../components/ui/ArticleImage.astro";
 
 const faqs: FaqItem[] = [
-  { q: "How much protein do I need to build muscle?", a: "Research supports 1.6–2.2 g of protein per kg of body weight per day for building muscle. Going higher offers little additional benefit for most people." },
-  { q: "Can I eat too much protein?", a: "For healthy individuals, high-protein diets are safe. There's no strong evidence that high protein harms healthy kidneys. Those with kidney disease should consult a doctor." },
-  { q: "How many calories in 1 gram of protein?", a: "One gram of protein contains approximately 4 calories. This is a universal scientific measurement used by nutrition researchers worldwide." },
-  { q: "How many calories from protein per day?", a: "Multiply your protein grams by 4. For example, 150g protein = 600 calories. A 30% protein diet on 2000 calories = 64g protein = 256 calories." },
-  { q: "Protein to calories ratio?", a: "The protein calorie ratio is always 1:4 — one gram equals 4 calories. Fat is 1:9, carbs are 1:4. This lets you calculate calories from any macro." },
-  { q: "Calories per gram of protein?", a: "Protein provides approximately 4 kcal per gram. This is established through bomb calorimetry and is consistent across all protein sources including meat, dairy, and plants." },
-  { q: "Protein vs carbs vs fat calories?", a: "Protein: 4 kcal/g, Carbs: 4 kcal/g, Fat: 9 kcal/g. Protein and carbs have equal calorie density, while fat is more than double at 9 kcal/g." },
-  { q: "How to convert protein grams to calories?", a: "Multiply grams by 4. 100g protein = 400 calories, 150g = 600 calories. Reverse: divide calories by 4 to get grams." },
-  { q: "Protein calorie calculator?", a: "Our <a href='/protein-calculator/'>protein calculator</a> shows your daily protein target with calories. Our <a href="/">Calorie Calculator</a> converts all macros to calories." },
-  { q: "What is the protein calorie chart?", a: "Protein calorie chart: 25g = 100 kcal, 50g = 200 kcal, 100g = 400 kcal, 150g = 600 kcal, 200g = 800 kcal. Always multiply grams by 4." },
-  { q: "Does protein have more calories than carbs?", a: "No. Both protein and carbohydrates provide approximately 4 calories per gram. Fat is higher at 9 calories per gram." },
-  { q: "Why does protein have 4 calories per gram?", a: "When protein is metabolized, carbon-hydrogen bonds release energy measured at 4 kcal/g through controlled scientific testing called bomb calorimetry." },
-  { q: "Calories from protein percentage?", a: "On a 2000-calorie diet, 30% protein = 600 calories = 150g protein. Use our macro calculator to find your ideal protein percentage for your goal." },
-  { q: "What are complete proteins?", a: "Complete proteins contain all 9 essential amino acids. Animal proteins are always complete. Plant combinations like rice and beans provide complete amino acids." },
-  { q: "Protein timing for muscle growth?", a: "Spread 25–40g protein across 3–4 meals. Post-workout protein within 2 hours maximizes muscle protein synthesis." },
-  { q: "Is protein good for weight loss?", a: "Yes. High-protein diets increase thermic effect (up to 30% of calories burned during digestion) and improve satiety, making weight loss easier." },
-  { q: "High protein calorie deficit?", a: "During a deficit, aim for 1.6–2.2 g/kg protein to preserve muscle. Higher protein intake offsets muscle loss while dieting." },
-  { q: "Protein calories vs fat calories?", a: "Protein: 4 kcal/g, Fat: 9 kcal/g. One gram of fat has more than double the calories of protein, so high-fat foods are more calorie-dense." },
-  { q: "Protein macro calculator?", a: "Our <a href="/">Calorie Calculator</a> converts your daily calories into protein, carbs, and fat grams automatically." },
-  { q: "Protein to calorie conversion chart?", a: "25g = 100 kcal, 100g = 400 kcal, 150g = 600 kcal, 200g = 800 kcal, 250g = 1000 kcal. Multiply protein grams by 4 for calories." },
-  { q: "Calories in protein rich foods?", a: "Chicken breast (165 kcal/100g), eggs (130 kcal/100g, 13g protein), Greek yogurt (59 kcal/100g), protein powder (300–400 kcal/100g, 80g protein)." },
-  { q: "Protein and calorie needs by age?", a: "Older adults (50+) need 1.2–1.6 g/kg protein to prevent sarcopenia. Calorie needs decrease with age as metabolism slows." },
-  { q: "Protein for muscle preservation?", a: "During calorie deficit, 1.6–2.2 g/kg protein prevents muscle loss. Higher protein preserves lean mass while losing fat." },
-  { q: "Protein calorie density?", a: "Protein is 4 kcal per gram — equal to carbs but less than fat (9 kcal/g). This allows larger portions at fewer calories." },
-  { q: "Daily protein intake calculator?", a: "Our <a href='/protein-calculator/'>protein calculator</a> gives daily grams based on your weight and activity. Multiply by 4 for calories." },
+  { q:"How much protein do I need to build muscle?", a:"Research supports 1.6–2.2 g of protein per kg of body weight per day for building muscle. Going higher offers little additional benefit for most people." },
+  { q:"Can I eat too much protein?", a:"For healthy individuals, high-protein diets are safe. There's no strong evidence that high protein harms healthy kidneys. Those with kidney disease should consult a doctor." },
+  { q:"How many calories in 1 gram of protein?", a:"One gram of protein contains approximately 4 calories. This is a universal scientific measurement used by nutrition researchers worldwide." },
+  { q:"How many calories from protein per day?", a:"Multiply your protein grams by 4. For example, 150g protein = 600 calories. A 30% protein diet on 2000 calories = 64g protein = 256 calories." },
+  { q:"Protein to calories ratio?", a:"The protein calorie ratio is always 1:4 — one gram equals 4 calories. Fat is 1:9, carbs are 1:4. This lets you calculate calories from any macro." },
+  { q:"Calories per gram of protein?", a:"Protein provides approximately 4 kcal per gram. This is established through bomb calorimetry and is consistent across all protein sources including meat, dairy, and plants." },
+  { q:"Protein vs carbs vs fat calories?", a:"Protein: 4 kcal/g, Carbs: 4 kcal/g, Fat: 9 kcal/g. Protein and carbs have equal calorie density, while fat is more than double at 9 kcal/g." },
+  { q:"How to convert protein grams to calories?", a:"Multiply grams by 4. 100g protein = 400 calories, 150g = 600 calories. Reverse: divide calories by 4 to get grams." },
+  { q:"Protein calorie calculator?", a:"Our <a href='/protein-calculator/'>protein calculator</a> shows your daily protein target with calories. Our <a href="/">Calorie Calculator</a> converts all macros to calories." },
+  { q:"What is the protein calorie chart?", a:"Protein calorie chart: 25g = 100 kcal, 50g = 200 kcal, 100g = 400 kcal, 150g = 600 kcal, 200g = 800 kcal. Always multiply grams by 4." },
+  { q:"Does protein have more calories than carbs?", a:"No. Both protein and carbohydrates provide approximately 4 calories per gram. Fat is higher at 9 calories per gram." },
+  { q:"Why does protein have 4 calories per gram?", a:"When protein is metabolized, carbon-hydrogen bonds release energy measured at 4 kcal/g through controlled scientific testing called bomb calorimetry." },
+  { q:"Calories from protein percentage?", a:"On a 2000-calorie diet, 30% protein = 600 calories = 150g protein. Use our macro calculator to find your ideal protein percentage for your goal." },
+  { q:"What are complete proteins?", a:"Complete proteins contain all 9 essential amino acids. Animal proteins are always complete. Plant combinations like rice and beans provide complete amino acids." },
+  { q:"Protein timing for muscle growth?", a:"Spread 25–40g protein across 3–4 meals. Post-workout protein within 2 hours maximizes muscle protein synthesis." },
+  { q:"Is protein good for weight loss?", a:"Yes. High-protein diets increase thermic effect (up to 30% of calories burned during digestion) and improve satiety, making weight loss easier." },
+  { q:"High protein calorie deficit?", a:"During a deficit, aim for 1.6–2.2 g/kg protein to preserve muscle. Higher protein intake offsets muscle loss while dieting." },
+  { q:"Protein calories vs fat calories?", a:"Protein: 4 kcal/g, Fat: 9 kcal/g. One gram of fat has more than double the calories of protein, so high-fat foods are more calorie-dense." },
+  { q:"Protein macro calculator?", a:"Our <a href="/">Calorie Calculator</a> converts your daily calories into protein, carbs, and fat grams automatically." },
+  { q:"Protein to calorie conversion chart?", a:"25g = 100 kcal, 100g = 400 kcal, 150g = 600 kcal, 200g = 800 kcal, 250g = 1000 kcal. Multiply protein grams by 4 for calories." },
+  { q:"Calories in protein rich foods?", a:"Chicken breast (165 kcal/100g), eggs (130 kcal/100g, 13g protein), Greek yogurt (59 kcal/100g), protein powder (300–400 kcal/100g, 80g protein)." },
+  { q:"Protein and calorie needs by age?", a:"Older adults (50+) need 1.2–1.6 g/kg protein to prevent sarcopenia. Calorie needs decrease with age as metabolism slows." },
+  { q:"Protein for muscle preservation?", a:"During calorie deficit, 1.6–2.2 g/kg protein prevents muscle loss. Higher protein preserves lean mass while losing fat." },
+  { q:"Protein calorie density?", a:"Protein is 4 kcal per gram — equal to carbs but less than fat (9 kcal/g). This allows larger portions at fewer calories." },
+  { q:"Daily protein intake calculator?", a:"Our <a href='/protein-calculator/'>protein calculator</a> gives daily grams based on your weight and activity. Multiply by 4 for calories." },
 ];
 ---
 

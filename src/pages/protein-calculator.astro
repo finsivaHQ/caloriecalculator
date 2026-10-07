@@ -1,29 +1,29 @@
 ---
-import CalculatorLayout from "../layouts/CalculatorLayout.astro";
-import { inputCls, selectCls } from "../lib/ui";
-import type { FaqItem } from "../lib/seo";
-import MedicalNote from "../components/ui/MedicalNote.astro";
-import Sources from "../components/ui/Sources.astro";
-import ArticleImage from "../components/ui/ArticleImage.astro";
+import CalculatorLayout from"../layouts/CalculatorLayout.astro";
+import { inputCls, selectCls } from"../lib/ui";
+import type { FaqItem } from"../lib/seo";
+import MedicalNote from"../components/ui/MedicalNote.astro";
+import Sources from"../components/ui/Sources.astro";
+import ArticleImage from"../components/ui/ArticleImage.astro";
 
 const faqs: FaqItem[] = [
-  { q: "How much protein do I need per day?", a: "Active adults generally need 1.2–2.0 g of protein per kilogram of body weight daily. Sedentary people need the RDA of 0.8 g/kg. Athletes and those in a calorie deficit should aim for 1.6–2.2 g/kg to preserve and build muscle." },
-  { q: "Is too much protein dangerous?", a: "For healthy people, high-protein diets are safe. Intakes up to about 2 g/kg show no harm in research. People with existing kidney disease should consult a doctor before increasing protein significantly." },
-  { q: "When should I eat protein?", a: "Spreading protein across 3–4 meals of 25–40 g each maximizes muscle protein synthesis. Including protein at every meal also improves fullness and helps control overall calorie intake." },
-  { q: "What are good protein sources?", a: "Chicken, fish, lean beef, eggs, Greek yogurt, cottage cheese, tofu, tempeh, lentils, beans, and protein powder are excellent. Animal sources are 'complete', while combining plant sources covers all amino acids." },
-  { q: "How many calories in 1 gram of protein?", a: "Protein contains approximately 4 calories per gram. This is a universal value used by nutrition scientists. One gram of protein provides 4 kcal of energy." },
-  { q: "How many calories from protein per day?", a: "Multiply your protein grams by 4. For example, 150g of protein = 600 calories. Use our calculator to find your target and convert to calories automatically." },
-  { q: "Protein to calories ratio?", a: "The ratio is 1 gram of protein to 4 calories. This means 25g protein = 100 calories, 50g = 200 calories. Fat is 9 calories per gram, carbs are 4 calories per gram." },
-  { q: "Calories per gram of macronutrients?", a: "Protein: 4 kcal/g, Carbs: 4 kcal/g, Fat: 9 kcal/g. Alcohol is 7 kcal/g (not a macronutrient). This is how we calculate total calories from macros." },
-  { q: "How to convert protein grams to calories?", a: "Multiply protein grams by 4. For 120g protein, that's 480 calories. Reverse: divide calories by 4 to get grams. 200 calories ÷ 4 = 50g protein." },
-  { q: "What is the protein calorie calculator?", a: "Our protein calorie calculator shows how many calories your protein intake provides, helping you fit it into your daily calorie target from protein, carbs, and fat." },
-  { q: "Calories from protein percentage?", a: "On a 2000-calorie diet, if 150g protein (600 cal), protein is 30%. Use our macro calculator to set protein percentage based on your goal." },
-  { q: "Protein calorie chart?", a: "10g = 40 cal, 20g = 80 cal, 25g = 100 cal, 50g = 200 cal, 100g = 400 cal, 150g = 600 cal, 200g = 800 cal. Every gram of protein = 4 calories." },
-  { q: "Does protein have more calories than carbs?", a: "No. Both protein and carbohydrates contain approximately 4 calories per gram. Fat is more calorie-dense at 9 calories per gram." },
-  { q: "Why does protein have 4 calories per gram?", a: "When protein is metabolized, the carbon bonds release energy measured at 4 kcal/g through controlled scientific testing called bomb calorimetry." },
-  { q: "Best protein sources for weight loss?", a: "Lean chicken breast, white fish, Greek yogurt, egg whites, and protein powder give high protein with fewer calories. Use the <a href="/">Calorie Calculator</a> to fit them into your plan." },
-  { q: "Protein timing for muscle gain?", a: "Eat 25–40g protein every 3–4 hours. Post-workout protein within 2 hours maximizes muscle protein synthesis. Spread across 4–5 meals for best results." },
-  { q: "How much protein for muscle gain vs weight loss?", a: "Weight loss: 1.6–2.2 g/kg to preserve muscle. Muscle gain: 1.6–2.2 g/kg plus a calorie surplus. Use the <a href="/">Calorie Calculator</a> to set your split." },
+  { q:"How much protein do I need per day?", a:"Active adults generally need 1.2–2.0 g of protein per kilogram of body weight daily. Sedentary people need the RDA of 0.8 g/kg. Athletes and those in a calorie deficit should aim for 1.6–2.2 g/kg to preserve and build muscle." },
+  { q:"Is too much protein dangerous?", a:"For healthy people, high-protein diets are safe. Intakes up to about 2 g/kg show no harm in research. People with existing kidney disease should consult a doctor before increasing protein significantly." },
+  { q:"When should I eat protein?", a:"Spreading protein across 3–4 meals of 25–40 g each maximizes muscle protein synthesis. Including protein at every meal also improves fullness and helps control overall calorie intake." },
+  { q:"What are good protein sources?", a:"Chicken, fish, lean beef, eggs, Greek yogurt, cottage cheese, tofu, tempeh, lentils, beans, and protein powder are excellent. Animal sources are 'complete', while combining plant sources covers all amino acids." },
+  { q:"How many calories in 1 gram of protein?", a:"Protein contains approximately 4 calories per gram. This is a universal value used by nutrition scientists. One gram of protein provides 4 kcal of energy." },
+  { q:"How many calories from protein per day?", a:"Multiply your protein grams by 4. For example, 150g of protein = 600 calories. Use our calculator to find your target and convert to calories automatically." },
+  { q:"Protein to calories ratio?", a:"The ratio is 1 gram of protein to 4 calories. This means 25g protein = 100 calories, 50g = 200 calories. Fat is 9 calories per gram, carbs are 4 calories per gram." },
+  { q:"Calories per gram of macronutrients?", a:"Protein: 4 kcal/g, Carbs: 4 kcal/g, Fat: 9 kcal/g. Alcohol is 7 kcal/g (not a macronutrient). This is how we calculate total calories from macros." },
+  { q:"How to convert protein grams to calories?", a:"Multiply protein grams by 4. For 120g protein, that's 480 calories. Reverse: divide calories by 4 to get grams. 200 calories ÷ 4 = 50g protein." },
+  { q:"What is the protein calorie calculator?", a:"Our protein calorie calculator shows how many calories your protein intake provides, helping you fit it into your daily calorie target from protein, carbs, and fat." },
+  { q:"Calories from protein percentage?", a:"On a 2000-calorie diet, if 150g protein (600 cal), protein is 30%. Use our macro calculator to set protein percentage based on your goal." },
+  { q:"Protein calorie chart?", a:"10g = 40 cal, 20g = 80 cal, 25g = 100 cal, 50g = 200 cal, 100g = 400 cal, 150g = 600 cal, 200g = 800 cal. Every gram of protein = 4 calories." },
+  { q:"Does protein have more calories than carbs?", a:"No. Both protein and carbohydrates contain approximately 4 calories per gram. Fat is more calorie-dense at 9 calories per gram." },
+  { q:"Why does protein have 4 calories per gram?", a:"When protein is metabolized, the carbon bonds release energy measured at 4 kcal/g through controlled scientific testing called bomb calorimetry." },
+  { q:"Best protein sources for weight loss?", a:"Lean chicken breast, white fish, Greek yogurt, egg whites, and protein powder give high protein with fewer calories. Use the <a href="/">Calorie Calculator</a> to fit them into your plan." },
+  { q:"Protein timing for muscle gain?", a:"Eat 25–40g protein every 3–4 hours. Post-workout protein within 2 hours maximizes muscle protein synthesis. Spread across 4–5 meals for best results." },
+  { q:"How much protein for muscle gain vs weight loss?", a:"Weight loss: 1.6–2.2 g/kg to preserve muscle. Muscle gain: 1.6–2.2 g/kg plus a calorie surplus. Use the <a href="/">Calorie Calculator</a> to set your split." },
 ];
 ---
 
@@ -103,7 +103,7 @@ const faqs: FaqItem[] = [
     <h2>Quick Answer: How Many Calories in 1 Gram of Protein?</h2>
     <p class="text-display-sm font-semibold text-ink"><strong>One gram of protein equals approximately 4 calories.</strong></p>
     <p>This is a scientific fact established through decades of rigorous and controlled testing in the field of nutritional science. Whether you are consuming chicken, fish, eggs, tofu, lentils, or a highly processed whey protein powder, the fundamental building blocks—amino acids—will always provide exactly 4 kilocalories (kcal) of energy per gram when metabolized by the human body. This universal constant is precisely why converting your protein intake into calories is a beautifully simple piece of arithmetic: you just multiply your total grams of protein by 4.</p>
-    <p>Understanding this 1-to-4 ratio is the cornerstone of nutritional planning. When you begin to track your macronutrients (commonly known as "macros"), recognizing the caloric density of what you eat empowers you to make informed decisions. It demystifies the nutritional label on the back of your food packaging and allows you to seamlessly integrate your protein requirements into your overall daily energy expenditure (TDEE). With this knowledge, you are no longer just guessing; you are calculating your path to better health, muscle gain, or fat loss with the precision of a nutritionist.</p>
+    <p>Understanding this 1-to-4 ratio is the cornerstone of nutritional planning. When you begin to track your macronutrients (commonly known as"macros"), recognizing the caloric density of what you eat empowers you to make informed decisions. It demystifies the nutritional label on the back of your food packaging and allows you to seamlessly integrate your protein requirements into your overall daily energy expenditure (TDEE). With this knowledge, you are no longer just guessing; you are calculating your path to better health, muscle gain, or fat loss with the precision of a nutritionist.</p>
 
     <h2>Protein Calorie Conversion Made Simple</h2>
     <p>The protein to calories formula is incredibly straightforward, requiring only basic multiplication or division depending on which metric you are trying to find.</p>
@@ -122,14 +122,14 @@ const faqs: FaqItem[] = [
       </div>
     </div>
     <p>Let’s break this down further with a practical example. Imagine you have a chicken breast that contains 30 grams of protein. To find out how many calories that protein contributes to your meal, you multiply 30 by 4, giving you 120 calories derived exclusively from protein. Conversely, if you are looking at your daily meal plan and know you want to allocate exactly 800 calories to protein to meet a specific macronutrient split, you would divide 800 by 4, revealing that you need to consume 200 grams of protein throughout the day to hit that target.</p>
-    <p>This simple math is the engine that drives our protein calorie calculator. By automating this calculation, our tool removes the mental friction from meal planning. It bridges the gap between knowing you need "a lot of protein" and actually quantifying what that looks like in the context of your daily calorie budget.</p>
+    <p>This simple math is the engine that drives our protein calorie calculator. By automating this calculation, our tool removes the mental friction from meal planning. It bridges the gap between knowing you need"a lot of protein" and actually quantifying what that looks like in the context of your daily calorie budget.</p>
 
     <h2>How to Use This Protein Calculator</h2>
     <p>Our Protein Calorie Calculator is designed to be as user-friendly and intuitive as possible, while still providing scientifically sound recommendations based on your unique physiological profile and fitness ambitions. Here is a step-by-step guide to getting the most accurate results:</p>
     <ol>
       <li><strong>Select Your Unit System:</strong> Begin by choosing whether you prefer to input your weight using the Metric system (kilograms) or the Imperial system (pounds). You can toggle this using the buttons at the top of the calculator. The math remains the same behind the scenes, ensuring accuracy regardless of your preference.</li>
       <li><strong>Enter Your Body Weight:</strong> Input your current body weight. Be honest and accurate here, as this is the primary variable the calculator uses to establish your baseline protein requirements. Your body weight dictates the total volume of tissue that requires maintenance, repair, and potential growth.</li>
-      <li><strong>Choose Your Activity Level and Goal:</strong> This is a crucial step. The calculator offers a dropdown menu with several options ranging from "Sedentary" to "Athlete." Your selection here drastically alters the multiplier used to determine your protein needs.
+      <li><strong>Choose Your Activity Level and Goal:</strong> This is a crucial step. The calculator offers a dropdown menu with several options ranging from"Sedentary" to"Athlete." Your selection here drastically alters the multiplier used to determine your protein needs.
         <ul>
           <li><em>Sedentary:</em> Choose this if you have a desk job, rarely exercise, and your primary goal is simply maintaining basic health and preventing muscle wasting.</li>
           <li><em>Light activity:</em> Ideal if you engage in light exercise (like walking or yoga) a few times a week and want to support general fitness.</li>
@@ -137,7 +137,7 @@ const faqs: FaqItem[] = [
           <li><em>Active / Athlete:</em> These upper tiers are reserved for those engaging in intense, frequent training (e.g., heavy weightlifting, endurance sports) where muscle breakdown and the subsequent need for repair are exceptionally high.</li>
         </ul>
       </li>
-      <li><strong>Review Your Results:</strong> Once you hit "Calculate," the tool will instantly generate a personalized range of recommended daily protein in grams, alongside the corresponding caloric value. It will also break this down into suggested per-meal targets, assuming a standard four-meal-a-day structure, to help you visualize your intake.</li>
+      <li><strong>Review Your Results:</strong> Once you hit"Calculate," the tool will instantly generate a personalized range of recommended daily protein in grams, alongside the corresponding caloric value. It will also break this down into suggested per-meal targets, assuming a standard four-meal-a-day structure, to help you visualize your intake.</li>
     </ol>
 
     <h2>How Much Protein Do I Need Per Day?</h2>
@@ -156,7 +156,7 @@ const faqs: FaqItem[] = [
     <p>Furthermore, protein possesses a unique metabolic property known as the Thermic Effect of Food (TEF). When you digest food, your body expends energy (calories) in the process. Protein has the highest TEF of any macronutrient, coming in at approximately 20-30%. This means that if you consume 100 calories of pure protein, your body will burn roughly 20 to 30 of those calories simply through the act of digesting, absorbing, and assimilating the nutrients. This is significantly higher than the TEF of carbohydrates (5-10%) and fats (0-3%), making high-protein diets inherently advantageous for those looking to manage their body weight or increase their total daily energy expenditure.</p>
 
     <h2>Best Protein Sources for Optimal Health</h2>
-    <p>Not all protein sources are created equal. When evaluating foods, it is crucial to consider both the total amount of protein they provide and their caloric density. "Lean" protein sources are those that offer a high amount of protein relative to their total caloric footprint, making them highly efficient choices, especially when calories are restricted. Conversely, some high-protein foods also come packaged with substantial amounts of dietary fat, which drastically increases their caloric value. Prioritize the following sources for an efficient, muscle-building intake:</p>
+    <p>Not all protein sources are created equal. When evaluating foods, it is crucial to consider both the total amount of protein they provide and their caloric density."Lean" protein sources are those that offer a high amount of protein relative to their total caloric footprint, making them highly efficient choices, especially when calories are restricted. Conversely, some high-protein foods also come packaged with substantial amounts of dietary fat, which drastically increases their caloric value. Prioritize the following sources for an efficient, muscle-building intake:</p>
     <table>
       <thead><tr><th scope="col">Food (per 100g serving)</th><th scope="col">Protein Amount</th><th scope="col">Caloric Value</th><th scope="col">Protein % of Total Calories</th></tr></thead>
       <tbody>
@@ -170,11 +170,11 @@ const faqs: FaqItem[] = [
         <tr><td>Cottage Cheese (low fat)</td><td>11g</td><td>72 kcal</td><td>61%</td></tr>
       </tbody>
     </table>
-    <p>When selecting your protein sources, also consider the concept of "complete" versus "incomplete" proteins. Animal-based sources (meat, dairy, eggs) are complete proteins because they contain all nine essential amino acids—the ones your body cannot produce on its own and must obtain from diet—in sufficient quantities. Most plant-based proteins are incomplete, lacking one or more essential amino acids. However, by eating a diverse array of plant proteins throughout the day (e.g., combining beans with rice), vegans and vegetarians can easily obtain all necessary amino acids to support robust health and muscle growth.</p>
+    <p>When selecting your protein sources, also consider the concept of"complete" versus"incomplete" proteins. Animal-based sources (meat, dairy, eggs) are complete proteins because they contain all nine essential amino acids—the ones your body cannot produce on its own and must obtain from diet—in sufficient quantities. Most plant-based proteins are incomplete, lacking one or more essential amino acids. However, by eating a diverse array of plant proteins throughout the day (e.g., combining beans with rice), vegans and vegetarians can easily obtain all necessary amino acids to support robust health and muscle growth.</p>
 
     <h2>The Critical Role of Protein Timing</h2>
-    <p>While the most important factor in your nutritional strategy is hitting your total daily protein target, the timing and distribution of that protein can amplify your physiological results. Your body does not store excess protein for later use in the same way it stores excess carbohydrates (as glycogen) or excess calories (as body fat). Instead, it maintains a small, transient "pool" of amino acids in the bloodstream.</p>
-    <p>To maximize Muscle Protein Synthesis (MPS)—the biological process of building new muscle tissue—research indicates that you need to consume an adequate "dose" of protein to trigger the system. This threshold is generally accepted to be between 25 and 40 grams of high-quality protein per meal. Consuming significantly less than this may not fully stimulate MPS, while consuming drastically more in a single sitting (e.g., eating 100 grams of protein in one meal) does not result in a proportionate increase in muscle building. The excess amino acids are simply oxidized for energy or excreted.</p>
+    <p>While the most important factor in your nutritional strategy is hitting your total daily protein target, the timing and distribution of that protein can amplify your physiological results. Your body does not store excess protein for later use in the same way it stores excess carbohydrates (as glycogen) or excess calories (as body fat). Instead, it maintains a small, transient"pool" of amino acids in the bloodstream.</p>
+    <p>To maximize Muscle Protein Synthesis (MPS)—the biological process of building new muscle tissue—research indicates that you need to consume an adequate"dose" of protein to trigger the system. This threshold is generally accepted to be between 25 and 40 grams of high-quality protein per meal. Consuming significantly less than this may not fully stimulate MPS, while consuming drastically more in a single sitting (e.g., eating 100 grams of protein in one meal) does not result in a proportionate increase in muscle building. The excess amino acids are simply oxidized for energy or excreted.</p>
     <p>Therefore, the optimal strategy for muscle growth and retention is to evenly distribute your protein intake throughout the day. For a daily target of 150g, a highly effective approach would be to aim for 4 distinct meals, each containing roughly 37g of protein. This translates to approximately 150 calories derived from protein per meal, ensuring a steady stream of amino acids to your muscles every 3 to 5 hours. You can utilize our <a href="/meal-calorie-calculator/">meal calorie calculator</a> to meticulously plan these portions, or employ the <a href="/recipe-calorie-calculator/">recipe calorie calculator</a> when crafting high-protein dishes in your home kitchen.</p>
 
     <h2>Protein Strategies: Weight Loss vs. Muscle Gain</h2>
@@ -248,16 +248,16 @@ const faqs: FaqItem[] = [
     <p>Focus on hitting that per-meal goal consistently, prioritizing high-quality, lean protein sources. Combine this dietary precision with your targeted <a href="/">daily calorie intake</a> and a well-structured <a href="/">macro split</a>, and you will have engineered a nutritional foundation capable of supporting any fitness goal you set your mind to.</p>
 
     <Sources sources={[
-      { label: "Institute of Medicine — Dietary Reference Intakes for Energy, Carbohydrate, Fiber, Fat, Fatty Acids, Cholesterol, Protein, and Amino Acids (2005)", href: "https://www.nationalacademies.org/publication/dietary-reference-intakes-for-energy-carbohydrate-fiber-fat-fatty-acids-cholesterol-protein-and-amino-acids" },
-      { label: "Academy of Nutrition and Dietetics — Protein and Amino Acids (position paper)", href: "https://www.hsph.harvard.edu/nutritionsource/what-should-you-eat/protein/" },
-      { label: "Mayo Clinic — Nutrition: Protein and daily intake recommendations", href: "https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/protein/art-20045169" },
+      { label:"Institute of Medicine — Dietary Reference Intakes for Energy, Carbohydrate, Fiber, Fat, Fatty Acids, Cholesterol, Protein, and Amino Acids (2005)", href:"https://www.nationalacademies.org/publication/dietary-reference-intakes-for-energy-carbohydrate-fiber-fat-fatty-acids-cholesterol-protein-and-amino-acids" },
+      { label:"Academy of Nutrition and Dietetics — Protein and Amino Acids (position paper)", href:"https://www.hsph.harvard.edu/nutritionsource/what-should-you-eat/protein/" },
+      { label:"Mayo Clinic — Nutrition: Protein and daily intake recommendations", href:"https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/protein/art-20045169" },
     ]} />
   </Fragment>
 </CalculatorLayout>
 
 <script>
-  import { proteinTargetG, type ActivityKey } from "../lib/calculations";
-  import { lbToKg } from "../lib/units";
+  import { proteinTargetG, type ActivityKey } from"../lib/calculations";
+  import { lbToKg } from"../lib/units";
 
   const root = document.getElementById("calc-root");
   if (root) {
@@ -270,7 +270,7 @@ const faqs: FaqItem[] = [
       const box = document.getElementById("result-box") || document.getElementById("calc-results");
       if (box) {
         box.querySelectorAll(".tabular-nums").forEach((el) => {
-          el.textContent = "-.-";
+          el.textContent ="-.-";
         });
       }
       const btn = document.getElementById("calc-btn");
@@ -280,16 +280,16 @@ const faqs: FaqItem[] = [
     function clearDirty() {
       isDirty = false;
       const box = $("result-box");
-      if (box) box.classList.remove("opacity-40", "grayscale");
+      if (box) box.classList.remove("opacity-40","grayscale");
       const btn = $("calc-btn");
       if (btn) btn.classList.remove("is-dirty");
     }
-    let unit: "metric" | "imperial" = "metric";
+    let unit:"metric" |"imperial" ="metric";
 
     function render() {
       clearDirty();
       let w = parseFloat(($("weight") as HTMLInputElement).value) || 0;
-      if (unit === "imperial") w = lbToKg(w);
+      if (unit ==="imperial") w = lbToKg(w);
       if (w <= 0) return;
       const activity = ($("activity") as HTMLSelectElement).value as ActivityKey;
       const { min, max } = proteinTargetG(w, activity);
@@ -301,7 +301,7 @@ const faqs: FaqItem[] = [
 
     root.querySelectorAll<HTMLButtonElement>(".unit-tab").forEach((btn) => {
       btn.addEventListener("click", () => {
-        const next = btn.dataset.unit as "metric" | "imperial";
+        const next = btn.dataset.unit as"metric" |"imperial";
         if (next === unit) return; unit = next;
         root.querySelectorAll<HTMLButtonElement>(".unit-tab").forEach((b) => { 
           const on = b.dataset.unit === unit; 
@@ -311,9 +311,9 @@ const faqs: FaqItem[] = [
           b.classList.toggle("shadow-sm", on); 
           b.classList.toggle("text-mute", !on); 
         });
-        document.querySelectorAll(".u-wt").forEach((e) => (e.textContent = unit === "metric" ? "(kg)" : "(lb)"));
+        document.querySelectorAll(".u-wt").forEach((e) => (e.textContent = unit ==="metric" ?"(kg)" :"(lb)"));
         const wi = $("weight") as HTMLInputElement; const cv = parseFloat(wi.value) || 0;
-        if (cv) wi.value = (unit === "imperial" ? cv * 2.2046226218 : cv / 2.2046226218).toFixed(1);
+        if (cv) wi.value = (unit ==="imperial" ? cv * 2.2046226218 : cv / 2.2046226218).toFixed(1);
         markDirty();
       });
     });

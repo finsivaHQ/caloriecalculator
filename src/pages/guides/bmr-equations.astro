@@ -1,18 +1,18 @@
 ---
-import Button from "../../components/ui/Button.astro";
-import MedicalNote from "../../components/ui/MedicalNote.astro";
-import ContentLayout from "../../layouts/ContentLayout.astro";
-import ArticleImage from "../../components/ui/ArticleImage.astro";
-import type { FaqItem } from "../../lib/seo";
+import Button from"../../components/ui/Button.astro";
+import MedicalNote from"../../components/ui/MedicalNote.astro";
+import ContentLayout from"../../layouts/ContentLayout.astro";
+import ArticleImage from"../../components/ui/ArticleImage.astro";
+import type { FaqItem } from"../../lib/seo";
 
 const faqs: FaqItem[] = [
-  { q: "What is the Harris-Benedict equation?", a: "The Harris-Benedict equation (1919) was the first formula to estimate BMR from height, weight, age, and sex. It has been largely superseded by Mifflin-St Jeor for better accuracy." },
-  { q: "Is Mifflin-St Jeor better than Harris-Benedict?", a: "Research shows Mifflin-St Jeor is 85–90% accurate versus 70–80% for Harris-Benedict. We use Mifflin-St Jeor in our calorie calculator." },
-  { q: "What are the BMR equations?", a: "Mifflin-St Jeor: Men BMR=10×weight+6.25×height-5×age+5; Women BMR=10×weight+6.25×height-5×age-161. Harris-Benedict is older and less accurate." },
-  { q: "Why was Harris-Benedict replaced?", a: "Harris-Benedict overestimates metabolic rate in modern populations. Mifflin-St Jeor was developed using more recent data and shows better correlation with measured values." },
-  { q: "Which BMR equation should I use?", a: "Use Mifflin-St Jeor for everyday calorie planning. It is more accurate and easier to apply than Harris-Benedict. Our <a href="/">BMR</a> uses Mifflin-St Jeor." },
-  { q: "Can I use Harris-Benedict if I want?", a: "You can, but expect results that are 200–500 calories higher than Mifflin-St Jeor for the same inputs. This often leads to eating above your true maintenance and gradual weight gain." },
-  { q: "Are there BMR equations other than Mifflin-St Jeor and Harris-Benedict?", a: "Yes. Katch-McArdle uses lean body mass and is ideal if you know your body fat percentage. Cunningham is similar but uses a slightly different constant. For most people, Mifflin-St Jeor is the best choice." },
+  { q:"What is the Harris-Benedict equation?", a:"The Harris-Benedict equation (1919) was the first formula to estimate BMR from height, weight, age, and sex. It has been largely superseded by Mifflin-St Jeor for better accuracy." },
+  { q:"Is Mifflin-St Jeor better than Harris-Benedict?", a:"Research shows Mifflin-St Jeor is 85–90% accurate versus 70–80% for Harris-Benedict. We use Mifflin-St Jeor in our calorie calculator." },
+  { q:"What are the BMR equations?", a:"Mifflin-St Jeor: Men BMR=10×weight+6.25×height-5×age+5; Women BMR=10×weight+6.25×height-5×age-161. Harris-Benedict is older and less accurate." },
+  { q:"Why was Harris-Benedict replaced?", a:"Harris-Benedict overestimates metabolic rate in modern populations. Mifflin-St Jeor was developed using more recent data and shows better correlation with measured values." },
+  { q:"Which BMR equation should I use?", a:"Use Mifflin-St Jeor for everyday calorie planning. It is more accurate and easier to apply than Harris-Benedict. Our <a href="/">BMR</a> uses Mifflin-St Jeor." },
+  { q:"Can I use Harris-Benedict if I want?", a:"You can, but expect results that are 200–500 calories higher than Mifflin-St Jeor for the same inputs. This often leads to eating above your true maintenance and gradual weight gain." },
+  { q:"Are there BMR equations other than Mifflin-St Jeor and Harris-Benedict?", a:"Yes. Katch-McArdle uses lean body mass and is ideal if you know your body fat percentage. Cunningham is similar but uses a slightly different constant. For most people, Mifflin-St Jeor is the best choice." },
 ];
 ---
 

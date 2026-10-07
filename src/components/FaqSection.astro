@@ -1,11 +1,11 @@
 ---
-import type { FaqItem } from "../lib/seo";
+import type { FaqItem } from"../lib/seo";
 interface Props {
   items: FaqItem[];
   title?: string;
   hideSidebar?: boolean;
 }
-const { items, title = "Frequently asked questions", hideSidebar = false } = Astro.props;
+const { items, title ="Frequently asked questions", hideSidebar = false } = Astro.props;
 ---
 
 <div class="mx-auto max-w-5xl grid lg:grid-cols-[1fr_320px] gap-12 items-start">

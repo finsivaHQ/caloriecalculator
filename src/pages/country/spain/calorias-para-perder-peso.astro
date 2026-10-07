@@ -2,41 +2,41 @@
 import Button from '../../../components/ui/Button.astro';
 import ContentLayout from '../../../layouts/ContentLayout.astro';
 import ArticleImage from '../../../components/ui/ArticleImage.astro';
-import type { FaqItem } from "../../../lib/seo";
+import type { FaqItem } from"../../../lib/seo";
 
 const faqs: FaqItem[] = [
   { 
-    q: "¿Cuántas calorías debo comer para perder peso?", 
-    a: "No existe un número universal. Debes comer menos calorías de las que tu cuerpo gasta (déficit calórico). Generalmente, las personas comienzan restando entre 300 y 500 calorías de su mantenimiento diario estimado." 
+    q:"¿Cuántas calorías debo comer para perder peso?", 
+    a:"No existe un número universal. Debes comer menos calorías de las que tu cuerpo gasta (déficit calórico). Generalmente, las personas comienzan restando entre 300 y 500 calorías de su mantenimiento diario estimado." 
   },
   { 
-    q: "¿Qué es un déficit calórico?", 
-    a: "Es el estado en el que tu cuerpo se encuentra cuando consumes menos energía (calorías) de la que utiliza para sus funciones básicas y la actividad física, obligándolo a usar sus reservas de energía, como la grasa corporal." 
+    q:"¿Qué es un déficit calórico?", 
+    a:"Es el estado en el que tu cuerpo se encuentra cuando consumes menos energía (calorías) de la que utiliza para sus funciones básicas y la actividad física, obligándolo a usar sus reservas de energía, como la grasa corporal." 
   },
   { 
-    q: "¿Cuántas calorías debo restar para adelgazar?", 
-    a: "Aunque las necesidades individuales varían, una reducción moderada de 300 a 500 calorías suele utilizarse como punto de partida. Reducciones extremas pueden dificultar la adherencia y causar fatiga." 
+    q:"¿Cuántas calorías debo restar para adelgazar?", 
+    a:"Aunque las necesidades individuales varían, una reducción moderada de 300 a 500 calorías suele utilizarse como punto de partida. Reducciones extremas pueden dificultar la adherencia y causar fatiga." 
   },
   { 
-    q: "¿Es necesario contar calorías para perder peso?", 
-    a: "No. Contar calorías es una herramienta muy útil, pero muchas personas pierden peso modificando el tamaño de sus porciones, priorizando proteínas y vegetales, y aumentando su nivel de actividad física diaria." 
+    q:"¿Es necesario contar calorías para perder peso?", 
+    a:"No. Contar calorías es una herramienta muy útil, pero muchas personas pierden peso modificando el tamaño de sus porciones, priorizando proteínas y vegetales, y aumentando su nivel de actividad física diaria." 
   },
   { 
-    q: "¿Por qué no estoy perdiendo peso aunque tengo un déficit?", 
-    a: "Si el peso en la báscula no baja después de varias semanas, es probable que no estés realmente en un déficit calórico. Esto puede ocurrir al sobreestimar el gasto energético, subestimar la ingesta de alimentos o por fluctuaciones temporales de líquidos." 
+    q:"¿Por qué no estoy perdiendo peso aunque tengo un déficit?", 
+    a:"Si el peso en la báscula no baja después de varias semanas, es probable que no estés realmente en un déficit calórico. Esto puede ocurrir al sobreestimar el gasto energético, subestimar la ingesta de alimentos o por fluctuaciones temporales de líquidos." 
   },
   { 
-    q: "¿Las calorías calculadas por una fórmula son exactas?", 
-    a: "No, las calculadoras y fórmulas matemáticas proporcionan una estimación inicial. Siempre debes monitorear tus resultados y ajustar gradualmente tu ingesta de acuerdo a tu progreso real." 
+    q:"¿Las calorías calculadas por una fórmula son exactas?", 
+    a:"No, las calculadoras y fórmulas matemáticas proporcionan una estimación inicial. Siempre debes monitorear tus resultados y ajustar gradualmente tu ingesta de acuerdo a tu progreso real." 
   },
   {
-    q: "¿Puedo perder peso comiendo cualquier alimento si estoy en déficit?",
-    a: "Técnicamente sí, el déficit calórico determina la pérdida de peso. Sin embargo, para mantener la salud, la energía y la saciedad, es fundamental basar tu dieta en alimentos ricos en nutrientes, proteínas y fibra."
+    q:"¿Puedo perder peso comiendo cualquier alimento si estoy en déficit?",
+    a:"Técnicamente sí, el déficit calórico determina la pérdida de peso. Sin embargo, para mantener la salud, la energía y la saciedad, es fundamental basar tu dieta en alimentos ricos en nutrientes, proteínas y fibra."
   }
 ];
 
-const seoTitle = "Calorías para Perder Peso: Guía Completa y Déficit Calórico";
-const seoDescription = "Descubre cuántas calorías para perder peso necesitas consumir. Aprende cómo establecer un déficit calórico de manera moderada, sostenible y científicamente avalada.";
+const seoTitle ="Calorías para Perder Peso: Guía Completa y Déficit Calórico";
+const seoDescription ="Descubre cuántas calorías para perder peso necesitas consumir. Aprende cómo establecer un déficit calórico de manera moderada, sostenible y científicamente avalada.";
 ---
 
 <ContentLayout
@@ -51,29 +51,29 @@ const seoDescription = "Descubre cuántas calorías para perder peso necesitas c
   faqs={faqs}
   lang="es"
 >
-<div class="bg-gradient-to-r from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 p-6 rounded-3xl border border-blue-100 dark:border-gray-700 mb-10 flex items-start gap-4 shadow-sm backdrop-blur-md">
+<div class="bg-gradient-to-r from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 p-6 rounded-3xl border border-blue-100 mb-10 flex items-start gap-4 shadow-sm backdrop-blur-md">
   <span class="text-3xl mt-1">⚕️</span>
-  <p class="text-base text-ink dark:text-gray-300 m-0 leading-relaxed"><strong>Revisión Médica Rigurosa:</strong> Este artículo ha sido redactado, revisado y estructurado de acuerdo con las directrices clínicas de nutrición más recientes (2026). Nos basamos exclusivamente en evidencia científica comprobada para garantizar tu bienestar y seguridad.</p>
+  <p class="text-base text-ink m-0 leading-relaxed"><strong>Revisión Médica Rigurosa:</strong> Este artículo ha sido redactado, revisado y estructurado de acuerdo con las directrices clínicas de nutrición más recientes (2026). Nos basamos exclusivamente en evidencia científica comprobada para garantizar tu bienestar y seguridad.</p>
 </div>
 
 <ArticleImage src="/assets/images/articles/calorie-surplus.svg" alt="Gráfico conceptual sobre el déficit calórico y el balance energético para perder peso." />
 
 <div class="prose prose-lg dark:prose-invert max-w-none mt-10">
-  <p class="text-xl leading-relaxed text-ink/90 dark:text-gray-300">
+  <p class="text-xl leading-relaxed text-ink/90">
     Cuando te planteas mejorar tu composición corporal y alcanzar un peso saludable, la primera pregunta que suele surgir es directa y fundamental: <em>¿cuántas <strong>calorías para perder peso</strong> necesito consumir cada día?</em> En un mundo saturado de dietas complejas, modas pasajeras y reglas contradictorias, el principio detrás de la pérdida de peso es sorprendentemente sencillo y respaldado por la ciencia: el <strong>déficit de energía</strong>.
   </p>
 
-  <p class="text-lg leading-relaxed text-ink/80 dark:text-gray-400">
+  <p class="text-lg leading-relaxed text-ink/80">
     Para perder peso, inexcusablemente necesitas encontrarte en un déficit calórico. Esto significa consumir, a lo largo del tiempo, menos calorías de las que tu cuerpo gasta en sus funciones vitales, digestión y movimientos diarios. Sin embargo, encontrar la cifra exacta y adecuada para tu cuerpo requiere entender algunos conceptos metabólicos básicos para evitar enfoques extremos, efecto rebote y daños a tu metabolismo.
   </p>
 
   <div class="bg-brand/10 rounded-2xl p-6 my-8 border-l-4 border-brand">
-    <p class="text-sm text-ink/70 dark:text-gray-400 italic m-0">
+    <p class="text-sm text-ink/70 italic m-0">
       <strong>Aviso de Salud Importante:</strong> La información contenida en esta guía clínica tiene fines estrictamente educativos. Si presentas condiciones médicas preexistentes (como hipotiroidismo, SOP, diabetes), antecedentes de trastornos de la conducta alimentaria (TCA) o necesidades nutricionales especiales, te instamos a buscar la orientación personalizada de un profesional de la salud, médico o dietista-nutricionista debidamente cualificado.
     </p>
   </div>
 
-  <h2 class="text-4xl font-extrabold text-ink dark:text-white mt-16 mb-8 tracking-tight">El Fundamento Científico: ¿Qué es el Déficit Calórico?</h2>
+  <h2 class="text-4xl font-extrabold text-ink mt-16 mb-8 tracking-tight">El Fundamento Científico: ¿Qué es el Déficit Calórico?</h2>
   <p>
     El cuerpo humano se rige por las leyes de la termodinámica. La energía no se crea ni se destruye, solo se transforma. Las calorías son simplemente una unidad de medida de la energía que nos proporcionan los alimentos y las bebidas.
   </p>
@@ -81,13 +81,13 @@ const seoDescription = "Descubre cuántas calorías para perder peso necesitas c
     Tu cuerpo gasta energía constantemente a través de tres vías principales:
   </p>
   <ul class="space-y-4 mb-10">
-    <li class="bg-surface dark:bg-gray-800 p-4 rounded-xl border border-hairline dark:border-gray-700 shadow-sm">
+    <li class="bg-surface p-4 rounded-xl border border-hairline  shadow-sm">
       <strong class="text-brand">Tasa Metabólica Basal (TMB):</strong> Representa entre el 60% y el 70% de tu gasto diario. Es la energía que tus órganos (cerebro, corazón, pulmones, hígado) necesitan para funcionar mientras estás en completo reposo.
     </li>
-    <li class="bg-surface dark:bg-gray-800 p-4 rounded-xl border border-hairline dark:border-gray-700 shadow-sm">
+    <li class="bg-surface p-4 rounded-xl border border-hairline  shadow-sm">
       <strong class="text-brand">Efecto Termogénico de los Alimentos (ETA):</strong> Aproximadamente el 10% de tu gasto. Es la energía que tu cuerpo utiliza para digerir, absorber y metabolizar los nutrientes que consumes (la proteína tiene el mayor ETA).
     </li>
-    <li class="bg-surface dark:bg-gray-800 p-4 rounded-xl border border-hairline dark:border-gray-700 shadow-sm">
+    <li class="bg-surface p-4 rounded-xl border border-hairline  shadow-sm">
       <strong class="text-brand">Gasto Energético por Actividad (Física y NEAT):</strong> Varía enormemente (15% - 30%+). Incluye el ejercicio planificado (ir al gimnasio, correr) y el NEAT (Termogénesis por Actividad No Ejercicio), que abarca desde caminar al trabajo, limpiar la casa o incluso gesticular.
     </li>
   </ul>
@@ -96,7 +96,7 @@ const seoDescription = "Descubre cuántas calorías para perder peso necesitas c
     Cuando sumas estos tres componentes, obtienes tu <strong>Gasto Energético Total Diario (GETD)</strong>, que son tus calorías de mantenimiento. Si consumes menos calorías que tu GETD, el cuerpo debe compensar esa falta de energía acudiendo a sus reservas internas, prioritariamente el tejido adiposo (grasa corporal), resultando en la pérdida de peso.
   </p>
 
-  <h2 class="text-4xl font-extrabold text-ink dark:text-white mt-16 mb-8 tracking-tight">¿Cuántas calorías necesito para perder peso? El Cálculo Paso a Paso</h2>
+  <h2 class="text-4xl font-extrabold text-ink mt-16 mb-8 tracking-tight">¿Cuántas calorías necesito para perder peso? El Cálculo Paso a Paso</h2>
   
   <p>
     No existe un único número mágico de calorías para perder peso que funcione universalmente. Tus requerimientos de energía son un ecosistema completamente individual que depende de variables dinámicas: tu peso actual, estatura, edad, sexo biológico, composición corporal (ratio músculo/grasa) y, de forma muy significativa, tu nivel de actividad física diaria.
@@ -107,29 +107,29 @@ const seoDescription = "Descubre cuántas calorías para perder peso necesitas c
   </p>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
-    <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md p-6 rounded-3xl border border-hairline shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <div class="bg-surface/80 /80 backdrop-blur-md p-6 rounded-3xl border border-hairline shadow-lg hover:shadow-xl transition-shadow duration-300">
       <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">1</div>
       <h3 class="text-xl font-bold mb-2">Calcula tu Mantenimiento</h3>
-      <p class="text-sm text-ink/80 dark:text-gray-300">Utiliza ecuaciones validadas científicamente (como Mifflin-St Jeor o Harris-Benedict) multiplicadas por tu factor de actividad para estimar tu Gasto Energético Total Diario (GETD). Esto te da la línea base de cuánta energía quemas en 24 horas.</p>
+      <p class="text-sm text-ink/80">Utiliza ecuaciones validadas científicamente (como Mifflin-St Jeor o Harris-Benedict) multiplicadas por tu factor de actividad para estimar tu Gasto Energético Total Diario (GETD). Esto te da la línea base de cuánta energía quemas en 24 horas.</p>
     </div>
-    <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md p-6 rounded-3xl border border-hairline shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <div class="bg-surface/80 /80 backdrop-blur-md p-6 rounded-3xl border border-hairline shadow-lg hover:shadow-xl transition-shadow duration-300">
       <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">2</div>
       <h3 class="text-xl font-bold mb-2">Aplica un Déficit Razonable</h3>
-      <p class="text-sm text-ink/80 dark:text-gray-300">Resta una cantidad moderada de calorías a tu GETD. Para la gran mayoría de la población, se recomienda un recorte conservador de entre el 15% y el 20%, o un estándar de 300 a 500 calorías menos al día.</p>
+      <p class="text-sm text-ink/80">Resta una cantidad moderada de calorías a tu GETD. Para la gran mayoría de la población, se recomienda un recorte conservador de entre el 15% y el 20%, o un estándar de 300 a 500 calorías menos al día.</p>
     </div>
-    <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md p-6 rounded-3xl border border-hairline shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <div class="bg-surface/80 /80 backdrop-blur-md p-6 rounded-3xl border border-hairline shadow-lg hover:shadow-xl transition-shadow duration-300">
       <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">3</div>
       <h3 class="text-xl font-bold mb-2">Monitorea y Registra</h3>
-      <p class="text-sm text-ink/80 dark:text-gray-300">La consistencia es clave. Observa la tendencia de tu peso corporal, pero también toma medidas de perímetros (cintura, cadera) y fotos, durante un periodo ininterrumpido de dos a cuatro semanas.</p>
+      <p class="text-sm text-ink/80">La consistencia es clave. Observa la tendencia de tu peso corporal, pero también toma medidas de perímetros (cintura, cadera) y fotos, durante un periodo ininterrumpido de dos a cuatro semanas.</p>
     </div>
-    <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md p-6 rounded-3xl border border-hairline shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <div class="bg-surface/80 /80 backdrop-blur-md p-6 rounded-3xl border border-hairline shadow-lg hover:shadow-xl transition-shadow duration-300">
       <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">4</div>
       <h3 class="text-xl font-bold mb-2">Ajuste Dinámico</h3>
-      <p class="text-sm text-ink/80 dark:text-gray-300">Si después de 3-4 semanas la tendencia de peso es completamente plana (y estás seguro de estar contando bien), realiza un micro-ajuste reduciendo otras 100-150 calorías, o aumentando tu actividad física (NEAT).</p>
+      <p class="text-sm text-ink/80">Si después de 3-4 semanas la tendencia de peso es completamente plana (y estás seguro de estar contando bien), realiza un micro-ajuste reduciendo otras 100-150 calorías, o aumentando tu actividad física (NEAT).</p>
     </div>
   </div>
 
-  <h2 class="text-4xl font-extrabold text-ink dark:text-white mt-16 mb-8 tracking-tight">¿Cuánto Déficit Calórico es el Ideal?</h2>
+  <h2 class="text-4xl font-extrabold text-ink mt-16 mb-8 tracking-tight">¿Cuánto Déficit Calórico es el Ideal?</h2>
   <p>
     En el ámbito de la nutrición clínica y deportiva, el consenso general apunta a reducir entre 300 y 500 calorías diarias por debajo del mantenimiento para generar una pérdida de peso de aproximadamente 0.3 kg a 0.5 kg de grasa pura por semana. Esta cantidad <strong>puede utilizarse como el estándar de oro</strong> para un progreso sostenible.
   </p>
@@ -140,7 +140,7 @@ const seoDescription = "Descubre cuántas calorías para perder peso necesitas c
 
   <div class="overflow-x-auto my-8 rounded-2xl shadow-sm border border-hairline">
     <table class="min-w-full text-left text-sm">
-      <thead class="bg-canvas-soft dark:bg-gray-800 text-ink dark:text-white">
+      <thead class="bg-canvas-soft text-ink">
         <tr>
           <th class="px-6 py-4 font-bold border-b border-hairline">Tipo de Déficit</th>
           <th class="px-6 py-4 font-bold border-b border-hairline">Reducción (Kcal)</th>
@@ -148,59 +148,59 @@ const seoDescription = "Descubre cuántas calorías para perder peso necesitas c
           <th class="px-6 py-4 font-bold border-b border-hairline">Contras / Riesgos</th>
         </tr>
       </thead>
-      <tbody class="divide-y divide-hairline bg-surface dark:bg-gray-900">
-        <tr class="hover:bg-canvas-soft/50 dark:hover:bg-gray-800/50 transition-colors">
+      <tbody class="divide-y divide-hairline bg-surface">
+        <tr class="hover:bg-canvas-soft/50 dark:hover:bg-surface-elevated/50 transition-colors">
           <td class="px-6 py-4 font-semibold">Leve / Conservador</td>
           <td class="px-6 py-4">100 - 250</td>
-          <td class="px-6 py-4 text-green-700 dark:text-green-400">Excelente adherencia, máximo rendimiento deportivo, retención total de músculo.</td>
-          <td class="px-6 py-4 text-orange-700 dark:text-orange-400">Pérdida de peso muy lenta, los errores de medición pueden anular el déficit.</td>
+          <td class="px-6 py-4 text-green-700">Excelente adherencia, máximo rendimiento deportivo, retención total de músculo.</td>
+          <td class="px-6 py-4 text-orange-700">Pérdida de peso muy lenta, los errores de medición pueden anular el déficit.</td>
         </tr>
-        <tr class="hover:bg-canvas-soft/50 dark:hover:bg-gray-800/50 transition-colors">
+        <tr class="hover:bg-canvas-soft/50 dark:hover:bg-surface-elevated/50 transition-colors">
           <td class="px-6 py-4 font-semibold text-brand">Moderado (Recomendado)</td>
           <td class="px-6 py-4 text-brand font-bold">300 - 500</td>
-          <td class="px-6 py-4 text-green-700 dark:text-green-400">Equilibrio perfecto entre resultados visibles (0.5kg/semana) y sostenibilidad. Hambre controlable.</td>
-          <td class="px-6 py-4 text-orange-700 dark:text-orange-400">Requiere constancia y buena selección de alimentos para mantener la saciedad.</td>
+          <td class="px-6 py-4 text-green-700">Equilibrio perfecto entre resultados visibles (0.5kg/semana) y sostenibilidad. Hambre controlable.</td>
+          <td class="px-6 py-4 text-orange-700">Requiere constancia y buena selección de alimentos para mantener la saciedad.</td>
         </tr>
-        <tr class="hover:bg-canvas-soft/50 dark:hover:bg-gray-800/50 transition-colors">
+        <tr class="hover:bg-canvas-soft/50 dark:hover:bg-surface-elevated/50 transition-colors">
           <td class="px-6 py-4 font-semibold text-red-600">Agresivo / Severo</td>
           <td class="px-6 py-4 text-red-600">> 700</td>
-          <td class="px-6 py-4 text-green-700 dark:text-green-400">Pérdida de peso inicial muy rápida (motivador a corto plazo).</td>
-          <td class="px-6 py-4 text-red-700 dark:text-red-400">Alto riesgo de pérdida muscular, letargo, adaptaciones metabólicas severas y efecto rebote masivo.</td>
+          <td class="px-6 py-4 text-green-700">Pérdida de peso inicial muy rápida (motivador a corto plazo).</td>
+          <td class="px-6 py-4 text-red-700">Alto riesgo de pérdida muscular, letargo, adaptaciones metabólicas severas y efecto rebote masivo.</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <h2 class="text-4xl font-extrabold text-ink dark:text-white mt-16 mb-8 tracking-tight">Los Peligros de Comer Muy Pocas Calorías (Dietas Restrictivas)</h2>
+  <h2 class="text-4xl font-extrabold text-ink mt-16 mb-8 tracking-tight">Los Peligros de Comer Muy Pocas Calorías (Dietas Restrictivas)</h2>
   <p>
     Es un error cognitivo común pensar que: <em>"Si comer un poco menos es bueno para adelgazar, no comer casi nada será el triple de rápido y efectivo"</em>. Sin embargo, la fisiología humana está diseñada para la supervivencia. Las dietas extremadamente restrictivas (ej. dietas de 1000 kcal o menos para un adulto promedio) desencadenan respuestas de estrés formidables:
   </p>
 
-  <ul class="list-disc pl-6 space-y-3 mb-6 text-ink/90 dark:text-gray-300">
+  <ul class="list-disc pl-6 space-y-3 mb-6 text-ink/90">
     <li><strong>Adaptación Metabólica (Tumba Metabólica):</strong> El cuerpo, al percibir una hambruna severa, reduce la Tasa Metabólica Basal. Apaga funciones no esenciales (como la función reproductiva o el crecimiento del cabello) y te vuelve letárgico inconscientemente (baja el NEAT) para ahorrar energía.</li>
     <li><strong>Pérdida de Masa Muscular:</strong> Cuando el déficit es extremo, la grasa no se puede oxidar lo suficientemente rápido para cubrir la demanda. El cuerpo descompone tejido muscular valioso para obtener aminoácidos y convertirlos en glucosa. Menos músculo significa un metabolismo más lento.</li>
     <li><strong>Deficiencias Nutricionales Crónicas:</strong> Al restringir el volumen de alimentos de forma drástica, resulta matemáticamente imposible cubrir los Requerimientos Diarios Recomendados (RDA) de vitaminas, minerales, ácidos grasos esenciales y fibra, comprometiendo la inmunidad y la salud ósea.</li>
     <li><strong>Atracones y Efecto Rebote (Efecto Yo-Yo):</strong> La restricción severa eleva los niveles de grelina (hormona del hambre) y desploma la leptina (saciedad). Eventualmente, la fuerza de voluntad colapsa, resultando en episodios de atracones y una reganancia de peso, a menudo superando el peso inicial.</li>
   </ul>
 
-  <h2 class="text-4xl font-extrabold text-ink dark:text-white mt-16 mb-8 tracking-tight">Ejemplo Hipotético de Planificación</h2>
+  <h2 class="text-4xl font-extrabold text-ink mt-16 mb-8 tracking-tight">Ejemplo Hipotético de Planificación</h2>
   <p>
     Para cristalizar la teoría, observemos un caso práctico estructurado:
   </p>
 
-  <div class="bg-surface-elevated dark:bg-gray-800 border border-hairline rounded-3xl p-8 my-8 shadow-sm">
+  <div class="bg-surface-elevated border border-hairline rounded-3xl p-8 my-8 shadow-sm">
     <h3 class="text-2xl font-bold mb-4 text-brand">Estudio de Caso: Carlos, 35 años</h3>
     <p class="mb-4">Carlos trabaja en una oficina, entrena fuerza 3 días a la semana. Su cálculo de mantenimiento arroja que su Gasto Energético Total Diario es de <strong>2,600 calorías</strong>.</p>
     
-    <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-hairline mb-4">
+    <div class="bg-surface rounded-2xl p-6 border border-hairline mb-4">
       <h4 class="font-bold text-lg mb-2">Paso 1: El Déficit</h4>
       <p>Carlos aplica un déficit moderado del 20% (aprox. 500 kcal).</p>
       <div class="text-center my-4">
-        <span class="text-2xl font-extrabold bg-blue-50 dark:bg-gray-800 px-6 py-3 rounded-full border border-blue-200 dark:border-gray-700">Objetivo: 2,100 kcal / día</span>
+        <span class="text-2xl font-extrabold bg-blue-50 px-6 py-3 rounded-full border border-blue-200">Objetivo: 2,100 kcal / día</span>
       </div>
     </div>
     
-    <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-hairline mb-4">
+    <div class="bg-surface rounded-2xl p-6 border border-hairline mb-4">
       <h4 class="font-bold text-lg mb-2">Paso 2: Distribución de Macronutrientes (Grosso modo)</h4>
       <ul class="list-disc pl-6 space-y-1">
         <li><strong>Proteína:</strong> Alta (ej. 1.8g x kg peso corporal) para retener el músculo y maximizar saciedad.</li>
@@ -209,10 +209,10 @@ const seoDescription = "Descubre cuántas calorías para perder peso necesitas c
       </ul>
     </div>
     
-    <p class="text-sm italic mt-4 text-ink/70 dark:text-gray-400">Resultado: Carlos pierde entre 0.4kg y 0.5kg por semana de forma sostenida, no pasa un hambre atroz, rinde en el gimnasio y duerme perfectamente. Esto es el éxito a largo plazo.</p>
+    <p class="text-sm italic mt-4 text-ink/70">Resultado: Carlos pierde entre 0.4kg y 0.5kg por semana de forma sostenida, no pasa un hambre atroz, rinde en el gimnasio y duerme perfectamente. Esto es el éxito a largo plazo.</p>
   </div>
 
-  <h2 class="text-4xl font-extrabold text-ink dark:text-white mt-16 mb-8 tracking-tight">Calculadora de Calorías para Perder Peso</h2>
+  <h2 class="text-4xl font-extrabold text-ink mt-16 mb-8 tracking-tight">Calculadora de Calorías para Perder Peso</h2>
   <p>
     Realizar estos cálculos matemáticos de forma manual utilizando las fórmulas de Mifflin-St Jeor o Katch-McArdle puede ser tedioso. Para facilitar el proceso con precisión algorítmica, te recomendamos utilizar nuestra herramienta gratuita de grado profesional.
   </p>
@@ -230,8 +230,8 @@ const seoDescription = "Descubre cuántas calorías para perder peso necesitas c
 
   <!-- CTA PRINCIPAL -->
   <div class="flex flex-col items-center justify-center p-8 bg-gradient-to-br from-brand/10 to-transparent dark:from-brand/20 dark:to-transparent rounded-3xl border border-brand/20 my-12 shadow-sm">
-    <h3 class="text-2xl font-bold text-center mb-4 text-ink dark:text-white">¿Listo para conocer tus números exactos?</h3>
-    <p class="text-center mb-8 text-ink/80 dark:text-gray-300 max-w-2xl">Deja de adivinar y comienza a basar tu progreso en la ciencia de los datos. Obtén tu plan calórico personalizado en menos de 60 segundos.</p>
+    <h3 class="text-2xl font-bold text-center mb-4 text-ink">¿Listo para conocer tus números exactos?</h3>
+    <p class="text-center mb-8 text-ink/80 max-w-2xl">Deja de adivinar y comienza a basar tu progreso en la ciencia de los datos. Obtén tu plan calórico personalizado en menos de 60 segundos.</p>
     <Button href="/country/spain/calculadora-de-calorias/" variant="primary" size="lg" class="w-full sm:w-auto shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
       <span class="flex items-center gap-2">
         Ir a la Calculadora de Calorías Gratuita
@@ -242,7 +242,7 @@ const seoDescription = "Descubre cuántas calorías para perder peso necesitas c
     </Button>
   </div>
 
-  <h2 class="text-4xl font-extrabold text-ink dark:text-white mt-16 mb-8 tracking-tight">Estrategias Maestras para Cumplir tu Déficit sin Sufrir</h2>
+  <h2 class="text-4xl font-extrabold text-ink mt-16 mb-8 tracking-tight">Estrategias Maestras para Cumplir tu Déficit sin Sufrir</h2>
   <p>
     Tener el número en papel es fácil; ejecutarlo a diario en la vida real es el verdadero desafío. Aquí tienes los principios fundamentales basados en la ciencia del comportamiento para dominar tu ingesta energética:
   </p>
@@ -263,7 +263,7 @@ const seoDescription = "Descubre cuántas calorías para perder peso necesitas c
   </ol>
 
   <h3 class="text-2xl font-bold mt-12 mb-4">Referencias Médicas y Científicas</h3>
-  <ul class="list-none space-y-2 text-sm text-ink/70 dark:text-gray-400">
+  <ul class="list-none space-y-2 text-sm text-ink/70">
     <li class="flex items-center gap-2">
       <svg class="w-4 h-4 text-brand" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
       <a href="https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="noopener noreferrer" class="hover:text-brand transition-colors">Organización Mundial de la Salud (OMS) - Directrices sobre Dieta Sana y Balance Energético</a>
@@ -280,54 +280,54 @@ const seoDescription = "Descubre cuántas calorías para perder peso necesitas c
 
 </div>
 
-<div class="mt-16 bg-canvas-soft dark:bg-gray-800 p-8 rounded-3xl border border-hairline dark:border-gray-700 shadow-sm">
-    <h2 class="text-3xl font-extrabold mb-6 text-ink dark:text-white">Preguntas Frecuentes y el Impacto Psicológico (FAQ)</h2>
-    <p class="text-body dark:text-gray-300 mb-8 leading-relaxed">Seamos increíblemente honestos por un momento: lidiar con los macronutrientes, contar calorías y gestionar la pérdida de peso puede causar una grave fatiga de decisiones y ansiedad clínica. No estás solo. Aquí tienes las preguntas más críticas respondidas con total transparencia, rigor científico y empatía para proteger tu bienestar mental.</p>
+<div class="mt-16 bg-canvas-soft p-8 rounded-3xl border border-hairline  shadow-sm">
+    <h2 class="text-3xl font-extrabold mb-6 text-ink">Preguntas Frecuentes y el Impacto Psicológico (FAQ)</h2>
+    <p class="text-body mb-8 leading-relaxed">Seamos increíblemente honestos por un momento: lidiar con los macronutrientes, contar calorías y gestionar la pérdida de peso puede causar una grave fatiga de decisiones y ansiedad clínica. No estás solo. Aquí tienes las preguntas más críticas respondidas con total transparencia, rigor científico y empatía para proteger tu bienestar mental.</p>
     <div class="space-y-6">
-        <div class="bg-surface dark:bg-gray-900 p-6 rounded-2xl border border-hairline dark:border-gray-700">
-            <h3 class="text-xl font-bold text-ink dark:text-white flex items-center gap-2">
+        <div class="bg-surface p-6 rounded-2xl border border-hairline">
+            <h3 class="text-xl font-bold text-ink flex items-center gap-2">
               <span class="text-brand">1.</span> ¿Cómo manejo la ansiedad de tener que registrar todo perfectamente?
             </h3>
-            <p class="text-body dark:text-gray-300 mt-3 leading-relaxed">La carga psicológica de intentar ser milimétricamente perfecto puede llevar a la parálisis y al abandono. Los expertos en psicología nutricional recomiendan centrarse en la regla del 80/20. La consistencia imperfecta a largo plazo y la precisión general producirán el 90% de los resultados deseados. Considera el conteo de calorías como una "herramienta de aprendizaje" temporal, no como una prisión de por vida.</p>
+            <p class="text-body mt-3 leading-relaxed">La carga psicológica de intentar ser milimétricamente perfecto puede llevar a la parálisis y al abandono. Los expertos en psicología nutricional recomiendan centrarse en la regla del 80/20. La consistencia imperfecta a largo plazo y la precisión general producirán el 90% de los resultados deseados. Considera el conteo de calorías como una"herramienta de aprendizaje" temporal, no como una prisión de por vida.</p>
         </div>
-        <div class="bg-surface dark:bg-gray-900 p-6 rounded-2xl border border-hairline dark:border-gray-700">
-            <h3 class="text-xl font-bold text-ink dark:text-white flex items-center gap-2">
+        <div class="bg-surface p-6 rounded-2xl border border-hairline">
+            <h3 class="text-xl font-bold text-ink flex items-center gap-2">
               <span class="text-brand">2.</span> ¿El estrés crónico afecta realmente la quema de calorías?
             </h3>
-            <p class="text-body dark:text-gray-300 mt-3 leading-relaxed">Absolutamente. El estrés crónico eleva los niveles de cortisol, una hormona que promueve la retención de agua masiva (enmascarando la pérdida de peso en la báscula) y favorece la redistribución de la grasa hacia la zona abdominal visceral. Además, el cortisol aumenta los antojos por alimentos hiperpalatables (altos en grasa y azúcar).</p>
+            <p class="text-body mt-3 leading-relaxed">Absolutamente. El estrés crónico eleva los niveles de cortisol, una hormona que promueve la retención de agua masiva (enmascarando la pérdida de peso en la báscula) y favorece la redistribución de la grasa hacia la zona abdominal visceral. Además, el cortisol aumenta los antojos por alimentos hiperpalatables (altos en grasa y azúcar).</p>
         </div>
-        <div class="bg-surface dark:bg-gray-900 p-6 rounded-2xl border border-hairline dark:border-gray-700">
-            <h3 class="text-xl font-bold text-ink dark:text-white flex items-center gap-2">
+        <div class="bg-surface p-6 rounded-2xl border border-hairline">
+            <h3 class="text-xl font-bold text-ink flex items-center gap-2">
               <span class="text-brand">3.</span> ¿Con qué frecuencia debo recalcular mis necesidades calóricas?
             </h3>
-            <p class="text-body dark:text-gray-300 mt-3 leading-relaxed">Se recomienda encarecidamente reevaluar tus medidas y necesidades calóricas cada vez que pierdas unos 4-5 kg de peso corporal, o cada 3 a 6 meses. Como tu masa corporal es menor, el costo energético de mover ese cuerpo (TMB y NEAT) disminuye, por lo que tus calorías de mantenimiento bajarán ligeramente.</p>
+            <p class="text-body mt-3 leading-relaxed">Se recomienda encarecidamente reevaluar tus medidas y necesidades calóricas cada vez que pierdas unos 4-5 kg de peso corporal, o cada 3 a 6 meses. Como tu masa corporal es menor, el costo energético de mover ese cuerpo (TMB y NEAT) disminuye, por lo que tus calorías de mantenimiento bajarán ligeramente.</p>
         </div>
-        <div class="bg-surface dark:bg-gray-900 p-6 rounded-2xl border border-hairline dark:border-gray-700">
-            <h3 class="text-xl font-bold text-ink dark:text-white flex items-center gap-2">
+        <div class="bg-surface p-6 rounded-2xl border border-hairline">
+            <h3 class="text-xl font-bold text-ink flex items-center gap-2">
               <span class="text-brand">4.</span> ¿Existe algún peligro al depender completamente de calculadoras automatizadas?
             </h3>
-            <p class="text-body dark:text-gray-300 mt-3 leading-relaxed">Si bien las calculadoras de prestigio (como la nuestra) proporcionan un punto de partida estadísticamente y matemáticamente sólido, son algoritmos y no pueden tener en cuenta la biología humana matizada (genética, historial de dietas, microbioma intestinal). Úsalas siempre como una brújula inicial, y que los resultados en la báscula y el espejo durante las siguientes 4 semanas dicten si debes ajustar el rumbo.</p>
+            <p class="text-body mt-3 leading-relaxed">Si bien las calculadoras de prestigio (como la nuestra) proporcionan un punto de partida estadísticamente y matemáticamente sólido, son algoritmos y no pueden tener en cuenta la biología humana matizada (genética, historial de dietas, microbioma intestinal). Úsalas siempre como una brújula inicial, y que los resultados en la báscula y el espejo durante las siguientes 4 semanas dicten si debes ajustar el rumbo.</p>
         </div>
     </div>
 </div>
 
 <!-- SECCIÓN CONTENIDO SUGERIDO Y CTA FINAL -->
-<div class="mt-16 pt-10 border-t border-hairline dark:border-gray-700">
-  <h2 class="text-3xl font-bold text-ink dark:text-white mb-8 text-center">Continúa tu Aprendizaje (Contenido Sugerido)</h2>
+<div class="mt-16 pt-10 border-t border-hairline">
+  <h2 class="text-3xl font-bold text-ink mb-8 text-center">Continúa tu Aprendizaje (Contenido Sugerido)</h2>
   
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-    <a href="/country/spain/cuantas-calorias-debo-consumir-al-dia/" class="group block bg-surface dark:bg-gray-800 p-6 rounded-2xl border border-hairline hover:border-brand/50 hover:shadow-md transition-all duration-300">
-      <h3 class="text-xl font-bold text-ink dark:text-white group-hover:text-brand transition-colors mb-2">¿Cuántas calorías debo consumir al día?</h3>
-      <p class="text-sm text-ink/70 dark:text-gray-400">Descubre los rangos de ingesta calórica diaria recomendados en España y cómo adaptarlos a tu estilo de vida para mantener una salud óptima.</p>
+    <a href="/country/spain/cuantas-calorias-debo-consumir-al-dia/" class="group block bg-surface p-6 rounded-2xl border border-hairline hover:border-brand/50 hover:shadow-md transition-all duration-300">
+      <h3 class="text-xl font-bold text-ink group-hover:text-brand transition-colors mb-2">¿Cuántas calorías debo consumir al día?</h3>
+      <p class="text-sm text-ink/70">Descubre los rangos de ingesta calórica diaria recomendados en España y cómo adaptarlos a tu estilo de vida para mantener una salud óptima.</p>
       <div class="mt-4 text-brand font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
         Leer Artículo 
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
       </div>
     </a>
 
-    <a href="/country/spain/como-calcular-mis-calorias-diarias/" class="group block bg-surface dark:bg-gray-800 p-6 rounded-2xl border border-hairline hover:border-brand/50 hover:shadow-md transition-all duration-300">
-      <h3 class="text-xl font-bold text-ink dark:text-white group-hover:text-brand transition-colors mb-2">¿Cómo calcular mis calorías diarias?</h3>
-      <p class="text-sm text-ink/70 dark:text-gray-400">Aprende paso a paso las fórmulas matemáticas y los métodos precisos para determinar tu Gasto Energético Total Diario.</p>
+    <a href="/country/spain/como-calcular-mis-calorias-diarias/" class="group block bg-surface p-6 rounded-2xl border border-hairline hover:border-brand/50 hover:shadow-md transition-all duration-300">
+      <h3 class="text-xl font-bold text-ink group-hover:text-brand transition-colors mb-2">¿Cómo calcular mis calorías diarias?</h3>
+      <p class="text-sm text-ink/70">Aprende paso a paso las fórmulas matemáticas y los métodos precisos para determinar tu Gasto Energético Total Diario.</p>
       <div class="mt-4 text-brand font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
         Leer Artículo
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
@@ -339,7 +339,7 @@ const seoDescription = "Descubre cuántas calorías para perder peso necesitas c
     <div class="absolute inset-0 bg-[url('/assets/images/noise.png')] opacity-10 mix-blend-overlay"></div>
     <div class="relative z-10">
       <h3 class="text-3xl font-extrabold text-white mb-4">Calcula tus Calorías Hoy Mismo</h3>
-      <p class="text-gray-300 mb-8 max-w-xl mx-auto text-lg">No dejes tus resultados al azar. Utiliza nuestra calculadora avanzada diseñada con los parámetros nutricionales de España para obtener tu plan personalizado gratuito.</p>
+      <p class="text-mute mb-8 max-w-xl mx-auto text-lg">No dejes tus resultados al azar. Utiliza nuestra calculadora avanzada diseñada con los parámetros nutricionales de España para obtener tu plan personalizado gratuito.</p>
       <Button href="/country/spain/calculadora-de-calorias/" variant="primary" size="lg" class="w-full sm:w-auto text-lg px-8 py-4 shadow-brand/50 hover:scale-105 transition-transform duration-300">
         Abrir Calculadora de Calorías
       </Button>
@@ -348,40 +348,17 @@ const seoDescription = "Descubre cuántas calorías para perder peso necesitas c
 </div>
 
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Cómo manejo la ansiedad de tener que registrar todo perfectamente?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La carga psicológica de intentar ser milimétricamente perfecto puede llevar a la parálisis. Los expertos en psicología nutricional recomiendan centrarse en la regla del 80/20. La consistencia imperfecta a largo plazo producirá el 90% de los resultados deseados."
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity": [
+    {"@type":"Question","name":"¿Cómo manejo la ansiedad de tener que registrar todo perfectamente?","acceptedAnswer": {"@type":"Answer","text":"La carga psicológica de intentar ser milimétricamente perfecto puede llevar a la parálisis. Los expertos en psicología nutricional recomiendan centrarse en la regla del 80/20. La consistencia imperfecta a largo plazo producirá el 90% de los resultados deseados."
       }
     },
-    {
-      "@type": "Question",
-      "name": "¿El estrés crónico afecta realmente la quema de calorías?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Absolutamente. El estrés crónico eleva los niveles de cortisol, una hormona que promueve la retención de agua masiva y favorece la redistribución de la grasa hacia la zona abdominal visceral."
+    {"@type":"Question","name":"¿El estrés crónico afecta realmente la quema de calorías?","acceptedAnswer": {"@type":"Answer","text":"Absolutamente. El estrés crónico eleva los niveles de cortisol, una hormona que promueve la retención de agua masiva y favorece la redistribución de la grasa hacia la zona abdominal visceral."
       }
     },
-    {
-      "@type": "Question",
-      "name": "¿Con qué frecuencia debo recalcular mis necesidades calóricas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Se recomienda encarecidamente reevaluar tus medidas y necesidades calóricas cada vez que pierdas unos 4-5 kg de peso corporal, o cada 3 a 6 meses, ya que tu gasto energético de mantenimiento disminuirá al pesar menos."
+    {"@type":"Question","name":"¿Con qué frecuencia debo recalcular mis necesidades calóricas?","acceptedAnswer": {"@type":"Answer","text":"Se recomienda encarecidamente reevaluar tus medidas y necesidades calóricas cada vez que pierdas unos 4-5 kg de peso corporal, o cada 3 a 6 meses, ya que tu gasto energético de mantenimiento disminuirá al pesar menos."
       }
     },
-    {
-      "@type": "Question",
-      "name": "¿Existe algún peligro al depender completamente de calculadoras automatizadas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Las calculadoras proporcionan un punto de partida estadísticamente sólido, pero no pueden tener en cuenta la biología humana matizada por completo. Úsalas siempre como una brújula inicial y ajusta según tus resultados reales tras 4 semanas."
+    {"@type":"Question","name":"¿Existe algún peligro al depender completamente de calculadoras automatizadas?","acceptedAnswer": {"@type":"Answer","text":"Las calculadoras proporcionan un punto de partida estadísticamente sólido, pero no pueden tener en cuenta la biología humana matizada por completo. Úsalas siempre como una brújula inicial y ajusta según tus resultados reales tras 4 semanas."
       }
     }
   ]

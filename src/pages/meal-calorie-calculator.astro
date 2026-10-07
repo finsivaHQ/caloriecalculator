@@ -1,19 +1,19 @@
 ---
-import CalculatorLayout from "../layouts/CalculatorLayout.astro";
-import { inputCls, selectCls, segOptCls } from "../lib/ui";
-import type { FaqItem } from "../lib/seo";
-import MedicalNote from "../components/ui/MedicalNote.astro";
-import ArticleImage from "../components/ui/ArticleImage.astro";
+import CalculatorLayout from"../layouts/CalculatorLayout.astro";
+import { inputCls, selectCls, segOptCls } from"../lib/ui";
+import type { FaqItem } from"../lib/seo";
+import MedicalNote from"../components/ui/MedicalNote.astro";
+import ArticleImage from"../components/ui/ArticleImage.astro";
 
 const faqs: FaqItem[] = [
-  { q: "How many calories should each meal be?", a: "Divide your total daily calories by the number of meals. For example, 2000 calories over 3 meals is about 667 calories per meal." },
-  { q: "Is it better to eat 3 meals or 5-6 small meals?", a: "Research shows total daily intake matters more than meal frequency for weight loss or gain. Choose the pattern that fits your lifestyle and hunger best." },
-  { q: "How do I calculate my meal calories?", a: "Take your daily calorie target and divide it by the number of meals or snacks you plan to eat. You can use the calorie calculator or TDEE calculator to find your daily target first." },
-  { q: "What is the best meal calorie split for weight loss?", a: "Equal or slightly protein-heavy splits work well. Protein keeps you fuller longer, so front-loading protein at breakfast and lunch often helps control hunger." },
-  { q: "Should I eat the same calories at every meal?", a: "Not necessarily. Many people eat larger meals earlier and smaller meals later. Adjust portions based on activity, hunger, and schedule." },
-  { q: "How many calories for breakfast, lunch, and dinner?", a: "Typical splits are roughly 25% / 35% / 25% with a 15% snack buffer, but your personal split depends on goals and schedule." },
-  { q: "Does eating more frequently boost metabolism?", a: "Eating more often does not significantly increase metabolism. What matters most is total calories and food quality across the day." },
-  { q: "Can I skip meals to save calories?", a: "Skipping meals can lead to overeating later. If you prefer intermittent fasting, use the intermittent fasting calculator to plan a structured eating window." },
+  { q:"How many calories should each meal be?", a:"Divide your total daily calories by the number of meals. For example, 2000 calories over 3 meals is about 667 calories per meal." },
+  { q:"Is it better to eat 3 meals or 5-6 small meals?", a:"Research shows total daily intake matters more than meal frequency for weight loss or gain. Choose the pattern that fits your lifestyle and hunger best." },
+  { q:"How do I calculate my meal calories?", a:"Take your daily calorie target and divide it by the number of meals or snacks you plan to eat. You can use the calorie calculator or TDEE calculator to find your daily target first." },
+  { q:"What is the best meal calorie split for weight loss?", a:"Equal or slightly protein-heavy splits work well. Protein keeps you fuller longer, so front-loading protein at breakfast and lunch often helps control hunger." },
+  { q:"Should I eat the same calories at every meal?", a:"Not necessarily. Many people eat larger meals earlier and smaller meals later. Adjust portions based on activity, hunger, and schedule." },
+  { q:"How many calories for breakfast, lunch, and dinner?", a:"Typical splits are roughly 25% / 35% / 25% with a 15% snack buffer, but your personal split depends on goals and schedule." },
+  { q:"Does eating more frequently boost metabolism?", a:"Eating more often does not significantly increase metabolism. What matters most is total calories and food quality across the day." },
+  { q:"Can I skip meals to save calories?", a:"Skipping meals can lead to overeating later. If you prefer intermittent fasting, use the intermittent fasting calculator to plan a structured eating window." },
 ];
 ---
 
@@ -82,7 +82,7 @@ const faqs: FaqItem[] = [
       const box = document.getElementById("result-box") || document.getElementById("calc-results");
       if (box) {
         box.querySelectorAll(".tabular-nums").forEach((el) => {
-          el.textContent = "-.-";
+          el.textContent ="-.-";
         });
       }
       const btn = document.getElementById("calc-btn");
@@ -92,7 +92,7 @@ const faqs: FaqItem[] = [
     function clearDirty() {
       isDirty = false;
       const box = $("result-box");
-      if (box) box.classList.remove("opacity-40", "grayscale");
+      if (box) box.classList.remove("opacity-40","grayscale");
       const btn = $("calc-btn");
       if (btn) btn.classList.remove("is-dirty");
     }
@@ -101,7 +101,7 @@ const faqs: FaqItem[] = [
     function render() {
       clearDirty();
       const calories = parseFloat(($("calories") as HTMLInputElement).value) || 0;
-      const meals = parseInt(($("meals") as HTMLSelectElement).value || "3", 10);
+      const meals = parseInt(($("meals") as HTMLSelectElement).value ||"3", 10);
       if (calories <= 0 || meals <= 0) return;
 
       const perMeal = Math.round(calories / meals);
@@ -109,7 +109,7 @@ const faqs: FaqItem[] = [
       $("meal-note").textContent = `Across ${meals} meals/snacks per day.`;
 
       const rows = Array.from({ length: meals }, (_, i) => {
-        const label = i === 0 ? "Meal 1" : i === meals - 1 && meals > 1 ? `Meal ${meals}` : `Meal ${i + 1}`;
+        const label = i === 0 ?"Meal 1" : i === meals - 1 && meals > 1 ? `Meal ${meals}` : `Meal ${i + 1}`;
         return `<tr class="border-b border-hairline last:border-0"><td class="px-5 py-2.5 text-body">${label}</td><td class="px-5 py-2.5 text-right font-medium text-ink tabular-nums">${fmt(perMeal)} kcal</td></tr>`;
       });
       $("meal-table").innerHTML = rows.join("");

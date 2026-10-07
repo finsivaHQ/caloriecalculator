@@ -1,6 +1,6 @@
 ---
-import ContentLayout from "../layouts/ContentLayout.astro";
-import { inputCls } from "../lib/ui";
+import ContentLayout from"../layouts/ContentLayout.astro";
+import { inputCls } from"../lib/ui";
 ---
 
 <ContentLayout
@@ -11,7 +11,7 @@ import { inputCls } from "../lib/ui";
   lead="We’re here to help. Reach out with your questions, feedback, or inquiries."
   showCta={false}
 >
-  <div class="prose max-w-none text-brand-dark/80 dark:text-white/80 space-y-6">
+  <div class="prose max-w-none text-brand-dark/80 /80 space-y-6">
     <section>
       <p>At <strong>Calorie Calculator Free</strong>, we don't just see numbers on a screen—we see real people working hard to achieve their health, fitness, and wellness goals. Whether you’re an elite athlete dialing in your macronutrients for an upcoming competition, a busy parent trying to find a sustainable way to manage your daily energy levels, or someone who is just beginning their fitness journey and feeling overwhelmed by all the conflicting nutrition advice out there, we want you to know that we are cheering you on. We built this platform because we believe that access to accurate, science-backed nutritional data should be free, intuitive, and available to absolutely everyone.</p>
 
@@ -31,7 +31,7 @@ import { inputCls } from "../lib/ui";
       <p>We believe in being incredibly upfront about what our calculators can and cannot do. If there’s a bug we are working on, we will tell you. If a feature you want is going to take a few months to build, we won't string you along—we’ll give you a realistic timeline. We also want to be fully transparent about the fact that our tools provide estimates based on mathematical formulas, not medical diagnoses. We will never pretend to be your doctor, but we <em>will</em> promise to give you the most accurate mathematical baseline possible using industry-standard science.</p>
 
       <h3>3. Continuous Improvement Driven by You</h3>
-      <p>Some of our best features have come directly from user suggestions. Did you know that our custom macro split option was added because a user emailed us asking for a way to track their specific ketogenic diet parameters? Another user suggested adding more detailed activity level descriptions because they weren't sure if their warehouse job counted as "moderately active" or "very active." Your feedback is the engine that drives our development. We don't just tolerate suggestions; we actively rely on them to make Calorie Calculator Free better for the millions of people who use it every year.</p>
+      <p>Some of our best features have come directly from user suggestions. Did you know that our custom macro split option was added because a user emailed us asking for a way to track their specific ketogenic diet parameters? Another user suggested adding more detailed activity level descriptions because they weren't sure if their warehouse job counted as"moderately active" or"very active." Your feedback is the engine that drives our development. We don't just tolerate suggestions; we actively rely on them to make Calorie Calculator Free better for the millions of people who use it every year.</p>
     </section>
 
     <section>
@@ -48,9 +48,9 @@ import { inputCls } from "../lib/ui";
       </ul>
 
       <h3>2. My Calorie Results Seem Too High or Too Low</h3>
-      <p>It can be surprising to see the numbers our calculator spits out, especially if you have been conditioned by generalized advice like "everyone needs 2,000 calories a day." Remember that our calculator takes into account your specific age, gender, height, weight, and activity level to give you a personalized estimate.</p>
+      <p>It can be surprising to see the numbers our calculator spits out, especially if you have been conditioned by generalized advice like"everyone needs 2,000 calories a day." Remember that our calculator takes into account your specific age, gender, height, weight, and activity level to give you a personalized estimate.</p>
       <ul>
-        <li><strong>Double-Check Your Activity Level:</strong> The most common reason for unexpected results is overestimating or underestimating your activity level. Be rigorously honest with yourself. If you work a desk job but go to the gym for 45 minutes a day, you are likely "Lightly Active" or "Moderately Active," not "Very Active." Overestimating activity can lead to eating too many calories.</li>
+        <li><strong>Double-Check Your Activity Level:</strong> The most common reason for unexpected results is overestimating or underestimating your activity level. Be rigorously honest with yourself. If you work a desk job but go to the gym for 45 minutes a day, you are likely"Lightly Active" or"Moderately Active," not"Very Active." Overestimating activity can lead to eating too many calories.</li>
         <li><strong>Check Your Metric/Imperial Toggles:</strong> Make sure you didn't accidentally enter your weight in kilograms when you meant pounds, or your height in centimeters instead of inches! This happens more often than you might think.</li>
       </ul>
 
@@ -90,7 +90,7 @@ import { inputCls } from "../lib/ui";
     <section>
       <h2>Press, Media, & Partnerships</h2>
       <p>The intersection of digital technology, health, and metabolic science is an exciting and rapidly evolving space. For press inquiries, interview requests, or partnership opportunities, we warmly welcome communications from journalists, health bloggers, registered dietitians, and industry professionals.</p>
-      <p>Our team members are happy to provide expert quotes, background information, or guest content regarding digital health tools, metabolic math, and fitness technology. If you are a developer or a company building a wellness app and are interested in licensing our calculation engines or API, please reach out with the subject line "Partnership Inquiry." We love collaborating with others who share our mission of making health data accessible.</p>
+      <p>Our team members are happy to provide expert quotes, background information, or guest content regarding digital health tools, metabolic math, and fitness technology. If you are a developer or a company building a wellness app and are interested in licensing our calculation engines or API, please reach out with the subject line"Partnership Inquiry." We love collaborating with others who share our mission of making health data accessible.</p>
     </section>
 
     <section>
@@ -156,7 +156,7 @@ import { inputCls } from "../lib/ui";
     </div>
     <div class="space-y-1.5">
       <label for="message" class="block text-sm font-medium text-ink">Message</label>
-      <textarea id="message" name="message" rows="5" required class={inputCls + " h-auto py-2.5"}></textarea>
+      <textarea id="message" name="message" rows="5" required class={inputCls +" h-auto py-2.5"}></textarea>
     </div>
 
     <!-- Honeypot: hidden from users, catches spam bots -->
@@ -199,25 +199,24 @@ import { inputCls } from "../lib/ui";
     errorEl?.classList.add("hidden");
     const original = btn.textContent;
     btn.disabled = true;
-    btn.textContent = "Sending…";
+    btn.textContent ="Sending…";
 
     try {
       const res = await fetch(form.action, {
-        method: "POST",
+        method:"POST",
         body: new FormData(form),
-        headers: { Accept: "application/json" },
+        headers: { Accept:"application/json" },
       });
 
       if (res.ok) {
         form.reset();
         form.classList.add("hidden");
         successEl?.classList.remove("hidden");
-        successEl?.scrollIntoView({ behavior: "smooth", block: "center" });
+        successEl?.scrollIntoView({ behavior:"smooth", block:"center" });
       } else {
         const data = await res.json().catch(() => null);
         const msg =
-          data?.errors?.map((x: { message: string }) => x.message).join(", ") ||
-          "Something went wrong. Please try again, or email us directly at calgroupofficial@gmail.com.";
+          data?.errors?.map((x: { message: string }) => x.message).join(",") ||"Something went wrong. Please try again, or email us directly at calgroupofficial@gmail.com.";
         if (errorEl) {
           errorEl.textContent = msg;
           errorEl.classList.remove("hidden");
@@ -225,8 +224,7 @@ import { inputCls } from "../lib/ui";
       }
     } catch {
       if (errorEl) {
-        errorEl.textContent =
-          "Network error — please check your connection and try again, or email us directly at calgroupofficial@gmail.com.";
+        errorEl.textContent ="Network error — please check your connection and try again, or email us directly at calgroupofficial@gmail.com.";
         errorEl.classList.remove("hidden");
       }
     } finally {

@@ -1,40 +1,40 @@
 ---
-import CalculatorLayout from "../layouts/CalculatorLayout.astro";
-import Section from "../components/ui/Section.astro";
-import Button from "../components/ui/Button.astro";
+import CalculatorLayout from"../layouts/CalculatorLayout.astro";
+import Section from"../components/ui/Section.astro";
+import Button from"../components/ui/Button.astro";
 
 const faqs = [
   {
-    q: "How many calories are in 1 gram of protein?",
-    a: "There are exactly 4 calories (kcal) in 1 gram of protein. This is the standard Atwater factor used globally for nutritional calculations."
+    q:"How many calories are in 1 gram of protein?",
+    a:"There are exactly 4 calories (kcal) in 1 gram of protein. This is the standard Atwater factor used globally for nutritional calculations."
   },
   {
-    q: "How many calories is 150 grams of protein?",
-    a: "150 grams of protein contains 600 calories. (150g \u00d7 4 kcal/g = 600 kcal)."
+    q:"How many calories is 150 grams of protein?",
+    a:"150 grams of protein contains 600 calories. (150g \u00d7 4 kcal/g = 600 kcal)."
   },
   {
-    q: "How many calories is 160g of protein?",
-    a: "160 grams of protein equals 640 calories. (160g \u00d7 4 kcal/g = 640 kcal)."
+    q:"How many calories is 160g of protein?",
+    a:"160 grams of protein equals 640 calories. (160g \u00d7 4 kcal/g = 640 kcal)."
   },
   {
-    q: "How many calories is 170 grams of protein?",
-    a: "170 grams of protein is equal to 680 calories. (170g \u00d7 4 kcal/g = 680 kcal)."
+    q:"How many calories is 170 grams of protein?",
+    a:"170 grams of protein is equal to 680 calories. (170g \u00d7 4 kcal/g = 680 kcal)."
   },
   {
-    q: "How many calories is 180 grams of protein?",
-    a: "180 grams of protein provides 720 calories. (180g \u00d7 4 kcal/g = 720 kcal)."
+    q:"How many calories is 180 grams of protein?",
+    a:"180 grams of protein provides 720 calories. (180g \u00d7 4 kcal/g = 720 kcal)."
   },
   {
-    q: "How many grams is 6 oz of protein?",
-    a: "6 ounces of cooked meat (like chicken breast) yields roughly 42 to 50 grams of actual protein. However, if you are asking about a pure protein powder supplement, 6 dry ounces equals 170 grams of weight, which would provide roughly 680 calories."
+    q:"How many grams is 6 oz of protein?",
+    a:"6 ounces of cooked meat (like chicken breast) yields roughly 42 to 50 grams of actual protein. However, if you are asking about a pure protein powder supplement, 6 dry ounces equals 170 grams of weight, which would provide roughly 680 calories."
   },
   {
-    q: "How to calculate calories from protein?",
-    a: "To calculate the calories from any amount of protein, simply multiply the total grams of protein by 4. For example, if your meal has 30g of protein, the protein calories are 30 \u00d7 4 = 120 kcal."
+    q:"How to calculate calories from protein?",
+    a:"To calculate the calories from any amount of protein, simply multiply the total grams of protein by 4. For example, if your meal has 30g of protein, the protein calories are 30 \u00d7 4 = 120 kcal."
   }
 ];
 
-const inputCls = "w-full rounded-xl border border-hairline bg-canvas px-4 py-2.5 text-ink transition-colors focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand";
+const inputCls ="w-full rounded-xl border border-hairline bg-canvas px-4 py-2.5 text-ink transition-colors focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand";
 ---
 
 <CalculatorLayout
@@ -95,7 +95,7 @@ const inputCls = "w-full rounded-xl border border-hairline bg-canvas px-4 py-2.5
         <li>The resulting number represents your total protein-derived calories.</li>
       </ul>
       <p>
-        For instance, if you frequently ask, "<em>1gm protein how many calories?</em>", the definitive answer is 4 kcal. Let's look at some real-world dietary examples to contextualize this:
+        For instance, if you frequently ask,"<em>1gm protein how many calories?</em>", the definitive answer is 4 kcal. Let's look at some real-world dietary examples to contextualize this:
       </p>
       <ul>
         <li><strong>A Standard Whey Protein Shake:</strong> A typical scoop of whey isolate contains roughly 25 grams of protein. Multiplying 25g by 4 yields 100 calories strictly from protein.</li>
@@ -122,7 +122,7 @@ const inputCls = "w-full rounded-xl border border-hairline bg-canvas px-4 py-2.5
         This brings us to one of the most critical concepts in sports nutrition: the Thermic Effect of Food (TEF), also known as Diet-Induced Thermogenesis. TEF refers to the amount of energy (calories) your body expends specifically to digest, absorb, and metabolize the food you eat. 
       </p>
       <p>
-        When you use a <strong>protein calorie calculator</strong>, the math tells you that 100 grams of protein equals 400 calories. However, your body does not get to "keep" all 400 of those calories. Protein is highly thermogenic. While it technically contains 4 calories per gram, your body expends between 20% to 30% of those calories just to break down and process the amino acids. 
+        When you use a <strong>protein calorie calculator</strong>, the math tells you that 100 grams of protein equals 400 calories. However, your body does not get to"keep" all 400 of those calories. Protein is highly thermogenic. While it technically contains 4 calories per gram, your body expends between 20% to 30% of those calories just to break down and process the amino acids. 
       </p>
       <p>Let's compare the TEF of the three primary macronutrients:</p>
       <ul>
@@ -131,7 +131,7 @@ const inputCls = "w-full rounded-xl border border-hairline bg-canvas px-4 py-2.5
         <li><strong>Protein:</strong> 20% to 30% TEF</li>
       </ul>
       <p>
-        Because of this massive thermic effect, the "net" caloric value of protein is significantly lower than its gross value. If you consume 100 calories of pure protein, your body burns up to 30 of those calories during digestion, leaving a net yield of roughly 70 calories. This metabolic loophole makes high-protein diets incredibly effective for fat loss, as merely eating protein actively increases your total daily energy expenditure (TDEE).
+        Because of this massive thermic effect, the"net" caloric value of protein is significantly lower than its gross value. If you consume 100 calories of pure protein, your body burns up to 30 of those calories during digestion, leaving a net yield of roughly 70 calories. This metabolic loophole makes high-protein diets incredibly effective for fat loss, as merely eating protein actively increases your total daily energy expenditure (TDEE).
       </p>
 
       <h2>Why Protein is the Ultimate Macro for Weight Loss</h2>
@@ -141,7 +141,7 @@ const inputCls = "w-full rounded-xl border border-hairline bg-canvas px-4 py-2.5
       
       <h4>1. Unmatched Satiety and Appetite Control</h4>
       <p>
-        Protein is the most satiating macronutrient. Clinical studies consistently demonstrate that high-protein meals significantly reduce levels of ghrelin (the "hunger hormone") while simultaneously elevating the production of peptide YY (PYY) and GLP-1, which are hormones that signal fullness to the brain. By maximizing your protein calories, you can stay fuller for longer, radically reducing the likelihood of snacking or overeating later in the day.
+        Protein is the most satiating macronutrient. Clinical studies consistently demonstrate that high-protein meals significantly reduce levels of ghrelin (the"hunger hormone") while simultaneously elevating the production of peptide YY (PYY) and GLP-1, which are hormones that signal fullness to the brain. By maximizing your protein calories, you can stay fuller for longer, radically reducing the likelihood of snacking or overeating later in the day.
       </p>
 
       <h4>2. Preservation of Lean Muscle Mass</h4>
@@ -166,7 +166,7 @@ const inputCls = "w-full rounded-xl border border-hairline bg-canvas px-4 py-2.5
       <ul>
         <li><strong>Distribute Your Protein Evenly:</strong> To maximize muscle protein synthesis, aim to consume 25 to 40 grams of protein per meal, spaced evenly throughout the day. The body does not store amino acids in the same way it stores fat or carbohydrates, so a steady supply is optimal for muscle repair.</li>
         <li><strong>Prioritize High-Quality Sources:</strong> Not all protein calories are created equal. Animal-based proteins (such as whey, eggs, chicken, and beef) have a high Biological Value (BV) and contain all essential amino acids. If you follow a plant-based diet, ensure you are combining different protein sources (like rice and beans) or utilizing high-quality soy or pea protein isolates to achieve a complete amino acid profile.</li>
-        <li><strong>Lean vs. Fatty Proteins:</strong> Be mindful of the "hidden" calories in your protein sources. While a ribeye steak is packed with protein, it also contains a massive amount of fat calories. If your primary goal is fat loss, prioritize lean protein sources like egg whites, chicken breast, white fish, and non-fat Greek yogurt to maximize your protein intake without blowing past your total caloric ceiling.</li>
+        <li><strong>Lean vs. Fatty Proteins:</strong> Be mindful of the"hidden" calories in your protein sources. While a ribeye steak is packed with protein, it also contains a massive amount of fat calories. If your primary goal is fat loss, prioritize lean protein sources like egg whites, chicken breast, white fish, and non-fat Greek yogurt to maximize your protein intake without blowing past your total caloric ceiling.</li>
       </ul>
 
       <h3>Using Our Protein Calories Calculator to Stay on Track</h3>

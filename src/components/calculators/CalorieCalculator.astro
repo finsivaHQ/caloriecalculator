@@ -231,15 +231,15 @@
     type Sex,
     type ActivityKey,
     type GoalKey,
-  } from "../../lib/calculations";
-  import { lbToKg, ftInToCm } from "../../lib/units";
+  } from"../../lib/calculations";
+  import { lbToKg, ftInToCm } from"../../lib/units";
 
   const root = document.getElementById("calc-root");
   if (root) {
     const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
     const fmt = (n: number) => Math.round(n).toLocaleString("en-US");
 
-    let unit: "metric" | "imperial" = "metric";
+    let unit:"metric" |"imperial" ="metric";
     let isDirty = false;
 
     function markDirty() {
@@ -248,7 +248,7 @@
       const box = document.getElementById("result-box") || document.getElementById("calc-results");
       if (box) {
         box.querySelectorAll(".tabular-nums").forEach((el) => {
-          el.textContent = "-.-";
+          el.textContent ="-.-";
         });
       }
       const btn = document.getElementById("calc-btn");
@@ -274,7 +274,7 @@
 
       let weightKg = parseFloat(($("weight") as HTMLInputElement).value) || 0;
       let heightCm: number;
-      if (unit === "imperial") {
+      if (unit ==="imperial") {
         weightKg = lbToKg(weightKg);
         const ft = parseFloat(($("height-ft") as HTMLInputElement).value) || 0;
         const inch = parseFloat(($("height-in") as HTMLInputElement).value) || 0;
@@ -327,9 +327,9 @@
         .map((k) => {
           const c = goalCalories(tdeeVal, k, sex);
           const active = k === goal;
-          return `<tr class="last:border-0 ${active ? "bg-brand/5" : ""}">
-            <td class="px-4 py-2 ${active ? "text-ink font-medium" : "text-body"}">${GOALS[k].label}</td>
-            <td class="px-4 py-2 text-right tabular-nums ${active ? "text-ink font-medium" : "text-body"}">${fmt(c)}</td>
+          return `<tr class="last:border-0 ${active ?"bg-brand/5" :""}">
+            <td class="px-4 py-2 ${active ?"text-ink font-medium" :"text-body"}">${GOALS[k].label}</td>
+            <td class="px-4 py-2 text-right tabular-nums ${active ?"text-ink font-medium" :"text-body"}">${fmt(c)}</td>
             <td class="hidden px-4 py-2 text-right tabular-nums text-mute sm:table-cell">${fmt(c * 7)}</td>
           </tr>`;
         })
@@ -347,7 +347,7 @@
         u.searchParams.set("s", p.sex);
         u.searchParams.set("a", String(p.age));
         u.searchParams.set("w", ($("weight") as HTMLInputElement).value);
-        if (unit === "imperial") {
+        if (unit ==="imperial") {
           u.searchParams.set("hf", ($("height-ft") as HTMLInputElement).value);
           u.searchParams.set("hi", ($("height-in") as HTMLInputElement).value);
           u.searchParams.delete("h");
@@ -358,7 +358,7 @@
         }
         u.searchParams.set("act", p.activity);
         u.searchParams.set("g", p.goal);
-        history.replaceState(null, "", u);
+        history.replaceState(null,"", u);
       } catch {}
     }
 
@@ -367,19 +367,19 @@
       try {
         const q = new URLSearchParams(window.location.search);
         if (![...q.keys()].length) return;
-        if (q.get("u") === "imperial") {
+        if (q.get("u") ==="imperial") {
           (root!.querySelector('.unit-tab[data-unit="imperial"]') as HTMLButtonElement)?.click();
         }
         const setV = (id: string, key: string) => { const v = q.get(key); if (v !== null) (document.getElementById(id) as HTMLInputElement).value = v; };
         const s = q.get("s");
-        if (s === "male" || s === "female") {
+        if (s ==="male" || s ==="female") {
           (root!.querySelector(`input[name="sex"][value="${s}"]`) as HTMLInputElement).checked = true;
         }
-        setV("age", "a");
-        setV("weight", "w");
-        setV("height-cm", "h");
-        setV("height-ft", "hf");
-        setV("height-in", "hi");
+        setV("age","a");
+        setV("weight","w");
+        setV("height-cm","h");
+        setV("height-ft","hf");
+        setV("height-in","hi");
         const act = q.get("act"); if (act) ($("activity") as HTMLSelectElement).value = act;
         const g = q.get("g"); if (g) goalSelect.value = g;
       } catch {}
@@ -388,7 +388,7 @@
     // Unit toggle
     root.querySelectorAll<HTMLButtonElement>(".unit-tab").forEach((btn) => {
       btn.addEventListener("click", () => {
-        const next = btn.dataset.unit as "metric" | "imperial";
+        const next = btn.dataset.unit as"metric" |"imperial";
         if (next === unit) return;
         unit = next;
         root.querySelectorAll<HTMLButtonElement>(".unit-tab").forEach((b) => {
@@ -402,17 +402,17 @@
           b.classList.toggle("text-mute", !on);
         });
         // toggle height inputs + unit labels
-        $("height-metric").classList.toggle("hidden", unit === "imperial");
-        $("height-imperial").classList.toggle("hidden", unit === "metric");
-        $("height-imperial").classList.toggle("grid", unit === "imperial");
-        const wU = unit === "metric" ? "(kg)" : "(lb)";
-        const hU = unit === "metric" ? "(cm)" : "(ft/in)";
+        $("height-metric").classList.toggle("hidden", unit ==="imperial");
+        $("height-imperial").classList.toggle("hidden", unit ==="metric");
+        $("height-imperial").classList.toggle("grid", unit ==="imperial");
+        const wU = unit ==="metric" ?"(kg)" :"(lb)";
+        const hU = unit ==="metric" ?"(cm)" :"(ft/in)";
         document.querySelectorAll(".weight-unit").forEach((e) => (e.textContent = wU));
         document.querySelectorAll(".height-unit").forEach((e) => (e.textContent = hU));
         // convert current weight value
         const w = $("weight") as HTMLInputElement;
         const v = parseFloat(w.value) || 0;
-        if (v) w.value = (unit === "imperial" ? v * 2.2046226218 : v / 2.2046226218).toFixed(1);
+        if (v) w.value = (unit ==="imperial" ? v * 2.2046226218 : v / 2.2046226218).toFixed(1);
         render();
       });
     });
@@ -420,8 +420,8 @@
     // Recent calculations (localStorage)
     function saveRecent(entry: { cals: number; goal: string; sex: string }) {
       try {
-        const key = "ccf-recent";
-        const list = JSON.parse(localStorage.getItem(key) || "[]");
+        const key ="ccf-recent";
+        const list = JSON.parse(localStorage.getItem(key) ||"[]");
         list.unshift({ ...entry, t: Date.now() });
         localStorage.setItem(key, JSON.stringify(list.slice(0, 5)));
       } catch {}
@@ -433,8 +433,8 @@
       try {
         await navigator.clipboard.writeText(text);
         const l = $("copy-label");
-        l.textContent = "Copied!";
-        setTimeout(() => (l.textContent = "Copy"), 1500);
+        l.textContent ="Copied!";
+        setTimeout(() => (l.textContent ="Copy"), 1500);
       } catch {}
     });
 
@@ -446,7 +446,7 @@
       const url = window.location.href;
       const label = $("share-label");
       const shareData = {
-        title: "My calorie results — Calorie Calculator Free",
+        title:"My calorie results — Calorie Calculator Free",
         text: `My daily calorie target: ${$("result-calories").textContent} kcal. Calculate yours:`,
         url,
       };
@@ -455,14 +455,14 @@
           await navigator.share(shareData);
         } else {
           await navigator.clipboard.writeText(url);
-          label.textContent = "Link copied!";
-          setTimeout(() => (label.textContent = "Share"), 1500);
+          label.textContent ="Link copied!";
+          setTimeout(() => (label.textContent ="Share"), 1500);
         }
       } catch {}
     });
 
     // Init: set metric tab active styles
-    root.querySelector<HTMLButtonElement>('.unit-tab[data-unit="metric"]')?.classList.add("bg-surface", "text-ink", "shadow-sm", "border", "border-hairline");
+    root.querySelector<HTMLButtonElement>('.unit-tab[data-unit="metric"]')?.classList.add("bg-surface","text-ink","shadow-sm","border","border-hairline");
     root.querySelector<HTMLButtonElement>('.unit-tab[data-unit="imperial"]')?.classList.add("text-mute");
 
     form.addEventListener("submit", (e) => {

@@ -1,62 +1,29 @@
 ---
-import Button from "../../components/ui/Button.astro";
+import Button from"../../components/ui/Button.astro";
 import ContentLayout from '../../layouts/ContentLayout.astro';
 
 import ArticleImage from '../../components/ui/ArticleImage.astro';
 
-const title = "BMR and TDEE Formulas: Mifflin-St Jeor, Harris-Benedict, and Katch-McArdle Explained";
-const description = "Understand the scientific principles and mathematical formulas behind calculating your Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE).";
+const title ="BMR and TDEE Formulas: Mifflin-St Jeor, Harris-Benedict, and Katch-McArdle Explained";
+const description ="Understand the scientific principles and mathematical formulas behind calculating your Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE).";
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Which BMR formula is considered the most accurate?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Mifflin-St Jeor equation is widely considered the most accurate BMR formula for the general population. Multiple scientific studies have shown that it estimates resting metabolic rate to within 10% of true values in a majority of healthy adults, outperforming older equations."
+const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity": [
+    {"@type":"Question","name":"Which BMR formula is considered the most accurate?","acceptedAnswer": {"@type":"Answer","text":"The Mifflin-St Jeor equation is widely considered the most accurate BMR formula for the general population. Multiple scientific studies have shown that it estimates resting metabolic rate to within 10% of true values in a majority of healthy adults, outperforming older equations."
       }
     },
-    {
-      "@type": "Question",
-      "name": "How does the Katch-McArdle formula differ from others?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Unlike the Harris-Benedict or Mifflin-St Jeor equations, the Katch-McArdle formula requires you to know your exact body fat percentage. Because it accounts for your lean body mass rather than just total body weight, it is often far more accurate for athletes, bodybuilders, and very lean individuals."
+    {"@type":"Question","name":"How does the Katch-McArdle formula differ from others?","acceptedAnswer": {"@type":"Answer","text":"Unlike the Harris-Benedict or Mifflin-St Jeor equations, the Katch-McArdle formula requires you to know your exact body fat percentage. Because it accounts for your lean body mass rather than just total body weight, it is often far more accurate for athletes, bodybuilders, and very lean individuals."
       }
     },
-    {
-      "@type": "Question",
-      "name": "What is the difference between BMR and RMR?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "BMR (Basal Metabolic Rate) and RMR (Resting Metabolic Rate) are closely related and often used interchangeably, but they have key differences in how they are measured. BMR is strictly measured under highly rigorous conditions (such as after a 12-hour fast, in a dark, temperature-controlled room immediately upon waking). In contrast, RMR is measured under less restrictive resting conditions and is usually slightly higher than BMR."
+    {"@type":"Question","name":"What is the difference between BMR and RMR?","acceptedAnswer": {"@type":"Answer","text":"BMR (Basal Metabolic Rate) and RMR (Resting Metabolic Rate) are closely related and often used interchangeably, but they have key differences in how they are measured. BMR is strictly measured under highly rigorous conditions (such as after a 12-hour fast, in a dark, temperature-controlled room immediately upon waking). In contrast, RMR is measured under less restrictive resting conditions and is usually slightly higher than BMR."
       }
     },
-    {
-      "@type": "Question",
-      "name": "Why is the Harris-Benedict equation still used if it is older?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Harris-Benedict equation, originally created in 1919 and revised by Roza and Shizgal in 1984, remains widely used because it has a long history of clinical application and provides a reasonable baseline for many individuals. However, modern dietitians generally prefer the Mifflin-St Jeor equation because Harris-Benedict tends to slightly overestimate calorie needs, particularly in overweight individuals."
+    {"@type":"Question","name":"Why is the Harris-Benedict equation still used if it is older?","acceptedAnswer": {"@type":"Answer","text":"The Harris-Benedict equation, originally created in 1919 and revised by Roza and Shizgal in 1984, remains widely used because it has a long history of clinical application and provides a reasonable baseline for many individuals. However, modern dietitians generally prefer the Mifflin-St Jeor equation because Harris-Benedict tends to slightly overestimate calorie needs, particularly in overweight individuals."
       }
     },
-    {
-      "@type": "Question",
-      "name": "How often should I recalculate my BMR and TDEE?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You should recalculate your BMR and TDEE whenever you experience a significant change in body weight (such as gaining or losing 5-10 pounds) or if your daily activity levels change drastically. Recalculating ensures your caloric targets align with your current metabolic requirements."
+    {"@type":"Question","name":"How often should I recalculate my BMR and TDEE?","acceptedAnswer": {"@type":"Answer","text":"You should recalculate your BMR and TDEE whenever you experience a significant change in body weight (such as gaining or losing 5-10 pounds) or if your daily activity levels change drastically. Recalculating ensures your caloric targets align with your current metabolic requirements."
       }
     },
-    {
-      "@type": "Question",
-      "name": "Can my BMR increase or decrease over time?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, your BMR naturally fluctuates throughout your life. Factors that can increase your BMR include gaining muscle mass, recovering from an injury, or certain hormonal changes. Conversely, losing weight, losing muscle mass, and aging typically cause a decrease in your BMR."
+    {"@type":"Question","name":"Can my BMR increase or decrease over time?","acceptedAnswer": {"@type":"Answer","text":"Yes, your BMR naturally fluctuates throughout your life. Factors that can increase your BMR include gaining muscle mass, recovering from an injury, or certain hormonal changes. Conversely, losing weight, losing muscle mass, and aging typically cause a decrease in your BMR."
       }
     }
   ]
@@ -168,7 +135,7 @@ const faqSchema = {
   <ul>
     <li><strong>Track Your Macronutrients:</strong> Knowing your total daily calories is only step one. Learning how to properly divide those calories into optimal amounts of protein, dietary fats, and carbohydrates is vital for achieving the best physiological results, preserving muscle mass, and maintaining energy levels.</li>
     <li><strong>Adjust As You Go:</strong> These mathematical formulas are incredibly useful, but they only give you an estimated starting point. Monitor your weight and physical measurements, and adjust your caloric intake up or down after two to three weeks of consistent tracking.</li>
-    <li><strong>Be Honest About Your Activity:</strong> The single biggest mistake people make when calculating their TDEE is drastically overestimating their daily activity level. If you work a desk job but go to the gym for an hour, you are likely only "Lightly Active." When in doubt, start with a lower multiplier.</li>
+    <li><strong>Be Honest About Your Activity:</strong> The single biggest mistake people make when calculating their TDEE is drastically overestimating their daily activity level. If you work a desk job but go to the gym for an hour, you are likely only"Lightly Active." When in doubt, start with a lower multiplier.</li>
   </ul>
 
   <h2>Frequently Asked Questions (FAQ)</h2>

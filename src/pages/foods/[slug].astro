@@ -57,32 +57,14 @@ const ketoAnswer = isLowCarb
 const title = `How many calories are in 100g of ${food.name}? | Nutrition Facts & Analysis`;
 const description = `Comprehensive nutritional analysis of ${food.name}. Find out exactly how many calories, protein, carbs, and fats are in 100g, plus weight loss and keto compatibility.`;
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": `Is ${food.name} good for weight loss?`,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": weightLossAnswer
+const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity": [
+    {"@type":"Question","name": `Is ${food.name} good for weight loss?`,"acceptedAnswer": {"@type":"Answer","text": weightLossAnswer
       }
     },
-    {
-      "@type": "Question",
-      "name": `Is ${food.name} good for building muscle?`,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": muscleAnswer
+    {"@type":"Question","name": `Is ${food.name} good for building muscle?`,"acceptedAnswer": {"@type":"Answer","text": muscleAnswer
       }
     },
-    {
-      "@type": "Question",
-      "name": `Is ${food.name} keto-friendly?`,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": ketoAnswer
+    {"@type":"Question","name": `Is ${food.name} keto-friendly?`,"acceptedAnswer": {"@type":"Answer","text": ketoAnswer
       }
     }
   ]
@@ -106,14 +88,14 @@ const faqSchema = {
     </div>
 
     <!-- Data Visualization / Macro Ring -->
-    <div class="bg-surface rounded-[2.5rem] p-8 shadow-xl border border-slate-100 mb-12 relative overflow-hidden">
+    <div class="bg-surface rounded-[2.5rem] p-8 shadow-xl border border-hairline mb-12 relative overflow-hidden">
       <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand to-brand-light"></div>
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <!-- Big Number -->
-        <div class="text-center p-8 bg-canvas-soft rounded-3xl border border-slate-100 shadow-inner">
+        <div class="text-center p-8 bg-canvas-soft rounded-3xl border border-hairline shadow-inner">
           <p class="text-mute font-medium mb-2 uppercase tracking-wide">Calories per 100g</p>
-          <div class="text-7xl font-black text-ink mb-4">{food.calories} <span class="text-3xl text-slate-400 font-bold">kcal</span></div>
+          <div class="text-7xl font-black text-ink mb-4">{food.calories} <span class="text-3xl text-mute font-bold">kcal</span></div>
           
           <div class="space-y-2 mt-6 text-sm font-medium text-body bg-surface p-4 rounded-xl border border-hairline shadow-sm text-left">
             <p class="text-center font-bold text-ink mb-3 border-b pb-2">How long to burn off {food.calories} calories?</p>
@@ -193,22 +175,22 @@ const faqSchema = {
     </div>
 
     <!-- The Spiderweb (Internal Linking) -->
-    <div class="mt-16 bg-canvas-soft p-8 rounded-3xl border border-slate-100">
+    <div class="mt-16 bg-canvas-soft p-8 rounded-3xl border border-hairline">
       <h3 class="text-2xl font-bold text-ink mb-6 border-b border-hairline pb-4">Explore Similar Foods</h3>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
         {related.map((item) => (
           <a href={`/foods/${item.slug}/`} class="block group">
             <div class="bg-surface p-6 rounded-2xl border border-hairline shadow-sm hover:shadow-md transition-all group-hover:-translate-y-1 hover:border-brand/30">
-              <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-2">{item.category}</span>
+              <span class="text-xs font-bold text-mute uppercase tracking-wider block mb-2">{item.category}</span>
               <h4 class="text-lg font-bold text-ink mb-1 group-hover:text-brand transition-colors line-clamp-1">{item.name}</h4>
-              <p class="text-mute font-medium">{item.calories} kcal <span class="text-xs text-slate-400">/ 100g</span></p>
+              <p class="text-mute font-medium">{item.calories} kcal <span class="text-xs text-mute">/ 100g</span></p>
             </div>
           </a>
         ))}
       </div>
       
       <div class="mt-10 text-center">
-        <a href="/foods/" class="inline-flex items-center gap-2 bg-slate-900 text-white font-bold py-4 px-8 rounded-xl hover:bg-brand transition-colors">
+        <a href="/foods/" class="inline-flex items-center gap-2 bg-surface-elevated text-white font-bold py-4 px-8 rounded-xl hover:bg-brand transition-colors">
           Browse Full Food Database <span>&rarr;</span>
         </a>
       </div>

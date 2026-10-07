@@ -1,16 +1,16 @@
 ---
-import CalculatorLayout from "../layouts/CalculatorLayout.astro";
-import ExerciseCalculator from "../components/calculators/ExerciseCalculator.astro";
-import { WALKING } from "../data/exercises";
-import type { FaqItem } from "../lib/seo";
-import ArticleImage from "../components/ui/ArticleImage.astro";
-import Sources from "../components/ui/Sources.astro";
+import CalculatorLayout from"../layouts/CalculatorLayout.astro";
+import ExerciseCalculator from"../components/calculators/ExerciseCalculator.astro";
+import { WALKING } from"../data/exercises";
+import type { FaqItem } from"../lib/seo";
+import ArticleImage from"../components/ui/ArticleImage.astro";
+import Sources from"../components/ui/Sources.astro";
 
 const faqs: FaqItem[] = [
-  { q: "How many calories does walking burn?", a: "A 70 kg (154 lb) person burns roughly 150 calories walking briskly (3.5 mph) for 30 minutes. Slower strolls burn less, and a faster pace or hills burn more." },
-  { q: "How many calories does walking 10,000 steps burn?", a: "Roughly 300–500 calories for most people, depending on body weight, pace, and stride length. 10,000 steps is about 5 miles or 8 km." },
-  { q: "Is walking good for weight loss?", a: "Yes. Walking is low-impact, sustainable, and easy to fit into daily life. Combined with a modest calorie deficit, regular walking is a very effective tool for losing fat and keeping it off." },
-  { q: "How many calories does walking a mile burn?", a: "About 70–100 calories per mile for an average adult, increasing with body weight and walking speed." },
+  { q:"How many calories does walking burn?", a:"A 70 kg (154 lb) person burns roughly 150 calories walking briskly (3.5 mph) for 30 minutes. Slower strolls burn less, and a faster pace or hills burn more." },
+  { q:"How many calories does walking 10,000 steps burn?", a:"Roughly 300–500 calories for most people, depending on body weight, pace, and stride length. 10,000 steps is about 5 miles or 8 km." },
+  { q:"Is walking good for weight loss?", a:"Yes. Walking is low-impact, sustainable, and easy to fit into daily life. Combined with a modest calorie deficit, regular walking is a very effective tool for losing fat and keeping it off." },
+  { q:"How many calories does walking a mile burn?", a:"About 70–100 calories per mile for an average adult, increasing with body weight and walking speed." },
 ];
 ---
 
@@ -105,14 +105,14 @@ const faqs: FaqItem[] = [
       <li><strong>Increase Your Pace Deliberately:</strong> This is the most obvious but often overlooked method. Transitioning from a casual 2.5 mph stroll to a brisk 3.5 mph walk significantly increases your heart rate, oxygen consumption, and overall calorie expenditure. Try to maintain a pace where you can still hold a conversation, but you feel slightly breathless.</li>
       <li><strong>Seek Out Hills and Inclines:</strong> Walking uphill fundamentally changes the biomechanics of your stride. It forces your posterior chain—specifically your glutes, hamstrings, and calves—to work exponentially harder to lift your body weight against gravity. Adding even a 5% incline to your walk can increase your calorie burn by up to 30-50%. If you use a treadmill, try experimenting with our <a href="/treadmill-calorie-calculator/">treadmill calorie calculator</a> to see the exact numerical impact of incline walking.</li>
       <li><strong>Incorporate Rucking (Wearing a Weighted Vest or Backpack):</strong> Rucking is a concept borrowed from military training that involves carrying extra weight while walking. By wearing a weighted vest or a heavy backpack, you artificially increase your body mass. This forces your muscles and cardiovascular system to adapt to the heavier load, burning significantly more calories while simultaneously building core stability and lower-body strength.</li>
-      <li><strong>Try Interval Training (Fartlek Walks):</strong> You do not need to run to do interval training. Alternate between periods of normal, moderate walking and short bursts of very fast, intense power walking. For example, walk normally for 3 minutes, then power walk as fast as you can for 1 minute. Repeat this cycle 10 times. This spikes your heart rate and creates an "afterburn" effect (EPOC), causing you to burn more calories even after your walk has ended.</li>
+      <li><strong>Try Interval Training (Fartlek Walks):</strong> You do not need to run to do interval training. Alternate between periods of normal, moderate walking and short bursts of very fast, intense power walking. For example, walk normally for 3 minutes, then power walk as fast as you can for 1 minute. Repeat this cycle 10 times. This spikes your heart rate and creates an"afterburn" effect (EPOC), causing you to burn more calories even after your walk has ended.</li>
       <li><strong>Walk on Uneven Terrain or Trails:</strong> Walking on a perfectly flat, paved sidewalk is highly efficient for the body. Walking on sand, dirt trails, or rocky paths forces your stabilizing muscles in your ankles, knees, and core to constantly engage to keep you balanced. This decreased efficiency means your body has to work harder and burn more energy.</li>
       <li><strong>Actively Engage Your Upper Body:</strong> Think about race walkers—they aggressively pump their arms. By actively driving your arms back and forth in sync with your legs, you engage your shoulders, back, and core, turning a lower-body exercise into a full-body movement. You can also try using Nordic walking poles, which have been shown to increase caloric expenditure by up to 20%.</li>
       <li><strong>Simply Walk Longer:</strong> If you cannot walk faster or find hills, the simplest variable to manipulate is duration. Volume is king when it comes to walking. Adding just 15 to 20 extra minutes to your daily walk can easily burn an additional 75 to 150 calories depending on your weight, which adds up to a massive cumulative burn over the course of a week or month.</li>
     </ul>
 
     <h2>Walking vs. Running: The Ultimate Breakdown for Fat Loss and Longevity</h2>
-    <p>One of the most common debates in the fitness world is whether walking or running is better for weight loss, cardiovascular health, and overall longevity. The truth is nuanced, and the "best" choice depends entirely on your specific goals, your current fitness level, and your biomechanical health.</p>
+    <p>One of the most common debates in the fitness world is whether walking or running is better for weight loss, cardiovascular health, and overall longevity. The truth is nuanced, and the"best" choice depends entirely on your specific goals, your current fitness level, and your biomechanical health.</p>
     <p>From a pure calorie-burn-per-minute perspective, running is undeniably more time-efficient. A 160 lb person will burn roughly 100 calories per mile whether they walk that mile or run that mile. However, running allows you to cover that mile in 10 minutes, whereas walking might take 20 minutes. Therefore, running burns calories at double the rate per minute.</p>
     <p>However, calorie burn is only one piece of the puzzle. Running places massive impact forces on your joints, tendons, and ligaments. For every step you take while running, your body absorbs a shockwave equivalent to three to four times your body weight. For many individuals, especially beginners or those carrying excess weight, this repetitive stress can quickly lead to injuries like shin splints, plantar fasciitis, or runner's knee.</p>
     <p>Furthermore, intense running significantly elevates cortisol and can stimulate your appetite. Many people find that after a grueling 45-minute run, they are so ravenous that they end up eating back all the calories they just burned, negating their calorie deficit.</p>
@@ -124,7 +124,7 @@ const faqs: FaqItem[] = [
       <p>Absolutely, yes. Weight loss is primarily driven by your diet—specifically, maintaining a caloric deficit. Walking is an incredible supplementary tool because it increases your daily energy expenditure without making you overly hungry or tired. Countless individuals have lost massive amounts of weight simply by walking daily and managing their nutrition. It is the foundation of a healthy lifestyle.</p>
       
       <h3>2. Do I really need to hit 10,000 steps a day?</h3>
-      <p>The "10,000 steps a day" goal is actually a fascinating piece of history. It originated in the 1960s as a marketing campaign for a Japanese pedometer called "Manpo-kei" (which translates to 10,000-step meter). While it is a fantastic target, modern scientific studies indicate that the bulk of the cardiovascular and longevity benefits max out at around 7,500 to 8,500 steps per day. Any steps beyond that are great for additional calorie burn, but do not dramatically increase your lifespan further. Focus on progress, not a magical number.</p>
+      <p>The"10,000 steps a day" goal is actually a fascinating piece of history. It originated in the 1960s as a marketing campaign for a Japanese pedometer called"Manpo-kei" (which translates to 10,000-step meter). While it is a fantastic target, modern scientific studies indicate that the bulk of the cardiovascular and longevity benefits max out at around 7,500 to 8,500 steps per day. Any steps beyond that are great for additional calorie burn, but do not dramatically increase your lifespan further. Focus on progress, not a magical number.</p>
       
       <h3>3. How long does it take to see results from walking every day?</h3>
       <p>If you are combining daily walking with a consistent caloric deficit, you will likely start noticing changes in how your clothes fit, your energy levels, and your overall mood within 2 to 3 weeks. Noticeable, significant physical changes in body composition usually take 6 to 8 weeks. Remember, consistency is far more important than intensity.</p>
@@ -163,8 +163,8 @@ const faqs: FaqItem[] = [
       </div>
     </div>
     <Sources sources={[
-      { label: "Harvard Medical School — 5 surprising benefits of walking", href: "https://www.health.harvard.edu/staying-healthy/5-surprising-benefits-of-walking" },
-      { label: "Mayo Clinic — Walking: Trim your waistline, improve your health", href: "https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/walking/art-20046261" },
+      { label:"Harvard Medical School — 5 surprising benefits of walking", href:"https://www.health.harvard.edu/staying-healthy/5-surprising-benefits-of-walking" },
+      { label:"Mayo Clinic — Walking: Trim your waistline, improve your health", href:"https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/walking/art-20046261" },
     ]} />
   </Fragment>
 </CalculatorLayout>

@@ -1,17 +1,17 @@
 ---
-import Button from "../../components/ui/Button.astro";
-import MedicalNote from "../../components/ui/MedicalNote.astro";
-import ContentLayout from "../../layouts/ContentLayout.astro";
-import type { FaqItem } from "../../lib/seo";
-import ArticleImage from "../../components/ui/ArticleImage.astro";
-import Sources from "../../components/ui/Sources.astro";
+import Button from"../../components/ui/Button.astro";
+import MedicalNote from"../../components/ui/MedicalNote.astro";
+import ContentLayout from"../../layouts/ContentLayout.astro";
+import type { FaqItem } from"../../lib/seo";
+import ArticleImage from"../../components/ui/ArticleImage.astro";
+import Sources from"../../components/ui/Sources.astro";
 
 const faqs: FaqItem[] = [
-  { q: "Are calorie calculators accurate?", a: "Calorie calculators provide a highly educated estimate, but they are not 100% perfectly accurate. Because metabolic rates differ by individual, a calculator using the Mifflin-St Jeor equation is usually accurate within a 10% to 15% margin of error." },
-  { q: "Why is my calorie calculator wrong?", a: "If your calorie calculator seems wrong, it is usually because of an overestimated 'activity level' multiplier. People often overestimate how many calories they burn through exercise. Always select a lower activity tier (like 'Sedentary' or 'Lightly Active') for a more accurate baseline." },
-  { q: "Which calorie equation is the most accurate?", a: "The Mifflin-St Jeor equation is widely considered by the Academy of Nutrition and Dietetics to be the most accurate standard formula for calculating resting metabolic rate in healthy adults, outperforming older models like the Harris-Benedict equation." },
-  { q: "Can a calorie calculator underestimate my metabolism?", a: "Yes. If you have a high amount of lean muscle mass, standard calorie calculators might underestimate your metabolism. Muscle burns more calories at rest than fat. In these cases, the Katch-McArdle formula (which factors in body fat percentage) is more accurate." },
-  { q: "Are Apple Watch or Fitbit calorie trackers accurate?", a: "Studies show that wrist-based fitness trackers are notoriously inaccurate for tracking calories burned, often overestimating energy expenditure by 20% to 90%. An online BMR/TDEE calculator is generally a safer starting point for diet planning." }
+  { q:"Are calorie calculators accurate?", a:"Calorie calculators provide a highly educated estimate, but they are not 100% perfectly accurate. Because metabolic rates differ by individual, a calculator using the Mifflin-St Jeor equation is usually accurate within a 10% to 15% margin of error." },
+  { q:"Why is my calorie calculator wrong?", a:"If your calorie calculator seems wrong, it is usually because of an overestimated 'activity level' multiplier. People often overestimate how many calories they burn through exercise. Always select a lower activity tier (like 'Sedentary' or 'Lightly Active') for a more accurate baseline." },
+  { q:"Which calorie equation is the most accurate?", a:"The Mifflin-St Jeor equation is widely considered by the Academy of Nutrition and Dietetics to be the most accurate standard formula for calculating resting metabolic rate in healthy adults, outperforming older models like the Harris-Benedict equation." },
+  { q:"Can a calorie calculator underestimate my metabolism?", a:"Yes. If you have a high amount of lean muscle mass, standard calorie calculators might underestimate your metabolism. Muscle burns more calories at rest than fat. In these cases, the Katch-McArdle formula (which factors in body fat percentage) is more accurate." },
+  { q:"Are Apple Watch or Fitbit calorie trackers accurate?", a:"Studies show that wrist-based fitness trackers are notoriously inaccurate for tracking calories burned, often overestimating energy expenditure by 20% to 90%. An online BMR/TDEE calculator is generally a safer starting point for diet planning." }
 ];
 ---
 
@@ -37,7 +37,7 @@ const faqs: FaqItem[] = [
 
   <p>The short answer is: <strong>Yes, they are accurate enough to get results, but they are not flawless.</strong> A calorie calculator does not know your genetics, your exact hormonal profile, or your precise muscle-to-fat ratio. What it <em>does</em> know is the biological averages of millions of human beings.</p>
 
-  <p>In this guide, we'll break down the exact math happening behind the scenes, why your calculator might seem "wrong," which formula is objectively the most accurate, and how to adjust your numbers perfectly for your own body.</p>
+  <p>In this guide, we'll break down the exact math happening behind the scenes, why your calculator might seem"wrong," which formula is objectively the most accurate, and how to adjust your numbers perfectly for your own body.</p>
 
   <ArticleImage src="/assets/images/articles/calculator-math.svg" alt="Illustration showing the math variables behind an accurate calorie calculation formula." priority={true} />
 
@@ -47,7 +47,7 @@ const faqs: FaqItem[] = [
   <p>If your calculator says your maintenance calories (TDEE) are 2,000 calories a day, your true metabolic rate is likely somewhere between 1,800 and 2,200 calories. This is why a calorie calculator should always be viewed as a <strong>starting line, not a finish line</strong>.</p>
   
   <div class="bg-canvas-soft border-l-4 border-brand p-5 my-8 rounded-r-lg">
-    <h3 class="text-xl font-bold mt-0 mb-2">The "Two Week" Rule</h3>
+    <h3 class="text-xl font-bold mt-0 mb-2">The"Two Week" Rule</h3>
     <p class="mb-0 text-sm">To find 100% perfect accuracy, use the calculator's number for exactly two weeks and weigh yourself daily. If you are trying to lose weight but the scale hasn't moved after 14 days, your calculator slightly overestimated your metabolism. Drop your intake by 200 calories and repeat.</p>
   </div>
 
@@ -69,7 +69,7 @@ const faqs: FaqItem[] = [
   <p>If you have been following your calculated macros perfectly but you aren't seeing results, one of these three variables is likely throwing off your accuracy:</p>
 
   <h3>1. The Activity Level Trap</h3>
-  <p>To find your Total Daily Energy Expenditure (TDEE), your calculator takes your resting metabolism and multiplies it by an "activity factor" (ranging from 1.2 for sedentary to 1.9 for extreme athletes). As mentioned above, most people overestimate their activity. A 1-hour workout does not make up for 23 hours of sitting. When in doubt, select the lower activity tier.</p>
+  <p>To find your Total Daily Energy Expenditure (TDEE), your calculator takes your resting metabolism and multiplies it by an"activity factor" (ranging from 1.2 for sedentary to 1.9 for extreme athletes). As mentioned above, most people overestimate their activity. A 1-hour workout does not make up for 23 hours of sitting. When in doubt, select the lower activity tier.</p>
 
   <h3>2. Nutrition Label Inaccuracy</h3>
   <p>The calculator might be right, but your food tracking might be wrong. By FDA law, nutrition labels on packaged foods are legally allowed a <strong>20% margin of error</strong>. That 200-calorie protein bar could actually be 240 calories. If you eat a lot of heavily processed packaged foods, these hidden calories add up fast.</p>
@@ -90,8 +90,8 @@ const faqs: FaqItem[] = [
   </ul>
 
   <Sources sources={[
-    { label: "Frankenfield, D., et al. (2005). Comparison of Predictive Equations for Resting Metabolic Rate in Healthy Nonobese and Obese Adults.", href: "https://pubmed.ncbi.nlm.nih.gov/15883556/" },
-    { label: "Shcherbina, A., et al. (2017). Accuracy in Wrist-Worn, Sensor-Based Measurements of Heart Rate and Energy Expenditure.", href: "https://www.mdpi.com/2075-4426/7/2/3" }
+    { label:"Frankenfield, D., et al. (2005). Comparison of Predictive Equations for Resting Metabolic Rate in Healthy Nonobese and Obese Adults.", href:"https://pubmed.ncbi.nlm.nih.gov/15883556/" },
+    { label:"Shcherbina, A., et al. (2017). Accuracy in Wrist-Worn, Sensor-Based Measurements of Heart Rate and Energy Expenditure.", href:"https://www.mdpi.com/2075-4426/7/2/3" }
   ]} />
 <div class='my-10'>
     <div class="my-8 rounded-2xl border border-hairline bg-canvas-soft p-6 text-center sm:p-8">

@@ -1,5 +1,5 @@
 ---
-import ContentLayout from "../layouts/ContentLayout.astro";
+import ContentLayout from"../layouts/ContentLayout.astro";
 ---
 <ContentLayout
   title="Privacy Policy - Calorie Calculator Free"
@@ -8,7 +8,7 @@ import ContentLayout from "../layouts/ContentLayout.astro";
   path="/privacy-policy/"
   lead="Your health data is your business. We are committed to radical transparency and strict data protection."
 >
-  <div class="prose max-w-none text-brand-dark/80 dark:text-white/80 space-y-6">
+  <div class="prose max-w-none text-brand-dark/80 /80 space-y-6">
     <p><strong>Effective Date:</strong> October 2026</p>
 
     <section>
@@ -21,16 +21,16 @@ import ContentLayout from "../layouts/ContentLayout.astro";
     <section>
       <h2>2. The Data We Do NOT Collect (Our Client-Side Promise)</h2>
       <p>If you have used other health and fitness applications in the past, you are probably used to the standard drill: create an account, verify your email, log in, and upload all your personal body metrics to a remote database in the cloud. We completely reject that model.</p>
-      <p>Instead, we employ a strict "Client-Side First" architecture for every single calculator and tool on our platform. But what does that actually mean for you?</p>
+      <p>Instead, we employ a strict"Client-Side First" architecture for every single calculator and tool on our platform. But what does that actually mean for you?</p>
       <ul>
         <li><strong>No Server Transmission:</strong> When you input your age, biological sex, height, and weight into our <a href="/">Calorie Calculator</a>, <a href="/tdee-calculator/">TDEE Calculator</a>, or any other tool on this site, that data is processed entirely within your own web browser. It happens right there on your phone or your computer. The math is done locally.</li>
         <li><strong>No Health Data Storage:</strong> Because all the calculations happen directly on your device, we do not transmit your physiological data across the internet to our servers. We do not have a database filled with our users' weights or calorie goals. In fact, we literally cannot see what you type into the calculator fields. It is a mathematical impossibility for us to access your entries.</li>
         <li><strong>No Account Required:</strong> We don't want your email address. You do not need to create an account, provide a username, or log in to use our core services. The tools are here for you to use freely and anonymously.</li>
       </ul>
       
-      <h3>Let's Talk About "Local Storage" (Like Friends)</h3>
-      <p>You might notice that we offer a feature allowing you to save your results so that you don't have to re-enter your information every time you visit the site. You might be wondering, "Wait, if you don't save my data on your servers, how does the site remember me?"</p>
-      <p>The answer is a web technology called <strong>Local Storage</strong>. Think of Local Storage like a sticky note that you leave on your own refrigerator in your own kitchen. When you hit "Save," our website writes that sticky note and sticks it inside your web browser (like Chrome, Safari, or Edge). We don't get a copy of the sticky note. We don't even know the sticky note exists.</p>
+      <h3>Let's Talk About"Local Storage" (Like Friends)</h3>
+      <p>You might notice that we offer a feature allowing you to save your results so that you don't have to re-enter your information every time you visit the site. You might be wondering,"Wait, if you don't save my data on your servers, how does the site remember me?"</p>
+      <p>The answer is a web technology called <strong>Local Storage</strong>. Think of Local Storage like a sticky note that you leave on your own refrigerator in your own kitchen. When you hit"Save," our website writes that sticky note and sticks it inside your web browser (like Chrome, Safari, or Edge). We don't get a copy of the sticky note. We don't even know the sticky note exists.</p>
       <p>When you return to the site tomorrow, your browser looks at its own sticky note and fills in the blanks for you. It all stays securely on your physical device. If you ever want to throw that sticky note away, all you have to do is clear your browser's cache or history, and poof—it’s gone forever. You are in complete control.</p>
     </section>
 
@@ -56,7 +56,7 @@ import ContentLayout from "../layouts/ContentLayout.astro";
 
     <section>
       <h2>5. The Reality of Cookies and Web Beacons</h2>
-      <p>Ah, cookies. Not the delicious chocolate chip kind that you might be tracking in our calorie calculator, but the digital kind. We use "cookies"—which are tiny text files placed on your device's hard drive—to collect baseline information, maintain your site preferences (like remembering if you prefer Dark Mode over Light Mode), and generally keep the site running smoothly.</p>
+      <p>Ah, cookies. Not the delicious chocolate chip kind that you might be tracking in our calorie calculator, but the digital kind. We use"cookies"—which are tiny text files placed on your device's hard drive—to collect baseline information, maintain your site preferences (like remembering if you prefer Dark Mode over Light Mode), and generally keep the site running smoothly.</p>
       <p>You have the absolute right to instruct your web browser to refuse all cookies or to indicate when a cookie is being sent. However, please be aware that if you do not accept functional cookies, some minor convenience features of our site might not work as intended. Your theme preference might frustratingly reset to the default every time you reload the page, for instance.</p>
       
       <h3>The Trade-off: Third-Party Ad Networks</h3>
@@ -93,7 +93,7 @@ import ContentLayout from "../layouts/ContentLayout.astro";
     <section>
       <h2>9. Policy Updates and Changes</h2>
       <p>The internet moves fast, laws change, and sometimes we add new features to the site. As a result, we may need to update this Privacy Policy from time to time to reflect changes in legal requirements, upgrades to our technical infrastructure, or shifts in our business practices.</p>
-      <p>When we make significant changes, we won't hide them. We will notify you by posting the newly revised Privacy Policy directly on this page and updating the "Effective Date" prominently at the very top of the document.</p>
+      <p>When we make significant changes, we won't hide them. We will notify you by posting the newly revised Privacy Policy directly on this page and updating the"Effective Date" prominently at the very top of the document.</p>
       <p>We encourage you to review this Privacy Policy periodically for any changes. Any modifications to this policy become effective the moment they are posted on this page.</p>
     </section>
 
@@ -102,32 +102,32 @@ import ContentLayout from "../layouts/ContentLayout.astro";
       <p>We know that privacy policies can be overwhelming. To make things as clear as possible, we’ve compiled a list of the most common questions our users ask regarding their data, security, and anonymity.</p>
       
       <div class="space-y-4 mt-6">
-        <details class="bg-canvas-soft dark:bg-gray-800 p-4 rounded-lg cursor-pointer">
+        <details class="bg-canvas-soft p-4 rounded-lg cursor-pointer">
           <summary class="font-bold text-lg">Can you see how much I weigh?</summary>
           <p class="mt-2">Absolutely not. We do not have access to your weight, height, age, or gender. When you type those numbers into the calculator, the mathematical formula runs exclusively inside your own web browser. The data never travels across the internet to our servers. Your physical metrics are completely invisible to us.</p>
         </details>
         
-        <details class="bg-canvas-soft dark:bg-gray-800 p-4 rounded-lg cursor-pointer">
-          <summary class="font-bold text-lg">If I use the "Save Results" feature, where does my data go?</summary>
+        <details class="bg-canvas-soft p-4 rounded-lg cursor-pointer">
+          <summary class="font-bold text-lg">If I use the"Save Results" feature, where does my data go?</summary>
           <p class="mt-2">It goes nowhere! It stays exactly where it is: on your device. We use a technology called Local Storage, which acts like a tiny, private filing cabinet inside your specific web browser (like Safari or Chrome). We do not have the keys to that filing cabinet. You can empty it anytime by clearing your browser's history and cache.</p>
         </details>
 
-        <details class="bg-canvas-soft dark:bg-gray-800 p-4 rounded-lg cursor-pointer">
+        <details class="bg-canvas-soft p-4 rounded-lg cursor-pointer">
           <summary class="font-bold text-lg">Do you sell my data to health insurance companies or data brokers?</summary>
           <p class="mt-2">Never. We cannot sell what we do not possess. Because we do not collect your personal health metrics, we have nothing to sell to insurance companies, pharmaceutical brands, or data brokers. Our business model relies on standard display advertising, not on exploiting your personal information.</p>
         </details>
 
-        <details class="bg-canvas-soft dark:bg-gray-800 p-4 rounded-lg cursor-pointer">
+        <details class="bg-canvas-soft p-4 rounded-lg cursor-pointer">
           <summary class="font-bold text-lg">Why do I see ads for things I was just searching for?</summary>
           <p class="mt-2">Our site uses third-party advertising networks (primarily Google Ads) to keep our tools free. These networks use their own cookies to display ads that they determine are relevant to your interests, based on your browsing history across the broader internet. We do not provide these ad networks with your calculator inputs. You can opt out of personalized ads directly through Google's Ad Settings.</p>
         </details>
 
-        <details class="bg-canvas-soft dark:bg-gray-800 p-4 rounded-lg cursor-pointer">
+        <details class="bg-canvas-soft p-4 rounded-lg cursor-pointer">
           <summary class="font-bold text-lg">Do I need to accept cookies to use the calculator?</summary>
           <p class="mt-2">No, you do not. The core functionality of the calculators will work perfectly fine even if you block all cookies. However, some minor convenience features—such as remembering your preference for Dark Mode or saving your calculator inputs for your next visit—rely on cookies or Local Storage and will not function if they are blocked.</p>
         </details>
 
-        <details class="bg-canvas-soft dark:bg-gray-800 p-4 rounded-lg cursor-pointer">
+        <details class="bg-canvas-soft p-4 rounded-lg cursor-pointer">
           <summary class="font-bold text-lg">How can I contact you about a privacy concern?</summary>
           <p class="mt-2">We welcome all questions and concerns regarding your privacy. You can reach out to our team at any time by visiting our <a href="/contact/">Contact Page</a>. We review every message personally and strive to respond to all legitimate privacy inquiries as swiftly as possible.</p>
         </details>

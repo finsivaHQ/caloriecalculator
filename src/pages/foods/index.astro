@@ -2,8 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import { foods } from '../../data/foods';
 
-const title = "Food Calorie Database | Track Macros & Calories per 100g";
-const description = "Explore our comprehensive database of foods. Find out exactly how many calories, protein, carbs, and fats are in 100g of your favorite foods.";
+const title ="Food Calorie Database | Track Macros & Calories per 100g";
+const description ="Explore our comprehensive database of foods. Find out exactly how many calories, protein, carbs, and fats are in 100g of your favorite foods.";
 
 // Group foods by category for a better directory layout
 const foodsByCategory = foods.reduce((acc, food) => {
@@ -40,7 +40,7 @@ const categories = Object.keys(foodsByCategory).sort();
         You might have noticed that nutritional information worldwide—including in our food database—is standardized to 100-gram portions. But why is this specific measurement universally adopted?
       </p>
       <p>
-        The primary reason is <strong>standardization and comparability</strong>. When you look at a food label that lists nutritional facts based on an arbitrary "serving size," it can be incredibly difficult to compare two different products. For example, one brand of cereal might define a serving size as 30 grams, while another might define it as 55 grams. If you're trying to figure out which cereal is higher in sugar or protein, you have to do mental gymnastics to equate the two.
+        The primary reason is <strong>standardization and comparability</strong>. When you look at a food label that lists nutritional facts based on an arbitrary"serving size," it can be incredibly difficult to compare two different products. For example, one brand of cereal might define a serving size as 30 grams, while another might define it as 55 grams. If you're trying to figure out which cereal is higher in sugar or protein, you have to do mental gymnastics to equate the two.
       </p>
       <p>
         By measuring everything in 100-gram increments, the playing field is completely leveled. A 100g measurement essentially translates to a percentage. If a food has 15g of sugar per 100g, you immediately know that the food is 15% sugar by weight. This makes it instantly obvious how dense a food is in various nutrients or calories, allowing you to compare an apple directly to a slice of bread without worrying about the size or weight of individual servings.
@@ -51,7 +51,7 @@ const categories = Object.keys(foodsByCategory).sort();
 
       <h3>What Are Macronutrients?</h3>
       <p>
-        Macronutrients, often colloquially referred to as "macros," are the primary building blocks of the food we consume. They are required by the body in large ("macro") amounts to sustain life, provide energy, and facilitate complex bodily functions. There are three main macronutrients: carbohydrates, proteins, and fats. Alcohol is sometimes considered a fourth macronutrient because it provides calories, but it is not essential for survival.
+        Macronutrients, often colloquially referred to as"macros," are the primary building blocks of the food we consume. They are required by the body in large ("macro") amounts to sustain life, provide energy, and facilitate complex bodily functions. There are three main macronutrients: carbohydrates, proteins, and fats. Alcohol is sometimes considered a fourth macronutrient because it provides calories, but it is not essential for survival.
       </p>
       
       <h4>Carbohydrates (4 calories per gram)</h4>
@@ -67,7 +67,7 @@ const categories = Object.keys(foodsByCategory).sort();
         Protein is the structural foundation of the human body. It is vital for building and repairing tissues, including muscle, skin, hair, and nails. Proteins are also necessary for producing enzymes and hormones, and for supporting a robust immune system. 
       </p>
       <p>
-        Proteins are made up of smaller molecules called amino acids. While the body can synthesize many amino acids, there are nine "essential" amino acids that must be obtained through your diet. Animal-based proteins (meat, dairy, eggs) are considered "complete" proteins because they contain all nine essential amino acids in adequate amounts. Many plant-based proteins (beans, lentils, nuts) are "incomplete," but combining different plant proteins throughout the day can easily fulfill your essential amino acid requirements. Protein is also highly satiating, meaning it helps you feel full and satisfied after a meal.
+        Proteins are made up of smaller molecules called amino acids. While the body can synthesize many amino acids, there are nine"essential" amino acids that must be obtained through your diet. Animal-based proteins (meat, dairy, eggs) are considered"complete" proteins because they contain all nine essential amino acids in adequate amounts. Many plant-based proteins (beans, lentils, nuts) are"incomplete," but combining different plant proteins throughout the day can easily fulfill your essential amino acid requirements. Protein is also highly satiating, meaning it helps you feel full and satisfied after a meal.
       </p>
 
       <h4>Fats (9 calories per gram)</h4>
@@ -125,8 +125,8 @@ const categories = Object.keys(foodsByCategory).sort();
                     <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-brand transition-colors">{food.name}</h3>
                     <p class="text-mute text-sm line-clamp-2 mb-4">{food.description}</p>
                   </div>
-                  <div class="flex justify-between items-center pt-4 border-t border-slate-100">
-                    <span class="font-black text-ink text-lg">{food.calories} <span class="text-sm text-slate-400 font-normal">kcal</span></span>
+                  <div class="flex justify-between items-center pt-4 border-t border-hairline">
+                    <span class="font-black text-ink text-lg">{food.calories} <span class="text-sm text-mute font-normal">kcal</span></span>
                     <span class="text-sm font-medium text-brand bg-brand-soft px-2 py-1 rounded-md">{food.protein}g Protein</span>
                   </div>
                 </div>
@@ -157,7 +157,7 @@ const categories = Object.keys(foodsByCategory).sort();
 
       <h4>Is a low-carb or low-fat diet better?</h4>
       <p>
-        There is no single "best" diet that works for everyone. Both low-carb (such as Keto) and low-fat diets can be highly effective for weight loss as long as you maintain a caloric deficit. The best diet for you is the one that you can adhere to consistently in the long term, that makes you feel energized, and that fits seamlessly into your lifestyle and food preferences. Focusing on high-quality whole foods, adequate protein intake, and a healthy balance of macros is generally the most sustainable approach.
+        There is no single"best" diet that works for everyone. Both low-carb (such as Keto) and low-fat diets can be highly effective for weight loss as long as you maintain a caloric deficit. The best diet for you is the one that you can adhere to consistently in the long term, that makes you feel energized, and that fits seamlessly into your lifestyle and food preferences. Focusing on high-quality whole foods, adequate protein intake, and a healthy balance of macros is generally the most sustainable approach.
       </p>
 
       <h4>What is the Thermic Effect of Food (TEF)?</h4>

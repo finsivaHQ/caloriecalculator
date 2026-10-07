@@ -1,31 +1,28 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Section from "../components/ui/Section.astro";
-import Button from "../components/ui/Button.astro";
-import CalorieCalculator from "../components/calculators/CalorieCalculator.astro";
-import FaqSection from "../components/FaqSection.astro";
-import Sources from "../components/ui/Sources.astro";
-import { HOME_FAQS } from "../data/faqs";
+import Layout from"../layouts/Layout.astro";
+import Section from"../components/ui/Section.astro";
+import Button from"../components/ui/Button.astro";
+import CalorieCalculator from"../components/calculators/CalorieCalculator.astro";
+import FaqSection from"../components/FaqSection.astro";
+import Sources from"../components/ui/Sources.astro";
+import { HOME_FAQS } from"../data/faqs";
 import {
   organizationSchema,
   websiteSchema,
   faqSchema,
   calculatorSchema,
-} from "../lib/seo";
+} from"../lib/seo";
 
 const trust = [
-  { label: "Science-backed formulas", icon: "M9 12l2 2 4-4", description: "Uses the Mifflin-St Jeor BMR equation." },
-  { label: "Private by design", icon: "M13 2L3 14h9l-1 8 10-12h-9z", description: "Calculations run securely in your browser." },
-  { label: "Free & fast", icon: "M20 6L9 17l-5-5", description: "No sign-up, no paywall, completely free." },
+  { label:"Science-backed formulas", icon:"M9 12l2 2 4-4", description:"Uses the Mifflin-St Jeor BMR equation." },
+  { label:"Private by design", icon:"M13 2L3 14h9l-1 8 10-12h-9z", description:"Calculations run securely in your browser." },
+  { label:"Free & fast", icon:"M20 6L9 17l-5-5", description:"No sign-up, no paywall, completely free." },
 ];
 
 const jsonLd = [
   organizationSchema(),
   websiteSchema(),
-  calculatorSchema(
-    "Calorie Calculator",
-    "Free calorie calculator to find your estimated daily calorie needs for weight loss, gain, or maintenance.",
-    "/"
+  calculatorSchema("Calorie Calculator","Free calorie calculator to find your estimated daily calorie needs for weight loss, gain, or maintenance.","/"
   ),
   faqSchema(HOME_FAQS),
 ];
@@ -37,9 +34,9 @@ const jsonLd = [
   description="Estimate your daily calorie needs for weight loss, maintenance, or muscle gain. Get your TDEE, BMR, and personalized macro targets instantly."
   jsonLd={jsonLd}
   hreflangs={[
-    { href: "https://caloriecalculatorfree.com/", hreflang: "en" },
-    { href: "https://caloriecalculatorfree.com/country/spain/calculadora-de-calorias/", hreflang: "es" },
-    { href: "https://caloriecalculatorfree.com/country/spain/calculadora-de-calorias/", hreflang: "es-ES" }
+    { href:"https://caloriecalculatorfree.com/", hreflang:"en" },
+    { href:"https://caloriecalculatorfree.com/country/spain/calculadora-de-calorias/", hreflang:"es" },
+    { href:"https://caloriecalculatorfree.com/country/spain/calculadora-de-calorias/", hreflang:"es-ES" }
   ]}
 >
   <!-- 📈 Calculator (Top) -->
@@ -167,7 +164,7 @@ const jsonLd = [
         If your goal is to build muscle, you need to provide your body with the building blocks and energy to synthesize new tissue. This requires a <strong>calorie surplus</strong>—eating more calories than your TDEE.
       </p>
       <p>
-        <strong>Lean Bulking vs. Dirty Bulking:</strong> A "dirty bulk" involves eating everything in sight to drive the scale up as fast as possible. The problem with this approach is that the body can only synthesize a limited amount of muscle tissue at a time; any excess calories beyond that limit will simply be stored as fat. A "lean bulk" is much smarter. By eating in a small surplus of 200 to 400 calories above maintenance, you provide enough energy to maximize muscle growth while minimizing unnecessary fat gain.
+        <strong>Lean Bulking vs. Dirty Bulking:</strong> A"dirty bulk" involves eating everything in sight to drive the scale up as fast as possible. The problem with this approach is that the body can only synthesize a limited amount of muscle tissue at a time; any excess calories beyond that limit will simply be stored as fat. A"lean bulk" is much smarter. By eating in a small surplus of 200 to 400 calories above maintenance, you provide enough energy to maximize muscle growth while minimizing unnecessary fat gain.
       </p>
 
       <h2>Maintenance Calories: Finding Your Balance</h2>
@@ -199,7 +196,7 @@ const jsonLd = [
 
       <h3>Should I eat back the calories I burn from exercise?</h3>
       <p>
-        Generally, no. If you used our calculator and selected an activity level like "Lightly Active" or "Moderately Active," your exercise calories are <em>already factored into</em> your Total Daily Energy Expenditure. Eating them back would result in double-counting and likely erase your caloric deficit.
+        Generally, no. If you used our calculator and selected an activity level like"Lightly Active" or"Moderately Active," your exercise calories are <em>already factored into</em> your Total Daily Energy Expenditure. Eating them back would result in double-counting and likely erase your caloric deficit.
       </p>
 
       <h3>How does age affect my calorie needs?</h3>
@@ -229,8 +226,8 @@ const jsonLd = [
       </ul>
 
       <Sources sources={[
-        { label: "Dietary Guidelines for Americans — Calorie Needs", href: "https://www.dietaryguidelines.gov/" },
-        { label: "Mifflin-St Jeor equation for resting energy expenditure — NIH", href: "https://pubmed.ncbi.nlm.nih.gov/2305711/" },
+        { label:"Dietary Guidelines for Americans — Calorie Needs", href:"https://www.dietaryguidelines.gov/" },
+        { label:"Mifflin-St Jeor equation for resting energy expenditure — NIH", href:"https://pubmed.ncbi.nlm.nih.gov/2305711/" },
       ]} />
     </div>
   </Section>

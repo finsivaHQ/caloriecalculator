@@ -1,17 +1,17 @@
 ---
-import Button from "../../components/ui/Button.astro";
-import MedicalNote from "../../components/ui/MedicalNote.astro";
-import ContentLayout from "../../layouts/ContentLayout.astro";
-import ArticleImage from "../../components/ui/ArticleImage.astro";
-import type { FaqItem } from "../../lib/seo";
-import Sources from "../../components/ui/Sources.astro";
+import Button from"../../components/ui/Button.astro";
+import MedicalNote from"../../components/ui/MedicalNote.astro";
+import ContentLayout from"../../layouts/ContentLayout.astro";
+import ArticleImage from"../../components/ui/ArticleImage.astro";
+import type { FaqItem } from"../../lib/seo";
+import Sources from"../../components/ui/Sources.astro";
 
 const faqs: FaqItem[] = [
-  { q: "What are stress factors in Mifflin-St Jeor?", a: "Stress factors — also called injury or illness factors — increase your calorie needs above normal BMR because your body works harder to heal, fight infection, or cope with trauma." },
-  { q: "How do stress factors affect BMR?", a: "Stress factors raise BMR by 10–100% depending on severity. A mild fever may add 10%, while major surgery or severe burns can double or triple resting energy needs." },
-  { q: "Should I adjust my TDEE for stress or illness?", a: "Yes. During illness, injury, or high stress, your body burns more calories at rest. Add 10–20% for minor stress, or 20–50% for major illness or surgery, depending on clinical guidance." },
-  { q: "What are common activity multipliers?", a: "Standard TDEE activity multipliers are: sedentary 1.2, lightly active 1.375, moderately active 1.55, very active 1.725, and extra active 1.9." },
-  { q: "How do I choose the right activity multiplier?", a: "Be honest about your daily movement. Most people overestimate. If you have a desk job and work out twice a week, start with lightly active (1.375) rather than moderately active." },
+  { q:"What are stress factors in Mifflin-St Jeor?", a:"Stress factors — also called injury or illness factors — increase your calorie needs above normal BMR because your body works harder to heal, fight infection, or cope with trauma." },
+  { q:"How do stress factors affect BMR?", a:"Stress factors raise BMR by 10–100% depending on severity. A mild fever may add 10%, while major surgery or severe burns can double or triple resting energy needs." },
+  { q:"Should I adjust my TDEE for stress or illness?", a:"Yes. During illness, injury, or high stress, your body burns more calories at rest. Add 10–20% for minor stress, or 20–50% for major illness or surgery, depending on clinical guidance." },
+  { q:"What are common activity multipliers?", a:"Standard TDEE activity multipliers are: sedentary 1.2, lightly active 1.375, moderately active 1.55, very active 1.725, and extra active 1.9." },
+  { q:"How do I choose the right activity multiplier?", a:"Be honest about your daily movement. Most people overestimate. If you have a desk job and work out twice a week, start with lightly active (1.375) rather than moderately active." },
 ];
 ---
 
@@ -120,9 +120,9 @@ Stressed TDEE (moderate activity) = 1,725 × 1.55 = 2,674 calories/day</pre>
   </ul>
 
   <Sources sources={[
-    { label: "Dietary Reference Intakes for Energy — National Academies", href: "https://www.nap.edu/read/10490/chapter/1" },
-    { label: "Energy requirements — World Health Organization (WHO)", href: "https://www.who.int/tools/elena" },
-    { label: "Energy expenditure — PubMed / NIH review", href: "https://pubmed.ncbi.nlm.nih.gov/2305711/" },
+    { label:"Dietary Reference Intakes for Energy — National Academies", href:"https://www.nap.edu/read/10490/chapter/1" },
+    { label:"Energy requirements — World Health Organization (WHO)", href:"https://www.who.int/tools/elena" },
+    { label:"Energy expenditure — PubMed / NIH review", href:"https://pubmed.ncbi.nlm.nih.gov/2305711/" },
   ]} />
 <div class='my-10'>
     <div class="my-8 rounded-2xl border border-hairline bg-canvas-soft p-6 text-center sm:p-8">
@@ -140,33 +140,30 @@ Stressed TDEE (moderate activity) = 1,725 × 1.55 = 2,674 calories/day</pre>
 <li><a href="https://www.nih.gov/health-information/weight-management" target="_blank" rel="noopener noreferrer">National Institutes of Health (NIH) - Weight Management</a></li>
 </ul>
 
-<div class="mt-16 bg-canvas-soft dark:bg-gray-800 p-8 rounded-xl">
-    <h2 class="text-3xl font-bold mb-6 text-ink dark:text-white">Expert FAQs & Psychological Impact</h2>
-    <p class="text-body dark:text-gray-300 mb-6">Let's be incredibly honest for a moment: dealing with this can cause serious compliance fatigue and anxiety. You are not alone. Here are the most critical, edge-case questions answered with complete transparency to protect your well-being and ensure you have all the facts.</p>
+<div class="mt-16 bg-canvas-soft p-8 rounded-xl">
+    <h2 class="text-3xl font-bold mb-6 text-ink">Expert FAQs & Psychological Impact</h2>
+    <p class="text-body mb-6">Let's be incredibly honest for a moment: dealing with this can cause serious compliance fatigue and anxiety. You are not alone. Here are the most critical, edge-case questions answered with complete transparency to protect your well-being and ensure you have all the facts.</p>
     <div class="space-y-6">
         <div>
-            <h3 class="text-xl font-semibold text-ink dark:text-white">1. How do I manage the anxiety around getting this exactly right?</h3>
-            <p class="text-body dark:text-gray-300 mt-2">The psychological burden of trying to be perfect can lead to decision paralysis. Experts recommend focusing on the 80/20 rule. Whether it's nutrition or sizing, consistency and general accuracy will yield 90% of your desired results. Do not let minor fluctuations disrupt your peace of mind.</p>
+            <h3 class="text-xl font-semibold text-ink">1. How do I manage the anxiety around getting this exactly right?</h3>
+            <p class="text-body mt-2">The psychological burden of trying to be perfect can lead to decision paralysis. Experts recommend focusing on the 80/20 rule. Whether it's nutrition or sizing, consistency and general accuracy will yield 90% of your desired results. Do not let minor fluctuations disrupt your peace of mind.</p>
         </div>
         <div>
-            <h3 class="text-xl font-semibold text-ink dark:text-white">2. What are the long-term effects of ignoring these guidelines?</h3>
-            <p class="text-body dark:text-gray-300 mt-2">Over time, systemic neglect cascades into larger physical and mental health issues. Proper adherence mitigates chronic discomfort and sets a baseline for sustainable lifestyle improvements. The goal is to build a foundation that supports you passively.</p>
+            <h3 class="text-xl font-semibold text-ink">2. What are the long-term effects of ignoring these guidelines?</h3>
+            <p class="text-body mt-2">Over time, systemic neglect cascades into larger physical and mental health issues. Proper adherence mitigates chronic discomfort and sets a baseline for sustainable lifestyle improvements. The goal is to build a foundation that supports you passively.</p>
         </div>
         <div>
-            <h3 class="text-xl font-semibold text-ink dark:text-white">3. How often should I re-evaluate my baseline numbers?</h3>
-            <p class="text-body dark:text-gray-300 mt-2">Your body and circumstances are not static. It is highly recommended to reassess your measurements and caloric needs every 3 to 6 months, or immediately following any significant lifestyle or weight change. Proactive adjustments prevent reactive stress.</p>
+            <h3 class="text-xl font-semibold text-ink">3. How often should I re-evaluate my baseline numbers?</h3>
+            <p class="text-body mt-2">Your body and circumstances are not static. It is highly recommended to reassess your measurements and caloric needs every 3 to 6 months, or immediately following any significant lifestyle or weight change. Proactive adjustments prevent reactive stress.</p>
         </div>
         <div>
-            <h3 class="text-xl font-semibold text-ink dark:text-white">4. Is there a danger in relying entirely on automated calculators?</h3>
-            <p class="text-body dark:text-gray-300 mt-2">While calculators provide a mathematically sound starting point, they cannot account for nuanced human biology. Stress, sleep, and hormonal variations play a massive role. Always use calculator outputs as a guide, not gospel, and adjust based on real-world feedback from your own body.</p>
+            <h3 class="text-xl font-semibold text-ink">4. Is there a danger in relying entirely on automated calculators?</h3>
+            <p class="text-body mt-2">While calculators provide a mathematically sound starting point, they cannot account for nuanced human biology. Stress, sleep, and hormonal variations play a massive role. Always use calculator outputs as a guide, not gospel, and adjust based on real-world feedback from your own body.</p>
         </div>
     </div>
 </div>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{"@type":"Question","name":"How do I manage the anxiety around getting this exactly right?","acceptedAnswer":{"@type":"Answer","text":"Focus on the 80/20 rule. Consistency and general accuracy will yield 90% of your desired results."}}, {"@type":"Question","name":"What are the long-term effects of ignoring these guidelines?","acceptedAnswer":{"@type":"Answer","text":"Systemic neglect cascades into larger physical and mental health issues."}}]
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity": [{"@type":"Question","name":"How do I manage the anxiety around getting this exactly right?","acceptedAnswer":{"@type":"Answer","text":"Focus on the 80/20 rule. Consistency and general accuracy will yield 90% of your desired results."}}, {"@type":"Question","name":"What are the long-term effects of ignoring these guidelines?","acceptedAnswer":{"@type":"Answer","text":"Systemic neglect cascades into larger physical and mental health issues."}}]
 }
 </script>
 

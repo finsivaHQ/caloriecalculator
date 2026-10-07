@@ -1,20 +1,20 @@
 ---
-import Button from "../../components/ui/Button.astro";
+import Button from"../../components/ui/Button.astro";
 
-import MedicalNote from "../../components/ui/MedicalNote.astro";
-import ContentLayout from "../../layouts/ContentLayout.astro";
-import ArticleImage from "../../components/ui/ArticleImage.astro";
-import type { FaqItem } from "../../lib/seo";
-import Sources from "../../components/ui/Sources.astro";
+import MedicalNote from"../../components/ui/MedicalNote.astro";
+import ContentLayout from"../../layouts/ContentLayout.astro";
+import ArticleImage from"../../components/ui/ArticleImage.astro";
+import type { FaqItem } from"../../lib/seo";
+import Sources from"../../components/ui/Sources.astro";
 
 const faqs: FaqItem[] = [
-  { q: "What is the Mifflin-St Jeor equation?", a: "Mifflin-St Jeor (1990) is the widely used equation for estimating BMR: Men=10×weight+6.25×height-5×age+5; Women=same minus 161. Used in our <a href='/'>calorie calculator</a>." },
-  { q: "How accurate is Mifflin-St Jeor?", a: "Research shows 85–90% accuracy versus measured metabolic rate, better than Harris-Benedict. Individual variation of 10–15% is normal." },
-  { q: "What does BMR measure?", a: "BMR measures calories burned at complete rest for basic bodily functions: breathing, circulation, cell repair, brain function." },
-  { q: "How to measure BMR accurately?", a: "Best methods: indirect calorimetry in lab, BMR calculator using Mifflin-St Jeor for everyday use, or track weight changes to calibrate." },
-  { q: "Who developed the Mifflin-St Jeor equation?", a: "Dr. Mifflin and Dr. St Jeor published the equation in 1990 based on a study of 247 healthy adults. It replaced the older Harris-Benedict equation with a more accurate model for modern populations." },
-  { q: "Can Mifflin-St Jeor be used for TDEE?", a: "Yes. Mifflin-St Jeor gives you BMR, which you then multiply by an activity factor (1.2 to 1.9) to get TDEE. Our <a href='/tdee-calculator/'>TDEE calculator</a> automates this." },
-  { q: "Does Mifflin-St Jeor work for athletes?", a: "It works well for most people, but very lean or very muscular athletes may need adjustments. Katch-McArdle or Cunningham equations, which use body fat percentage, can be more accurate for this population." },
+  { q:"What is the Mifflin-St Jeor equation?", a:"Mifflin-St Jeor (1990) is the widely used equation for estimating BMR: Men=10×weight+6.25×height-5×age+5; Women=same minus 161. Used in our <a href='/'>calorie calculator</a>." },
+  { q:"How accurate is Mifflin-St Jeor?", a:"Research shows 85–90% accuracy versus measured metabolic rate, better than Harris-Benedict. Individual variation of 10–15% is normal." },
+  { q:"What does BMR measure?", a:"BMR measures calories burned at complete rest for basic bodily functions: breathing, circulation, cell repair, brain function." },
+  { q:"How to measure BMR accurately?", a:"Best methods: indirect calorimetry in lab, BMR calculator using Mifflin-St Jeor for everyday use, or track weight changes to calibrate." },
+  { q:"Who developed the Mifflin-St Jeor equation?", a:"Dr. Mifflin and Dr. St Jeor published the equation in 1990 based on a study of 247 healthy adults. It replaced the older Harris-Benedict equation with a more accurate model for modern populations." },
+  { q:"Can Mifflin-St Jeor be used for TDEE?", a:"Yes. Mifflin-St Jeor gives you BMR, which you then multiply by an activity factor (1.2 to 1.9) to get TDEE. Our <a href='/tdee-calculator/'>TDEE calculator</a> automates this." },
+  { q:"Does Mifflin-St Jeor work for athletes?", a:"It works well for most people, but very lean or very muscular athletes may need adjustments. Katch-McArdle or Cunningham equations, which use body fat percentage, can be more accurate for this population." },
 ];
 ---
 
@@ -120,9 +120,9 @@ Step 2: TDEE = 1,797.5 × 1.55 = 2,786 calories/day</pre>
   </ul>
 
   <Sources sources={[
-    { label: "A new predictive equation for resting energy expenditure — Mifflin & St Jeor (1990)", href: "https://pubmed.ncbi.nlm.nih.gov/2305711/" },
-    { label: "Dietary Reference Intakes for Energy — National Academies", href: "https://www.nap.edu/read/10490/chapter/1" },
-    { label: "Energy expenditure — PubMed / NIH review", href: "https://pubmed.ncbi.nlm.nih.gov/2305711/" },
+    { label:"A new predictive equation for resting energy expenditure — Mifflin & St Jeor (1990)", href:"https://pubmed.ncbi.nlm.nih.gov/2305711/" },
+    { label:"Dietary Reference Intakes for Energy — National Academies", href:"https://www.nap.edu/read/10490/chapter/1" },
+    { label:"Energy expenditure — PubMed / NIH review", href:"https://pubmed.ncbi.nlm.nih.gov/2305711/" },
   ]} />
 <div class='my-10'>
     <div class="my-8 rounded-2xl border border-hairline bg-canvas-soft p-6 text-center sm:p-8">

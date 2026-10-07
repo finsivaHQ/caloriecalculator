@@ -1,16 +1,16 @@
 ---
-import Button from "../../components/ui/Button.astro";
+import Button from"../../components/ui/Button.astro";
 
-import MedicalNote from "../../components/ui/MedicalNote.astro";
-import ContentLayout from "../../layouts/ContentLayout.astro";
-import type { FaqItem } from "../../lib/seo";
-import ArticleImage from "../../components/ui/ArticleImage.astro";
+import MedicalNote from"../../components/ui/MedicalNote.astro";
+import ContentLayout from"../../layouts/ContentLayout.astro";
+import type { FaqItem } from"../../lib/seo";
+import ArticleImage from"../../components/ui/ArticleImage.astro";
 
 const faqs: FaqItem[] = [
-  { q: "How many calories do I burn in a day?", a: "Your daily burn equals TDEE: BMR plus activity. Use our <a href='/tdee-calculator/'>TDEE calculator</a> or <a href='/'>calorie calculator</a> to find your number." },
-  { q: "How to calculate calories burned in a day?", a: "Multiply BMR by activity factor 1.2–1.9. Most accurate: metabolic testing. Everyday: our calculator with Mifflin-St Jeor equation." },
-  { q: "Does muscle increase calories burned?", a: "Yes. Each kg of muscle adds ~15–25 calories/day. Strength training builds muscle and raises your <a href='/'>maintenance calories</a>." },
-  { q: "Do you burn calories while sleeping?", a: "Yes. BMR continues 24/7. You burn ~70% of daily calories while sleeping/resting. Use our <a href='/'>BMR</a> to find this number." },
+  { q:"How many calories do I burn in a day?", a:"Your daily burn equals TDEE: BMR plus activity. Use our <a href='/tdee-calculator/'>TDEE calculator</a> or <a href='/'>calorie calculator</a> to find your number." },
+  { q:"How to calculate calories burned in a day?", a:"Multiply BMR by activity factor 1.2–1.9. Most accurate: metabolic testing. Everyday: our calculator with Mifflin-St Jeor equation." },
+  { q:"Does muscle increase calories burned?", a:"Yes. Each kg of muscle adds ~15–25 calories/day. Strength training builds muscle and raises your <a href='/'>maintenance calories</a>." },
+  { q:"Do you burn calories while sleeping?", a:"Yes. BMR continues 24/7. You burn ~70% of daily calories while sleeping/resting. Use our <a href='/'>BMR</a> to find this number." },
 ];
 ---
 
@@ -41,30 +41,30 @@ const faqs: FaqItem[] = [
     
     <p>In the realms of science, physiology, and clinical sports nutrition, the exact total amount of calories your body burns in a complete 24-hour period is known as your <strong>Total Daily Energy Expenditure</strong> (TDEE). It is crucial to understand that this magic number is not a static figure that stays the same throughout your life; on the contrary, it fluctuates slightly every single day based on a myriad of factors: your spontaneous movement level, the macronutrient composition of what you ate that day, your chronic stress levels, your hormonal profile (like cortisol or thyroid levels), and, critically, the architecture and quality of your sleep phases.</p>
 
-    <p>The most common conceptual mistake novice fitness enthusiasts make is thinking that TDEE is simply synonymous with "your metabolism." In clinical reality, TDEE is the result of a complex mathematical sum of four completely distinct biological components. To better visualize this, imagine your daily caloric expenditure as a large financial pie or budget, where your body, acting as a strict financial manager, allocates energy funds to different vital tasks. These are the four fundamental and universal pillars of your daily human calorie burn.</p>
+    <p>The most common conceptual mistake novice fitness enthusiasts make is thinking that TDEE is simply synonymous with"your metabolism." In clinical reality, TDEE is the result of a complex mathematical sum of four completely distinct biological components. To better visualize this, imagine your daily caloric expenditure as a large financial pie or budget, where your body, acting as a strict financial manager, allocates energy funds to different vital tasks. These are the four fundamental and universal pillars of your daily human calorie burn.</p>
 
     <h2 class="text-3xl font-bold text-ink mt-14 mb-6">The 4 Fundamental Pillars of Human Calorie Burning</h2>
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
-      <div class="bg-surface/80 backdrop-blur-md rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 relative overflow-hidden group hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500">
+      <div class="bg-surface/80 backdrop-blur-md rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-hairline relative overflow-hidden group hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500">
         <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-blue-400 to-blue-600"></div>
         <h3 class="text-2xl font-bold text-ink mb-3">1. Basal Metabolic Rate (BMR)</h3>
         <p class="text-base text-body leading-relaxed">This accounts for an overwhelming <strong>60-75%</strong> of all the calories you burn daily. It is the pure energy cost your body demands and requires exclusively to keep you alive in a state of absolute rest. It is the energy that fuels your brain operations, beats your heart muscle, filters toxins in your kidneys, and maintains lung function.</p>
       </div>
       
-      <div class="bg-surface/80 backdrop-blur-md rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 relative overflow-hidden group hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500">
+      <div class="bg-surface/80 backdrop-blur-md rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-hairline relative overflow-hidden group hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500">
         <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-green-400 to-green-600"></div>
         <h3 class="text-2xl font-bold text-ink mb-3">2. NEAT (Non-Exercise Activity Thermogenesis)</h3>
         <p class="text-base text-body leading-relaxed">Non-Exercise Activity Thermogenesis covers between <strong>15-20%</strong> of your total caloric expenditure. It corresponds to all the energy burned in subconscious, sporadic, and daily movements: walking through your house, maintaining upright posture in a chair, gesturing with your hands when talking, and even involuntarily tapping your feet out of nervousness.</p>
       </div>
       
-      <div class="bg-surface/80 backdrop-blur-md rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 relative overflow-hidden group hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500">
+      <div class="bg-surface/80 backdrop-blur-md rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-hairline relative overflow-hidden group hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500">
         <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-yellow-400 to-yellow-600"></div>
         <h3 class="text-2xl font-bold text-ink mb-3">3. Thermic Effect of Food (TEF)</h3>
         <p class="text-base text-body leading-relaxed">Surprisingly, it represents about <strong>10%</strong> of your daily calories. Your body expends mechanical energy simply in the act of chewing, chemically digesting, absorbing in the intestines, transporting in the bloodstream, and cellularly storing the nutrients from the food you eat every day.</p>
       </div>
       
-      <div class="bg-surface/80 backdrop-blur-md rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 relative overflow-hidden group hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500">
+      <div class="bg-surface/80 backdrop-blur-md rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-hairline relative overflow-hidden group hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500">
         <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-red-400 to-red-600"></div>
         <h3 class="text-2xl font-bold text-ink mb-3">4. Exercise Activity Thermogenesis (EAT)</h3>
         <p class="text-base text-body leading-relaxed">For the vast majority of the global population, structured exercise (EAT) sadly represents only <strong>5-10%</strong> of their total daily expenditure. This category exclusively encompasses intentional physical activity: going to the gym to lift weights, going for a 5k run, swimming, or playing a high-intensity sport.</p>
@@ -73,14 +73,14 @@ const faqs: FaqItem[] = [
 
     <h3 class="text-2xl font-bold text-ink mt-12 mb-4">Deep Analysis of the Basal Metabolic Rate (BMR)</h3>
     <p>The Basal Metabolic Rate is, by far, the largest and most demanding consumer of energy in your entire body. If, in a hypothetical scenario, you were to lie in a medical bed for 24 uninterrupted hours, in a completely dark room, with a thermally neutral temperature, completely fasted, and without consciously moving a single muscle, you would burn exactly this massive amount of calories. Biologically, the human brain alone greedily consumes approximately 20% of your entire daily BMR. It is closely followed by liver activity (20%), resting muscle tissue maintenance (20%), the heart muscle (8%) beating tirelessly about 100,000 times a day, and the filtering work of the kidneys (8%).</p>
-    <p>What is truly fascinating and empowering about your BMR is that it is not a static figure etched in stone by your genetics. It is highly and dynamically influenced by the amount of lean muscle mass you possess. Muscle tissue is considered "metabolically active tissue," which means it constantly demands calories from the bloodstream just to exist and maintain its tone, unlike adipose tissue (fat), which is largely metabolically inert. Increasing your muscle mass through a structured strength training program is one of the few scientifically proven and sustainable ways to permanently increase your BMR, literally transforming your body into a continuous fat-burning furnace, even on absolute rest days or while watching television on the couch.</p>
+    <p>What is truly fascinating and empowering about your BMR is that it is not a static figure etched in stone by your genetics. It is highly and dynamically influenced by the amount of lean muscle mass you possess. Muscle tissue is considered"metabolically active tissue," which means it constantly demands calories from the bloodstream just to exist and maintain its tone, unlike adipose tissue (fat), which is largely metabolically inert. Increasing your muscle mass through a structured strength training program is one of the few scientifically proven and sustainable ways to permanently increase your BMR, literally transforming your body into a continuous fat-burning furnace, even on absolute rest days or while watching television on the couch.</p>
 
     <h3 class="text-2xl font-bold text-ink mt-12 mb-4">The Hidden and Invisible Power of NEAT (Non-Exercise Activity Thermogenesis)</h3>
     <p>NEAT is often the most critically underestimated factor in the weight loss equation, but endocrinologists consider it incredibly powerful. In the vast majority of clinical cases, it is the main determining difference between two people of the same weight, height, and body composition, who consume exactly the same daily calories but have completely different aesthetic results and obesity levels. If you have a modern, deeply sedentary office job in front of a computer, your NEAT will be extremely low, bordering on pathological (burning barely an insignificant 200 to 300 calories daily this way). In drastic contrast, a busy restaurant waiter, a hospital floor nurse, or a construction worker can inadvertently burn up to 1,000 or even 2,000 additional calories a day simply by being on their feet, taking thousands of steps, lifting light boxes, and being in constant physical motion during eight-hour shifts.</p>
     <p>Pioneering studies by institutions like the Mayo Clinic have revealed that the human body is so evolutionarily intelligent that when you enter an aggressive and restrictive caloric deficit (i.e., you eat very little due to an extreme diet), one of the first survival strategies it adopts to conserve energy is to reduce your NEAT drastically and completely subconsciously. You start to feel more lethargic, you stop gesturing with your hands when explaining something, you opt for the elevator instead of the stairs without a second thought, and you spend extra hours lying down. For this biological reason, tracking your daily steps with a simple pedometer or smartwatch (aiming for the classic goal of 8,000 to 10,000 steps) is an unbeatable strategy to ensure that your NEAT expenditure doesn't plummet while you try to lose body fat percentage.</p>
 
     <h3 class="text-2xl font-bold text-ink mt-12 mb-4">TEF: The Phenomenon of Burning Calories Through Eating</h3>
-    <p>The Thermic Effect of Food is the main physiological reason why the old claim that "a calorie is just a calorie" is drastically incomplete and misleading in the context of how your gastrointestinal system processes it thermodynamically. Different macronutrient sources require dramatically different amounts of cellular energy (ATP) to be broken down, digested, and assimilated:</p>
+    <p>The Thermic Effect of Food is the main physiological reason why the old claim that"a calorie is just a calorie" is drastically incomplete and misleading in the context of how your gastrointestinal system processes it thermodynamically. Different macronutrient sources require dramatically different amounts of cellular energy (ATP) to be broken down, digested, and assimilated:</p>
     <ul class="list-disc pl-6 space-y-3 mt-5">
       <li><strong>Proteins:</strong> Are the undisputed queens of food thermogenesis. They staggeringly require between 20% and 30% of their own provided calories just to be digested due to the complexity of their peptide bonds. This means that if you consume 100 calories from a lean chicken breast or egg whites, your body will immediately spend about 25 to 30 calories just on the arduous process of assimilating them, leaving a net caloric yield that is stored in the body of barely 70 to 75 calories.</li>
       <li><strong>Carbohydrates:</strong> Have a moderate thermic effect of barely 5% to 10%. It is easier for the body to process a potato than a beef steak.</li>
@@ -88,9 +88,9 @@ const faqs: FaqItem[] = [
     </ul>
     <p class="mt-5">This thermodynamic dynamic is one of the fundamental scientific reasons why diets with a high protein intake are overwhelmingly more effective for clinical fat loss. Not only do they keep you satiated for much longer periods (reducing cravings) and actively protect your precious muscle mass from catabolism in a deficit, but they also inherently and passively boost your total daily metabolism by the simple and routine act of digesting the food you eat.</p>
 
-    <h3 class="text-2xl font-bold text-ink mt-12 mb-4">The Role of Intentional Exercise (EAT) and the Coveted "Afterburn" Effect (EPOC)</h3>
+    <h3 class="text-2xl font-bold text-ink mt-12 mb-4">The Role of Intentional Exercise (EAT) and the Coveted"Afterburn" Effect (EPOC)</h3>
     <p>Although planned exercise (EAT - <em>Exercise Activity Thermogenesis</em>) makes up the percentage-wise smallest portion of your overall daily caloric expenditure, it is in turn the most controllable, measurable, and manipulatable in the short term by any individual. However, in this category, it is of vital physiological importance to distinguish the exact type of exercise you perform. Traditional constant low-intensity cardio (LISS, like lightly jogging or pedaling in front of a TV) burns a decent amount of calories purely linearly and exclusively while you are performing it; but the precise moment you step off the treadmill, your caloric expenditure plummets and quickly returns to normal resting levels.</p>
-    <p>On the other hand, heavy weight training or extreme high-intensity intervals (HIIT) generate a highly desirable physiological phenomenon clinically known as <strong>EPOC (Excess Post-Exercise Oxygen Consumption)</strong>. This well-known "afterburn" effect means that your body, due to the intense metabolic stress it was subjected to, will continue to consume a significant surplus of oxygen and passively burn extra calories for 24 to 48 hours after the workout ends, while your immune system works hard to repair micro-tears in damaged muscle tissues, clear accumulated lactic acid, and fully restore its ATP and muscle glycogen systems. It's like leaving a car's engine running and consuming gas long after you've arrived at your destination.</p>
+    <p>On the other hand, heavy weight training or extreme high-intensity intervals (HIIT) generate a highly desirable physiological phenomenon clinically known as <strong>EPOC (Excess Post-Exercise Oxygen Consumption)</strong>. This well-known"afterburn" effect means that your body, due to the intense metabolic stress it was subjected to, will continue to consume a significant surplus of oxygen and passively burn extra calories for 24 to 48 hours after the workout ends, while your immune system works hard to repair micro-tears in damaged muscle tissues, clear accumulated lactic acid, and fully restore its ATP and muscle glycogen systems. It's like leaving a car's engine running and consuming gas long after you've arrived at your destination.</p>
 
     <h2 class="text-3xl font-bold text-ink mt-16 mb-6">Step-by-Step Practical Guide: How to Calculate Your Exact Calories Burned</h2>
     <p>To make truly informed, strategic, and successful nutritional decisions, you need to rely on concrete, mathematical numbers, not guesswork or the mirror. You can use an expensive fitness tracker or smartwatch (like an Apple Watch or Garmin), but you must exercise extreme caution: numerous clinical studies and research from Stanford University have systematically and repeatedly demonstrated that modern commercial wearables hugely overestimate calories burned during aerobic and anaerobic exercise, often erring between 20% and an absurd 40%. If you eat back all the calories your watch tells you you've burned, you'll very likely end up inadvertently gaining weight. The most accurate, accessible, and realistic way, without having to resort to expensive indirect calorimetry equipment in specialized labs, is to apply widely validated scientific formulas.</p>
@@ -117,31 +117,31 @@ const faqs: FaqItem[] = [
       <p class="text-body">Once you have the mathematical calculation of your TDEE (Total Daily Energy Expenditure), you have just discovered your <strong>maintenance calories</strong> number. If you consume exactly this energy amount every single day, your body weight on the scale will not go up or down; it will remain static.</p>
       <ul class="list-disc pl-6 space-y-4 text-body mt-5">
         <li><strong>To lose fat (Create a Caloric Deficit):</strong> Intentionally subtract between 300 and 500 daily calories from your TDEE number. This restriction will allow you to lose approximately 0.5 to 1 pound (up to half a kilo) of pure fat per week, a highly recommended medical pace because it is healthy, minimizes muscle loss, and is psychologically sustainable long-term without causing binges.</li>
-        <li><strong>To gain lean muscle (Create a Caloric Surplus):</strong> Carefully add between 200 and 300 daily calories to your TDEE. A controlled, small, and moderate surplus (known as a "lean bulk") hugely prevents the unwanted and excessive accumulation of body fat, while at the same time providing your body with the abundant extra energy and building blocks necessary to optimally synthesize dense new muscle tissue.</li>
+        <li><strong>To gain lean muscle (Create a Caloric Surplus):</strong> Carefully add between 200 and 300 daily calories to your TDEE. A controlled, small, and moderate surplus (known as a"lean bulk") hugely prevents the unwanted and excessive accumulation of body fat, while at the same time providing your body with the abundant extra energy and building blocks necessary to optimally synthesize dense new muscle tissue.</li>
       </ul>
     </div>
 
     <h2 class="text-3xl font-bold text-ink mt-16 mb-8">Comparative Table: The Massive Impact of Your Lifestyle on Metabolism</h2>
     <p>To illustrate in a tangible and dramatic way how much your daily and routine habits impact the fire of your metabolism, let's consider as a base example an <strong>average 35-year-old male, weighing 77 kilograms (170 lbs) and measuring 178 centimeters (5'10")</strong>. His basal metabolic rate (BMR) to keep him alive is approximately 1,750 calories daily. Observe closely in the following table how his total daily expenditure (TDEE) fluctuates radically and spectacularly depending solely and exclusively on the physical demand of his job and exercise routines:</p>
     
-    <div class="overflow-x-auto my-10 rounded-3xl shadow-[0_4px_25px_rgb(0,0,0,0.04)] border border-gray-100">
+    <div class="overflow-x-auto my-10 rounded-3xl shadow-[0_4px_25px_rgb(0,0,0,0.04)] border border-hairline">
       <table class="w-full text-left border-collapse bg-surface">
         <thead>
           <tr class="bg-gradient-to-r from-ink to-gray-800 text-white text-lg">
-            <th class="p-5 font-semibold border-r border-gray-700/50">Weekly Lifestyle / Physical Activity Profile</th>
+            <th class="p-5 font-semibold border-r border-hairline/50">Weekly Lifestyle / Physical Activity Profile</th>
             <th class="p-5 font-semibold text-right whitespace-nowrap">Total Calories Burned (TDEE)</th>
           </tr>
         </thead>
         <tbody class="text-base text-body">
-          <tr class="border-b border-gray-100 hover:bg-brand-soft/50 transition-colors">
+          <tr class="border-b border-hairline hover:bg-brand-soft/50 transition-colors">
             <td class="p-5 border-r border-gray-50"><strong class="text-ink">Completely Sedentary:</strong> Remote office job at home, screen-based hobbies (video games, TV), always commutes by car, less than 3,000 steps a day.</td>
             <td class="p-5 font-bold text-right text-mute whitespace-nowrap">~ 2,100 kcal / day</td>
           </tr>
-          <tr class="border-b border-gray-100 bg-canvas-soft/50 hover:bg-brand-soft/50 transition-colors">
+          <tr class="border-b border-hairline bg-canvas-soft/50 hover:bg-brand-soft/50 transition-colors">
             <td class="p-5 border-r border-gray-50"><strong class="text-ink">Lightly Active:</strong> Has a traditional office job, but consciously makes an effort to walk 8,000-10,000 steps a day and lightly jogs in the park twice a week.</td>
             <td class="p-5 font-bold text-right text-brand whitespace-nowrap">~ 2,400 kcal / day</td>
           </tr>
-          <tr class="border-b border-gray-100 hover:bg-brand-soft/50 transition-colors">
+          <tr class="border-b border-hairline hover:bg-brand-soft/50 transition-colors">
             <td class="p-5 border-r border-gray-50"><strong class="text-ink">Moderately Active:</strong> ER nurse or waiter (works standing and walking almost all day) who also lifts weights intensely at the gym 4 times a week.</td>
             <td class="p-5 font-bold text-right text-green-600 whitespace-nowrap text-lg">~ 2,700 kcal / day</td>
           </tr>
@@ -161,8 +161,8 @@ const faqs: FaqItem[] = [
       </div>
 
       <div class="bg-red-50 border-t-4 border-red-500 p-6 rounded-b-2xl shadow-sm">
-        <h4 class="font-bold text-red-800 text-xl mb-3 leading-tight">Myth: Certain miracle foods have "negative calories" (like celery)</h4>
-        <p class="text-body text-red-900 text-sm md:text-base"><strong>The Scientific Truth:</strong> While it is undeniable that certain plant foods like fresh celery, crisp cucumber, or iceberg lettuce contain minuscule amounts of calories and the body requires spending real energy to vigorously chew them, digest their fibers, and assimilate them, the metabolic cost of their digestion never, ever exceeds the minuscule caloric value provided by the food itself. The concept of achieving a "negative calorie" balance just by chewing vegetables is biologically and thermodynamically false.</p>
+        <h4 class="font-bold text-red-800 text-xl mb-3 leading-tight">Myth: Certain miracle foods have"negative calories" (like celery)</h4>
+        <p class="text-body text-red-900 text-sm md:text-base"><strong>The Scientific Truth:</strong> While it is undeniable that certain plant foods like fresh celery, crisp cucumber, or iceberg lettuce contain minuscule amounts of calories and the body requires spending real energy to vigorously chew them, digest their fibers, and assimilate them, the metabolic cost of their digestion never, ever exceeds the minuscule caloric value provided by the food itself. The concept of achieving a"negative calorie" balance just by chewing vegetables is biologically and thermodynamically false.</p>
       </div>
 
       <div class="bg-success border-t-4 border-success p-6 rounded-b-2xl shadow-sm">
@@ -172,7 +172,7 @@ const faqs: FaqItem[] = [
     </div>
 
     <h2 class="text-3xl font-bold text-ink mt-16 mb-8">5 Expert Scientific Strategies to Maximize Your Daily Energy Expenditure</h2>
-    <p>If you genuinely want to speed up your internal "engine" naturally, safely, and above all, permanently, you must understand that you do not need to resort to magical pre-workout supplements, detox teas, or dangerous thermogenic fat-burning pills. Human physiology responds deeply and favorably to the intelligent optimization of the following key pillars of your lifestyle:</p>
+    <p>If you genuinely want to speed up your internal"engine" naturally, safely, and above all, permanently, you must understand that you do not need to resort to magical pre-workout supplements, detox teas, or dangerous thermogenic fat-burning pills. Human physiology responds deeply and favorably to the intelligent optimization of the following key pillars of your lifestyle:</p>
 
     <div class="space-y-6 mt-8">
       <div class="flex items-start gap-4">
@@ -186,7 +186,7 @@ const faqs: FaqItem[] = [
       <div class="flex items-start gap-4">
         <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-brand to-brand-dark rounded-full flex items-center justify-center text-white font-bold text-xl shadow-md">2</div>
         <div>
-          <h4 class="text-xl font-bold text-ink mb-1">Hack and Boost Your NEAT: Implement "Micro-Activity"</h4>
+          <h4 class="text-xl font-bold text-ink mb-1">Hack and Boost Your NEAT: Implement"Micro-Activity"</h4>
           <p class="text-body">Rigorous obesity research consistently shows that naturally lean people are in continuous motion up to 150 minutes more per day without even being aware of it. Hack your environment: set up a standing desk to work, acquire the unbreakable habit of walking briskly while taking phone calls, park your car at the furthest point in the parking lot, and systematically opt to use the stairs instead of the elevator. Seemingly trivial increases in NEAT accumulate over the weeks to form a colossal energy deficit.</p>
         </div>
       </div>
@@ -195,7 +195,7 @@ const faqs: FaqItem[] = [
         <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-brand to-brand-dark rounded-full flex items-center justify-center text-white font-bold text-xl shadow-md">3</div>
         <div>
           <h4 class="text-xl font-bold text-ink mb-1">Apply Relentless Progressive Overload in the Gym</h4>
-          <p class="text-body">Change your mindset: do not go to the gym solely to "sweat" or get randomly tired. Go with the clear purpose of sending a biological survival and stress adaptation signal to your muscle fibers, literally forcing them to become larger and more robust to face future loads. Ensure you lift slightly heavier weights or do more reps every week. The more lean muscle mass built, the exponentially higher your BMR (Basal Metabolic Rate) threshold will be at complete rest.</p>
+          <p class="text-body">Change your mindset: do not go to the gym solely to"sweat" or get randomly tired. Go with the clear purpose of sending a biological survival and stress adaptation signal to your muscle fibers, literally forcing them to become larger and more robust to face future loads. Ensure you lift slightly heavier weights or do more reps every week. The more lean muscle mass built, the exponentially higher your BMR (Basal Metabolic Rate) threshold will be at complete rest.</p>
         </div>
       </div>
 
@@ -218,7 +218,7 @@ const faqs: FaqItem[] = [
 
     <h2 class="text-3xl font-bold text-ink mt-16 mb-8">Frequently Asked Questions (FAQ) About Metabolism and Calorie Burning</h2>
     <div class="space-y-6">
-      <div class="bg-surface rounded-3xl p-8 shadow-sm border border-gray-100 transition-all hover:shadow-md">
+      <div class="bg-surface rounded-3xl p-8 shadow-sm border border-hairline transition-all hover:shadow-md">
         <h3 class="text-xl font-bold text-ink mb-3 flex items-center gap-3">
           <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
           Exactly how many calories do I burn while I sleep?
@@ -226,7 +226,7 @@ const faqs: FaqItem[] = [
         <p class="text-body">Even when you are in the deepest phases of REM sleep, your metabolism does not stop; it continues to work tirelessly like the engine room of a ship to keep your core body temperature stable, oxygenate and repair critical brain tissues, rebuild torn muscle fibers, and pump blood efficiently. The body of an average human being, depending on its mass, burns a range of between <strong>40 to 75 calories for every hour</strong> spent sleeping. As a highly reliable general mathematical rule, your body burns a staggering 90% of the equivalent of your usual hourly BMR while you overnight. A full 8-hour night of deep sleep can represent a passive burn of 400 to 600 gross calories, simply resting on your mattress.</p>
       </div>
 
-      <div class="bg-surface rounded-3xl p-8 shadow-sm border border-gray-100 transition-all hover:shadow-md">
+      <div class="bg-surface rounded-3xl p-8 shadow-sm border border-hairline transition-all hover:shadow-md">
         <h3 class="text-xl font-bold text-ink mb-3 flex items-center gap-3">
           <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
           Does sweating profusely in excess mean I am exponentially burning more body fat and calories?
@@ -234,25 +234,25 @@ const faqs: FaqItem[] = [
         <p class="text-body">It is a resounding and absolute physiological myth. Sweating (body perspiration) is, in its most basic essence, simply the human body's primitive thermoregulatory mechanism that activates in an emergency to cool the surface of your skin through the thermal evaporation of liquids when your core temperature rises too high. There is, under no scientific circumstance, a proven direct correlation between losing liters of sweat and the mobilization of fatty acids (real fat loss). The exhausting classes where you wear suffocating plastic thermal suits, wrap yourself in cling film, or lock yourself in saunas and artificially overheated rooms, only manage to make you lose the vital and necessary intracellular and extracellular water weight that makes up your cells; an absolutely illusory and temporary weight loss, which you will completely and instantly regain as soon as you drink a couple of large glasses of water or sports drinks upon returning exhausted to your home.</p>
       </div>
 
-      <div class="bg-surface rounded-3xl p-8 shadow-sm border border-gray-100 transition-all hover:shadow-md">
+      <div class="bg-surface rounded-3xl p-8 shadow-sm border border-hairline transition-all hover:shadow-md">
         <h3 class="text-xl font-bold text-ink mb-3 flex items-center gap-3">
           <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
           Is the magical goal of taking 10,000 uninterrupted steps a day to burn fat truly real?
         </h3>
-        <p class="text-body">Paradoxically, although the famous daily goal of exactly 10,000 steps originated, interestingly enough, as a clever advertising and marketing strategy in Japan in the 1960s (in the era leading up to the Tokyo Olympics to sell a pioneering pedometer model called "Manpo-kei"), modern science and cardiology have retrospectively proven that it is, by chance, an excellent and highly effective heuristic goal for population health. For the average medium-sized urban individual, managing to complete 10,000 brisk steps at a good pace can easily burn a very respectable figure of between <strong>300 and 500 extra net calories a day</strong>. Even more importantly, walking is one of the very few scientifically proven and completely stress-free ways (for delicate joints and the sensitive central nervous system) to drastically and positively boost total daily energy expenditure (TDEE) without triggering an unbearable and uncontrollable wave of compensatory ravenous appetite, which is, unfortunately, a devastatingly common and demotivating side effect when practicing long and intense sessions of grueling traditional cardio that ruin countless conventional diets and New Year's resolutions.</p>
+        <p class="text-body">Paradoxically, although the famous daily goal of exactly 10,000 steps originated, interestingly enough, as a clever advertising and marketing strategy in Japan in the 1960s (in the era leading up to the Tokyo Olympics to sell a pioneering pedometer model called"Manpo-kei"), modern science and cardiology have retrospectively proven that it is, by chance, an excellent and highly effective heuristic goal for population health. For the average medium-sized urban individual, managing to complete 10,000 brisk steps at a good pace can easily burn a very respectable figure of between <strong>300 and 500 extra net calories a day</strong>. Even more importantly, walking is one of the very few scientifically proven and completely stress-free ways (for delicate joints and the sensitive central nervous system) to drastically and positively boost total daily energy expenditure (TDEE) without triggering an unbearable and uncontrollable wave of compensatory ravenous appetite, which is, unfortunately, a devastatingly common and demotivating side effect when practicing long and intense sessions of grueling traditional cardio that ruin countless conventional diets and New Year's resolutions.</p>
       </div>
 
-      <div class="bg-surface rounded-3xl p-8 shadow-sm border border-gray-100 transition-all hover:shadow-md">
+      <div class="bg-surface rounded-3xl p-8 shadow-sm border border-hairline transition-all hover:shadow-md">
         <h3 class="text-xl font-bold text-ink mb-3 flex items-center gap-3">
           <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
           Is it true that human metabolism naturally and severely slows down and brakes as you age and pass 30?
         </h3>
-        <p class="text-body">The widespread belief of early metabolic decline is completely debunked by the most cutting-edge clinical literature. A comprehensive, massive, and revolutionary scientific study published in the prestigious journal Science in 2021, which dedicated years of meticulous, rigorous analysis evaluating the global energy and water expenditure (using the highly expensive doubly labeled water technique) of an astounding sample size of more than 6,400 participants from 29 different countries across the globe, made a resounding, absolutely paradigmatic, and frankly fascinating discovery: human metabolism adjusted for tissue size remains, biologically and inherently, remarkably and astonishingly stable and constant, almost like an untouchable flat line, throughout the dense and intense decades of life spanning entirely between the young 20s and the mature 60s of age, the biological moment at which a statistically significant decline of less than 1% annually first begins to be witnessed due to the frank degenerative decrease in the activity of various key vital organs and deep lean tissues. The main, resounding, and almost clinically exclusive documented reason why the majority of adult people experience inexorable progressive adipose weight gains or claim to viscerally feel that their mythical "youthful metabolism has become unsalvageably slow" after turning the dreaded 30 years old is due almost entirely to a drastic and pernicious gradual and unnoticed loss of valuable structural muscle mass (a pathology clinically known under the medical term <em>sarcopenia</em>) abruptly precipitated by the total and absolute lack of systematic resistance strength training, and furthermore, to the fact that their professional lifestyle, demanding family obligations, and the overwhelming convenience of modern technologies submerge them in a deep spiral of existence and habits that become exponentially and alarmingly more sedentary and stationary with each passing year, with an abysmal and undetectable drop in their critical basal NEAT level. Continuous, religious, constant, and properly planned weight lifting training practiced throughout a lifetime counteracts, neutralizes, and virtually and physiologically halts almost completely, and with impressive results, this supposed, detrimental, and inevitable terminal slowdown of the burning metabolic engine tragically associated with advanced age and the aging of the modern species in post-industrial societies.</p>
+        <p class="text-body">The widespread belief of early metabolic decline is completely debunked by the most cutting-edge clinical literature. A comprehensive, massive, and revolutionary scientific study published in the prestigious journal Science in 2021, which dedicated years of meticulous, rigorous analysis evaluating the global energy and water expenditure (using the highly expensive doubly labeled water technique) of an astounding sample size of more than 6,400 participants from 29 different countries across the globe, made a resounding, absolutely paradigmatic, and frankly fascinating discovery: human metabolism adjusted for tissue size remains, biologically and inherently, remarkably and astonishingly stable and constant, almost like an untouchable flat line, throughout the dense and intense decades of life spanning entirely between the young 20s and the mature 60s of age, the biological moment at which a statistically significant decline of less than 1% annually first begins to be witnessed due to the frank degenerative decrease in the activity of various key vital organs and deep lean tissues. The main, resounding, and almost clinically exclusive documented reason why the majority of adult people experience inexorable progressive adipose weight gains or claim to viscerally feel that their mythical"youthful metabolism has become unsalvageably slow" after turning the dreaded 30 years old is due almost entirely to a drastic and pernicious gradual and unnoticed loss of valuable structural muscle mass (a pathology clinically known under the medical term <em>sarcopenia</em>) abruptly precipitated by the total and absolute lack of systematic resistance strength training, and furthermore, to the fact that their professional lifestyle, demanding family obligations, and the overwhelming convenience of modern technologies submerge them in a deep spiral of existence and habits that become exponentially and alarmingly more sedentary and stationary with each passing year, with an abysmal and undetectable drop in their critical basal NEAT level. Continuous, religious, constant, and properly planned weight lifting training practiced throughout a lifetime counteracts, neutralizes, and virtually and physiologically halts almost completely, and with impressive results, this supposed, detrimental, and inevitable terminal slowdown of the burning metabolic engine tragically associated with advanced age and the aging of the modern species in post-industrial societies.</p>
       </div>
     </div>
 
     <!-- Suggested Content Section -->
-    <div class="mt-20 bg-surface/90 backdrop-blur-md rounded-[2rem] p-8 sm:p-12 shadow-[0_20px_60px_rgba(0,0,0,0.06)] border border-gray-100 text-center relative overflow-hidden group">
+    <div class="mt-20 bg-surface/90 backdrop-blur-md rounded-[2rem] p-8 sm:p-12 shadow-[0_20px_60px_rgba(0,0,0,0.06)] border border-hairline text-center relative overflow-hidden group">
       <!-- Decorative gradient flares for premium look -->
       <div class="absolute -top-24 -right-24 w-80 h-80 bg-brand/10 rounded-full blur-3xl group-hover:bg-brand/15 transition-colors duration-700"></div>
       <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-brand/10 rounded-full blur-3xl group-hover:bg-brand/15 transition-colors duration-700"></div>
@@ -269,7 +269,7 @@ const faqs: FaqItem[] = [
             What are critical NEAT calories?
           </a>
           
-          <span class="hidden md:inline-block w-2 h-2 rounded-full bg-gray-300"></span>
+          <span class="hidden md:inline-block w-2 h-2 rounded-full bg-surface"></span>
           
           <a href="/guides/thermic-effect-of-food-tef/" class="flex items-center gap-3 text-brand font-bold text-lg sm:text-xl hover:text-brand-dark transition-colors group/link p-3 rounded-xl hover:bg-brand/5">
             <span class="p-2 bg-brand/10 rounded-lg text-brand group-hover/link:-translate-y-1 transition-transform duration-300">

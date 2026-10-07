@@ -2,37 +2,37 @@
 import Button from '../../../components/ui/Button.astro';
 import ContentLayout from '../../../layouts/ContentLayout.astro';
 import ArticleImage from '../../../components/ui/ArticleImage.astro';
-import type { FaqItem } from "../../../lib/seo";
+import type { FaqItem } from"../../../lib/seo";
 
 const faqs: FaqItem[] = [
   { 
-    q: "¿Cuántas calorías debo consumir al día para mantener mi peso?", 
-    a: "Depende de tus características personales y tu nivel de actividad física. Si calculas tu GET (Gasto Energético Total), la cifra resultante es tu nivel de mantenimiento. Consumir esa cantidad hará que tu peso se mantenga relativamente estable." 
+    q:"¿Cuántas calorías debo consumir al día para mantener mi peso?", 
+    a:"Depende de tus características personales y tu nivel de actividad física. Si calculas tu GET (Gasto Energético Total), la cifra resultante es tu nivel de mantenimiento. Consumir esa cantidad hará que tu peso se mantenga relativamente estable." 
   },
   { 
-    q: "¿Cuántas calorías debo consumir para perder peso?", 
-    a: "Para perder peso, generalmente se necesita crear un déficit calórico consumiendo menos energía de la que gastas. Muchos profesionales sugieren una reducción moderada (por ejemplo, 300 a 500 calorías menos de tu mantenimiento), pero es mejor adaptar esto a tus circunstancias personales." 
+    q:"¿Cuántas calorías debo consumir para perder peso?", 
+    a:"Para perder peso, generalmente se necesita crear un déficit calórico consumiendo menos energía de la que gastas. Muchos profesionales sugieren una reducción moderada (por ejemplo, 300 a 500 calorías menos de tu mantenimiento), pero es mejor adaptar esto a tus circunstancias personales." 
   },
   { 
-    q: "¿Las calorías que necesito dependen de mi edad?", 
-    a: "Sí. A medida que envejecemos, la masa muscular tiende a disminuir y el metabolismo basal se ralentiza ligeramente, lo que significa que generalmente se necesitan menos calorías diarias en comparación con la juventud, asumiendo que el nivel de actividad sea el mismo." 
+    q:"¿Las calorías que necesito dependen de mi edad?", 
+    a:"Sí. A medida que envejecemos, la masa muscular tiende a disminuir y el metabolismo basal se ralentiza ligeramente, lo que significa que generalmente se necesitan menos calorías diarias en comparación con la juventud, asumiendo que el nivel de actividad sea el mismo." 
   },
   { 
-    q: "¿Cómo se calculan las calorías diarias?", 
-    a: "Se estiman calculando primero la Tasa Metabólica Basal (TMB), que son las calorías que quemas en reposo. Luego, la TMB se multiplica por un factor de actividad física para obtener el Gasto Energético Total (GET)." 
+    q:"¿Cómo se calculan las calorías diarias?", 
+    a:"Se estiman calculando primero la Tasa Metabólica Basal (TMB), que son las calorías que quemas en reposo. Luego, la TMB se multiplica por un factor de actividad física para obtener el Gasto Energético Total (GET)." 
   },
   { 
-    q: "¿Qué diferencia hay entre TMB y TDEE?", 
-    a: "La TMB (Tasa Metabólica Basal) es la energía necesaria solo para mantener las funciones vitales en reposo absoluto. El TDEE (o GET, Gasto Energético Total) incluye la TMB más todas las calorías quemadas mediante el movimiento diario, el ejercicio y la digestión de alimentos." 
+    q:"¿Qué diferencia hay entre TMB y TDEE?", 
+    a:"La TMB (Tasa Metabólica Basal) es la energía necesaria solo para mantener las funciones vitales en reposo absoluto. El TDEE (o GET, Gasto Energético Total) incluye la TMB más todas las calorías quemadas mediante el movimiento diario, el ejercicio y la digestión de alimentos." 
   },
   { 
-    q: "¿Puedo usar una calculadora de calorías para ganar peso?", 
-    a: "Sí. Si tu objetivo es aumentar masa muscular o subir de peso, puedes usar la calculadora para estimar tu gasto total y luego añadir un excedente moderado a esa cantidad para favorecer el aumento de peso de forma controlada." 
+    q:"¿Puedo usar una calculadora de calorías para ganar peso?", 
+    a:"Sí. Si tu objetivo es aumentar masa muscular o subir de peso, puedes usar la calculadora para estimar tu gasto total y luego añadir un excedente moderado a esa cantidad para favorecer el aumento de peso de forma controlada." 
   }
 ];
 
-const seoTitle = "¿Cuántas Calorías Debo Consumir al Día? Guía Completa y Científica";
-const seoDescription = "Descubre con exactitud cuántas calorías necesitas al día según tu edad, peso, altura y nivel de actividad. Aprende a calcular tus necesidades calóricas reales para mantener, perder o ganar peso de forma saludable y respaldada por la ciencia.";
+const seoTitle ="¿Cuántas Calorías Debo Consumir al Día? Guía Completa y Científica";
+const seoDescription ="Descubre con exactitud cuántas calorías necesitas al día según tu edad, peso, altura y nivel de actividad. Aprende a calcular tus necesidades calóricas reales para mantener, perder o ganar peso de forma saludable y respaldada por la ciencia.";
 ---
 
 <ContentLayout
@@ -48,7 +48,7 @@ const seoDescription = "Descubre con exactitud cuántas calorías necesitas al d
   lang="es"
 >
 
-  <div class="bg-white/80 backdrop-blur-md p-6 rounded-3xl border border-hairline shadow-sm mb-10 flex flex-col sm:flex-row items-center sm:items-start gap-4 transition-all hover:shadow-md">
+  <div class="bg-surface/80 backdrop-blur-md p-6 rounded-3xl border border-hairline shadow-sm mb-10 flex flex-col sm:flex-row items-center sm:items-start gap-4 transition-all hover:shadow-md">
     <div class="text-4xl">⚕️</div>
     <div>
       <h3 class="text-lg font-bold text-ink mb-1">Revisión Científica y Médica</h3>
@@ -87,15 +87,15 @@ const seoDescription = "Descubre con exactitud cuántas calorías necesitas al d
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
-      <div class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl border border-hairline shadow-sm hover:-translate-y-1 transition-transform duration-300">
+      <div class="bg-surface/90 backdrop-blur-sm p-6 rounded-2xl border border-hairline shadow-sm hover:-translate-y-1 transition-transform duration-300">
         <h4 class="text-xl font-bold text-brand mb-3">TMB (Tasa Metabólica Basal)</h4>
         <p class="text-sm text-body">Representa aproximadamente el <strong>60-75%</strong> de tu gasto calórico. Es la energía que tu cuerpo requiere para mantener sus funciones vitales en estado de reposo absoluto: latidos del corazón, respiración, función cerebral, filtración renal y mantenimiento de la temperatura corporal.</p>
       </div>
-      <div class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl border border-hairline shadow-sm hover:-translate-y-1 transition-transform duration-300">
+      <div class="bg-surface/90 backdrop-blur-sm p-6 rounded-2xl border border-hairline shadow-sm hover:-translate-y-1 transition-transform duration-300">
         <h4 class="text-xl font-bold text-brand mb-3">NEAT y Ejercicio</h4>
         <p class="text-sm text-body">Abarca el <strong>15-30%</strong> del gasto total. Incluye tanto el ejercicio consciente (correr, levantar pesas) como el NEAT (Termogénesis por Actividad sin Ejercicio), que son todos los movimientos subconscientes del día: caminar al trabajo, gesticular, estar de pie, etc.</p>
       </div>
-      <div class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl border border-hairline shadow-sm hover:-translate-y-1 transition-transform duration-300">
+      <div class="bg-surface/90 backdrop-blur-sm p-6 rounded-2xl border border-hairline shadow-sm hover:-translate-y-1 transition-transform duration-300">
         <h4 class="text-xl font-bold text-brand mb-3">TEF (Efecto Térmico de los Alimentos)</h4>
         <p class="text-sm text-body">Constituye alrededor del <strong>10%</strong> del gasto diario. Es la energía calórica que tu tracto digestivo utiliza para masticar, digerir, absorber y almacenar los macro y micronutrientes de los alimentos que consumes. Las proteínas tienen el TEF más alto.</p>
       </div>
@@ -108,7 +108,7 @@ const seoDescription = "Descubre con exactitud cuántas calorías necesitas al d
 
     <h3 class="text-2xl font-bold text-ink mt-8 mb-4">La Influencia de la Edad en el Metabolismo</h3>
     <p>
-      El envejecimiento es un factor ineludible. A medida que cumples años, tu Tasa Metabólica Basal tiende a ralentizarse. Este declive no se debe a que el cuerpo humano "se rompa", sino principalmente a un proceso conocido como <strong>sarcopenia</strong> (la pérdida progresiva de masa muscular esquelética relacionada con la edad) y a la disminución de la actividad celular. Como el tejido muscular es altamente exigente a nivel metabólico, su pérdida significa que tu cuerpo necesita quemar menos calorías diarias. Mantener el entrenamiento de fuerza a lo largo de los años es la mejor estrategia clínica para mitigar este impacto.
+      El envejecimiento es un factor ineludible. A medida que cumples años, tu Tasa Metabólica Basal tiende a ralentizarse. Este declive no se debe a que el cuerpo humano"se rompa", sino principalmente a un proceso conocido como <strong>sarcopenia</strong> (la pérdida progresiva de masa muscular esquelética relacionada con la edad) y a la disminución de la actividad celular. Como el tejido muscular es altamente exigente a nivel metabólico, su pérdida significa que tu cuerpo necesita quemar menos calorías diarias. Mantener el entrenamiento de fuerza a lo largo de los años es la mejor estrategia clínica para mitigar este impacto.
     </p>
 
     <h3 class="text-2xl font-bold text-ink mt-8 mb-4">Diferencias de Sexo y Composición Corporal</h3>
@@ -134,8 +134,8 @@ const seoDescription = "Descubre con exactitud cuántas calorías necesitas al d
     <div class="bg-canvas-soft p-8 rounded-3xl mb-8">
       <h4 class="text-xl font-bold text-ink mb-4">La Fórmula Matemática de Mifflin-St Jeor:</h4>
       <ul class="space-y-4">
-        <li class="bg-white/60 p-4 rounded-xl border border-hairline"><strong>Para Hombres:</strong> TMB = (10 × peso en kg) + (6.25 × altura en cm) - (5 × edad en años) + 5</li>
-        <li class="bg-white/60 p-4 rounded-xl border border-hairline"><strong>Para Mujeres:</strong> TMB = (10 × peso en kg) + (6.25 × altura en cm) - (5 × edad en años) - 161</li>
+        <li class="bg-surface/60 p-4 rounded-xl border border-hairline"><strong>Para Hombres:</strong> TMB = (10 × peso en kg) + (6.25 × altura en cm) - (5 × edad en años) + 5</li>
+        <li class="bg-surface/60 p-4 rounded-xl border border-hairline"><strong>Para Mujeres:</strong> TMB = (10 × peso en kg) + (6.25 × altura en cm) - (5 × edad en años) - 161</li>
       </ul>
       <p class="mt-4 text-sm text-body">
         Una vez obtenida la TMB, este valor debe multiplicarse por el Factor de Actividad (rango de 1.2 para sedentarios hasta 1.9 para atletas extremos) para revelar tu GET (Gasto Energético Total).
@@ -147,7 +147,7 @@ const seoDescription = "Descubre con exactitud cuántas calorías necesitas al d
     </p>
 
     <div class="my-12 p-1 bg-gradient-to-r from-brand to-purple-600 rounded-3xl shadow-xl transform transition-all hover:scale-[1.02]">
-      <div class="bg-white rounded-[23px] p-8 md:p-12 text-center">
+      <div class="bg-surface rounded-[23px] p-8 md:p-12 text-center">
         <h3 class="text-3xl font-extrabold text-ink mb-4">Deja las matemáticas en nuestras manos</h3>
         <p class="text-lg text-body mb-8 max-w-2xl mx-auto">
           Nuestra herramienta avanzada procesa tu perfil biométrico al instante y aplica los multiplicadores de actividad clínica correctos, ofreciéndote un desglose milimétrico de las calorías y macronutrientes que tu cuerpo exige hoy.
@@ -178,7 +178,7 @@ const seoDescription = "Descubre con exactitud cuántas calorías necesitas al d
       La hipertrofia (crecimiento muscular) es un proceso biológicamente costoso. Para construir nuevo tejido de forma eficiente, debes suministrarle al cuerpo un exceso de energía a través de un <strong>superávit calórico</strong>, apoyado por un estímulo de hipertrofia (entrenamiento de fuerza intenso).
     </p>
     <p>
-      El error más común durante el volumen o "bulking" es ingerir un exceso desmesurado de calorías. La capacidad de síntesis proteica muscular tiene un techo natural. Un superávit responsable oscila entre <strong>200 y 400 calorías extra al día</strong>. Todo excedente por encima de ese umbral probablemente se almacene como tejido adiposo no deseado, no como fibra muscular adicional.
+      El error más común durante el volumen o"bulking" es ingerir un exceso desmesurado de calorías. La capacidad de síntesis proteica muscular tiene un techo natural. Un superávit responsable oscila entre <strong>200 y 400 calorías extra al día</strong>. Todo excedente por encima de ese umbral probablemente se almacene como tejido adiposo no deseado, no como fibra muscular adicional.
     </p>
 
     <h2 class="text-4xl font-extrabold text-ink mt-16 mb-8 tracking-tight">6. Monitoreo, Precisión y Ajustes Clínicos</h2>
@@ -192,7 +192,7 @@ const seoDescription = "Descubre con exactitud cuántas calorías necesitas al d
     </div>
 
     <p>
-      El registro de alimentos no debe convertirse en una prisión psicológica, sino en una herramienta educativa temporal. Tras un periodo de seguimiento riguroso de calorías (por ejemplo, mediante básculas de cocina y aplicaciones), desarrollarás un "ojo clínico" para estimar porciones instintivamente y podrás transicionar hacia hábitos de alimentación intuitiva, donde honres tus señales de hambre y saciedad sin depender perpetuamente de los números.
+      El registro de alimentos no debe convertirse en una prisión psicológica, sino en una herramienta educativa temporal. Tras un periodo de seguimiento riguroso de calorías (por ejemplo, mediante básculas de cocina y aplicaciones), desarrollarás un"ojo clínico" para estimar porciones instintivamente y podrás transicionar hacia hábitos de alimentación intuitiva, donde honres tus señales de hambre y saciedad sin depender perpetuamente de los números.
     </p>
 
     <h2 class="text-3xl font-bold text-ink mt-16 mb-6">Referencias Médicas y Científicas</h2>
@@ -218,7 +218,7 @@ const seoDescription = "Descubre con exactitud cuántas calorías necesitas al d
     <hr class="border-hairline my-12" />
 
     <!-- FAQ SECTION -->
-    <div class="mt-16 bg-white/80 backdrop-blur-md p-8 sm:p-10 rounded-3xl border border-hairline shadow-sm">
+    <div class="mt-16 bg-surface/80 backdrop-blur-md p-8 sm:p-10 rounded-3xl border border-hairline shadow-sm">
       <h2 class="text-3xl font-bold mb-6 text-ink">Preguntas Frecuentes y el Impacto Psicológico del Conteo Calórico</h2>
       <p class="text-body text-lg mb-8">Seamos profundamente honestos: la constante vigilancia métrica sobre lo que ingerimos puede detonar fatiga mental severa y ansiedad alimentaria. No estás solo en esta lucha. A continuación, respondemos las inquietudes más críticas con absoluta transparencia, priorizando tanto tu salud fisiológica como tu bienestar mental.</p>
       
@@ -249,21 +249,21 @@ const seoDescription = "Descubre con exactitud cuántas calorías necesitas al d
       
       <div class="flex flex-col md:flex-row gap-6 justify-center">
         <!-- Calculadora -->
-        <a href="/country/spain/calculadora-de-calorias/" class="flex-1 bg-white p-6 rounded-2xl border border-hairline shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
+        <a href="/country/spain/calculadora-de-calorias/" class="flex-1 bg-surface p-6 rounded-2xl border border-hairline shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
           <div class="text-3xl mb-3">🧮</div>
           <h4 class="font-bold text-ink group-hover:text-brand transition-colors">Calculadora de Calorías Profesional</h4>
           <p class="text-sm text-body mt-2">Calcula tus macros y requerimientos diarios en 30 segundos.</p>
         </a>
         
         <!-- Articulo 1 -->
-        <a href="/country/spain/que-son-las-calorias-y-como-funcionan/" class="flex-1 bg-white p-6 rounded-2xl border border-hairline shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
+        <a href="/country/spain/que-son-las-calorias-y-como-funcionan/" class="flex-1 bg-surface p-6 rounded-2xl border border-hairline shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
           <div class="text-3xl mb-3">🔬</div>
           <h4 class="font-bold text-ink group-hover:text-brand transition-colors">¿Qué Son las Calorías?</h4>
           <p class="text-sm text-body mt-2">Profundiza en la ciencia detrás de la energía, la termodinámica y cómo procesamos los alimentos.</p>
         </a>
 
         <!-- Articulo 2 -->
-        <a href="/country/spain/como-leer-etiquetas-nutricionales/" class="flex-1 bg-white p-6 rounded-2xl border border-hairline shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
+        <a href="/country/spain/como-leer-etiquetas-nutricionales/" class="flex-1 bg-surface p-6 rounded-2xl border border-hairline shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
           <div class="text-3xl mb-3">🏷️</div>
           <h4 class="font-bold text-ink group-hover:text-brand transition-colors">Guía de Etiquetas Nutricionales</h4>
           <p class="text-sm text-body mt-2">Aprende a leer y descifrar las tablas nutricionales de los alimentos de forma inteligente.</p>
@@ -279,32 +279,14 @@ const seoDescription = "Descubre con exactitud cuántas calorías necesitas al d
   </div>
 
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Cómo manejo la ansiedad de intentar acertar siempre mis calorías al milímetro?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Los expertos recomiendan centrarse en la regla del 80/20. Si el 80% del tiempo eres consistente, alcanzarás el 90% de tus objetivos."
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity": [
+    {"@type":"Question","name":"¿Cómo manejo la ansiedad de intentar acertar siempre mis calorías al milímetro?","acceptedAnswer": {"@type":"Answer","text":"Los expertos recomiendan centrarse en la regla del 80/20. Si el 80% del tiempo eres consistente, alcanzarás el 90% de tus objetivos."
       }
     },
-    {
-      "@type": "Question",
-      "name": "¿Cuáles son los verdaderos efectos a largo plazo de ignorar completamente estas pautas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La ignorancia calórica sistémica desemboca en patologías metabólicas mayores, como resistencia a la insulina, diabetes tipo 2 y obesidad."
+    {"@type":"Question","name":"¿Cuáles son los verdaderos efectos a largo plazo de ignorar completamente estas pautas?","acceptedAnswer": {"@type":"Answer","text":"La ignorancia calórica sistémica desemboca en patologías metabólicas mayores, como resistencia a la insulina, diabetes tipo 2 y obesidad."
       }
     },
-    {
-      "@type": "Question",
-      "name": "¿Con qué frecuencia clínica debo reevaluar mi TMB y mis calorías objetivo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Se estipula como buena práctica reevaluar tus necesidades calculándolas nuevamente cada 3 a 6 meses, o tras variaciones de peso de 5-7 kg."
+    {"@type":"Question","name":"¿Con qué frecuencia clínica debo reevaluar mi TMB y mis calorías objetivo?","acceptedAnswer": {"@type":"Answer","text":"Se estipula como buena práctica reevaluar tus necesidades calculándolas nuevamente cada 3 a 6 meses, o tras variaciones de peso de 5-7 kg."
       }
     }
   ]

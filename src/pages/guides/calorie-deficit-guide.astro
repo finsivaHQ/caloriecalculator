@@ -1,15 +1,15 @@
 ---
-import Button from "../../components/ui/Button.astro";
+import Button from"../../components/ui/Button.astro";
 
-import MedicalNote from "../../components/ui/MedicalNote.astro";
-import ContentLayout from "../../layouts/ContentLayout.astro";
-import type { FaqItem } from "../../lib/seo";
-import ArticleImage from "../../components/ui/ArticleImage.astro";
-import Sources from "../../components/ui/Sources.astro";
+import MedicalNote from"../../components/ui/MedicalNote.astro";
+import ContentLayout from"../../layouts/ContentLayout.astro";
+import type { FaqItem } from"../../lib/seo";
+import ArticleImage from"../../components/ui/ArticleImage.astro";
+import Sources from"../../components/ui/Sources.astro";
 
 const faqs: FaqItem[] = [
-  { q: "What is a calorie deficit?", a: "A calorie deficit means eating fewer calories than your body burns each day. It forces your body to use stored fat for energy, which is how you lose weight." },
-  { q: "How big should my calorie deficit be?", a: "A deficit of 300–500 calories per day is ideal for most people — sustainable and protective of muscle. Larger deficits speed up loss but increase muscle loss and hunger." },
+  { q:"What is a calorie deficit?", a:"A calorie deficit means eating fewer calories than your body burns each day. It forces your body to use stored fat for energy, which is how you lose weight." },
+  { q:"How big should my calorie deficit be?", a:"A deficit of 300–500 calories per day is ideal for most people — sustainable and protective of muscle. Larger deficits speed up loss but increase muscle loss and hunger." },
 ];
 ---
 
@@ -32,11 +32,11 @@ const faqs: FaqItem[] = [
   <div class="prose prose-lg max-w-none text-ink">
     <p class="text-xl leading-relaxed text-body mb-8">A <strong>calorie deficit</strong> is the absolute biological requirement for weight loss. It does not matter what fad diet you follow or what miracle supplement an influencer tries to sell you. Whether you follow Keto, Paleo, Intermittent Fasting, a strict Vegan diet, or simply track macros, every single one of them works through the exact same central mechanism: they force your body into a state where it systematically expends more energy than it consumes from food and beverages. When this happens consistently over time, your body, in its infinite survival instinct, is forced to break down stored body fat to obtain the fuel it lacks to maintain its vital functions.</p>
 
-    <p>In this comprehensive, hyper-detailed guide backed by the latest scientific evidence in clinical nutrition and sports metabolism, we will explore exactly how the biology of a calorie deficit works. You will discover how to calculate your needs with surgical precision, how to set up your environment for success, and most importantly, how to maintain this deficit without falling victim to constant food anxiety or the dreaded "rebound effect."</p>
+    <p>In this comprehensive, hyper-detailed guide backed by the latest scientific evidence in clinical nutrition and sports metabolism, we will explore exactly how the biology of a calorie deficit works. You will discover how to calculate your needs with surgical precision, how to set up your environment for success, and most importantly, how to maintain this deficit without falling victim to constant food anxiety or the dreaded"rebound effect."</p>
 
     <h2 class="text-3xl font-bold mt-12 mb-6 text-ink">1. The Foundational Science: Thermodynamics of Fat Loss</h2>
     <p>To truly understand weight loss and stop falling for fitness industry myths, we must look at the unchangeable basic principles of human biology and physics. The first law of thermodynamics, a universal law, states that energy cannot be created or destroyed out of nowhere; it can only be transformed from one state to another.</p>
-    <p>In the context of the human body, the food and drinks you consume contain potential energy, which we universally measure in "calories." On the other hand, your body constantly expends or "burns" energy, 24 hours a day. The physical movement of your limbs and the invisible metabolic functions of your internal organs demand that energy. This biological relationship is known as your <strong>Total Daily Energy Expenditure (TDEE)</strong>.</p>
+    <p>In the context of the human body, the food and drinks you consume contain potential energy, which we universally measure in"calories." On the other hand, your body constantly expends or"burns" energy, 24 hours a day. The physical movement of your limbs and the invisible metabolic functions of your internal organs demand that energy. This biological relationship is known as your <strong>Total Daily Energy Expenditure (TDEE)</strong>.</p>
     <p>Your TDEE is not a single random number, but is made up of four fundamental pillars or compartments:</p>
     <ul class="space-y-4 my-6 list-disc pl-6">
       <li><strong>Basal Metabolic Rate (BMR):</strong> This component is the absolute king of your metabolism, representing roughly <strong>60% to 70%</strong> of all the calories you burn daily. It is the pure energy your body strictly needs to survive and keep your organs functioning (heartbeat, lung respiration, blood circulation, brain function, and cellular maintenance) if you were lying in a bed in a deep coma all day.</li>
@@ -84,7 +84,7 @@ const faqs: FaqItem[] = [
     <h2 class="text-3xl font-bold mt-12 mb-6 text-ink">3. Calorie Deficit Tiers and Stratification</h2>
     <p>Deciding psychologically and physiologically how aggressive your deficit will be is arguably the most important strategic decision you will make in your entire body recomposition journey. A massive, rapid deficit is not always better; in fact, statistically, it is the factor that most often leads to long-term failure due to extreme chronic fatigue, immune system crashes, and uncontrollable hunger that ends in destructive weekend binges.</p>
 
-    <div class="overflow-x-auto my-10 bg-surface/80 backdrop-blur-md rounded-3xl shadow-lg border border-gray-100 p-1 sm:p-2">
+    <div class="overflow-x-auto my-10 bg-surface/80 backdrop-blur-md rounded-3xl shadow-lg border border-hairline p-1 sm:p-2">
       <table class="w-full text-left border-collapse rounded-2xl overflow-hidden">
         <thead>
           <tr class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
@@ -95,19 +95,19 @@ const faqs: FaqItem[] = [
           </tr>
         </thead>
         <tbody class="text-base text-ink">
-          <tr class="border-b border-gray-100 hover:bg-canvas-soft transition-colors">
+          <tr class="border-b border-hairline hover:bg-canvas-soft transition-colors">
             <td class="p-4 sm:p-5 font-bold text-brand-hover">Mild (Conservative)</td>
             <td class="p-4 sm:p-5">- 100 to 300 kcal</td>
             <td class="p-4 sm:p-5">0.2 lbs to 0.6 lbs</td>
             <td class="p-4 sm:p-5 leading-relaxed">Extremely high adherence. Almost imperceptible hunger. Ideal for competitive athletes who want to maximally preserve strength and muscle mass, or women with hormonal sensitivities.</td>
           </tr>
-          <tr class="bg-canvas-soft/50 border-b border-gray-100 hover:bg-canvas-soft-2 transition-colors">
+          <tr class="bg-canvas-soft/50 border-b border-hairline hover:bg-canvas-soft-2 transition-colors">
             <td class="p-4 sm:p-5 font-bold text-green-700">Moderate (Optimal)</td>
             <td class="p-4 sm:p-5">- 400 to 600 kcal</td>
             <td class="p-4 sm:p-5">0.8 lbs to 1.2 lbs</td>
             <td class="p-4 sm:p-5 leading-relaxed">High sustainability. Considered the gold standard universally recommended by nutrition professionals. Absolutely perfect balance between motivating weekly visual results and adherence without suffering.</td>
           </tr>
-          <tr class="border-b border-gray-100 hover:bg-canvas-soft transition-colors">
+          <tr class="border-b border-hairline hover:bg-canvas-soft transition-colors">
             <td class="p-4 sm:p-5 font-bold text-orange-600">Aggressive (Fast)</td>
             <td class="p-4 sm:p-5">- 700 to 900 kcal</td>
             <td class="p-4 sm:p-5">1.5 lbs to 2.0 lbs</td>
@@ -117,17 +117,17 @@ const faqs: FaqItem[] = [
             <td class="p-4 sm:p-5 font-bold text-red-600">Extreme (Crash Diet)</td>
             <td class="p-4 sm:p-5">- 1,000+ kcal</td>
             <td class="p-4 sm:p-5">2.0+ lbs</td>
-            <td class="p-4 sm:p-5 leading-relaxed">Critically Low sustainability level. Presents a very high risk of muscle degradation (catabolism), hair loss due to micronutrient deficiencies, severe deep fatigue, and an almost statistical guarantee of suffering the "rebound effect" upon resuming a normal diet. Not medically recommended.</td>
+            <td class="p-4 sm:p-5 leading-relaxed">Critically Low sustainability level. Presents a very high risk of muscle degradation (catabolism), hair loss due to micronutrient deficiencies, severe deep fatigue, and an almost statistical guarantee of suffering the"rebound effect" upon resuming a normal diet. Not medically recommended.</td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <h2 class="text-3xl font-bold mt-12 mb-6 text-ink">4. The "Starvation Mode" Myth and True Metabolic Adaptation</h2>
-    <p>Probably one of the most widespread and misunderstood pseudo-scientific concepts in the toxic commercial fitness industry is the terrifying "starvation mode." Crowds of people mistakenly claim on forums and social media that if you drastically restrict your daily calories too much, your body will freak out, enter a paleolithic survival panic mode, and miraculously begin to store body fat and get fat "even if you only eat lettuce."</p>
+    <h2 class="text-3xl font-bold mt-12 mb-6 text-ink">4. The"Starvation Mode" Myth and True Metabolic Adaptation</h2>
+    <p>Probably one of the most widespread and misunderstood pseudo-scientific concepts in the toxic commercial fitness industry is the terrifying"starvation mode." Crowds of people mistakenly claim on forums and social media that if you drastically restrict your daily calories too much, your body will freak out, enter a paleolithic survival panic mode, and miraculously begin to store body fat and get fat"even if you only eat lettuce."</p>
     <p>Let us be direct: <strong>This completely violates the immutable fundamental laws of physics and thermodynamics</strong>. Your body, under no known biological circumstance, can magically create fat tissue mass out of absolutely nothing without incoming energy (calories). You will never gain true fat if you stay in a sustained calorie deficit, but you will feel and look miserable if you take it to the extreme.</p>
 
-    <p>However, while "starvation mode" won't mystically make you fat out of thin air, the clinical phenomenon that DOES occur with absolute scientific certainty is called <strong>Adaptive Thermogenesis</strong> or <strong>Metabolic Adaptation</strong>.</p>
+    <p>However, while"starvation mode" won't mystically make you fat out of thin air, the clinical phenomenon that DOES occur with absolute scientific certainty is called <strong>Adaptive Thermogenesis</strong> or <strong>Metabolic Adaptation</strong>.</p>
     <p>As you gradually lose significant amounts of body weight and force your organism to maintain caloric stress for weeks or long months, your brain and your endocrine system (particularly through reductions in the hormones leptin, T3 thyroid, and testosterone) become incredibly more efficient and calculating in conserving available energy. As a defense mechanism, your total daily calorie expenditure (TDEE) suffers suppression through imperceptible pathways:</p>
     
     <ul class="list-disc pl-6 space-y-4 mb-6">
@@ -135,13 +135,13 @@ const faqs: FaqItem[] = [
       <li><strong>Economic Digestion and Lower TEF:</strong> By consuming less total volume of food and less protein, your digestive system inherently burns significantly fewer total calories in the process of processing that scarce food.</li>
       <li><strong>Subconscious Paralysis (NEAT Collapse):</strong> This is the largest and most silent adaptive factor. Completely subconsciously and involuntarily driven by your brain, you stop moving as much to preserve vital energy. Without realizing it, you blink less, slump more in your chair, stop gesturing vividly when talking, feel slightly more lethargic, and instinctively prefer the elevator over the stairs. These small automatic decreases can easily add up to a burn loss of between 300 and 600 calories a day.</li>
     </ul>
-    <p>Eventually, and frustratingly, when this suppressed internal energy expenditure drops and matches exactly with the level of your reduced calorie intake, your initial deficit mathematically vanishes into thin air. You have hit the infamous "plateau." To force fat loss again, you cannot give up; you must intelligently increase energy expenditure (more LISS cardio routines, a higher daily step goal) or apply a modest additional reduction to your current calories.</p>
+    <p>Eventually, and frustratingly, when this suppressed internal energy expenditure drops and matches exactly with the level of your reduced calorie intake, your initial deficit mathematically vanishes into thin air. You have hit the infamous"plateau." To force fat loss again, you cannot give up; you must intelligently increase energy expenditure (more LISS cardio routines, a higher daily step goal) or apply a modest additional reduction to your current calories.</p>
 
     <h2 class="text-3xl font-bold mt-12 mb-6 text-ink">5. Advanced Expert Strategies: How to Survive and Master the Deficit Without Starving</h2>
     <p>Staying within the strict confines of a prolonged calorie deficit does not have to be a miserable experience or a soul-crushing torture of willpower. Bodybuilders, fitness models, sports nutritionists, and elite professionals use very specific, proven lifestyle tools, food selections, and precise biological manipulations to maximize satiety and make adherence almost automatic and painless.</p>
 
-    <h3 class="text-2xl font-semibold mt-10 mb-4 text-brand-hover">A. The Architecture of Satiety: "Volume Eating"</h3>
-    <p>On a physical and biological level, the muscular walls of your human stomach are intricately lined with sensors called mechanoreceptors and physiological stretch receptors. When the gastric walls physically expand due to the presence of food mass or dense liquids, these vital receptors send powerful electrical fullness signals to the vagus nerve and then to the brain's hypothalamus, screaming: "We are full, turn off hunger impulses immediately!".</p>
+    <h3 class="text-2xl font-semibold mt-10 mb-4 text-brand-hover">A. The Architecture of Satiety:"Volume Eating"</h3>
+    <p>On a physical and biological level, the muscular walls of your human stomach are intricately lined with sensors called mechanoreceptors and physiological stretch receptors. When the gastric walls physically expand due to the presence of food mass or dense liquids, these vital receptors send powerful electrical fullness signals to the vagus nerve and then to the brain's hypothalamus, screaming:"We are full, turn off hunger impulses immediately!".</p>
     <p>The secret weapon is that you can ethically manipulate and effectively trick these stomach receptors if you strategically choose to fill your upper digestive tract with plant foods of enormous physical volume and weight, but of laughably low caloric density. This gives you fullness without ruining your daily macros.</p>
     <ul class="list-disc pl-6 space-y-2 mb-6 text-body">
       <li><strong>Master Examples of High Volume:</strong> Entire boxes of ripe strawberries, massive juicy watermelon, broccoli, cauliflower rice, spinach and leafy greens, tomatoes, roasted zucchini, fluffy whipped egg whites, and commercial sugar-free Jell-O (literally almost zero calories per full bowl).</li>
@@ -163,15 +163,15 @@ const faqs: FaqItem[] = [
       <div class="bg-red-50/50 p-8 rounded-3xl border border-red-100 shadow-sm">
         <h3 class="text-2xl font-bold text-red-800 mb-4 flex items-center">
           <svg class="w-8 h-8 mr-3 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-          Myth: "Carbohydrates consumed at night automatically turn into body fat."
+          Myth:"Carbohydrates consumed at night automatically turn into body fat."
         </h3>
-        <p class="text-body text-lg"><strong><span class="text-green-600 font-bold text-xl block mb-2 mt-4">✅ The Scientific Truth:</span></strong> Your biological body does not operate on a strict internal magical intestinal clock that suddenly decides to transform healthy food into toxic fat at exactly 8:00 PM. There is no "metabolic shutdown." The only overriding factor that matters and strictly dictates fat loss or accumulation is the absolute total and cumulative balance of net calories consumed at the very end of the total course of the day, and more importantly, the week. You can consume 100% of your calories in a massive late-night meal and still burn pure fat flawlessly, as long as you remain below your strict daily TDEE level.</p>
+        <p class="text-body text-lg"><strong><span class="text-green-600 font-bold text-xl block mb-2 mt-4">✅ The Scientific Truth:</span></strong> Your biological body does not operate on a strict internal magical intestinal clock that suddenly decides to transform healthy food into toxic fat at exactly 8:00 PM. There is no"metabolic shutdown." The only overriding factor that matters and strictly dictates fat loss or accumulation is the absolute total and cumulative balance of net calories consumed at the very end of the total course of the day, and more importantly, the week. You can consume 100% of your calories in a massive late-night meal and still burn pure fat flawlessly, as long as you remain below your strict daily TDEE level.</p>
       </div>
 
       <div class="bg-red-50/50 p-8 rounded-3xl border border-red-100 shadow-sm">
         <h3 class="text-2xl font-bold text-red-800 mb-4 flex items-center">
           <svg class="w-8 h-8 mr-3 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-          Myth: "The Keto diet and Intermittent Fasting have superior special powers to burn deep fat."
+          Myth:"The Keto diet and Intermittent Fasting have superior special powers to burn deep fat."
         </h3>
         <p class="text-body text-lg"><strong><span class="text-green-600 font-bold text-xl block mb-2 mt-4">✅ The Scientific Truth:</span></strong> The famous ketogenic diet (almost total elimination of carbohydrates) causes you to rapidly eliminate and urinate a massive amount of intramuscular water bound to glycogen during the crucial first and second week, which deceptively reflects as rapid and miraculous massive weight loss on the bathroom scale and in the mirror. However, in all closed metabolic ward controlled studies, actual microscopic lipid fat tissue loss occurs at the exact same parallel speed as on any other moderate-carbohydrate balanced diet, strictly assuming that protein and the calorie deficit are meticulously and mathematically matched in both study groups.</p>
       </div>
@@ -179,15 +179,15 @@ const faqs: FaqItem[] = [
       <div class="bg-red-50/50 p-8 rounded-3xl border border-red-100 shadow-sm">
         <h3 class="text-2xl font-bold text-red-800 mb-4 flex items-center">
           <svg class="w-8 h-8 mr-3 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-          Myth: "Intense cardiovascular training is the best primary method for generating the calorie deficit."
+          Myth:"Intense cardiovascular training is the best primary method for generating the calorie deficit."
         </h3>
-        <p class="text-body text-lg"><strong><span class="text-green-600 font-bold text-xl block mb-2 mt-4">✅ The Scientific Truth:</span></strong> There is an ancient, highly accurate, and clinically validated saying in the functional exercise industry that goes: "You can never train hard and long enough to mathematically outwork the ravages of a disastrous diet." For the vast majority of us, it is overwhelmingly and undeniably much more arduous and physically demanding to try and successfully burn an extra 500 exogenous calories doing tortuous exercise and sweating intensely on the treadmill for 45 to 60 straight minutes (depending heavily on your weight and genetics), than the extreme passive and comfortable simplicity of simply not putting into our mouths and not chewing that tasty, attractive 500-calorie commercial sugary pastry beforehand. The restrictive diet, home cooking, and the kitchen must imperatively and mandatorily always be your primary weapons; strength exercise must strictly be secondary, used to maximize mental health, blood sugar control, aesthetic development, and the preservation of lean muscle mass tone.</p>
+        <p class="text-body text-lg"><strong><span class="text-green-600 font-bold text-xl block mb-2 mt-4">✅ The Scientific Truth:</span></strong> There is an ancient, highly accurate, and clinically validated saying in the functional exercise industry that goes:"You can never train hard and long enough to mathematically outwork the ravages of a disastrous diet." For the vast majority of us, it is overwhelmingly and undeniably much more arduous and physically demanding to try and successfully burn an extra 500 exogenous calories doing tortuous exercise and sweating intensely on the treadmill for 45 to 60 straight minutes (depending heavily on your weight and genetics), than the extreme passive and comfortable simplicity of simply not putting into our mouths and not chewing that tasty, attractive 500-calorie commercial sugary pastry beforehand. The restrictive diet, home cooking, and the kitchen must imperatively and mandatorily always be your primary weapons; strength exercise must strictly be secondary, used to maximize mental health, blood sugar control, aesthetic development, and the preservation of lean muscle mass tone.</p>
       </div>
     </div>
 
   </div>
 
-  <div class="my-16 bg-surface/80 backdrop-blur-xl rounded-[2rem] p-8 sm:p-12 shadow-[0_8px_40px_rgb(0,0,0,0.06)] border border-gray-100">
+  <div class="my-16 bg-surface/80 backdrop-blur-xl rounded-[2rem] p-8 sm:p-12 shadow-[0_8px_40px_rgb(0,0,0,0.06)] border border-hairline">
     <h2 class="text-4xl font-extrabold text-ink mb-10 border-b-2 border-blue-100 pb-6">Clinical Community Frequently Asked Questions (FAQ)</h2>
     <div class="space-y-10">
       <div class="group">
@@ -232,7 +232,7 @@ const faqs: FaqItem[] = [
     </div>
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-14 relative z-10">
-      <a href="/guides/starvation-mode-metabolic-adaptation/" class="group block p-10 bg-surface/95 backdrop-blur-md rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-400 border border-gray-100 hover:border-blue-300 hover:-translate-y-2">
+      <a href="/guides/starvation-mode-metabolic-adaptation/" class="group block p-10 bg-surface/95 backdrop-blur-md rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-400 border border-hairline hover:border-blue-300 hover:-translate-y-2">
         <div class="w-16 h-16 bg-brand-soft text-brand rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand group-hover:text-white transition-all duration-300 transform group-hover:scale-110">
           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
         </div>
@@ -240,7 +240,7 @@ const faqs: FaqItem[] = [
         <p class="text-mute text-base leading-relaxed">Dive exhaustively into the underlying clinical science of why you crash and stall on your diet after months of progress, and discover the step-by-step method to safely and hormonally effectively reactivate and masterfully break your fat loss plateaus to continue transforming your physique.</p>
       </a>
       
-      <a href="/guides/protein-for-weight-loss/" class="group block p-10 bg-surface/95 backdrop-blur-md rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-400 border border-gray-100 hover:border-indigo-300 hover:-translate-y-2">
+      <a href="/guides/protein-for-weight-loss/" class="group block p-10 bg-surface/95 backdrop-blur-md rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-400 border border-hairline hover:border-indigo-300 hover:-translate-y-2">
         <div class="w-16 h-16 bg-brand-soft text-brand rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand group-hover:text-white transition-all duration-300 transform group-hover:scale-110">
           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
         </div>

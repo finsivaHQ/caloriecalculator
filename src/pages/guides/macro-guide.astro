@@ -1,29 +1,29 @@
 ---
-import Button from "../../components/ui/Button.astro";
-import MedicalNote from "../../components/ui/MedicalNote.astro";
-import ContentLayout from "../../layouts/ContentLayout.astro";
-import type { FaqItem } from "../../lib/seo";
-import ArticleImage from "../../components/ui/ArticleImage.astro";
+import Button from"../../components/ui/Button.astro";
+import MedicalNote from"../../components/ui/MedicalNote.astro";
+import ContentLayout from"../../layouts/ContentLayout.astro";
+import type { FaqItem } from"../../lib/seo";
+import ArticleImage from"../../components/ui/ArticleImage.astro";
 
 const faqs: FaqItem[] = [
-  { q: "How many calories in 1 gram of protein?", a: "Protein provides approximately 4 calories per gram. This is a scientific universal measurement established through bomb calorimetry." },
-  { q: "How many calories in 1 gram of carbs?", a: "Carbohydrates provide approximately 4 calories per gram, identical to protein but with different metabolic effects." },
-  { q: "How many calories in 1 gram of fat?", a: "Fat provides 9 calories per gram — more than double protein or carbs." },
-  { q: "How to calculate calories from macros?", a: "Protein: grams × 4. Carbs: grams × 4. Fat: grams × 9. Add all three for total calories." },
-  { q: "Protein to calories conversion?", a: "Multiply protein grams by 4. 150g protein = 600 calories. Every gram of protein equals 4 kcal." },
-  { q: "Calories per gram chart?", a: "Protein: 4 kcal/g, Carbs: 4 kcal/g, Fat: 9 kcal/g. This determines how many calories you get per gram of each macro." },
-  { q: "How to convert protein grams to calories?", a: "Use the formula: protein grams × 4 = calories. For 100g protein, you get 400 calories. Use our <a href='/protein-calculator/'>protein calculator</a>." },
-  { q: "Protein calorie percentage?", a: "Protein calories ÷ total calories × 100. On 2000 calories with 150g protein (600 kcal), protein is 30%." },
-  { q: "Macronutrient calorie density comparison?", a: "Protein and carbs: 4 kcal/g each. Fat: 9 kcal/g. Fat is over twice as calorie-dense as protein or carbs." },
-  { q: "Does protein have more calories than carbs?", a: "No. Both protein and carbohydrates have approximately 4 calories per gram. Fat is the most calorie-dense macro at 9 kcal/g." },
-  { q: "Why 4 calories per gram for protein?", a: "When protein metabolizes, carbon-hydrogen bonds release energy measured at 4 kcal/g through controlled bomb calorimetry testing." },
-  { q: "Calories in protein rich foods?", a: "Chicken breast: 165 kcal/100g (31g protein). Eggs: 130 kcal/50g (6g protein). Greek yogurt: 59 kcal/100g (10g protein)." },
-  { q: "Protein calorie calculator?", a: "Our <a href='/protein-calculator/'>protein calculator</a> shows your target grams and calories. Our <a href="/">Calorie Calculator</a> converts all macros." },
-  { q: "Calories from macros formula?", a: "Protein (g) × 4 + Carbs (g) × 4 + Fat (g) × 9 = Total calories. Example: 150P + 200C + 67F = 600 + 800 + 603 = 2003 kcal." },
-  { q: "How to calculate protein calories?", a: "Multiply your protein intake by 4. If you eat 120g protein daily, that's 480 calories from protein alone." },
-  { q: "Calories per gram of macronutrients chart?", a: "Protein: 4 kcal/g, Carbs: 4 kcal/g, Fat: 9 kcal/g. This universal chart helps calculate calories from any macro intake." },
-  { q: "Convert calories to protein grams?", a: "Divide calories by 4. For 500 calories from protein, you need 125g protein. Remember: calories ÷ 4 = protein grams." },
-  { q: "Why does protein equal 4 calories?", a: "The Atwater system established 4 kcal/g through scientific testing. This measurement holds for all protein sources including animals and plants." },
+  { q:"How many calories in 1 gram of protein?", a:"Protein provides approximately 4 calories per gram. This is a scientific universal measurement established through bomb calorimetry." },
+  { q:"How many calories in 1 gram of carbs?", a:"Carbohydrates provide approximately 4 calories per gram, identical to protein but with different metabolic effects." },
+  { q:"How many calories in 1 gram of fat?", a:"Fat provides 9 calories per gram — more than double protein or carbs." },
+  { q:"How to calculate calories from macros?", a:"Protein: grams × 4. Carbs: grams × 4. Fat: grams × 9. Add all three for total calories." },
+  { q:"Protein to calories conversion?", a:"Multiply protein grams by 4. 150g protein = 600 calories. Every gram of protein equals 4 kcal." },
+  { q:"Calories per gram chart?", a:"Protein: 4 kcal/g, Carbs: 4 kcal/g, Fat: 9 kcal/g. This determines how many calories you get per gram of each macro." },
+  { q:"How to convert protein grams to calories?", a:"Use the formula: protein grams × 4 = calories. For 100g protein, you get 400 calories. Use our <a href='/protein-calculator/'>protein calculator</a>." },
+  { q:"Protein calorie percentage?", a:"Protein calories ÷ total calories × 100. On 2000 calories with 150g protein (600 kcal), protein is 30%." },
+  { q:"Macronutrient calorie density comparison?", a:"Protein and carbs: 4 kcal/g each. Fat: 9 kcal/g. Fat is over twice as calorie-dense as protein or carbs." },
+  { q:"Does protein have more calories than carbs?", a:"No. Both protein and carbohydrates have approximately 4 calories per gram. Fat is the most calorie-dense macro at 9 kcal/g." },
+  { q:"Why 4 calories per gram for protein?", a:"When protein metabolizes, carbon-hydrogen bonds release energy measured at 4 kcal/g through controlled bomb calorimetry testing." },
+  { q:"Calories in protein rich foods?", a:"Chicken breast: 165 kcal/100g (31g protein). Eggs: 130 kcal/50g (6g protein). Greek yogurt: 59 kcal/100g (10g protein)." },
+  { q:"Protein calorie calculator?", a:"Our <a href='/protein-calculator/'>protein calculator</a> shows your target grams and calories. Our <a href="/">Calorie Calculator</a> converts all macros." },
+  { q:"Calories from macros formula?", a:"Protein (g) × 4 + Carbs (g) × 4 + Fat (g) × 9 = Total calories. Example: 150P + 200C + 67F = 600 + 800 + 603 = 2003 kcal." },
+  { q:"How to calculate protein calories?", a:"Multiply your protein intake by 4. If you eat 120g protein daily, that's 480 calories from protein alone." },
+  { q:"Calories per gram of macronutrients chart?", a:"Protein: 4 kcal/g, Carbs: 4 kcal/g, Fat: 9 kcal/g. This universal chart helps calculate calories from any macro intake." },
+  { q:"Convert calories to protein grams?", a:"Divide calories by 4. For 500 calories from protein, you need 125g protein. Remember: calories ÷ 4 = protein grams." },
+  { q:"Why does protein equal 4 calories?", a:"The Atwater system established 4 kcal/g through scientific testing. This measurement holds for all protein sources including animals and plants." },
 ];
 ---
 
@@ -216,33 +216,30 @@ const faqs: FaqItem[] = [
 <li><a href="https://www.nih.gov/health-information/weight-management" target="_blank" rel="noopener noreferrer">National Institutes of Health (NIH) - Weight Management</a></li>
 </ul>
 
-<div class="mt-16 bg-canvas-soft dark:bg-gray-800 p-8 rounded-xl">
-    <h2 class="text-3xl font-bold mb-6 text-ink dark:text-white">Expert FAQs & Psychological Impact</h2>
-    <p class="text-body dark:text-gray-300 mb-6">Let's be incredibly honest for a moment: dealing with this can cause serious compliance fatigue and anxiety. You are not alone. Here are the most critical, edge-case questions answered with complete transparency to protect your well-being and ensure you have all the facts.</p>
+<div class="mt-16 bg-canvas-soft p-8 rounded-xl">
+    <h2 class="text-3xl font-bold mb-6 text-ink">Expert FAQs & Psychological Impact</h2>
+    <p class="text-body mb-6">Let's be incredibly honest for a moment: dealing with this can cause serious compliance fatigue and anxiety. You are not alone. Here are the most critical, edge-case questions answered with complete transparency to protect your well-being and ensure you have all the facts.</p>
     <div class="space-y-6">
         <div>
-            <h3 class="text-xl font-semibold text-ink dark:text-white">1. How do I manage the anxiety around getting this exactly right?</h3>
-            <p class="text-body dark:text-gray-300 mt-2">The psychological burden of trying to be perfect can lead to decision paralysis. Experts recommend focusing on the 80/20 rule. Whether it's nutrition or sizing, consistency and general accuracy will yield 90% of your desired results. Do not let minor fluctuations disrupt your peace of mind.</p>
+            <h3 class="text-xl font-semibold text-ink">1. How do I manage the anxiety around getting this exactly right?</h3>
+            <p class="text-body mt-2">The psychological burden of trying to be perfect can lead to decision paralysis. Experts recommend focusing on the 80/20 rule. Whether it's nutrition or sizing, consistency and general accuracy will yield 90% of your desired results. Do not let minor fluctuations disrupt your peace of mind.</p>
         </div>
         <div>
-            <h3 class="text-xl font-semibold text-ink dark:text-white">2. What are the long-term effects of ignoring these guidelines?</h3>
-            <p class="text-body dark:text-gray-300 mt-2">Over time, systemic neglect cascades into larger physical and mental health issues. Proper adherence mitigates chronic discomfort and sets a baseline for sustainable lifestyle improvements. The goal is to build a foundation that supports you passively.</p>
+            <h3 class="text-xl font-semibold text-ink">2. What are the long-term effects of ignoring these guidelines?</h3>
+            <p class="text-body mt-2">Over time, systemic neglect cascades into larger physical and mental health issues. Proper adherence mitigates chronic discomfort and sets a baseline for sustainable lifestyle improvements. The goal is to build a foundation that supports you passively.</p>
         </div>
         <div>
-            <h3 class="text-xl font-semibold text-ink dark:text-white">3. How often should I re-evaluate my baseline numbers?</h3>
-            <p class="text-body dark:text-gray-300 mt-2">Your body and circumstances are not static. It is highly recommended to reassess your measurements and caloric needs every 3 to 6 months, or immediately following any significant lifestyle or weight change. Proactive adjustments prevent reactive stress.</p>
+            <h3 class="text-xl font-semibold text-ink">3. How often should I re-evaluate my baseline numbers?</h3>
+            <p class="text-body mt-2">Your body and circumstances are not static. It is highly recommended to reassess your measurements and caloric needs every 3 to 6 months, or immediately following any significant lifestyle or weight change. Proactive adjustments prevent reactive stress.</p>
         </div>
         <div>
-            <h3 class="text-xl font-semibold text-ink dark:text-white">4. Is there a danger in relying entirely on automated calculators?</h3>
-            <p class="text-body dark:text-gray-300 mt-2">While calculators provide a mathematically sound starting point, they cannot account for nuanced human biology. Stress, sleep, and hormonal variations play a massive role. Always use calculator outputs as a guide, not gospel, and adjust based on real-world feedback from your own body.</p>
+            <h3 class="text-xl font-semibold text-ink">4. Is there a danger in relying entirely on automated calculators?</h3>
+            <p class="text-body mt-2">While calculators provide a mathematically sound starting point, they cannot account for nuanced human biology. Stress, sleep, and hormonal variations play a massive role. Always use calculator outputs as a guide, not gospel, and adjust based on real-world feedback from your own body.</p>
         </div>
     </div>
 </div>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{"@type":"Question","name":"How do I manage the anxiety around getting this exactly right?","acceptedAnswer":{"@type":"Answer","text":"Focus on the 80/20 rule. Consistency and general accuracy will yield 90% of your desired results."}}, {"@type":"Question","name":"What are the long-term effects of ignoring these guidelines?","acceptedAnswer":{"@type":"Answer","text":"Systemic neglect cascades into larger physical and mental health issues."}}]
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity": [{"@type":"Question","name":"How do I manage the anxiety around getting this exactly right?","acceptedAnswer":{"@type":"Answer","text":"Focus on the 80/20 rule. Consistency and general accuracy will yield 90% of your desired results."}}, {"@type":"Question","name":"What are the long-term effects of ignoring these guidelines?","acceptedAnswer":{"@type":"Answer","text":"Systemic neglect cascades into larger physical and mental health issues."}}]
 }
 </script>
 

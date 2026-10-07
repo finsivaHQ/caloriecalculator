@@ -1,53 +1,53 @@
 ---
 import Button from '../../../components/ui/Button.astro';
 import ContentLayout from '../../../layouts/ContentLayout.astro';
-import type { FaqItem } from "../../../lib/seo";
+import type { FaqItem } from"../../../lib/seo";
 
 const faqs: FaqItem[] = [
   { 
-    q: "¿Qué es una calculadora de macros?", 
-    a: "Es una herramienta o método que toma tus necesidades calóricas totales y las divide en los tres macronutrientes principales: proteínas, carbohidratos y grasas, basándose en tus objetivos personales." 
+    q:"¿Qué es una calculadora de macros?", 
+    a:"Es una herramienta o método que toma tus necesidades calóricas totales y las divide en los tres macronutrientes principales: proteínas, carbohidratos y grasas, basándose en tus objetivos personales." 
   },
   { 
-    q: "¿Cuántas proteínas, carbohidratos y grasas debo consumir?", 
-    a: "No existe una proporción universal perfecta. Depende de tu peso, nivel de actividad física, composición corporal y metas. Muchas personas comienzan con estimaciones generales, como 1.6 a 2.2 gramos de proteína por kilo de peso, asignando un mínimo de grasas saludables y completando el resto con carbohidratos." 
+    q:"¿Cuántas proteínas, carbohidratos y grasas debo consumir?", 
+    a:"No existe una proporción universal perfecta. Depende de tu peso, nivel de actividad física, composición corporal y metas. Muchas personas comienzan con estimaciones generales, como 1.6 a 2.2 gramos de proteína por kilo de peso, asignando un mínimo de grasas saludables y completando el resto con carbohidratos." 
   },
   { 
-    q: "¿Cómo se calculan los macros?", 
-    a: "Primero estimas tus necesidades calóricas diarias (GET). Luego estableces tu objetivo de proteínas y grasas en gramos. Multiplicas los gramos de proteína por 4 y los de grasa por 9 para saber cuántas calorías representan. Restas eso de tus calorías totales, y el número restante lo divides entre 4 para obtener los gramos de carbohidratos." 
+    q:"¿Cómo se calculan los macros?", 
+    a:"Primero estimas tus necesidades calóricas diarias (GET). Luego estableces tu objetivo de proteínas y grasas en gramos. Multiplicas los gramos de proteína por 4 y los de grasa por 9 para saber cuántas calorías representan. Restas eso de tus calorías totales, y el número restante lo divides entre 4 para obtener los gramos de carbohidratos." 
   },
   { 
-    q: "¿Cuántas calorías tiene un gramo de proteína?", 
-    a: "Un gramo de proteína aporta aproximadamente 4 calorías." 
+    q:"¿Cuántas calorías tiene un gramo de proteína?", 
+    a:"Un gramo de proteína aporta aproximadamente 4 calorías." 
   },
   { 
-    q: "¿Cuántas calorías tiene un gramo de carbohidratos?", 
-    a: "Un gramo de carbohidratos también aporta aproximadamente 4 calorías." 
+    q:"¿Cuántas calorías tiene un gramo de carbohidratos?", 
+    a:"Un gramo de carbohidratos también aporta aproximadamente 4 calorías." 
   },
   { 
-    q: "¿Cuántas calorías tiene un gramo de grasa?", 
-    a: "Un gramo de grasa es más denso en energía y aporta aproximadamente 9 calorías." 
+    q:"¿Cuántas calorías tiene un gramo de grasa?", 
+    a:"Un gramo de grasa es más denso en energía y aporta aproximadamente 9 calorías." 
   },
   { 
-    q: "¿Los macros cambian si quiero perder peso?", 
-    a: "Sí. Para perder peso, debes estar en un déficit calórico. Al reducir tus calorías totales, tus gramos de carbohidratos y grasas generalmente disminuirán, mientras que las proteínas suelen mantenerse altas para ayudar a preservar la masa muscular." 
+    q:"¿Los macros cambian si quiero perder peso?", 
+    a:"Sí. Para perder peso, debes estar en un déficit calórico. Al reducir tus calorías totales, tus gramos de carbohidratos y grasas generalmente disminuirán, mientras que las proteínas suelen mantenerse altas para ayudar a preservar la masa muscular." 
   },
   { 
-    q: "¿Los macros cambian si quiero ganar peso?", 
-    a: "Sí. Para ganar peso (y masa muscular), necesitarás un superávit calórico. Esto usualmente significa aumentar significativamente la ingesta de carbohidratos para tener más energía y favorecer la recuperación, junto con cantidades adecuadas de proteínas y grasas." 
+    q:"¿Los macros cambian si quiero ganar peso?", 
+    a:"Sí. Para ganar peso (y masa muscular), necesitarás un superávit calórico. Esto usualmente significa aumentar significativamente la ingesta de carbohidratos para tener más energía y favorecer la recuperación, junto con cantidades adecuadas de proteínas y grasas." 
   },
   { 
-    q: "¿Los cálculos de macros son exactos?", 
-    a: "No, son estimaciones. Las etiquetas de los alimentos permiten cierto margen de error, la tasa metabólica varía entre individuos, y la absorción de nutrientes no es idéntica. Son un excelente punto de partida, pero no una ciencia exacta al milímetro." 
+    q:"¿Los cálculos de macros son exactos?", 
+    a:"No, son estimaciones. Las etiquetas de los alimentos permiten cierto margen de error, la tasa metabólica varía entre individuos, y la absorción de nutrientes no es idéntica. Son un excelente punto de partida, pero no una ciencia exacta al milímetro." 
   },
   { 
-    q: "¿Cuál es la diferencia entre calorías y macronutrientes?", 
-    a: "Las calorías miden la energía total que te aporta un alimento. Los macronutrientes (proteínas, carbohidratos y grasas) son los componentes físicos del alimento que contienen esa energía." 
+    q:"¿Cuál es la diferencia entre calorías y macronutrientes?", 
+    a:"Las calorías miden la energía total que te aporta un alimento. Los macronutrientes (proteínas, carbohidratos y grasas) son los componentes físicos del alimento que contienen esa energía." 
   }
 ];
 
-const seoTitle = "Calculadora de Macros: Proteínas, Carbohidratos y Grasas";
-const seoDescription = "Descubre qué son los macronutrientes, cómo calcular tus proteínas, carbohidratos y grasas diarios, y cómo relacionarlos con tus objetivos calóricos.";
+const seoTitle ="Calculadora de Macros: Proteínas, Carbohidratos y Grasas";
+const seoDescription ="Descubre qué son los macronutrientes, cómo calcular tus proteínas, carbohidratos y grasas diarios, y cómo relacionarlos con tus objetivos calóricos.";
 ---
 
 <ContentLayout
@@ -78,12 +78,12 @@ const seoDescription = "Descubre qué son los macronutrientes, cómo calcular tu
 
     <h2>¿Qué son los macronutrientes?</h2>
     <p>
-      Los macronutrientes, o "macros", son los tres grupos principales de nutrientes que el cuerpo humano necesita en grandes cantidades para sobrevivir, crecer y funcionar correctamente. Cada uno tiene un rol fisiológico distinto.
+      Los macronutrientes, o"macros", son los tres grupos principales de nutrientes que el cuerpo humano necesita en grandes cantidades para sobrevivir, crecer y funcionar correctamente. Cada uno tiene un rol fisiológico distinto.
     </p>
 
     <h3>Proteínas</h3>
     <p>
-      Las proteínas son los "ladrillos" del cuerpo. Están compuestas por aminoácidos y son fundamentales para mantener y reparar los tejidos corporales (como los músculos, la piel y el cabello), además de apoyar funciones fisiológicas normales, la creación de enzimas y el funcionamiento del sistema inmunológico.
+      Las proteínas son los"ladrillos" del cuerpo. Están compuestas por aminoácidos y son fundamentales para mantener y reparar los tejidos corporales (como los músculos, la piel y el cabello), además de apoyar funciones fisiológicas normales, la creación de enzimas y el funcionamiento del sistema inmunológico.
     </p>
 
     <h3>Carbohidratos</h3>
@@ -115,7 +115,7 @@ const seoDescription = "Descubre qué son los macronutrientes, cómo calcular tu
       Después de establecer las calorías objetivo, se determina una cantidad razonable de proteínas (usualmente basada en el peso corporal). Se asigna un nivel de grasas necesario para la salud, y finalmente, las calorías restantes se asignan a los carbohidratos. 
     </p>
     <p>
-      <a href="/country/spain/calculadora-de-calorias/" class="text-brand hover:underline">Las calculadoras de calorías</a> pueden utilizar diferentes fórmulas, por lo que es importante recordar que no existe una distribución de macros "perfecta" que sirva para todo el mundo.
+      <a href="/country/spain/calculadora-de-calorias/" class="text-brand hover:underline">Las calculadoras de calorías</a> pueden utilizar diferentes fórmulas, por lo que es importante recordar que no existe una distribución de macros"perfecta" que sirva para todo el mundo.
     </p>
 
     <h2>¿Cuántas proteínas, carbohidratos y grasas necesito?</h2>
@@ -139,7 +139,7 @@ const seoDescription = "Descubre qué son los macronutrientes, cómo calcular tu
       Las grasas suelen calcularse asegurando un mínimo para la salud hormonal, a menudo entre el 20% y el 35% de las calorías totales, o alrededor de 0.8 a 1 gramo por kilogramo de peso corporal. 
     </p>
     <p>
-      No asumas que consumir más o menos grasas es automáticamente "saludable" o "insalubre" sin tener en cuenta el contexto total de la dieta y el tipo de grasas consumidas.
+      No asumas que consumir más o menos grasas es automáticamente"saludable" o"insalubre" sin tener en cuenta el contexto total de la dieta y el tipo de grasas consumidas.
     </p>
 
     <h3>¿Cómo calcular los carbohidratos?</h3>
@@ -176,7 +176,7 @@ const seoDescription = "Descubre qué son los macronutrientes, cómo calcular tu
     
     <h3>Macros para perder peso</h3>
     <p>
-      La pérdida de peso requiere <a href="/country/spain/calorias-para-perder-peso/" class="text-brand hover:underline">un déficit energético sostenido</a>. Ninguna distribución "mágica" de macros garantizará la pérdida de grasa si estás consumiendo más calorías de las que quemas. Sin embargo, durante un déficit, mantener un consumo adecuado de proteínas es una consideración común porque puede ayudar a preservar la masa muscular y proporcionar mayor saciedad.
+      La pérdida de peso requiere <a href="/country/spain/calorias-para-perder-peso/" class="text-brand hover:underline">un déficit energético sostenido</a>. Ninguna distribución"mágica" de macros garantizará la pérdida de grasa si estás consumiendo más calorías de las que quemas. Sin embargo, durante un déficit, mantener un consumo adecuado de proteínas es una consideración común porque puede ayudar a preservar la masa muscular y proporcionar mayor saciedad.
     </p>
 
     <h3>Macros para ganar peso</h3>
@@ -205,7 +205,7 @@ const seoDescription = "Descubre qué son los macronutrientes, cómo calcular tu
       <li><strong>Asumir que un ratio funciona para todos:</strong> Lo que le funciona a un atleta olímpico puede no ser ideal para una persona sedentaria.</li>
       <li><strong>Ignorar las calorías totales:</strong> Cumplir tus macros no importa si excedes enormemente tus calorías objetivo.</li>
       <li><strong>Olvidar pequeñas adiciones:</strong> Aceites, salsas, bebidas y pequeños snacks a menudo se olvidan, aportando cientos de calorías ocultas.</li>
-      <li><strong>Centrarse solo en números e ignorar la salud:</strong> Obtener tus carbohidratos de azúcar pura técnicamente "cumple tus macros", pero ignorar la fibra, las vitaminas y los minerales compromete la calidad general de la dieta.</li>
+      <li><strong>Centrarse solo en números e ignorar la salud:</strong> Obtener tus carbohidratos de azúcar pura técnicamente"cumple tus macros", pero ignorar la fibra, las vitaminas y los minerales compromete la calidad general de la dieta.</li>
       <li><strong>Cambiar de objetivos constantemente:</strong> El cuerpo necesita consistencia a lo largo del tiempo para mostrar resultados.</li>
     </ul>
 

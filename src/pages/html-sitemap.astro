@@ -1,6 +1,6 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Section from "../components/ui/Section.astro";
+import Layout from"../layouts/Layout.astro";
+import Section from"../components/ui/Section.astro";
 
 // Dynamically fetch all .astro pages
 const allPages = import.meta.glob('/src/pages/**/*.astro', { eager: true });
@@ -60,7 +60,7 @@ for (const path in allPages) {
 
 // Removed manual append of International & Regional since dynamic routing captures 'Country - Spain' automatically.
 
-// Sort categories to put "Main Tools" first
+// Sort categories to put"Main Tools" first
 const sortedCategories = Object.keys(categorizedPages).sort((a, b) => {
   if (a === 'Main Tools & Calculators') return -1;
   if (a === 'Main Tools & Calculators') return 1;

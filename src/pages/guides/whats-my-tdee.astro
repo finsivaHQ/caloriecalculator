@@ -1,30 +1,22 @@
 ---
-import Button from "../../components/ui/Button.astro";
-import MedicalNote from "../../components/ui/MedicalNote.astro";
-import ContentLayout from "../../layouts/ContentLayout.astro";
-import ArticleImage from "../../components/ui/ArticleImage.astro";
-import type { FaqItem } from "../../lib/seo";
-import Sources from "../../components/ui/Sources.astro";
+import Button from"../../components/ui/Button.astro";
+import MedicalNote from"../../components/ui/MedicalNote.astro";
+import ContentLayout from"../../layouts/ContentLayout.astro";
+import ArticleImage from"../../components/ui/ArticleImage.astro";
+import type { FaqItem } from"../../lib/seo";
+import Sources from"../../components/ui/Sources.astro";
 
 const faqs: FaqItem[] = [
-  { q: "How do I calculate my exact TDEE?", a: "To accurately calculate your Total Daily Energy Expenditure (TDEE), first determine your Basal Metabolic Rate (BMR) using a clinically validated formula such as the Mifflin-St Jeor equation. Once you have your BMR, multiply it by an activity factor ranging from 1.2 (sedentary) to 1.9 (professional athlete). This accounts for all physical movement throughout the day." },
-  { q: "What is a good TDEE level for weight loss?", a: "For sustainable and healthy fat loss, it is universally recommended to establish a caloric deficit of 300 to 500 calories below your maintenance TDEE. This creates a physiological environment that typically results in approximately 0.5 to 1 pound (0.25 to 0.5 kg) of weight loss per week, minimizing the risk of lean muscle catabolism." },
-  { q: "Is TDEE the exact same thing as my maintenance calories?", a: "Yes, precisely. Your TDEE represents your maintenance calories. If your daily dietary caloric intake exactly matches your Total Daily Energy Expenditure, your body weight will remain relatively stable without long-term macroscopic fluctuations." },
-  { q: "Does my TDEE change over time or is it a static number?", a: "Your TDEE is a highly dynamic figure that fluctuates continuously. It decreases as you lose weight—because a smaller physiological mass requires less ambient energy to maintain—or as you age. Conversely, it increases if you accrue lean muscle mass. We advise recalculating your TDEE every 4 to 6 weeks or following any 5 to 10-pound weight fluctuation." },
-  { q: "Why does my calculated TDEE seem disproportionately high?", a: "It is empirically common for individuals to inadvertently overestimate their physical activity levels. If your TDEE seems excessive, you likely selected an activity multiplier that is too aggressive. We suggest defaulting to a lower tier, such as 'lightly active', and rigorously monitoring your body weight for 2 to 3 weeks to titrate your intake based on empirical results." },
-  { q: "How does body composition affect TDEE?", a: "Muscle tissue is significantly more metabolically active than adipose (fat) tissue. Consequently, individuals with a higher percentage of lean muscle mass will have a demonstrably higher Basal Metabolic Rate (BMR) and, by extension, a higher TDEE compared to individuals of the exact same weight but with a higher body fat percentage." },
-  { q: "Can medical conditions alter my Total Daily Energy Expenditure?", a: "Yes. Endocrine disorders, specifically those affecting the thyroid gland (such as hypothyroidism or hyperthyroidism), can significantly modulate your Basal Metabolic Rate, thereby directly impacting your overall TDEE. Always consult with a healthcare professional if you suspect metabolic irregularities." }
+  { q:"How do I calculate my exact TDEE?", a:"To accurately calculate your Total Daily Energy Expenditure (TDEE), first determine your Basal Metabolic Rate (BMR) using a clinically validated formula such as the Mifflin-St Jeor equation. Once you have your BMR, multiply it by an activity factor ranging from 1.2 (sedentary) to 1.9 (professional athlete). This accounts for all physical movement throughout the day." },
+  { q:"What is a good TDEE level for weight loss?", a:"For sustainable and healthy fat loss, it is universally recommended to establish a caloric deficit of 300 to 500 calories below your maintenance TDEE. This creates a physiological environment that typically results in approximately 0.5 to 1 pound (0.25 to 0.5 kg) of weight loss per week, minimizing the risk of lean muscle catabolism." },
+  { q:"Is TDEE the exact same thing as my maintenance calories?", a:"Yes, precisely. Your TDEE represents your maintenance calories. If your daily dietary caloric intake exactly matches your Total Daily Energy Expenditure, your body weight will remain relatively stable without long-term macroscopic fluctuations." },
+  { q:"Does my TDEE change over time or is it a static number?", a:"Your TDEE is a highly dynamic figure that fluctuates continuously. It decreases as you lose weight—because a smaller physiological mass requires less ambient energy to maintain—or as you age. Conversely, it increases if you accrue lean muscle mass. We advise recalculating your TDEE every 4 to 6 weeks or following any 5 to 10-pound weight fluctuation." },
+  { q:"Why does my calculated TDEE seem disproportionately high?", a:"It is empirically common for individuals to inadvertently overestimate their physical activity levels. If your TDEE seems excessive, you likely selected an activity multiplier that is too aggressive. We suggest defaulting to a lower tier, such as 'lightly active', and rigorously monitoring your body weight for 2 to 3 weeks to titrate your intake based on empirical results." },
+  { q:"How does body composition affect TDEE?", a:"Muscle tissue is significantly more metabolically active than adipose (fat) tissue. Consequently, individuals with a higher percentage of lean muscle mass will have a demonstrably higher Basal Metabolic Rate (BMR) and, by extension, a higher TDEE compared to individuals of the exact same weight but with a higher body fat percentage." },
+  { q:"Can medical conditions alter my Total Daily Energy Expenditure?", a:"Yes. Endocrine disorders, specifically those affecting the thyroid gland (such as hypothyroidism or hyperthyroidism), can significantly modulate your Basal Metabolic Rate, thereby directly impacting your overall TDEE. Always consult with a healthcare professional if you suspect metabolic irregularities." }
 ];
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(faq => ({
-    "@type": "Question",
-    "name": faq.q,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.a
+const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity": faqs.map(faq => ({"@type":"Question","name": faq.q,"acceptedAnswer": {"@type":"Answer","text": faq.a
     }
   }))
 };
@@ -42,15 +34,15 @@ const faqSchema = {
   faqs={faqs}
 >
 
-<div class="mb-8 p-6 bg-brand-soft dark:bg-blue-900 rounded-lg shadow-sm border border-blue-100 dark:border-blue-800">
-    <h2 class="text-2xl font-bold mb-4 text-ink dark:text-white">Expert Insight: The Psychology Behind the Frustration</h2>
-    <p class="text-body dark:text-gray-200 mb-4">
-        Before we dive into the technical details, let's be incredibly honest for a moment. Navigating these guidelines can cause serious compliance fatigue. Whether you're trying to figure out the exact mathematical sizing for a perfect fit or dialing in complex daily metabolic metrics, the pressure to get it "exactly right" often leads to decision paralysis. 
+<div class="mb-8 p-6 bg-brand-soft rounded-lg shadow-sm border border-blue-100">
+    <h2 class="text-2xl font-bold mb-4 text-ink">Expert Insight: The Psychology Behind the Frustration</h2>
+    <p class="text-body mb-4">
+        Before we dive into the technical details, let's be incredibly honest for a moment. Navigating these guidelines can cause serious compliance fatigue. Whether you're trying to figure out the exact mathematical sizing for a perfect fit or dialing in complex daily metabolic metrics, the pressure to get it"exactly right" often leads to decision paralysis. 
     </p>
-    <p class="text-body dark:text-gray-200 mb-4">
+    <p class="text-body mb-4">
         We hear from thousands of individuals who experience profound anxiety when their calculations don't perfectly align with reality. This is completely normal. Our biology and body measurements fluctuate naturally due to stress, hormonal changes, and daily physical activity. Striving for perfection often leads to burnout and abandonment of the goal entirely.
     </p>
-    <p class="text-body dark:text-gray-200">
+    <p class="text-body">
         <strong>The Golden Rule:</strong> The experts advocate for the 80/20 principle. If your approach is 80% accurate consistently, you will mitigate long-term chronic issues—be it physical discomfort from poor structural support, or metabolic stalls from aggressive tracking. Use the data and the guides below as powerful baselines, but always grant yourself the grace to adjust based on how you actually feel in the real world. Your long-term well-being is vastly more important than temporary numerical perfection.
     </p>
 </div>
@@ -116,7 +108,7 @@ const faqSchema = {
       <div class="flex-shrink-0 w-12 h-12 bg-canvas-soft text-brand rounded-xl flex items-center justify-center font-bold text-xl">2</div>
       <div>
         <h3 class="text-xl font-bold text-ink mb-2">Quantify Your Activity Multiplier Accurately</h3>
-        <p class="text-body">Maintain clinical objectivity; empirical data shows humans grossly overestimate their daily ambulation. If you occupy a sedentary desk job but attend the gymnasium thrice weekly, you are functionally "Lightly Active", not "Highly Active".</p>
+        <p class="text-body">Maintain clinical objectivity; empirical data shows humans grossly overestimate their daily ambulation. If you occupy a sedentary desk job but attend the gymnasium thrice weekly, you are functionally"Lightly Active", not"Highly Active".</p>
       </div>
     </div>
 
@@ -213,9 +205,9 @@ const faqSchema = {
   </div>
 
   <Sources sources={[
-    { label: "Dietary Reference Intakes for Energy — National Academies of Sciences, Engineering, and Medicine", href: "https://www.nap.edu/read/10490/chapter/1" },
-    { label: "Energy Expenditure: A Comprehensive Review — PubMed / NIH", href: "https://pubmed.ncbi.nlm.nih.gov/2305711/" },
-    { label: "A Predictive Equation for Resting Energy Expenditure in Healthy Individuals (Mifflin-St Jeor) — Original Clinical Study", href: "https://pubmed.ncbi.nlm.nih.gov/2305711/" },
+    { label:"Dietary Reference Intakes for Energy — National Academies of Sciences, Engineering, and Medicine", href:"https://www.nap.edu/read/10490/chapter/1" },
+    { label:"Energy Expenditure: A Comprehensive Review — PubMed / NIH", href:"https://pubmed.ncbi.nlm.nih.gov/2305711/" },
+    { label:"A Predictive Equation for Resting Energy Expenditure in Healthy Individuals (Mifflin-St Jeor) — Original Clinical Study", href:"https://pubmed.ncbi.nlm.nih.gov/2305711/" },
   ]} />
 
   <!-- Suggested Content & CTA -->

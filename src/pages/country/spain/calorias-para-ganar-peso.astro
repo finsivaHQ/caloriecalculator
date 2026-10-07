@@ -2,45 +2,45 @@
 import ContentLayout from '../../../layouts/ContentLayout.astro';
 import Button from '../../../components/ui/Button.astro';
 
-const seoTitle = "Calorías para Ganar Peso: ¿Cuántas Necesito? (Guía Completa)";
-const seoDescription = "Descubre cómo calcular las calorías para ganar peso. Aprende qué es un superávit calórico, cómo funciona y estimaciones para aumentar de masa muscular.";
+const seoTitle ="Calorías para Ganar Peso: ¿Cuántas Necesito? (Guía Completa)";
+const seoDescription ="Descubre cómo calcular las calorías para ganar peso. Aprende qué es un superávit calórico, cómo funciona y estimaciones para aumentar de masa muscular.";
 
 const faqs = [
   {
-    q: "¿Cuántas calorías debo consumir para ganar peso?",
-    a: "Para ganar peso, debes consumir más calorías de las que gastas, lo que se conoce como superávit calórico. Como punto de partida, se suele estimar tu gasto total y añadir de forma moderada, dependiendo de la persona y sus objetivos."
+    q:"¿Cuántas calorías debo consumir para ganar peso?",
+    a:"Para ganar peso, debes consumir más calorías de las que gastas, lo que se conoce como superávit calórico. Como punto de partida, se suele estimar tu gasto total y añadir de forma moderada, dependiendo de la persona y sus objetivos."
   },
   {
-    q: "¿Qué es un superávit calórico?",
-    a: "Un superávit calórico ocurre cuando consumes más energía (calorías) a través de los alimentos de la que tu cuerpo utiliza. Este exceso de energía puede contribuir al aumento de peso."
+    q:"¿Qué es un superávit calórico?",
+    a:"Un superávit calórico ocurre cuando consumes más energía (calorías) a través de los alimentos de la que tu cuerpo utiliza. Este exceso de energía puede contribuir al aumento de peso."
   },
   {
-    q: "¿Cuántas calorías más necesito para aumentar de peso?",
-    a: "En nutrición deportiva, muchas veces se utiliza un incremento aproximado de 250 a 500 calorías por encima del mantenimiento como punto de partida. Esta cantidad puede variar enormemente según el metabolismo individual y el nivel de actividad."
+    q:"¿Cuántas calorías más necesito para aumentar de peso?",
+    a:"En nutrición deportiva, muchas veces se utiliza un incremento aproximado de 250 a 500 calorías por encima del mantenimiento como punto de partida. Esta cantidad puede variar enormemente según el metabolismo individual y el nivel de actividad."
   },
   {
-    q: "¿Cómo calculo mis calorías de mantenimiento?",
-    a: "Las calorías de mantenimiento se estiman calculando tu Tasa Metabólica Basal (TMB) y multiplicándola por tu factor de actividad física. Puedes utilizar calculadoras online para obtener esta estimación inicial."
+    q:"¿Cómo calculo mis calorías de mantenimiento?",
+    a:"Las calorías de mantenimiento se estiman calculando tu Tasa Metabólica Basal (TMB) y multiplicándola por tu factor de actividad física. Puedes utilizar calculadoras online para obtener esta estimación inicial."
   },
   {
-    q: "¿Puedo ganar peso solo aumentando las calorías?",
-    a: "Sí, un superávit calórico sostenido resulta en un aumento de peso corporal. Sin embargo, para que parte de ese peso sea masa muscular, generalmente se requiere acompañarlo de entrenamiento de fuerza adecuado."
+    q:"¿Puedo ganar peso solo aumentando las calorías?",
+    a:"Sí, un superávit calórico sostenido resulta en un aumento de peso corporal. Sin embargo, para que parte de ese peso sea masa muscular, generalmente se requiere acompañarlo de entrenamiento de fuerza adecuado."
   },
   {
-    q: "¿Ganar peso significa ganar músculo?",
-    a: "No necesariamente. El peso ganado puede distribuirse entre tejido muscular, grasa, glucógeno y líquidos. Un estímulo adecuado como el entrenamiento ayuda a que el peso ganado favorezca al músculo."
+    q:"¿Ganar peso significa ganar músculo?",
+    a:"No necesariamente. El peso ganado puede distribuirse entre tejido muscular, grasa, glucógeno y líquidos. Un estímulo adecuado como el entrenamiento ayuda a que el peso ganado favorezca al músculo."
   },
   {
-    q: "¿Qué alimentos ayudan a aumentar las calorías?",
-    a: "Alimentos densos en nutrientes y energía pueden facilitar el proceso. Ejemplos incluyen frutos secos, crema de cacahuete, aceite de oliva, aguacate, lácteos, arroz, avena, legumbres y huevos."
+    q:"¿Qué alimentos ayudan a aumentar las calorías?",
+    a:"Alimentos densos en nutrientes y energía pueden facilitar el proceso. Ejemplos incluyen frutos secos, crema de cacahuete, aceite de oliva, aguacate, lácteos, arroz, avena, legumbres y huevos."
   },
   {
-    q: "¿Cuánto tiempo se tarda en ganar peso?",
-    a: "El ritmo varía significativamente entre individuos debido a la genética, alimentación y entrenamiento. Es un proceso gradual y los cambios iniciales en la báscula también pueden deberse a variaciones temporales de agua."
+    q:"¿Cuánto tiempo se tarda en ganar peso?",
+    a:"El ritmo varía significativamente entre individuos debido a la genética, alimentación y entrenamiento. Es un proceso gradual y los cambios iniciales en la báscula también pueden deberse a variaciones temporales de agua."
   },
   {
-    q: "¿La calculadora de calorías puede decirme cuántas calorías necesito para ganar peso?",
-    a: "Sí, una calculadora de calorías puede proporcionarte una estimación inicial de mantenimiento y sugerirte un superávit calórico, aunque luego deberás monitorear y ajustar las calorías según cómo responda tu cuerpo a lo largo del tiempo."
+    q:"¿La calculadora de calorías puede decirme cuántas calorías necesito para ganar peso?",
+    a:"Sí, una calculadora de calorías puede proporcionarte una estimación inicial de mantenimiento y sugerirte un superávit calórico, aunque luego deberás monitorear y ajustar las calorías según cómo responda tu cuerpo a lo largo del tiempo."
   }
 ];
 ---
@@ -58,7 +58,7 @@ const faqs = [
   lang="es"
 >
   <!-- Medical Review Badge -->
-  <div class="relative overflow-hidden bg-white/80 backdrop-blur-md p-6 rounded-3xl border border-blue-100/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] mb-12 flex flex-col sm:flex-row items-center gap-6 group">
+  <div class="relative overflow-hidden bg-surface/80 backdrop-blur-md p-6 rounded-3xl border border-blue-100/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] mb-12 flex flex-col sm:flex-row items-center gap-6 group">
     <div class="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
     <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl flex items-center justify-center shadow-inner relative z-10">
       <span class="text-3xl">⚕️</span>
@@ -77,7 +77,7 @@ const faqs = [
     <h2 class="text-3xl md:text-4xl font-bold text-ink mt-16 mb-8 tracking-tight">1. La Fisiología del Aumento de Peso y el Superávit Calórico</h2>
     <p>Para comprender cómo ganar masa corporal, primero debemos desmitificar cómo procesa el cuerpo la energía. La energía se mide en kilocalorías (comúnmente llamadas calorías). El principio de termodinámica en biología humana establece que si consumes sistemáticamente más energía de la que gastas a través de tus procesos metabólicos y actividad física, esa energía excedente debe almacenarse. Este estado metabólico se denomina <strong>superávit calórico</strong>.</p>
     
-    <p>Un superávit calórico no es simplemente "comer en exceso", sino una sobrecarga planificada y estratégica. Cuando te encuentras en un superávit sostenido, el cuerpo utiliza ese excedente de varias formas, dependiendo del estímulo ambiental (como el entrenamiento con pesas) y el perfil hormonal. El peso ganado puede distribuirse entre:</p>
+    <p>Un superávit calórico no es simplemente"comer en exceso", sino una sobrecarga planificada y estratégica. Cuando te encuentras en un superávit sostenido, el cuerpo utiliza ese excedente de varias formas, dependiendo del estímulo ambiental (como el entrenamiento con pesas) y el perfil hormonal. El peso ganado puede distribuirse entre:</p>
     <ul class="space-y-3 mb-8">
       <li class="flex items-start"><span class="mr-3 text-brand text-xl">💪</span><span><strong>Tejido muscular (Hipertrofia):</strong> Si hay un estímulo de entrenamiento de fuerza adecuado y suficiente proteína.</span></li>
       <li class="flex items-start"><span class="mr-3 text-brand text-xl">🧬</span><span><strong>Tejido adiposo (Grasa corporal):</strong> La forma más eficiente del cuerpo para almacenar energía de reserva a largo plazo.</span></li>
@@ -88,9 +88,9 @@ const faqs = [
     <div class="bg-gradient-to-br from-surface to-canvas-soft p-8 rounded-3xl border border-hairline shadow-sm my-10">
       <h3 class="text-2xl font-bold text-ink mb-4 flex items-center gap-3">
         <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-        El Mito del Aumento "Sucio" (Dirty Bulking)
+        El Mito del Aumento"Sucio" (Dirty Bulking)
       </h3>
-      <p class="text-body mb-0">Durante décadas, la cultura del fitness popularizó el "dirty bulking" (comer cualquier cosa en cantidades masivas) como el método más rápido para ganar peso. La evidencia científica actual refuta esto: un superávit extremo (+1000 calorías diarias) no construye músculo más rápido que un superávit moderado, pero sí garantiza una ganancia desproporcionada de masa grasa que luego será difícil de perder, afectando negativamente la sensibilidad a la insulina y la salud metabólica.</p>
+      <p class="text-body mb-0">Durante décadas, la cultura del fitness popularizó el"dirty bulking" (comer cualquier cosa en cantidades masivas) como el método más rápido para ganar peso. La evidencia científica actual refuta esto: un superávit extremo (+1000 calorías diarias) no construye músculo más rápido que un superávit moderado, pero sí garantiza una ganancia desproporcionada de masa grasa que luego será difícil de perder, afectando negativamente la sensibilidad a la insulina y la salud metabólica.</p>
     </div>
 
     <!-- Pillar 2: Cálculo Matemático -->
@@ -99,17 +99,17 @@ const faqs = [
 
     <div class="space-y-6 my-10">
       <!-- Step 1 -->
-      <div class="bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-gray-100 hover:border-brand/30 transition-colors shadow-sm">
+      <div class="bg-surface/60 backdrop-blur-sm p-6 rounded-2xl border border-hairline hover:border-brand/30 transition-colors shadow-sm">
         <h4 class="text-xl font-bold text-ink mb-3"><span class="bg-brand text-white w-8 h-8 inline-flex items-center justify-center rounded-full text-sm mr-3">1</span> Calcula tu Tasa Metabólica Basal (TMB)</h4>
         <p class="text-body m-0">La TMB representa la cantidad de calorías que tu cuerpo quema en completo reposo para mantener funciones vitales como la respiración, el latido del corazón y la función celular. Fórmulas científicas como la de Mifflin-St Jeor o Harris-Benedict son el estándar de oro clínico para esta estimación.</p>
       </div>
       <!-- Step 2 -->
-      <div class="bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-gray-100 hover:border-brand/30 transition-colors shadow-sm">
+      <div class="bg-surface/60 backdrop-blur-sm p-6 rounded-2xl border border-hairline hover:border-brand/30 transition-colors shadow-sm">
         <h4 class="text-xl font-bold text-ink mb-3"><span class="bg-brand text-white w-8 h-8 inline-flex items-center justify-center rounded-full text-sm mr-3">2</span> Aplica tu Factor de Actividad (NEAT y TEA)</h4>
         <p class="text-body m-0">Nadie pasa 24 horas en coma. Debes multiplicar tu TMB por un factor de actividad que engloba el Ejercicio Físico (TEA) y la Termogénesis por Actividad No Ejercicio (NEAT, como caminar, estar de pie o hacer tareas domésticas). Esto te dará tus calorías de mantenimiento.</p>
       </div>
       <!-- Step 3 -->
-      <div class="bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-gray-100 hover:border-brand/30 transition-colors shadow-sm">
+      <div class="bg-surface/60 backdrop-blur-sm p-6 rounded-2xl border border-hairline hover:border-brand/30 transition-colors shadow-sm">
         <h4 class="text-xl font-bold text-ink mb-3"><span class="bg-brand text-white w-8 h-8 inline-flex items-center justify-center rounded-full text-sm mr-3">3</span> Suma el Superávit Calórico Estratégico</h4>
         <p class="text-body m-0">Para ganar peso gradualmente, la literatura científica deportiva recomienda añadir de <strong>250 a 500 calorías</strong> sobre el mantenimiento. Este rango optimiza la ganancia de músculo mientras minimiza la acumulación excesiva de grasa.</p>
       </div>
@@ -117,7 +117,7 @@ const faqs = [
 
     <!-- Data Table -->
     <div class="overflow-x-auto my-12 rounded-2xl border border-hairline shadow-sm">
-      <table class="w-full text-left border-collapse bg-white">
+      <table class="w-full text-left border-collapse bg-surface">
         <thead>
           <tr class="bg-canvas-soft">
             <th class="p-4 border-b font-bold text-ink">Objetivo de Ganancia</th>
@@ -164,8 +164,8 @@ const faqs = [
 
 
     <!-- Pillar 4: Alimentos Altamente Densos -->
-    <h2 class="text-3xl md:text-4xl font-bold text-ink mt-16 mb-8 tracking-tight">4. Estrategias Nutricionales para "Hardgainers"</h2>
-    <p>Para algunas personas (a menudo referidas coloquialmente como "hardgainers" o ectomorfos), llegar a 3,000 o 4,000 calorías diarias con arroz y pollo puede parecer una misión imposible, causando pesadez gastrointestinal y pérdida de apetito. El secreto aquí radica en la <strong>densidad calórica</strong>: seleccionar alimentos que ofrezcan muchas calorías en poco volumen físico.</p>
+    <h2 class="text-3xl md:text-4xl font-bold text-ink mt-16 mb-8 tracking-tight">4. Estrategias Nutricionales para"Hardgainers"</h2>
+    <p>Para algunas personas (a menudo referidas coloquialmente como"hardgainers" o ectomorfos), llegar a 3,000 o 4,000 calorías diarias con arroz y pollo puede parecer una misión imposible, causando pesadez gastrointestinal y pérdida de apetito. El secreto aquí radica en la <strong>densidad calórica</strong>: seleccionar alimentos que ofrezcan muchas calorías en poco volumen físico.</p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
       <!-- Card -->
@@ -242,11 +242,11 @@ const faqs = [
       <p class="text-body text-lg mb-8 max-w-2xl">Sigue profundizando en el control de tu metabolismo. Entender tus requerimientos diarios de mantenimiento es el pilar sobre el que se construye cualquier estrategia nutricional exitosa.</p>
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-        <a href="/country/spain/como-calcular-mis-calorias-diarias/" class="group block p-6 bg-white/80 backdrop-blur-md rounded-2xl border border-hairline hover:border-brand/50 hover:shadow-md transition-all">
+        <a href="/country/spain/como-calcular-mis-calorias-diarias/" class="group block p-6 bg-surface/80 backdrop-blur-md rounded-2xl border border-hairline hover:border-brand/50 hover:shadow-md transition-all">
           <h3 class="font-bold text-xl text-ink group-hover:text-brand mb-2 transition-colors">¿Cómo calcular mis calorías diarias? &rarr;</h3>
           <p class="text-body text-sm m-0">Aprende la metodología completa para descubrir tu TDEE y TMB paso a paso.</p>
         </a>
-        <a href="/country/spain/cuantas-calorias-debo-consumir-al-dia/" class="group block p-6 bg-white/80 backdrop-blur-md rounded-2xl border border-hairline hover:border-brand/50 hover:shadow-md transition-all">
+        <a href="/country/spain/cuantas-calorias-debo-consumir-al-dia/" class="group block p-6 bg-surface/80 backdrop-blur-md rounded-2xl border border-hairline hover:border-brand/50 hover:shadow-md transition-all">
           <h3 class="font-bold text-xl text-ink group-hover:text-brand mb-2 transition-colors">¿Cuántas calorías consumir al día? &rarr;</h3>
           <p class="text-body text-sm m-0">Descubre los factores clave que alteran tus necesidades energéticas diarias.</p>
         </a>
@@ -262,32 +262,14 @@ const faqs = [
   </div>
 
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Cuántas calorías debo consumir para ganar peso?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Para ganar peso, debes consumir más calorías de las que gastas, lo que se conoce como superávit calórico. Como punto de partida, se suele estimar tu gasto total y añadir de forma moderada, dependiendo de la persona y sus objetivos."
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity": [
+    {"@type":"Question","name":"¿Cuántas calorías debo consumir para ganar peso?","acceptedAnswer": {"@type":"Answer","text":"Para ganar peso, debes consumir más calorías de las que gastas, lo que se conoce como superávit calórico. Como punto de partida, se suele estimar tu gasto total y añadir de forma moderada, dependiendo de la persona y sus objetivos."
       }
     },
-    {
-      "@type": "Question",
-      "name": "¿Qué es un superávit calórico?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Un superávit calórico ocurre cuando consumes más energía (calorías) a través de los alimentos de la que tu cuerpo utiliza. Este exceso de energía puede contribuir al aumento de peso."
+    {"@type":"Question","name":"¿Qué es un superávit calórico?","acceptedAnswer": {"@type":"Answer","text":"Un superávit calórico ocurre cuando consumes más energía (calorías) a través de los alimentos de la que tu cuerpo utiliza. Este exceso de energía puede contribuir al aumento de peso."
       }
     },
-    {
-      "@type": "Question",
-      "name": "¿Cuántas calorías más necesito para aumentar de peso?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "En nutrición deportiva, muchas veces se utiliza un incremento aproximado de 250 a 500 calorías por encima del mantenimiento como punto de partida. Esta cantidad puede variar enormemente según el metabolismo individual y el nivel de actividad."
+    {"@type":"Question","name":"¿Cuántas calorías más necesito para aumentar de peso?","acceptedAnswer": {"@type":"Answer","text":"En nutrición deportiva, muchas veces se utiliza un incremento aproximado de 250 a 500 calorías por encima del mantenimiento como punto de partida. Esta cantidad puede variar enormemente según el metabolismo individual y el nivel de actividad."
       }
     }
   ]

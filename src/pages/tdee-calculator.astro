@@ -1,21 +1,21 @@
 ---
-import CalculatorLayout from "../layouts/CalculatorLayout.astro";
-import { inputCls, segOptCls, selectCls } from "../lib/ui";
-import type { FaqItem } from "../lib/seo";
-import Sources from "../components/ui/Sources.astro";
-import ArticleImage from "../components/ui/ArticleImage.astro";
+import CalculatorLayout from"../layouts/CalculatorLayout.astro";
+import { inputCls, segOptCls, selectCls } from"../lib/ui";
+import type { FaqItem } from"../lib/seo";
+import Sources from"../components/ui/Sources.astro";
+import ArticleImage from"../components/ui/ArticleImage.astro";
 
 const faqs: FaqItem[] = [
-  { q: "What is TDEE?", a: "Total Daily Energy Expenditure is the total number of calories you burn in a full day, including your resting metabolism (BMR) plus all movement, exercise, and digestion. It's the key number for managing your weight." },
-  { q: "How is TDEE calculated?", a: "TDEE is your BMR multiplied by an activity factor between 1.2 (sedentary) and 1.9 (extra active). This calculator finds your BMR with the Mifflin-St Jeor equation and applies the multiplier you select." },
-  { q: "How do I use my TDEE?", a: "Eat at your TDEE to maintain weight, below it to lose weight, and above it to gain. A 500-calorie daily deficit produces about 1 pound of weight loss per week." },
-  { q: "Why is my TDEE higher than my BMR?", a: "Your BMR only covers resting functions. TDEE adds the energy you spend moving, exercising, and digesting food, so it is always higher — often by 20–90% depending on activity." },
-  { q: "What activity level should I choose?", a: "Most people should select 'Light' or 'Moderate'. Only choose 'Extra active' if you have a physically demanding job AND exercise daily." },
-  { q: "How often should I recalculate my TDEE?", a: "Recalculate every 4-6 weeks or when your weight changes by more than 5% since your last calculation." },
-  { q: "Does muscle building increase TDEE?", a: "Yes. Each pound of muscle burns roughly 6-10 calories daily at rest, and strength training itself burns 200-400 calories per session." },
-  { q: "What's the difference between TDEE and BMR?", a: "BMR is calories burned at complete rest. TDEE includes all daily activity — typically BMR × 1.3-1.9 depending on your lifestyle." },
-  { q: "Can TDEE change with age?", a: "Yes. BMR decreases 2-3% per decade after age 30. Less activity with age also reduces overall TDEE." },
-  { q: "How accurate is this TDEE calculator?", a: "Accuracy is within ±10% for most people. Individual variation exists based on genetics, muscle mass, and non-exercise activity." },
+  { q:"What is TDEE?", a:"Total Daily Energy Expenditure is the total number of calories you burn in a full day, including your resting metabolism (BMR) plus all movement, exercise, and digestion. It's the key number for managing your weight." },
+  { q:"How is TDEE calculated?", a:"TDEE is your BMR multiplied by an activity factor between 1.2 (sedentary) and 1.9 (extra active). This calculator finds your BMR with the Mifflin-St Jeor equation and applies the multiplier you select." },
+  { q:"How do I use my TDEE?", a:"Eat at your TDEE to maintain weight, below it to lose weight, and above it to gain. A 500-calorie daily deficit produces about 1 pound of weight loss per week." },
+  { q:"Why is my TDEE higher than my BMR?", a:"Your BMR only covers resting functions. TDEE adds the energy you spend moving, exercising, and digesting food, so it is always higher — often by 20–90% depending on activity." },
+  { q:"What activity level should I choose?", a:"Most people should select 'Light' or 'Moderate'. Only choose 'Extra active' if you have a physically demanding job AND exercise daily." },
+  { q:"How often should I recalculate my TDEE?", a:"Recalculate every 4-6 weeks or when your weight changes by more than 5% since your last calculation." },
+  { q:"Does muscle building increase TDEE?", a:"Yes. Each pound of muscle burns roughly 6-10 calories daily at rest, and strength training itself burns 200-400 calories per session." },
+  { q:"What's the difference between TDEE and BMR?", a:"BMR is calories burned at complete rest. TDEE includes all daily activity — typically BMR × 1.3-1.9 depending on your lifestyle." },
+  { q:"Can TDEE change with age?", a:"Yes. BMR decreases 2-3% per decade after age 30. Less activity with age also reduces overall TDEE." },
+  { q:"How accurate is this TDEE calculator?", a:"Accuracy is within ±10% for most people. Individual variation exists based on genetics, muscle mass, and non-exercise activity." },
 ];
 ---
 
@@ -126,7 +126,7 @@ const faqs: FaqItem[] = [
      <p>It is generally recommended not to exceed a 500-750 calorie deficit per day. Extreme deficits can lead to muscle loss, severe fatigue, nutrient deficiencies, and metabolic adaptation (where your body lowers its BMR to conserve energy). Slow and steady wins the race. Focus on eating high-volume, nutrient-dense foods like vegetables, lean proteins, and complex carbohydrates to stay full while eating fewer calories.</p>
      
      <h3>2. Using TDEE for Muscle Gain (The Caloric Surplus)</h3>
-     <p>If your goal is to pack on muscle mass (bulking), you need to provide your body with excess energy. Building new tissue requires calories beyond your maintenance level. However, this does not mean you should eat everything in sight. A "dirty bulk" often leads to excessive fat gain alongside muscle growth.</p>
+     <p>If your goal is to pack on muscle mass (bulking), you need to provide your body with excess energy. Building new tissue requires calories beyond your maintenance level. However, this does not mean you should eat everything in sight. A"dirty bulk" often leads to excessive fat gain alongside muscle growth.</p>
      <p>Instead, aim for a conservative surplus of 200-300 calories above your TDEE. This is enough to fuel intense workouts and maximize muscle protein synthesis while minimizing the accumulation of body fat. For example, if your TDEE is 2,500 calories, aim for 2,700-2,800 calories per day. Combine this surplus with a progressive overload resistance training program and adequate protein intake (roughly 0.8 to 1 gram per pound of body weight).</p>
      
      <h3>3. Using TDEE for Body Recomposition</h3>
@@ -136,7 +136,7 @@ const faqs: FaqItem[] = [
      <p>It is critical to understand that your TDEE is a moving target. It is not a number that stays the same forever. As your body changes, your energy requirements change. Here are the main reasons why your TDEE will fluctuate:</p>
      <ul>
        <li><strong>Weight Loss:</strong> As you lose weight, you are carrying less mass. A smaller body requires fewer calories to operate and move around. If you lose 20 pounds, your TDEE will drop, meaning the calorie intake that used to help you lose weight might now be your new maintenance level. This is why plateaus happen. You must recalculate your TDEE every 10-15 pounds of weight loss.</li>
-       <li><strong>Metabolic Adaptation:</strong> If you stay in a severe caloric deficit for a prolonged period, your body attempts to survive the "famine" by slowing down non-essential functions. You might unconsciously fidget less (lower NEAT), feel colder, and experience a slight dip in BMR. Taking occasional diet breaks—where you eat at maintenance for a week or two—can help reverse this adaptation.</li>
+       <li><strong>Metabolic Adaptation:</strong> If you stay in a severe caloric deficit for a prolonged period, your body attempts to survive the"famine" by slowing down non-essential functions. You might unconsciously fidget less (lower NEAT), feel colder, and experience a slight dip in BMR. Taking occasional diet breaks—where you eat at maintenance for a week or two—can help reverse this adaptation.</li>
        <li><strong>Building Muscle:</strong> Conversely, if you add 10 pounds of lean muscle to your frame, your resting metabolism will increase. Muscle is a highly demanding tissue that requires constant energy for upkeep. </li>
        <li><strong>Changes in Routine:</strong> Switching from a job waiting tables to a desk job will drastically slash your NEAT, significantly lowering your TDEE even if your gym routine stays the same.</li>
      </ul>
@@ -151,7 +151,7 @@ Women: (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) - 161
      <h2>Comprehensive TDEE Frequently Asked Questions (FAQ)</h2>
      <div class="faq-section">
        <h3>1. Should I eat back the calories I burn from exercise?</h3>
-       <p>No. When you select your activity level in the calculator (e.g., "Moderately Active"), the formula already accounts for the calories you burn during your workouts. If you eat back the calories displayed on your Apple Watch or treadmill, you are double-counting them and will likely erase your caloric deficit.</p>
+       <p>No. When you select your activity level in the calculator (e.g.,"Moderately Active"), the formula already accounts for the calories you burn during your workouts. If you eat back the calories displayed on your Apple Watch or treadmill, you are double-counting them and will likely erase your caloric deficit.</p>
        
        <h3>2. How accurate are TDEE calculators?</h3>
        <p>TDEE calculators provide a highly educated estimate, typically accurate within 10-15%. However, because they rely on generalized formulas, they cannot account for your unique hormonal profile, exact body fat percentage, or daily NEAT variations. Use the result as a starting baseline, track your weight for two weeks, and adjust your intake based on real-world results.</p>
@@ -160,7 +160,7 @@ Women: (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) - 161
        <p>BMR (Basal Metabolic Rate) is the amount of calories your body burns at complete rest—like being in a coma. It only covers vital life functions. TDEE includes your BMR <em>plus</em> all the movement, exercise, and digestion you do in a normal day. TDEE will always be significantly higher than BMR.</p>
        
        <h3>4. Can a slow metabolism cause weight gain?</h3>
-       <p>While metabolic conditions like hypothyroidism can lower your BMR slightly, they rarely account for more than a few hundred calories. In the vast majority of cases, unexpected weight gain is caused by a high caloric intake and a sedentary lifestyle (low TDEE), not a "broken" metabolism.</p>
+       <p>While metabolic conditions like hypothyroidism can lower your BMR slightly, they rarely account for more than a few hundred calories. In the vast majority of cases, unexpected weight gain is caused by a high caloric intake and a sedentary lifestyle (low TDEE), not a"broken" metabolism.</p>
        
        <h3>5. Does macronutrient split matter if calories are the same?</h3>
        <p>For pure weight loss, the most critical factor is total calories (Calories In vs Calories Out). However, for body composition (how you look and feel), macros matter immensely. Adequate protein preserves muscle mass during fat loss, while healthy fats support hormone production and carbs provide energy for intense workouts.</p>
@@ -186,16 +186,16 @@ Women: (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) - 161
      <p>Now that you have your TDEE, pick a goal. Set a modest deficit for fat loss or a slight surplus for muscle gain. Track your food intake diligently using a kitchen scale and a macro-tracking app, monitor your weight trends over several weeks, and adjust your calories as your body transforms. You have the data—now execute the plan.</p>
 
      <Sources sources={[
-       { label: "Dietary Reference Intakes for Energy — National Academies", href: "https://www.nap.edu/read/10490/chapter/1" },
-       { label: "Energy expenditure — PubMed / NIH review", href: "https://pubmed.ncbi.nlm.nih.gov/2305711/" },
-       { label: "A new predictive equation for resting energy expenditure in healthy individuals (Mifflin-St Jeor)", href: "https://pubmed.ncbi.nlm.nih.gov/2305711/" }
+       { label:"Dietary Reference Intakes for Energy — National Academies", href:"https://www.nap.edu/read/10490/chapter/1" },
+       { label:"Energy expenditure — PubMed / NIH review", href:"https://pubmed.ncbi.nlm.nih.gov/2305711/" },
+       { label:"A new predictive equation for resting energy expenditure in healthy individuals (Mifflin-St Jeor)", href:"https://pubmed.ncbi.nlm.nih.gov/2305711/" }
      ]} />
     </Fragment>
 </CalculatorLayout>
 
 <script>
-  import { bmrMifflinStJeor, tdee, goalCalories, GOALS, type Sex, type ActivityKey, type GoalKey } from "../lib/calculations";
-  import { lbToKg, ftInToCm } from "../lib/units";
+  import { bmrMifflinStJeor, tdee, goalCalories, GOALS, type Sex, type ActivityKey, type GoalKey } from"../lib/calculations";
+  import { lbToKg, ftInToCm } from"../lib/units";
 
   const root = document.getElementById("calc-root");
   if (root) {
@@ -208,7 +208,7 @@ Women: (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) - 161
       const box = document.getElementById("result-box") || document.getElementById("calc-results");
       if (box) {
         box.querySelectorAll(".tabular-nums").forEach((el) => {
-          el.textContent = "-.-";
+          el.textContent ="-.-";
         });
       }
       const btn = document.getElementById("calc-btn");
@@ -221,7 +221,7 @@ Women: (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) - 161
       if (btn) btn.classList.remove("is-dirty");
     }
     const fmt = (n: number) => Math.round(n).toLocaleString("en-US");
-    let unit: "metric" | "imperial" = "metric";
+    let unit:"metric" |"imperial" ="metric";
 
     function read() {
       const sex = (root!.querySelector('input[name="sex"]:checked') as HTMLInputElement).value as Sex;
@@ -229,7 +229,7 @@ Women: (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) - 161
       const activity = ($("activity") as HTMLSelectElement).value as ActivityKey;
       let w = parseFloat(($("weight") as HTMLInputElement).value) || 0;
       let h: number;
-      if (unit === "imperial") { w = lbToKg(w); h = ftInToCm(parseFloat(($("height-ft") as HTMLInputElement).value) || 0, parseFloat(($("height-in") as HTMLInputElement).value) || 0); }
+      if (unit ==="imperial") { w = lbToKg(w); h = ftInToCm(parseFloat(($("height-ft") as HTMLInputElement).value) || 0, parseFloat(($("height-in") as HTMLInputElement).value) || 0); }
       else h = parseFloat(($("height-cm") as HTMLInputElement).value) || 0;
       return { sex, age, activity, w, h };
     }
@@ -242,24 +242,24 @@ Women: (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) - 161
       $("tdee-value").textContent = fmt(t);
       $("goals-table").innerHTML = (Object.keys(GOALS) as GoalKey[]).map((k) => {
         const c = goalCalories(t, k, sex);
-        const hl = k === "maintain";
-        return `<tr class="border-b border-hairline last:border-0 ${hl ? "bg-brand/5" : ""}"><td class="px-5 py-2.5 ${hl ? "font-medium text-ink" : "text-body"}">${GOALS[k].label}<span class="block text-xs text-mute">${GOALS[k].rate}</span></td><td class="px-5 py-2.5 text-right font-medium tabular-nums ${hl ? "text-ink" : "text-body"}">${fmt(c)}</td></tr>`;
+        const hl = k ==="maintain";
+        return `<tr class="border-b border-hairline last:border-0 ${hl ?"bg-brand/5" :""}"><td class="px-5 py-2.5 ${hl ?"font-medium text-ink" :"text-body"}">${GOALS[k].label}<span class="block text-xs text-mute">${GOALS[k].rate}</span></td><td class="px-5 py-2.5 text-right font-medium tabular-nums ${hl ?"text-ink" :"text-body"}">${fmt(c)}</td></tr>`;
       }).join("");
     }
 
     root.querySelectorAll<HTMLButtonElement>(".unit-tab").forEach((btn) => {
       btn.addEventListener("click", () => {
-        const next = btn.dataset.unit as "metric" | "imperial";
+        const next = btn.dataset.unit as"metric" |"imperial";
         if (next === unit) return;
         unit = next;
         root.querySelectorAll<HTMLButtonElement>(".unit-tab").forEach((b) => { const on = b.dataset.unit === unit; b.setAttribute("aria-pressed", String(on)); b.classList.toggle("bg-canvas", on); b.classList.toggle("text-ink", on); b.classList.toggle("shadow-sm", on); b.classList.toggle("text-mute", !on); });
-        $("height-metric").classList.toggle("hidden", unit === "imperial");
-        $("height-imperial").classList.toggle("hidden", unit === "metric");
-        $("height-imperial").classList.toggle("grid", unit === "imperial");
-        document.querySelectorAll(".weight-unit").forEach((e) => (e.textContent = unit === "metric" ? "(kg)" : "(lb)"));
-        document.querySelectorAll(".height-unit").forEach((e) => (e.textContent = unit === "metric" ? "(cm)" : "(ft / in)"));
+        $("height-metric").classList.toggle("hidden", unit ==="imperial");
+        $("height-imperial").classList.toggle("hidden", unit ==="metric");
+        $("height-imperial").classList.toggle("grid", unit ==="imperial");
+        document.querySelectorAll(".weight-unit").forEach((e) => (e.textContent = unit ==="metric" ?"(kg)" :"(lb)"));
+        document.querySelectorAll(".height-unit").forEach((e) => (e.textContent = unit ==="metric" ?"(cm)" :"(ft / in)"));
         const wi = $("weight") as HTMLInputElement; const cv = parseFloat(wi.value) || 0;
-        if (cv) wi.value = (unit === "imperial" ? cv * 2.2046226218 : cv / 2.2046226218).toFixed(1);
+        if (cv) wi.value = (unit ==="imperial" ? cv * 2.2046226218 : cv / 2.2046226218).toFixed(1);
         markDirty();
       });
     });

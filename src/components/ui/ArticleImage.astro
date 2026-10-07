@@ -13,19 +13,19 @@ interface Props {
   priority?: boolean;
 }
 
-const { src, alt, class: className = "", width, height, priority = false } = Astro.props;
+const { src, alt, class: className ="", width, height, priority = false } = Astro.props;
 
 const finalSrc = src;
 ---
 
 <figure class={`not-prose my-8 ${className}`}>
-  <div class="rounded-2xl border border-hairline bg-white p-2 dark:bg-white">
+  <div class="rounded-2xl border border-hairline bg-surface p-2">
     <img
       src={finalSrc}
       alt={alt}
-      loading={priority ? "eager" : "lazy"}
+      loading={priority ?"eager" :"lazy"}
       decoding="async"
-      fetchpriority={priority ? "high" : "auto"}
+      fetchpriority={priority ?"high" :"auto"}
       {width}
       {height}
       class="mx-auto h-auto w-full max-w-2xl rounded-xl object-cover shadow-sm aspect-video"

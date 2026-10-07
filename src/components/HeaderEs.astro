@@ -1,12 +1,12 @@
 ---
 
 const NAV_ES = [
-  { label: "Calculadora de Calorías", href: "/country/spain/calculadora-de-calorias/" },
-  { label: "Guías", href: "/country/spain/guias/" },
+  { label:"Calculadora de Calorías", href:"/country/spain/calculadora-de-calorias/" },
+  { label:"Guías", href:"/country/spain/guias/" },
 ];
 
-import ThemeToggle from "./ThemeToggle.astro";
-import Button from "./ui/Button.astro";
+import ThemeToggle from"./ThemeToggle.astro";
+import Button from"./ui/Button.astro";
 ---
 
 <header class="sticky top-0 z-40 border-b border-hairline bg-canvas/70 backdrop-blur-xl backdrop-saturate-150">
@@ -55,7 +55,7 @@ import Button from "./ui/Button.astro";
           item.children ? (
               <li class="group relative">
                 <a
-                  href={item.href ?? "#"}
+                  href={item.href ??"#"}
                   class="group/link flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium text-body transition-colors hover:text-brand"
                 >
                   <span class="relative">
@@ -154,6 +154,6 @@ import Button from "./ui/Button.astro";
   btn?.addEventListener("click", () => {
     const open = menu?.classList.toggle("hidden") === false;
     btn.setAttribute("aria-expanded", String(open));
-    btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    btn.setAttribute("aria-label", open ?"Close menu" :"Open menu");
   });
 </script>

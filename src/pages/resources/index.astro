@@ -1,12 +1,12 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Section from "../../components/ui/Section.astro";
-import { breadcrumbSchema } from "../../lib/seo";
-import { ALL_CALCULATORS } from "../../data/site";
+import Layout from"../../layouts/Layout.astro";
+import Section from"../../components/ui/Section.astro";
+import { breadcrumbSchema } from"../../lib/seo";
+import { ALL_CALCULATORS } from"../../data/site";
 
-const allCalculators = ALL_CALCULATORS.filter(c => c.href !== "/");
+const allCalculators = ALL_CALCULATORS.filter(c => c.href !=="/");
 
-const jsonLd = [breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Resources", path: "/resources/" }])];
+const jsonLd = [breadcrumbSchema([{ name:"Home", path:"/" }, { name:"Resources", path:"/resources/" }])];
 ---
 
 <Layout
