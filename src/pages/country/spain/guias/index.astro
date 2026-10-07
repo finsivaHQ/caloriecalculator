@@ -1,0 +1,96 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import Section from "../../../../components/ui/Section.astro";
+import { breadcrumbSchema } from "../../../../lib/seo";
+
+const posts = [
+  {
+    "title": "Calculadora de Macros: Proteínas, Carbohidratos y Grasas",
+    "description": "Descubre qué son los macronutrientes, cómo calcular tus proteínas, carbohidratos y grasas diarios, y cómo relacionarlos con tus objetivos calóricos.",
+    "href": "/country/spain/calculadora-de-macros/"
+  },
+  {
+    "title": "Calculadora Harris-Benedict: Qué Es y Cómo Se Calcula (Guía Completa)",
+    "description": "Descubre qué es la ecuación de Harris-Benedict, cómo estima la Tasa Metabólica Basal (TMB), sus variables, y la comparación definitiva con Mifflin-St Jeor.",
+    "href": "/country/spain/calculadora-harris-benedict/"
+  },
+  {
+    "title": "Calorías para Ganar Peso: ¿Cuántas Necesito? (Guía Completa)",
+    "description": "Descubre cómo calcular las calorías para ganar peso. Aprende qué es un superávit calórico, cómo funciona y estimaciones para aumentar de masa muscular.",
+    "href": "/country/spain/calorias-para-ganar-peso/"
+  },
+  {
+    "title": "Calorías para Perder Peso: Guía Completa y Déficit Calórico",
+    "description": "Descubre cuántas calorías para perder peso necesitas consumir. Aprende cómo establecer un déficit calórico de manera moderada, sostenible y científicamente avalada.",
+    "href": "/country/spain/calorias-para-perder-peso/"
+  },
+  {
+    "title": "¿Cómo Calcular Mis Calorías Diarias? Guía Paso a Paso",
+    "description": "Aprende cómo calcular tus calorías diarias paso a paso. Conoce la diferencia entre TMB y GET, y cómo ajustar tu dieta para mantener, perder o ganar peso.",
+    "href": "/country/spain/como-calcular-mis-calorias-diarias/"
+  },
+  {
+    "title": "¿Cuántas Calorías Debo Consumir al Día? Guía Completa y Científica",
+    "description": "Descubre con exactitud cuántas calorías necesitas al día según tu edad, peso, altura y nivel de actividad. Aprende a calcular tus necesidades calóricas reales para mantener, perder o ganar peso de forma saludable y respaldada por la ciencia.",
+    "href": "/country/spain/cuantas-calorias-debo-consumir-al-dia/"
+  },
+  {
+    "title": "Efecto Térmico de los Alimentos (TEF): Qué Es y Cómo Aumentarlo",
+    "description": "Descubre qué es el efecto térmico de los alimentos (termogénesis inducida por la dieta) y cómo las TEF calorías influyen en tu metabolismo y quema de grasa.",
+    "href": "/country/spain/efecto-termico-de-los-alimentos/"
+  },
+  {
+    "title": "¿Qué es el Déficit Calórico y Cómo Hacerlo? | Guía Completa",
+    "description": "Aprende qué es el déficit calórico, la ciencia médica detrás del balance energético y cómo utilizar una calculadora de déficit calórico para perder peso de forma saludable.",
+    "href": "/country/spain/que-es-el-deficit-calorico/"
+  },
+  {
+    "title": "¿Qué es el NEAT y Cómo Ayuda a Perder Peso? | Guía Completa",
+    "description": "Descubre qué es el NEAT (termogénesis por actividad no relacionada con el ejercicio), por qué es fundamental para acelerar tu metabolismo y cómo usar el NEAT para perder peso.",
+    "href": "/country/spain/que-es-el-neat/"
+  }
+];
+
+const jsonLd = [breadcrumbSchema([{"name":"Inicio","path":"/country/spain/calculadora-de-calorias/"},{"name":"Guías","path":"/country/spain/guias/"}])];
+---
+
+<Layout
+  title="Blog de Nutrición y Salud - Calorie Calculator Free"
+  description="Guías gratuitas basadas en ciencia sobre calorías, macronutrientes, pérdida y ganancia de peso para ayudarte a alcanzar tus objetivos."
+  canonical="/country/spain/guias/"
+  lang="es"
+  jsonLd={jsonLd}
+>
+  <header class="relative overflow-hidden border-b border-hairline">
+    <div class="bg-grid pointer-events-none absolute inset-0 -z-10 opacity-50" aria-hidden="true"></div>
+    <div class="container-page py-12 sm:py-16">
+      <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-brand mb-3">
+        Guías Expertas
+      </span>
+      <h1 class="mt-2 text-display-lg text-ink">Blog de Nutrición</h1>
+      <p class="mt-4 max-w-2xl text-lg text-body">Guías claras basadas en evidencia científica para ayudarte a entender las calorías, macros y alcanzar cualquier objetivo de peso.</p>
+    </div>
+  </header>
+  <Section>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        posts.map((post) => (
+          <a href={post.href} class="group flex flex-col bg-surface border border-hairline rounded-3xl overflow-hidden hover:shadow-md hover:border-brand/50 transition-all duration-300">
+            <div class="p-6 flex flex-col flex-1">
+              <h2 class="text-xl font-bold text-ink mb-3 group-hover:text-brand transition-colors leading-tight">
+                {post.title}
+              </h2>
+              <p class="text-sm text-body line-clamp-3 mb-4 flex-1">
+                {post.description}
+              </p>
+              <div class="mt-auto flex items-center text-brand text-sm font-semibold">
+                Leer Artículo
+                <svg class="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </Section>
+</Layout>
