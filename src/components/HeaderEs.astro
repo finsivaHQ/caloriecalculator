@@ -1,8 +1,9 @@
 ---
 
 const NAV_ES = [
-  { label: "Calculadoras", href: "/resources/" },
-  ];
+  { label: "Calculadora de Calorías", href: "/country/spain/calculadora-de-calorias/" },
+  { label: "Guías", href: "/country/spain/guias/" },
+];
 
 import ThemeToggle from "./ThemeToggle.astro";
 import Button from "./ui/Button.astro";
@@ -100,7 +101,7 @@ import Button from "./ui/Button.astro";
       <a href="/" title="English" class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-hairline text-ink hover:bg-canvas-soft transition-colors text-sm font-medium">EN</a>
       <ThemeToggle />
       <div class="hidden sm:block">
-        <Button href="/#calculator" size="md">Calculate Calories</Button>
+        <Button href="/country/spain/calculadora-de-calorias/" size="md">Calcular Calorías</Button>
       </div>
       <!-- Mobile menu button -->
       <button
@@ -142,7 +143,7 @@ import Button from "./ui/Button.astro";
           )
         )
       }
-      <Button href="/#calculator" size="lg" class="w-full">Calculate Calories</Button>
+      <Button href="/country/spain/calculadora-de-calorias/" size="lg" class="w-full">Calcular Calorías</Button>
     </div>
   </div>
 </header>
