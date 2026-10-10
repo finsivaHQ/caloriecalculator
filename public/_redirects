@@ -1,6 +1,6 @@
-/guides/calorie-calculator-for-men/ /guides/how-many-calories-should-i-eat/ 301
-/guides/calorie-calculator-for-women/ /guides/how-many-calories-should-i-eat/ 301
-/guides/calorie-calculator-by-age/ /guides/how-many-calories-should-i-eat/ 301
+/guides/calorie-calculator-for-men/ / 301
+/guides/calorie-calculator-for-women/ / 301
+/guides/calorie-calculator-by-age/ / 301
 
 /sitemap.xml /sitemap-index.xml 301
 
@@ -140,3 +140,12 @@
 /country/spain/que-es-el-deficit-calorico/ /country/spain/calculadora-de-calorias/ 301
 /country/spain/calorias-para-ganar-peso/ /country/spain/que-es-el-superavit-calorico/ 301
 /country/spain/calculadora-harris-benedict/ /country/spain/que-es-el-metabolismo-basal/ 301
+
+# Extracted from astro.config.mjs
+/guides/calorie-calculator-for-men/ / 301
+/guides/calorie-calculator-for-women/ / 301
+/guides/calorie-calculator-by-age/ / 301
+/sitemap.xml /sitemap-index.xml 301
+/country/spain/calculadora-de-calorias-para-perder-peso-y-ganar-musculo/ /country/spain/calculadora-de-calorias/ 301
+/country/spain/calculadora-de-tmb-y-gasto-calorico/ /country/spain/calculadora-de-calorias/ 301
+/country/spain/calcular-calorias-de-alimentos-y-macros/ /country/spain/calculadora-de-calorias/ 301

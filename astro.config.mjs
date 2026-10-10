@@ -18,14 +18,5 @@ export default defineConfig({
   build: {
     inlineStylesheets: 'auto',
   },
-  redirects: {
-    '/guides/calorie-calculator-for-men/': '/guides/how-many-calories-should-i-eat/',
-    '/guides/calorie-calculator-for-women/': '/guides/how-many-calories-should-i-eat/',
-    '/guides/calorie-calculator-by-age/': '/guides/how-many-calories-should-i-eat/',
-    
-    '/sitemap.xml': '/sitemap-index.xml',
-    '/country/spain/calculadora-de-calorias-para-perder-peso-y-ganar-musculo/': '/country/spain/calculadora-de-calorias/',
-    '/country/spain/calculadora-de-tmb-y-gasto-calorico/': '/country/spain/calculadora-de-calorias/',
-    '/country/spain/calcular-calorias-de-alimentos-y-macros/': '/country/spain/calculadora-de-calorias/',
-  },
 });
+
