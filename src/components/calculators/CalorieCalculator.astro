@@ -234,26 +234,12 @@
   } from"../../lib/calculations";
   import { lbToKg, ftInToCm } from"../../lib/units";
 
-  const root = document.getElementById("calc-root");
-  if (root) {
-    const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
-    const fmt = (n: number) => Math.round(n).toLocaleString("en-US");
+
 
     let unit:"metric" |"imperial" ="metric";
     let isDirty = false;
 
-    function markDirty() {
-      if (isDirty) return;
-      isDirty = true;
-      const box = document.getElementById("result-box") || document.getElementById("calc-results");
-      if (box) {
-        box.querySelectorAll(".tabular-nums").forEach((el) => {
-          el.textContent ="-.-";
-        });
-      }
-      const btn = document.getElementById("calc-btn");
-      if (btn) btn.classList.add("is-dirty");
-    }
+
 
     function clearDirty() {
       isDirty = false;
@@ -272,36 +258,11 @@
       const age = parseFloat(($("age") as HTMLInputElement).value) || 0;
       const activity = ($("activity") as HTMLSelectElement).value as ActivityKey;
 
-      let weightKg = parseFloat(($("weight") as HTMLInputElement).value) || 0;
-      let heightCm: number;
-      if (unit ==="imperial") {
-        weightKg = lbToKg(weightKg);
-        const ft = parseFloat(($("height-ft") as HTMLInputElement).value) || 0;
-        const inch = parseFloat(($("height-in") as HTMLInputElement).value) || 0;
-        heightCm = ftInToCm(ft, inch);
-      } else {
-        heightCm = parseFloat(($("height-cm") as HTMLInputElement).value) || 0;
-      }
-      return { sex, age, activity, weightKg, heightCm };
-    }
 
-    function setArc(id: string, fraction: number, offset: number) {
-      const C = 2 * Math.PI * 52; // ≈ 326.7
-      const len = Math.max(0, fraction * C - 2); // small gap between segments
-      const el = $(id) as unknown as SVGCircleElement;
-      el.setAttribute("stroke-dasharray", `${len} ${C - len}`);
-      el.setAttribute("stroke-dashoffset", `${-offset * C}`);
-    }
 
-    function updateVal(id: string, val: string) {
-      const el = $(id);
-      if (el && el.textContent !== val) {
-        el.textContent = val;
-        el.classList.remove("animate-pop");
-        void el.offsetWidth; // trigger reflow
-        el.classList.add("animate-pop");
-      }
-    }
+
+
+
 
     function render() {
       clearDirty();
@@ -313,23 +274,9 @@
       const goal = goalSelect.value as GoalKey;
       const cals = goalCalories(tdeeVal, goal, sex);
 
-      updateVal("result-bmr", fmt(bmr));
-      updateVal("result-tdee", fmt(tdeeVal));
-      updateVal("result-calories", fmt(cals));
-      updateVal("result-weekly", fmt(cals * 7));
-      $("goal-label").textContent = GOALS[goal].label.toLowerCase();
 
-      // Macros
-      const m = macrosFromCalories(cals);
-      updateVal("macro-protein", String(m.proteinG));
-      updateVal("macro-carbs", String(m.carbsG));
-      updateVal("macro-fat", String(m.fatG));
-      const pF = m.proteinKcal / cals;
-      const cF = m.carbsKcal / cals;
-      const fF = m.fatKcal / cals;
-      setArc("arc-protein", pF, 0);
-      setArc("arc-carbs", cF, pF);
-      setArc("arc-fat", fF, pF + cF);
+
+
 
       // Goals table
       const tbody = $("goals-table");
@@ -349,51 +296,9 @@
       syncUrl({ sex, age, activity, goal });
     }
 
-    // Reflect inputs in the URL so results are shareable.
-    function syncUrl(p: { sex: string; age: number; activity: string; goal: string }) {
-      try {
-        const u = new URL(window.location.href);
-        u.searchParams.set("u", unit);
-        u.searchParams.set("s", p.sex);
-        u.searchParams.set("a", String(p.age));
-        u.searchParams.set("w", ($("weight") as HTMLInputElement).value);
-        if (unit ==="imperial") {
-          u.searchParams.set("hf", ($("height-ft") as HTMLInputElement).value);
-          u.searchParams.set("hi", ($("height-in") as HTMLInputElement).value);
-          u.searchParams.delete("h");
-        } else {
-          u.searchParams.set("h", ($("height-cm") as HTMLInputElement).value);
-          u.searchParams.delete("hf");
-          u.searchParams.delete("hi");
-        }
-        u.searchParams.set("act", p.activity);
-        u.searchParams.set("g", p.goal);
-        history.replaceState(null,"", u);
-      } catch {}
-    }
 
-    // Prefill from URL params on first load (shared links).
-    function prefillFromUrl() {
-      try {
-        const q = new URLSearchParams(window.location.search);
-        if (![...q.keys()].length) return;
-        if (q.get("u") ==="imperial") {
-          (root!.querySelector('.unit-tab[data-unit="imperial"]') as HTMLButtonElement)?.click();
-        }
-        const setV = (id: string, key: string) => { const v = q.get(key); if (v !== null) (document.getElementById(id) as HTMLInputElement).value = v; };
-        const s = q.get("s");
-        if (s ==="male" || s ==="female") {
-          (root!.querySelector(`input[name="sex"][value="${s}"]`) as HTMLInputElement).checked = true;
-        }
-        setV("age","a");
-        setV("weight","w");
-        setV("height-cm","h");
-        setV("height-ft","hf");
-        setV("height-in","hi");
-        const act = q.get("act"); if (act) ($("activity") as HTMLSelectElement).value = act;
-        const g = q.get("g"); if (g) goalSelect.value = g;
-      } catch {}
-    }
+
+
 
     // Unit toggle
     root.querySelectorAll<HTMLButtonElement>(".unit-tab").forEach((btn) => {
@@ -427,15 +332,7 @@
       });
     });
 
-    // Recent calculations (localStorage)
-    function saveRecent(entry: { cals: number; goal: string; sex: string }) {
-      try {
-        const key ="ccf-recent";
-        const list = JSON.parse(localStorage.getItem(key) ||"[]");
-        list.unshift({ ...entry, t: Date.now() });
-        localStorage.setItem(key, JSON.stringify(list.slice(0, 5)));
-      } catch {}
-    }
+
 
     // Copy result
     $("copy-btn")?.addEventListener("click", async () => {

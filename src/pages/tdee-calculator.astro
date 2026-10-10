@@ -202,26 +202,9 @@ Women: (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) - 161
     const $ = (id: string) => document.getElementById(id)!;
     let isDirty = false;
 
-    function markDirty() {
-      if (isDirty) return;
-      isDirty = true;
-      const box = document.getElementById("result-box") || document.getElementById("calc-results");
-      if (box) {
-        box.querySelectorAll(".tabular-nums").forEach((el) => {
-          el.textContent ="-.-";
-        });
-      }
-      const btn = document.getElementById("calc-btn");
-      if (btn) btn.classList.add("is-dirty");
-    }
 
-    function clearDirty() {
-      isDirty = false;
-      const btn = document.getElementById("calc-btn");
-      if (btn) btn.classList.remove("is-dirty");
-    }
-    const fmt = (n: number) => Math.round(n).toLocaleString("en-US");
-    let unit:"metric" |"imperial" ="metric";
+
+
 
     function read() {
       const sex = (root!.querySelector('input[name="sex"]:checked') as HTMLInputElement).value as Sex;

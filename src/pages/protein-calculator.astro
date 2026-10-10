@@ -264,18 +264,7 @@ const faqs: FaqItem[] = [
     const $ = (id: string) => document.getElementById(id)!;
     let isDirty = false;
 
-    function markDirty() {
-      if (isDirty) return;
-      isDirty = true;
-      const box = document.getElementById("result-box") || document.getElementById("calc-results");
-      if (box) {
-        box.querySelectorAll(".tabular-nums").forEach((el) => {
-          el.textContent ="-.-";
-        });
-      }
-      const btn = document.getElementById("calc-btn");
-      if (btn) btn.classList.add("is-dirty");
-    }
+
 
     function clearDirty() {
       isDirty = false;

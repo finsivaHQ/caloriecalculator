@@ -63,26 +63,9 @@ const { activities, defaultIndex = 0 } = Astro.props;
     const $ = (id: string) => document.getElementById(id)!;
     let isDirty = false;
 
-    function markDirty() {
-      if (isDirty) return;
-      isDirty = true;
-      const box = document.getElementById("result-box") || document.getElementById("calc-results");
-      if (box) {
-        box.querySelectorAll(".tabular-nums").forEach((el) => {
-          el.textContent ="-.-";
-        });
-      }
-      const btn = document.getElementById("calc-btn");
-      if (btn) btn.classList.add("is-dirty");
-    }
 
-    function clearDirty() {
-      isDirty = false;
-      const btn = document.getElementById("calc-btn");
-      if (btn) btn.classList.remove("is-dirty");
-    }
-    const fmt = (n: number) => Math.round(n).toLocaleString("en-US");
-    let unit:"metric" |"imperial" ="metric";
+
+
 
     function render() {
       clearDirty();
