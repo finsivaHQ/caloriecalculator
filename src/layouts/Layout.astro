@@ -63,6 +63,7 @@ const ogImage = new URL("/og-default.svg", SITE.url).href;
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
     
     <!-- Preconnect for fast image loading -->
     <link rel="preconnect" href="https://images.unsplash.com" />
@@ -172,5 +173,12 @@ const ogImage = new URL("/og-default.svg", SITE.url).href;
     {/*
     <script async="async" data-cfasync="false" src="https://pl30229081.effectivecpmnetwork.com/be0507cfa34405e0a2682b1d960c91a0/invoke.js" is:inline></script>
     */}
+    <script is:inline>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/sw.js").catch(() => {});
+        });
+      }
+    </script>
   </body>
 </html>

@@ -1,22 +1,22 @@
 ---
-import CalculatorLayout from"../layouts/CalculatorLayout.astro";
-import { inputCls, segOptCls, selectCls } from"../lib/ui";
-import type { FaqItem } from"../lib/seo";
-import MedicalNote from"../components/ui/MedicalNote.astro";
-import Sources from"../components/ui/Sources.astro";
-import ArticleImage from"../components/ui/ArticleImage.astro";
+import CalculatorLayout from "../layouts/CalculatorLayout.astro";
+import { inputCls, segOptCls, selectCls } from "../lib/ui";
+import type { FaqItem } from "../lib/seo";
+import MedicalNote from "../components/ui/MedicalNote.astro";
+import Sources from "../components/ui/Sources.astro";
+import ArticleImage from "../components/ui/ArticleImage.astro";
 
 const faqs: FaqItem[] = [
-  { q:"What is a calorie deficit?", a:"A calorie deficit is when you eat fewer calories than your body burns. This forces your body to use stored fat for energy, leading to weight loss." },
-  { q:"How much calorie deficit for weight loss?", a:"A 250-500 calorie daily deficit is ideal for sustainable weight loss, producing 0.5-1 lb of fat loss per week without muscle loss." },
-  { q:"How do I calculate my calorie deficit?", a:"Find your TDEE with our calculator, then subtract 250-500 calories. This is your daily target for fat loss." },
-  { q:"What is the maximum calorie deficit?", a:"Men should not go below 1500 calories daily, women not below 1200. A deficit over 1000 calories is hard to sustain and may cause muscle loss." },
-  { q:"Can I have too large a calorie deficit?", a:"Yes. Deficits over 1000 calories often lead to extreme hunger, muscle loss, and metabolic slowdown. Stick to 500 or less for sustainable results." },
-  { q:"How do I know if I'm in a calorie deficit?", a:"Weigh yourself weekly and track your food intake. Losing 0.5-1 lb per week means your deficit is working correctly." },
-  { q:"Does exercise count toward my calorie deficit?", a:"Yes. Exercise burns calories, contributing to your deficit. You can eat more on workout days while maintaining the same weekly deficit." },
-  { q:"Should I eat back calories I burn exercising?", a:"For weight loss, eat back roughly half of exercise calories to maintain energy while preserving deficit. Our calculator accounts for your activity level already." },
-  { q:"Why am I not losing weight in a calorie deficit?", a:"Common causes: underestimating food intake, overestimating activity, water retention, or needing to recalculate TDEE as weight drops." },
-  { q:"How often should I adjust my calorie deficit?", a:"Recalculate every 4-6 weeks or when weight drops 5-10 lbs. Your TDEE decreases as you lose weight, requiring smaller deficits." },
+  { q: "What is a calorie deficit?", a: "A calorie deficit is when you eat fewer calories than your body burns. This forces your body to use stored fat for energy, leading to weight loss." },
+  { q: "How much calorie deficit for weight loss?", a: "A 250-500 calorie daily deficit is ideal for sustainable weight loss, producing 0.5-1 lb of fat loss per week without muscle loss." },
+  { q: "How do I calculate my calorie deficit?", a: "Find your TDEE with our calculator, then subtract 250-500 calories. This is your daily target for fat loss." },
+  { q: "What is the maximum calorie deficit?", a: "Men should not go below 1500 calories daily, women not below 1200. A deficit over 1000 calories is hard to sustain and may cause muscle loss." },
+  { q: "Can I have too large a calorie deficit?", a: "Yes. Deficits over 1000 calories often lead to extreme hunger, muscle loss, and metabolic slowdown. Stick to 500 or less for sustainable results." },
+  { q: "How do I know if I'm in a calorie deficit?", a: "Weigh yourself weekly and track your food intake. Losing 0.5-1 lb per week means your deficit is working correctly." },
+  { q: "Does exercise count toward my calorie deficit?", a: "Yes. Exercise burns calories, contributing to your deficit. You can eat more on workout days while maintaining the same weekly deficit." },
+  { q: "Should I eat back calories I burn exercising?", a: "For weight loss, eat back roughly half of exercise calories to maintain energy while preserving deficit. Our calculator accounts for your activity level already." },
+  { q: "Why am I not losing weight in a calorie deficit?", a: "Common causes: underestimating food intake, overestimating activity, water retention, or needing to recalculate TDEE as weight drops." },
+  { q: "How often should I adjust my calorie deficit?", a: "Recalculate every 4-6 weeks or when weight drops 5-10 lbs. Your TDEE decreases as you lose weight, requiring smaller deficits." },
 ];
 ---
 
@@ -122,7 +122,7 @@ const faqs: FaqItem[] = [
     <ol>
       <li><strong>Select Your Preferred Unit System:</strong> Begin by choosing between the Metric system (kilograms and centimeters) or the Imperial system (pounds, feet, and inches). This ensures you can input your data comfortably without needing an external conversion tool.</li>
       <li><strong>Input Accurate Body Statistics:</strong> Enter your gender, age, current weight, and exact height. Be as precise as possible, especially with your weight. We recommend weighing yourself in the morning, after using the restroom and before eating or drinking, for the most consistent reading.</li>
-      <li><strong>Honestly Assess Your Activity Level:</strong> This is where many people make a crucial error. Select the activity level that truly reflects your average week. If you have a sedentary desk job but work out vigorously for 45 minutes three times a week, you are likely"Lightly active" or"Moderately active," not"Very active." Overestimating your activity level will inflate your TDEE, leading to a recommended calorie target that is too high for weight loss. When in doubt, it is often better to select a lower activity tier to ensure you achieve a deficit.</li>
+      <li><strong>Honestly Assess Your Activity Level:</strong> This is where many people make a crucial error. Select the activity level that truly reflects your average week. If you have a sedentary desk job but work out vigorously for 45 minutes three times a week, you are likely "Lightly active" or "Moderately active," not "Very active." Overestimating your activity level will inflate your TDEE, leading to a recommended calorie target that is too high for weight loss. When in doubt, it is often better to select a lower activity tier to ensure you achieve a deficit.</li>
       <li><strong>Review Your Targets:</strong> Once you calculate your results, you will see your estimated maintenance calories (TDEE) and three different deficit options: Gentle, Standard, and Aggressive. Choose the target that aligns best with your goals and lifestyle.</li>
     </ol>
 
@@ -147,7 +147,7 @@ const faqs: FaqItem[] = [
     <p>To maximize the success of your calorie deficit, focus on nutrient density. Prioritize lean meats, poultry, fish, tofu, legumes, whole grains, fruits, vegetables, nuts, and seeds. These foods provide the essential vitamins, minerals, and macronutrients your body needs to thrive while operating on less energy.</p>
 
     <h2>How to Monitor and Adjust Your Deficit Over Time</h2>
-    <p>Your TDEE is not a static number. As you lose weight, your body becomes smaller and therefore requires less energy to maintain itself. If you weigh 200 pounds, it takes more energy to move your body around than it does if you weigh 180 pounds. This means the calorie target that caused you to lose weight initially will eventually become your new maintenance level. This is often referred to as a"weight loss plateau."</p>
+    <p>Your TDEE is not a static number. As you lose weight, your body becomes smaller and therefore requires less energy to maintain itself. If you weigh 200 pounds, it takes more energy to move your body around than it does if you weigh 180 pounds. This means the calorie target that caused you to lose weight initially will eventually become your new maintenance level. This is often referred to as a "weight loss plateau."</p>
     <p>To ensure continuous progress, you must monitor your results and adjust your intake accordingly:</p>
     <ul>
       <li><strong>Weigh Yourself Consistently:</strong> Daily weigh-ins can be emotionally taxing due to normal water weight fluctuations. Instead, aim to weigh yourself 2-3 times a week under the same conditions (morning, after using the restroom) and look at the weekly average. Focus on the trend line over weeks and months, not day-to-day jumps.</li>
@@ -159,7 +159,7 @@ const faqs: FaqItem[] = [
     <h2>Common Pitfalls and Mistakes When Trying to Maintain a Calorie Deficit</h2>
     <p>Even with the best intentions and the most accurate calculator, many people struggle to see consistent results. Being aware of the most common pitfalls can help you troubleshoot your journey and stay on track.</p>
     
-    <h3>1. The"Hidden Calories" Trap</h3>
+    <h3>1. The "Hidden Calories" Trap</h3>
     <p>One of the primary reasons people fail to lose weight despite believing they are in a deficit is the underestimation of calorie intake. Hidden calories lurk everywhere. A tablespoon of olive oil used for sautéing vegetables adds roughly 120 calories. A handful of nuts grabbed while walking past the pantry can easily be 200 calories. Cream and sugar in your morning coffee might contribute another 150 calories. Over the course of a day, these minor additions can completely erase a 500-calorie deficit. To combat this, practice meticulous measuring and logging, at least for a few weeks, until you develop an accurate eye for portion sizes.</p>
 
     <h3>2. The Weekend Binge Cycle</h3>
@@ -177,10 +177,10 @@ const faqs: FaqItem[] = [
     <p>Yes, it is possible to build muscle while losing fat (often called body recomposition), but it is primarily achievable for certain groups: beginners who are new to resistance training, individuals with higher body fat percentages, and those returning to training after a long break. For experienced lifters who are already lean, building significant muscle in a deficit is extremely difficult. To maximize your chances, maintain a small, gentle deficit (100-250 calories), consume a high-protein diet (around 0.8-1 gram per pound of body weight), and engage in a progressive overload resistance training program.</p>
     
     <h3>Should I eat back the calories I burn from exercise?</h3>
-    <p>This is a common point of confusion. If you have already factored your exercise into the activity level selected on the calculator (e.g., you chose"Moderately active" because you run three times a week), you <em>should not</em> eat back the calories your smartwatch or treadmill says you burned. Doing so would be double-counting and would erase your deficit. The target provided by the calculator already accounts for your average daily burn. However, if you selected"Sedentary" and then decide to go for an unusually long 10-mile hike, you may need to eat slightly more that day to compensate for the extreme, uncharacteristic energy expenditure.</p>
+    <p>This is a common point of confusion. If you have already factored your exercise into the activity level selected on the calculator (e.g., you chose "Moderately active" because you run three times a week), you <em>should not</em> eat back the calories your smartwatch or treadmill says you burned. Doing so would be double-counting and would erase your deficit. The target provided by the calculator already accounts for your average daily burn. However, if you selected "Sedentary" and then decide to go for an unusually long 10-mile hike, you may need to eat slightly more that day to compensate for the extreme, uncharacteristic energy expenditure.</p>
 
     <h3>What happens if I go over my calorie limit for one day?</h3>
-    <p>Going over your calories for a single day will not ruin your progress, just as eating perfectly for one day will not instantly make you lose all your weight. Fat loss is driven by the long-term average over weeks and months. If you overeat by 500 calories on Saturday, you might temporarily see a higher number on the scale due to water retention and increased food volume in your digestive system, but you haven't gained pounds of fat. Simply return to your normal deficit target the next day. Do not drastically restrict your calories the following day to"punish" yourself, as this often leads to a restrictive binge-eating cycle.</p>
+    <p>Going over your calories for a single day will not ruin your progress, just as eating perfectly for one day will not instantly make you lose all your weight. Fat loss is driven by the long-term average over weeks and months. If you overeat by 500 calories on Saturday, you might temporarily see a higher number on the scale due to water retention and increased food volume in your digestive system, but you haven't gained pounds of fat. Simply return to your normal deficit target the next day. Do not drastically restrict your calories the following day to "punish" yourself, as this often leads to a restrictive binge-eating cycle.</p>
 
     <h3>Is it safe to go below 1,200 calories a day?</h3>
     <p>For the vast majority of adults, consuming fewer than 1,200 calories per day (for women) or 1,500 calories per day (for men) is not recommended without direct medical supervision. Such very-low-calorie diets make it incredibly difficult to obtain the essential micronutrients (vitamins and minerals) your body needs for long-term health. They also significantly increase the risk of gallstones, severe muscle loss, and metabolic adaptation. If your calculated deficit puts you below these thresholds, focus on increasing your daily activity (NEAT or exercise) to raise your TDEE, rather than further restricting your food intake.</p>
@@ -213,16 +213,16 @@ const faqs: FaqItem[] = [
     </ul>
 
     <Sources sources={[
-      { label:"Mifflin MD, St Jeor ST, Hill LA, Scott BJ, Daugherty SA, Koh YO. A new predictive equation for resting energy expenditure in healthy individuals. Am J Clin Nutr. 1990.", href:"https://pubmed.ncbi.nlm.nih.gov/2305711/" },
-      { label:"U.S. Dietary Guidelines for Americans, 2020–2025", href:"https://www.dietaryguidelines.gov/" },
-      { label:"Centers for Disease Control and Prevention — Healthy Weight, Nutrition, and Physical Activity", href:"https://www.cdc.gov/healthy-weight-growth/index.html" },
+      { label: "Mifflin MD, St Jeor ST, Hill LA, Scott BJ, Daugherty SA, Koh YO. A new predictive equation for resting energy expenditure in healthy individuals. Am J Clin Nutr. 1990.", href: "https://pubmed.ncbi.nlm.nih.gov/2305711/" },
+      { label: "U.S. Dietary Guidelines for Americans, 2020–2025", href: "https://health.gov/our-work/nutrition-physical-activity/dietary-guidelines" },
+      { label: "Centers for Disease Control and Prevention — Healthy Weight, Nutrition, and Physical Activity", href: "https://www.cdc.gov/healthy-weight-growth/index.html" },
     ]} />
   </Fragment>
 </CalculatorLayout>
 
 <script>
-  import { bmrMifflinStJeor, tdee, type Sex, type ActivityKey } from"../lib/calculations";
-  import { lbToKg, ftInToCm } from"../lib/units";
+  import { bmrMifflinStJeor, tdee, type Sex, type ActivityKey } from "../lib/calculations";
+  import { lbToKg, ftInToCm } from "../lib/units";
 
   const root = document.getElementById("calc-root");
   if (root) {
@@ -235,7 +235,7 @@ const faqs: FaqItem[] = [
       const box = document.getElementById("result-box") || document.getElementById("calc-results");
       if (box) {
         box.querySelectorAll(".tabular-nums").forEach((el) => {
-          el.textContent ="-.-";
+          el.textContent = "-.-";
         });
       }
       const btn = document.getElementById("calc-btn");
@@ -245,12 +245,12 @@ const faqs: FaqItem[] = [
     function clearDirty() {
       isDirty = false;
       const box = $("result-box");
-      if (box) box.classList.remove("opacity-40","grayscale");
+      if (box) box.classList.remove("opacity-40", "grayscale");
       const btn = $("calc-btn");
       if (btn) btn.classList.remove("is-dirty");
     }
     const fmt = (n: number) => Math.round(n).toLocaleString("en-US");
-    let unit:"metric" |"imperial" ="metric";
+    let unit: "metric" | "imperial" = "metric";
 
     function read() {
       const sex = (root!.querySelector('input[name="sex"]:checked') as HTMLInputElement).value as Sex;
@@ -258,7 +258,7 @@ const faqs: FaqItem[] = [
       const activity = ($("activity") as HTMLSelectElement).value as ActivityKey;
       let w = parseFloat(($("weight") as HTMLInputElement).value) || 0;
       let h: number;
-      if (unit ==="imperial") { w = lbToKg(w); h = ftInToCm(parseFloat(($("height-ft") as HTMLInputElement).value) || 0, parseFloat(($("height-in") as HTMLInputElement).value) || 0); }
+      if (unit === "imperial") { w = lbToKg(w); h = ftInToCm(parseFloat(($("height-ft") as HTMLInputElement).value) || 0, parseFloat(($("height-in") as HTMLInputElement).value) || 0); }
       else h = parseFloat(($("height-cm") as HTMLInputElement).value) || 0;
       return { sex, age, activity, w, h };
     }
@@ -276,17 +276,17 @@ const faqs: FaqItem[] = [
 
     root.querySelectorAll<HTMLButtonElement>(".unit-tab").forEach((btn) => {
       btn.addEventListener("click", () => {
-        const next = btn.dataset.unit as"metric" |"imperial";
+        const next = btn.dataset.unit as "metric" | "imperial";
         if (next === unit) return;
         unit = next;
         root.querySelectorAll<HTMLButtonElement>(".unit-tab").forEach((b) => { const on = b.dataset.unit === unit; b.setAttribute("aria-pressed", String(on)); b.classList.toggle("bg-canvas", on); b.classList.toggle("text-ink", on); b.classList.toggle("shadow-sm", on); b.classList.toggle("text-mute", !on); });
-        $("height-metric").classList.toggle("hidden", unit ==="imperial");
-        $("height-imperial").classList.toggle("hidden", unit ==="metric");
-        $("height-imperial").classList.toggle("grid", unit ==="imperial");
-        document.querySelectorAll(".weight-unit").forEach((e) => (e.textContent = unit ==="metric" ?"(kg)" :"(lb)"));
-        document.querySelectorAll(".height-unit").forEach((e) => (e.textContent = unit ==="metric" ?"(cm)" :"(ft / in)"));
+        $("height-metric").classList.toggle("hidden", unit === "imperial");
+        $("height-imperial").classList.toggle("hidden", unit === "metric");
+        $("height-imperial").classList.toggle("grid", unit === "imperial");
+        document.querySelectorAll(".weight-unit").forEach((e) => (e.textContent = unit === "metric" ? "(kg)" : "(lb)"));
+        document.querySelectorAll(".height-unit").forEach((e) => (e.textContent = unit === "metric" ? "(cm)" : "(ft / in)"));
         const wi = $("weight") as HTMLInputElement; const cv = parseFloat(wi.value) || 0;
-        if (cv) wi.value = (unit ==="imperial" ? cv * 2.2046226218 : cv / 2.2046226218).toFixed(1);
+        if (cv) wi.value = (unit === "imperial" ? cv * 2.2046226218 : cv / 2.2046226218).toFixed(1);
         markDirty();
       });
     });

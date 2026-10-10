@@ -1,0 +1,17 @@
+{
+  "name": "Calorie Calculator Free",
+  "short_name": "Calorie Calc",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFAFA",
+  "theme_color": "#0ea5e9",
+  "description": "Calculate your daily calorie needs for weight loss, maintenance, or muscle gain.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

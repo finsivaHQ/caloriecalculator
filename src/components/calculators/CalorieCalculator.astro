@@ -12,7 +12,7 @@
   data-calc="calorie"
 >
   <!-- ── Form ───────────────────────────────────────────────── -->
-  <form id="calc-form" class="flex flex-col rounded-xl border border-hairline bg-surface p-5 sm:p-7 shadow-sm" novalidate>
+  <form id="calc-form" class="flex flex-col rounded-xl border border-hairline bg-surface p-5 sm:p-7 shadow-md transition-shadow hover:shadow-lg" novalidate>
     <!-- Unit system -->
     <div
       class="mb-6 grid grid-cols-2 gap-1 rounded-md border border-hairline bg-canvas-soft p-1"
@@ -25,7 +25,7 @@
 
     <!-- Sex -->
     <fieldset class="mb-5">
-      <legend class="mb-2 block text-sm font-medium text-ink">Biological Sex</legend>
+      <legend class="mb-2 block text-sm font-medium text-ink">Gender</legend>
       <div class="grid grid-cols-2 gap-3">
         <label class="flex h-11 cursor-pointer items-center justify-center gap-2 rounded-md border border-hairline bg-surface text-sm font-medium text-body transition-colors has-[:checked]:border-brand has-[:checked]:bg-brand/5 has-[:checked]:text-ink hover:bg-canvas-soft has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-brand has-[:focus-visible]:ring-offset-1">
           <input type="radio" name="sex" value="male" class="sr-only" checked />
@@ -89,14 +89,14 @@
     </div>
 
     <div class="mt-auto pt-2">
-      <button type="submit" id="calc-btn" class="inline-flex h-12 w-full items-center justify-center rounded-md bg-brand text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2">
+      <button type="submit" id="calc-btn" class="inline-flex h-12 w-full items-center justify-center rounded-md bg-brand text-base font-bold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:bg-brand-hover focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 active:scale-95">
         Calculate calories
       </button>
     </div>
   </form>
 
   <!-- ── Results ────────────────────────────────────────────── -->
-  <div id="calc-results" class="flex flex-col rounded-xl border border-hairline bg-surface shadow-sm overflow-hidden">
+  <div id="calc-results" aria-live="polite" class="flex flex-col rounded-xl border border-hairline bg-surface shadow-md transition-shadow hover:shadow-lg overflow-hidden">
     <!-- Primary Result -->
     <div class="p-6 sm:p-8">
       <div class="flex flex-wrap items-end justify-between gap-4">
@@ -293,6 +293,16 @@
       el.setAttribute("stroke-dashoffset", `${-offset * C}`);
     }
 
+    function updateVal(id: string, val: string) {
+      const el = $(id);
+      if (el && el.textContent !== val) {
+        el.textContent = val;
+        el.classList.remove("animate-pop");
+        void el.offsetWidth; // trigger reflow
+        el.classList.add("animate-pop");
+      }
+    }
+
     function render() {
       clearDirty();
       const { sex, age, activity, weightKg, heightCm } = readInputs();
@@ -303,17 +313,17 @@
       const goal = goalSelect.value as GoalKey;
       const cals = goalCalories(tdeeVal, goal, sex);
 
-      $("result-bmr").textContent = fmt(bmr);
-      $("result-tdee").textContent = fmt(tdeeVal);
-      $("result-calories").textContent = fmt(cals);
-      $("result-weekly").textContent = fmt(cals * 7);
+      updateVal("result-bmr", fmt(bmr));
+      updateVal("result-tdee", fmt(tdeeVal));
+      updateVal("result-calories", fmt(cals));
+      updateVal("result-weekly", fmt(cals * 7));
       $("goal-label").textContent = GOALS[goal].label.toLowerCase();
 
       // Macros
       const m = macrosFromCalories(cals);
-      $("macro-protein").textContent = String(m.proteinG);
-      $("macro-carbs").textContent = String(m.carbsG);
-      $("macro-fat").textContent = String(m.fatG);
+      updateVal("macro-protein", String(m.proteinG));
+      updateVal("macro-carbs", String(m.carbsG));
+      updateVal("macro-fat", String(m.fatG));
       const pF = m.proteinKcal / cals;
       const cF = m.carbsKcal / cals;
       const fF = m.fatKcal / cals;
@@ -468,6 +478,9 @@
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       render();
+      if (window.innerWidth < 1024) {
+        document.getElementById("calc-results")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     });
     prefillFromUrl();
   }
