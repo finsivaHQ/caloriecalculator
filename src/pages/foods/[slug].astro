@@ -74,6 +74,22 @@ const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity
 <Layout title={title} description={description} path={`/foods/${food.slug}/`}>
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
+  <nav aria-label="Breadcrumb" class="border-b border-hairline bg-canvas-soft/40">
+    <ol class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center gap-2 py-3 text-xs text-mute">
+      <li class="flex items-center gap-2">
+        <a href="/" class="transition-colors hover:text-ink">Home</a>
+      </li>
+      <li class="flex items-center gap-2">
+        <span aria-hidden="true">/</span>
+        <a href="/foods/" class="transition-colors hover:text-ink">Food Database</a>
+      </li>
+      <li class="flex items-center gap-2">
+        <span aria-hidden="true">/</span>
+        <span class="text-body" aria-current="page">{food.name}</span>
+      </li>
+    </ol>
+  </nav>
+
   <div class="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
     
     <!-- Hero / Headline -->

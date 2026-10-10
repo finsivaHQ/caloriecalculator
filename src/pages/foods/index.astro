@@ -18,6 +18,18 @@ const categories = Object.keys(foodsByCategory).sort();
 ---
 
 <Layout title={title} description={description} path="/foods/">
+  <nav aria-label="Breadcrumb" class="border-b border-hairline bg-canvas-soft/40">
+    <ol class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center gap-2 py-3 text-xs text-mute">
+      <li class="flex items-center gap-2">
+        <a href="/" class="transition-colors hover:text-ink">Home</a>
+      </li>
+      <li class="flex items-center gap-2">
+        <span aria-hidden="true">/</span>
+        <span class="text-body" aria-current="page">Food Database</span>
+      </li>
+    </ol>
+  </nav>
+
   <div class="max-w-5xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
     
     <div class="text-center mb-16">
