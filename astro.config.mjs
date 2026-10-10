@@ -6,6 +6,10 @@ import sitemap from '@astrojs/sitemap';
 // The sitemap is maintained as a static file at public/sitemap.xml
 // (served at /sitemap.xml) and referenced from robots.txt.
 export default defineConfig({
+  redirects: {
+    '/guides/calories-to-lose-weight-women-calculator/': { status: 301, destination: '/calorie-deficit-calculator/' },
+  },
+
   site: 'https://caloriecalculatorfree.com',
   trailingSlash: 'always',
   integrations: [sitemap({
