@@ -10,7 +10,7 @@ import { breadcrumbSchema, faqSchema, articleSchema } from "../lib/seo";
 
 interface Props {
   title: string;
-  h1: string;
+  h1?: string;
   description: string;
   path: string;
   category?: string;
@@ -38,15 +38,19 @@ const {
   hreflangs = [],
 } = Astro.props;
 
+const pageHeading = h1 || title;
+const homeName = lang === 'es' ? "Inicio" : "Home";
+const homePath = lang === 'es' ? "/country/spain/calculadora-de-calorias/" : "/";
+
 const crumbs = [
-  { name: "Home", path: "/" },
+  { name: homeName, path: homePath },
   ...(category && categoryPath ? [{ name: category, path: categoryPath }] : []),
-  { name: h1, path },
+  { name: pageHeading, path },
 ];
 
 const jsonLd = [
   breadcrumbSchema(crumbs),
-  ...(category ? [articleSchema({ headline: h1, description, path, dateModified: updated, })] : []),
+  ...(category ? [articleSchema({ headline: pageHeading, description, path, dateModified: updated, })] : []),
   ...(faqs.length ? [faqSchema(faqs)] : []),
 ];
 
@@ -76,7 +80,7 @@ const showRelated = relatedTools.length > 0;
 
     <div class="container-page max-w-3xl py-12 sm:py-16">
       {category && <p class="text-sm font-medium text-brand">{category}</p>}
-      <h1 class="mt-2 text-display-lg text-ink">{h1}</h1>
+      <h1 class="mt-2 text-display-lg text-ink">{pageHeading}</h1>
       {lead && <p class="mt-4 text-lg text-body">{lead}</p>}
 
       <div class="mt-4 flex flex-wrap gap-4 text-sm text-mute">

@@ -38,14 +38,19 @@ export function faqSchema(items: FaqItem[]) {
   };
 }
 
-export function breadcrumbSchema(crumbs: { name: string; path: string }[]) {
+export function breadcrumbSchema(crumbs: { name?: string; path?: string }[]) {
+  const validCrumbs = crumbs.filter(
+    (c): c is { name: string; path: string } =>
+      Boolean(c && typeof c.name === "string" && c.name.trim().length > 0 && typeof c.path === "string" && c.path.trim().length > 0)
+  );
+
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: crumbs.map((c, i) => ({
+    itemListElement: validCrumbs.map((c, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      name: c.name,
+      name: c.name.trim(),
       item: new URL(c.path, SITE.url).href,
     })),
   };

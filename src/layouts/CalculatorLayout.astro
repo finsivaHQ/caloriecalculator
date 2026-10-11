@@ -9,7 +9,7 @@ import { breadcrumbSchema, calculatorSchema, faqSchema } from "../lib/seo";
 
 interface Props {
   title: string;
-  h1: string;
+  h1?: string;
   description: string;
   intro: string;
   path: string;
@@ -29,14 +29,18 @@ const {
   updated,
 } = Astro.props;
 
+const pageHeading = h1 || title;
+const homeName = lang === 'es' ? "Inicio" : "Home";
+const homePath = lang === 'es' ? "/country/spain/calculadora-de-calorias/" : "/";
+
 const crumbs = [
-  { name: "Home", path: "/" },
-  { name: h1, path },
+  { name: homeName, path: homePath },
+  { name: pageHeading, path },
 ];
 
 const jsonLd = [
   breadcrumbSchema(crumbs),
-  calculatorSchema(h1, description, path),
+  calculatorSchema(pageHeading, description, path),
   ...(updated ? [{ "@context": "https://schema.org", "@type": "SoftwareApplication", "dateModified": updated }] : []),
   ...(faqs.length ? [faqSchema(faqs)] : []),
 ];
@@ -66,7 +70,7 @@ const showRelated = related.length > 0;
   <header class="relative overflow-hidden border-b border-hairline">
 
     <div class="container-page py-12 sm:py-16">
-      <h1 class="max-w-3xl text-display-lg text-ink">{h1}</h1>
+      <h1 class="max-w-3xl text-display-lg text-ink">{pageHeading}</h1>
       <p class="mt-4 max-w-2xl text-lg text-body">{intro}</p>
 
       <div class="mt-4 flex flex-wrap gap-4 text-sm text-mute">
