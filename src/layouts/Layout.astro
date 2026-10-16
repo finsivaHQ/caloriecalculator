@@ -46,7 +46,7 @@ const ogImage = new URL("/og-default.svg", SITE.url).href;
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html class="dark" lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -142,16 +142,19 @@ const ogImage = new URL("/og-default.svg", SITE.url).href;
      crossorigin="anonymous"></script>
     */}
 
-    <!-- No-flash theme: apply stored/system preference before first paint. -->
+    <!-- No-flash theme: dark mode is default; apply stored user preference if present. -->
     <script is:inline>
       (function () {
         try {
           var stored = localStorage.getItem("theme-preference");
-          // Default to light mode for all new visitors
-          var theme = stored || "dark"; 
-          document.documentElement.classList.toggle("dark", theme === "dark");
+          var theme = stored || "dark";
+          if (theme === "light") {
+            document.documentElement.classList.remove("dark");
+          } else {
+            document.documentElement.classList.add("dark");
+          }
         } catch (e) {
-          // document.documentElement.classList.add("dark");
+          document.documentElement.classList.add("dark");
         }
       })();
     </script>
