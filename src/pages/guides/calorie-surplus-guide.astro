@@ -11,32 +11,18 @@ const faqs: FaqItem[] = [
   { q:"How big should a calorie surplus be?", a:"A surplus of 250–500 calories per day supports lean muscle gain. Larger surpluses add more fat without building muscle any faster." },
 ];
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calorie Surplus: The Complete Guide to Gaining Muscle Mass</title>
-  <meta name="description" content="Discover what a calorie surplus is, how big it should be, and how to use it strategically to build muscle mass without accumulating excess fat. All backed by science." />
-  <link rel="canonical" href="https://kirocalorie.com/guides/calorie-surplus-guide.html" />
-  <link rel="alternate" hreflang="en" href="https://kirocalorie.com/guides/calorie-surplus-guide.html" />
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-[#f8fafc] text-ink font-sans antialiased selection:bg-blue-200 selection:text-ink">
-  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-    
-    <!-- Hero Header -->
-    <header class="mb-16 text-center">
-      <div class="inline-block bg-brand-soft text-ink font-bold px-5 py-2 rounded-full text-sm tracking-wider mb-8 uppercase shadow-sm">
-        Sports Nutrition & Fitness
-      </div>
-      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-ink mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-indigo-600 leading-tight">
-        Calorie Surplus: The Ultimate Guide
-      </h1>
-      <p class="text-xl md:text-2xl text-body font-light max-w-3xl mx-auto leading-relaxed">
-        To build real muscle you need extra fuel. Discover how to calculate and apply a structured calorie surplus (Bulking) that adds mostly lean muscle mass and minimizes body fat accumulation.
-      </p>
-    </header>
+
+<ContentLayout
+  title="Calorie Surplus: The Complete Guide to Gaining Muscle Mass"
+  description="Discover what a calorie surplus is, how big it should be, and how to use it strategically to build muscle mass without accumulating excess fat. All backed by science."
+  h1="Calorie Surplus: The Ultimate Guide"
+  path="/guides/calorie-surplus-guide/"
+  category="Guides"
+  categoryPath="/guides/"
+  faqs={faqs}
+  lead="To build real muscle you need extra fuel. Discover how to calculate and apply a structured calorie surplus (Bulking) that adds mostly lean muscle mass and minimizes body fat accumulation."
+>
+  <div class="space-y-12">
 
     <div class="mb-12">
       <MedicalNote />
@@ -344,7 +330,5 @@ const faqs: FaqItem[] = [
         </div>
       </div>
     </section>
-
-  </main>
-</body>
-</html>
+  </div>
+</ContentLayout>
