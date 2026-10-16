@@ -10,7 +10,7 @@ import Sources from"../../components/ui/Sources.astro";
 const faqs: FaqItem[] = [
   { q:"What does BMR stand for?", a:"BMR stands for Basal Metabolic Rate — the number of calories your body burns at complete rest to maintain basic life functions like breathing, circulation, and cell repair." },
   { q:"Is BMR the same as RMR?", a:"They are very close. Resting Metabolic Rate (RMR) is measured under slightly less strict conditions and is usually a touch higher, but the terms are often used interchangeably in everyday nutrition and fitness contexts." },
-  { q:"How do I calculate my BMR?", a:"The widely recommended predictive formula is the <a href='/guides/mifflin-st-jeor-equation/'>Mifflin-St Jeor equation</a>-St Jeor equation. For men: BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age + 5. For women: BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age − 161. Use our <a href=\"/bmr-calculator/\'>BMR</a> for an instant result." },
+  { q:"How do I calculate my BMR?", a:"The widely recommended predictive formula is the Mifflin-St Jeor equation. For men: BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age + 5. For women: BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age − 161. Use our <a href='/tdee-calculator/'>TDEE & BMR Calculator</a> for an instant result." },
   { q:"What is a typical BMR?", a:"A typical BMR for adult women ranges from 1,200 to 1,500 kcal/day, and for adult men from 1,500 to 2,000 kcal/day. Your exact number depends on your size, age, sex, and muscle mass." },
   { q:"Can I use my BMR for weight loss?", a:"Yes. Your BMR is the starting point for any weight goal. Calculate your BMR, then estimate your TDEE by applying your activity level. From there, create a deficit for weight loss or a surplus for weight gain." },
 ];
@@ -40,7 +40,7 @@ const faqs: FaqItem[] = [
   <ArticleImage src="/assets/images/articles/basal-metabolism.svg" alt="Illustration of a resting metabolism with a flame inside a body outline, representing calories burned at rest." />
 
   <h2>Why BMR matters</h2>
-  <p>Understanding your BMR helps you make informed decisions about your calorie intake. Once you know your BMR, you can estimate your full daily needs (your <a href="/guides/whats-my-tdee/">TDEE</a>) and set targets for weight loss, maintenance, or weight gain. Without knowing your BMR, it is difficult to determine whether your current calorie intake is appropriate for your goals.</p>
+  <p>Understanding your BMR helps you make informed decisions about your calorie intake. Once you know your BMR, you can estimate your full daily needs (your <a href="/tdee-calculator/">TDEE</a>) and set targets for weight loss, maintenance, or weight gain. Without knowing your BMR, it is difficult to determine whether your current calorie intake is appropriate for your goals.</p>
   <p>For example, if your BMR is 1,400 kcal/day and you eat 1,200 kcal/day, you are consuming fewer calories than your body needs at rest. Over time, this can lead to muscle loss, hormonal disruption, and a slower metabolism — not sustainable fat loss. On the other hand, eating above your TDEE consistently will lead to weight gain, which may be intentional if your goal is to build muscle.</p>
 
   <h2>BMR vs RMR — what is the difference?</h2>
@@ -49,7 +49,7 @@ const faqs: FaqItem[] = [
     <li><strong>BMR</strong> is measured after a full night of sleep and 12 hours of fasting, in a thermoneutral environment, with the subject completely at rest and awake. These strict conditions ensure the measurement reflects only the energy needed for basic life functions.</li>
     <li><strong>RMR</strong> is measured under less strict conditions — no fasting requirement, and the subject may have been lightly active earlier in the day. As a result, RMR is typically 5–10% higher than BMR.</li>
   </ul>
-  <p>In everyday nutrition and fitness contexts, the two terms are used interchangeably. Our <a href="/">BMR</a> estimates RMR using the Mifflin-St Jeor equation, which is the most widely accepted predictive formula for the general population.</p>
+  <p>In everyday nutrition and fitness contexts, the two terms are used interchangeably. Our <a href="/tdee-calculator/">TDEE & BMR Calculator</a> estimates RMR using the Mifflin-St Jeor equation, which is the most widely accepted predictive formula for the general population.</p>
 
   <h2>How to calculate BMR</h2>
   <p>The widely recommended predictive formula is the Mifflin-St Jeor equation, published in 1990 using modern metabolic data:</p>
@@ -57,8 +57,8 @@ const faqs: FaqItem[] = [
     <li><strong>Men:</strong> BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age + 5</li>
     <li><strong>Women:</strong> BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age − 161</li>
   </ul>
-  <p>The formula requires your weight in kilograms, height in centimeters, and age in years. If you prefer imperial units, convert first: 1 kg = 2.205 lb, 1 cm = 0.394 in. Our <a href="/">BMR</a> handles the math instantly and supports both metric and imperial inputs.</p>
-  <p>For a deeper comparison of equations, see our <a href="/guides/bmr-equations/">BMR equations guide</a>.</p>
+  <p>The formula requires your weight in kilograms, height in centimeters, and age in years. If you prefer imperial units, convert first: 1 kg = 2.205 lb, 1 cm = 0.394 in. Our <a href="/tdee-calculator/">TDEE Calculator</a> handles the math instantly and supports both metric and imperial inputs.</p>
+  <p>To calculate your full daily energy expenditure, see our <a href="/tdee-calculator/">TDEE Calculator</a>.</p>
 
   <h2>BMR examples by profile</h2>
   <table>
@@ -76,13 +76,13 @@ const faqs: FaqItem[] = [
   <h2>How to use BMR for weight goals</h2>
   <p>Your BMR is the starting point for any weight goal. Here is how to use it:</p>
   <ol>
-    <li><strong>Calculate your BMR</strong> using the <a href="/">BMR</a>.</li>
+    <li><strong>Calculate your BMR</strong> using the <a href="/tdee-calculator/">TDEE & BMR Calculator</a>.</li>
     <li><strong>Estimate your TDEE</strong> by multiplying your BMR by an activity factor (1.2 for sedentary, 1.375 for lightly active, 1.55 for moderately active, 1.725 for very active).</li>
-    <li><strong>For weight loss:</strong> Subtract 250–500 calories from TDEE for a moderate, sustainable deficit. The <a href="/guides/calorie-deficit-guide/">calorie deficit guide</a> has detailed instructions.</li>
+    <li><strong>For weight loss:</strong> Subtract 250–500 calories from TDEE for a moderate, sustainable deficit. The <a href="/calorie-deficit-calculator/">calorie deficit calculator</a> has detailed instructions.</li>
     <li><strong>For weight gain:</strong> Add 250–500 calories to TDEE for a lean bulk. See the <a href="/guides/calorie-surplus-guide/">calorie surplus guide</a> for best practices.</li>
     <li><strong>For maintenance:</strong> Eat at your TDEE and recalculate every 4–6 weeks as your body composition changes.</li>
   </ol>
-  <p>Always use the <a href="/">Calorie Calculator</a> to ensure your protein intake is adequate, especially during weight loss, to preserve muscle mass.</p>
+  <p>Always use the <a href="/protein-calculator/">Protein Calculator</a> to ensure your protein intake is adequate, especially during weight loss, to preserve muscle mass.</p>
 
   <h2>Common misconceptions about BMR</h2>
   <p><strong>Myth:"Skinny people have higher BMRs."</strong> Not necessarily. Larger bodies, even with higher body fat, often have higher BMRs because there is more total tissue to maintain. Muscle mass matters more than body weight alone.</p>

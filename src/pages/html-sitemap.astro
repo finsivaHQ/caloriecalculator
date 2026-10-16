@@ -22,6 +22,7 @@ for (const path in allPages) {
   // Convert /src/pages/guides/something.astro to /guides/something/
   let urlPath = path.replace('/src/pages', '').replace('.astro', '');
   
+  if (path.includes('[')) continue;
   if (excluded.includes(urlPath)) continue;
   
   // Clean up index files
