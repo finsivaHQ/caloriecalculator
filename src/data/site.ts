@@ -1,4 +1,4 @@
-﻿/** site.ts - global site constants & navigation structure. */
+/** site.ts - global site constants & navigation structure. */
 
 export const SITE = {
   name: "Calorie Calculator Free",
@@ -47,9 +47,27 @@ export const NAV: { label: string; href?: string; children?: NavLink[] }[] = [
 /** Footer link groups. */
 export const FOOTER: { title: string; links: NavLink[] }[] = [
   {
-    title: "Resources",
+    title: "Calculators",
     links: [
-      { label: "Resources", href: "/resources/" },
+      { label: "Calorie Deficit Calculator", href: "/calorie-deficit-calculator/" },
+      { label: "TDEE Calculator", href: "/tdee-calculator/" },
+      { label: "Protein Calculator", href: "/protein-calculator/" },
+      { label: "Meal Calorie Calculator", href: "/meal-calorie-calculator/" },
+      { label: "Recipe Calorie Calculator", href: "/recipe-calorie-calculator/" },
+      { label: "Running Calorie Calculator", href: "/running-calorie-calculator/" },
+      { label: "Walking Calorie Calculator", href: "/walking-calorie-calculator/" },
+      { label: "Calories Burned Calculator", href: "/calories-burned-calculator/" },
+    ],
+  },
+  {
+    title: "Guides & Resources",
+    links: [
+      { label: "What is BMR?", href: "/guides/what-is-bmr/" },
+      { label: "Macro Tracking Guide", href: "/guides/macro-guide/" },
+      { label: "Calorie Surplus Guide", href: "/guides/calorie-surplus-guide/" },
+      { label: "Maintenance Calories", href: "/guides/maintenance-calories/" },
+      { label: "Food Database", href: "/foods/" },
+      { label: "All Resources", href: "/resources/" },
     ],
   },
   {
