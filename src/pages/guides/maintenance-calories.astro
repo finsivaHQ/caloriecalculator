@@ -7,25 +7,22 @@ import type { FaqItem } from"../../lib/seo";
 import ArticleImage from"../../components/ui/ArticleImage.astro";
 
 const faqs: FaqItem[] = [
-  { q:"What are maintenance calories?", a:"Maintenance calories are the number of calories you need to eat each day to keep your current weight. They are the same as your Total Daily Energy Expenditure (<a href='/tdee-calculator/'>Total Daily Energy Expenditure (TDEE)</a>)." },
-  { q:"How do I find my maintenance calories?", a:"Use the <a href='/'>maintenance calories calculator</a> with your age, height, weight, sex, and activity level to get a personalized daily target." },
-  { q:"Is maintenance the same as BMR?", a:"BMR is calories burned at complete rest. Maintenance calories add daily movement and exercise. Use the <a href='/tdee-calculator/'>BMR calculator</a> for your baseline, then multiply by activity." },
-  { q:"Can maintenance calories change?", a:"Yes. Weight gain, weight loss, muscle changes, and activity shifts all change maintenance. Recalculate every 4–6 weeks or after a 5 kg weight change." },
-  { q:"What happens if I eat above maintenance?", a:"A small surplus leads to gradual weight gain. Use the <a href='/'>weight gain calculator</a> to control the rate and minimize fat gain." },
-  { q:"What happens if I eat below maintenance?", a:"A deficit leads to weight loss. Use the <a href='/calorie-deficit-calculator/'>calorie deficit calculator</a> to pick a safe pace and preserve muscle." },
-  { q:"How accurate is maintenance calorie math?", a:"Within ±5–10% for most people. Adjust based on real-world results, hunger, energy, and weekly weight trends." },
-  { q:"Do I need to count calories forever?", a:"Not forever. Many people track strictly during transitions, then shift to portion-based eating once they know their maintenance range." },
+  { q: "How do I find my maintenance calories after a weight loss diet?", a: "To find your new maintenance calories after dieting, calculate your current TDEE using your new body weight. Alternatively, gradually add 100 to 150 calories back each week (reverse dieting) until your 7-day average body weight stabilizes." },
+  { q: "Why did my maintenance calories drop after losing weight?", a: "Maintenance calories decrease because a smaller body requires less energy to move (reduced NEAT) and has less total tissue to support (reduced BMR). For example, losing 20 pounds typically reduces daily maintenance requirements by 150 to 250 kcal." },
+  { q: "Can you maintain weight without counting calories forever?", a: "Yes. Once you understand your daily portion sizes, habitual meal patterns, and weekly weigh-in trends, you can transition to mindful, portion-based eating without logging every gram into an app." },
+  { q: "What is the difference between BMR and maintenance calories?", a: "BMR is the base energy burned while resting in bed with zero movement. Maintenance calories (TDEE) include all physical activities, work, and digestion added on top of your BMR." },
+  { q: "What should I do if my weight fluctuates at maintenance?", a: "Daily fluctuations of 2 to 4 pounds are normal due to water retention, sodium, and carbohydrate glycogen replenishment. Track the weekly average over 3 to 4 weeks rather than reacting to daily scale changes." },
 ];
 ---
 
 <ContentLayout
-  title="Maintenance Calories: How to Stay at Your Ideal Weight"
-  h1="Maintenance Calories: How to Stay at Your Ideal Weight"
-  description="Learn what maintenance calories are, why they shift over time, and how to keep your weight stable without constant tracking."
+  title="How to Find and Eat at Maintenance Calories: Keep Weight Off After a Diet"
+  h1="How to Find and Eat at Maintenance Calories: Maintain Your Weight Without Gaining Fat"
+  description="Learn how to find your maintenance calories after a weight loss diet, why maintenance calories drop as you get leaner, and how to maintain your weight without tracking apps."
   path="/guides/maintenance-calories/"
   category="Guides"
   categoryPath="/guides/"
-  lead="Maintenance calories are your real-world daily calorie budget. Here is how to find them and stay stable."
+  lead="Maintenance calories represent your body's true energy balance floor. Learn how to find your maintenance calories after weight loss, why maintenance shifts, and how to stop weight regain forever."
   updated="July 2026"
   faqs={faqs}
 >
@@ -41,11 +38,11 @@ const faqs: FaqItem[] = [
   
   <p>Understanding your <strong>maintenance calories</strong> is the absolute pinnacle of nutritional control. Whether you have just finished a grueling 6-month diet and want to lock in your weight loss, or you are an athlete looking to stay in a specific weight class, eating at maintenance is the ultimate state of biological equilibrium.</p>
 
-  <h2>What Are Maintenance Calories?</h2>
+  <h2>What Are Maintenance Calories and How Do You Calculate Them?</h2>
   <p>Maintenance calories represent the exact mathematical point where Energy Intake perfectly equals Energy Expenditure. In this state, your body neither stores new fat nor burns existing fat. Your body weight remains relatively stable.</p>
   <p>Scientifically, your maintenance calories are identical to your Total Daily Energy Expenditure (TDEE). If you have never calculated this number, you must immediately use our <a href="/">maintenance calories calculator</a> or <a href="/tdee-calculator/">TDEE calculator</a> to establish your baseline.</p>
 
-  <h2>The 4 Phases of Maintenance</h2>
+  <h2>The 4 Strategic Uses of Maintenance Calories in Fitness</h2>
   <p>Maintenance isn't just for people who are happy with their current bodies. It is a strategic tool used in multiple phases of fitness:</p>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
     <div class="card p-5 border-l-4 border-l-blue-500 shadow-sm">
@@ -66,7 +63,7 @@ const faqs: FaqItem[] = [
     </div>
   </div>
 
-  <h2>How Your Maintenance Changes Over Time</h2>
+  <h2>Why Did My Maintenance Calories Drop After Weight Loss? (Metabolic Adaptation)</h2>
   <p>A crucial fact to understand is that your maintenance calories are <strong>dynamic</strong>, not static. The number changes constantly based on your lifestyle and body composition.</p>
   <table class="w-full text-left my-6 border-collapse border border-hairline">
     <thead>
