@@ -14,6 +14,7 @@ export interface Props { lang?: string; hreflangs?: {href: string, hreflang: str
   /** Path only, e.g. "/bmi-calculator/". Defaults to current pathname. */
   canonical?: string;
   ogType?: "website" | "article";
+  image?: string;
   noindex?: boolean;
   exactTitle?: boolean;
   /** One or more JSON-LD structured-data objects. */
@@ -25,6 +26,7 @@ const {
   description,
   canonical,
   ogType = "website",
+  image,
   noindex = false,
   exactTitle = false, lang = "en", hreflangs = [],
   jsonLd = [],
@@ -42,7 +44,7 @@ canonicalUrl.protocol = "https:";
 const canonicalUrlString = canonicalUrl.href;
 const suffix = ` | ${SITE.name}`;
 const fullTitle = exactTitle ? title : (title.includes(SITE.name) ? title : (title.length + suffix.length > 70 ? title : `${title}${suffix}`));
-const ogImage = new URL("/og-default.svg", SITE.url).href;
+const ogImage = image ? new URL(image, SITE.url).href : new URL("/og-default.svg", SITE.url).href;
 ---
 
 <!doctype html>

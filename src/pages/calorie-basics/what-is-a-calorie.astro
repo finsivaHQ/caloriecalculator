@@ -1,6 +1,5 @@
 ---
-import ContentLayout from"../../layouts/ContentLayout.astro";
-import ArticleImage from"../../components/ui/ArticleImage.astro";
+import ContentLayout from "../../layouts/ContentLayout.astro";
 
 const path = "/calorie-basics/what-is-a-calorie/";
 const description = "Discover what a calorie in food actually is, how calories are measured using bomb calorimetry and the Atwater system, and how to calculate daily energy balance for weight loss.";
@@ -23,6 +22,8 @@ const faqs = [
   categoryPath="/guides/"
   lead="Understand what a calorie in food actually represents: the units of chemical energy that fuel your metabolism, power vital organs, and dictate changes in your body weight. Here is the science of energy balance made practical."
   faqs={faqs}
+  heroImage="/assets/images/articles/what-is-a-calorie-energy-definition.svg"
+  heroImageAlt="Science infographic showing the thermodynamic definition of a calorie and macronutrient energy values"
 >
   <div class="not-prose w-full">
     
@@ -48,12 +49,8 @@ const faqs = [
           To truly understand calories, we must turn to physics. From a strict scientific perspective, a <strong>calorie (cal)</strong> with a lowercase"c" is defined as the amount of thermal energy needed to raise the temperature of 1 gram of liquid water by exactly 1 degree Celsius, at standard atmospheric pressure.
         </p>
         <p class="text-lg text-body leading-relaxed mb-8">
-          However, this unit is tiny. Therefore, in nutrition and health sciences, we use <strong>kilocalories (kcal)</strong>. One kilocalorie equals 1,000 small calories (the energy needed to heat 1 kilogram of water by 1 degree Celsius). In everyday use, the food industry and the general public have adopted the word"Calorie" (often capitalized) to actually refer to kilocalories. When you read"200 Calories" on a chocolate bar, scientifically speaking, you are ingesting 200,000 small calories.
+          However, this unit is tiny. Therefore, in nutrition and health sciences, we use <strong>kilocalories (kcal)</strong>. One kilocalorie equals 1,000 small calories (the energy needed to heat 1 kilogram of water by 1 degree Celsius). In everyday use, the food industry and the general public have adopted the word "Calorie" (often capitalized) to actually refer to kilocalories. When you read "200 Calories" on a chocolate bar, scientifically speaking, you are ingesting 200,000 small calories.
         </p>
-        
-        <div class="my-10 flex justify-center p-6 bg-canvas-soft rounded-3xl border border-hairline">
-          <ArticleImage src="/assets/images/articles/calorie-energy.svg" alt="Scientific illustration showing a calorie as a unit of energy." />
-        </div>
 
         <h3 class="text-2xl font-bold text-brand-hover mb-4 flex items-center gap-2">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>

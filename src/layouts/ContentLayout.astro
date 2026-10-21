@@ -17,6 +17,8 @@ interface Props {
   categoryPath?: string;
   lead?: string;
   updated?: string;
+  heroImage?: string;
+  heroImageAlt?: string;
   faqs?: FaqItem[];
   showCta?: boolean;
   lang?: string;
@@ -32,6 +34,8 @@ const {
   categoryPath,
   lead,
   updated,
+  heroImage,
+  heroImageAlt,
   faqs = [],
   showCta = true,
   lang = 'en',
@@ -58,7 +62,7 @@ const relatedTools = ALL_CALCULATORS.filter(c => c.lang === lang && c.href !== p
 const showRelated = relatedTools.length > 0;
 ---
 
-<Layout title={title} description={description} canonical={path} ogType="article" jsonLd={jsonLd} lang={lang} hreflangs={hreflangs}>
+<Layout title={title} description={description} canonical={path} ogType="article" image={heroImage} jsonLd={jsonLd} lang={lang} hreflangs={hreflangs}>
   <nav aria-label="Breadcrumb" class="border-b border-hairline bg-canvas-soft/40">
     <ol class="container-page flex flex-wrap items-center gap-2 py-3 text-xs text-mute">
       {
@@ -90,6 +94,20 @@ const showRelated = relatedTools.length > 0;
 
   <div class="container-page py-12 sm:py-16">
     <article class="prose-content mx-auto max-w-3xl">
+      {heroImage && (
+        <div class="not-prose mb-10 overflow-hidden rounded-2xl border border-hairline bg-canvas-soft-2 shadow-sm aspect-[16/9] md:aspect-[21/9]">
+          <img 
+            src={heroImage} 
+            alt={heroImageAlt || pageHeading} 
+            class="h-full w-full object-cover"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            width="1200"
+            height="514"
+          />
+        </div>
+      )}
       <slot />
 
 
