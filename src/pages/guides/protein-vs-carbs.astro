@@ -1,0 +1,325 @@
+---
+import Button from "../../components/ui/Button.astro";
+import MedicalNote from "../../components/ui/MedicalNote.astro";
+import ContentLayout from "../../layouts/ContentLayout.astro";
+import type { FaqItem } from "../../lib/seo";
+import ArticleImage from "../../components/ui/ArticleImage.astro";
+import Sources from "../../components/ui/Sources.astro";
+
+const faqs: FaqItem[] = [
+  {
+    q: "Is protein or carbs better for weight loss?",
+    a: "Protein is significantly more effective for weight loss. Due to its high Thermic Effect of Food (TEF of 20% to 30%), protein burns 3 to 4 times more calories during digestion than carbs. Furthermore, protein dramatically elevates satiety hormones like peptide YY (PYY) and GLP-1 while suppressing ghrelin, reducing spontaneous daily calorie intake."
+  },
+  {
+    q: "Do carbs and protein have the same number of calories?",
+    a: "In a laboratory bomb calorimeter, both carbohydrates and protein yield approximately 4 gross calories per gram. However, inside the human body, the net metabolizable energy is different: protein yields roughly 2.8 to 3.2 net calories per gram after digestive expenditure (TEF), whereas carbohydrates yield about 3.6 to 3.8 net calories per gram."
+  },
+  {
+    q: "Can you build muscle on low carbs if protein is high?",
+    a: "Yes, you can build muscle on a low-carbohydrate diet provided you consume adequate protein (1.6 to 2.2 grams per kilogram of body weight) and maintain sufficient total calories. However, carbohydrates optimize muscle building by replenishing glycogen stores, increasing training volume capacity, and elevating insulin, an anti-catabolic hormone that blunts muscle protein breakdown."
+  },
+  {
+    q: "What happens if you eat more protein than carbs?",
+    a: "Eating more protein than carbs shifts your body toward enhanced satiety, higher dietary thermogenesis, and stable blood sugar levels. Your liver can synthesize glucose from amino acids via gluconeogenesis to fuel glucose-dependent tissues (like red blood cells and brain neurons) without causing insulin surges."
+  },
+  {
+    q: "Why do carbohydrates make you hungry faster than protein?",
+    a: "Refined and high-glycemic carbohydrates digest rapidly in the stomach and small intestine, causing a quick rise in blood glucose followed by an insulin spike. The subsequent glucose drop can trigger appetite signals and cravings. In contrast, protein delays gastric emptying and stimulates prolonged release of satiety hormones like CCK and GLP-1."
+  },
+  {
+    q: "Can excess protein turn into fat as easily as excess carbs?",
+    a: "Biochemically, converting excess dietary protein into body fat (de novo lipogenesis) is an extremely inefficient, multi-step process that consumes roughly 25% of the protein's energy. Overfeeding studies demonstrate that caloric surpluses from protein lead to far less fat gain than identical caloric surpluses derived from fats or processed carbohydrates."
+  },
+  {
+    q: "Should I eat carbs or protein before a workout?",
+    a: "For high-intensity or endurance workouts, prioritize carbohydrates 1 to 2 hours beforehand to saturate muscle glycogen and provide immediate bloodstream glucose. Pairing carbs with a moderate amount of easily digestible protein (15 to 25 grams) helps prevent muscle breakdown and initiates recovery pathways."
+  },
+  {
+    q: "How many grams of protein and carbs should I eat daily?",
+    a: "General evidence-based targets suggest 1.6 to 2.2 grams of protein per kilogram of body weight for active individuals and fat loss. Carbohydrate intake varies based on activity: sedentary individuals thrive on 2 to 3 grams per kg, while resistance-trained and endurance athletes benefit from 4 to 7 grams per kg. Calculate your exact personalized requirements with our <a href='/protein-calculator/' class='text-brand underline'>Protein Calculator</a>."
+  }
+];
+
+const sources = [
+  {
+    label: "Journal of the International Society of Sports Nutrition: Protein and exercise position stand (JISSN)",
+    href: "https://jissn.biomedcentral.com/articles/10.1186/s12970-017-0177-8"
+  },
+  {
+    label: "American Journal of Clinical Nutrition: The role of protein in weight loss and satiety",
+    href: "https://pubmed.ncbi.nlm.nih.gov/25926512/"
+  },
+  {
+    label: "National Institutes of Health (NIH): Dietary Carbohydrates and Energy Metabolism",
+    href: "https://www.ncbi.nlm.nih.gov/books/NBK459280/"
+  },
+  {
+    label: "Frontiers in Nutrition: Carbohydrate availability and physical performance in strength athletes",
+    href: "https://www.frontiersin.org/articles/10.3389/fnut.2020.00116/full"
+  }
+];
+---
+
+<ContentLayout
+  title="Protein vs Carbs: Differences, Satiety & Fat Loss Explained"
+  h1="Protein vs Carbs: Differences, Caloric Density, Satiety & Fat Loss Explained"
+  description="Protein vs carbs: discover the truth behind the 4-calorie paradox, thermic effect of food, satiety hormones, fat loss, muscle growth, and optimal macro balance."
+  path="/guides/protein-vs-carbs/"
+  category="Guides"
+  categoryPath="/guides/"
+  lead="Both protein and carbohydrates are rated at 4 calories per gram on food labels. Yet, your metabolism treats them as polar opposites. Here is the clinical truth about why protein suppresses hunger and burns more energy, how carbs fuel peak performance, and how to balance both macros for your body composition goals."
+  updated="October 2026"
+  faqs={faqs}
+>
+  <div class="bg-brand-soft/50 p-4 rounded-xl border border-hairline mb-8 flex items-center gap-3">
+    <span class="text-2xl">⚕️</span>
+    <p class="text-sm text-body m-0"><strong>Clinical Nutrition Review:</strong> This guide evaluates human metabolic pathways, dietary thermogenesis (TEF), endocrine signaling, and sports performance science in accordance with sports dietetics standards (2026).</p>
+  </div>
+
+  <MedicalNote />
+
+  <h2 id="the-four-calorie-paradox">The 4-Calorie Paradox: Laboratory Bomb Calorimetry vs. Human Metabolism</h2>
+  
+  <p>Look at any nutrition facts label in the grocery store, and the standard arithmetic is identical: every single gram of protein yields <strong>4 calories</strong>, and every single gram of carbohydrate yields <strong>4 calories</strong>. This metric stems from the 19th-century Atwater energy system, developed by chemist Wilbur Olin Atwater by burning dried food samples inside a pressurized bomb calorimeter.</p>
+
+  <p>In a stainless-steel combustion chamber, protein and carbohydrates produce an identical thermal explosion of heat energy. However, <em>the human digestive tract is not an industrial furnace</em>. When you chew, swallow, and assimilate nutrients, your body undergoes complex, multi-step enzymatic cascades that consume substantial metabolic energy.</p>
+
+  <p>The gross energy written on the package is not the net metabolizable energy your body actually keeps. Once you factor in the metabolic cost of digestion, cellular assimilation, and hepatic processing, the biological reality looks completely different:</p>
+
+  <div class="not-prose my-8 grid gap-4 sm:grid-cols-2">
+    <div class="card p-6 border-l-4 border-brand bg-surface">
+      <span class="text-xs uppercase font-bold tracking-wider text-brand">Macronutrient: Protein</span>
+      <h3 class="text-xl font-bold text-ink mt-1">Net Energy: ~2.8 to 3.2 kcal/g</h3>
+      <p class="text-sm text-body mt-2">Between <strong>20% and 30%</strong> of the caloric value of protein is immediately dissipated as thermal heat during digestion, peptide cleavage, and urea synthesis. Eating 100 kcal of protein leaves your body with only 70 to 80 usable calories.</p>
+    </div>
+    <div class="card p-6 border-l-4 border-amber-500 bg-surface">
+      <span class="text-xs uppercase font-bold tracking-wider text-amber-600">Macronutrient: Carbohydrates</span>
+      <h3 class="text-xl font-bold text-ink mt-1">Net Energy: ~3.6 to 3.8 kcal/g</h3>
+      <p class="text-sm text-body mt-2">Only <strong>5% to 10%</strong> of carbohydrate calories are consumed during digestion and glycogen storage. Eating 100 kcal of digestible carbs delivers 90 to 95 usable calories directly into circulation as blood glucose.</p>
+    </div>
+  </div>
+
+  <h2 id="head-to-head-comparison">Head-to-Head Comparison: Protein vs. Carbohydrates (Visual Comparison Diagram)</h2>
+
+  <figure class="my-8 flex flex-col items-center not-prose">
+    <div class="w-full max-w-3xl rounded-2xl border border-hairline bg-surface p-2 shadow-sm">
+      <img
+        src="/assets/images/articles/protein-vs-carbs-metabolic-comparison-diagram.svg"
+        alt="Protein vs carbs metabolic comparison diagram illustrating differences in thermic effect, net calories, satiety hormones, and energy storage"
+        class="w-full h-auto rounded-xl object-contain"
+        loading="lazy"
+        decoding="async"
+        width="800"
+        height="480"
+      />
+    </div>
+    <figcaption class="mt-3 text-center text-sm text-body max-w-2xl">
+      <strong>Figure 1:</strong> Visual comparison of protein vs carbohydrates. While both yield 4 gross calories per gram in bomb calorimetry, protein incurs a 20% to 30% thermic digestive cost and elevates satiety hormones, whereas carbohydrates prioritize rapid glycogen replenishment.
+    </figcaption>
+  </figure>
+
+  <p>To understand whether to prioritize protein or carbs, examine their structural and metabolic profiles side by side:</p>
+
+  <div class="not-prose overflow-x-auto my-8">
+    <table class="w-full text-left border-collapse text-sm">
+      <thead>
+        <tr class="border-b border-hairline bg-canvas-soft">
+          <th class="p-3 font-semibold text-ink">Feature</th>
+          <th class="p-3 font-semibold text-brand">Protein (Polypeptides)</th>
+          <th class="p-3 font-semibold text-amber-600">Carbohydrates (Saccharides)</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-hairline">
+        <tr>
+          <td class="p-3 font-medium text-ink">Gross Caloric Density</td>
+          <td class="p-3">4.0 kcal per gram</td>
+          <td class="p-3">4.0 kcal per gram</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-medium text-ink">Thermic Effect (TEF)</td>
+          <td class="p-3 text-brand font-semibold">20% – 30% (Very High)</td>
+          <td class="p-3 text-amber-600 font-semibold">5% – 10% (Low to Moderate)</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-medium text-ink">Net Usable Calories</td>
+          <td class="p-3 font-semibold">~2.8 – 3.2 kcal/g</td>
+          <td class="p-3 font-semibold">~3.6 – 3.8 kcal/g</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-medium text-ink">Primary Biological Function</td>
+          <td class="p-3">Cellular repair, muscle protein synthesis, enzymes, immunoglobulins</td>
+          <td class="p-3">Primary rapid energy substrate (glycogen &amp; ATP generation)</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-medium text-ink">Storage Capacity in Body</td>
+          <td class="p-3">None (Transient amino acid pool in blood &amp; muscle tissue)</td>
+          <td class="p-3">~400–600g total (Liver glycogen ~100g, Muscle ~400–500g)</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-medium text-ink">Impact on Satiety Hormones</td>
+          <td class="p-3">Dramatically raises PYY, GLP-1, and CCK; blunts Ghrelin</td>
+          <td class="p-3">Transient fullness; can cause reactive hunger if refined</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-medium text-ink">Insulin Secretion</td>
+          <td class="p-3">Moderate, accompanied by Glucagon release</td>
+          <td class="p-3">High to Moderate (dose and glycemic index dependent)</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-medium text-ink">Essentiality in Diet</td>
+          <td class="p-3 font-semibold text-brand">Essential (9 Essential Amino Acids cannot be synthesized)</td>
+          <td class="p-3">Non-essential (Body can synthesize glucose via gluconeogenesis)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="thermic-effect-and-metabolic-burn">Why Protein Has a Built-In "Metabolic Discount"</h2>
+
+  <p>The <a href="/guides/thermic-effect-of-food-tef/" class="text-brand underline font-medium">Thermic Effect of Food (TEF)</a> represents the caloric expenditure necessary to break peptide bonds, absorb amino acids via active sodium-dependent transporters, and process nitrogenous waste through the ornithine urea cycle in the liver.</p>
+
+  <p>When you consume 500 calories of grilled chicken breast (approximately 125 grams of protein):</p>
+  <ul>
+    <li>Your metabolism immediately spends <strong>100 to 150 calories</strong> just executing the enzymatic breakdown and protein synthesis machinery.</li>
+    <li>Your net energetic yield is only <strong>350 to 400 calories</strong>.</li>
+  </ul>
+
+  <p>Conversely, when you consume 500 calories of white rice or pasta (approximately 125 grams of carbohydrates):</p>
+  <ul>
+    <li>Your salivary and pancreatic amylase quickly cleaves starches into glucose monomers with minimal thermodynamic resistance, expending only <strong>25 to 50 calories</strong>.</li>
+    <li>Your net energetic yield is <strong>450 to 475 calories</strong>.</li>
+  </ul>
+
+  <p>Over a 12-week fat loss phase, this metabolic discrepancy compounds significantly. Consuming an extra 40 grams of daily protein in place of 40 grams of refined carbohydrates can automatically burn an extra 3,000 to 4,500 net calories through TEF alone—without adding a single extra minute of cardio.</p>
+
+  <h2 id="satiety-and-hunger-regulation">Satiety Dynamics: Why Protein Crushes Cravings Better Than Carbs</h2>
+
+  <p>Appetite is governed by a precise neurochemical cross-talk between the stomach, pancreas, intestines, and the hypothalamus in your brain. In clinical trials, protein repeatedly outperforms carbohydrates and dietary fats for subjective satiety and involuntary calorie restriction.</p>
+
+  <ArticleImage src="/assets/images/articles/energy-balance.svg" alt="Illustration of energy balance and satiety signaling comparing protein and carbohydrates." />
+
+  <p>Here is why high-protein meals keep you full for 4 to 6 hours, while high-carb meals often leave you hunting for snacks within 90 minutes:</p>
+
+  <h3>1. Gastrointestinal Hormone Release (PYY, GLP-1, and CCK)</h3>
+  <p>When intact proteins and polypeptides reach the duodenum and ileum, enteroendocrine L-cells trigger the immediate secretion of <strong>Peptide YY (PYY)</strong> and <strong>Glucagon-Like Peptide-1 (GLP-1)</strong>. These potent anorexigenic hormones slow gastric motility (the speed at which food exits your stomach) and send powerful satiety signals directly to the arcuate nucleus in the brain.</p>
+
+  <h3>2. Sustained Ghrelin Suppression</h3>
+  <p><strong>Ghrelin</strong> is your body's primary orexigenic (hunger-stimulating) hormone, secreted primarily by fundic cells in the stomach. While carbohydrates cause an immediate, steep dip in ghrelin, levels rebound aggressively within 2 hours. Protein produces a deeper, significantly more prolonged suppression of circulating ghrelin, preventing postprandial hunger spikes.</p>
+
+  <h3>3. The Blood Sugar Rollercoaster (Glycemic Fluctuations)</h3>
+  <p>When you ingest fast-digesting carbohydrates without adequate protein or fiber, glucose enters the bloodstream rapidly. The pancreas responds by flooding the circulation with insulin to shuttle glucose into cells. In many individuals, this creates a temporary "reactive hypoglycemia" (a sudden drop in circulating blood sugar), triggering physiological cravings for fast-acting sugar to restore balance.</p>
+
+  <div class="not-prose my-8 rounded-2xl border border-hairline bg-surface p-6 shadow-sm">
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div>
+        <h3 class="text-xl font-bold text-ink">Want to Find Your Ideal Daily Protein Target?</h3>
+        <p class="text-sm text-body mt-1 max-w-xl">Use our clinical Protein Calculator to find your exact grams and calories based on your body weight, activity level, and goals.</p>
+      </div>
+      <Button href="/protein-calculator/" variant="primary" class="shrink-0">
+        Calculate Protein Target &rarr;
+      </Button>
+    </div>
+  </div>
+
+  <h2 id="energy-delivery-and-athletic-performance">Energy Delivery: Why You Still Need Carbohydrates</h2>
+
+  <p>Given protein's superiority for metabolic burn and appetite suppression, you might wonder: <em>Why not replace all carbohydrates with protein?</em></p>
+
+  <p>While low-carb and ketogenic diets are effective for certain populations, completely eliminating carbohydrates handicaps exercise intensity, muscular recovery, and athletic endurance. Carbohydrates are not the enemy—they are your neuromuscular system's ultimate high-octane fuel.</p>
+
+  <h3>1. Muscle Glycogen: The Fuel for Anaerobic Power</h3>
+  <p>Intense weightlifting, sprinting, and high-intensity interval training (HIIT) rely almost exclusively on the <strong>anaerobic glycolytic energy system</strong>. When you contract a muscle against heavy resistance (above 70% of your 1-rep maximum), your cells cannot oxidize fatty acids or amino acids fast enough to resynthesize Adenosine Triphosphate (ATP). They demand stored intracellular <strong>muscle glycogen</strong>.</p>
+  <p>If your glycogen stores are chronically depleted due to severe carbohydrate restriction, your power output, barbell velocity, and total repetitions drop precipitously. Over time, diminished training volume blunts mechanical tension—the number one driver of muscle hypertrophy.</p>
+
+  <h3>2. The "Protein-Sparing" Effect of Carbohydrates</h3>
+  <p>When you consume adequate carbohydrates, your body uses circulating glucose and stored glycogen for daily physical energy demands. This frees up dietary amino acids to perform their true, irreplaceable job: structural tissue repair, immune function, and <a href="/guides/body-recomposition-guide/" class="text-brand underline font-medium">muscle protein synthesis (MPS)</a>.</p>
+  <p>In the absence of sufficient dietary carbohydrates or fats, your liver is forced to convert valuable amino acids into glucose via <strong>gluconeogenesis</strong>. Burning expensive, muscle-building protein as an energy source is an inefficient metabolic compromise.</p>
+
+  <h2 id="fat-loss-vs-muscle-building">Protein vs. Carbs: Which Wins for Your Specific Goal?</h2>
+
+  <div class="not-prose my-8 grid gap-6 md:grid-cols-2">
+    <div class="rounded-2xl border border-hairline bg-surface p-6">
+      <div class="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-soft text-brand mb-3">Goal: Fat Loss &amp; Cutting</div>
+      <h3 class="text-xl font-bold text-ink">The Winner: Protein (Supported by Fiber-Rich Carbs)</h3>
+      <p class="text-sm text-body mt-2 leading-relaxed">
+        During a <a href="/calorie-deficit-calculator/" class="text-brand underline font-medium">caloric deficit</a>, your risk of catabolic muscle wasting skyrockets. Elevating protein to <strong>1.8 to 2.4 grams per kilogram of body weight</strong> (0.8 to 1.1 g/lb) maintains positive nitrogen balance, shields lean muscle mass, and keeps hunger manageable.
+      </p>
+      <p class="text-sm text-body mt-3 leading-relaxed">
+        <strong>Carb Strategy:</strong> Don't eliminate carbs entirely. Moderate carbs (1.5 to 3.0 g/kg) centered around your training window keep workouts explosive and thyroid hormones (T3) functioning normally.
+      </p>
+    </div>
+
+    <div class="rounded-2xl border border-hairline bg-surface p-6">
+      <div class="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/10 text-amber-700 dark:text-amber-400 mb-3">Goal: Hypertrophy &amp; Lean Bulking</div>
+      <h3 class="text-xl font-bold text-ink">The Winner: A Synergistic Partnership</h3>
+      <p class="text-sm text-body mt-2 leading-relaxed">
+        When aiming to build maximum muscle in a <a href="/guides/calorie-surplus-guide/" class="text-brand underline font-medium">calorie surplus</a>, protein provides the raw amino acid bricks (specifically the leucine trigger), while carbohydrates supply the energetic mortar.
+      </p>
+      <p class="text-sm text-body mt-3 leading-relaxed">
+        <strong>Carb Strategy:</strong> Once protein is locked in at 1.6 to 2.0 g/kg, allocating remaining surplus calories primarily to complex carbohydrates (4 to 7 g/kg) drives cellular hydration, maximizes glycogen supercompensation, and fuels higher training volume.
+      </p>
+    </div>
+  </div>
+
+  <h2 id="pre-and-post-workout-timing">Nutrient Timing: How to Combine Protein and Carbs Around Workouts</h2>
+
+  <p>While total daily macronutrient intake accounts for 80% of your body composition success, strategically pairing protein and carbohydrates around your training session enhances acute recovery and performance:</p>
+
+  <h3>Pre-Workout (1 to 2 Hours Before Training)</h3>
+  <ul>
+    <li><strong>Carbohydrates (30g – 60g):</strong> Consume moderate-to-low glycemic carbohydrates (e.g., oats, bananas, sweet potatoes, whole grain toast) to provide sustained bloodstream glucose without digestive distress.</li>
+    <li><strong>Protein (20g – 30g):</strong> Include a lean, low-fat protein source (e.g., whey isolate, egg whites, Greek yogurt) to elevate plasma amino acid levels during the workout, blunting muscle breakdown.</li>
+  </ul>
+
+  <h3>Post-Workout (Within 2 Hours After Training)</h3>
+  <ul>
+    <li><strong>Protein (25g – 40g):</strong> Ingest a high-quality, leucine-rich protein source to trigger the intracellular mTORC1 pathway and maximize Muscle Protein Synthesis.</li>
+    <li><strong>Carbohydrates (40g – 80g):</strong> Consuming fast-digesting carbohydrates replenishes depleted muscle glycogen and triggers an insulin response that aids nutrient delivery into muscle cells.</li>
+  </ul>
+
+  <h2 id="practical-macronutrient-splits">Recommended Protein-to-Carb Ratios by Lifestyle</h2>
+
+  <p>How should you structure your daily macro distribution? Use these evidence-based starting frameworks, which you can easily customize with our <a href="/guides/macro-guide/" class="text-brand underline font-medium">Beginner Macro Guide</a>:</p>
+
+  <div class="not-prose my-8 grid gap-4 sm:grid-cols-3">
+    <div class="card p-5 text-center bg-surface">
+      <span class="text-xs uppercase font-bold text-brand">Sedentary / Fat Loss</span>
+      <h3 class="text-lg font-bold text-ink mt-1">Higher Protein, Lower Carb</h3>
+      <p class="text-2xl font-black text-brand mt-2">40% P / 25% C / 35% F</p>
+      <p class="text-xs text-body mt-2">Prioritizes aggressive hunger suppression, insulin sensitivity, and high thermic burn for non-athletes.</p>
+    </div>
+    <div class="card p-5 text-center bg-surface">
+      <span class="text-xs uppercase font-bold text-brand">Strength Training</span>
+      <h3 class="text-lg font-bold text-ink mt-1">Balanced Recomp Ratio</h3>
+      <p class="text-2xl font-black text-brand mt-2">30% P / 45% C / 25% F</p>
+      <p class="text-xs text-body mt-2">The gold standard for lifters seeking simultaneous fat loss and muscle retention without sacrificing gym strength.</p>
+    </div>
+    <div class="card p-5 text-center bg-surface">
+      <span class="text-xs uppercase font-bold text-brand">Endurance / High Volume</span>
+      <h3 class="text-lg font-bold text-ink mt-1">High Carb, Moderate Protein</h3>
+      <p class="text-2xl font-black text-brand mt-2">20% P / 55% C / 25% F</p>
+      <p class="text-xs text-body mt-2">Provides the massive glycogen replenishment required by runners, cyclists, and team-sport athletes.</p>
+    </div>
+  </div>
+
+  <div class="not-prose my-12 rounded-3xl border border-hairline bg-gradient-to-br from-surface to-canvas-soft p-8 text-center shadow-lg">
+    <h2 class="text-2xl sm:text-3xl font-extrabold text-ink mb-3">Stop Guessing Your Macros. Start Calculating.</h2>
+    <p class="text-body max-w-2xl mx-auto mb-8 text-base">
+      Don't leave your nutrition to generic rules of thumb. Calculate your personalized calorie baseline, exact protein target, and balanced macro split in less than 30 seconds.
+    </p>
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      <a href="/protein-calculator/" class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-brand text-white font-bold hover:bg-brand-hover shadow-md transition-all">
+        Open Protein Calculator &rarr;
+      </a>
+      <a href="/protein-to-calories-calculator/" class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-surface border border-hairline font-semibold text-ink hover:bg-canvas-soft transition-all">
+        Convert Protein Grams to Calories
+      </a>
+      <a href="/tdee-calculator/" class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-surface border border-hairline font-semibold text-ink hover:bg-canvas-soft transition-all">
+        Check Daily TDEE
+      </a>
+    </div>
+  </div>
+
+  <Sources sources={sources} title="Scientific References & Clinical Studies" />
+</ContentLayout>

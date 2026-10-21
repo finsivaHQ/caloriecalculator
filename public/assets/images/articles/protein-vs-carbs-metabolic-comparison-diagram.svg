@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480" role="img" aria-label="Protein vs Carbs Metabolic Comparison Diagram">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e131f"/>
+      <stop offset="100%" stop-color="#141c2e"/>
+    </linearGradient>
+    <linearGradient id="proteinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="carbsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="480" rx="24" fill="url(#bgGrad)"/>
+  <rect x="1" y="1" width="798" height="478" rx="23" fill="none" stroke="#2a364f" stroke-width="1.5"/>
+
+  <!-- Header Banner -->
+  <g transform="translate(40, 42)">
+    <rect x="0" y="0" width="130" height="24" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="65" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#94a3b8" text-anchor="middle" letter-spacing="1">METABOLIC GUIDE</text>
+    <text x="0" y="52" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800" fill="#f8fafc">Protein vs. Carbohydrates: The Metabolic Reality</text>
+    <text x="0" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94a3b8">Both provide 4 gross kcal/g, but your metabolism processes them completely differently.</text>
+  </g>
+
+  <!-- Left Card: PROTEIN -->
+  <g transform="translate(40, 140)" filter="url(#cardShadow)">
+    <rect width="345" height="300" rx="18" fill="#161f33" stroke="#2563eb" stroke-opacity="0.4" stroke-width="1.5"/>
+    
+    <!-- Header pill -->
+    <rect x="20" y="20" width="305" height="42" rx="10" fill="url(#proteinGrad)"/>
+    <text x="36" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="800" fill="#ffffff">PROTEIN</text>
+    <text x="310" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="end">4.0 kcal/g gross</text>
+
+    <!-- Net Calorie Bar -->
+    <text x="20" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#94a3b8">Thermic Effect of Food (TEF)</text>
+    <text x="325" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#60a5fa" text-anchor="end">20% – 30% burned</text>
+    
+    <rect x="20" y="98" width="305" height="18" rx="6" fill="#0f172a"/>
+    <rect x="20" y="98" width="220" height="18" rx="6" fill="#3b82f6"/>
+    <rect x="240" y="98" width="85" height="18" rx="6" fill="#ef4444" opacity="0.8"/>
+    <text x="120" y="111" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">Net: ~2.8 – 3.2 kcal</text>
+    <text x="282" y="111" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">TEF Tax</text>
+
+    <!-- Key Attributes -->
+    <g transform="translate(20, 138)">
+      <!-- Item 1 -->
+      <circle cx="8" cy="10" r="4" fill="#3b82f6"/>
+      <text x="20" y="14" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">Primary Role:</text>
+      <text x="110" y="14" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">Muscle repair, enzymes, tissues</text>
+
+      <!-- Item 2 -->
+      <circle cx="8" cy="38" r="4" fill="#3b82f6"/>
+      <text x="20" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">Satiety Level:</text>
+      <text x="110" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#38bdf8">Highest (spikes PYY, GLP-1)</text>
+
+      <!-- Item 3 -->
+      <circle cx="8" cy="66" r="4" fill="#3b82f6"/>
+      <text x="20" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">Hunger Hormone:</text>
+      <text x="135" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">Prolonged Ghrelin drop</text>
+
+      <!-- Item 4 -->
+      <circle cx="8" cy="94" r="4" fill="#3b82f6"/>
+      <text x="20" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">Fat Conversion:</text>
+      <text x="125" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">Extremely rare &amp; costly (~25%)</text>
+
+      <!-- Item 5 -->
+      <circle cx="8" cy="122" r="4" fill="#3b82f6"/>
+      <text x="20" y="126" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">Body Storage:</text>
+      <text x="115" y="126" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">None (Continuous turnover)</text>
+    </g>
+  </g>
+
+  <!-- Right Card: CARBOHYDRATES -->
+  <g transform="translate(415, 140)" filter="url(#cardShadow)">
+    <rect width="345" height="300" rx="18" fill="#161f33" stroke="#d97706" stroke-opacity="0.4" stroke-width="1.5"/>
+    
+    <!-- Header pill -->
+    <rect x="20" y="20" width="305" height="42" rx="10" fill="url(#carbsGrad)"/>
+    <text x="36" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="800" fill="#ffffff">CARBOHYDRATES</text>
+    <text x="310" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="end">4.0 kcal/g gross</text>
+
+    <!-- Net Calorie Bar -->
+    <text x="20" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#94a3b8">Thermic Effect of Food (TEF)</text>
+    <text x="325" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="end">5% – 10% burned</text>
+    
+    <rect x="20" y="98" width="305" height="18" rx="6" fill="#0f172a"/>
+    <rect x="20" y="98" width="280" height="18" rx="6" fill="#f59e0b"/>
+    <rect x="300" y="98" width="25" height="18" rx="6" fill="#ef4444" opacity="0.8"/>
+    <text x="150" y="111" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">Net: ~3.6 – 3.8 kcal</text>
+    <text x="312" y="111" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">TEF</text>
+
+    <!-- Key Attributes -->
+    <g transform="translate(20, 138)">
+      <!-- Item 1 -->
+      <circle cx="8" cy="10" r="4" fill="#f59e0b"/>
+      <text x="20" y="14" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">Primary Role:</text>
+      <text x="110" y="14" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">High-intensity energy, CNS fuel</text>
+
+      <!-- Item 2 -->
+      <circle cx="8" cy="38" r="4" fill="#f59e0b"/>
+      <text x="20" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">Satiety Level:</text>
+      <text x="110" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#fbbf24">Moderate to Low (Fiber helps)</text>
+
+      <!-- Item 3 -->
+      <circle cx="8" cy="66" r="4" fill="#f59e0b"/>
+      <text x="20" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">Hunger Hormone:</text>
+      <text x="135" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">Quick dip, fast rebound</text>
+
+      <!-- Item 4 -->
+      <circle cx="8" cy="94" r="4" fill="#f59e0b"/>
+      <text x="20" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">Fat Conversion:</text>
+      <text x="125" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">Efficient when glycogen is full</text>
+
+      <!-- Item 5 -->
+      <circle cx="8" cy="122" r="4" fill="#f59e0b"/>
+      <text x="20" y="126" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">Body Storage:</text>
+      <text x="115" y="126" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">~500g (Liver &amp; Muscle Glycogen)</text>
+    </g>
+  </g>
+</svg>
