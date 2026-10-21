@@ -7,32 +7,62 @@ const posts = [
   {
     "title": "Calculadora de Calorías: Calcula tus Calorías Diarias y GET",
     "description": "Calcula tus necesidades calóricas diarias exactas según tu edad, peso, altura y actividad con la fórmula científica de Mifflin-St Jeor.",
-    "href": "/country/spain/calculadora-de-calorias/"
+    "href": "/country/spain/calculadora-de-calorias/",
+    "image": "/assets/images/articles/calorie-calculator-accuracy-measurement.jpg",
+    "alt": "Báscula de cocina digital y fórmulas matemáticas para cálculo preciso de calorías",
+    "date": "Oct 21, 2026",
+    "readTime": "Calculadora",
+    "badge": "Herramienta Médica"
   },
   {
     "title": "Calculadora de Macros: Proteínas, Carbohidratos y Grasas",
     "description": "Descubre qué son los macronutrientes, cómo calcular tus proteínas, carbohidratos y grasas diarios, y cómo relacionarlos con tus objetivos calóricos.",
-    "href": "/country/spain/calculadora-de-macros/"
+    "href": "/country/spain/calculadora-de-macros/",
+    "image": "/assets/images/articles/how-to-count-macros-meal-prep.jpg",
+    "alt": "Plato equilibrado de macronutrientes con carne, arroz, aguacate y verduras",
+    "date": "Oct 20, 2026",
+    "readTime": "Calculadora",
+    "badge": "Nutrición Clínica"
   },
   {
     "title": "¿Qué es la Tasa Metabólica Basal (TMB)? Guía Completa",
     "description": "Descubre qué es la Tasa Metabólica Basal, cómo calcula tu cuerpo la energía vital en reposo y cómo utilizar las fórmulas de Harris-Benedict y Mifflin-St Jeor.",
-    "href": "/country/spain/que-es-el-metabolismo-basal/"
+    "href": "/country/spain/que-es-el-metabolismo-basal/",
+    "image": "/assets/images/articles/what-is-bmr-basal-metabolic-rate.jpg",
+    "alt": "Laboratorio moderno de ciencias del deporte midiendo la Tasa Metabólica Basal",
+    "date": "Oct 19, 2026",
+    "readTime": "7 min lectura",
+    "badge": "Revisión Clínica"
   },
   {
     "title": "¿Qué es el Superávit Calórico y Cómo Ganar Masa Muscular?",
     "description": "Aprende qué es un superávit calórico, cómo calcular las calorías para ganar peso de forma magra y cómo estructurar tus macros para ganar masa muscular sin exceso de grasa.",
-    "href": "/country/spain/que-es-el-superavit-calorico/"
+    "href": "/country/spain/que-es-el-superavit-calorico/",
+    "image": "/assets/images/articles/calorie-surplus-lean-bulking-nutrition.jpg",
+    "alt": "Plato de comida nutritiva para superávit calórico limpio con salmón y arroz",
+    "date": "Oct 18, 2026",
+    "readTime": "8 min lectura",
+    "badge": "Ciencia Deportiva"
   },
   {
     "title": "¿Qué es el NEAT y Cómo Ayuda a Perder Peso? | Guía Completa",
     "description": "Descubre qué es el NEAT (termogénesis por actividad no relacionada con el ejercicio), por qué es fundamental para acelerar tu metabolismo y cómo usar el NEAT para quemar calorías.",
-    "href": "/country/spain/que-es-el-neat/"
+    "href": "/country/spain/que-es-el-neat/",
+    "image": "/assets/images/articles/what-is-neat-non-exercise-activity.jpg",
+    "alt": "Espacio de trabajo ergonómico con escritorio de pie y cinta para caminar",
+    "date": "Oct 17, 2026",
+    "readTime": "6 min lectura",
+    "badge": "Salud Activa"
   },
   {
     "title": "Efecto Térmico de los Alimentos (TEF): Qué Es y Cómo Aumentarlo",
     "description": "Descubre qué es el efecto térmico de los alimentos (termogénesis inducida por la dieta) y cómo las calorías TEF influyen en tu metabolismo y quema de grasa.",
-    "href": "/country/spain/efecto-termico-de-los-alimentos/"
+    "href": "/country/spain/efecto-termico-de-los-alimentos/",
+    "image": "/assets/images/articles/thermic-effect-of-food-diet-induced-thermogenesis.jpg",
+    "alt": "Plato rico en proteínas ilustrando la termogénesis inducida por la dieta",
+    "date": "Oct 16, 2026",
+    "readTime": "8 min lectura",
+    "badge": "Fisiología"
   }
 ];
 
@@ -61,7 +91,33 @@ const jsonLd = [breadcrumbSchema([{"name":"Inicio","path":"/country/spain/calcul
       {
         posts.map((post) => (
           <a href={post.href} class="group flex flex-col bg-surface border border-hairline rounded-3xl overflow-hidden hover:shadow-md hover:border-brand/50 transition-all duration-300">
+            {post.image && (
+              <div class="w-full aspect-[4/3] bg-canvas-soft-2 overflow-hidden border-b border-hairline relative">
+                <img 
+                  src={post.image} 
+                  alt={post.alt || post.title}
+                  width="600"
+                  height="450"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
+                />
+                {post.badge && (
+                  <div class="absolute top-3 left-3 bg-white/90 dark:bg-canvas/90 backdrop-blur-md px-2.5 py-1 rounded-full border border-hairline flex items-center gap-1.5 shadow-sm">
+                    <svg class="text-emerald-600 dark:text-emerald-400 h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <span class="text-[10px] font-bold text-emerald-700 dark:text-emerald-300 uppercase tracking-wider">{post.badge}</span>
+                  </div>
+                )}
+              </div>
+            )}
             <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-2 text-xs text-mute mb-3">
+                <span>{post.date}</span>
+                <span>•</span>
+                <span>{post.readTime}</span>
+              </div>
               <h2 class="text-xl font-bold text-ink mb-3 group-hover:text-brand transition-colors leading-tight">
                 {post.title}
               </h2>

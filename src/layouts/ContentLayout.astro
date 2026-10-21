@@ -95,16 +95,16 @@ const showRelated = relatedTools.length > 0;
   <div class="container-page py-12 sm:py-16">
     <article class="prose-content mx-auto max-w-3xl">
       {heroImage && (
-        <div class="not-prose mb-10 overflow-hidden rounded-2xl border border-hairline bg-canvas-soft-2 shadow-sm aspect-[16/9] md:aspect-[21/9]">
+        <div class="not-prose mb-10 overflow-hidden rounded-2xl border border-hairline bg-canvas-soft-2 shadow-sm">
           <img 
             src={heroImage} 
             alt={heroImageAlt || pageHeading} 
-            class="h-full w-full object-cover"
+            class="w-full h-auto block rounded-2xl"
             loading="eager"
             fetchpriority="high"
             decoding="async"
             width="1200"
-            height="514"
+            height="896"
           />
         </div>
       )}
