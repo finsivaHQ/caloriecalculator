@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520" role="img" aria-label="Carbohydrates vs Dietary Fat: The Metabolic and Fat Storage Reality Diagram">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="carbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="fatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <filter id="dropShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" rx="20" fill="url(#bgGrad)"/>
+  <rect x="1" y="1" width="798" height="518" rx="19" fill="none" stroke="#1f2937" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <g transform="translate(40, 36)">
+    <rect x="0" y="0" width="140" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="70" y="15" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#38bdf8" text-anchor="middle" letter-spacing="1">METABOLIC TRUTH</text>
+    <text x="0" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#f9fafb">Do Carbs Make You Fat? The Metabolic Comparison</text>
+    <text x="0" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#9ca3af">Biochemical fat-storage efficiency, caloric density, and metabolic pathways compared.</text>
+  </g>
+
+  <!-- Left Column: Carbohydrates -->
+  <g transform="translate(40, 130)" filter="url(#dropShadow)">
+    <rect width="345" height="300" rx="16" fill="#131d31" stroke="#0ea5e9" stroke-opacity="0.5" stroke-width="1.5"/>
+    
+    <!-- Title Pill -->
+    <rect x="18" y="18" width="309" height="40" rx="10" fill="url(#carbGrad)"/>
+    <text x="32" y="43" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" fill="#0f172a">CARBOHYDRATES</text>
+    <text x="312" y="43" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#0f172a" text-anchor="end">4 kcal / gram</text>
+
+    <!-- Point 1: Storage Cost -->
+    <g transform="translate(20, 76)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#93c5fd">De Novo Lipogenesis (Conversion Cost):</text>
+      <text x="0" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#cbd5e1">Converting carbs to fat burns <tspan fill="#38bdf8" font-weight="700">~25% of calories</tspan> as heat.</text>
+      <rect x="0" y="26" width="305" height="8" rx="4" fill="#1e293b"/>
+      <rect x="0" y="26" width="76" height="8" rx="4" fill="#ef4444"/>
+      <text x="82" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#ef4444" font-weight="700">25% Burned Off in Conversion</text>
+    </g>
+
+    <!-- Point 2: Preferred Utilization -->
+    <g transform="translate(20, 132)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#93c5fd">Primary Metabolic Fate:</text>
+      <text x="0" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#cbd5e1">1. Fills liver &amp; muscle glycogen (300-600g capacity)</text>
+      <text x="0" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#cbd5e1">2. Primary fuel for brain &amp; red blood cells</text>
+      <text x="0" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#cbd5e1">3. Powers high-intensity anaerobic muscular training</text>
+    </g>
+
+    <!-- Point 3: The Scale Illusion -->
+    <g transform="translate(20, 204)">
+      <rect x="0" y="0" width="305" height="74" rx="8" fill="#0c182c" stroke="#1d4ed8" stroke-width="1"/>
+      <text x="12" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#60a5fa">The "Scale Weight" Water Fact:</text>
+      <text x="12" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Each 1g of stored glycogen holds <tspan fill="#ffffff" font-weight="700">3 to 4g of water</tspan>.</text>
+      <text x="12" y="54" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#38bdf8" font-weight="600">✓ This is intracellular muscle hydration, NOT body fat!</text>
+    </g>
+  </g>
+
+  <!-- Right Column: Dietary Fat -->
+  <g transform="translate(415, 130)" filter="url(#dropShadow)">
+    <rect width="345" height="300" rx="16" fill="#1c1917" stroke="#f59e0b" stroke-opacity="0.5" stroke-width="1.5"/>
+    
+    <!-- Title Pill -->
+    <rect x="18" y="18" width="309" height="40" rx="10" fill="url(#fatGrad)"/>
+    <text x="32" y="43" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" fill="#451a03">DIETARY FAT</text>
+    <text x="312" y="43" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#451a03" text-anchor="end">9 kcal / gram (2.25x)</text>
+
+    <!-- Point 1: Storage Cost -->
+    <g transform="translate(20, 76)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#fde68a">Fat Storage Metabolic Cost:</text>
+      <text x="0" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#cbd5e1">Dietary fat stores directly into fat cells with <tspan fill="#f59e0b" font-weight="700">0–3% cost</tspan>.</text>
+      <rect x="0" y="26" width="305" height="8" rx="4" fill="#292524"/>
+      <rect x="0" y="26" width="12" height="8" rx="4" fill="#ef4444"/>
+      <text x="20" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#f87171" font-weight="700">~2% Burned (Almost 100% Stored Directly)</text>
+    </g>
+
+    <!-- Point 2: Energy Density -->
+    <g transform="translate(20, 132)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#fde68a">Primary Metabolic Fate:</text>
+      <text x="0" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#cbd5e1">1. Preferentially stored in adipose tissue during surplus</text>
+      <text x="0" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#cbd5e1">2. Hormone synthesis and cellular wall maintenance</text>
+      <text x="0" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#cbd5e1">3. Basal low-intensity aerobic oxidation</text>
+    </g>
+
+    <!-- Point 3: Caloric Density Risk -->
+    <g transform="translate(20, 204)">
+      <rect x="0" y="0" width="305" height="74" rx="8" fill="#271c14" stroke="#d97706" stroke-width="1"/>
+      <text x="12" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#fcd34d">The Caloric Density Hazard:</text>
+      <text x="12" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Just 2 tablespoons of oil = <tspan fill="#ffffff" font-weight="700">240 calories</tspan> (zero volume).</text>
+      <text x="12" y="54" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#f59e0b" font-weight="600">⚠ High calorie density bypasses stomach stretch receptors.</text>
+    </g>
+  </g>
+
+  <!-- Bottom Scientific Verdict Banner -->
+  <g transform="translate(40, 448)">
+    <rect width="720" height="52" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="24" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" fill="#38bdf8">THE SCIENTIFIC VERDICT:</text>
+    <text x="200" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#e2e8f0">Carbohydrates do NOT make you fat. Total caloric surplus causes fat gain.</text>
+    <text x="24" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">In a caloric surplus, dietary fat is stored first while carbs are burned to power your brain, liver, and muscle tissue.</text>
+  </g>
+</svg>

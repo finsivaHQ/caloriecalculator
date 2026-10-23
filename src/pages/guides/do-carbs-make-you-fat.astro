@@ -1,0 +1,491 @@
+---
+import Button from "../../components/ui/Button.astro";
+import MedicalNote from "../../components/ui/MedicalNote.astro";
+import ContentLayout from "../../layouts/ContentLayout.astro";
+import type { FaqItem } from "../../lib/seo";
+import ArticleImage from "../../components/ui/ArticleImage.astro";
+import Sources from "../../components/ui/Sources.astro";
+
+const faqs: FaqItem[] = [
+  {
+    q: "Do carbs make you fat or is it calories?",
+    a: "Total calorie balance is the sole determinant of body fat accumulation. Carbohydrates do not inherently make you fat. You only gain adipose tissue when you consume more total calories than your body burns (a caloric surplus) over time, whether those surplus calories come from carbohydrates, dietary fat, or protein. When calories are kept in a deficit, consuming carbohydrates will never cause fat gain."
+  },
+  {
+    q: "Do carbs make you look fatter?",
+    a: "Carbs can temporarily make you look softer or heavier on the scale due to water retention, not fat. Every single gram of carbohydrate stored as muscle glycogen naturally binds with 3 to 4 grams of water. Furthermore, high-carbohydrate restaurant meals often contain high sodium, causing transient subcutaneous fluid retention. This is temporary water weight that subsides within 24 to 48 hours, not body fat."
+  },
+  {
+    q: "Why do people say carbs make you fat?",
+    a: "The myth originated from the 'Carbohydrate-Insulin Model' of obesity, which claimed that insulin spikes trap energy in fat cells and cause starvation. Decades of tightly controlled metabolic ward studies have disproven this hypothesis. Additionally, people conflate carbohydrates with hyper-palatable junk foods (donuts, pastries, french fries, and pizza), which actually get 50% or more of their total calories from dietary fat."
+  },
+  {
+    q: "Do carbs make you gain weight even in a calorie deficit?",
+    a: "No. It is biochemically impossible to synthesize and store net body fat while in a verified caloric deficit. Under the laws of thermodynamics, if your body expends more energy than you consume, it must oxidize stored body tissue (predominantly adipose triglycerides) to meet its metabolic demands, even if 60% or more of your daily calories come from carbohydrates."
+  },
+  {
+    q: "Will I lose belly fat if I cut out carbs?",
+    a: "Cutting out carbs does not selectively burn belly fat. While low-carb or ketogenic diets cause a rapid drop on the bathroom scale during the first 3 to 7 days, that immediate weight loss is almost entirely water and glycogen depletion. True long-term fat loss requires a sustained calorie deficit. Scientific trials comparing equal-calorie low-carb and high-carb diets show identical rates of abdominal fat loss."
+  },
+  {
+    q: "What is the worst carb for belly fat?",
+    a: "There is no single carbohydrate that directly targets belly fat. However, ultra-processed refined carbohydrates combined with industrial fats (such as commercially baked pastries, packaged cookies, deep-fried chips, and sugar-sweetened beverages) are the easiest to overconsume because they lack dietary fiber and fail to trigger natural fullness hormones like leptin and PYY."
+  },
+  {
+    q: "Do carbs make you gain muscle?",
+    a: "Yes. While protein provides the essential amino acid building blocks for muscle protein synthesis, carbohydrates provide the critical energy to train hard. Intramuscular glycogen is the primary substrate for high-intensity resistance training. Consuming carbs also elevates insulin, an anti-catabolic hormone that suppresses muscle protein breakdown and shuttles nutrients into muscle cells."
+  },
+  {
+    q: "What makes you gain more fat: carbs or dietary fat?",
+    a: "In a caloric surplus, dietary fat is far more readily stored as body fat than carbohydrates. Converting dietary fat into body adipose tissue costs only 2% to 3% of its energy because dietary fatty acids are chemically identical to stored fat. In contrast, converting carbohydrates into body fat via De Novo Lipogenesis (DNL) is biologically complex and expends approximately 20% to 25% of the carbohydrate's energy as metabolic heat."
+  },
+  {
+    q: "Is 1000 carbs a day too much?",
+    a: "For the vast majority of individuals, 1,000 grams of carbohydrates (4,000 calories from carbs alone) is an excessive amount that would put most people into a substantial caloric surplus leading to weight gain. However, elite endurance athletes—such as Tour de France cyclists or ultra-marathoners burning 6,000 to 8,000 calories per day—routinely consume 800 to 1,200 grams of carbohydrates daily to fuel massive aerobic demands without gaining any body fat."
+  },
+  {
+    q: "Do refined carbs make you fat?",
+    a: "Refined carbs do not inherently convert to fat on their own, but their low fiber content and rapid gastric emptying make them exceptionally easy to overeat. Because refined carbohydrates digest quickly without creating lasting fullness, individuals often consume hundreds of extra calories without realizing it, inadvertently creating the caloric surplus that drives fat accumulation."
+  }
+];
+
+const sources = [
+  {
+    label: "National Institutes of Health (NIH): Calorie for calorie, dietary fat restriction results in more body fat loss than carbohydrate restriction in people with obesity (PMC4603544)",
+    href: "https://pubmed.ncbi.nlm.nih.gov/26278052/"
+  },
+  {
+    label: "American Journal of Clinical Nutrition: De novo lipogenesis in humans during carbohydrate overfeeding and energy balance",
+    href: "https://academic.oup.com/ajcn/article/74/6/707/4737384"
+  },
+  {
+    label: "British Dietetic Association (BDA): Carbohydrates and Health Evidence Briefing",
+    href: "https://www.bda.uk.com/resource/carbohydrates.html"
+  },
+  {
+    label: "Journal of the International Society of Sports Nutrition (JISSN): International Society of Sports Nutrition position stand: nutrient timing",
+    href: "https://jissn.biomedcentral.com/articles/10.1186/s12970-017-0189-4"
+  },
+  {
+    label: "Cell Metabolism: A Plant-Based, Low-Fat Diet Decreases Ad libitum Energy Intake Compared to an Animal-Based, Ketogenic Diet (Hall et al.)",
+    href: "https://www.cell.com/cell-metabolism/fulltext/S1550-4131(21)00005-4"
+  }
+];
+---
+
+<ContentLayout
+  title="Do Carbs Make You Fat? The Science-Backed Truth"
+  description="Do carbohydrates make you fat, or is it total calories? Discover why carbs are your body's best fuel, the truth about water weight, and how to eat carbs and lose fat."
+  h1="Do Carbs Make You Fat? The Science-Backed Truth (And Why Your Body Needs Them)"
+  path="/guides/do-carbs-make-you-fat/"
+  category="Guides"
+  categoryPath="/guides/"
+  heroImage="/assets/images/articles/do-carbs-make-you-fat-hero.jpg"
+  heroImageAlt="Nutrient-dense complex carbohydrates table with roasted sweet potatoes, whole grain oats, sourdough bread, and fresh berries next to a nutrition log"
+  faqs={faqs}
+  lead="For decades, fad diets and low-carb gurus have demonized carbohydrates as the sole villain behind weight gain. But what does human physiology actually say? Here is the clinical reality behind carbs, caloric balance, de novo lipogenesis, and why carbohydrates are actually your body's most superior fuel source."
+  updated="October 2026"
+>
+  <div class="space-y-12">
+    <div class="mb-12">
+      <MedicalNote />
+    </div>
+
+    <!-- Main Content -->
+    <article class="space-y-16 text-lg md:text-xl text-body leading-relaxed font-light">
+      
+      <!-- Section 1: Introduction -->
+      <section>
+        <p class="mb-6 first-letter:text-7xl first-letter:font-black first-letter:text-ink first-letter:mr-3 first-letter:float-left first-letter:leading-none">
+          If you have spent even five minutes browsing modern health forums, fitness social media, or supermarket diet books, you have undoubtedly encountered the most persistent nutrition myth of the twenty-first century: <strong class="font-bold text-ink">the belief that eating carbohydrates automatically makes you fat</strong>.
+        </p>
+        <p class="mb-6">
+          We have been warned that bread is evil, potatoes are toxic, pasta will instantly settle on our hips, and fruit has "too much sugar." In response, millions of well-intentioned people have cut out whole grain cereals, oats, and root vegetables, forcing themselves into chronic ketosis or agonizing low-carb fatigue in the desperate hope of finally shedding unwanted pounds.
+        </p>
+        <p class="mb-6">
+          Yet despite the cultural ubiquity of low-carb dogma, human evolutionary biology and clinical metabolic research paint a radically different picture. The human body does not view carbohydrates as a biological enemy. In reality, <strong class="text-ink font-semibold">carbohydrates are the body's primary, most oxygen-efficient, and cleanly metabolized energy substrate</strong>—superior to dietary fat in virtually every metric of physical output, cognitive clarity, and hormonal resilience.
+        </p>
+        <p class="mb-6">
+          Let us dismantle the fear-mongering once and for all by examining the precise biochemical mechanisms that govern how your body utilizes, stores, and burns carbohydrates.
+        </p>
+      </section>
+
+      <!-- Section 2: Thermodynamics -->
+      <section class="bg-surface p-8 md:p-14 rounded-[2.5rem] shadow-sm border border-hairline">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-8 tracking-tight">
+          Do Carbs Make You Fat or Do Calories? The Physics of Energy Balance
+        </h2>
+        <p class="mb-6">
+          To answer the fundamental question—<em>do carbs make you fat?</em>—we must first consult the First Law of Thermodynamics. Energy within a closed biological system cannot be created or destroyed; it can only be transformed from one state to another.
+        </p>
+        <p class="mb-6">
+          Inside the human body, adipose tissue (body fat) is an evolutionary savings account. Your body stores surplus energy in adipose fat cells if, and only if, your total energy intake exceeds your total energy expenditure over a sustained period of time. This is commonly termed <strong class="text-ink font-semibold">Calories In vs. Calories Out (CICO)</strong>.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
+          <div class="p-6 rounded-2xl bg-canvas-soft border border-hairline">
+            <h3 class="text-xl font-bold text-ink mb-2">In a Caloric Deficit</h3>
+            <p class="text-sm text-body leading-relaxed">
+              When your total daily energy expenditure (<a href="/tdee-calculator/" class="text-brand font-semibold hover:underline">TDEE</a>) exceeds the calories you consume, your body is in an energy shortfall. To keep your heart beating, lungs breathing, and muscles moving, your liver and adipocytes must break down stored triglycerides into free fatty acids. In this state, <strong>it is biochemically impossible to gain body fat</strong>, regardless of whether 20% or 70% of your diet consists of carbohydrates.
+            </p>
+          </div>
+          <div class="p-6 rounded-2xl bg-canvas-soft border border-hairline">
+            <h3 class="text-xl font-bold text-ink mb-2">In a Caloric Surplus</h3>
+            <p class="text-sm text-body leading-relaxed">
+              When you consistently eat more calories than your body requires, that leftover energy must be stored. However, as human metabolic ward studies prove, it is not the carbohydrate molecules themselves that directly deposit onto your waistline—it is the net excess of energy forcing the storage of co-ingested dietary fats.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-brand-soft/40 p-6 rounded-2xl border border-hairline/60 text-base">
+          <strong class="text-ink">The Landmark NIH Metabolic Ward Evidence:</strong> In a rigorous study led by Dr. Kevin Hall at the National Institutes of Health (NIH), obese individuals were locked in metabolic chambers where every single breath and calorie was monitored. When calories and protein were held identical, <strong class="text-ink">restricting dietary fat resulted in slightly greater body fat loss than restricting carbohydrates</strong>. Carbs did not impede fat burning when calories were controlled.
+        </div>
+      </section>
+
+      <!-- Section 3: De Novo Lipogenesis vs Fat Storage -->
+      <section>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-8 tracking-tight">
+          The Biochemistry of Fat Storage: How Your Body Actually Handles Excess Carbs
+        </h2>
+        <p class="mb-6">
+          One of the core claims made by anti-carb advocates is that when you eat carbohydrates, insulin levels rise, shutting off fat oxidation and immediately converting all circulating glucose into body fat. This claim represents a profound misunderstanding of human endocrinology and metabolic biochemistry.
+        </p>
+        <p class="mb-6">
+          When you digest carbohydrates—whether a bowl of oatmeal, a baked potato, or a serving of white rice—enzymes break those starches down into simple glucose molecules. Here is the chronological pathway that glucose takes inside your body:
+        </p>
+
+        <ol class="list-decimal pl-6 space-y-4 mb-8 text-base md:text-lg">
+          <li>
+            <strong class="text-ink">Immediate Cellular Oxidation:</strong> Circulating glucose is first pulled into brain cells, red blood cells, and vital organs to generate immediate Adenosine Triphosphate (ATP) via glycolysis.
+          </li>
+          <li>
+            <strong class="text-ink">Glycogen Replenishment:</strong> Excess glucose is absorbed by the liver (storing ~80 to 120 grams of glycogen) and skeletal muscles (storing ~350 to 600 grams of glycogen in active adults). This constitutes a massive internal energy buffer of roughly 1,600 to 2,800 calories!
+          </li>
+          <li>
+            <strong class="text-ink">Up-Regulated Carbohydrate Burning:</strong> When your glycogen stores are saturated, your body dramatically increases its rate of carbohydrate oxidation. In other words, the more carbs you eat, the more carbs your body naturally prioritizes burning as heat and kinetic energy.
+          </li>
+        </ol>
+
+        <h3 class="text-2xl md:text-3xl font-bold text-ink mb-4">What About De Novo Lipogenesis (DNL)?</h3>
+        <p class="mb-6">
+          The metabolic process of turning carbohydrates into fatty acids is called <em>De Novo Lipogenesis</em> (DNL). In rodents and livestock, DNL occurs readily. However, decades of clinical isotope studies have demonstrated that in healthy adult humans, <strong class="text-ink font-semibold">DNL is extremely minimal under normal nutritional conditions</strong>.
+        </p>
+        <p class="mb-6">
+          Converting glucose into palmitic acid requires a tortuous multi-step enzymatic pathway that wastes <strong class="text-brand font-bold">20% to 25% of the carbohydrate's total caloric value</strong> purely as thermic conversion heat! Because your body is an efficient machine, it fiercely resists wasting a quarter of its energy through DNL unless you consume a massive, unnatural surplus of pure carbohydrates (over 500 to 700 grams of pure carbs per day above maintenance) for several consecutive days.
+        </p>
+        <p class="mb-6">
+          Now contrast this with dietary fat: dietary triglycerides require almost zero chemical modification to be tucked away into adipose cells—a mere <strong class="text-ink font-semibold">2% to 3% metabolic cost</strong>. Therefore, in a real-world hypercaloric meal (such as a burger and fries), <strong class="text-ink">your body burns the carbohydrates for energy and directly stores the dietary fat in your adipose tissue</strong>. Blaming the carb for the fat gain is like blaming the fire truck for the fire!
+        </p>
+      </section>
+
+      <!-- Section 4: Visual Comparison Diagram (ImgyRule compliant) -->
+      <section class="bg-surface p-8 md:p-14 rounded-[2.5rem] shadow-sm border border-hairline">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-6 tracking-tight">
+          The Metabolic Reality: Carbs vs. Dietary Fat (Visual Diagram &amp; Comparison)
+        </h2>
+        <p class="mb-8">
+          To understand why carbohydrates are structurally less prone to direct fat storage than dietary fat, inspect the biological energy costs and metabolic fates depicted in the chart below:
+        </p>
+
+        <!-- ImgyRule Figure Embedding -->
+        <figure class="my-8 flex flex-col items-center not-prose">
+          <img
+            src="/assets/images/articles/do-carbs-make-you-fat-metabolic-breakdown.svg"
+            alt="Scientific comparison diagram of carbohydrates vs dietary fat showing caloric density, storage efficiency, and glycogen hydration"
+            class="w-full max-w-3xl rounded-2xl border border-hairline shadow-md object-contain"
+            loading="lazy"
+            decoding="async"
+            width="800"
+            height="520"
+          />
+          <figcaption class="mt-4 text-center text-sm text-body max-w-2xl">
+            <strong>Figure 1:</strong> Carbohydrates (4 kcal/g) have less than half the caloric density of dietary fat (9 kcal/g). While dietary fat stores directly into adipose tissue at near 100% efficiency, converting carbohydrates to fat via De Novo Lipogenesis expends up to 25% of its energy as metabolic heat.
+          </figcaption>
+        </figure>
+
+        <!-- Comparison Table -->
+        <div class="overflow-x-auto rounded-[2rem] shadow-xl border border-hairline my-10 bg-surface">
+          <table class="w-full text-left border-collapse min-w-[700px]">
+            <thead>
+              <tr class="bg-surface-elevated text-ink">
+                <th class="p-6 text-lg font-semibold border-b border-hairline">Metabolic Metric</th>
+                <th class="p-6 text-lg font-semibold border-b border-hairline text-brand">Carbohydrates</th>
+                <th class="p-6 text-lg font-semibold border-b border-hairline text-amber-500">Dietary Fat</th>
+              </tr>
+            </thead>
+            <tbody class="text-base text-body divide-y divide-slate-100">
+              <tr class="hover:bg-canvas-soft transition-colors">
+                <td class="p-6 font-bold text-ink">Caloric Density</td>
+                <td class="p-6 font-semibold text-brand">4.0 kcal per gram</td>
+                <td class="p-6 font-semibold text-amber-600">9.0 kcal per gram (2.25x higher!)</td>
+              </tr>
+              <tr class="hover:bg-canvas-soft transition-colors">
+                <td class="p-6 font-bold text-ink">Fat Storage Metabolic Cost</td>
+                <td class="p-6">~20% to 25% burned as heat (inefficient)</td>
+                <td class="p-6">~2% to 3% burned (nearly 100% directly stored)</td>
+              </tr>
+              <tr class="hover:bg-canvas-soft transition-colors">
+                <td class="p-6 font-bold text-ink">ATP Output per Liter of O₂</td>
+                <td class="p-6 font-bold text-brand">~5.05 kcal/L O₂ (high efficiency)</td>
+                <td class="p-6 text-body">~4.69 kcal/L O₂ (less oxygen-efficient)</td>
+              </tr>
+              <tr class="hover:bg-canvas-soft transition-colors">
+                <td class="p-6 font-bold text-ink">Brain &amp; RBC Dependency</td>
+                <td class="p-6 font-semibold text-brand">Obligate fuel (120g/day needed for brain &amp; RBCs)</td>
+                <td class="p-6">Cannot be used by red blood cells; non-obligate for brain</td>
+              </tr>
+              <tr class="hover:bg-canvas-soft transition-colors">
+                <td class="p-6 font-bold text-ink">High-Intensity Workout Fuel</td>
+                <td class="p-6 font-semibold text-brand">Primary anaerobic glycolytic substrate</td>
+                <td class="p-6">Too slow for high-intensity power or heavy resistance sets</td>
+              </tr>
+              <tr class="hover:bg-canvas-soft transition-colors">
+                <td class="p-6 font-bold text-ink">Water Binding Capacity</td>
+                <td class="p-6">1g glycogen binds 3 to 4g of water</td>
+                <td class="p-6">Hydrophobic (zero intracellular water binding)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 5: Why Carbs are the Best Macronutrient -->
+      <section>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-8 tracking-tight">
+          Why Carbs Are Actually the Body's Best Macronutrient (Superior to Fat)
+        </h2>
+        <p class="mb-6">
+          While dietary fat is essential for basic hormone synthesis and cellular membrane integrity, carbohydrates hold the biological crown when it comes to human energy optimization, athletic performance, and metabolic vitality. Here is why your body prefers carbohydrates over fats:
+        </p>
+
+        <div class="space-y-8">
+          <div class="p-8 rounded-3xl bg-surface border border-hairline shadow-sm">
+            <h3 class="text-2xl font-bold text-ink mb-3 flex items-center gap-3">
+              <span class="w-10 h-10 rounded-full bg-brand-soft text-brand flex items-center justify-center text-lg font-black">1</span>
+              Superior Cellular Oxygen Efficiency
+            </h3>
+            <p class="text-body leading-relaxed">
+              When your mitochondria burn fuel for energy, they consume oxygen. For every single liter of oxygen your lungs deliver to your bloodstream, carbohydrates yield approximately <strong>5.05 calories of usable energy (ATP)</strong>, whereas fatty acids yield only <strong>4.69 calories</strong>. This means your cardiovascular system, lungs, and muscle cells operate with far greater efficiency when powered by glucose. It is the biological equivalent of running high-octane racing fuel rather than sluggish crude oil.
+            </p>
+          </div>
+
+          <div class="p-8 rounded-3xl bg-surface border border-hairline shadow-sm">
+            <h3 class="text-2xl font-bold text-ink mb-3 flex items-center gap-3">
+              <span class="w-10 h-10 rounded-full bg-brand-soft text-brand flex items-center justify-center text-lg font-black">2</span>
+              Red Blood Cells and the Brain Require Glucose
+            </h3>
+            <p class="text-body leading-relaxed">
+              Your central nervous system and brain consume roughly 20% of your body's total basal metabolic energy (~120 grams of glucose per day). While the brain can partially adapt to utilizing ketone bodies during severe starvation, glucose remains its preferred and sharpest fuel. More critically, your <strong>red blood cells (erythrocytes) have zero mitochondria</strong>—they are biologically incapable of metabolizing fats or ketones and depend 100% on glucose for cellular survival.
+            </p>
+          </div>
+
+          <div class="p-8 rounded-3xl bg-surface border border-hairline shadow-sm">
+            <h3 class="text-2xl font-bold text-ink mb-3 flex items-center gap-3">
+              <span class="w-10 h-10 rounded-full bg-brand-soft text-brand flex items-center justify-center text-lg font-black">3</span>
+              Muscular Power, Glycogen, and Anti-Catabolic Protection
+            </h3>
+            <p class="text-body leading-relaxed">
+              High-intensity resistance training, sprinting, and CrossFit rely almost exclusively on the fast-acting anaerobic glycolytic pathway. When muscle glycogen is depleted, your maximum power output plummets, training volume drops, and perceived exertion skyrockets. Furthermore, carbohydrate intake triggers an insulin response. Far from being a "fat-storing hormone," insulin is the body's most potent <strong>anti-catabolic agent</strong>—it halts muscle protein breakdown (MPB), preserving lean tissue during fat loss phases.
+            </p>
+          </div>
+
+          <div class="p-8 rounded-3xl bg-surface border border-hairline shadow-sm">
+            <h3 class="text-2xl font-bold text-ink mb-3 flex items-center gap-3">
+              <span class="w-10 h-10 rounded-full bg-brand-soft text-brand flex items-center justify-center text-lg font-black">4</span>
+              Thyroid Health and Leptin Satiety Signaling
+            </h3>
+            <p class="text-body leading-relaxed">
+              The conversion of inactive thyroid hormone ($T_4$) into the active metabolic hormone ($T_3$) takes place predominantly in the liver and is directly dependent on hepatic glycogen availability and insulin signaling. When people adopt chronic zero-carb or severe keto diets, active $T_3$ levels frequently decline, leading to sluggish thyroid output, feeling constantly cold, elevated cortisol, and impaired sleep quality. Moreover, carbohydrate refeeds stimulate <strong class="text-ink">leptin</strong>, the master hormone that tells your hypothalamus you are full and satisfied.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: The Scale Illusion & Water Weight -->
+      <section class="bg-surface p-8 md:p-14 rounded-[2.5rem] shadow-sm border border-hairline">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-8 tracking-tight">
+          The Scale Illusion: Why Do Carbs Make You "Look Fatter" or Gain Weight Fast?
+        </h2>
+        <p class="mb-6">
+          If carbs do not make you fat, why does nearly everyone experience a 3-to-5-pound jump on the scale after eating a large bowl of pasta, a plate of sushi, or a pizza? And why do people rapidly lose 5 pounds during their first week on a low-carb diet?
+        </p>
+        <p class="mb-6">
+          The answer is simple: <strong class="text-ink font-semibold">intracellular glycogen hydration</strong>.
+        </p>
+
+        <div class="p-6 md:p-8 rounded-2xl bg-brand-soft/30 border border-hairline mb-8 text-base md:text-lg">
+          <h3 class="text-xl font-bold text-ink mb-2">The 1:3 Glycogen-to-Water Rule</h3>
+          <p class="mb-4">
+            For every single 1 gram of carbohydrate stored as glycogen inside your liver and muscle tissue, your body naturally binds and holds <strong>3 to 4 grams of water ($H_2O$)</strong>.
+          </p>
+          <p class="text-sm text-body m-0">
+            If you consume 400 grams of carbohydrates over the weekend to replenish depleted glycogen stores, your body stores that 400g of glycogen alongside roughly 1,200 to 1,600g of water. That totals 1.6 to 2.0 kilograms—or roughly <strong>3.5 to 4.4 pounds of scale weight</strong>!
+          </p>
+        </div>
+
+        <p class="mb-6">
+          This water is held <em>inside</em> the muscle bellies, giving your physique a full, hydrated, athletic appearance. However, people look at the bathroom scale, see a 4-pound jump after Sunday dinner, and panic: <em>"Carbs make me gain weight instantly!"</em>
+        </p>
+        <p class="mb-6">
+          Biochemically, gaining 4 pounds of actual adipose tissue requires an energy surplus of approximately <strong class="text-ink">14,000 excess calories</strong> above your maintenance burn. Unless you drank two gallons of olive oil over the weekend, that scale fluctuation is 100% temporary water and glycogen. The moment you return to your regular maintenance or deficit calories, that water weight normalizes without leaving a single trace of body fat.
+        </p>
+      </section>
+
+      <!-- Section 7: The Ultra-Processed Trojan Horse -->
+      <section>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-8 tracking-tight">
+          The Ultra-Processed Trap: What Is the "Worst Carb" for Belly Fat?
+        </h2>
+        <p class="mb-6">
+          When people ask, <em>"What's the worst carb for belly fat?"</em> or claim that carbs ruined their health, they are almost never talking about boiled potatoes, steel-cut oats, lentils, or wild blueberries.
+        </p>
+        <p class="mb-6">
+          Instead, they are pointing fingers at commercial junk foods: frosted donuts, chocolate-covered pastries, double cheeseburgers, potato chips, and deep-dish pizza. But examine the nutritional anatomy of these foods:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8 not-prose">
+          <div class="p-6 rounded-2xl bg-surface border border-hairline shadow-sm text-center">
+            <span class="text-4xl mb-3 block">🍩</span>
+            <h3 class="text-lg font-bold text-ink mb-1">Glazed Donut</h3>
+            <p class="text-sm text-body mb-2">Total Calories: ~260 kcal</p>
+            <div class="text-xs font-semibold text-amber-600 bg-amber-50 py-1.5 px-3 rounded-full inline-block">
+              52% Calories from Dietary Fat
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface border border-hairline shadow-sm text-center">
+            <span class="text-4xl mb-3 block">🍟</span>
+            <h3 class="text-lg font-bold text-ink mb-1">Large French Fries</h3>
+            <p class="text-sm text-body mb-2">Total Calories: ~480 kcal</p>
+            <div class="text-xs font-semibold text-amber-600 bg-amber-50 py-1.5 px-3 rounded-full inline-block">
+              46% Calories from Deep-Fried Oil
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface border border-hairline shadow-sm text-center">
+            <span class="text-4xl mb-3 block">🍕</span>
+            <h3 class="text-lg font-bold text-ink mb-1">Pepperoni Pizza Slice</h3>
+            <p class="text-sm text-body mb-2">Total Calories: ~320 kcal</p>
+            <div class="text-xs font-semibold text-amber-600 bg-amber-50 py-1.5 px-3 rounded-full inline-block">
+              48% Calories from Cheese &amp; Meat Fat
+            </div>
+          </div>
+        </div>
+
+        <p class="mb-6">
+          These foods are not "carbs"—they are <strong class="text-ink font-semibold">hyper-palatable carb-and-fat hybrids</strong> designed in corporate food laboratories to bypass the human brain's natural stretch and satiety receptors. When refined carbohydrates, heavy industrial oils, and sodium are combined, the brain's satiety threshold is overwhelmed, causing effortless overconsumption of thousands of excess calories.
+        </p>
+        <p class="mb-6">
+          In contrast, try overeating plain boiled potatoes, steamed jasmine rice, or fresh apples. An entire pound of boiled potatoes contains only ~390 calories and ranks as the <strong class="text-ink">#1 most satiating food on the clinical Holt Satiety Index</strong>. It is virtually impossible to become clinically obese eating whole, unprocessed carbohydrates.
+        </p>
+      </section>
+
+      <!-- Section 8: Hub & Spoke Funnel Banner -->
+      <section class="bg-gradient-to-br from-brand/10 via-surface to-brand-soft/20 p-8 md:p-12 rounded-[2.5rem] border border-brand/20 shadow-lg not-prose my-12">
+        <div class="max-w-3xl mx-auto text-center space-y-6">
+          <span class="px-4 py-1.5 rounded-full bg-brand text-white text-xs font-bold tracking-widest uppercase">
+            CALCULATE YOUR TARGETS
+          </span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-ink tracking-tight">
+            Stop Fearing Carbs. Calculate Your Exact Daily Needs.
+          </h2>
+          <p class="text-base md:text-lg text-body leading-relaxed">
+            Whether your goal is rapid fat loss, lean muscle hypertrophy, or athletic endurance, success comes down to your personal energy equation. Use our clinical calculators to determine your maintenance calories, ideal deficit, and customized macronutrient split.
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+            <a
+              href="/tdee-calculator/"
+              class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-brand text-white font-bold text-sm shadow-md hover:bg-brand-hover transition-all hover:scale-105"
+            >
+              Calculate Your TDEE Burn →
+            </a>
+            <a
+              href="/calorie-deficit-calculator/"
+              class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-surface border border-hairline text-ink font-bold text-sm shadow-sm hover:bg-canvas-soft transition-all"
+            >
+              Plan Your Calorie Deficit
+            </a>
+            <a
+              href="/protein-calculator/"
+              class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-surface border border-hairline text-ink font-bold text-sm shadow-sm hover:bg-canvas-soft transition-all"
+            >
+              Calculate Protein Target
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 9: How to Eat Carbs for Maximum Fat Loss -->
+      <section>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-8 tracking-tight">
+          How to Eat Carbs and Lose Fat: The 4-Step Strategy
+        </h2>
+        <p class="mb-6">
+          If you want to maintain high cognitive focus, power through challenging workouts, protect your active thyroid hormones, and melt body fat without starvation, follow these evidence-based guidelines:
+        </p>
+
+        <div class="space-y-6">
+          <div class="flex items-start gap-4 p-6 rounded-2xl bg-surface border border-hairline">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand text-white flex items-center justify-center font-bold text-sm">1</span>
+            <div>
+              <h3 class="text-xl font-bold text-ink mb-1">Anchor Your Daily Calorie Deficit</h3>
+              <p class="text-base text-body">
+                Establish a moderate, sustainable caloric deficit of 300 to 500 calories below your <a href="/tdee-calculator/" class="text-brand font-semibold underline">maintenance TDEE</a>. This guarantees steady, non-catabolic fat loss of 0.5 to 1.0 pound per week while allowing ample room for dietary carbohydrates.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-6 rounded-2xl bg-surface border border-hairline">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand text-white flex items-center justify-center font-bold text-sm">2</span>
+            <div>
+              <h3 class="text-xl font-bold text-ink mb-1">Lock in Your Protein Target First</h3>
+              <p class="text-base text-body">
+                Consume 1.6 to 2.2 grams of protein per kilogram of body weight (0.8 to 1.0g per pound). Protein has the highest <a href="/guides/thermic-effect-of-food-tef/" class="text-brand font-semibold underline">Thermic Effect of Food (TEF)</a> and protects lean muscle tissue during cutting. (Use our <a href="/protein-calculator/" class="text-brand font-semibold underline">Protein Calculator</a> to get your exact gram target).
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-6 rounded-2xl bg-surface border border-hairline">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand text-white flex items-center justify-center font-bold text-sm">3</span>
+            <div>
+              <h3 class="text-xl font-bold text-ink mb-1">Prioritize High-Volume, Fiber-Rich Carbohydrates</h3>
+              <p class="text-base text-body">
+                Fill 70% to 80% of your carb allotment with nutrient-dense, high-volume sources: oats, sweet potatoes, brown and white rice, quinoa, berries, lentils, and squash. These foods take up substantial space in your stomach, stimulating mechanical stretch receptors that silence hunger.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-6 rounded-2xl bg-surface border border-hairline">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand text-white flex items-center justify-center font-bold text-sm">4</span>
+            <div>
+              <h3 class="text-xl font-bold text-ink mb-1">Time Carbohydrates Around Training</h3>
+              <p class="text-base text-body">
+                Position a moderate portion of easily digestible carbohydrates 1 to 2 hours before training to saturate blood glucose, and consume another serving post-workout alongside protein. This immediately replenishes depleted glycogen stores and accelerates muscular recovery.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 10: Conclusion Summary -->
+      <section class="bg-surface p-8 md:p-14 rounded-[2.5rem] shadow-sm border border-hairline">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-6 tracking-tight">
+          The Bottom Line: Stop Demonizing Carbs
+        </h2>
+        <p class="mb-6">
+          Carbohydrates do not make you fat. Fat gain is the physiological consequence of a chronic caloric surplus, driven predominantly by ultra-processed foods that combine high fats, refined sugars, and high salt.
+        </p>
+        <p class="mb-6">
+          When eaten within an appropriate caloric framework, carbohydrates fuel high-intensity training, spare your hard-earned muscle tissue, optimize your thyroid and leptin hormones, and power your brain and central nervous system.
+        </p>
+        <p class="text-ink font-semibold">
+          Drop the carb-phobia, master your energy balance, and fuel your body with the clean, high-performance energy it was evolved to thrive on.
+        </p>
+      </section>
+
+      <!-- Sources Section -->
+      <Sources sources={sources} title="Scientific References & Clinical Studies" />
+
+    </article>
+  </div>
+</ContentLayout>
