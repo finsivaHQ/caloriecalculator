@@ -1,0 +1,408 @@
+---
+import Button from "../../components/ui/Button.astro";
+import MedicalNote from "../../components/ui/MedicalNote.astro";
+import ContentLayout from "../../layouts/ContentLayout.astro";
+import type { FaqItem } from "../../lib/seo";
+import ArticleImage from "../../components/ui/ArticleImage.astro";
+import Sources from "../../components/ui/Sources.astro";
+
+const faqs: FaqItem[] = [
+  {
+    q: "Is a lot of protein really necessary for general health?",
+    a: "No. For average sedentary adults, the standard Recommended Dietary Allowance (RDA) is 0.8 grams per kilogram of body weight (roughly 46 to 56 grams per day). This baseline amount is easily achieved through a standard balanced diet containing ordinary foods like eggs, yogurt, legumes, poultry, and grains without needing any protein powders or hyper-protein products."
+  },
+  {
+    q: "Does eating 200g of protein a day speed up muscle growth?",
+    a: "No. Consuming massive protein amounts yields sharply diminishing returns. Landmark meta-analyses published in the British Journal of Sports Medicine demonstrate that muscle protein synthesis gains plateau around 1.62 grams per kilogram of body weight (~115g to 130g for an average adult). Consuming 200g or more does not accelerate hypertrophy; progressive resistance training and sufficient total daily calories drive muscle development."
+  },
+  {
+    q: "How much protein can the body actually use in one meal?",
+    a: "For stimulating Muscle Protein Synthesis (MPS), the physiological ceiling is approximately 25 to 35 grams of high-quality protein per meal (about 0.4g per kg). This provides the 2.5 to 3.0 grams of leucine required to fully trigger the cellular mTOR pathway. While your digestive tract will still absorb larger amounts, excess amino acids beyond this ceiling are broken down for energy or converted to urea, not used for extra muscle."
+  },
+  {
+    q: "What happens if you eat too much protein but stay in a calorie deficit?",
+    a: "In a verified calorie deficit, consuming surplus protein will not cause fat gain. Because protein has a high Thermic Effect of Food (TEF of 20% to 30%) and suppresses appetite, it helps protect lean muscle during cutting. However, excess protein beyond 1.6 to 2.2 g/kg crowds out essential carbohydrates and fats, leading to lowered workout intensity, hormonal suppression, and sluggish recovery."
+  },
+  {
+    q: "Is it bad to not eat a lot of protein?",
+    a: "Falling below the minimum baseline (0.8 g/kg) can lead to negative nitrogen balance, gradual loss of lean muscle mass, impaired immune function, and brittle hair and nails. However, 'not eating a lot' (such as eating 60 to 75 grams daily) is perfectly healthy for sedentary individuals and will not cause malnutrition or health issues."
+  },
+  {
+    q: "What are the side effects of eating too much protein?",
+    a: "Consuming excessive protein—especially via isolated supplements and low-fiber carnivore diets—frequently causes digestive distress (chronic constipation, severe bloating), dehydration from increased urea excretion, persistent halitosis ('keto breath'), and an unnecessarily elevated grocery bill. In individuals with existing renal impairment, it accelerates kidney damage."
+  },
+  {
+    q: "Can high protein diets cause kidney strain?",
+    a: "In healthy individuals with normal renal function, high protein intake causes adaptive glomerular hyperfiltration without causing clinical disease. However, for the millions of adults with undiagnosed early-stage Chronic Kidney Disease (CKD) or kidney stones, high protein intake significantly accelerates renal decline and places severe metabolic workload on the kidneys."
+  },
+  {
+    q: "Does high protein intake lead to weight gain or fat storage?",
+    a: "Protein can lead to weight gain if and only if it pushes your total caloric intake into a surplus. While converting amino acids into adipose tissue via de novo lipogenesis is metabolically inefficient, your body will oxidize the excess protein for immediate energy while directly storing co-ingested dietary fats into fat cells."
+  },
+  {
+    q: "Why is Gen Z and fitness media so obsessed with protein?",
+    a: "Modern consumer culture has commercialized protein into a 'health halo' marketing buzzword. Food corporations add inexpensive soy or whey isolates to candy bars, cereals, and baked goods to rebrand ultra-processed junk as 'functional fitness foods' at markup prices, while social media algorithms amplify extreme, unscientific bodybuilder diets."
+  },
+  {
+    q: "How much protein is too much for a woman?",
+    a: "For an average woman weighing 60 to 70 kg (132 to 154 lbs), a daily protein intake exceeding 140 to 160 grams provides virtually zero additional physiological benefit unless she is an elite strength athlete preparing for competition. A target of 75 to 110 grams daily is optimal for active women seeking tone, satiety, and bone health."
+  }
+];
+
+const sources = [
+  {
+    label: "Harvard Health Publishing: When it comes to protein, how much is too much?",
+    href: "https://www.health.harvard.edu/nutrition/when-it-comes-to-protein-how-much-is-too-much"
+  },
+  {
+    label: "British Journal of Sports Medicine: A systematic review and meta-analysis of protein supplementation on muscle mass and strength (Morton et al.)",
+    href: "https://bjsm.bmj.com/content/52/6/376"
+  },
+  {
+    label: "Mayo Clinic Health System: Are you getting too much protein?",
+    href: "https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/are-you-getting-too-much-protein"
+  },
+  {
+    label: "British Heart Foundation (BHF): Protein: how much do you really need?",
+    href: "https://www.bhf.org.uk/informationsupport/heart-matters-magazine/nutrition/protein"
+  },
+  {
+    label: "Cleveland Clinic Health Essentials: Can You Eat Too Much Protein? Risks and Guidelines",
+    href: "https://health.clevelandclinic.org/can-you-eat-too-much-protein"
+  }
+];
+---
+
+<ContentLayout
+  title="Is a Lot of Protein Necessary? What Science Actually Says"
+  description="Do you really need 200g of protein, or is fitness culture lying? Learn the true RDA requirements, muscle synthesis limits, side effects, and per-meal myths."
+  h1="Is a Lot of Protein Actually Necessary? What Science Says About Daily Intake & Overconsumption"
+  path="/guides/is-a-lot-of-protein-necessary/"
+  category="Guides"
+  categoryPath="/guides/"
+  heroImage="/assets/images/articles/is-a-lot-of-protein-necessary-hero.jpg"
+  heroImageAlt="Balanced whole-food protein table with pan-seared salmon, soft-boiled eggs, edamame, Greek yogurt, lentils, and fresh greens"
+  faqs={faqs}
+  lead="Between hyper-engineered protein bars, gym-influencer shakes, and 200g+ daily targets, modern wellness culture has developed an obsessive fixation on protein. But what do clinical medicine, nephrology, and exercise physiology actually prove? Here is the scientific truth about how much protein your body can realistically use."
+  updated="October 2026"
+>
+  <div class="space-y-12">
+    <div class="mb-12">
+      <MedicalNote />
+    </div>
+
+    <!-- Main Content -->
+    <article class="space-y-16 text-lg md:text-xl text-body leading-relaxed font-light">
+      
+      <!-- Section 1: Introduction -->
+      <section>
+        <p class="mb-6">
+          Walk down any grocery aisle or browse fitness social media today, and you will see a bizarre nutritional phenomenon: <strong class="font-bold text-ink">everything has been injected with extra protein</strong>. We now have high-protein cookies, protein water, protein potato chips, and protein pancake syrups.
+        </p>
+        <p class="mb-6">
+          Online fitness creators routinely boast of consuming 200, 250, or even 300 grams of protein every day. Everyday gym-goers are convinced that if they fail to down an expensive whey shake within twenty minutes of finishing a workout, their muscles will wither away.
+        </p>
+        <p class="mb-6">
+          Yet when medical researchers, clinical dietitians, and sports scientists examine the data, the conclusion is startlingly unanimous: <strong class="text-ink font-semibold">most people are consuming far more protein than their bodies can biologically use</strong>.
+        </p>
+        <p class="mb-6">
+          Beyond a well-established physiological ceiling, extra protein does not build bigger muscles, burn extra fat, or provide superpowers. Instead, it places unnecessary strain on your digestive tract, creates expensive metabolic waste, and drains your wallet. Let us examine what human biochemistry actually proves about your true daily protein requirements.
+        </p>
+      </section>
+
+      <!-- Section 2: How Much Protein Do You Actually Need? -->
+      <section class="bg-surface p-8 md:p-14 rounded-[2.5rem] shadow-sm border border-hairline">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-8 tracking-tight">
+          How Much Protein Do You Actually Need Daily? (RDA vs. Athletic Reality)
+        </h2>
+        <p class="mb-6">
+          To understand protein requirements, we must first distinguish between the clinical <strong class="text-ink font-semibold">Recommended Dietary Allowance (RDA)</strong> and the optimal intake for active individuals.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8 not-prose">
+          <div class="p-6 rounded-2xl bg-canvas-soft border border-hairline flex flex-col justify-between">
+            <div>
+              <span class="text-xs uppercase font-bold text-brand tracking-wider block mb-2">Category 1</span>
+              <h3 class="text-xl font-bold text-ink mb-2">Sedentary Adults</h3>
+              <p class="text-3xl font-black text-brand mb-2">0.8 g/kg</p>
+              <p class="text-sm text-body leading-relaxed">
+                Roughly <strong>46 to 56 grams per day</strong> for an average adult. This is the official RDA established by the National Academy of Medicine. It represents the amount necessary to prevent nitrogen deficiency and maintain vital cellular enzyme replacement.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-canvas-soft border border-hairline flex flex-col justify-between">
+            <div>
+              <span class="text-xs uppercase font-bold text-emerald-600 tracking-wider block mb-2">Category 2</span>
+              <h3 class="text-xl font-bold text-ink mb-2">Active Adults &amp; Runners</h3>
+              <p class="text-3xl font-black text-emerald-600 mb-2">1.2 – 1.6 g/kg</p>
+              <p class="text-sm text-body leading-relaxed">
+                Roughly <strong>80 to 120 grams per day</strong>. Endorsed by the American College of Sports Medicine (ACSM). Powers mitochondrial biogenesis, tissue repair from endurance exercise, and sustained recovery.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-canvas-soft border border-hairline flex flex-col justify-between">
+            <div>
+              <span class="text-xs uppercase font-bold text-amber-600 tracking-wider block mb-2">Category 3</span>
+              <h3 class="text-xl font-bold text-ink mb-2">Strength &amp; Hypertrophy</h3>
+              <p class="text-3xl font-black text-amber-600 mb-2">1.6 – 2.0 g/kg</p>
+              <p class="text-sm text-body leading-relaxed">
+                Roughly <strong>115 to 150 grams per day</strong>. The upper boundary for dedicated natural lifters seeking maximum hypertrophy or preserving muscle during an aggressive <a href="/calorie-deficit-calculator/" class="text-brand underline font-medium">calorie deficit</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-brand-soft/40 p-6 rounded-2xl border border-hairline/60 text-base">
+          <strong class="text-ink">The Morton Meta-Analysis (The 1.62 g/kg Ceiling):</strong> In the most comprehensive systematic review ever conducted on protein and muscle hypertrophy—analyzing 49 randomized controlled trials and over 1,800 participants—Dr. Robert Morton and colleagues found that protein supplementation beyond <strong class="text-ink">1.62 g per kg of body weight (approx. 0.73g per pound)</strong> produced zero statistically significant increases in muscle size or strength. The 1g-per-pound "rule" is largely an overestimation!
+        </div>
+      </section>
+
+      <!-- Section 3: Visual Diagram & Diminishing Returns -->
+      <section class="bg-surface p-8 md:p-14 rounded-[2.5rem] shadow-sm border border-hairline">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-6 tracking-tight">
+          The Diminishing Returns Curve: Why More Protein Doesn't Mean More Muscle
+        </h2>
+        <p class="mb-8">
+          The human body is an efficient biological machine governed by saturation kinetics. Just as pouring 10 gallons of gasoline into a 5-gallon tank causes an overflow rather than making your car faster, flooding your bloodstream with amino acids beyond your biological repair ceiling does not accelerate muscle growth.
+        </p>
+
+        <!-- Imgyduprule Compliant Visual Diagram -->
+        <figure class="my-8 flex flex-col items-center not-prose">
+          <img
+            src="/assets/images/articles/protein-intake-diminishing-returns-diagram.svg"
+            alt="Scientific diagram showing daily protein intake tiers and the diminishing returns curve for muscle protein synthesis"
+            class="w-full max-w-3xl rounded-2xl border border-hairline shadow-md object-contain"
+            loading="lazy"
+            decoding="async"
+            width="800"
+            height="520"
+          />
+          <figcaption class="mt-4 text-center text-sm text-body max-w-2xl">
+            <strong>Figure 1:</strong> Muscle Protein Synthesis (MPS) reaches a clear physiological plateau around 1.6 g/kg daily (~25–35g per meal). Beyond this threshold, additional amino acids undergo oxidative deamination rather than contributing to muscular hypertrophy.
+          </figcaption>
+        </figure>
+
+        <h3 class="text-2xl md:text-3xl font-bold text-ink mb-4">What Actually Drives Muscle Growth?</h3>
+        <p class="mb-6">
+          Protein does not build muscle in isolation; it merely supplies the raw building blocks (amino acids). The biological commander that actually orders new muscle fibers to be constructed is <strong class="text-ink font-semibold">progressive mechanical tension</strong> from heavy resistance training.
+        </p>
+        <p class="mb-6">
+          If you do not subject your muscle fibers to adequate mechanical load, tension, and micro-tears close to muscular failure, your body has zero incentive to synthesize new muscle tissue. Eating 250 grams of protein without intense lifting simply forces your liver to convert those amino acids into blood urea and energy substrates. Training intensity and total energy balance are the true drivers of muscle growth.
+        </p>
+      </section>
+
+      <!-- Section 4: The Per-Meal Myth -->
+      <section>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-8 tracking-tight">
+          The Per-Meal Myth: How Much Protein Can Your Body Use in One Sitting?
+        </h2>
+        <p class="mb-6">
+          Gym lore often claims: <em>"You must eat 50 to 60 grams of protein every two hours to stay anabolic."</em> Conversely, others claim: <em>"Your body can only absorb 30 grams of protein per meal, and anything more is instantly wasted."</em>
+        </p>
+        <p class="mb-6">
+          Both extremes are scientifically incorrect. To understand the truth, we must separate <strong class="text-ink font-semibold">absorption</strong> from <strong class="text-ink font-semibold">utilization for muscle synthesis</strong>.
+        </p>
+
+        <div class="space-y-6">
+          <div class="p-6 rounded-2xl bg-surface border border-hairline">
+            <h3 class="text-xl font-bold text-ink mb-2">1. Digestive Absorption (Virtually Unlimited)</h3>
+            <p class="text-body leading-relaxed text-base md:text-lg">
+              Your gastrointestinal tract can absorb nearly 100% of the protein you consume. If you eat an 80-gram steak, your stomach and small intestine will slowly release peptides into circulation over 6 to 8 hours. The food does not simply "rot" or exit unabsorbed.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface border border-hairline">
+            <h3 class="text-xl font-bold text-ink mb-2">2. The Muscle Protein Synthesis (MPS) Trigger: ~25g to 35g</h3>
+            <p class="text-body leading-relaxed text-base md:text-lg">
+              While your gut absorbs all the amino acids, your skeletal muscle tissue has a distinct ceiling for how much it can use for repair in a single session. This is known as the <strong class="text-ink font-semibold">"Muscle Full" effect</strong>. Clinical tracer studies show that approximately <strong>25 to 35 grams of high-quality protein</strong> provides between 2.5 and 3.0 grams of the branched-chain amino acid <em>leucine</em>. This amount fully saturates the cellular mTOR pathway.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface border border-hairline">
+            <h3 class="text-xl font-bold text-ink mb-2">3. What Happens to the Excess?</h3>
+            <p class="text-body leading-relaxed text-base md:text-lg">
+              Any amino acids ingested beyond the MPS ceiling do not generate extra bicep growth. Instead, they enter the hepatic urea cycle. The liver strips the nitrogen atom off the amino acid (deamination), converting it to urea for excretion by the kidneys. The remaining carbon skeleton is then oxidized for energy or converted via gluconeogenesis. In short: eating an 80-gram protein bowl does not double your muscle growth—it just creates very expensive fuel!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Hidden Risks of Excessive Protein -->
+      <section class="bg-surface p-8 md:p-14 rounded-[2.5rem] shadow-sm border border-hairline">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-8 tracking-tight">
+          Hidden Risks and Side Effects of Extreme Protein Diets
+        </h2>
+        <p class="mb-6">
+          While healthy individuals can tolerate moderately elevated protein intake, pushing your daily intake to extreme levels (over 2.5g/kg or 200g+ daily) carries distinct physiological risks:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
+          <div class="p-6 rounded-2xl bg-canvas-soft border border-hairline">
+            <h3 class="text-xl font-bold text-ink mb-2">1. Kidney Workload &amp; Filtration Pressure</h3>
+            <p class="text-sm text-body leading-relaxed">
+              Every gram of excess protein requires the kidneys to filter nitrogenous waste. In healthy kidneys, this causes adaptive hyperfiltration. However, an estimated <strong>37 million American adults have Chronic Kidney Disease (CKD)</strong>, and 90% do not know it. For anyone with borderline renal function or a history of calcium oxalate kidney stones, chronic hyper-protein intake accelerates renal decline.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-canvas-soft border border-hairline">
+            <h3 class="text-xl font-bold text-ink mb-2">2. Saturated Fat &amp; Cardiovascular Risks</h3>
+            <p class="text-sm text-body leading-relaxed">
+              When people attempt to consume 200 grams of protein daily without powders, they frequently rely on massive quantities of red meat, bacon, sausages, and processed cheeses. According to the British Heart Foundation and Harvard Health, this dramatically elevates LDL cholesterol, ApoB, and long-term atherosclerosis risk.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-canvas-soft border border-hairline">
+            <h3 class="text-xl font-bold text-ink mb-2">3. The Fiber Deficiency Trap (Gut Distress)</h3>
+            <p class="text-sm text-body leading-relaxed">
+              When protein crowds out other macronutrients, dietary fiber is almost always the first casualty. Extreme high-protein dieters often experience severe chronic constipation, painful bloating, and altered gut microbiome diversity due to a total lack of prebiotic soluble fiber and resistant starch.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-canvas-soft border border-hairline">
+            <h3 class="text-xl font-bold text-ink mb-2">4. Carbohydrate &amp; Hormone Deprivation</h3>
+            <p class="text-sm text-body leading-relaxed">
+              Protein is satiating, but your brain, red blood cells, and anaerobic muscle fibers thrive on carbohydrates. As detailed in our guide on <a href="/guides/do-carbs-make-you-fat/" class="text-brand font-semibold hover:underline">why carbs do not make you fat</a>, cutting out carbs to fit in more protein crushes workout intensity, elevates cortisol, and suppresses active $T_3$ thyroid hormones.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Hub & Spoke Interactive Conversion Banner -->
+      <section class="bg-gradient-to-br from-brand/10 via-surface to-brand-soft/20 p-8 md:p-12 rounded-[2.5rem] border border-brand/20 shadow-lg not-prose my-12">
+        <div class="max-w-3xl mx-auto text-center space-y-6">
+          <span class="px-4 py-1.5 rounded-full bg-brand text-white text-xs font-bold tracking-widest uppercase">
+            CALCULATE YOUR TRUE NEEDS
+          </span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-ink tracking-tight">
+            Stop Guessing. Find Your Exact Scientifically Proven Protein Target.
+          </h2>
+          <p class="text-base md:text-lg text-body leading-relaxed">
+            Do not let supplement marketing dictate your grocery budget. Use our clinical calculators to discover your personalized protein gram target, total daily energy expenditure (TDEE), and balanced macronutrient split.
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+            <a
+              href="/protein-calculator/"
+              class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-brand text-white font-bold text-sm shadow-md hover:bg-brand-hover transition-all hover:scale-105"
+            >
+              Calculate Protein Target →
+            </a>
+            <a
+              href="/tdee-calculator/"
+              class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-surface border border-hairline text-ink font-bold text-sm shadow-sm hover:bg-canvas-soft transition-all"
+            >
+              Find Daily Maintenance (TDEE)
+            </a>
+            <a
+              href="/protein-to-calories-calculator/"
+              class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-surface border border-hairline text-ink font-bold text-sm shadow-sm hover:bg-canvas-soft transition-all"
+            >
+              Protein to Calories Tool
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: The Commercialization & Gen Z Protein Obsession -->
+      <section>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-8 tracking-tight">
+          Why Is Fitness Media &amp; Gen Z So Obsessed With Protein?
+        </h2>
+        <p class="mb-6">
+          If the human body does not require massive amounts of protein, why has protein become the dominant buzzword of modern dietary culture?
+        </p>
+        <p class="mb-6">
+          The answer lies in behavioral psychology and corporate marketing:
+        </p>
+
+        <ul class="list-disc pl-6 space-y-4 mb-8 text-base md:text-lg">
+          <li>
+            <strong class="text-ink">The "Health Halo" Effect:</strong> In the 1990s, food manufacturers slapped "FAT-FREE" on sugary snacks to make them seem healthy. In the 2020s, the playbook flipped: companies now slap "HIGH PROTEIN" or "20G PROTEIN" on ultra-processed candy bars, pudding cups, and cereals. Consumers perceive the product as virtuous, justifying a 40% to 100% price markup.
+          </li>
+          <li>
+            <strong class="text-ink">The Illusion of Control:</strong> In a world filled with conflicting nutritional advice about carbs, keto, seed oils, and fasting, protein feels like the one "safe" nutrient. People assume that eating more of it is an easy shortcut to looking fit without realizing that muscle gain requires years of progressive strength training.
+          </li>
+          <li>
+            <strong class="text-ink">Supplement Industry Profits:</strong> Whey and plant protein powders have exceptionally high profit margins. Marketing an exaggerated 1-gram-per-pound or 200-gram daily requirement ensures customers finish a \$60 tub of protein every two weeks.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section 8: Summary Table: Protein Intake Guidelines by Goal -->
+      <section class="bg-surface p-8 md:p-14 rounded-[2.5rem] shadow-sm border border-hairline">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-6 tracking-tight">
+          Evidence-Based Daily Protein Cheat Sheet
+        </h2>
+        <p class="mb-8">
+          Here is your practical, no-nonsense roadmap based on clinical exercise science rather than supplement advertisements:
+        </p>
+
+        <div class="overflow-x-auto rounded-[2rem] shadow-xl border border-hairline my-6 bg-surface not-prose">
+          <table class="w-full text-left border-collapse min-w-[650px]">
+            <thead>
+              <tr class="bg-surface-elevated text-ink">
+                <th class="p-5 text-base font-semibold border-b border-hairline">Activity Level / Goal</th>
+                <th class="p-5 text-base font-semibold border-b border-hairline text-brand">Grams per Kg (Body Weight)</th>
+                <th class="p-5 text-base font-semibold border-b border-hairline">70 kg (154 lb) Example</th>
+                <th class="p-5 text-base font-semibold border-b border-hairline">Clinical Takeaway</th>
+              </tr>
+            </thead>
+            <tbody class="text-sm text-body divide-y divide-slate-100">
+              <tr class="hover:bg-canvas-soft transition-colors">
+                <td class="p-5 font-bold text-ink">Sedentary Adult (RDA)</td>
+                <td class="p-5 font-semibold text-brand">0.8 g/kg</td>
+                <td class="p-5">56 grams / day</td>
+                <td class="p-5">Easily met through regular balanced meals; zero powders required.</td>
+              </tr>
+              <tr class="hover:bg-canvas-soft transition-colors">
+                <td class="p-5 font-bold text-ink">Recreational Exerciser / Runner</td>
+                <td class="p-5 font-semibold text-brand">1.1 – 1.4 g/kg</td>
+                <td class="p-5">77 – 98 grams / day</td>
+                <td class="p-5">Supports glycogen recovery and cellular repair without excessive meat.</td>
+              </tr>
+              <tr class="hover:bg-canvas-soft transition-colors">
+                <td class="p-5 font-bold text-ink">Muscle Building (Hypertrophy)</td>
+                <td class="p-5 font-semibold text-brand">1.6 – 1.8 g/kg</td>
+                <td class="p-5">112 – 126 grams / day</td>
+                <td class="p-5">100% of muscle synthesis benefits capped; higher amounts offer no gain.</td>
+              </tr>
+              <tr class="hover:bg-canvas-soft transition-colors">
+                <td class="p-5 font-bold text-ink">Aggressive Fat Loss Cut</td>
+                <td class="p-5 font-semibold text-brand">1.8 – 2.2 g/kg</td>
+                <td class="p-5">126 – 154 grams / day</td>
+                <td class="p-5">Protects lean muscle tissue while in a significant caloric deficit.</td>
+              </tr>
+              <tr class="hover:bg-canvas-soft transition-colors">
+                <td class="p-5 font-bold text-ink">Extreme "Bro-Diet" (200g+)</td>
+                <td class="p-5 font-semibold text-red-500">&gt; 2.5 g/kg</td>
+                <td class="p-5 text-red-500">175 – 220+ grams / day</td>
+                <td class="p-5 text-red-500">Diminishing returns; expensive urine; potential digestive distress.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 9: Conclusion -->
+      <section class="bg-surface p-8 md:p-14 rounded-[2.5rem] shadow-sm border border-hairline">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-6 tracking-tight">
+          The Bottom Line: Quality Over Excessive Quantity
+        </h2>
+        <p class="mb-6">
+          Protein is an essential, life-sustaining macronutrient. But like water, vitamins, and oxygen, more is not infinitely better.
+        </p>
+        <p class="mb-6">
+          You do not need 200 grams of protein to build an athletic, strong physique. If you are lifting weights, aim for a sensible target of <strong>1.6 grams per kilogram (around 0.7 to 0.8 grams per pound)</strong>. If you are sedentary, <strong>0.8 grams per kilogram</strong> is completely sufficient for lifelong health.
+        </p>
+        <p class="text-ink font-semibold">
+          Focus on nutrient-dense whole foods—salmon, eggs, Greek yogurt, lentils, beans, and poultry—pair your protein with colorful fiber-rich plants and quality carbohydrates, and stop wasting your hard-earned money on unneeded scoops of powder.
+        </p>
+      </section>
+
+      <!-- Sources Section -->
+      <Sources sources={sources} title="Scientific References & Clinical Studies" />
+
+    </article>
+  </div>
+</ContentLayout>
