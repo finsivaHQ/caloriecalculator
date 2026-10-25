@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520" role="img" aria-label="Low Protein Diet Clinical Tiers and Plate Architecture Diagram">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="lpdGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="plateGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <filter id="dropShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="520" rx="20" fill="url(#bgGrad)"/>
+  <rect x="1" y="1" width="798" height="518" rx="19" fill="none" stroke="#1f2937" stroke-width="1.5"/>
+
+  <!-- Header Banner -->
+  <g transform="translate(40, 36)">
+    <rect x="0" y="0" width="165" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="82" y="15" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#38bdf8" text-anchor="middle" letter-spacing="1">CLINICAL PROTOCOL</text>
+    <text x="0" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#f9fafb">Low-Protein Diet: Clinical Tiers &amp; Plate Strategy</text>
+    <text x="0" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#9ca3af">Balancing kidney nephron preservation with adequate caloric density to prevent muscle wasting.</text>
+  </g>
+
+  <!-- Left Column: The 3 Clinical Protein Tiers -->
+  <g transform="translate(40, 130)" filter="url(#dropShadow)">
+    <rect width="345" height="295" rx="16" fill="#131d31" stroke="#0284c7" stroke-opacity="0.4" stroke-width="1.5"/>
+    
+    <rect x="18" y="18" width="309" height="36" rx="8" fill="url(#lpdGrad)"/>
+    <text x="172" y="41" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#0c4a6e" text-anchor="middle">CLINICAL INTAKE TIERS (g/kg)</text>
+
+    <!-- Tier 1 -->
+    <g transform="translate(20, 72)">
+      <rect x="0" y="0" width="305" height="60" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" fill="#94a3b8">Standard Adult RDA</text>
+      <text x="290" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#e2e8f0" text-anchor="end">0.8 g/kg</text>
+      <text x="14" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">Healthy baseline (~56g/day for 70kg adult). Full nitrogen turnover.</text>
+    </g>
+
+    <!-- Tier 2: The Core Target -->
+    <g transform="translate(20, 142)">
+      <rect x="0" y="0" width="305" height="68" rx="8" fill="#082f49" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="14" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" fill="#38bdf8">Clinical Low-Protein (LPD)</text>
+      <text x="290" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#38bdf8" text-anchor="end">0.55 – 0.60 g/kg</text>
+      <text x="14" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#bae6fd">CKD Stages 3–5 non-dialysis (~38–42g/day).</text>
+      <text x="14" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#7dd3fc">✓ Lowers BUN, reduces glomerular hyperfiltration.</text>
+    </g>
+
+    <!-- Tier 3 -->
+    <g transform="translate(20, 220)">
+      <rect x="0" y="0" width="305" height="60" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" fill="#f87171">Very Low-Protein (VLPD)</text>
+      <text x="290" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#fca5a5" text-anchor="end">0.30 – 0.40 g/kg</text>
+      <text x="14" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Strict medical supervision + Ketoacid analog supplements.</text>
+    </g>
+  </g>
+
+  <!-- Right Column: The Low-Protein Plate Architecture -->
+  <g transform="translate(415, 130)" filter="url(#dropShadow)">
+    <rect width="345" height="295" rx="16" fill="#0d231e" stroke="#059669" stroke-opacity="0.4" stroke-width="1.5"/>
+    
+    <rect x="18" y="18" width="309" height="36" rx="8" fill="url(#plateGrad)"/>
+    <text x="172" y="41" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#022c22" text-anchor="middle">THE LOW-PROTEIN PLATE (FOOD SOURCES)</text>
+
+    <!-- Plate Component 1 -->
+    <g transform="translate(20, 72)">
+      <rect x="0" y="0" width="305" height="46" rx="8" fill="#133d32" stroke="#059669" stroke-width="1"/>
+      <text x="12" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#6ee7b7">50% Fresh Produce (Low Potassium/Phos)</text>
+      <text x="12" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#a7f3d0">Apples, berries, cucumber, zucchini, cauliflower (&lt;1g protein/serving)</text>
+    </g>
+
+    <!-- Plate Component 2 -->
+    <g transform="translate(20, 126)">
+      <rect x="0" y="0" width="305" height="46" rx="8" fill="#133d32" stroke="#059669" stroke-width="1"/>
+      <text x="12" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#6ee7b7">30% Clean Energy Starches</text>
+      <text x="12" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#a7f3d0">White rice, sago, tapioca, low-protein specialty pasta/bread</text>
+    </g>
+
+    <!-- Plate Component 3 -->
+    <g transform="translate(20, 180)">
+      <rect x="0" y="0" width="305" height="46" rx="8" fill="#133d32" stroke="#059669" stroke-width="1"/>
+      <text x="12" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#6ee7b7">15% Healthy Plant Fats (The Calorie Shield)</text>
+      <text x="12" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#a7f3d0">Extra virgin olive oil, avocado oil, flax (zero protein, pure energy)</text>
+    </g>
+
+    <!-- Plate Component 4 -->
+    <g transform="translate(20, 234)">
+      <rect x="0" y="0" width="305" height="46" rx="8" fill="#1e293b" stroke="#eab308" stroke-width="1"/>
+      <text x="12" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#fde047">5% Controlled Protein (Strictly Rationed)</text>
+      <text x="12" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#cbd5e1">Small portion egg white, poultry, fish, or plant protein (HBV)</text>
+    </g>
+  </g>
+
+  <!-- Bottom Insight Bar -->
+  <g transform="translate(40, 442)">
+    <rect width="720" height="56" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#38bdf8">THE CALORIC ENERGY SHIELD:</text>
+    <text x="215" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#e2e8f0">Adequate calories (30–35 kcal/kg/day) are non-negotiable on a low-protein diet.</text>
+    <text x="20" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#94a3b8">If calories fall short, the body breaks down its own muscle tissue for energy, which ironically floods the kidneys with toxic nitrogenous waste.</text>
+  </g>
+</svg>

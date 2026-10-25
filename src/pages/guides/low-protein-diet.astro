@@ -1,0 +1,508 @@
+---
+import Button from "../../components/ui/Button.astro";
+import MedicalNote from "../../components/ui/MedicalNote.astro";
+import ContentLayout from "../../layouts/ContentLayout.astro";
+import type { FaqItem } from "../../lib/seo";
+import ArticleImage from "../../components/ui/ArticleImage.astro";
+import Sources from "../../components/ui/Sources.astro";
+
+const faqs: FaqItem[] = [
+  {
+    q: "Why is a low-protein diet prescribed for chronic kidney disease (CKD)?",
+    a: "When your body breaks down protein, it produces nitrogenous waste products like blood urea nitrogen (BUN) and creatinine that must be filtered out by microscopic units in the kidneys called nephrons. In Chronic Kidney Disease (CKD), damaged nephrons are overwhelmed by high protein intake, which causes glomerular hyperfiltration and accelerates scarring. A low-protein diet (0.55 to 0.60 g/kg) significantly lowers intraglomerular pressure, reduces toxic uremic buildup, and can delay the need for dialysis by years."
+  },
+  {
+    q: "How much protein is allowed on a low-protein diet?",
+    a: "A clinical Low-Protein Diet (LPD) typically restricts daily protein intake to 0.55 to 0.60 grams per kilogram of body weight (roughly 38 to 45 grams per day for an average adult), or about 4% to 8% of total daily calories. A specialized Very Low-Protein Diet (VLPD) restricts protein further to 0.30 to 0.40 g/kg and is strictly supervised by a nephrologist alongside essential amino acid ketoacid supplements."
+  },
+  {
+    q: "What foods are naturally low in protein?",
+    a: "Foods naturally low in protein (providing less than 1 to 2 grams of protein per serving) include fresh fruits (apples, berries, grapes, watermelon, peaches), non-starchy vegetables (cucumbers, zucchini, bell peppers, carrots, cauliflower), healthy cooking fats (extra virgin olive oil, avocado oil, butter), and pure carbohydrates such as tapioca, sago, arrowroot, and specialized low-protein breads and pastas."
+  },
+  {
+    q: "How do I get enough calories on a low-protein diet without losing weight?",
+    a: "To prevent muscle wasting and malnutrition (known clinically as Protein-Energy Wasting), you must maintain adequate caloric intake (30 to 35 kcal per kilogram of body weight daily) by increasing non-protein energy sources. Incorporate healthy monounsaturated fats like extra virgin olive oil and avocado, along with complex low-protein starches like white rice, sweet potatoes, sago, honey, and pure fruit smoothies."
+  },
+  {
+    q: "Can I eat eggs, meat, or fish on a low-protein diet?",
+    a: "Yes, but only in strictly controlled, small portions. Nephrology guidelines often suggest that 50% of your limited protein allotment come from 'High Biological Value' (HBV) sources—such as one egg white, a 2-ounce portion of baked fish, or skinless poultry—which provide all essential amino acids without generating excessive nitrogenous waste."
+  },
+  {
+    q: "Is rice low in protein?",
+    a: "Cooked white rice contains approximately 2.5 to 2.7 grams of protein per 100 grams (about 4 to 5 grams per cooked cup). While it is significantly lower in protein than meats or legumes, its protein content still counts toward your daily cap. Many renal patients use specialized low-protein rice substitutes or measure exact portions to keep daily protein under control."
+  },
+  {
+    q: "Which fruits have the lowest protein?",
+    a: "Almost all fresh fruits are naturally very low in protein, containing less than 0.5 to 1.0 gram per standard serving. The lowest include wild blueberries, apples, cranberries, grapes, strawberries, and pears. However, kidney patients must also monitor their blood potassium levels, as fruits like bananas, oranges, and dried fruits are high in potassium."
+  },
+  {
+    q: "What are the risks of muscle loss or malnutrition on a low-protein diet?",
+    a: "If daily calories drop too low, your body is forced to break down its own skeletal muscle tissue for survival energy (catabolism). This paradoxically floods the bloodstream with more nitrogenous waste, worsening kidney workload. A low-protein diet must never be an 'undereating diet'; it must be calorie-dense, nutrient-balanced, and clinically supervised by a registered renal dietitian."
+  },
+  {
+    q: "What is a plant-based low-protein diet (PLADO)?",
+    a: "PLADO is an evidence-based renal nutrition protocol where 50% to 70% of a patient's low protein intake comes from whole plant foods. Clinical trials published in nephrology journals demonstrate that plant proteins produce fewer uremic toxins, reduce metabolic acidosis, and have less absorbable phosphorus than animal meats, offering superior protection against kidney disease progression."
+  },
+  {
+    q: "What does a sample one-day low-protein meal plan look like?",
+    a: "A typical 35-gram low-protein day includes: Breakfast (oatmeal made with water, fresh berries, chia seeds, and honey: ~6g protein); Lunch (a large Mediterranean salad with mixed greens, roasted bell peppers, cucumbers, avocado, and jasmine rice with olive oil dressing: ~8g protein); Afternoon Snack (apple slices and rice crackers: ~2g protein); Dinner (sautéed zucchini, carrots, and cauliflower served over tapioca noodles with garlic-infused olive oil: ~10g protein)."
+  }
+];
+
+const sources = [
+  {
+    label: "National Kidney Foundation (NKF): KDOQI Clinical Practice Guideline for Nutrition in CKD (2020 Update)",
+    href: "https://www.kidney.org/professionals/guidelines/nutrition-ckd"
+  },
+  {
+    label: "American Journal of Kidney Diseases: Dietary Protein Restriction in Non-Dialysis Dependent CKD (Hahn et al.)",
+    href: "https://www.ajkd.org/article/S0272-6386(20)30727-4/fulltext"
+  },
+  {
+    label: "National Institutes of Health (NIH PMC7824653): Plant-Based Low-Protein Diets for Chronic Kidney Disease",
+    href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7824653/"
+  },
+  {
+    label: "Harvard Health Publishing: When it comes to protein, how much is too much?",
+    href: "https://www.health.harvard.edu/nutrition/when-it-comes-to-protein-how-much-is-too-much"
+  },
+  {
+    label: "Icahn School of Medicine at Mount Sinai: Clinical Nutrition Guidelines for Low-Protein Diets and Metabolic Disorders",
+    href: "https://icahn.mssm.edu/research/genomics"
+  }
+];
+---
+
+<ContentLayout
+  title="Low-Protein Diet: Clinical Guide, Foods & Meal Plan"
+  description="A complete clinical guide to the low-protein diet for kidney health. Discover foods to eat vs avoid, high-calorie meal strategies, and a 1-day sample meal plan."
+  h1="Low-Protein Diet: The Complete Guide to Kidney Health, Foods to Eat & Meal Plans"
+  path="/guides/low-protein-diet/"
+  category="Guides"
+  categoryPath="/guides/"
+  heroImage="/assets/images/articles/low-protein-diet-hero.jpg"
+  heroImageAlt="Fresh kidney-friendly plant-based bowl with leafy greens, vegetables, and olive oil dressing"
+  faqs={faqs}
+  lead="While mainstream fitness culture pushes massive protein quotas, millions of individuals managing Chronic Kidney Disease (CKD), liver dysfunction, and metabolic disorders require the exact opposite: a calculated low-protein diet. Here is what clinical nephrology guidelines and renal dietitians recommend for safely reducing protein without sacrificing energy or muscle."
+  updated="October 2026"
+>
+  <div class="space-y-12">
+    <div class="mb-12">
+      <MedicalNote />
+    </div>
+
+    <!-- Main Content -->
+    <article class="space-y-16 text-lg md:text-xl text-body leading-relaxed font-light">
+      
+      <!-- Section 1: Introduction -->
+      <section>
+        <p class="mb-6">
+          In an era where modern supermarkets and fitness influencers aggressively promote 200-gram daily protein targets, protein-infused snacks, and giant whey shakes, the idea of intentionally <strong class="font-bold text-ink">restricting your protein intake</strong> might sound completely counterintuitive.
+        </p>
+        <p class="mb-6">
+          Yet for millions of people worldwide living with Chronic Kidney Disease (CKD), hepatic impairment, or inborn amino acid disorders like Phenylketonuria (PKU), a high-protein diet is not a health booster—it is a direct biological hazard. For these individuals, a scientifically formulated <strong class="text-ink font-semibold">Low-Protein Diet (LPD)</strong> is one of the most powerful, life-prolonging clinical interventions available.
+        </p>
+        <p class="mb-6">
+          However, successfully transitioning to a low-protein diet is notoriously challenging. Patients are often told to "cut protein," but are left wondering: <em>What foods are actually low in protein? How do I get enough daily calories so I don't lose weight and muscle? What does a safe meal plan look like?</em>
+        </p>
+        <p class="mb-6">
+          Let us demystify the science of protein restriction, explore the exact clinical targets, and provide a clear, practical roadmap for managing your health.
+        </p>
+      </section>
+
+      <!-- Section 2: Why It Is Used (Nephrology & Renal Science) -->
+      <section class="bg-surface p-8 md:p-14 rounded-[2.5rem] shadow-sm border border-hairline">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-8 tracking-tight">
+          Why Is a Low-Protein Diet Prescribed? (The Kidney &amp; Liver Connection)
+        </h2>
+        <p class="mb-6">
+          To understand why medical doctors prescribe a low-protein diet, we must look at how the body metabolizes dietary amino acids.
+        </p>
+        <p class="mb-6">
+          Unlike carbohydrates and fats—which consist strictly of carbon, hydrogen, and oxygen and break down cleanly into carbon dioxide and water—protein molecules contain <strong class="text-ink font-semibold">nitrogen</strong>. When your liver metabolizes excess protein, it strips off this nitrogen atom (a process called deamination) and converts it into ammonia and urea.
+        </p>
+        <p class="mb-6">
+          These nitrogenous wastes must then be eliminated from the bloodstream by microscopic filtering units in your kidneys called <strong class="text-ink font-semibold">nephrons</strong>.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8 not-prose">
+          <div class="p-6 rounded-2xl bg-canvas-soft border border-hairline flex flex-col justify-between">
+            <div>
+              <span class="text-xs uppercase font-bold text-brand tracking-wider block mb-2">Condition 1</span>
+              <h3 class="text-xl font-bold text-ink mb-2">Chronic Kidney Disease (CKD)</h3>
+              <p class="text-sm text-body leading-relaxed">
+                In CKD stages 3 through 5 (non-dialysis), the number of functioning nephrons is drastically reduced. High protein intake forces the remaining nephrons into <strong class="text-ink">glomerular hyperfiltration</strong>, creating intense intraglomerular pressure that accelerates scarring and kidney failure. A low-protein diet reduces this workload and delays dialysis.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-canvas-soft border border-hairline flex flex-col justify-between">
+            <div>
+              <span class="text-xs uppercase font-bold text-amber-600 tracking-wider block mb-2">Condition 2</span>
+              <h3 class="text-xl font-bold text-ink mb-2">Hepatic Impairment &amp; Cirrhosis</h3>
+              <p class="text-sm text-body leading-relaxed">
+                When severe liver disease compromises hepatic function, the liver cannot efficiently convert ammonia into urea. Ammonia builds up in the bloodstream and crosses the blood-brain barrier, triggering <strong>hepatic encephalopathy</strong> (confusion, lethargy, cognitive dysfunction). Lowering protein reduces circulating ammonia.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-canvas-soft border border-hairline flex flex-col justify-between">
+            <div>
+              <span class="text-xs uppercase font-bold text-emerald-600 tracking-wider block mb-2">Condition 3</span>
+              <h3 class="text-xl font-bold text-ink mb-2">Metabolic Disorders (PKU)</h3>
+              <p class="text-sm text-body leading-relaxed">
+                In genetic conditions like Phenylketonuria (PKU) or Homocystinuria, the body lacks specific enzymes to break down particular amino acids (like phenylalanine). Protein must be strictly curtailed to prevent toxic build-up that causes irreversible neurological damage.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-brand-soft/40 p-6 rounded-2xl border border-hairline/60 text-base">
+          <strong class="text-ink">Clinical Evidence from KDOQI Guidelines:</strong> The National Kidney Foundation's KDOQI Clinical Practice Guidelines state that in non-dialysis dependent CKD patients, a diet providing <strong class="text-ink">0.55 to 0.60 grams of dietary protein per kilogram of body weight per day</strong> significantly decreases the risk of end-stage renal disease (ESRD) and death compared to a standard high-protein intake.
+        </div>
+      </section>
+
+      <!-- Section 3: Visual Diagram & Clinical Tiers -->
+      <section class="bg-surface p-8 md:p-14 rounded-[2.5rem] shadow-sm border border-hairline">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-6 tracking-tight">
+          Clinical Protein Tiers: Exactly How Much Protein Is Allowed?
+        </h2>
+        <p class="mb-8">
+          A low-protein diet is not zero-protein. Protein remains essential for basic life support, enzyme creation, and cellular turnover. The goal is to reach a precise therapeutic window that prevents nitrogen deficiency while blunting renal workload.
+        </p>
+
+        <!-- Imgyduprule Compliant Visual Diagram -->
+        <figure class="my-8 flex flex-col items-center not-prose">
+          <img
+            src="/assets/images/articles/low-protein-diet-plate-guide.svg"
+            alt="Clinical low protein diet tiers and food plate breakdown diagram comparing standard RDA vs LPD vs VLPD"
+            class="w-full max-w-3xl rounded-2xl border border-hairline shadow-md object-contain"
+            loading="lazy"
+            decoding="async"
+            width="800"
+            height="520"
+          />
+          <figcaption class="mt-4 text-center text-sm text-body max-w-2xl">
+            <strong>Figure 1:</strong> Clinical protein restriction tiers (left) compared to practical plate composition (right). Meeting daily non-protein energy needs (30–35 kcal/kg) via healthy plant fats and complex starches is essential to shield skeletal muscle from catabolic breakdown.
+          </figcaption>
+        </figure>
+
+        <!-- Intake Comparison Table -->
+        <div class="overflow-x-auto rounded-[2rem] shadow-xl border border-hairline my-8 bg-surface not-prose">
+          <table class="w-full text-left border-collapse min-w-[700px]">
+            <thead>
+              <tr class="bg-surface-elevated text-ink">
+                <th class="p-5 text-base font-semibold border-b border-hairline">Diet Protocol</th>
+                <th class="p-5 text-base font-semibold border-b border-hairline text-brand">Daily Protein Target</th>
+                <th class="p-5 text-base font-semibold border-b border-hairline">70 kg (154 lb) Daily Total</th>
+                <th class="p-5 text-base font-semibold border-b border-hairline">Target Patient Population</th>
+              </tr>
+            </thead>
+            <tbody class="text-sm text-body divide-y divide-slate-100">
+              <tr class="hover:bg-canvas-soft transition-colors">
+                <td class="p-5 font-bold text-ink">Standard Adult RDA</td>
+                <td class="p-5 font-semibold text-brand">0.8 g/kg body weight</td>
+                <td class="p-5">~56 grams / day</td>
+                <td class="p-5">Healthy sedentary adults with normal kidney and liver function.</td>
+              </tr>
+              <tr class="hover:bg-canvas-soft transition-colors">
+                <td class="p-5 font-bold text-ink">Low-Protein Diet (LPD)</td>
+                <td class="p-5 font-semibold text-brand">0.55 – 0.60 g/kg</td>
+                <td class="p-5 text-brand font-bold">~38 – 42 grams / day</td>
+                <td class="p-5">Clinically stable CKD Stages 3–5 (eGFR &lt; 60 mL/min, non-dialysis).</td>
+              </tr>
+              <tr class="hover:bg-canvas-soft transition-colors">
+                <td class="p-5 font-bold text-ink">Very Low-Protein Diet (VLPD)</td>
+                <td class="p-5 font-semibold text-amber-600">0.28 – 0.40 g/kg</td>
+                <td class="p-5 text-amber-600 font-bold">~20 – 28 grams / day</td>
+                <td class="p-5">Advanced CKD with severe uremia; MUST be paired with ketoacid/amino acid analogues.</td>
+              </tr>
+              <tr class="hover:bg-canvas-soft transition-colors">
+                <td class="p-5 font-bold text-ink">Hemodialysis / Peritoneal Dialysis</td>
+                <td class="p-5 font-semibold text-emerald-600">1.2 – 1.4 g/kg</td>
+                <td class="p-5 font-bold text-emerald-600">~84 – 98 grams / day</td>
+                <td class="p-5">Dialysis filters out amino acids; protein needs REVERSE and increase sharply!</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 4: The High-Calorie Low-Protein Dilemma -->
+      <section>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-8 tracking-tight">
+          The "High-Calorie, Low-Protein" Paradox: How to Prevent Muscle Wasting
+        </h2>
+        <p class="mb-6">
+          The single most dangerous mistake patients make when starting a low-protein diet is simply removing high-protein foods from their plates without replacing the missing calories.
+        </p>
+        <p class="mb-6">
+          If you eliminate chicken, beef, fish, dairy, and eggs, you might inadvertently slash 600 to 1,000 calories from your daily diet. This places your body into an accidental, aggressive <a href="/calorie-deficit-calculator/" class="text-brand font-semibold hover:underline">calorie deficit</a>.
+        </p>
+
+        <div class="p-8 rounded-3xl bg-surface border border-hairline shadow-sm my-8">
+          <h3 class="text-2xl font-bold text-ink mb-3 text-red-500">
+            ⚠ The Deadly Catch-22: Protein-Energy Wasting (PEW)
+          </h3>
+          <p class="text-body leading-relaxed mb-4">
+            When your daily caloric intake drops below your metabolic expenditure, your body enters a starvation state. To survive, it begins <strong class="text-ink">catabolizing (breaking down) your own skeletal muscle tissue</strong> to burn for fuel.
+          </p>
+          <p class="text-body leading-relaxed m-0">
+            When your body consumes its own muscle, massive amounts of endogenous amino acids are dumped into the bloodstream, producing a surge of nitrogen and creatinine. <strong class="text-ink font-semibold">In other words, undereating calories causes the exact same toxic kidney overload you were trying to prevent!</strong>
+          </p>
+        </div>
+
+        <h3 class="text-2xl md:text-3xl font-bold text-ink mb-4">The Solution: The "Calorie Shield"</h3>
+        <p class="mb-6">
+          Nephrology guidelines mandate that patients on a low-protein diet maintain a robust caloric intake of <strong class="text-ink font-semibold">30 to 35 calories per kilogram of body weight per day</strong> (approx. 2,100 to 2,450 kcal for a 70 kg individual).
+        </p>
+        <p class="mb-6">
+          To achieve this without raising protein, your plate must be powered by:
+        </p>
+        <ul class="list-disc pl-6 space-y-3 mb-6 text-base md:text-lg">
+          <li>
+            <strong class="text-ink">Healthy Plant Fats:</strong> Extra virgin olive oil, avocado oil, and canola oil contain <strong>0 grams of protein</strong> but provide 120 calories per tablespoon. Generously drizzling cold-pressed olive oil over roasted vegetables and rice is the safest, most effective way to protect your calorie floor.
+          </li>
+          <li>
+            <strong class="text-ink">Low-Protein Clean Starches:</strong> White rice, sweet potatoes, sago, tapioca, and arrowroot deliver clean glucose for cellular energy with minimal nitrogen waste.
+          </li>
+          <li>
+            <strong class="text-ink">Natural Simple Sugars:</strong> Honey, fruit jams, and pure maple syrup provide zero-protein calories to keep energy high during busy days.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section 5: Master Low-Protein Food Directory -->
+      <section class="bg-surface p-8 md:p-14 rounded-[2.5rem] shadow-sm border border-hairline">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-6 tracking-tight">
+          Master Low-Protein Food Directory: What to Eat vs. What to Avoid
+        </h2>
+        <p class="mb-8">
+          Here is your comprehensive clinical guide to grocery shopping and meal preparation on a low-protein diet:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8 not-prose">
+          <!-- Foods Encouraged -->
+          <div class="p-6 rounded-2xl bg-canvas-soft border border-emerald-500/30">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="w-8 h-8 rounded-full bg-emerald-500/10 text-emerald-600 flex items-center justify-center font-bold text-lg">✓</span>
+              <h3 class="text-2xl font-bold text-ink">Foods Encouraged (Low-Protein)</h3>
+            </div>
+            <ul class="space-y-4 text-sm text-body">
+              <li>
+                <strong class="text-ink block font-semibold">Fresh Produce (&lt;1g protein per serving):</strong>
+                Apples, berries (blueberries, strawberries, raspberries), grapes, watermelon, peaches, pears, pineapple, cucumbers, zucchini, bell peppers, eggplant, and carrots.
+              </li>
+              <li>
+                <strong class="text-ink block font-semibold">Zero-Protein Pure Fats:</strong>
+                Extra virgin olive oil, avocado oil, flaxseed oil, unsalted butter, and coconut oil.
+              </li>
+              <li>
+                <strong class="text-ink block font-semibold">Low-Protein Energy Starches:</strong>
+                Tapioca pearls, sago, arrowroot starch, white rice (measured portions), sweet potatoes, and specialized medical low-protein breads and pastas.
+              </li>
+              <li>
+                <strong class="text-ink block font-semibold">Beverages &amp; Flavorings:</strong>
+                Water, sparkling water with lemon, herbal teas, fruit juices (apple, cranberry), garlic, ginger, fresh herbs, and pepper.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Foods to Avoid -->
+          <div class="p-6 rounded-2xl bg-canvas-soft border border-red-500/30">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="w-8 h-8 rounded-full bg-red-500/10 text-red-500 flex items-center justify-center font-bold text-lg">✕</span>
+              <h3 class="text-2xl font-bold text-ink">Foods to Limit or Avoid (High-Protein)</h3>
+            </div>
+            <ul class="space-y-4 text-sm text-body">
+              <li>
+                <strong class="text-ink block font-semibold">Animal Meats &amp; Poultry (20–30g protein / 100g):</strong>
+                Beef, pork, lamb, chicken breast, turkey, bacon, sausage, and organ meats.
+              </li>
+              <li>
+                <strong class="text-ink block font-semibold">Seafood &amp; Fish (20–28g protein / 100g):</strong>
+                Salmon, tuna, cod, shrimp, crab, lobster, and canned fish.
+              </li>
+              <li>
+                <strong class="text-ink block font-semibold">Dairy &amp; Eggs (High Protein &amp; Phosphorus):</strong>
+                Cow's milk, hard cheeses, Greek yogurt, whole eggs, and whey/casein protein shakes.
+              </li>
+              <li>
+                <strong class="text-ink block font-semibold">High-Protein Plant Sources:</strong>
+                Soybeans, tofu, tempeh, edamame, lentils, chickpeas, kidney beans, peanuts, almonds, and protein-enriched plant milks.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Plant-Based Low-Protein Diets (PLADO) & Indian Variations -->
+      <section>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-8 tracking-tight">
+          Plant-Based Low-Protein Diets (PLADO) and Vegetarian Adaptations
+        </h2>
+        <p class="mb-6">
+          Historically, renal nutritionists believed that animal proteins were superior because of their "High Biological Value" (HBV). However, revolutionary research led by nephrologists over the past five years has established the <strong class="text-ink font-semibold">Plant-Based Low-Protein Diet (PLADO)</strong> protocol.
+        </p>
+        <p class="mb-6">
+          Clinical trials have demonstrated that when CKD patients derive the majority of their restricted protein from whole plants rather than animal meat, they experience several profound renal benefits:
+        </p>
+
+        <ul class="list-disc pl-6 space-y-4 mb-8 text-base md:text-lg">
+          <li>
+            <strong class="text-ink">Lower Net Acid Excretion:</strong> Animal meat generates high amounts of sulfuric and phosphoric acid, which exacerbates metabolic acidosis. Plant foods have an alkalizing effect, reducing acid-induced nephron injury.
+          </li>
+          <li>
+            <strong class="text-ink">Lower Phosphorus Bioavailability:</strong> Phosphorus in plant foods is bound to phytate, meaning human intestines only absorb 30% to 50% of it. In contrast, 80% to 100% of phosphorus in animal meats and processed food additives is absorbed directly into the blood.
+          </li>
+          <li>
+            <strong class="text-ink">Reduced Gut Uremic Toxins:</strong> Plant dietary fiber nourishes gut microbiota, reducing the generation of indoxyl sulfate and p-cresyl sulfate—toxic uremic metabolites that accelerate cardiovascular death in renal patients.
+          </li>
+        </ul>
+
+        <h3 class="text-2xl md:text-3xl font-bold text-ink mb-4">Navigating Indian &amp; Traditional Vegetarian Diets</h3>
+        <p class="mb-6">
+          Many people in India or following traditional vegetarian diets struggle with kidney prescriptions because cultural staples—such as dal (lentils), rajma (kidney beans), chole (chickpeas), and paneer (cottage cheese)—are very high in protein and phosphorus.
+        </p>
+        <p class="mb-6">
+          To successfully adopt a low-protein Indian diet:
+        </p>
+        <ul class="list-disc pl-6 space-y-3 mb-6 text-base md:text-lg">
+          <li>Replace heavy dal curries with gourd-based gravies: bottle gourd (lauki), ridge gourd (turai), ash gourd, and pointed gourd (parwal) are naturally low in protein and exceptionally gentle on the kidneys.</li>
+          <li>Incorporate sago (sabudana) and tapioca: Sabudana khichdi cooked with cumin, olive oil, and potatoes provides high calories with virtually zero protein.</li>
+          <li>Swap wheat roti for white rice: Roti made from whole wheat flour contains roughly 3.5g of protein per piece, whereas white rice provides clean calories with less metabolic acid load.</li>
+        </ul>
+      </section>
+
+      <!-- Section 7: Sample 1-Day Low-Protein Meal Plan -->
+      <section class="bg-surface p-8 md:p-14 rounded-[2.5rem] shadow-sm border border-hairline">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-6 tracking-tight">
+          Sample 1-Day Low-Protein Meal Plan (Under 38g Protein, ~2,100 kcal)
+        </h2>
+        <p class="mb-8">
+          Here is a realistic, delicious, nutrient-dense full-day meal plan demonstrating how to maintain high energy without exceeding clinical protein limits:
+        </p>
+
+        <div class="space-y-6 not-prose">
+          <!-- Breakfast -->
+          <div class="p-6 rounded-2xl bg-canvas-soft border border-hairline">
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="text-xl font-bold text-ink">Breakfast: Cinnamon Berry Oatmeal Bowl</h3>
+              <span class="text-xs font-bold uppercase tracking-wider text-brand bg-brand-soft px-3 py-1 rounded-full">~6.5g Protein | 450 kcal</span>
+            </div>
+            <p class="text-sm text-body leading-relaxed">
+              1/2 cup rolled oats cooked in water with 1 tbsp chia seeds, 1/2 cup fresh wild blueberries, 1 tbsp pure honey, and a generous drizzle of 1 tbsp coconut oil or vegan butter.
+            </p>
+          </div>
+
+          <!-- Lunch -->
+          <div class="p-6 rounded-2xl bg-canvas-soft border border-hairline">
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="text-xl font-bold text-ink">Lunch: Mediterranean Olive Oil Rice Bowl</h3>
+              <span class="text-xs font-bold uppercase tracking-wider text-brand bg-brand-soft px-3 py-1 rounded-full">~9.0g Protein | 620 kcal</span>
+            </div>
+            <p class="text-sm text-body leading-relaxed">
+              1 cup steamed jasmine white rice topped with roasted zucchini, sautéed bell peppers, 1/2 medium sliced avocado, fresh oregano, and 2 tablespoons of extra virgin olive oil.
+            </p>
+          </div>
+
+          <!-- Afternoon Snack -->
+          <div class="p-6 rounded-2xl bg-canvas-soft border border-hairline">
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="text-xl font-bold text-ink">Afternoon Snack: Crisp Apple &amp; Rice Crackers</h3>
+              <span class="text-xs font-bold uppercase tracking-wider text-brand bg-brand-soft px-3 py-1 rounded-full">~2.0g Protein | 310 kcal</span>
+            </div>
+            <p class="text-sm text-body leading-relaxed">
+              1 large sliced Honeycrisp apple dusted with cinnamon, paired with 4 plain rice cakes drizzled with 1 tablespoon of pure maple syrup.
+            </p>
+          </div>
+
+          <!-- Dinner -->
+          <div class="p-6 rounded-2xl bg-canvas-soft border border-hairline">
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="text-xl font-bold text-ink">Dinner: Low-Protein Garlic Herb Pasta &amp; Salad</h3>
+              <span class="text-xs font-bold uppercase tracking-wider text-brand bg-brand-soft px-3 py-1 rounded-full">~11.5g Protein | 720 kcal</span>
+            </div>
+            <p class="text-sm text-body leading-relaxed">
+              Specialized low-protein pasta tossed with roasted garlic, cherry tomatoes, baby spinach, fresh basil, and 2 tablespoons of olive oil. Served with a side salad of cucumber, shredded carrots, and vinaigrette.
+            </p>
+          </div>
+
+          <!-- Daily Total Summary -->
+          <div class="p-6 rounded-2xl bg-surface border-2 border-brand/40 shadow-sm flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div>
+              <h4 class="text-lg font-bold text-ink">Daily Nutritional Total</h4>
+              <p class="text-sm text-body">Ideal for a 60–70 kg patient prescribed a 0.55–0.60 g/kg renal protocol.</p>
+            </div>
+            <div class="flex gap-4">
+              <div class="text-center"><span class="block text-2xl font-black text-brand">2,100</span><span class="text-xs text-mute uppercase font-bold">Calories</span></div>
+              <div class="text-center"><span class="block text-2xl font-black text-emerald-600">29g</span><span class="text-xs text-mute uppercase font-bold">Total Protein</span></div>
+              <div class="text-center"><span class="block text-2xl font-black text-amber-600">85g</span><span class="text-xs text-mute uppercase font-bold">Healthy Fats</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8: Interactive Hub & Spoke Conversion Banner -->
+      <section class="bg-gradient-to-br from-brand/10 via-surface to-brand-soft/20 p-8 md:p-12 rounded-[2.5rem] border border-brand/20 shadow-lg not-prose my-12">
+        <div class="max-w-3xl mx-auto text-center space-y-6">
+          <span class="px-4 py-1.5 rounded-full bg-brand text-white text-xs font-bold tracking-widest uppercase">
+            CALCULATE YOUR SAFE INTAKE
+          </span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-ink tracking-tight">
+            Know Your Numbers. Calculate Your Exact Daily Target.
+          </h2>
+          <p class="text-base md:text-lg text-body leading-relaxed">
+            Never guess your macronutrient intake when managing medical conditions. Use our clinical calculators to determine your exact daily protein gram limits and find your daily maintenance calories to prevent muscle loss.
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+            <a
+              href="/protein-calculator/"
+              class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-brand text-white font-bold text-sm shadow-md hover:bg-brand-hover transition-all hover:scale-105"
+            >
+              Calculate Protein Target →
+            </a>
+            <a
+              href="/tdee-calculator/"
+              class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-surface border border-hairline text-ink font-bold text-sm shadow-sm hover:bg-canvas-soft transition-all"
+            >
+              Find Daily Calorie Floor (TDEE)
+            </a>
+            <a
+              href="/protein-to-calories-calculator/"
+              class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-surface border border-hairline text-ink font-bold text-sm shadow-sm hover:bg-canvas-soft transition-all"
+            >
+              Protein to Calories Tool
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 9: Medical Supervision & Final Takeaways -->
+      <section class="bg-surface p-8 md:p-14 rounded-[2.5rem] shadow-sm border border-hairline">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-6 tracking-tight">
+          Safety First: The Non-Negotiable Role of Medical Supervision
+        </h2>
+        <p class="mb-6">
+          A low-protein diet is a powerful medical therapy, not a do-it-yourself internet weight loss hack. Healthy individuals with normal kidney and liver function should <strong>not</strong> adopt a low-protein diet, as it offers no athletic or aesthetic advantage.
+        </p>
+        <p class="mb-6">
+          If you have been diagnosed with kidney disease, liver dysfunction, or an amino acid disorder, you must work alongside a certified <strong class="text-ink">Registered Renal Dietitian (RD/RDN)</strong> and your nephrologist. They will regularly monitor your:
+        </p>
+        <ul class="list-disc pl-6 space-y-2 mb-6 text-base md:text-lg">
+          <li><strong>Estimated Glomerular Filtration Rate (eGFR)</strong> and serum creatinine.</li>
+          <li><strong>Serum Albumin:</strong> to ensure you are not developing Protein-Energy Wasting.</li>
+          <li><strong>Serum Potassium and Phosphorus:</strong> to ensure your fruit and vegetable intake does not trigger hyperkalemia or bone mineral disease.</li>
+          <li><strong>Bicarbonate Levels:</strong> to ensure metabolic acidosis remains well-managed.</li>
+        </ul>
+        <p class="text-ink font-semibold">
+          When properly formulated with high-calorie healthy fats, clean starches, and fresh produce, a low-protein diet is not a diet of deprivation—it is a proactive strategy to preserve your kidney function and enhance your long-term vitality.
+        </p>
+      </section>
+
+      <!-- Sources Section -->
+      <Sources sources={sources} title="Scientific References & Clinical Guidelines" />
+
+    </article>
+  </div>
+</ContentLayout>
