@@ -1,0 +1,333 @@
+---
+import Button from "../../components/ui/Button.astro";
+import MedicalNote from "../../components/ui/MedicalNote.astro";
+import ContentLayout from "../../layouts/ContentLayout.astro";
+import type { FaqItem } from "../../lib/seo";
+
+const faqs: FaqItem[] = [
+  {
+    q: "How many calories do you burn walking 10,000 steps?",
+    a: "On average, walking 10,000 steps burns between 350 and 550 calories. The exact amount depends heavily on your body weight and walking pace. A 140 lb (64 kg) individual burns approximately 350 to 390 calories, while a 200 lb (91 kg) individual burns 500 to 570 calories over the same distance."
+  },
+  {
+    q: "Can you lose 1 pound a week by walking 10,000 steps a day?",
+    a: "Yes. Walking 10,000 steps daily expends roughly 2,500 to 3,800 calories per week. Since 1 pound of body fat contains roughly 3,500 stored calories, maintaining your baseline maintenance diet while hitting 10,000 steps daily can produce 0.7 to 1.0 pound of pure fat loss every week without aggressive calorie restriction."
+  },
+  {
+    q: "How many miles is 10,000 steps?",
+    a: "For the average adult with a stride length between 2.2 and 2.5 feet, 10,000 steps equals approximately 4.5 to 5.0 miles (7.2 to 8.0 kilometers). Taller individuals with longer strides will cover slightly more distance, while shorter individuals cover closer to 4.2 miles."
+  },
+  {
+    q: "Why does my fitness watch say I burned 700 calories for 10,000 steps?",
+    a: "Most smartwatches (including Apple Watch and Fitbit) display 'Total Calories' (Gross Burn), which combines the exercise burn of walking with your Basal Metabolic Rate (BMR) energy during that 90-minute period. The 'Active Calories' (Net Burn) from the physical walking itself is typically 150 to 200 calories lower."
+  },
+  {
+    q: "Does walking fast burn significantly more calories than walking slow for 10,000 steps?",
+    a: "Over the exact same 10,000-step count, walking faster (3.5 to 4.0 mph) burns about 15% to 25% more calories than a slow stroll (2.0 mph). Brisk walking requires greater muscular force output per stride, elevates your heart rate into Zone 2, and increases post-exercise oxygen consumption."
+  }
+];
+---
+
+<ContentLayout
+  title="How Many Calories Burned in 10,000 Steps? Calculator Formula by Weight"
+  description="Discover exactly how many calories you burn walking 10,000 steps. Complete weight-based formula chart, miles conversion, gross vs net burn, and fat loss math."
+  h1="How Many Calories Do You Burn in 10,000 Steps? The Exact Formula by Weight and Pace"
+  path="/guides/how-many-calories-burned-in-10000-steps/"
+  category="Guides"
+  categoryPath="/guides/"
+  heroImage="/assets/images/articles/walking-route.svg"
+  heroImageAlt="Diagram illustrating calorie burn calculations across 10,000 walking steps by body weight"
+  faqs={faqs}
+  lead="Walking 10,000 steps is widely viewed as the gold standard for daily activity. But how many calories does it actually burn? Explore the exact clinical MET formula, weight-based calorie matrices, and how to turn your daily steps into measurable fat loss."
+>
+  <div class="space-y-12">
+    <div class="mb-12">
+      <MedicalNote />
+    </div>
+
+    <!-- Main Content -->
+    <article class="space-y-16 text-lg md:text-xl text-body leading-relaxed font-light">
+      
+      <section>
+        <p class="mb-6">
+          The concept of walking <strong class="font-bold text-ink">10,000 steps a day</strong> is perhaps the most universally recognized fitness target in modern history. Originating in Japan in 1965 as a marketing campaign for a pedometer named <em>Manpo-kei</em> (which translates directly to"10,000-steps meter"), this daily benchmark has evolved from an advertising slogan into an evidence-based clinical target endorsed by cardiologists and epidemiologists worldwide.
+        </p>
+        <p class="mb-6">
+          Yet, when it comes to weight loss and body composition, an enduring question remains: <strong>How many calories does walking 10,000 steps actually burn?</strong>
+        </p>
+        <p class="mb-6">
+          If you check your Apple Watch, Garmin, Fitbit, or phone pedometer, you have likely noticed confusing discrepancies. On some days, your wearable credits you with 650 calories burned; on others, a third-party app estimates barely 320 calories for the identical step count. 
+        </p>
+        <p class="mb-6">
+          In human physiology, the true caloric cost of walking 10,000 steps is not a generic static number. It is governed by three primary variables: your <strong class="text-ink">total body mass</strong>, your <strong class="text-ink">stride length</strong> (which dictates total distance traveled), and your <strong class="text-ink">walking velocity</strong> (MET intensity). Below, we break down the clinical physics and formulas so you can determine your exact caloric burn.
+        </p>
+      </section>
+
+      <!-- Interactive Tool CTA Banner -->
+      <section class="not-prose my-12 p-8 md:p-12 bg-surface border border-hairline rounded-3xl shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="space-y-3 max-w-xl text-center md:text-left">
+          <span class="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-brand-soft text-brand rounded-full">Interactive Activity Calculator</span>
+          <h3 class="text-2xl md:text-3xl font-bold text-ink">Want to Calculate Your Exact Walking Burn?</h3>
+          <p class="text-body text-base">Enter your precise body weight, walking speed, pace, and incline to calculate your personalized net calorie expenditure.</p>
+        </div>
+        <div class="shrink-0">
+          <Button href="/walking-calorie-calculator/" size="lg" variant="primary">Use Walking Calorie Calculator</Button>
+        </div>
+      </section>
+
+      <!-- Section: The Mathematical Formula -->
+      <section class="bg-surface p-8 md:p-14 rounded-[2.5rem] shadow-sm border border-hairline">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-ink mb-8 tracking-tight">The Exercise Science: How Walking Calories Are Calculated</h2>
+        <p class="mb-6">
+          To calculate calorie expenditure during ambulation without expensive laboratory metabolic carts (indirect calorimetry), exercise physiologists use the <strong class="text-ink">Metabolic Equivalent of Task (MET)</strong> framework published in the <em>Compendium of Physical Activities</em>.
+        </p>
+        <p class="mb-6">
+          One MET represents the rate of energy expenditure while sitting quietly at complete rest—defined standardly as:
+        </p>
+
+        <div class="p-6 bg-canvas-soft border-l-4 border-brand rounded-r-2xl my-6 font-mono text-base md:text-lg text-ink">
+          1 MET = 3.5 mL of Oxygen per kilogram of body weight per minute (mL/kg/min)
+        </div>
+
+        <p class="mb-6">
+          When walking on flat, level ground, your MET value shifts predictably based on speed:
+        </p>
+
+        <ul class="list-disc pl-6 space-y-3 mb-8 text-base md:text-lg text-body">
+          <li><strong>Slow, Leisurely Stroll (2.0 mph / 3.2 km/h):</strong> 2.5 to 2.8 METs</li>
+          <li><strong>Moderate Casual Pace (2.8 to 3.2 mph / 4.5 to 5.1 km/h):</strong> 3.3 to 3.5 METs</li>
+          <li><strong>Brisk, Intentional Walk (3.5 mph / 5.6 km/h):</strong> 3.8 to 4.3 METs</li>
+          <li><strong>Very Brisk / Power Walking (4.0 to 4.5 mph / 6.4 to 7.2 km/h):</strong> 5.0 METs</li>
+        </ul>
+
+        <p class="mb-6">
+          The standard clinical equation to convert METs and body mass into total burned kilocalories is:
+        </p>
+
+        <div class="p-6 bg-canvas-soft border border-hairline rounded-2xl my-6 font-mono text-base md:text-lg text-ink text-center">
+          Calories = [MET &times; 3.5 &times; Body Weight (kg) &divide; 200] &times; Duration (minutes)
+        </div>
+
+        <p class="mb-4">
+          Because a standard 10,000-step routine requires approximately 80 to 100 minutes of total daily movement, multiplying this time window by your weight-based rate yields your true energetic expenditure.
+        </p>
+      </section>
+
+      <!-- Section: Weight & Calories Table -->
+      <section>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-ink mb-6 tracking-tight">10,000 Steps Calorie Burn by Body Weight & Pace</h2>
+        <p class="mb-8">
+          The heavier you are, the more kinetic work your muscular system must perform to propel your body mass against gravity with every single step. Use the reference matrix below to find your expected caloric expenditure for 10,000 steps across varying walking velocities:
+        </p>
+
+        <div class="overflow-x-auto my-8">
+          <table class="w-full text-left text-base border-collapse border border-hairline rounded-2xl overflow-hidden shadow-sm">
+            <thead>
+              <tr class="bg-canvas-soft border-b border-hairline text-ink">
+                <th class="p-4 font-bold">Body Weight</th>
+                <th class="p-4 font-bold">Casual Pace (2.5 mph)</th>
+                <th class="p-4 font-bold">Moderate Pace (3.0 mph)</th>
+                <th class="p-4 font-bold">Brisk Pace (3.5 mph)</th>
+                <th class="p-4 font-bold">Power Walk (4.0 mph)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-hairline bg-surface text-body">
+              <tr>
+                <td class="p-4 font-semibold text-ink">120 lbs (54 kg)</td>
+                <td class="p-4">265 kcal</td>
+                <td class="p-4">305 kcal</td>
+                <td class="p-4">340 kcal</td>
+                <td class="p-4">395 kcal</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold text-ink">140 lbs (64 kg)</td>
+                <td class="p-4">310 kcal</td>
+                <td class="p-4">355 kcal</td>
+                <td class="p-4">395 kcal</td>
+                <td class="p-4">460 kcal</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold text-ink">160 lbs (73 kg)</td>
+                <td class="p-4">355 kcal</td>
+                <td class="p-4">405 kcal</td>
+                <td class="p-4">450 kcal</td>
+                <td class="p-4">525 kcal</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold text-ink">180 lbs (82 kg)</td>
+                <td class="p-4">400 kcal</td>
+                <td class="p-4">455 kcal</td>
+                <td class="p-4">510 kcal</td>
+                <td class="p-4">590 kcal</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold text-ink">200 lbs (91 kg)</td>
+                <td class="p-4">445 kcal</td>
+                <td class="p-4">510 kcal</td>
+                <td class="p-4">565 kcal</td>
+                <td class="p-4">655 kcal</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold text-ink">220 lbs (100 kg)</td>
+                <td class="p-4">490 kcal</td>
+                <td class="p-4">560 kcal</td>
+                <td class="p-4">625 kcal</td>
+                <td class="p-4">725 kcal</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold text-ink">250 lbs (113 kg)</td>
+                <td class="p-4">555 kcal</td>
+                <td class="p-4">635 kcal</td>
+                <td class="p-4">710 kcal</td>
+                <td class="p-4">820 kcal</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-mute italic">
+          *Calculations assume continuous level ground walking. If walking on grass, sand, or an incline, caloric expenditure increases by 20% to 60%.
+        </p>
+      </section>
+
+      <!-- Section: Gross vs Net Calories -->
+      <section class="bg-surface p-8 md:p-14 rounded-[2.5rem] shadow-sm border border-hairline">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-ink mb-8 tracking-tight">The Smartwatch Trap: Gross vs. Net Calorie Burn</h2>
+        <p class="mb-6">
+          One of the most widespread causes of diet failure among walkers tracking their steps is confusing <strong class="text-ink">Gross Calories</strong> with <strong class="text-ink">Net Calories</strong>.
+        </p>
+        <div class="grid md:grid-cols-2 gap-8 my-8 not-prose">
+          <div class="p-6 bg-canvas-soft border border-hairline rounded-2xl">
+            <h3 class="text-xl font-bold text-ink mb-3">Gross Calories (What Watches Show)</h3>
+            <p class="text-body text-base leading-relaxed">
+              Gross burn represents every calorie your body used during the 90 minutes you were walking. This includes your exercise burn <em>plus</em> the baseline calories you would have burned just staying alive resting on the sofa (<a href="/guides/what-is-bmr/" class="text-brand font-medium hover:underline">Basal Metabolic Rate</a>).
+            </p>
+          </div>
+          <div class="p-6 bg-canvas-soft border border-hairline rounded-2xl">
+            <h3 class="text-xl font-bold text-ink mb-3">Net Calories (True Exercise Burn)</h3>
+            <p class="text-body text-base leading-relaxed">
+              Net burn represents the <em>additional</em> energy expended specifically due to physical leg locomotion. To find your true net deficit for weight loss, you must subtract your resting BMR calories from the total watch display.
+            </p>
+          </div>
+        </div>
+        <p class="mb-6">
+          For example: If a 180-pound adult burns 480 gross calories during a 90-minute walk, roughly 120 of those calories would have been burned while resting anyway. The true net workout burn is <strong>360 calories</strong>. 
+        </p>
+        <p class="mb-4">
+          If you"eat back" all 480 calories displayed on your wearable device, you risk erasing the caloric deficit you worked so hard to create. You can verify your exact baseline expenditure using our <a href="/tdee-calculator/" class="text-brand font-semibold hover:underline">TDEE Calculator</a>.
+        </p>
+      </section>
+
+      <!-- Section: 10,000 Steps for Fat Loss -->
+      <section>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-ink mb-6 tracking-tight">The Fat Loss Math: Can 10,000 Steps Cause Real Weight Loss?</h2>
+        <p class="mb-6">
+          The short answer is an emphatic <strong class="text-ink">yes</strong>. In fact, for many people, walking 10,000 steps daily is mathematically superior to high-intensity interval training (HIIT) or intense running for long-term body composition.
+        </p>
+        <p class="mb-6">
+          Let us examine the weekly cumulative energy balance:
+        </p>
+
+        <ul class="list-none space-y-6 mb-8">
+          <li class="flex items-start">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-soft text-brand flex items-center justify-center font-bold mr-4 mt-1">1</span>
+            <div>
+              <strong class="block text-ink text-xl mb-1">Weekly Calorie Deficit</strong>
+              <p class="text-body text-base">Burning an average of 450 net calories per day across 7 days yields an energetic expenditure of <strong>3,150 calories per week</strong>. Because one pound of human adipose tissue holds roughly 3,500 kcal of potential chemical energy, walking 10k steps burns virtually 1 full pound of fat per week on its own.</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-soft text-brand flex items-center justify-center font-bold mr-4 mt-1">2</span>
+            <div>
+              <strong class="block text-ink text-xl mb-1">Zero Appetite Compensation (The Ghrelin Advantage)</strong>
+              <p class="text-body text-base">High-intensity cardiovascular training triggers sharp elevations in hunger hormones like ghrelin, often causing athletes to unconsciously overeat hundreds of calories post-workout. Low-intensity steady state (LISS) walking elevates energy expenditure without spiking appetite.</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-soft text-brand flex items-center justify-center font-bold mr-4 mt-1">3</span>
+            <div>
+              <strong class="block text-ink text-xl mb-1">No Muscle Tissue Breakdown</strong>
+              <p class="text-body text-base">Excessive endurance running elevates systemic cortisol and can induce muscular catabolism during a strict diet. Walking places virtually zero eccentric stress on muscle fibers, allowing you to preserve lean tissue when paired with adequate protein from our <a href="/protein-calculator/" class="text-brand font-semibold hover:underline">Protein Calculator</a>.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section: 5 Ways to Burn More -->
+      <section class="bg-surface p-8 md:p-14 rounded-[2.5rem] shadow-sm border border-hairline">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-ink mb-8 tracking-tight">5 Ways to Burn 30% More Calories in the Same 10,000 Steps</h2>
+        <p class="mb-6">
+          If you have limited time and cannot afford to spend 90 minutes walking on flat sidewalks every day, you can drastically amplify your caloric burn per step using these proven exercise protocols:
+        </p>
+
+        <div class="space-y-6">
+          <div class="p-6 bg-canvas-soft border-l-4 border-brand rounded-r-2xl">
+            <h3 class="text-xl font-bold text-ink mb-2">1. Add Incline (Treadmill or Hills)</h3>
+            <p class="text-body text-base">
+              Walking at a 6% to 10% grade forces your glutes, hamstrings, and calves to constantly lift your body mass vertically. At a 10% incline, caloric burn jumps by <strong>60% to 80%</strong> compared to flat ground. You can compute the exact difference using our <a href="/treadmill-calorie-calculator/" class="text-brand font-medium hover:underline">Treadmill Calorie Calculator</a>.
+            </p>
+          </div>
+
+          <div class="p-6 bg-canvas-soft border-l-4 border-brand rounded-r-2xl">
+            <h3 class="text-xl font-bold text-ink mb-2">2. Practice Rucking (Weighted Backpack)</h3>
+            <p class="text-body text-base">
+              Carrying a weighted pack (15 to 30 lbs / 7 to 14 kg) turns standard walking into a hybrid resistance workout. Rucking elevates heart rate into Zone 2 while burning up to 40% more calories per step without the high impact on knees associated with running.
+            </p>
+          </div>
+
+          <div class="p-6 bg-canvas-soft border-l-4 border-brand rounded-r-2xl">
+            <h3 class="text-xl font-bold text-ink mb-2">3. Take 10-Minute Post-Meal Walks</h3>
+            <p class="text-body text-base">
+              Splitting your 10,000 steps into three 15-minute walks immediately following breakfast, lunch, and dinner blunts postprandial blood glucose spikes by up to 30%, shuttling carbohydrates directly into skeletal muscle glycogen rather than fat stores.
+            </p>
+          </div>
+
+          <div class="p-6 bg-canvas-soft border-l-4 border-brand rounded-r-2xl">
+            <h3 class="text-xl font-bold text-ink mb-2">4. Pick Up the Pace to 3.8+ MPH</h3>
+            <p class="text-body text-base">
+              Transitioning from a 2.5 mph leisure stroll to a 3.8 mph brisk power walk elevates MET output from 3.0 to 4.3 METs—burning an extra 100 to 150 calories over the same step count.
+            </p>
+          </div>
+
+          <div class="p-6 bg-canvas-soft border-l-4 border-brand rounded-r-2xl">
+            <h3 class="text-xl font-bold text-ink mb-2">5. Walk on Varied Outdoor Terrain</h3>
+            <p class="text-body text-base">
+              Walking on hiking trails, gravel, sand, or snow engages hundreds of tiny stabilizer muscles in your ankles, feet, and core, boosting caloric cost by 20% to 40% compared to smooth concrete.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Activity Hub Cluster Navigation -->
+      <section class="not-prose my-16 p-8 md:p-12 bg-surface border border-hairline rounded-3xl shadow-sm">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <h2 class="text-2xl md:text-3xl font-extrabold text-ink mb-3">Compare Your Activity & Calorie Tools</h2>
+          <p class="text-body text-base">Explore our companion calculators to optimize your daily activity, energy balance, and weight loss strategy.</p>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <a href="/walking-calorie-calculator/" class="p-5 bg-canvas-soft hover:bg-surface border border-hairline rounded-2xl transition-all hover:shadow-md group">
+            <span class="block text-xs font-semibold text-brand uppercase tracking-wider mb-1">Distance & Speed</span>
+            <strong class="block text-ink text-base group-hover:text-brand transition-colors">Walking Calorie Calculator</strong>
+            <p class="text-mute text-xs mt-2">Calculate burn by miles, minutes, and terrain.</p>
+          </a>
+          <a href="/treadmill-calorie-calculator/" class="p-5 bg-canvas-soft hover:bg-surface border border-hairline rounded-2xl transition-all hover:shadow-md group">
+            <span class="block text-xs font-semibold text-brand uppercase tracking-wider mb-1">Incline Grade</span>
+            <strong class="block text-ink text-base group-hover:text-brand transition-colors">Treadmill Calculator</strong>
+            <p class="text-mute text-xs mt-2">See how 1% to 15% incline multiplies your calorie burn.</p>
+          </a>
+          <a href="/calorie-deficit-calculator/" class="p-5 bg-canvas-soft hover:bg-surface border border-hairline rounded-2xl transition-all hover:shadow-md group">
+            <span class="block text-xs font-semibold text-brand uppercase tracking-wider mb-1">Fat Loss Target</span>
+            <strong class="block text-ink text-base group-hover:text-brand transition-colors">Calorie Deficit Calculator</strong>
+            <p class="text-mute text-xs mt-2">Calculate your daily intake target for 1 to 2 lbs per week.</p>
+          </a>
+          <a href="/calories-burned-calculator/" class="p-5 bg-canvas-soft hover:bg-surface border border-hairline rounded-2xl transition-all hover:shadow-md group">
+            <span class="block text-xs font-semibold text-brand uppercase tracking-wider mb-1">All Exercises</span>
+            <strong class="block text-ink text-base group-hover:text-brand transition-colors">Calories Burned Calculator</strong>
+            <p class="text-mute text-xs mt-2">Compare walking to cycling, swimming, and running.</p>
+          </a>
+        </div>
+      </section>
+
+    </article>
+  </div>
+</ContentLayout>
