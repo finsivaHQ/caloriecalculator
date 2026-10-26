@@ -115,9 +115,9 @@ const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity
           
           <div class="space-y-2 mt-6 text-sm font-medium text-body bg-surface p-4 rounded-xl border border-hairline shadow-sm text-left">
             <p class="text-center font-bold text-ink mb-3 border-b pb-2">How long to burn off {food.calories} calories?</p>
-            <div class="flex justify-between items-center"><span class="flex items-center gap-2">🚶 Walking (3mph)</span> <span>{burnTimeWalking} mins</span></div>
-            <div class="flex justify-between items-center"><span class="flex items-center gap-2">🏃 Running (6mph)</span> <span>{burnTimeRunning} mins</span></div>
-            <div class="flex justify-between items-center"><span class="flex items-center gap-2">🚴 Cycling (12mph)</span> <span>{burnTimeCycling} mins</span></div>
+            <div class="flex justify-between items-center"><a href="/walking-calorie-calculator/" class="flex items-center gap-2 text-ink hover:text-brand hover:underline font-medium"><span>🚶</span> Walking (3mph)</a> <span>{burnTimeWalking} mins</span></div>
+            <div class="flex justify-between items-center"><a href="/running-calorie-calculator/" class="flex items-center gap-2 text-ink hover:text-brand hover:underline font-medium"><span>🏃</span> Running (6mph)</a> <span>{burnTimeRunning} mins</span></div>
+            <div class="flex justify-between items-center"><a href="/cycling-calories-calculator/" class="flex items-center gap-2 text-ink hover:text-brand hover:underline font-medium"><span>🚴</span> Cycling (12mph)</a> <span>{burnTimeCycling} mins</span></div>
           </div>
         </div>
 
@@ -206,10 +206,26 @@ const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity
       </div>
       
       <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-        <a href="/" class="inline-flex items-center gap-2 bg-brand text-white font-bold py-4 px-8 rounded-xl hover:bg-brand-hover transition-all hover:-translate-y-0.5 shadow-sm">
-          Calculate Daily Calories
-        </a>
-        <a href="/foods/" class="inline-flex items-center gap-2 bg-surface text-ink font-bold py-4 px-8 rounded-xl border border-hairline hover:border-brand/30 hover:text-brand transition-all hover:-translate-y-0.5 shadow-sm">
+        {isHighProtein ? (
+          <>
+            <a href="/protein-calculator/" class="inline-flex items-center gap-2 bg-brand text-white font-bold py-3.5 px-7 rounded-xl hover:bg-brand-hover transition-all hover:-translate-y-0.5 shadow-sm">
+              Calculate Daily Protein Target
+            </a>
+            <a href="/protein-to-calories-calculator/" class="inline-flex items-center gap-2 bg-surface text-ink font-bold py-3.5 px-7 rounded-xl border border-hairline hover:border-brand/30 hover:text-brand transition-all hover:-translate-y-0.5 shadow-sm">
+              Protein to Calories Converter
+            </a>
+          </>
+        ) : (
+          <>
+            <a href="/calorie-deficit-calculator/" class="inline-flex items-center gap-2 bg-brand text-white font-bold py-3.5 px-7 rounded-xl hover:bg-brand-hover transition-all hover:-translate-y-0.5 shadow-sm">
+              Calculate Calorie Deficit Target
+            </a>
+            <a href="/" class="inline-flex items-center gap-2 bg-surface text-ink font-bold py-3.5 px-7 rounded-xl border border-hairline hover:border-brand/30 hover:text-brand transition-all hover:-translate-y-0.5 shadow-sm">
+              Full Calorie Calculator
+            </a>
+          </>
+        )}
+        <a href="/foods/" class="inline-flex items-center gap-2 bg-surface text-ink font-bold py-3.5 px-7 rounded-xl border border-hairline hover:border-brand/30 hover:text-brand transition-all hover:-translate-y-0.5 shadow-sm">
           Browse Food Database <span>&rarr;</span>
         </a>
       </div>
