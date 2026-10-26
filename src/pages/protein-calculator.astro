@@ -24,6 +24,9 @@ const faqs: FaqItem[] = [
   { q:"Best protein sources for weight loss?", a:"Lean chicken breast, white fish, Greek yogurt, egg whites, and protein powder give high protein with fewer calories. Use the <a href="/">Calorie Calculator</a> to fit them into your plan." },
   { q:"Protein timing for muscle gain?", a:"Eat 25–40g protein every 3–4 hours. Post-workout protein within 2 hours maximizes muscle protein synthesis. Spread across 4–5 meals for best results." },
   { q:"How much protein for muscle gain vs weight loss?", a:"Weight loss: 1.6–2.2 g/kg to preserve muscle. Muscle gain: 1.6–2.2 g/kg plus a calorie surplus. Use the <a href="/">Calorie Calculator</a> to set your split." },
+  { q:"How much protein per day to lose weight?", a:"To lose weight without sacrificing muscle, consume 1.6 to 2.2 grams of protein per kilogram of body weight (0.73 to 1.0 g/lb). If you are in a steep caloric deficit, aim for up to 2.4 g/kg to maximize satiety and nitrogen retention." },
+  { q:"How to calculate your calories and protein for fat loss?", a:"First, calculate your maintenance calories (TDEE) and subtract 300–500 kcal for a deficit. Second, set protein intake at 1.8–2.2 g/kg of body weight. Multiply protein grams by 4 to get protein calories, and fill remaining calories with fats (20–25%) and carbohydrates." },
+  { q:"How many grams of protein should I eat per meal?", a:"Aim for 25 to 45 grams of high-quality protein per meal distributed across 3 to 5 meals per day. This optimizes muscle protein synthesis (MPS) and keeps you satisfied throughout the day." },
 ];
 ---
 
@@ -177,6 +180,65 @@ const faqs: FaqItem[] = [
     <p>While the most important factor in your nutritional strategy is hitting your total daily protein target, the timing and distribution of that protein can amplify your physiological results. Your body does not store excess protein for later use in the same way it stores excess carbohydrates (as glycogen) or excess calories (as body fat). Instead, it maintains a small, transient"pool" of amino acids in the bloodstream.</p>
     <p>To maximize Muscle Protein Synthesis (MPS)—the biological process of building new muscle tissue—research indicates that you need to consume an adequate"dose" of protein to trigger the system. This threshold is generally accepted to be between 25 and 40 grams of high-quality protein per meal. Consuming significantly less than this may not fully stimulate MPS, while consuming drastically more in a single sitting (e.g., eating 100 grams of protein in one meal) does not result in a proportionate increase in muscle building. The excess amino acids are simply oxidized for energy or excreted.</p>
     <p>Therefore, the optimal strategy for muscle growth and retention is to evenly distribute your protein intake throughout the day. For a daily target of 150g, a highly effective approach would be to aim for 4 distinct meals, each containing roughly 37g of protein. This translates to approximately 150 calories derived from protein per meal, ensuring a steady stream of amino acids to your muscles every 3 to 5 hours. You can utilize our <a href="/meal-calorie-calculator/">meal calorie calculator</a> to meticulously plan these portions, or employ the <a href="/recipe-calorie-calculator/">recipe calorie calculator</a> when crafting high-protein dishes in your home kitchen.</p>
+
+    <h2>How Much Protein Per Day to Lose Weight?</h2>
+    <div class="card p-6 border-l-4 border-brand bg-surface not-prose my-6 rounded-2xl shadow-sm">
+      <h3 class="text-lg font-bold text-ink mb-2">The Quick Fat Loss Formula:</h3>
+      <p class="text-base text-body font-medium mb-0">
+        Aim for <strong>1.6 to 2.2 grams of protein per kilogram of body weight</strong> (0.73 to 1.0 g per pound) each day. If you are in a steep caloric deficit (-500 kcal or more) or are already relatively lean, bump this to <strong>2.2 to 2.4 g/kg</strong> to prevent muscle catabolism.
+      </p>
+    </div>
+    <p>When you restrict calories to shed body fat, your body naturally enters a catabolic state where it searches for stored fuel. Without adequate dietary protein, a significant portion of the weight lost will be valuable skeletal muscle tissue rather than pure adipose tissue. Consuming high protein preserves your lean mass, keeps your basal metabolic rate (BMR) elevated, and leverages protein's high satiety factor so you don't feel chronically hungry.</p>
+
+    <h2>How to Calculate Your Calories and Protein for Fat Loss</h2>
+    <p>Calculating your optimal numbers for fat loss is a straightforward, 4-step process:</p>
+    <ol>
+      <li><strong>Find Your Maintenance Calories (TDEE):</strong> Use our <a href="/tdee-calculator/" class="text-brand font-semibold hover:underline">TDEE calculator</a> to estimate how many calories you burn per day based on your BMR and activity.</li>
+      <li><strong>Create a Moderate Deficit:</strong> Subtract 300 to 500 calories from your TDEE using our <a href="/calorie-deficit-calculator/" class="text-brand font-semibold hover:underline">calorie deficit calculator</a>. This produces roughly 0.5 to 1 pound of sustainable fat loss per week.</li>
+      <li><strong>Set Your Protein Floor:</strong> Multiply your body weight in kilograms by 2.0g (or weight in pounds by 0.9g). For a 75 kg (165 lb) individual, this equals 150 grams of protein daily.</li>
+      <li><strong>Convert to Calories & Fill Remaining Macros:</strong> Multiply your 150g protein by 4 to get 600 protein calories. If your daily target is 1,800 calories, you have 1,200 calories remaining to split between healthy fats (typically 20–25% of calories) and carbohydrates. Reference our <a href="/guides/macro-guide/" class="text-brand font-semibold hover:underline">beginner macro guide</a> for ideal split ratios.</li>
+    </ol>
+
+    <h3>How Many Grams of Protein Should I Eat Per Meal?</h3>
+    <p>To keep muscle protein synthesis (MPS) stimulated around the clock and optimize digestion, split your daily protein evenly across <strong>3 to 5 meals</strong>. Research shows that a threshold of <strong>25 to 45 grams per meal</strong> is optimal for most adults.</p>
+    <div class="overflow-x-auto my-6">
+      <table>
+        <thead>
+          <tr>
+            <th>Daily Protein Target</th>
+            <th>3 Meals / Day</th>
+            <th>4 Meals / Day</th>
+            <th>5 Meals / Day (Snacks Included)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>120 grams</strong> (~480 kcal)</td>
+            <td>40g / meal</td>
+            <td>30g / meal</td>
+            <td>24g / meal</td>
+          </tr>
+          <tr>
+            <td><strong>150 grams</strong> (~600 kcal)</td>
+            <td>50g / meal</td>
+            <td>37.5g / meal</td>
+            <td>30g / meal</td>
+          </tr>
+          <tr>
+            <td><strong>180 grams</strong> (~720 kcal)</td>
+            <td>60g / meal</td>
+            <td>45g / meal</td>
+            <td>36g / meal</td>
+          </tr>
+          <tr>
+            <td><strong>200 grams</strong> (~800 kcal)</td>
+            <td>66g / meal</td>
+            <td>50g / meal</td>
+            <td>40g / meal</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <h2>Protein Strategies: Weight Loss vs. Muscle Gain</h2>
     <p>Your overarching fitness goal should dictate how you approach your protein intake. While protein remains essential in all scenarios, the nuances shift depending on whether you are prioritizing fat loss, muscle hypertrophy, or simple maintenance.</p>
