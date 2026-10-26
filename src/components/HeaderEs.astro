@@ -1,6 +1,12 @@
 ---
 
-const NAV_ES = [
+interface NavItem {
+  label: string;
+  href: string;
+  children?: { label: string; href: string; desc?: string }[];
+}
+
+const NAV_ES: NavItem[] = [
   { label:"Calculadora de Calorías", href:"/country/spain/calculadora-de-calorias/" },
   { label:"Guías", href:"/country/spain/guias/" },
 ];

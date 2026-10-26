@@ -16,6 +16,7 @@
  */
 
 export type Sex = "male" | "female";
+export type Sexo = Sex;
 
 /** Activity levels with their TDEE multipliers and human labels. */
 export const ACTIVITY_LEVELS = {
@@ -43,6 +44,7 @@ export const GOALS = {
 } as const;
 
 export type GoalKey = keyof typeof GOALS;
+export type ObjetivoKey = GoalKey;
 
 /**
  * Basal Metabolic Rate — Mifflin-St Jeor equation.

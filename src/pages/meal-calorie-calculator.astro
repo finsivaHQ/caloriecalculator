@@ -189,7 +189,13 @@ const faqs: FaqItem[] = [
     const $ = (id: string) => document.getElementById(id)!;
     let isDirty = false;
 
-
+    function markDirty() {
+      isDirty = true;
+      const box = $("result-box");
+      if (box) box.classList.add("opacity-40", "grayscale");
+      const btn = $("calc-btn");
+      if (btn) btn.classList.add("is-dirty");
+    }
 
     function clearDirty() {
       isDirty = false;

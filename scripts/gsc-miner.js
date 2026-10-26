@@ -8,11 +8,6 @@
  */
 
 import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 // Active calculator & guide route mapping for automatic clustering
 const ROUTE_RULES = [

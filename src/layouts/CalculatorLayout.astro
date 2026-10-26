@@ -9,6 +9,7 @@ import { breadcrumbSchema, calculatorSchema, faqSchema } from "../lib/seo";
 
 interface Props {
   title: string;
+  exactTitle?: boolean;
   h1?: string;
   description: string;
   intro: string;
@@ -20,6 +21,7 @@ interface Props {
 
 const {
   title,
+  exactTitle = false,
   h1,
   description,
   intro,
@@ -49,7 +51,7 @@ const related = ALL_CALCULATORS.filter((c) => c.href !== path && c.lang === lang
 const showRelated = related.length > 0;
 ---
 
-<Layout title={title} description={description} canonical={path} jsonLd={jsonLd} lang={lang}>
+<Layout title={title} exactTitle={exactTitle} description={description} canonical={path} jsonLd={jsonLd} lang={lang}>
   <nav aria-label="Breadcrumb" class="border-b border-hairline bg-canvas-soft/40">
     <ol class="container-page flex flex-wrap items-center gap-2 py-3 text-xs text-mute">
       {

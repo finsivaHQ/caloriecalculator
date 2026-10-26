@@ -5,7 +5,7 @@ import Section from"../components/ui/Section.astro";
 // Dynamically fetch all .astro pages
 const allPages = import.meta.glob('/src/pages/**/*.astro', { eager: true });
 
-function formatTitle(slug) {
+function formatTitle(slug: string) {
   if (!slug) return '';
   return slug
     .split('-')
@@ -16,7 +16,7 @@ function formatTitle(slug) {
 const excluded = ['/404', '/500', '/index', '/html-sitemap', '/about', '/contact', '/privacy-policy', '/terms', '/disclaimer', '/editorial-policy'];
 
 // Group pages by directory
-const categorizedPages = {};
+const categorizedPages: Record<string, { title: string; href: string }[]> = {};
 
 for (const path in allPages) {
   // Convert /src/pages/guides/something.astro to /guides/something/

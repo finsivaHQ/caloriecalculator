@@ -13,6 +13,7 @@ export interface Props { lang?: string; hreflangs?: {href: string, hreflang: str
   description: string;
   /** Path only, e.g. "/bmi-calculator/". Defaults to current pathname. */
   canonical?: string;
+  path?: string;
   ogType?: "website" | "article";
   image?: string;
   noindex?: boolean;
@@ -25,6 +26,7 @@ const {
   title,
   description,
   canonical,
+  path,
   ogType = "website",
   image,
   noindex = false,
@@ -32,7 +34,7 @@ const {
   jsonLd = [],
 } = Astro.props;
 
-const rawPath = canonical ?? Astro.url.pathname;
+const rawPath = canonical ?? path ?? Astro.url.pathname;
 // Enforce trailing slash on canonicals (unless it's the root itself)
 const canonicalPath = rawPath.endsWith('/') ? rawPath : `${rawPath}/`;
 // Build clean URL without search params
@@ -45,6 +47,19 @@ const canonicalUrlString = canonicalUrl.href;
 const suffix = ` | ${SITE.name}`;
 const fullTitle = exactTitle ? title : (title.includes(SITE.name) ? title : (title.length + suffix.length > 70 ? title : `${title}${suffix}`));
 const ogImage = image ? new URL(image, SITE.url).href : new URL("/og-default.svg", SITE.url).href;
+
+const pathMap: Record<string, string> = {
+  "/guides/calorie-surplus-guide/": "/country/spain/que-es-el-superavit-calorico/",
+  "/guides/what-is-neat-calories/": "/country/spain/que-es-el-neat/",
+  "/guides/what-is-bmr/": "/country/spain/que-es-el-metabolismo-basal/",
+  "/guides/thermic-effect-of-food-tef/": "/country/spain/efecto-termico-de-los-alimentos/",
+  "/macro-calculator/": "/country/spain/calculadora-de-macros/",
+  "/": "/country/spain/calculadora-de-calorias/"
+};
+const defaultEs = "/country/spain/calculadora-de-calorias/";
+const explicitEs = hreflangs?.find(h => h.hreflang === 'es')?.href;
+const mappedEs = pathMap[Astro.url.pathname];
+const resolvedEsLink = explicitEs || mappedEs || defaultEs;
 ---
 
 <!doctype html>
@@ -168,26 +183,7 @@ const ogImage = image ? new URL(image, SITE.url).href : new URL("/og-default.svg
       class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-brand focus:px-4 focus:py-2 focus:text-white"
       >Skip to content</a
     >
-    {(() => {
-      if (lang === "es") return <HeaderEs />;
-      const path = Astro.url.pathname;
-      let esLink = hreflangs?.find(h => h.hreflang === 'es')?.href || "/country/spain/calculadora-de-calorias/";
-      
-      const pathMap = {
-        "/guides/calorie-surplus-guide/": "/country/spain/que-es-el-superavit-calorico/",
-        "/guides/what-is-neat-calories/": "/country/spain/que-es-el-neat/",
-        "/guides/what-is-bmr/": "/country/spain/que-es-el-metabolismo-basal/",
-        "/guides/thermic-effect-of-food-tef/": "/country/spain/efecto-termico-de-los-alimentos/",
-        "/macro-calculator/": "/country/spain/calculadora-de-macros/",
-        "/": "/country/spain/calculadora-de-calorias/"
-      };
-
-      if (pathMap[path]) {
-        esLink = pathMap[path];
-      }
-
-      return <Header esLink={esLink} />;
-    })()}
+    {lang === "es" ? <HeaderEs /> : <Header esLink={resolvedEsLink} />}
     <main id="main" class="flex-1 relative z-0">
       <slot />
     </main>

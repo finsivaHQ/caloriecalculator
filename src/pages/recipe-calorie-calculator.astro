@@ -13,7 +13,7 @@ const faqs: FaqItem[] = [
   { q:"Should I weigh ingredients raw or cooked for calories?", a:"Weighing raw gives more consistent values. If you weigh cooked food, use cooked-state nutrition data or standard reference tables." },
   { q:"How do I estimate calories for homemade meals?", a:"Break the meal into ingredients, find calories for each portion, and sum them. This calculator automates the math once you enter ingredient calories." },
   { q:"What is the best way to track recipe calories?", a:"Use a calorie calculator with ingredient-level inputs, log portions in a nutrition app, and keep a standard recipe card for frequent meals." },
-  { q:"Can I reduce calories in my favorite recipes?", a:"Yes. Reduce oil, use lower-calorie swaps, increase vegetables, and control portion sizes. Use the <a href="/">Calorie Calculator</a> to check the balance." },
+  { q:"Can I reduce calories in my favorite recipes?", a:"Yes. Reduce oil, use lower-calorie swaps, increase vegetables, and control portion sizes. Use the <a href='/'>Calorie Calculator</a> to check the balance." },
   { q:"How many calories in a homemade meal?", a:"Homemade meals vary widely. A 500-calorie meal might be a salad with grilled chicken; a heavier pasta dish can exceed 800 calories. Calculate each recipe with this tool." },
 ];
 ---
@@ -173,7 +173,13 @@ const faqs: FaqItem[] = [
     const $ = (id: string) => document.getElementById(id)!;
     let isDirty = false;
 
-
+    function markDirty() {
+      isDirty = true;
+      const box = $("result-box");
+      if (box) box.classList.add("opacity-40", "grayscale");
+      const btn = $("calculate-btn");
+      if (btn) btn.classList.add("is-dirty");
+    }
 
     function clearDirty() {
       isDirty = false;

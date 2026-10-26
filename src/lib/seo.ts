@@ -1,3 +1,10 @@
+export interface Expert {
+  name: string;
+  role: string;
+  image?: string;
+  url?: string;
+}
+
 /** seo.ts - JSON-LD structured-data builders. */
 import { SITE } from "../data/site";
 
