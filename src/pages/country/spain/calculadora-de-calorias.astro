@@ -3,59 +3,59 @@ import Layout from '../../../layouts/Layout.astro';
 import Section from '../../../components/ui/Section.astro';
 import CalculadoraCalorias from '../../../components/calculators/CalculadoraCalorias.astro';
 import FaqSection from '../../../components/FaqSection.astro';
-import { faqSchema } from"../../../lib/seo";
+import { faqSchema, softwareApplicationSchema } from "../../../lib/seo";
 
 const faqs = [
   {
-    q:"¿Cómo calculo mi cantidad de calorías diarias?",
-    a:"Para calcular tus calorías diarias, primero debes determinar tu <a href='/country/spain/que-es-el-metabolismo-basal/' class='text-brand hover:underline font-medium'>Tasa Metabólica Basal</a> (TMB), que es la energía que tu cuerpo utiliza en reposo. Luego, multiplicas ese número por un factor basado en tu nivel de actividad física para obtener tu Gasto Energético Total (GET). Finalmente, sumas/restas calorías dependiendo de si deseas mantener, perder o ganar peso. Nuestra calculadora automatiza todo este proceso."
+    q: "¿Cuántas calorías debo consumir al día para bajar de peso?",
+    a: "Para perder peso de forma segura y sostenible, debes consumir entre 300 y 500 calorías por debajo de tu Gasto Energético Total (GET / TDEE). Esto genera un déficit calórico moderado que produce una pérdida de grasa de 0,3 a 0,5 kg por semana sin provocar pérdida de masa muscular ni ralentización metabólica."
   },
   {
-    q:"¿Qué fórmula utiliza la calculadora?",
-    a:"Utilizamos la ecuación de Mifflin-St Jeor, que es ampliamente considerada por los profesionales de la salud y la nutrición como una de las fórmulas basada en la ecuación de Mifflin-St Jeors para estimar la <a href='/country/spain/que-es-el-metabolismo-basal/' class='text-brand hover:underline font-medium'>Tasa Metabólica Basal</a> (TMB) en la población moderna."
+    q: "¿Cómo se calcula el déficit calórico manualmente?",
+    a: "1) Calcula tu Tasa Metabólica Basal (TMB) con la fórmula de Mifflin-St Jeor. 2) Multiplica tu TMB por tu factor de actividad física (1.2 a 1.9) para obtener tu GET de mantenimiento. 3) Resta un 15% a 20% (o entre 300 y 500 kcal). El resultado son tus calorías diarias objetivo."
   },
   {
-    q:"¿Qué es el TDEE o GET?",
-    a:"TDEE significa Gasto Energético Diario Total (por sus siglas en inglés, Total Daily Energy Expenditure), también conocido en español como GET (Gasto Energético Total). Es la cantidad total de calorías que quemas en un día, incluyendo tus funciones corporales básicas y toda la actividad física que realizas."
+    q: "¿Cuál es el límite mínimo seguro de calorías para mujeres y hombres?",
+    a: "Como regla médica general, las mujeres nunca deben consumir menos de 1.200 calorías al día y los hombres nunca menos de 1.500 calorías al día sin supervisión clínica. Caer por debajo de estos umbrales compromete la función tiroidea, altera el equilibrio hormonal y acelera el catabolismo muscular."
   },
   {
-    q:"¿Qué tan precisa es una calculadora de calorías?",
-    a:"Las calculadoras de calorías proporcionan excelentes estimaciones iniciales basadas en promedios poblacionales. Sin embargo, el metabolismo individual puede variar. Es recomendable usar este resultado como punto de partida, monitorear tu peso durante 2 a 3 semanas y ajustar la ingesta de calorías si no ves los resultados deseados."
+    q: "¿Por qué me he estancado en la pérdida de peso si sigo en déficit?",
+    a: "El estancamiento suele deberse a la adaptación metabólica (a medida que pierdes peso, tu cuerpo requiere menos energía), una disminución inconsciente del NEAT (actividad espontánea fuera del ejercicio), o pequeñas imprecisiones en el pesaje de alimentos (aceites, salsas y picoteos no contabilizados)."
   },
   {
-    q:"¿Cuántas calorías necesito para perder peso?",
-    a:"Para perder peso de manera saludable y sostenible, generalmente se recomienda un déficit calórico de entre 300 y 500 calorías por debajo de tu Gasto Energético Total de mantenimiento. Esto suele resultar en una pérdida de peso de alrededor de 0,25 a 0,5 kg por semana."
+    q: "¿Qué fórmula utiliza esta calculadora de calorías?",
+    a: "Utilizamos la ecuación validada de Mifflin-St Jeor (1990), reconocida internacionalmente por la Academia de Nutrición y Dietética como la fórmula de mayor precisión clínica para la población moderna."
   },
   {
-    q:"¿Cómo manejo la ansiedad de tener que contar calorías a la perfección?",
-    a:"La carga psicológica de intentar que cada caloría sea exacta puede causar fatiga o parálisis. Los expertos en nutrición recomiendan centrarse en la regla del 80/20: la consistencia y la precisión general a lo largo del tiempo producen el 90% de los resultados deseados. No dejes que pequeñas fluctuaciones diarias te generen ansiedad."
+    q: "¿Cuál es la diferencia entre TMB (Tasa Metabólica Basal) y GET (Gasto Energético Total)?",
+    a: "La TMB representa las calorías que tu cuerpo quema en reposo absoluto solo para mantenerte vivo (respiración, corazón, cerebro). El GET (o TDEE) es la TMB más todas las calorías que quemas trabajando, caminando, haciendo la digestión y entrenando."
   },
   {
-    q:"¿Cuáles son los efectos a largo plazo de ignorar estas pautas metabólicas?",
-    a:"Con el tiempo, un desbalance calórico extremo o una restricción severa pueden provocar pérdida muscular, fatiga crónica y desequilibrios hormonales. Un seguimiento moderado y equilibrado mitiga estos riesgos y protege tu bienestar físico y mental."
-  },
-  {
-    q:"¿Con qué frecuencia debo reevaluar mis números base?",
-    a:"Se recomienda reevaluar tus medidas y requerimientos calóricos cada 3 a 6 meses, o inmediatamente después de un cambio significativo en tu peso (más de 3-5 kg) o en tu nivel de actividad física."
-  },
-  {
-    q:"¿Existe algún peligro al depender completamente de calculadoras automatizadas?",
-    a:"Si bien las calculadoras proporcionan un punto de partida matemáticamente sólido respaldado por la ciencia, no pueden registrar la genética individual o fluctuaciones hormonales de cada persona. Por ello, úsalas siempre como una guía de referencia y ajusta según las respuestas de tu propio organismo."
+    q: "¿Debo contar las calorías que quemo con el ejercicio y 'comerlas de vuelta'?",
+    a: "No se recomienda comer de vuelta todas las calorías reportadas por relojes o pulseras de actividad, ya que suelen sobreestimar el gasto real en un 25% a 50%. Si tu objetivo es perder peso, mantén tus calorías diarias fijas según tu nivel de actividad semanal promedio."
   }
 ];
 
-const jsonLd = [faqSchema(faqs)];
+const jsonLd = [
+  softwareApplicationSchema(
+    "Calculadora de Déficit Calórico y Calorías Diarias",
+    "Calculadora gratuita en español para estimar necesidades calóricas diarias, déficit calórico para perder peso, Tasa Metabólica Basal (TMB) y Gasto Energético Total (GET).",
+    "/country/spain/calculadora-de-calorias/"
+  ),
+  faqSchema(faqs)
+];
 
 const hreflangs = [
-  { href:"https://caloriecalculatorfree.com/", hreflang:"en" },
-  { href:"https://caloriecalculatorfree.com/country/spain/calculadora-de-calorias/", hreflang:"es" },
-  { href:"https://caloriecalculatorfree.com/country/spain/calculadora-de-calorias/", hreflang:"es-ES" }
+  { href: "https://caloriecalculatorfree.com/", hreflang: "en" },
+  { href: "https://caloriecalculatorfree.com/country/spain/calculadora-de-calorias/", hreflang: "es" },
+  { href: "https://caloriecalculatorfree.com/country/spain/calculadora-de-calorias/", hreflang: "es-ES" }
 ];
 ---
 
 <Layout
-  title="Calculadora de Calorías: TMB, TDEE y Calorías Diarias"
-  description="Calculadora de calorías precisa para conocer tus necesidades diarias. Calcula tu TMB, TDEE y macronutrientes para perder peso, mantener o ganar músculo."
+  title="Calculadora de Déficit Calórico y Calorías Diarias (TMB y GET)"
+  exactTitle={true}
+  description="Calculadora de déficit calórico y calorías diarias gratis. Calcula tu TMB, TDEE y macronutrientes exactos para perder peso, quemar grasa o ganar masa muscular."
   lang="es"
   hreflangs={hreflangs}
   jsonLd={jsonLd}
@@ -63,9 +63,9 @@ const hreflangs = [
   <header class="relative overflow-hidden pt-12 pb-12 text-center">
     <div class="bg-grid pointer-events-none absolute inset-0 -z-10 opacity-50" aria-hidden="true"></div>
     <div class="container-page">
-      <h1 class="text-display-lg text-ink font-bold tracking-tight">Calculadora de Calorías</h1>
+      <h1 class="text-display-lg text-ink font-bold tracking-tight">Calculadora de Déficit Calórico y Calorías Diarias</h1>
       <p class="mt-4 mx-auto max-w-2xl text-lg text-body">
-        Descubre cuántas calorías y macronutrientes necesita tu cuerpo diariamente. Ingresa tus datos para estimar tu <a href="/country/spain/que-es-el-metabolismo-basal/" class="text-brand hover:underline font-medium">Tasa Metabólica Basal</a> (TMB), Gasto Energético Total (GET) y obtener recomendaciones según tu objetivo.
+        Calcula con precisión científica cuántas calorías debes consumir al día para perder grasa, mantener tu peso o ganar masa muscular. Descubre tu <a href="/country/spain/que-es-el-metabolismo-basal/" class="text-brand hover:underline font-medium">Tasa Metabólica Basal</a> (TMB), tu Gasto Energético Total (GET) y tu déficit calórico ideal.
       </p>
     </div>
   </header>
@@ -77,77 +77,172 @@ const hreflangs = [
   </Section>
 
   <Section class="bg-canvas-soft border-t border-hairline py-16">
-    <div class="prose-content mx-auto max-w-3xl">
-      <h2 class="text-display-md text-ink mb-6">¿Cómo calculamos tus calorías?</h2>
-      <p>
-        Para proporcionarte la estimación basada en la ecuación de Mifflin-St Jeor, nuestra calculadora sigue un proceso científico de tres pasos basado en datos metabólicos comprobados:
-      </p>
-      <ul>
-        <li><strong>Paso 1: Estimación de la TMB.</strong> Utilizamos la ecuación de <em>Mifflin-St Jeor</em> para calcular tu <a href="/country/spain/que-es-el-metabolismo-basal/" class="text-brand hover:underline font-medium">Tasa Metabólica Basal</a>. Se considera la fórmula de Mifflin-St Jeor para la población general moderna.</li>
-        <li><strong>Paso 2: Ajuste por Nivel de Actividad.</strong> Multiplicamos tu TMB por un factor de actividad establecido para calcular tu Gasto Energético Total (GET / TDEE).</li>
-        <li><strong>Paso 3: Cálculo del Objetivo.</strong> Dependiendo de si deseas mantener, perder,o ganar peso, aplicamos un déficit o <a href="/country/spain/que-es-el-superavit-calorico/" class="text-brand hover:underline font-medium">superávit calórico</a> controlado para generar un resultado seguro y sostenible.</li>
-      </ul>
+    <div class="prose-content mx-auto max-w-3xl space-y-12">
 
-      <h2 class="text-display-sm text-ink mt-10 mb-4">¿Qué son las calorías diarias?</h2>
-      <p>
-        Las calorías diarias representan la cantidad total de energía que tu cuerpo consume proveniente de los alimentos y bebidas en un lapso de 24 horas. Para mantener tu peso actual, la cantidad de calorías que consumes debe ser igual a la cantidad de calorías que tu cuerpo gasta a través de sus funciones vitales y el movimiento físico.
-      </p>
+      <!-- Featured Snippet Answer Box: ¿Cuántas calorías consumir para bajar de peso? -->
+      <div class="not-prose p-6 md:p-8 bg-surface border-l-4 border-brand rounded-r-2xl shadow-sm">
+        <h2 class="text-2xl font-bold text-ink mb-3">¿Cuántas calorías debo consumir al día para bajar de peso?</h2>
+        <p class="text-body text-base md:text-lg leading-relaxed mb-4">
+          Para perder grasa corporal de forma constante y saludable, debes consumir entre <strong>300 y 500 calorías por debajo</strong> de tu Gasto Energético Total (GET de mantenimiento). Para la mayoría de las mujeres adultas, esto equivale a un rango de <strong>1.400 a 1.700 kcal/día</strong>; para la mayoría de los hombres adultos, se sitúa entre <strong>1.800 y 2.200 kcal/día</strong>, dependiendo del peso actual y del nivel de actividad física.
+        </p>
+        <div class="grid sm:grid-cols-3 gap-3 text-center text-xs font-semibold pt-2">
+          <div class="p-3 bg-canvas-soft rounded-xl border border-hairline">
+            <span class="block text-brand text-sm font-bold">Déficit Suave (-250 kcal)</span>
+            <span class="text-mute">Pérdida de ~0,25 kg/semana</span>
+          </div>
+          <div class="p-3 bg-canvas-soft rounded-xl border border-hairline">
+            <span class="block text-brand text-sm font-bold">Déficit Moderado (-500 kcal)</span>
+            <span class="text-mute">Pérdida de ~0,50 kg/semana</span>
+          </div>
+          <div class="p-3 bg-canvas-soft rounded-xl border border-hairline">
+            <span class="block text-brand text-sm font-bold">Déficit Máximo (-750 kcal)</span>
+            <span class="text-mute">Pérdida de ~0,75 kg/semana</span>
+          </div>
+        </div>
+      </div>
 
-      <h2 class="text-display-sm text-ink mt-10 mb-4">¿Qué es la TMB (<a href="/country/spain/que-es-el-metabolismo-basal/" class="text-brand hover:underline font-medium">Tasa Metabólica Basal</a>)?</h2>
-      <p>
-        La <a href="/country/spain/que-es-el-metabolismo-basal/" class="text-brand hover:underline font-medium">Tasa Metabólica Basal</a> (TMB o BMR en inglés) es la cantidad de energía que tu cuerpo requiere para mantener sus funciones vitales más básicas mientras está en completo reposo. Esto incluye la respiración, la circulación sanguínea, el control de la temperatura celular y la función cerebral. Generalmente, la TMB representa entre el 60% y el 75% del total de calorías que quemas diariamente.
-      </p>
+      <!-- Section: Cómo calcular tu déficit paso a paso -->
+      <div>
+        <h2 class="text-display-md text-ink mb-6">Calculadora de déficit calórico: Cómo calcular tu objetivo paso a paso</h2>
+        <p class="text-body text-base md:text-lg leading-relaxed mb-4">
+          Un déficit calórico se produce cuando ingieres menos energía a través de los alimentos de la que tu cuerpo gasta para mantenerse vivo y moverse. Nuestro algoritmo automatiza este cálculo en tres fases respaldadas por la fisiología médica:
+        </p>
+        <ul class="space-y-4 text-base text-body">
+          <li class="flex items-start">
+            <span class="flex-shrink-0 w-7 h-7 rounded-full bg-brand-soft text-brand flex items-center justify-center font-bold mr-3 mt-0.5">1</span>
+            <div>
+              <strong class="text-ink">Paso 1: Cálculo de la Tasa Metabólica Basal (TMB).</strong>
+              <p class="mt-1">Calculamos tu gasto vital en reposo mediante la fórmula clínica de Mifflin-St Jeor, que considera tu sexo biológico, edad, peso y estatura.</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="flex-shrink-0 w-7 h-7 rounded-full bg-brand-soft text-brand flex items-center justify-center font-bold mr-3 mt-0.5">2</span>
+            <div>
+              <strong class="text-ink">Paso 2: Ajuste por Actividad Física (GET / TDEE).</strong>
+              <p class="mt-1">Multiplicamos la TMB por tu factor de estilo de vida, sumando el <a href="/country/spain/que-es-el-neat/" class="text-brand font-medium hover:underline">NEAT (actividad espontánea)</a> y el <a href="/country/spain/efecto-termico-de-los-alimentos/" class="text-brand font-medium hover:underline">efecto térmico de los alimentos</a>.</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="flex-shrink-0 w-7 h-7 rounded-full bg-brand-soft text-brand flex items-center justify-center font-bold mr-3 mt-0.5">3</span>
+            <div>
+              <strong class="text-ink">Paso 3: Aplicación del Déficit o Superávit Estratégico.</strong>
+              <p class="mt-1">Si buscas perder grasa, restamos entre 300 y 500 kcal. Si tu meta es hipertrofia muscular magra, sumamos un <a href="/country/spain/que-es-el-superavit-calorico/" class="text-brand font-medium hover:underline">superávit calórico controlado</a> de 250 a 400 kcal.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-      <h2 class="text-display-sm text-ink mt-10 mb-4">¿Qué es el TDEE o GET?</h2>
-      <p>
-        El TDEE (Total Daily Energy Expenditure) o Gasto Energético Total (GET) es la suma total de todas las calorías que quemas a lo largo de un día. Mientras que la TMB solo calcula tu energía en reposo, el GET incorpora el <a href="/country/spain/efecto-termico-de-los-alimentos/" class="text-brand hover:underline font-medium">efecto térmico de los alimentos</a> (la energía que usas para hacer la digestión) y absolutamente todo tu movimiento físico, desde caminar por la oficina hasta un entrenamiento intenso en el gimnasio. <strong>Tus calorías de mantenimiento son exactamente tu GET.</strong>
-      </p>
+      <!-- Section: Tabla de Calorías Recomendadas según Peso -->
+      <div>
+        <h2 class="text-display-sm text-ink mb-4">Tabla de calorías diarias recomendadas para perder peso (según peso corporal)</h2>
+        <p class="text-body text-base mb-6">
+          La siguiente tabla orientativa muestra las necesidades calóricas de mantenimiento frente a un déficit estándar de 500 kcal para personas con actividad física moderada (entrenamiento 3-4 días por semana):
+        </p>
+        <div class="overflow-x-auto not-prose my-6">
+          <table class="w-full text-left text-sm border-collapse border border-hairline rounded-xl overflow-hidden shadow-sm">
+            <thead>
+              <tr class="bg-canvas-soft border-b border-hairline text-ink">
+                <th class="p-3.5 font-bold">Peso Corporal</th>
+                <th class="p-3.5 font-bold">Mantenimiento Mujer (GET)</th>
+                <th class="p-3.5 font-bold">Déficit Mujer (-500 kcal)</th>
+                <th class="p-3.5 font-bold">Mantenimiento Hombre (GET)</th>
+                <th class="p-3.5 font-bold">Déficit Hombre (-500 kcal)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-hairline bg-surface text-body">
+              <tr>
+                <td class="p-3.5 font-semibold text-ink">55 kg</td>
+                <td class="p-3.5">~1.750 kcal</td>
+                <td class="p-3.5 font-bold text-brand">~1.250 kcal</td>
+                <td class="p-3.5">~2.050 kcal</td>
+                <td class="p-3.5 font-bold text-brand">~1.550 kcal</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-semibold text-ink">65 kg</td>
+                <td class="p-3.5">~1.900 kcal</td>
+                <td class="p-3.5 font-bold text-brand">~1.400 kcal</td>
+                <td class="p-3.5">~2.250 kcal</td>
+                <td class="p-3.5 font-bold text-brand">~1.750 kcal</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-semibold text-ink">75 kg</td>
+                <td class="p-3.5">~2.050 kcal</td>
+                <td class="p-3.5 font-bold text-brand">~1.550 kcal</td>
+                <td class="p-3.5">~2.450 kcal</td>
+                <td class="p-3.5 font-bold text-brand">~1.950 kcal</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-semibold text-ink">85 kg</td>
+                <td class="p-3.5">~2.200 kcal</td>
+                <td class="p-3.5 font-bold text-brand">~1.700 kcal</td>
+                <td class="p-3.5">~2.650 kcal</td>
+                <td class="p-3.5 font-bold text-brand">~2.150 kcal</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-semibold text-ink">95 kg</td>
+                <td class="p-3.5">~2.350 kcal</td>
+                <td class="p-3.5 font-bold text-brand">~1.850 kcal</td>
+                <td class="p-3.5">~2.850 kcal</td>
+                <td class="p-3.5 font-bold text-brand">~2.350 kcal</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-      <h2 class="text-display-sm text-ink mt-10 mb-4">¿Cómo usar las calorías para perder peso?</h2>
-      <p>
-        Para perder peso, debes consumir menos calorías de las que tu cuerpo gasta (GET). A esto se le conoce como <strong>déficit calórico</strong>. Un déficit calórico estándar, seguro y sostenible suele ser de aproximadamente 300 a 500 calorías por debajo de tu nivel de mantenimiento. Esto obliga a tu cuerpo a utilizar la grasa almacenada para compensar la falta de energía, resultando en una pérdida de peso gradual.
-      </p>
+      <!-- Section: Límites de Seguridad Metabólica -->
+      <div class="p-6 md:p-8 bg-surface rounded-2xl border border-hairline">
+        <h2 class="text-2xl font-bold text-ink mb-4">Déficit calórico para mujeres vs. hombres: Umbrales mínimos de seguridad</h2>
+        <p class="text-body text-base leading-relaxed mb-4">
+          Una creencia errónea muy extendida es pensar que cuanto menos comas, más rápido y mejor adelgazarás. En la práctica clínica deportiva, recortar calorías de forma excesiva desencadena la denominada <strong>adaptación metabólica severa</strong>.
+        </p>
+        <div class="grid sm:grid-cols-2 gap-4 not-prose my-6">
+          <div class="p-5 bg-canvas-soft rounded-xl border border-hairline">
+            <h3 class="text-base font-bold text-ink mb-2">Umbral Mínimo para Mujeres: 1.200 kcal</h3>
+            <p class="text-xs text-body leading-relaxed">
+              Consumir menos de 1.200 calorías al día en mujeres eleva el riesgo de hipotiroidismo funcional, caída de estrógenos, alteración del ciclo menstrual (amenorrea) y pérdida acelerada de masa muscular.
+            </p>
+          </div>
+          <div class="p-5 bg-canvas-soft rounded-xl border border-hairline">
+            <h3 class="text-base font-bold text-ink mb-2">Umbral Mínimo para Hombres: 1.500 kcal</h3>
+            <p class="text-xs text-body leading-relaxed">
+              En hombres, un déficit agresivo por debajo de 1.500 calorías colapsa los niveles de testosterona libre, provoca letargo diurno y desencadena una pérdida severa de fuerza y masa magra.
+            </p>
+          </div>
+        </div>
+        <p class="text-body text-base">
+          Para acompañar tu déficit y garantizar que el peso perdido proceda de la grasa y no del músculo, es fundamental acompañar tus calorías con un reparto adecuado de proteínas utilizando nuestra <a href="/country/spain/calculadora-de-macros/" class="text-brand font-semibold hover:underline">Calculadora de Macros</a>.
+        </p>
+      </div>
 
-      <h2 class="text-display-sm text-ink mt-10 mb-4">¿Cómo usar las calorías para mantener tu peso?</h2>
-      <p>
-        El mantenimiento de peso ocurre cuando existe un <em>equilibrio energético</em>. Esto significa que la cantidad de energía que ingieres (a través de tu dieta) es estadísticamente igual a la cantidad de energía que quemas (tu GET). Si tu objetivo es mejorar tu composición corporal o mantener tus resultados después de una dieta, debes apuntar a tus calorías de mantenimiento.
-      </p>
+      <!-- Section: Guías relacionadas del clúster en español -->
+      <div class="not-prose pt-8 border-t border-hairline">
+        <h2 class="text-2xl font-bold text-ink mb-6 text-center">Guías Científicas de Nutrición y Metabolismo</h2>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <a href="/country/spain/calculadora-de-macros/" class="p-5 bg-surface hover:bg-canvas-soft border border-hairline rounded-2xl transition-all hover:shadow-md group">
+            <span class="block text-xs font-semibold text-brand uppercase tracking-wider mb-1">Nutrición y Reparto</span>
+            <strong class="block text-ink text-base group-hover:text-brand transition-colors">Calculadora de Macros</strong>
+            <p class="text-mute text-xs mt-2">Aprende a repartir tus proteínas, grasas y carbohidratos según tu meta.</p>
+          </a>
+          <a href="/country/spain/que-es-el-metabolismo-basal/" class="p-5 bg-surface hover:bg-canvas-soft border border-hairline rounded-2xl transition-all hover:shadow-md group">
+            <span class="block text-xs font-semibold text-brand uppercase tracking-wider mb-1">Gasto en Reposo</span>
+            <strong class="block text-ink text-base group-hover:text-brand transition-colors">Tasa Metabólica Basal (TMB)</strong>
+            <p class="text-mute text-xs mt-2">Cómo calcula tu cuerpo la energía vital con Mifflin-St Jeor.</p>
+          </a>
+          <a href="/country/spain/que-es-el-superavit-calorico/" class="p-5 bg-surface hover:bg-canvas-soft border border-hairline rounded-2xl transition-all hover:shadow-md group">
+            <span class="block text-xs font-semibold text-brand uppercase tracking-wider mb-1">Ganancia Muscular</span>
+            <strong class="block text-ink text-base group-hover:text-brand transition-colors">Superávit Calórico y Volumen</strong>
+            <p class="text-mute text-xs mt-2">Cómo ganar masa muscular limpia sin acumular grasa excesiva.</p>
+          </a>
+        </div>
+      </div>
 
-      <h2 class="text-display-sm text-ink mt-10 mb-4">¿Cómo usar las calorías para ganar peso?</h2>
-      <p>
-        Para ganar peso o aumentar la masa muscular (fase de volumen), necesitas proporcionar a tu cuerpo más energía de la que requiere. Esto se conoce como un <strong><a href="/country/spain/que-es-el-superavit-calorico/" class="text-brand hover:underline font-medium">superávit calórico</a></strong>. Se recomienda un excedente ligero (alrededor de 250 a 500 calorías adicionales) junto con entrenamiento de fuerza. Un superávit demasiado agresivo resultará en una ganancia innecesaria de grasa en lugar de músculo.
-      </p>
-
-      <h2 class="text-display-sm text-ink mt-10 mb-4">¿Qué tan precisa es la calculadora?</h2>
-      <p>
-        Esta calculadora proporciona una <strong>estimación altamente educada</strong>, no una medida absoluta y exacta. Todas las ecuaciones metabólicas están basadas en promedios estadísticos y no pueden contabilizar tu genética única, adaptaciones metabólicas, masa muscular exacta, u hormonas.
-      </p>
-      <p>
-        El mejor enfoque es utilizar los resultados como un punto de partida. Intenta consumir la cantidad sugerida de calorías durante unas dos o tres semanas, monitorea el promedio de tu peso corporal y ajusta tus calorías ligeramente (sumando o restando 100-200 calorías) según cómo responda tu cuerpo.
-      </p>
-      <h2 class="text-display-sm text-ink mt-10 mb-4">Notas avanzadas sobre la salud metabólica</h2>
-      <p>
-        Aunque las fórmulas matemáticas y las pautas generalizadas proporcionadas anteriormente sirven como un excelente punto de partida, la verdadera salud metabólica es altamente individualizada. Las ecuaciones que utilizamos—como la de Mifflin-St Jeor o Harris-Benedict—fueron desarrolladas estudiando promedios poblacionales. Representan una estimación base del gasto energético de tu cuerpo. Sin embargo, tus necesidades diarias reales de energía pueden fluctuar según numerosos factores fisiológicos altamente específicos.
-      </p>
-      <p>
-        Por ejemplo, tu Termogénesis por Actividad No Relacionada con el Ejercicio (NEAT)—la energía que quemas a través de movimientos subconscientes como moverte inquietamente, mantener la postura o caminar casualmente—puede variar en cientos de calorías de un día a otro. Una persona que tiene un trabajo muy activo naturalmente tendrá una línea base metabólica significativamente más alta que alguien sedentario, incluso si su edad, peso y altura son idénticos.
-      </p>
-      <p>
-        Además, la adaptación metabólica es un fenómeno real. Cuando permaneces en un déficit calórico durante un período prolongado, tu cuerpo intenta intuitivamente conservar energía. Este mecanismo evolutivo de supervivencia significa que a medida que pierdes peso, tu Tasa Metabólica Basal (BMR) disminuye ligeramente, y puedes reducir inconscientemente tu NEAT. Esta es la razón por la que una ingesta calórica que inicialmente causó pérdida de peso puede convertirse eventualmente en tu nuevo nivel de mantenimiento, requiriendo un descanso estratégico de la dieta o un ajuste calórico adicional.
-      </p>
-      <p>
-        De manera similar, cuando se está en un superávit calórico (volumen), algunas personas experimentan una regulación al alza en el NEAT. Sus cuerpos queman espontáneamente una parte del exceso de calorías a través del aumento de la producción de calor y el movimiento subconsciente. Esto explica por qué algunas personas tienen dificultades para ganar peso incluso cuando creen que están comiendo un superávit significativo.
-      </p>
-      <h3 class="text-xl font-bold text-ink mt-8 mb-3">El papel de la densidad de nutrientes</h3>
-      <p>
-        Finalmente, debemos enfatizar que aunque el equilibrio energético (calorías que entran frente a calorías que salen) dicta los cambios en la masa, la distribución de macronutrientes dicta los cambios en la composición corporal, y la densidad de micronutrientes dicta la función fisiológica general. Consumir 2,000 calorías de alimentos ultraprocesados producirá resultados de salud a largo plazo, perfiles hormonales y niveles de energía muy diferentes que consumir 2,000 calorías de alimentos enteros y densos en nutrientes. Recomendamos encarecidamente utilizar estas pautas matemáticas como herramientas dentro de un marco más amplio de nutrición holística y sostenible.
-      </p>
     </div>
   </Section>
 
   <Section class="border-t border-hairline bg-canvas-soft py-16">
     <div class="container-page max-w-5xl">
-      <FaqSection hideSidebar={true} items={faqs} title="Preguntas frecuentes y bienestar" />
+      <FaqSection hideSidebar={true} items={faqs} title="Preguntas Frecuentes sobre Calorías y Déficit Calórico" />
     </div>
   </Section>
 </Layout>
