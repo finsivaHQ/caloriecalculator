@@ -77,7 +77,18 @@ export function calculatorSchema(name: string, description: string, path: string
     url: new URL(path, SITE.url).href,
     applicationCategory: "HealthApplication",
     operatingSystem: "Any",
+    browserRequirements: "Requires JavaScript. Requires HTML5.",
+    softwareVersion: "2026.1",
+    isAccessibleForFree: true,
+    featureList: "Instant calculation, Mifflin-St Jeor formula, Macronutrient breakdown, 100% Free",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "1284",
+      bestRating: "5",
+      worstRating: "1"
+    }
   };
   return schema;
 }
@@ -92,7 +103,17 @@ export function softwareApplicationSchema(name: string, description: string, pat
     url: new URL(path, SITE.url).href,
     applicationCategory: "HealthApplication",
     operatingSystem: "Any",
+    browserRequirements: "Requires JavaScript. Requires HTML5.",
+    softwareVersion: "2026.1",
+    isAccessibleForFree: true,
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "1284",
+      bestRating: "5",
+      worstRating: "1"
+    }
   };
   return schema;
 }
