@@ -16,6 +16,10 @@ const faqs: FaqItem[] = [
   { q:"What's the difference between TDEE and BMR?", a:"BMR is calories burned at complete rest. TDEE includes all daily activity — typically BMR × 1.3-1.9 depending on your lifestyle." },
   { q:"Can TDEE change with age?", a:"Yes. BMR decreases 2-3% per decade after age 30. Less activity with age also reduces overall TDEE." },
   { q:"How accurate is this TDEE calculator?", a:"Accuracy is within ±10% for most people. Individual variation exists based on genetics, muscle mass, and non-exercise activity." },
+  { q:"What is the Mifflin-St Jeor equation?", a:"The Mifflin-St Jeor equation is the clinical gold standard for predicting Basal Metabolic Rate (BMR). Formulated in 1990, it calculates resting expenditure using weight in kg, height in cm, and age in years, providing ±10% accuracy across diverse populations." },
+  { q:"How does Mifflin-St Jeor compare to Harris-Benedict?", a:"The original Harris-Benedict formula (1919) tends to overestimate resting energy expenditure by 5% to 15% in modern, less physically active populations. Mifflin-St Jeor was specifically developed to account for modern body compositions and is endorsed by the Academy of Nutrition and Dietetics." },
+  { q:"What is the Katch-McArdle formula?", a:"The Katch-McArdle formula calculates BMR based exclusively on Lean Body Mass (LBM): BMR = 370 + (21.6 × LBM in kg). It is the most accurate formula for muscular athletes whose body fat percentage is known." },
+  { q:"How do I find my resting metabolic rate (RMR)?", a:"You can estimate your resting metabolic rate using the Mifflin-St Jeor equation in this calculator. For clinical exactness, an indirect calorimetry test (breathing into a metabolic cart) measures actual oxygen consumption." },
 ];
 ---
 
@@ -141,12 +145,68 @@ const faqs: FaqItem[] = [
        <li><strong>Changes in Routine:</strong> Switching from a job waiting tables to a desk job will drastically slash your NEAT, significantly lowering your TDEE even if your gym routine stays the same.</li>
      </ul>
 
-     <h2>The Math: The Mifflin-St Jeor Equation</h2>
-     <p>Our calculator utilizes the Mifflin-St Jeor equation to estimate your Basal Metabolic Rate before applying the activity multiplier. Introduced in 1990, this formula has been validated by numerous peer-reviewed studies as the most accurate predictive equation for modern populations, outperforming older models like the Harris-Benedict equation (which tends to overestimate calorie needs).</p>
-     <p>For those interested in the mathematics, the formulas are as follows:</p>
-     <pre>Men: (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) + 5
-Women: (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) - 161</pre>
-     <p>Once the BMR is calculated, it is multiplied by the appropriate activity factor (ranging from 1.2 to 1.9) to determine the final Total Daily Energy Expenditure.</p>
+     <h2>Mifflin-St Jeor vs. Harris-Benedict vs. Katch-McArdle: The Science Behind the Math</h2>
+     <p>Our calculator utilizes the <strong>Mifflin-St Jeor equation</strong> to estimate your Basal Metabolic Rate before applying your daily activity multiplier. Introduced in 1990 by Dr. M. D. Mifflin and S. T. St Jeor, this formula is widely recognized by the Academy of Nutrition and Dietetics as the most reliable predictive equation for modern populations.</p>
+
+     <div class="card p-6 border-l-4 border-brand bg-surface not-prose my-6 rounded-2xl shadow-sm">
+       <h3 class="text-lg font-bold text-ink mb-2">The Mifflin-St Jeor Formula:</h3>
+       <ul class="space-y-1.5 text-sm text-body font-mono list-none pl-0 mb-3">
+         <li><strong>Men:</strong> BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) + 5</li>
+         <li><strong>Women:</strong> BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) - 161</li>
+       </ul>
+       <p class="text-xs text-mute m-0">Then: <strong>TDEE = BMR × Activity Multiplier</strong> (1.2 for sedentary up to 1.9 for extra active).</p>
+     </div>
+
+     <div class="overflow-x-auto my-6">
+       <table>
+         <thead>
+           <tr>
+             <th>Formula Name</th>
+             <th>Key Variables Used</th>
+             <th>Best Suited For</th>
+             <th>Clinical Accuracy</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td><strong>Mifflin-St Jeor (1990)</strong></td>
+             <td>Weight, Height, Age, Biological Sex</td>
+             <td>General population, modern lifestyle (used in this tool)</td>
+             <td class="text-brand font-semibold">Highest (~82% within ±10%)</td>
+           </tr>
+           <tr>
+             <td><strong>Revised Harris-Benedict (1984)</strong></td>
+             <td>Weight, Height, Age, Biological Sex</td>
+             <td>Historical standard, clinical settings</td>
+             <td>Tends to overestimate by 5–15%</td>
+           </tr>
+           <tr>
+             <td><strong>Katch-McArdle (1996)</strong></td>
+             <td>Lean Body Mass (LBM in kg) only</td>
+             <td>Athletes & bodybuilders with known body fat %</td>
+             <td>Extremely accurate if body fat is precise</td>
+           </tr>
+         </tbody>
+       </table>
+     </div>
+
+     <p>If you want to dive deeper into how basal metabolism dictates your energy balance, explore our comprehensive guide on <a href="/guides/what-is-bmr/" class="text-brand font-semibold hover:underline">what is BMR and how to calculate it manually</a>. Learn how spontaneous movement impacts your expenditure in our guide to <a href="/guides/what-is-neat-calories/" class="text-brand font-semibold hover:underline">NEAT calories</a>, and understand the thermal cost of digesting food in our <a href="/guides/thermic-effect-of-food-tef/" class="text-brand font-semibold hover:underline">thermic effect of food guide</a>.</p>
+
+     <h2>Related Metabolism & Energy Expenditure Guides</h2>
+     <div class="grid gap-4 sm:grid-cols-3 not-prose my-8">
+       <div class="card p-5 border border-hairline bg-surface rounded-2xl shadow-sm">
+         <h3 class="text-base font-bold text-ink mb-1"><a href="/guides/what-is-bmr/" class="text-brand hover:underline">What is BMR Guide</a></h3>
+         <p class="text-xs text-body m-0">Understand the difference between BMR vs TDEE and how to calculate your resting metabolic floor.</p>
+       </div>
+       <div class="card p-5 border border-hairline bg-surface rounded-2xl shadow-sm">
+         <h3 class="text-base font-bold text-ink mb-1"><a href="/guides/what-is-neat-calories/" class="text-brand hover:underline">NEAT Calories Explained</a></h3>
+         <p class="text-xs text-body m-0">How non-exercise activity thermogenesis burns 300–800 extra calories a day without the gym.</p>
+       </div>
+       <div class="card p-5 border border-hairline bg-surface rounded-2xl shadow-sm">
+         <h3 class="text-base font-bold text-ink mb-1"><a href="/guides/maintenance-calories/" class="text-brand hover:underline">Maintenance Calories Guide</a></h3>
+         <p class="text-xs text-body m-0">How to test and verify your real-world maintenance baseline to break through weight plateaus.</p>
+       </div>
+     </div>
 
      <h2>Comprehensive TDEE Frequently Asked Questions (FAQ)</h2>
      <div class="faq-section">

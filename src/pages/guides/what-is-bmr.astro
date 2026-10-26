@@ -13,6 +13,8 @@ const faqs: FaqItem[] = [
   { q: "Can you eat below your BMR to lose weight?", a: "Eating below your BMR is generally not recommended for extended periods. When caloric intake drops chronically below BMR, the body downregulates non-exercise movement (NEAT), decreases thyroid hormone production, and breaks down skeletal muscle tissue." },
   { q: "What is a typical BMR for adult men and women?", a: "A typical BMR for adult women ranges between 1,200 and 1,550 kcal/day, whereas adult men generally burn between 1,550 and 2,000 kcal/day depending on height, weight, age, and lean muscle mass." },
   { q: "Is BMR the same as RMR (Resting Metabolic Rate)?", a: "They are nearly identical for practical planning. True BMR requires a strict overnight fast in a laboratory clinical setting, whereas RMR is measured under relaxed conditions with light digestion. RMR is usually roughly 5% to 10% higher than BMR." },
+  { q: "What is the Mifflin-St Jeor formula for BMR?", a: "For men: BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) + 5. For women: BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) - 161." },
+  { q: "Why is Mifflin-St Jeor better than Harris-Benedict?", a: "The Harris-Benedict formula was created in 1919 and recalibrated in 1984. Research shows it overestimates energy needs by 5% to 15% in modern sedentary populations. The Mifflin-St Jeor formula (1990) is accurate to within ±10% for over 80% of healthy non-obese and obese adults." },
 ];
 ---
 
@@ -57,11 +59,28 @@ const faqs: FaqItem[] = [
 
   <h2>How to Calculate BMR Manually (Mifflin-St Jeor Formula for Men vs. Women)</h2>
   <p>The gold-standard predictive formula validated by modern metabolic studies is the <strong>Mifflin-St Jeor equation</strong> (developed in 1990):</p>
+  <div class="card p-6 border-l-4 border-brand bg-surface not-prose my-6 rounded-2xl shadow-sm">
+    <h3 class="text-lg font-bold text-ink mb-2">Mifflin-St Jeor Formulas:</h3>
+    <ul class="space-y-2 text-sm text-body font-mono list-none pl-0 m-0">
+      <li><strong>Men:</strong> BMR = (10 × weight in kg) + (6.25 × height in cm) − (5 × age in years) + 5</li>
+      <li><strong>Women:</strong> BMR = (10 × weight in kg) + (6.25 × height in cm) − (5 × age in years) − 161</li>
+    </ul>
+  </div>
+  <p>If you use imperial measurements (pounds and inches), convert your units first: divide your weight in pounds by 2.205 to get kilograms, and multiply your height in inches by 2.54 to get centimeters.</p>
+
+  <h2>Mifflin-St Jeor vs. Harris-Benedict Equation: Which is More Accurate?</h2>
+  <p>Before 1990, the primary formula used worldwide was the <strong>Harris-Benedict equation</strong> (originally created in 1919 and revised in 1984 by Roza and Shizgal):</p>
   <ul>
-    <li><strong>Men:</strong> BMR = (10 × weight in kg) + (6.25 × height in cm) − (5 × age in years) + 5</li>
-    <li><strong>Women:</strong> BMR = (10 × weight in kg) + (6.25 × height in cm) − (5 × age in years) − 161</li>
+    <li><strong>Revised Harris-Benedict Men:</strong> BMR = 88.362 + (13.397 × kg) + (4.799 × cm) − (5.677 × age)</li>
+    <li><strong>Revised Harris-Benedict Women:</strong> BMR = 447.593 + (9.247 × kg) + (3.098 × cm) − (4.330 × age)</li>
   </ul>
-  <p>If you use imperial measurements (pounds and inches), convert your units first: divide your weight in pounds by 2.205 to get kilograms, and multiply your height in inches by 2.54 to get centimeters. You can also skip manual math by using our automated <a href="/tdee-calculator/">TDEE & BMR Calculator</a>.</p>
+  <p>Extensive clinical studies comparing both equations against indirect calorimetry have consistently found that <strong>Harris-Benedict overestimates daily caloric burn by 5% to 15%</strong>. Because modern populations have higher sedentary rates and different body compositions than populations in the early 20th century, the Mifflin-St Jeor formula provides significantly more reliable calorie baselines for fat loss and muscle building.</p>
+
+  <div class="my-8 rounded-2xl border border-hairline bg-canvas-soft p-6 text-center sm:p-8 not-prose">
+    <h3 class="text-xl font-bold text-ink mb-2">Want to Skip the Manual Equations?</h3>
+    <p class="text-sm text-body mb-4">Use our automated tool to calculate your exact BMR and full daily maintenance expenditure (TDEE) instantly.</p>
+    <Button href="/tdee-calculator/" size="lg" variant="primary">Calculate Your TDEE & BMR Now</Button>
+  </div>
 
   <h2>Representative BMR Calculation Examples by Age and Weight Profile</h2>
   <table>
