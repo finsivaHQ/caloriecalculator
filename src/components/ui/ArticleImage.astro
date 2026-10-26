@@ -1,19 +1,20 @@
 ---
 /**
- * ArticleImage ?" consistent, accessible, responsive image for article bodies.
+ * ArticleImage — consistent, accessible, responsive image for article bodies.
  * Defaults to lazy loading and a constrained max width. Pass a meaningful
  * `alt` describing the image; decorative images should set alt="" explicitly.
  */
 interface Props {
   src: string;
   alt: string;
+  caption?: string;
   class?: string;
   width?: number;
   height?: number;
   priority?: boolean;
 }
 
-const { src, alt, class: className ="", width, height, priority = false } = Astro.props;
+const { src, alt, caption, class: className = "", width, height, priority = false } = Astro.props;
 
 const finalSrc = src;
 ---
@@ -23,12 +24,17 @@ const finalSrc = src;
     <img
       src={finalSrc}
       alt={alt}
-      loading={priority ?"eager" :"lazy"}
+      loading={priority ? "eager" : "lazy"}
       decoding="async"
-      fetchpriority={priority ?"high" :"auto"}
+      fetchpriority={priority ? "high" : "auto"}
       {width}
       {height}
       class="mx-auto h-auto w-full max-w-2xl rounded-xl object-cover shadow-sm aspect-video"
     />
   </div>
+  {caption && (
+    <figcaption class="mt-2 text-center text-xs text-mute leading-relaxed max-w-2xl mx-auto">
+      {caption}
+    </figcaption>
+  )}
 </figure>

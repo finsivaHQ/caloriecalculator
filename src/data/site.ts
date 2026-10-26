@@ -57,6 +57,7 @@ export const FOOTER: { title: string; links: NavLink[] }[] = [
       { label: "Running Calorie Calculator", href: "/running-calorie-calculator/" },
       { label: "Walking Calorie Calculator", href: "/walking-calorie-calculator/" },
       { label: "Calories Burned Calculator", href: "/calories-burned-calculator/" },
+      { label: "Calculadora de Calorías (ES)", href: "/country/spain/calculadora-de-calorias/" },
     ],
   },
   {
