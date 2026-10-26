@@ -7,7 +7,7 @@ import ArticleImage from"../components/ui/ArticleImage.astro";
 import Sources from"../components/ui/Sources.astro";
 
 const faqs: FaqItem[] = [
-  { q:"How do I calculate calories in a recipe?", a:"Add up the calories for each ingredient, then divide by the number of servings. Use the food calories search to find per-ingredient calories, then plug them into this calculator." },
+  { q:"How do I calculate calories in a recipe?", a:"Add up the calories for each ingredient, then divide by the number of servings. Use our <a href=\"/foods/\">Food Calories Database</a> to find per-ingredient calories, then plug them into this calculator." },
   { q:"How many calories per serving?", a:"Total recipe calories divided by the number of servings gives calories per serving. For example, 1200 calories total across 4 servings = 300 calories per serving." },
   { q:"Does cooking change calorie content?", a:"Cooking can slightly change water content and concentration, but calorie changes are usually small. Weigh raw ingredients for more consistent tracking, or use standard nutrition data." },
   { q:"Should I weigh ingredients raw or cooked for calories?", a:"Weighing raw gives more consistent values. If you weigh cooked food, use cooked-state nutrition data or standard reference tables." },
@@ -144,6 +144,22 @@ const faqs: FaqItem[] = [
     </ul>
     <p>Once you calculate your per-serving recipe total, learn how to split your daily targets with our <a href="/meal-calorie-calculator/">meal calorie calculator</a> or verify your personal energy deficit goals with our <a href="/calorie-deficit-calculator/">calorie deficit calculator</a>.</p>
     
+    <h2>Related Meal & Calorie Planning Tools</h2>
+    <div class="grid gap-4 sm:grid-cols-3 not-prose my-8">
+      <div class="card p-5 border border-hairline bg-surface rounded-2xl shadow-sm">
+        <h3 class="text-base font-bold text-ink mb-1"><a href="/meal-calorie-calculator/" class="text-brand hover:underline">Meal Calorie Calculator</a></h3>
+        <p class="text-xs text-body m-0">Split your daily calorie budget across 2 to 6 balanced meals and snacks.</p>
+      </div>
+      <div class="card p-5 border border-hairline bg-surface rounded-2xl shadow-sm">
+        <h3 class="text-base font-bold text-ink mb-1"><a href="/calorie-deficit-calculator/" class="text-brand hover:underline">Calorie Deficit Calculator</a></h3>
+        <p class="text-xs text-body m-0">Calculate your personalized fat loss deficit target based on your current weight and activity.</p>
+      </div>
+      <div class="card p-5 border border-hairline bg-surface rounded-2xl shadow-sm">
+        <h3 class="text-base font-bold text-ink mb-1"><a href="/foods/" class="text-brand hover:underline">Food Calories Database</a></h3>
+        <p class="text-xs text-body m-0">Browse nutritional values and calories per 100g for over 300 everyday staple foods.</p>
+      </div>
+    </div>
+
     <Sources sources={[
       { label:"USDA FoodData Central � nutrition data", href:"https://fdc.nal.usda.gov/" },
       { label:"Academy of Nutrition and Dietetics � How to Count Calories", href:"https://www.niddk.nih.gov/health-information/weight-management/myplate-mywins" },

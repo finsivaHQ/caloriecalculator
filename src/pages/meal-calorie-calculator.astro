@@ -14,7 +14,7 @@ const faqs: FaqItem[] = [
   { q:"Should I eat the same calories at every meal?", a:"Not necessarily. Many people eat larger meals earlier and smaller meals later. Adjust portions based on activity, hunger, and schedule." },
   { q:"How many calories for breakfast, lunch, and dinner?", a:"Typical splits are roughly 25% / 35% / 25% with a 15% snack buffer, but your personal split depends on goals and schedule." },
   { q:"Does eating more frequently boost metabolism?", a:"Eating more often does not significantly increase metabolism. What matters most is total calories and food quality across the day." },
-  { q:"Can I skip meals to save calories?", a:"Skipping meals can lead to overeating later. If you prefer intermittent fasting, use the intermittent fasting calculator to plan a structured eating window." },
+  { q:"Can I skip meals to save calories?", a:"Skipping meals can lead to overeating later. If you prefer intermittent fasting or fewer meals, use our calorie deficit calculator to ensure your total daily nutrition remains balanced across your chosen eating window." },
 ];
 ---
 
@@ -156,6 +156,22 @@ const faqs: FaqItem[] = [
       <li><strong>Underestimating Cooking Fats:</strong> A single tablespoon of cooking oil (olive, canola, or butter) adds roughly 120 calories. Failing to measure pan oils can easily convert a planned 500-calorie meal into a 750-calorie surplus.</li>
       <li><strong>The "All-or-Nothing" Mentality:</strong> If an unplanned work lunch causes you to consume 900 calories instead of your planned 600, do not abandon the day. Simply redistribute your remaining daily budget across dinner to maintain your overall weekly energy balance.</li>
     </ul>
+
+    <h2>Related Calorie & Meal Planning Tools</h2>
+    <div class="grid gap-4 sm:grid-cols-3 not-prose my-8">
+      <div class="card p-5 border border-hairline bg-surface rounded-2xl shadow-sm">
+        <h3 class="text-base font-bold text-ink mb-1"><a href="/recipe-calorie-calculator/" class="text-brand hover:underline">Recipe Calorie Calculator</a></h3>
+        <p class="text-xs text-body m-0">Calculate total calories and per-serving nutrition for any multi-ingredient homemade dish.</p>
+      </div>
+      <div class="card p-5 border border-hairline bg-surface rounded-2xl shadow-sm">
+        <h3 class="text-base font-bold text-ink mb-1"><a href="/calorie-deficit-calculator/" class="text-brand hover:underline">Calorie Deficit Calculator</a></h3>
+        <p class="text-xs text-body m-0">Find your ideal daily calorie target for steady, sustainable fat loss without muscle loss.</p>
+      </div>
+      <div class="card p-5 border border-hairline bg-surface rounded-2xl shadow-sm">
+        <h3 class="text-base font-bold text-ink mb-1"><a href="/protein-calculator/" class="text-brand hover:underline">Protein Calorie Calculator</a></h3>
+        <p class="text-xs text-body m-0">Determine your exact daily and per-meal protein targets for muscle building and satiety.</p>
+      </div>
+    </div>
 
     <Sources sources={[
       { label: "Schoenfeld BJ, Aragon AA. How much protein can the body use in a single meal for muscle-building? J Int Soc Sports Nutr. 2018;15:10.", href: "https://pubmed.ncbi.nlm.nih.gov/29497353/" },

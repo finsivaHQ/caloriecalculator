@@ -11,6 +11,8 @@ const faqs: FaqItem[] = [
   { q: "What is the difference between a clean bulk and a dirty bulk calorie surplus?", a: "A clean (lean) bulk uses a controlled surplus of 200-300 kcal from nutrient-dense whole foods and high protein, resulting in mostly lean muscle gain. A dirty bulk uses an uncontrolled 700-1,500+ kcal surplus with ultra-processed foods, causing rapid fat accumulation, metabolic sluggishness, and requiring an agonizing subsequent cut." },
   { q: "How much weight should you gain per week on a lean bulk?", a: "Beginners should target 0.5 to 1.0 pound (0.25 to 0.45 kg) per week. Intermediates should aim for 0.25 to 0.5 pound per week. Advanced lifters should aim for roughly 0.5 to 1.0 pound per month to avoid purely gaining fat." },
   { q: "How do I calculate my calorie surplus for muscle gain?", a: "First, find your maintenance calories using our TDEE Calculator. Then add 200 to 300 kcal if you are lean/intermediate, or 300 to 500 kcal if you are a beginner or naturally very lean (hardgainer)." },
+  { q: "How do I calculate calories for bulking?", a: "To calculate bulking calories: 1) Calculate your maintenance TDEE using our TDEE Calculator. 2) Add a controlled surplus of 250 to 500 kcal per day (aiming for 0.5 to 1 lb of gain per week). 3) Set protein at 1.6 to 2.2 g/kg of body weight using our Protein Calculator. 4) Divide calories evenly across 3 to 5 meals using our Meal Calorie Calculator." },
+  { q: "What is a good bulking calorie surplus for beginners?", a: "Beginners experiencing rapid neuromuscular adaptations ('newbie gains') can thrive on a surplus of 300 to 500 calories per day, gaining up to 1 to 2 pounds of mostly lean tissue per month alongside heavy compound resistance training." },
 ];
 ---
 
@@ -309,6 +311,30 @@ const faqs: FaqItem[] = [
            <p class="text-body leading-relaxed font-light text-lg">Understanding how your body burns energy completely at rest is the foundational block of your nutrition. Knowing your Basal Metabolic Rate (BMR) with scientific precision is the mandatory first step.</p>
          </a>
       </div>
+
+      <section class="bg-surface p-8 md:p-14 rounded-[2.5rem] shadow-sm border border-hairline">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-ink mb-8 tracking-tight">Bulking Calorie Calculator: How to Set Your Daily Surplus</h2>
+        <p class="mb-6">
+          Calculating your exact bulking intake takes just four simple steps using our integrated tools:
+        </p>
+        <ol class="space-y-4 mb-8 list-decimal pl-6 text-base text-body">
+          <li><strong>Find Your True Maintenance TDEE:</strong> Use our <a href="/tdee-calculator/" class="text-brand font-semibold hover:underline">TDEE Calculator</a> to find your baseline caloric expenditure.</li>
+          <li><strong>Select Your Surplus Level:</strong>
+            <ul class="list-disc pl-5 mt-2 space-y-1">
+              <li><em>Lean Bulk (+200–300 kcal):</em> For intermediate and advanced lifters seeking minimum fat gain.</li>
+              <li><em>Standard Muscle Bulk (+300–500 kcal):</em> For beginners or naturally lean hardgainers looking for maximum muscle growth rate.</li>
+            </ul>
+          </li>
+          <li><strong>Lock In Your Protein Target:</strong> Use our <a href="/protein-calculator/" class="text-brand font-semibold hover:underline">Protein Calorie Calculator</a> to ensure you hit 1.6 to 2.2 grams of protein per kilogram of body weight.</li>
+          <li><strong>Structure Your Daily Meals:</strong> Plug your bulking target into our <a href="/meal-calorie-calculator/" class="text-brand font-semibold hover:underline">Meal Calorie Calculator</a> to divide your total into 4–5 manageable, high-energy meals.</li>
+        </ol>
+
+        <div class="my-8 rounded-2xl border border-hairline bg-canvas-soft p-6 text-center sm:p-8 not-prose">
+          <h3 class="text-xl font-bold text-ink mb-2">Ready to Calculate Your Bulking Target?</h3>
+          <p class="text-sm text-body mb-4">Start by finding your baseline maintenance calories with our science-backed calculator.</p>
+          <Button href="/tdee-calculator/" size="lg" variant="primary">Calculate Your Baseline TDEE Now</Button>
+        </div>
+      </section>
 
       <!-- Massive Calculator CTA -->
       <div class="relative overflow-hidden text-center bg-gradient-to-br from-blue-700 via-indigo-600 to-indigo-900 rounded-[3rem] p-12 md:p-20 shadow-2xl border border-white/10 group">

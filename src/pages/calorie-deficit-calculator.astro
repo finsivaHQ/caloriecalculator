@@ -17,6 +17,9 @@ const faqs: FaqItem[] = [
   { q: "Should I eat back workout calories when in a deficit?", a: "Generally, no. Fitness wearables and gym machines frequently overestimate exercise expenditure by 30% to 50%. If you eat back all logged workout calories, you risk erasing your deficit entirely. If extreme hunger strikes after strenuous sessions, consume a small 150–250 calorie protein or complex carb snack rather than matching workout estimates." },
   { q: "Why am I not losing weight in a calorie deficit?", a: "Common causes: underestimating food intake, overestimating activity, water retention, or needing to recalculate TDEE as weight drops." },
   { q: "How often should I adjust my calorie deficit?", a: "Recalculate every 4-6 weeks or when weight drops 5-10 lbs. Your TDEE decreases as you lose weight, requiring smaller deficits." },
+  { q: "How many calories should a woman eat to lose weight?", a: "Most adult women need between 1,300 and 1,700 calories per day to lose weight sustainably, depending on height, weight, and activity level. As a safety guideline, women should generally not consume fewer than 1,200 calories daily without medical supervision to protect metabolic and hormonal health." },
+  { q: "What is the minimum safe calorie intake for women?", a: "The clinical minimum safe intake for women is 1,200 calories per day. Going below 1,200 kcal severely limits essential micronutrient intake, lowers thyroid hormone production (T3), downregulates leptin, and can disrupt menstrual cycles." },
+  { q: "How to calculate calories to eat per day for weight loss?", a: "First, determine your Total Daily Energy Expenditure (TDEE) using this calculator. Then subtract 300 to 500 calories for a moderate deficit (producing ~0.5 to 1 lb of fat loss per week). For example, if your TDEE is 2,100 kcal, eat 1,600 kcal per day." },
 ];
 ---
 
@@ -184,6 +187,59 @@ const faqs: FaqItem[] = [
 
     <h3>Is it safe to go below 1,200 calories a day?</h3>
     <p>For the vast majority of adults, consuming fewer than 1,200 calories per day (for women) or 1,500 calories per day (for men) is not recommended without direct medical supervision. Such very-low-calorie diets make it incredibly difficult to obtain the essential micronutrients (vitamins and minerals) your body needs for long-term health. They also significantly increase the risk of gallstones, severe muscle loss, and metabolic adaptation. If your calculated deficit puts you below these thresholds, focus on increasing your daily activity (NEAT or exercise) to raise your TDEE, rather than further restricting your food intake.</p>
+
+    <h2>Calorie Deficit for Women: Safe Ranges & Hormonal Considerations</h2>
+    <p>When calculating a calorie deficit for women, special physiological and hormonal factors must be taken into account. While the fundamental law of energy balance (calories in vs. calories out) applies equally to everyone, female metabolic and endocrine systems are significantly more sensitive to aggressive caloric restriction.</p>
+
+    <div class="card p-6 border-l-4 border-brand bg-surface not-prose my-6 rounded-2xl shadow-sm">
+      <h3 class="text-lg font-bold text-ink mb-1">The 1,200 Calorie Floor:</h3>
+      <p class="text-sm text-body m-0">
+        Clinical nutrition guidelines recommend that adult women should <strong>never consume fewer than 1,200 calories per day</strong> unless under direct medical supervision. Dropping below 1,200 kcal triggers rapid reductions in active thyroid hormone (T3), suppresses leptin (increasing relentless hunger), risks bone density loss, and can disrupt reproductive hormone signaling (hypothalamic amenorrhea).
+      </p>
+    </div>
+
+    <div class="overflow-x-auto my-6">
+      <table>
+        <thead>
+          <tr>
+            <th>Female Profile & Activity</th>
+            <th>Typical TDEE</th>
+            <th>Recommended Weight Loss Target</th>
+            <th>Expected Weekly Fat Loss</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Petite / Sedentary</strong> (e.g. 5'2", 125–140 lbs, desk job)</td>
+            <td>1,500 – 1,700 kcal</td>
+            <td><strong>1,250 – 1,400 kcal/day</strong></td>
+            <td>~0.5 lb / week (Gentle)</td>
+          </tr>
+          <tr>
+            <td><strong>Average Height / Moderately Active</strong> (e.g. 5'5", 140–165 lbs, 3-4 workouts)</td>
+            <td>1,800 – 2,100 kcal</td>
+            <td><strong>1,400 – 1,600 kcal/day</strong></td>
+            <td>~0.75 – 1.0 lb / week (Standard)</td>
+          </tr>
+          <tr>
+            <td><strong>Tall / Highly Active</strong> (e.g. 5'8"+, 150+ lbs, heavy daily training)</td>
+            <td>2,200 – 2,500 kcal</td>
+            <td><strong>1,700 – 2,000 kcal/day</strong></td>
+            <td>~1.0 – 1.5 lbs / week (Standard)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>If you are a petite or sedentary woman whose calculated deficit falls below 1,200 kcal, <strong>do not slash your food intake further</strong>. Instead, raise your TDEE by increasing non-exercise activity (NEAT)—adding a daily 30-minute walk burns an extra 150–200 calories without elevating stress hormones, creating the necessary deficit safely.</p>
+
+    <h2>How to Plan Your Deficit Meals with Precision</h2>
+    <p>A calorie deficit only works if you can stick to it consistently without feeling deprived. Use our companion planning tools to translate your daily target into satisfying, real-world meals:</p>
+    <ul>
+      <li><strong>Split Your Calories Across Meals:</strong> Use our <a href="/meal-calorie-calculator/" class="text-brand font-semibold hover:underline">Meal Calorie Calculator</a> to divide your daily deficit budget across 3 to 4 balanced meals, preventing afternoon hunger crashes.</li>
+      <li><strong>Track Homemade Recipes:</strong> Multi-ingredient home cooking is where hidden calories from oils and dressings often hide. Use our <a href="/recipe-calorie-calculator/" class="text-brand font-semibold hover:underline">Recipe Calorie Calculator</a> to find the exact calories per serving in any homemade dish.</li>
+      <li><strong>Protect Muscle Mass:</strong> Calculate your daily protein floor with our <a href="/protein-calculator/" class="text-brand font-semibold hover:underline">Protein Calorie Calculator</a> (1.6–2.2 g/kg) to ensure the weight you lose is pure body fat.</li>
+    </ul>
 
     <h2>Tools to Pair With Your Calorie Deficit Plan</h2>
     <div class="grid gap-4 sm:grid-cols-2">
