@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560" role="img" aria-label="Lean Bulk vs Dirty Bulk Nutrient Partitioning and Rate of Weight Gain Matrix">
+  <defs>
+    <linearGradient id="matrixBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="leanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="dirtyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <linearGradient id="mainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="560" rx="20" fill="url(#matrixBg)"/>
+  <rect x="1" y="1" width="798" height="558" rx="19" fill="none" stroke="#1f2937" stroke-width="1.5"/>
+
+  <!-- Header Banner -->
+  <g transform="translate(40, 36)">
+    <rect x="0" y="0" width="180" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="90" y="15" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#34d399" text-anchor="middle" letter-spacing="1">HYPERTROPHY PROTOCOL</text>
+    <text x="0" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#f9fafb">The Lean Bulking Matrix: P-Ratio &amp; Calorie Surplus</text>
+    <text x="0" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#9ca3af">How caloric intake dictates nutrient partitioning between skeletal muscle and adipose tissue.</text>
+  </g>
+
+  <!-- Card 1: Lean Bulk (Recommended) -->
+  <g transform="translate(40, 130)" filter="url(#cardShadow)">
+    <rect width="226" height="270" rx="14" fill="#132326" stroke="#10b981" stroke-width="1.5"/>
+    <rect x="14" y="14" width="90" height="20" rx="6" fill="#065f46"/>
+    <text x="59" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#6ee7b7" text-anchor="middle">OPTIMAL ZONE</text>
+    
+    <text x="14" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800" fill="#ffffff">Lean Bulk</text>
+    <text x="14" y="78" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Controlled, calculated surplus</text>
+    
+    <line x1="14" y1="92" x2="212" y2="92" stroke="#1f3d35" stroke-width="1"/>
+
+    <text x="14" y="112" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#6ee7b7">Calorie Surplus:</text>
+    <text x="14" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#ffffff">+200 to +350 kcal/day</text>
+    
+    <text x="14" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#6ee7b7">Weekly Weight Gain:</text>
+    <text x="14" y="168" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#ffffff">0.5 – 1.0 lb / week</text>
+
+    <text x="14" y="192" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#6ee7b7">Nutrient Partitioning (P-Ratio):</text>
+    <!-- Partitioning Bar -->
+    <rect x="14" y="200" width="198" height="12" rx="4" fill="#334155"/>
+    <rect x="14" y="200" width="158" height="12" rx="4" fill="#10b981"/>
+    <text x="14" y="226" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#cbd5e1"><tspan fill="#34d399" font-weight="700">~80% Muscle</tspan> | ~20% Fat</text>
+
+    <text x="14" y="250" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#94a3b8">Result: Long, lean aesthetic phase</text>
+  </g>
+
+  <!-- Card 2: Dirty Bulk (High Risk) -->
+  <g transform="translate(286, 130)" filter="url(#cardShadow)">
+    <rect width="226" height="270" rx="14" fill="#241416" stroke="#ef4444" stroke-opacity="0.5" stroke-width="1.5"/>
+    <rect x="14" y="14" width="86" height="20" rx="6" fill="#7f1d1d"/>
+    <text x="57" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#fca5a5" text-anchor="middle">HIGH FAT RISK</text>
+    
+    <text x="14" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800" fill="#ffffff">Dirty Bulk</text>
+    <text x="14" y="78" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Uncontrolled, junk-heavy eating</text>
+    
+    <line x1="14" y1="92" x2="212" y2="92" stroke="#451a1e" stroke-width="1"/>
+
+    <text x="14" y="112" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#fca5a5">Calorie Surplus:</text>
+    <text x="14" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#ffffff">+750 to +1,500+ kcal/day</text>
+    
+    <text x="14" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#fca5a5">Weekly Weight Gain:</text>
+    <text x="14" y="168" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#ffffff">2.0 – 4.0+ lbs / week</text>
+
+    <text x="14" y="192" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#fca5a5">Nutrient Partitioning (P-Ratio):</text>
+    <!-- Partitioning Bar -->
+    <rect x="14" y="200" width="198" height="12" rx="4" fill="#ef4444"/>
+    <rect x="14" y="200" width="50" height="12" rx="4" fill="#3b82f6"/>
+    <text x="14" y="226" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#cbd5e1"><tspan fill="#60a5fa" font-weight="700">~25% Muscle</tspan> | <tspan fill="#f87171" font-weight="700">~75% Fat</tspan></text>
+
+    <text x="14" y="250" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#94a3b8">Result: Rapid belly fat &amp; sluggishness</text>
+  </g>
+
+  <!-- Card 3: Maingaining (Maintenance) -->
+  <g transform="translate(532, 130)" filter="url(#cardShadow)">
+    <rect width="228" height="270" rx="14" fill="#181829" stroke="#6366f1" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect x="14" y="14" width="94" height="20" rx="6" fill="#312e81"/>
+    <text x="61" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#a5b4fc" text-anchor="middle">SLOWEST GAIN</text>
+    
+    <text x="14" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800" fill="#ffffff">Maingaining</text>
+    <text x="14" y="78" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Eating at exact maintenance</text>
+    
+    <line x1="14" y1="92" x2="214" y2="92" stroke="#2d2a58" stroke-width="1"/>
+
+    <text x="14" y="112" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#a5b4fc">Calorie Surplus:</text>
+    <text x="14" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#ffffff">0 to +100 kcal (±0%)</text>
+    
+    <text x="14" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#a5b4fc">Weekly Weight Gain:</text>
+    <text x="14" y="168" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Flat Scale Weight (Recomp)</text>
+
+    <text x="14" y="192" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#a5b4fc">Nutrient Partitioning (P-Ratio):</text>
+    <!-- Partitioning Bar -->
+    <rect x="14" y="200" width="198" height="12" rx="4" fill="#334155"/>
+    <rect x="14" y="200" width="100" height="12" rx="4" fill="#6366f1"/>
+    <text x="14" y="226" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#cbd5e1">1:1 Substrate Recomposition</text>
+
+    <text x="14" y="250" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#94a3b8">Result: Sub-optimal for lean ectomorphs</text>
+  </g>
+
+  <!-- Bottom Bar: Scientific Macro Breakdown & Rules -->
+  <g transform="translate(40, 420)">
+    <rect width="720" height="105" rx="14" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+    
+    <!-- Rule 1: Protein -->
+    <g transform="translate(24, 20)">
+      <circle cx="16" cy="16" r="16" fill="#1e293b"/>
+      <text x="16" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#38bdf8" text-anchor="middle">1</text>
+      <text x="44" y="15" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#f9fafb">Protein Ceiling</text>
+      <text x="44" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#9ca3af">1.6 – 2.2 g/kg (0.7–1.0 g/lb)</text>
+      <text x="44" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#6b7280">Maximizes MPS without kidney burden</text>
+    </g>
+
+    <!-- Rule 2: High Carbs -->
+    <g transform="translate(264, 20)">
+      <circle cx="16" cy="16" r="16" fill="#1e293b"/>
+      <text x="16" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#34d399" text-anchor="middle">2</text>
+      <text x="44" y="15" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#f9fafb">High-Glycogen Carbs</text>
+      <text x="44" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#9ca3af">45% – 55% Total Calories</text>
+      <text x="44" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#6b7280">Suppresses cortisol &amp; powers lifting</text>
+    </g>
+
+    <!-- Rule 3: Heavy Compounds -->
+    <g transform="translate(504, 20)">
+      <circle cx="16" cy="16" r="16" fill="#1e293b"/>
+      <text x="16" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#fbbf24" text-anchor="middle">3</text>
+      <text x="44" y="15" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#f9fafb">Mechanical Overload</text>
+      <text x="44" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#9ca3af">Compound Lifts (3–5x/wk)</text>
+      <text x="44" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#6b7280">Directs surplus into myofibrils</text>
+    </g>
+  </g>
+</svg>
