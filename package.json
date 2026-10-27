@@ -6,11 +6,11 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node -e \"const fs=require('fs'); if(fs.existsSync('dist/sitemap-0.xml')){ fs.copyFileSync('dist/sitemap-0.xml','dist/sitemap.xml'); let idx=fs.readFileSync('dist/sitemap-index.xml','utf8'); idx=idx.replace(/sitemap-0\\\\.xml/g,'sitemap.xml'); fs.writeFileSync('dist/sitemap-index.xml',idx); }\"",
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
-    "deploy": "astro build && wrangler pages deploy dist --project-name caloriecalculator --branch main && node scripts/submit-indexnow.js",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name caloriecalculator --branch main && node scripts/submit-indexnow.js",
     "deploy:nobuild": "wrangler pages deploy dist --project-name caloriecalculator --branch main"
   },
   "dependencies": {
