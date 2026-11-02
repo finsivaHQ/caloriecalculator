@@ -1,213 +1,419 @@
 ---
-import CalculatorLayout from"../layouts/CalculatorLayout.astro";
-import Section from"../components/ui/Section.astro";
-import Button from"../components/ui/Button.astro";
+import CalculatorLayout from "../layouts/CalculatorLayout.astro";
+import Button from "../components/ui/Button.astro";
 
 const faqs = [
   {
-    q:"How many calories are in 1 gram of protein?",
-    a:"There are exactly 4 calories (kcal) in 1 gram of protein. This is the standard Atwater factor used globally for nutritional calculations."
+    q: "How many calories are in 1 gram of protein?",
+    a: "There are exactly 4 calories (kcal) in 1 gram of pure dietary protein. This is based on the internationally recognized Atwater energy factor used by nutrition scientists and food labeling authorities globally."
   },
   {
-    q:"How many calories is 150 grams of protein?",
-    a:"150 grams of protein contains 600 calories. (150g \u00d7 4 kcal/g = 600 kcal)."
+    q: "How to calculate calories from protein?",
+    a: "To calculate total calories from protein, multiply the grams of protein by 4. For example, if a chicken breast contains 40 grams of protein, the protein calories are 40 × 4 = 160 kcal."
   },
   {
-    q:"How many calories is 160g of protein?",
-    a:"160 grams of protein equals 640 calories. (160g \u00d7 4 kcal/g = 640 kcal)."
+    q: "How many calories is 150 grams of protein?",
+    a: "150 grams of protein contains exactly 600 calories (150g × 4 kcal/g = 600 kcal)."
   },
   {
-    q:"How many calories is 170 grams of protein?",
-    a:"170 grams of protein is equal to 680 calories. (170g \u00d7 4 kcal/g = 680 kcal)."
+    q: "How many calories is 160g of protein?",
+    a: "160 grams of protein equals 640 calories (160g × 4 kcal/g = 640 kcal)."
   },
   {
-    q:"How many calories is 180 grams of protein?",
-    a:"180 grams of protein provides 720 calories. (180g \u00d7 4 kcal/g = 720 kcal)."
+    q: "How many calories is 170 grams of protein?",
+    a: "170 grams of protein provides 680 calories (170g × 4 kcal/g = 680 kcal)."
   },
   {
-    q:"How many grams is 6 oz of protein?",
-    a:"6 ounces of cooked meat (like chicken breast) yields roughly 42 to 50 grams of actual protein. However, if you are asking about a pure protein powder supplement, 6 dry ounces equals 170 grams of weight, which would provide roughly 680 calories."
+    q: "How many calories is 180 grams of protein?",
+    a: "180 grams of protein equals 720 calories (180g × 4 kcal/g = 720 kcal)."
   },
   {
-    q:"How to calculate calories from protein?",
-    a:"To calculate the calories from any amount of protein, simply multiply the total grams of protein by 4. For example, if your meal has 30g of protein, the protein calories are 30 \u00d7 4 = 120 kcal."
+    q: "How many calories is 200 grams of protein?",
+    a: "200 grams of protein provides exactly 800 calories (200g × 4 kcal/g = 800 kcal)."
+  },
+  {
+    q: "How do you convert calories back into protein grams?",
+    a: "To convert protein calories back into grams, divide the calorie amount by 4. For example, if you allocate 500 calories of your daily budget to protein, that represents 500 ÷ 4 = 125 grams of protein."
+  },
+  {
+    q: "What percentage of daily calories should come from protein?",
+    a: "Dietary guidelines generally suggest 10% to 35% of total daily calories from protein. For active individuals, strength athletes, and those in a fat-loss deficit, nutrition research recommends targeting 25% to 35% of daily calories from protein (or 1.6 to 2.2 g per kg of bodyweight) to preserve lean mass."
+  },
+  {
+    q: "Why does protein burn 20% to 30% of its own calories during digestion (TEF)?",
+    a: "Protein has the highest Thermic Effect of Food (TEF) of all macronutrients. Because peptide bonds and amino acid structures require extensive enzymatic breakdown, your body expends 20% to 30% of protein's caloric energy just digesting and metabolizing it, meaning a net yield of roughly 2.8 to 3.2 kcal per gram."
   }
 ];
 
-const inputCls ="w-full rounded-xl border border-hairline bg-canvas px-4 py-2.5 text-ink transition-colors focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand";
+const inputCls = "w-full rounded-xl border border-hairline bg-canvas px-4 py-3 text-ink transition-colors focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand text-lg font-semibold";
 ---
 
 <CalculatorLayout
-  title="Protein to Calories Calculator (Grams to Kcal Converter)"
+  title="Protein to Calories Calculator: Grams to Calories (Kcal) Converter"
   exactTitle={true}
   h1="Protein to Calories Calculator"
-  description="Convert protein grams to calories instantly. Find out how many kilocalories are in a gram of protein, and calculate the exact energy ratio of your meals."
-  intro="Quickly calculate the caloric value of your protein intake. Since protein provides 4 kcal per gram, this simple converter instantly tells you how many calories come specifically from protein."
-  updated="2026-09-28"
+  description="Convert protein grams to calories and calories to protein grams instantly. Free protein calorie calculator, conversion formulas, TEF analysis, and reference charts."
+  intro="Convert protein grams to calories instantly. Since 1 gram of protein provides exactly 4 kilocalories, use this free converter to calculate the exact caloric value of your protein intake or convert calories back into grams."
+  updated="2026-11-02"
   path="/protein-to-calories-calculator/"
   faqs={faqs}
 >
   <div class="max-w-3xl mx-auto space-y-12">
-    <div class="card p-6 md:p-8">
-      <form id="converter-form" class="space-y-6" onsubmit="event.preventDefault();">
-        <div class="space-y-2">
+    <!-- Interactive Dual Converter Card -->
+    <div class="card p-6 md:p-8 shadow-sm">
+      <div class="flex items-center justify-center gap-2 mb-6 border-b border-hairline pb-4" role="tablist">
+        <button
+          type="button"
+          id="tab-g-to-cal"
+          class="px-5 py-2 rounded-lg font-semibold text-sm transition-all bg-brand text-white shadow-sm"
+          role="tab"
+          aria-selected="true"
+        >
+          Grams &rarr; Calories
+        </button>
+        <button
+          type="button"
+          id="tab-cal-to-g"
+          class="px-5 py-2 rounded-lg font-semibold text-sm transition-all text-mute hover:text-ink hover:bg-canvas-soft"
+          role="tab"
+          aria-selected="false"
+        >
+          Calories &rarr; Grams
+        </button>
+      </div>
+
+      <form id="converter-form" class="space-y-6">
+        <!-- Mode 1: Grams to Calories -->
+        <div id="mode-grams-container" class="space-y-2">
           <label for="protein-grams" class="block text-sm font-semibold text-ink">Protein Amount (Grams)</label>
-          <input 
-            type="number" 
-            id="protein-grams" 
-            class={inputCls} 
-            placeholder="e.g. 150" 
-            min="0" 
-            step="1"
-            value="150"
-          />
+          <div class="relative">
+            <input 
+              type="number" 
+              id="protein-grams" 
+              class={inputCls} 
+              placeholder="e.g. 150" 
+              min="0" 
+              step="1"
+              value="150"
+            />
+            <span class="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-medium text-mute pointer-events-none">grams</span>
+          </div>
+        </div>
+
+        <!-- Mode 2: Calories to Grams (Initially Hidden) -->
+        <div id="mode-calories-container" class="space-y-2 hidden">
+          <label for="protein-cals-input" class="block text-sm font-semibold text-ink">Target Calories from Protein</label>
+          <div class="relative">
+            <input 
+              type="number" 
+              id="protein-cals-input" 
+              class={inputCls} 
+              placeholder="e.g. 600" 
+              min="0" 
+              step="4"
+              value="600"
+            />
+            <span class="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-medium text-mute pointer-events-none">kcal</span>
+          </div>
         </div>
         
         <div class="rounded-2xl bg-canvas-soft border border-hairline p-6 text-center">
-          <p class="text-sm font-medium text-mute mb-2 uppercase tracking-wider">Total Protein Calories</p>
-          <div class="text-5xl font-extrabold text-brand tracking-tight mb-2" id="result-calories">600</div>
-          <p class="text-sm text-body">kcal</p>
+          <p id="result-label" class="text-xs font-bold text-mute mb-2 uppercase tracking-widest">Total Protein Calories</p>
+          <div class="text-5xl font-extrabold text-brand tracking-tight mb-2" id="result-value">600</div>
+          <p id="result-unit" class="text-sm font-medium text-body">kcal (calories)</p>
+          
+          <div class="mt-4 pt-4 border-t border-hairline/60 grid grid-cols-2 gap-4 text-left max-w-sm mx-auto text-xs text-mute">
+            <div>
+              <span class="block font-semibold text-ink">Gross Energy:</span>
+              <span id="gross-energy">600 kcal</span>
+            </div>
+            <div>
+              <span class="block font-semibold text-ink">Net Energy (TEF ~25%):</span>
+              <span id="net-energy">~450 kcal</span>
+            </div>
+          </div>
         </div>
         
-        <p class="text-xs text-mute text-center">
-          Based on the standard energy value of <strong>4 kilocalories per 1 gram of protein</strong>.
+        <p class="text-xs text-mute text-center leading-relaxed">
+          Calculation standard: <strong>1 gram of protein = 4.0 kilocalories (Atwater General Factor)</strong>.
         </p>
       </form>
     </div>
 
+    <!-- Direct Answer Callout Snippet -->
+    <div class="not-prose rounded-2xl border border-brand/20 bg-brand/5 p-6 md:p-8">
+      <div class="flex items-start gap-4">
+        <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand text-white font-bold text-lg">
+          4
+        </span>
+        <div>
+          <h2 class="text-xl font-bold text-ink mb-2">Direct Answer: How Many Calories in a Gram of Protein?</h2>
+          <p class="text-base leading-relaxed text-body">
+            There are exactly <strong>4 kilocalories (kcal)</strong> in 1 gram of protein. To calculate calories from any protein source, multiply grams by 4 (<code class="bg-surface px-2 py-0.5 rounded text-ink font-semibold">Calories = Grams × 4</code>). Conversely, to find protein grams from calories, divide by 4 (<code class="bg-surface px-2 py-0.5 rounded text-ink font-semibold">Grams = Calories ÷ 4</code>).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comprehensive Quick-Reference Conversion Table -->
+    <div class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink">Protein Grams to Calories Quick-Reference Matrix</h2>
+      <p class="text-base text-body">
+        Use this quick conversion chart to find the gross and net caloric footprint for common daily protein targets:
+      </p>
+
+      <div class="overflow-x-auto rounded-2xl border border-hairline bg-surface">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-canvas-soft border-b border-hairline text-xs font-bold uppercase tracking-wider text-mute">
+            <tr>
+              <th scope="col" class="py-3.5 px-4">Protein (Grams)</th>
+              <th scope="col" class="py-3.5 px-4">Gross Calories (4 kcal/g)</th>
+              <th scope="col" class="py-3.5 px-4">Net Digestible Calories (~25% TEF)</th>
+              <th scope="col" class="py-3.5 px-4">Real-World Whole Food Equivalent</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-hairline text-ink">
+            <tr class="hover:bg-canvas-soft/50">
+              <td class="py-3 px-4 font-bold text-brand">10 g</td>
+              <td class="py-3 px-4 font-semibold">40 kcal</td>
+              <td class="py-3 px-4 text-mute">~30 kcal</td>
+              <td class="py-3 px-4 text-mute">1.5 large whole eggs</td>
+            </tr>
+            <tr class="hover:bg-canvas-soft/50">
+              <td class="py-3 px-4 font-bold text-brand">20 g</td>
+              <td class="py-3 px-4 font-semibold">80 kcal</td>
+              <td class="py-3 px-4 text-mute">~60 kcal</td>
+              <td class="py-3 px-4 text-mute">1 cup low-fat cottage cheese or 3 egg whites</td>
+            </tr>
+            <tr class="hover:bg-canvas-soft/50">
+              <td class="py-3 px-4 font-bold text-brand">25 g</td>
+              <td class="py-3 px-4 font-semibold">100 kcal</td>
+              <td class="py-3 px-4 text-mute">~75 kcal</td>
+              <td class="py-3 px-4 text-mute">1 standard scoop of whey protein isolate</td>
+            </tr>
+            <tr class="hover:bg-canvas-soft/50">
+              <td class="py-3 px-4 font-bold text-brand">30 g</td>
+              <td class="py-3 px-4 font-semibold">120 kcal</td>
+              <td class="py-3 px-4 text-mute">~90 kcal</td>
+              <td class="py-3 px-4 text-mute">1 can (120g drained) light tuna or 1 cup Greek yogurt</td>
+            </tr>
+            <tr class="hover:bg-canvas-soft/50">
+              <td class="py-3 px-4 font-bold text-brand">40 g</td>
+              <td class="py-3 px-4 font-semibold">160 kcal</td>
+              <td class="py-3 px-4 text-mute">~120 kcal</td>
+              <td class="py-3 px-4 text-mute">130g cooked chicken breast or 170g firm tofu</td>
+            </tr>
+            <tr class="hover:bg-canvas-soft/50">
+              <td class="py-3 px-4 font-bold text-brand">50 g</td>
+              <td class="py-3 px-4 font-semibold">200 kcal</td>
+              <td class="py-3 px-4 text-mute">~150 kcal</td>
+              <td class="py-3 px-4 text-mute">165g cooked salmon or 6 oz lean sirloin steak</td>
+            </tr>
+            <tr class="hover:bg-canvas-soft/50">
+              <td class="py-3 px-4 font-bold text-brand">75 g</td>
+              <td class="py-3 px-4 font-semibold">300 kcal</td>
+              <td class="py-3 px-4 text-mute">~225 kcal</td>
+              <td class="py-3 px-4 text-mute">1 large chicken breast (250g) + 2 scrambled eggs</td>
+            </tr>
+            <tr class="hover:bg-canvas-soft/50">
+              <td class="py-3 px-4 font-bold text-brand">100 g</td>
+              <td class="py-3 px-4 font-semibold">400 kcal</td>
+              <td class="py-3 px-4 text-mute">~300 kcal</td>
+              <td class="py-3 px-4 text-mute">Daily target for a 50kg sedentary adult (2.0 g/kg)</td>
+            </tr>
+            <tr class="hover:bg-canvas-soft/50">
+              <td class="py-3 px-4 font-bold text-brand">120 g</td>
+              <td class="py-3 px-4 font-semibold">480 kcal</td>
+              <td class="py-3 px-4 text-mute">~360 kcal</td>
+              <td class="py-3 px-4 text-mute">Standard muscle maintenance target for 60kg adult</td>
+            </tr>
+            <tr class="hover:bg-canvas-soft/50">
+              <td class="py-3 px-4 font-bold text-brand">150 g</td>
+              <td class="py-3 px-4 font-semibold">600 kcal</td>
+              <td class="py-3 px-4 text-mute">~450 kcal</td>
+              <td class="py-3 px-4 text-mute">Optimal athletic target for 75kg individual (2.0 g/kg)</td>
+            </tr>
+            <tr class="hover:bg-canvas-soft/50">
+              <td class="py-3 px-4 font-bold text-brand">160 g</td>
+              <td class="py-3 px-4 font-semibold">640 kcal</td>
+              <td class="py-3 px-4 text-mute">~480 kcal</td>
+              <td class="py-3 px-4 text-mute">Recommended fat-loss target for 80kg lifter (2.0 g/kg)</td>
+            </tr>
+            <tr class="hover:bg-canvas-soft/50">
+              <td class="py-3 px-4 font-bold text-brand">170 g</td>
+              <td class="py-3 px-4 font-semibold">680 kcal</td>
+              <td class="py-3 px-4 text-mute">~510 kcal</td>
+              <td class="py-3 px-4 text-mute">High-protein target for 85kg active individual</td>
+            </tr>
+            <tr class="hover:bg-canvas-soft/50">
+              <td class="py-3 px-4 font-bold text-brand">180 g</td>
+              <td class="py-3 px-4 font-semibold">720 kcal</td>
+              <td class="py-3 px-4 text-mute">~540 kcal</td>
+              <td class="py-3 px-4 text-mute">Cutting target for 90kg resistance-trained athlete</td>
+            </tr>
+            <tr class="hover:bg-canvas-soft/50">
+              <td class="py-3 px-4 font-bold text-brand">200 g</td>
+              <td class="py-3 px-4 font-semibold">800 kcal</td>
+              <td class="py-3 px-4 text-mute">~600 kcal</td>
+              <td class="py-3 px-4 text-mute">Advanced bodybuilding intake for heavy strength training</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Prose Educational Deep Dive -->
     <div class="prose-content">
-      <h2>Understanding the Protein to Calories Conversion</h2>
+      <h2>Understanding the Science of Protein Calories</h2>
       <p>
-        When you embark on a fitness journey, whether your goal is to lose body fat, build lean muscle mass, or simply maintain a healthy lifestyle, understanding your macronutrients is non-negotiable. At the foundation of any macronutrient tracking protocol is the conversion of grams to calories. If you are tracking your macros, you frequently need to perform a <strong>protein to cal</strong> conversion to ensure your daily energy intake aligns with your metabolic targets.
+        Whether your objective is dropping body fat, building lean skeletal muscle, or optimizing overall body composition, understanding how macronutrients convert into usable metabolic energy is vital. In sports science and clinical nutrition, the standard calculation that establishes <strong>4 calories per gram of protein</strong> originates from the <strong>Atwater System</strong>, developed by chemist Wilbur Olin Atwater in the late nineteenth century.
       </p>
       <p>
-        Biologically, the human body extracts roughly 4 kilocalories of usable energy from every single gram of dietary protein. This standard measurement is derived from the Atwater system, a scientific method established in the late 19th century that calculates the available energy of foods. While protein, carbohydrates, and fats all provide energy, protein holds a unique position in nutritional science due to its complex metabolic pathways and crucial structural role in the human body. Unlike carbohydrates and fats, which are primarily stored or used for immediate energy, protein's primary function is cellular repair, muscle protein synthesis, and enzymatic function.
+        Using bomb calorimetry, Atwater determined that gross combustion of protein yields approximately 5.65 calories per gram. However, because the human body cannot oxidize nitrogen, nitrogenous waste must be converted by the liver into urea and excreted by the kidneys. Accounting for incomplete intestinal digestibility and urea loss, Atwater standardized the physiologically available energy of protein at <strong>4.0 kcal per gram</strong>.
       </p>
       
       <h3>How to Calculate Protein Calories Manually</h3>
       <p>
-        Using a <strong>macro to calorie calculator</strong> is the fastest way to get your numbers, but understanding the manual math is an essential skill for any diet protocol. Because one gram of protein equates to exactly four calories, the formula is incredibly straightforward.
-      </p>
-      <p>To perform a manual conversion:</p>
-      <ul>
-        <li>Identify your total protein intake in grams (e.g., from a nutrition label or food scale).</li>
-        <li>Multiply that exact number by 4.</li>
-        <li>The resulting number represents your total protein-derived calories.</li>
-      </ul>
-      <p>
-        For instance, if you frequently ask,"<em>1gm protein how many calories?</em>", the definitive answer is 4 kcal. Let's look at some real-world dietary examples to contextualize this:
+        While our calculator above converts values instantly, doing the manual calculation is simple:
       </p>
       <ul>
-        <li><strong>A Standard Whey Protein Shake:</strong> A typical scoop of whey isolate contains roughly 25 grams of protein. Multiplying 25g by 4 yields 100 calories strictly from protein.</li>
-        <li><strong>A Cooked Chicken Breast:</strong> A 6-ounce (170g) portion of cooked chicken breast delivers approximately 50 grams of protein. Using the 4x multiplier, we determine that 200 calories of that chicken breast come directly from protein.</li>
-        <li><strong>Large Eggs:</strong> Three large whole eggs provide about 18 grams of protein, contributing 72 protein-based calories to your breakfast.</li>
+        <li><strong>Step 1:</strong> Identify your total protein quantity in grams (from a food scale or nutrition facts label).</li>
+        <li><strong>Step 2:</strong> Multiply that number by 4 to get total gross protein calories (<code class="bg-surface px-2 py-0.5 rounded text-ink font-semibold">Calories = Grams × 4</code>).</li>
+        <li><strong>Step 3:</strong> To reverse the calculation, divide total protein calories by 4 to find equivalent grams (<code class="bg-surface px-2 py-0.5 rounded text-ink font-semibold">Grams = Calories ÷ 4</code>).</li>
       </ul>
-      <p>
-        By mastering this simple multiplication, you can effortlessly look at any plate of food and estimate its protein caloric value on the fly.
-      </p>
 
-      <h2>The Science Behind Protein Calories and Digestion</h2>
+      <!-- Thermic Effect of Food (TEF) Deep Dive -->
+      <h2>The Metabolic Advantage: The Thermic Effect of Food (TEF)</h2>
       <p>
-        To truly appreciate why protein is so highly regarded by dietitians, bodybuilders, and medical professionals, we must look under the hood at how the human digestive system processes this macronutrient. Protein molecules are massive, complex structures made up of long chains of amino acids bound together by tough peptide bonds. 
+        While protein officially carries 4 gross calories per gram, your body does not absorb all of that energy as net stored fat or fuel. This phenomenon is known as the <strong>Thermic Effect of Food (TEF)</strong>, or Diet-Induced Thermogenesis.
       </p>
       <p>
-        When you consume a protein-rich meal, the digestive process begins in the stomach. Here, hydrochloric acid denatures (unfolds) the intricate protein structures, allowing an enzyme called pepsin to begin cleaving the long amino acid chains into smaller peptides. This partially digested mixture then moves into the small intestine, where pancreatic enzymes further break the peptides down into individual, absorbable amino acids.
-      </p>
-      <p>
-        This rigorous, multi-stage digestive process is entirely different from the rapid breakdown of simple carbohydrates or the enzymatic emulsification of dietary fats. The sheer mechanical and chemical effort required to dismantle protein molecules demands a significant amount of metabolic energy.
-      </p>
-
-      <h3>The Thermic Effect of Food (TEF) and Protein</h3>
-      <p>
-        This brings us to one of the most critical concepts in sports nutrition: the Thermic Effect of Food (TEF), also known as Diet-Induced Thermogenesis. TEF refers to the amount of energy (calories) your body expends specifically to digest, absorb, and metabolize the food you eat. 
-      </p>
-      <p>
-        When you use a <strong>protein calorie calculator</strong>, the math tells you that 100 grams of protein equals 400 calories. However, your body does not get to"keep" all 400 of those calories. Protein is highly thermogenic. While it technically contains 4 calories per gram, your body expends between 20% to 30% of those calories just to break down and process the amino acids. 
-      </p>
-      <p>Let's compare the TEF of the three primary macronutrients:</p>
-      <ul>
-        <li><strong>Dietary Fat:</strong> 0% to 3% TEF</li>
-        <li><strong>Carbohydrates:</strong> 5% to 10% TEF</li>
-        <li><strong>Protein:</strong> 20% to 30% TEF</li>
-      </ul>
-      <p>
-        Because of this massive thermic effect, the"net" caloric value of protein is significantly lower than its gross value. If you consume 100 calories of pure protein, your body burns up to 30 of those calories during digestion, leaving a net yield of roughly 70 calories. This metabolic loophole makes high-protein diets incredibly effective for fat loss, as merely eating protein actively increases your total daily energy expenditure (TDEE).
-      </p>
-
-      <h2>Why Protein is the Ultimate Macro for Weight Loss</h2>
-      <p>
-        Beyond the metabolic advantage of TEF, protein provides several physiological benefits that make it the undisputed king of weight loss macronutrients. When caloric restriction is introduced, the body naturally seeks ways to conserve energy and reduce hunger, which often derails diet adherence. A high-protein intake mitigates these biological defense mechanisms through three primary pathways.
-      </p>
-      
-      <h4>1. Unmatched Satiety and Appetite Control</h4>
-      <p>
-        Protein is the most satiating macronutrient. Clinical studies consistently demonstrate that high-protein meals significantly reduce levels of ghrelin (the"hunger hormone") while simultaneously elevating the production of peptide YY (PYY) and GLP-1, which are hormones that signal fullness to the brain. By maximizing your protein calories, you can stay fuller for longer, radically reducing the likelihood of snacking or overeating later in the day.
-      </p>
-
-      <h4>2. Preservation of Lean Muscle Mass</h4>
-      <p>
-        When you eat in a caloric deficit to lose weight, your body doesn't just burn body fat; it will readily break down lean muscle tissue for energy if it isn't given a reason not to. Muscle is metabolically active tissue, meaning it burns calories around the clock. By consuming adequate protein calories and engaging in heavy resistance training, you trigger muscle protein synthesis (MPS). This preserves your hard-earned muscle mass, ensuring that the weight you lose comes strictly from adipose (fat) tissue, rather than metabolic-boosting muscle.
-      </p>
-
-      <h4>3. Blunting Blood Sugar Spikes</h4>
-      <p>
-        Unlike carbohydrates, which can cause rapid spikes and crashes in blood glucose and insulin levels, protein digests slowly. When paired with carbohydrates, protein acts as a buffer, slowing down the absorption of glucose into the bloodstream. This leads to steady, sustained energy levels and prevents the lethargy and intense sugar cravings that typically follow a carbohydrate-heavy meal.
-      </p>
-
-      <h3>Protein Calories vs. Fat and Carbohydrate Calories</h3>
-      <p>
-        While a calorie is a unit of energy, the hormonal and metabolic response to a calorie of protein is vastly different than a calorie of fat or carbohydrate. If two individuals consume the exact same amount of total calories, but one eats a diet consisting of 15% protein and the other eats a diet consisting of 35% protein, their body composition outcomes will likely diverge. The high-protein dieter will burn more calories at rest (via TEF), retain more muscle mass, and experience less subjective hunger. This is why manipulating your macronutrient ratios—specifically by prioritizing your <strong>protein to cal</strong> ratio—is a foundational strategy for long-term body transformation.
-      </p>
-
-      <h2>Expert Tips for Hitting Your Daily Protein Targets</h2>
-      <p>
-        Hitting a high protein goal can initially seem daunting. However, by strategically planning your meals and understanding how protein calories work, you can easily meet your targets.
+        Breaking down protein's tough peptide bonds and deaminating amino acids is metabolically expensive. The human body expends between <strong>20% to 30% of the calories consumed from protein</strong> strictly during digestion, absorption, and assimilation. Compare this to the other macronutrients:
       </p>
       <ul>
-        <li><strong>Distribute Your Protein Evenly:</strong> To maximize muscle protein synthesis, aim to consume 25 to 40 grams of protein per meal, spaced evenly throughout the day. The body does not store amino acids in the same way it stores fat or carbohydrates, so a steady supply is optimal for muscle repair.</li>
-        <li><strong>Prioritize High-Quality Sources:</strong> Not all protein calories are created equal. Animal-based proteins (such as whey, eggs, chicken, and beef) have a high Biological Value (BV) and contain all essential amino acids. If you follow a plant-based diet, ensure you are combining different protein sources (like rice and beans) or utilizing high-quality soy or pea protein isolates to achieve a complete amino acid profile.</li>
-        <li><strong>Lean vs. Fatty Proteins:</strong> Be mindful of the"hidden" calories in your protein sources. While a ribeye steak is packed with protein, it also contains a massive amount of fat calories. If your primary goal is fat loss, prioritize lean protein sources like egg whites, chicken breast, white fish, and non-fat Greek yogurt to maximize your protein intake without blowing past your total caloric ceiling.</li>
+        <li><strong>Dietary Fats:</strong> 0% to 3% TEF (very easily stored with almost zero digestive energy cost).</li>
+        <li><strong>Carbohydrates:</strong> 5% to 10% TEF (moderate digestive cost for glycogen synthesis).</li>
+        <li><strong>Protein:</strong> 20% to 30% TEF (the highest metabolic burn of any nutrient).</li>
       </ul>
+      <p>
+        <strong>What this means in practice:</strong> If you consume 600 calories from 150 grams of protein, your body expends approximately 120 to 180 of those calories just metabolizing the food, leaving a net yield of only ~420 to 480 calories. This metabolic tax makes high-protein diets exceptionally effective for fat loss and appetite suppression.
+      </p>
 
-      <h3>Using Our Protein Calories Calculator to Stay on Track</h3>
+      <h2>How Protein Calories Compare to Carbs and Fats</h2>
       <p>
-        Tracking your macros shouldn't require a degree in mathematics. Our simple <strong>macro to calorie calculator</strong> at the top of this page allows you to instantly determine the exact caloric footprint of your protein intake. Whether you are meal prepping for the week, analyzing a new recipe, or just curious about the nutritional profile of your favorite snack, simply input the total grams of protein to reveal the total kilocalories. 
+        All calories supply energy, but their physiological partitioning differs drastically:
       </p>
+      <div class="grid gap-4 sm:grid-cols-3 not-prose my-6">
+        <div class="card p-4 text-center bg-surface border border-hairline">
+          <p class="text-xs uppercase font-bold text-mute tracking-wider">Protein</p>
+          <p class="text-3xl font-extrabold text-brand mt-1 mb-1">4 kcal</p>
+          <p class="text-xs text-body">per gram (20-30% TEF)</p>
+        </div>
+        <div class="card p-4 text-center bg-surface border border-hairline">
+          <p class="text-xs uppercase font-bold text-mute tracking-wider">Carbohydrates</p>
+          <p class="text-3xl font-extrabold text-ink mt-1 mb-1">4 kcal</p>
+          <p class="text-xs text-body">per gram (5-10% TEF)</p>
+        </div>
+        <div class="card p-4 text-center bg-surface border border-hairline">
+          <p class="text-xs uppercase font-bold text-mute tracking-wider">Dietary Fat</p>
+          <p class="text-3xl font-extrabold text-ink mt-1 mb-1">9 kcal</p>
+          <p class="text-xs text-body">per gram (0-3% TEF)</p>
+        </div>
+      </div>
       <p>
-        If you are ready to take your nutrition to the next level and want to find out exactly how many grams of protein you should be eating every single day based on your unique body weight, activity level, and fitness goals, we have a comprehensive tool built exactly for that purpose. 
+        Because fat contains 9 kcal per gram, fatty protein sources (such as ribeye steaks, regular ground beef, or whole eggs) contain far more total calories than lean sources (such as chicken breast, egg whites, whey protein isolate, or cod). Always check whether your protein target includes fat-derived calories.
       </p>
-      
-      <div class="not-prose mt-8">
-        <Button href="/protein-calculator/" class="w-full justify-center">
-          Go to the Full Daily Protein Calculator
+
+      <!-- Contextual CTA to Full Intake Calculator -->
+      <div class="not-prose my-10 rounded-2xl border border-hairline bg-surface p-6 text-center">
+        <h3 class="text-xl font-bold text-ink mb-2">Want to know how many grams of protein your body requires daily?</h3>
+        <p class="text-sm text-body max-w-xl mx-auto mb-6">
+          While this converter tells you the caloric value of any protein amount, our comprehensive Daily Protein Calculator estimates your optimal daily gram intake based on your body weight, body fat, and fitness goal.
+        </p>
+        <Button href="/protein-calculator/" size="lg" class="w-full sm:w-auto">
+          Calculate Your Daily Protein Intake Target &rarr;
         </Button>
       </div>
 
       <div class="mt-8 pt-6 border-t border-hairline">
-        <h4 class="text-base font-semibold text-ink mb-2">Explore Related Nutrition Guides:</h4>
-        <ul class="text-sm space-y-1.5 list-none pl-0">
-          <li>• <a href="/guides/macro-guide/" class="text-brand hover:underline font-medium">How to Count Macros for Beginners: Step-by-Step Ratios</a></li>
-          <li>• <a href="/guides/how-many-calories-in-a-gram-guide/" class="text-brand hover:underline font-medium">Calories Per Gram of Protein, Carbs, Fat & Alcohol Chart</a></li>
-          <li>• <a href="/guides/body-recomposition-guide/" class="text-brand hover:underline font-medium">Body Recomposition: How to Build Muscle in a Deficit</a></li>
+        <h4 class="text-base font-semibold text-ink mb-2">Explore Related Nutrition Calculators & Guides:</h4>
+        <ul class="text-sm space-y-2 list-none pl-0">
+          <li>&bull; <a href="/protein-calculator/" class="text-brand hover:underline font-medium">Daily Protein Intake Calculator: Science-backed daily targets</a></li>
+          <li>&bull; <a href="/guides/macro-guide/" class="text-brand hover:underline font-medium">How to Count Macros for Beginners: Complete Step-by-Step Ratios</a></li>
+          <li>&bull; <a href="/guides/how-many-calories-in-a-gram-guide/" class="text-brand hover:underline font-medium">Calories Per Gram of Protein, Carbs, Fat & Alcohol Master Guide</a></li>
+          <li>&bull; <a href="/calorie-deficit-calculator/" class="text-brand hover:underline font-medium">Calorie Deficit Calculator for Sustainable Fat Loss</a></li>
         </ul>
       </div>
     </div>
   </div>
 
   <script>
-    const input = document.getElementById('protein-grams') as HTMLInputElement;
-    const result = document.getElementById('result-calories');
+    const tabGtoCal = document.getElementById('tab-g-to-cal') as HTMLButtonElement;
+    const tabCaltoG = document.getElementById('tab-cal-to-g') as HTMLButtonElement;
+    const gramsContainer = document.getElementById('mode-grams-container') as HTMLDivElement;
+    const calsContainer = document.getElementById('mode-calories-container') as HTMLDivElement;
+    const inputGrams = document.getElementById('protein-grams') as HTMLInputElement;
+    const inputCals = document.getElementById('protein-cals-input') as HTMLInputElement;
+    const resultLabel = document.getElementById('result-label') as HTMLParagraphElement;
+    const resultValue = document.getElementById('result-value') as HTMLDivElement;
+    const resultUnit = document.getElementById('result-unit') as HTMLParagraphElement;
+    const grossEnergy = document.getElementById('gross-energy') as HTMLSpanElement;
+    const netEnergy = document.getElementById('net-energy') as HTMLSpanElement;
+    const form = document.getElementById('converter-form') as HTMLFormElement;
 
-    function calculate() {
-      if (!input || !result) return;
-      const grams = parseFloat(input.value) || 0;
-      const cals = grams * 4;
-      result.textContent = cals.toLocaleString();
+    if (form) {
+      form.addEventListener('submit', (e) => e.preventDefault());
     }
 
-    if (input) {
-      input.addEventListener('input', calculate);
+    function updateGtoCal() {
+      if (!inputGrams || !resultValue) return;
+      const grams = parseFloat(inputGrams.value) || 0;
+      const cals = Math.round(grams * 4);
+      resultValue.textContent = cals.toLocaleString();
+      resultLabel.textContent = 'Total Protein Calories';
+      resultUnit.textContent = 'kcal (calories)';
+      if (grossEnergy) grossEnergy.textContent = `${cals.toLocaleString()} kcal`;
+      if (netEnergy) netEnergy.textContent = `~${Math.round(cals * 0.75).toLocaleString()} kcal`;
+    }
+
+    function updateCaltoG() {
+      if (!inputCals || !resultValue) return;
+      const cals = parseFloat(inputCals.value) || 0;
+      const grams = (cals / 4).toFixed(1);
+      resultValue.textContent = grams;
+      resultLabel.textContent = 'Required Protein Quantity';
+      resultUnit.textContent = 'grams of protein';
+      if (grossEnergy) grossEnergy.textContent = `${cals.toLocaleString()} kcal`;
+      if (netEnergy) netEnergy.textContent = `~${Math.round(cals * 0.75).toLocaleString()} kcal`;
+    }
+
+    if (tabGtoCal && tabCaltoG && gramsContainer && calsContainer) {
+      tabGtoCal.addEventListener('click', () => {
+        tabGtoCal.classList.add('bg-brand', 'text-white', 'shadow-sm');
+        tabGtoCal.classList.remove('text-mute', 'hover:text-ink', 'hover:bg-canvas-soft');
+        tabCaltoG.classList.remove('bg-brand', 'text-white', 'shadow-sm');
+        tabCaltoG.classList.add('text-mute', 'hover:text-ink', 'hover:bg-canvas-soft');
+        gramsContainer.classList.remove('hidden');
+        calsContainer.classList.add('hidden');
+        updateGtoCal();
+      });
+
+      tabCaltoG.addEventListener('click', () => {
+        tabCaltoG.classList.add('bg-brand', 'text-white', 'shadow-sm');
+        tabCaltoG.classList.remove('text-mute', 'hover:text-ink', 'hover:bg-canvas-soft');
+        tabGtoCal.classList.remove('bg-brand', 'text-white', 'shadow-sm');
+        tabGtoCal.classList.add('text-mute', 'hover:text-ink', 'hover:bg-canvas-soft');
+        calsContainer.classList.remove('hidden');
+        gramsContainer.classList.add('hidden');
+        updateCaltoG();
+      });
+    }
+
+    if (inputGrams) {
+      inputGrams.addEventListener('input', updateGtoCal);
+    }
+    if (inputCals) {
+      inputCals.addEventListener('input', updateCaltoG);
     }
   </script>
-
 </CalculatorLayout>
