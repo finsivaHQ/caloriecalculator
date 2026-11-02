@@ -102,7 +102,7 @@ const resolvedEsLink = explicitEs || mappedEs || defaultEs;
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrlString} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:locale" content={SITE.locale} />
+    <meta property="og:locale" content={lang.startsWith("es") ? "es_ES" : SITE.locale} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
