@@ -1,11 +1,91 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" role="img" aria-hidden="true">
-  <rect width="400" height="220" rx="16" fill="transparent"/>
-  <g transform="translate(200 110)">
-    <path d="M-30 20 C -30 -10 -10 -30 0 -30 C 10 -30 30 -10 30 20" fill="none" stroke="#0070f3" stroke-width="5" stroke-linecap="round"/>
-    <circle cx="-30" cy="20" r="6" fill="#0070f3"/>
-    <circle cx="0" cy="-30" r="6" fill="#0070f3"/>
-    <circle cx="30" cy="20" r="6" fill="#0070f3"/>
-    <path d="M-10 40 L10 40 L0 30 Z" fill="#0cce6b"/>
-    <text x="0" y="70" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#6b6b6b" text-anchor="middle">Running pace and speed</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Running Pace, Velocity and Calorie Burn Science">
+  <defs>
+    <linearGradient id="runSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="runTrack" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <filter id="runCardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" rx="16" fill="url(#runSky)"/>
+  <rect x="1" y="1" width="798" height="448" rx="15" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Top Header -->
+  <g transform="translate(48, 36)">
+    <rect x="0" y="0" width="130" height="24" rx="12" fill="#ea580c" fill-opacity="0.2" stroke="#f97316" stroke-width="1"/>
+    <text x="65" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#fb923c" text-anchor="middle" letter-spacing="1">PACE SCIENCE</text>
+    <text x="0" y="54" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800" fill="#f8fafc">Running Pace, Cadence &amp; Energy Expenditure</text>
+    <text x="0" y="76" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94a3b8">Metabolic Equivalent of Task (METs) and VO2 max cost across running velocities</text>
+  </g>
+
+  <!-- Left: Illustrated Runner & Track Dynamics -->
+  <g transform="translate(48, 130)">
+    <rect width="335" height="260" rx="16" fill="#1e293b" fill-opacity="0.7" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- Running Track Lanes Graphic -->
+    <path d="M40 180 C 40 100, 100 50, 180 50 C 260 50, 300 100, 300 180" fill="none" stroke="#ea580c" stroke-width="8" stroke-linecap="round"/>
+    <path d="M60 180 C 60 115, 110 75, 180 75 C 250 75, 280 115, 280 180" fill="none" stroke="#f97316" stroke-width="4" stroke-dasharray="8 6"/>
+
+    <!-- Kinetic Runner Silhouette -->
+    <!-- Head -->
+    <circle cx="175" cy="105" r="12" fill="#f8fafc"/>
+    <!-- Torso forward lean (8-10 degrees) -->
+    <line x1="175" y1="117" x2="168" y2="155" stroke="#f8fafc" stroke-width="6" stroke-linecap="round"/>
+    <!-- Lead Leg (Flight phase) -->
+    <polyline points="168,155 185,170 205,160" fill="none" stroke="#fb923c" stroke-width="5" stroke-linecap="round"/>
+    <!-- Trailing Leg (Push-off) -->
+    <polyline points="168,155 145,175 130,205" fill="none" stroke="#f8fafc" stroke-width="5" stroke-linecap="round"/>
+    <!-- Arms Swing -->
+    <polyline points="172,125 155,138 140,130" fill="none" stroke="#f8fafc" stroke-width="4" stroke-linecap="round"/>
+    <polyline points="172,125 190,140 205,132" fill="none" stroke="#f8fafc" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Bottom Stat Pill -->
+    <g transform="translate(30, 205)">
+      <rect width="275" height="40" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <text x="137" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#cbd5e1" text-anchor="middle">
+        Net Energy Cost: <tspan fill="#fb923c" font-weight="700">~1.0 kcal per kg</tspan> of body weight per km
+      </text>
+    </g>
+  </g>
+
+  <!-- Right: 3 Metric Cards -->
+  <!-- Card 1: Easy Jog -->
+  <g transform="translate(415, 130)" filter="url(#runCardGlow)">
+    <rect width="335" height="78" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="0" width="6" height="78" rx="3" fill="#38bdf8"/>
+    <text x="24" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#f8fafc">Easy Jog (5.0 mph / 12 min/mi)</text>
+    <text x="24" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">8.3 METs • Conversational aerobic baseline</text>
+    <text x="24" y="64" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#38bdf8">~550–700 kcal / hr</text>
+    <text x="270" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#0284c7">8.3</text>
+    <text x="270" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748b">METs</text>
+  </g>
+
+  <!-- Card 2: Moderate Endurance Run -->
+  <g transform="translate(415, 221)" filter="url(#runCardGlow)">
+    <rect width="335" height="78" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="0" width="6" height="78" rx="3" fill="#f97316"/>
+    <text x="24" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#f8fafc">Moderate Run (6.0 mph / 10 min/mi)</text>
+    <text x="24" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">9.8 METs • Standard continuous cardio tempo</text>
+    <text x="24" y="64" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#f97316">~680–860 kcal / hr</text>
+    <text x="270" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#d97706">9.8</text>
+    <text x="270" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748b">METs</text>
+  </g>
+
+  <!-- Card 3: Fast Tempo / Race Pace -->
+  <g transform="translate(415, 312)" filter="url(#runCardGlow)">
+    <rect width="335" height="78" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="0" width="6" height="78" rx="3" fill="#ef4444"/>
+    <text x="24" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#f8fafc">Fast Tempo / Sprint (7.5+ mph / &lt;8 min/mi)</text>
+    <text x="24" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">11.8–14.5 METs • High glycolytic expenditure</text>
+    <text x="24" y="64" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#ef4444">~850–1,150+ kcal / hr</text>
+    <text x="270" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#dc2626">11.8+</text>
+    <text x="270" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748b">METs</text>
   </g>
 </svg>

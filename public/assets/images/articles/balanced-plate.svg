@@ -1,10 +1,96 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" role="img" aria-hidden="true">
-  <rect width="400" height="220" rx="16" fill="transparent"/>
-  <g transform="translate(200 120)">
-    <ellipse cx="0" cy="48" rx="86" ry="18" fill="#ebebeb"/>
-    <circle cx="-40" cy="20" r="26" fill="#0cce6b"/>
-    <circle cx="4" cy="14" r="30" fill="#f5a623"/>
-    <rect x="36" y="-6" width="44" height="40" rx="8" fill="#0070f3"/>
-    <circle cx="58" cy="-18" r="14" fill="#ff0080" opacity="0.8"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Meal Calorie Distribution and Plate Ratio Diagram">
+  <defs>
+    <linearGradient id="mealSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="mealCardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" rx="16" fill="url(#mealSky)"/>
+  <rect x="1" y="1" width="798" height="448" rx="15" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Top Header -->
+  <g transform="translate(48, 36)">
+    <rect x="0" y="0" width="135" height="24" rx="12" fill="#059669" fill-opacity="0.2" stroke="#10b981" stroke-width="1"/>
+    <text x="67" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#34d399" text-anchor="middle" letter-spacing="1">MEAL PLANNING</text>
+    <text x="0" y="54" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800" fill="#f8fafc">Meal Calorie Distribution &amp; Macronutrient Splitting</text>
+    <text x="0" y="76" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94a3b8">How to divide daily calorie targets across meals for maximum satiety and energy</text>
+  </g>
+
+  <!-- Left: Plate Macro Quadrant Graphic -->
+  <g transform="translate(48, 130)">
+    <rect width="335" height="260" rx="16" fill="#1e293b" fill-opacity="0.7" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- Plate Outer Rim -->
+    <circle cx="167" cy="115" r="85" fill="#0f172a" stroke="#475569" stroke-width="4"/>
+    <circle cx="167" cy="115" r="75" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- Quadrant 1: Veggies / Fiber (40%) -->
+    <path d="M167 115 L167 40 A75 75 0 0 1 242 115 Z" fill="#10b981" fill-opacity="0.8"/>
+    <path d="M167 115 L242 115 A75 75 0 0 1 210 175 Z" fill="#10b981" fill-opacity="0.8"/>
+    <text x="210" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#ffffff">FIBER</text>
+    <text x="210" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" fill="#a7f3d0">40% Volume</text>
+
+    <!-- Quadrant 2: Protein (30%) -->
+    <path d="M167 115 L167 40 A75 75 0 0 0 92 115 Z" fill="#8b5cf6" fill-opacity="0.85"/>
+    <text x="125" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#ffffff">PROTEIN</text>
+    <text x="125" y="93" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" fill="#ddd6fe">30% Plate</text>
+
+    <!-- Quadrant 3: Complex Carbs (20%) -->
+    <path d="M167 115 L92 115 A75 75 0 0 0 140 188 Z" fill="#f59e0b" fill-opacity="0.85"/>
+    <text x="120" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="800" fill="#ffffff">CARBS</text>
+    <text x="120" y="157" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" fill="#fde68a">20%</text>
+
+    <!-- Quadrant 4: Fats (10%) -->
+    <path d="M167 115 L140 188 A75 75 0 0 0 210 175 Z" fill="#06b6d4" fill-opacity="0.85"/>
+    <text x="175" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="800" fill="#ffffff">FATS</text>
+
+    <!-- Center Hub -->
+    <circle cx="167" cy="115" r="14" fill="#0f172a" stroke="#64748b" stroke-width="2"/>
+
+    <!-- Bottom Tip -->
+    <g transform="translate(30, 215)">
+      <text x="137" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#cbd5e1" text-anchor="middle">
+        Protein + High-Volume Fiber = <tspan fill="#34d399" font-weight="700">Peak Satiety Hormone (PYY)</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- Right: 3 Meal Frequency Splits -->
+  <!-- Card 1: 3 Balanced Meals -->
+  <g transform="translate(415, 130)" filter="url(#mealCardGlow)">
+    <rect width="335" height="78" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="0" width="6" height="78" rx="3" fill="#3b82f6"/>
+    <text x="24" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#f8fafc">3 Standard Meals (Breakfast, Lunch, Dinner)</text>
+    <text x="24" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">33% / 33% / 33% • E.g. ~650 kcal per meal</text>
+    <text x="24" y="64" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#60a5fa">Classic structure, easy to sustain socially</text>
+    <text x="275" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800" fill="#3b82f6">3 MEALS</text>
+    <text x="275" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748b">PER DAY</text>
+  </g>
+
+  <!-- Card 2: 4 Meals Hypertrophy Split -->
+  <g transform="translate(415, 221)" filter="url(#mealCardGlow)">
+    <rect width="335" height="78" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="0" width="6" height="78" rx="3" fill="#10b981"/>
+    <text x="24" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#f8fafc">4 Meals Split (Every 3–4 Hours)</text>
+    <text x="24" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">25% each • E.g. ~500 kcal per meal</text>
+    <text x="24" y="64" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#34d399">Optimal for regular muscle protein synthesis</text>
+    <text x="275" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800" fill="#10b981">4 MEALS</text>
+    <text x="275" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748b">PER DAY</text>
+  </g>
+
+  <!-- Card 3: Intermittent Fasting (2 Large Meals) -->
+  <g transform="translate(415, 312)" filter="url(#mealCardGlow)">
+    <rect width="335" height="78" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="0" width="6" height="78" rx="3" fill="#f59e0b"/>
+    <text x="24" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#f8fafc">16/8 Intermittent Fasting (2 Large Meals)</text>
+    <text x="24" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">50% / 50% • E.g. ~1,000 kcal per meal</text>
+    <text x="24" y="64" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#f59e0b">High volume portions, simplifies meal prep</text>
+    <text x="275" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800" fill="#f59e0b">2 MEALS</text>
+    <text x="275" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748b">PER DAY</text>
   </g>
 </svg>

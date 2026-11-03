@@ -1,10 +1,95 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" role="img" aria-hidden="true">
-  <rect width="400" height="220" rx="16" fill="transparent"/>
-  <g transform="translate(200 110)">
-    <rect x="-80" y="-40" width="160" height="80" rx="10" fill="#ffffff" stroke="#ebebeb" stroke-width="2"/>
-    <rect x="-60" y="-20" width="40" height="40" rx="6" fill="#0070f3" opacity="0.15"/>
-    <rect x="-10" y="-30" width="40" height="50" rx="6" fill="#0070f3" opacity="0.25"/>
-    <rect x="40" y="-10" width="40" height="30" rx="6" fill="#0070f3" opacity="0.35"/>
-    <text x="0" y="56" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#6b6b6b" text-anchor="middle">Activity raises daily energy needs</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Total Daily Energy Expenditure TDEE Components Diagram">
+  <defs>
+    <linearGradient id="tdeeSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="tdeeCardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" rx="16" fill="url(#tdeeSky)"/>
+  <rect x="1" y="1" width="798" height="448" rx="15" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Top Header -->
+  <g transform="translate(48, 36)">
+    <rect x="0" y="0" width="130" height="24" rx="12" fill="#2563eb" fill-opacity="0.2" stroke="#3b82f6" stroke-width="1"/>
+    <text x="65" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#60a5fa" text-anchor="middle" letter-spacing="1">METABOLIC SCIENCE</text>
+    <text x="0" y="54" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800" fill="#f8fafc">The 4 Pillars of Total Daily Energy Expenditure (TDEE)</text>
+    <text x="0" y="76" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94a3b8">How your metabolism divides daily caloric expenditure across biology and movement</text>
+  </g>
+
+  <!-- Left: Stacked Breakdown Column -->
+  <g transform="translate(48, 130)">
+    <rect width="335" height="260" rx="16" fill="#1e293b" fill-opacity="0.7" stroke="#334155" stroke-width="1.5"/>
+    <text x="24" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#f8fafc">Daily Metabolic Breakdown (%)</text>
+
+    <!-- Pillar 1: BMR (60-70%) -->
+    <g transform="translate(24, 45)">
+      <rect width="287" height="44" rx="8" fill="#1d4ed8"/>
+      <text x="14" y="27" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" fill="#ffffff">BMR (Basal Metabolic Rate)</text>
+      <text x="273" y="27" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#bfdbfe" text-anchor="end">60–70%</text>
+    </g>
+
+    <!-- Pillar 2: NEAT (15-20%) -->
+    <g transform="translate(24, 95)">
+      <rect width="287" height="38" rx="8" fill="#0284c7"/>
+      <text x="14" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" fill="#ffffff">NEAT (Non-Exercise Activity)</text>
+      <text x="273" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#bae6fd" text-anchor="end">15–20%</text>
+    </g>
+
+    <!-- Pillar 3: TEF (8-10%) -->
+    <g transform="translate(24, 139)">
+      <rect width="287" height="34" rx="8" fill="#ea580c"/>
+      <text x="14" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" fill="#ffffff">TEF (Thermic Effect of Food)</text>
+      <text x="273" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#fed7aa" text-anchor="end">8–10%</text>
+    </g>
+
+    <!-- Pillar 4: EAT (5-10%) -->
+    <g transform="translate(24, 179)">
+      <rect width="287" height="34" rx="8" fill="#059669"/>
+      <text x="14" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" fill="#ffffff">EAT (Exercise Activity Thermogenesis)</text>
+      <text x="273" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#a7f3d0" text-anchor="end">5–10%</text>
+    </g>
+
+    <text x="167" y="240" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#94a3b8" text-anchor="middle">
+      TDEE = BMR × Physical Activity Level (PAL)
+    </text>
+  </g>
+
+  <!-- Right: 3 Activity Multipliers -->
+  <!-- Card 1: Sedentary -->
+  <g transform="translate(415, 130)" filter="url(#tdeeCardGlow)">
+    <rect width="335" height="78" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="0" width="6" height="78" rx="3" fill="#64748b"/>
+    <text x="24" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#f8fafc">Sedentary (Desk Job, Minimal Movement)</text>
+    <text x="24" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">BMR × 1.2 • Daily steps under 4,000</text>
+    <text x="24" y="64" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#94a3b8">Baseline human physiological cost</text>
+    <text x="275" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="#64748b">1.20×</text>
+    <text x="275" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748b">BMR</text>
+  </g>
+
+  <!-- Card 2: Moderately Active -->
+  <g transform="translate(415, 221)" filter="url(#tdeeCardGlow)">
+    <rect width="335" height="78" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="0" width="6" height="78" rx="3" fill="#3b82f6"/>
+    <text x="24" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#f8fafc">Moderately Active (3–5 Exercise Days/Wk)</text>
+    <text x="24" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">BMR × 1.55 • Consistent workouts + active steps</text>
+    <text x="24" y="64" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#60a5fa">Standard athletic adult expenditure</text>
+    <text x="275" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="#3b82f6">1.55×</text>
+    <text x="275" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748b">BMR</text>
+  </g>
+
+  <!-- Card 3: Very Active / Athlete -->
+  <g transform="translate(415, 312)" filter="url(#tdeeCardGlow)">
+    <rect width="335" height="78" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="0" width="6" height="78" rx="3" fill="#f97316"/>
+    <text x="24" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#f8fafc">Very Active / Heavy Labor (6–7 Days/Wk)</text>
+    <text x="24" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">BMR × 1.725 • High physical work or double sessions</text>
+    <text x="24" y="64" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#f97316">Requires high carbohydrate &amp; calorie refueling</text>
+    <text x="275" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="#ea580c">1.72×</text>
+    <text x="275" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748b">BMR</text>
   </g>
 </svg>

@@ -30,6 +30,7 @@ const { food, related } = Astro.props;
 const burnTimeWalking = Math.round(food.calories / 4); // 4 kcal/min walking
 const burnTimeRunning = Math.round(food.calories / 11); // 11 kcal/min running
 const burnTimeCycling = Math.round(food.calories / 8); // 8 kcal/min cycling
+const burnTimeSwimming = Math.round(food.calories / 10); // 10 kcal/min swimming
 
 const isHighProtein = food.protein >= 15;
 const isModerateProtein = food.protein >= 5 && food.protein < 15;
@@ -171,6 +172,7 @@ const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity
             <div class="flex justify-between items-center"><a href="/walking-calorie-calculator/" class="flex items-center gap-2 text-ink hover:text-brand hover:underline font-medium"><span>🚶</span> Walking (3mph)</a> <span>{burnTimeWalking} mins</span></div>
             <div class="flex justify-between items-center"><a href="/running-calorie-calculator/" class="flex items-center gap-2 text-ink hover:text-brand hover:underline font-medium"><span>🏃</span> Running (6mph)</a> <span>{burnTimeRunning} mins</span></div>
             <div class="flex justify-between items-center"><a href="/cycling-calories-calculator/" class="flex items-center gap-2 text-ink hover:text-brand hover:underline font-medium"><span>🚴</span> Cycling (12mph)</a> <span>{burnTimeCycling} mins</span></div>
+            <div class="flex justify-between items-center"><a href="/swimming-calories-calculator/" class="flex items-center gap-2 text-ink hover:text-brand hover:underline font-medium"><span>🏊</span> Swimming (Laps)</a> <span>{burnTimeSwimming} mins</span></div>
           </div>
         </div>
 
