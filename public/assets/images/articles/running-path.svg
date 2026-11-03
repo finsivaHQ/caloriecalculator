@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" role="img" aria-hidden="true">
+  <rect width="400" height="220" rx="16" fill="transparent"/>
+  <g transform="translate(200 110)">
+    <path d="M-30 20 C -30 -10 -10 -30 0 -30 C 10 -30 30 -10 30 20" fill="none" stroke="#0070f3" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="-30" cy="20" r="6" fill="#0070f3"/>
+    <circle cx="0" cy="-30" r="6" fill="#0070f3"/>
+    <circle cx="30" cy="20" r="6" fill="#0070f3"/>
+    <path d="M-10 40 L10 40 L0 30 Z" fill="#0cce6b"/>
+    <text x="0" y="70" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#6b6b6b" text-anchor="middle">Running pace and speed</text>
+  </g>
+</svg>

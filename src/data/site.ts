@@ -54,11 +54,14 @@ export const FOOTER: { title: string; links: NavLink[] }[] = [
       { label: "TDEE Calculator", href: "/tdee-calculator/" },
       { label: "Protein Calculator", href: "/protein-calculator/" },
       { label: "Protein to Calories Calculator", href: "/protein-to-calories-calculator/" },
-      { label: "Meal Calorie Calculator", href: "/meal-calorie-calculator/" },
-      { label: "Recipe Calorie Calculator", href: "/recipe-calorie-calculator/" },
+      { label: "Cycling Calories Calculator", href: "/cycling-calories-calculator/" },
       { label: "Running Calorie Calculator", href: "/running-calorie-calculator/" },
       { label: "Walking Calorie Calculator", href: "/walking-calorie-calculator/" },
+      { label: "Treadmill Calorie Calculator", href: "/treadmill-calorie-calculator/" },
+      { label: "Swimming Calories Calculator", href: "/swimming-calories-calculator/" },
       { label: "Calories Burned Calculator", href: "/calories-burned-calculator/" },
+      { label: "Meal Calorie Calculator", href: "/meal-calorie-calculator/" },
+      { label: "Recipe Calorie Calculator", href: "/recipe-calorie-calculator/" },
       { label: "Calculadora de Calorías (ES)", href: "/country/spain/calculadora-de-calorias/" },
     ],
   },
@@ -86,4 +89,3 @@ export const FOOTER: { title: string; links: NavLink[] }[] = [
     ],
   },
 ];
-
