@@ -63,7 +63,7 @@ const resolvedEsLink = explicitEs || mappedEs || defaultEs;
 ---
 
 <!doctype html>
-<html class="dark" lang={lang}>
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -163,19 +163,19 @@ const resolvedEsLink = explicitEs || mappedEs || defaultEs;
      crossorigin="anonymous"></script>
     */}
 
-    <!-- No-flash theme: dark mode is default; apply stored user preference if present. -->
+    <!-- No-flash theme: light mode is default; apply stored user preference if present. -->
     <script is:inline>
       (function () {
         try {
           var stored = localStorage.getItem("theme-preference");
-          var theme = stored || "dark";
-          if (theme === "light") {
-            document.documentElement.classList.remove("dark");
-          } else {
+          var theme = stored || "light";
+          if (theme === "dark") {
             document.documentElement.classList.add("dark");
+          } else {
+            document.documentElement.classList.remove("dark");
           }
         } catch (e) {
-          document.documentElement.classList.add("dark");
+          document.documentElement.classList.remove("dark");
         }
       })();
     </script>
