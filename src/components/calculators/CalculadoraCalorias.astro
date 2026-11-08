@@ -14,15 +14,15 @@ const selectCls = inputCls +" appearance-none bg-no-repeat pr-9";
   data-calc="calorie"
 >
   <!-- ── Form ───────────────────────────────────────────────── -->
-  <form id="calc-form" class="flex flex-col rounded-xl border border-hairline bg-surface p-5 sm:p-7 shadow-md transition-shadow hover:shadow-lg" novalidate>
+  <form id="calc-form" class="flex flex-col rounded-2xl border border-hairline bg-surface p-5 sm:p-7 shadow-xs hover:shadow-md transition-all duration-200" novalidate>
     <!-- Unit system -->
     <div
-      class="mb-6 grid grid-cols-2 gap-1 rounded-md border border-hairline bg-canvas-soft p-1"
+      class="mb-6 grid grid-cols-2 gap-1 rounded-full border border-hairline bg-canvas-soft p-1"
       role="tablist"
       aria-label="Unit system"
     >
-      <button type="button" data-unit="metric" class="unit-tab h-10 rounded text-sm font-medium transition-colors" role="tab" aria-selected="true">Métrico</button>
-      <button type="button" data-unit="imperial" class="unit-tab h-10 rounded text-sm font-medium transition-colors" role="tab" aria-selected="false">Imperial</button>
+      <button type="button" data-unit="metric" class="unit-tab h-10 rounded-full text-sm font-medium transition-colors" role="tab" aria-selected="true">Métrico</button>
+      <button type="button" data-unit="imperial" class="unit-tab h-10 rounded-full text-sm font-medium transition-colors" role="tab" aria-selected="false">Imperial</button>
     </div>
 
     <!-- Sex -->
@@ -91,14 +91,14 @@ const selectCls = inputCls +" appearance-none bg-no-repeat pr-9";
     </div>
 
     <div class="mt-auto pt-2">
-      <button type="submit" id="calc-btn" class="inline-flex h-12 w-full items-center justify-center rounded-md bg-brand text-base font-bold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:bg-brand-hover focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 active:scale-95">
+      <button type="submit" id="calc-btn" class="inline-flex h-12 w-full items-center justify-center rounded-full bg-brand text-base font-semibold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:bg-brand-hover focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 active:scale-95">
         Calcular calorías
       </button>
     </div>
   </form>
 
   <!-- ── Results ────────────────────────────────────────────── -->
-  <div id="calc-results" aria-live="polite" class="flex flex-col rounded-xl border border-hairline bg-surface shadow-md transition-shadow hover:shadow-lg overflow-hidden">
+  <div id="calc-results" aria-live="polite" class="flex flex-col rounded-2xl border border-hairline bg-surface shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden">
     <!-- Primary Result -->
     <div class="p-6 sm:p-8">
       <div class="flex flex-wrap items-end justify-between gap-4">
@@ -206,15 +206,15 @@ const selectCls = inputCls +" appearance-none bg-no-repeat pr-9";
         Las estimaciones utilizan la ecuación de Mifflin-St Jeor. Los resultados son estimados.
       </p>
       <div class="flex flex-wrap gap-2 w-full sm:w-auto">
-        <button type="button" id="copy-btn" class="flex-1 sm:flex-none inline-flex h-8 items-center justify-center gap-1.5 rounded border border-hairline bg-surface px-3 text-xs font-medium text-ink transition-colors hover:border-hairline-strong hover:bg-canvas-soft focus:outline-none focus:ring-2 focus:ring-brand">
+        <button type="button" id="copy-btn" class="flex-1 sm:flex-none inline-flex h-8 items-center justify-center gap-1.5 rounded-full border border-hairline bg-surface px-3.5 text-xs font-medium text-ink transition-colors hover:border-hairline-strong hover:bg-canvas-soft focus:outline-none focus:ring-2 focus:ring-brand">
           <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
           <span id="copy-label">Copiar</span>
         </button>
-        <button type="button" id="print-btn" class="flex-1 sm:flex-none inline-flex h-8 items-center justify-center gap-1.5 rounded border border-hairline bg-surface px-3 text-xs font-medium text-ink transition-colors hover:border-hairline-strong hover:bg-canvas-soft focus:outline-none focus:ring-2 focus:ring-brand">
+        <button type="button" id="print-btn" class="flex-1 sm:flex-none inline-flex h-8 items-center justify-center gap-1.5 rounded-full border border-hairline bg-surface px-3.5 text-xs font-medium text-ink transition-colors hover:border-hairline-strong hover:bg-canvas-soft focus:outline-none focus:ring-2 focus:ring-brand">
           <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg>
           Imprimir
         </button>
-        <button type="button" id="share-btn" class="flex-1 sm:flex-none inline-flex h-8 items-center justify-center gap-1.5 rounded border border-hairline bg-surface px-3 text-xs font-medium text-ink transition-colors hover:border-hairline-strong hover:bg-canvas-soft focus:outline-none focus:ring-2 focus:ring-brand">
+        <button type="button" id="share-btn" class="flex-1 sm:flex-none inline-flex h-8 items-center justify-center gap-1.5 rounded-full border border-hairline bg-surface px-3.5 text-xs font-medium text-ink transition-colors hover:border-hairline-strong hover:bg-canvas-soft focus:outline-none focus:ring-2 focus:ring-brand">
           <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
           <span id="share-label">Compartir</span>
         </button>

@@ -4,77 +4,122 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* ------------------------------------------------------------------ */
-/* Semantic color tokens — Professional, Trustworthy, Restrained      */
+/* Oura Ring Wellness Design System Tokens                            */
+/* Canvas: Warm Paper Cream (#f7f1e8)                                 */
+/* Brand: Decisive Action Blue (#2a72de)                              */
+/* Brand Neutral: Stone Taupe (#4a4741)                               */
+/* Earth Accents: Olive (#5c6f5d), Gold (#af751b), Clay (#6b443d)    */
 /* ------------------------------------------------------------------ */
 :root {
-  /* Light theme (Warm, neutral, high readability) */
-  --bg: #F7F6F1;
-  --bg-soft: #E6F7FA;
-  --bg-soft-2: #E6F7FA;
-  --surface: #FFFFFF;
-  --surface-elevated: #FFFFFF;
+  /* Oura Cream World (Warm-paper canvas, grounded & natural) */
+  --bg: #f7f1e8;
+  --bg-soft: #efe9df;
+  --bg-soft-2: #e8e1d5;
+  --surface: #ffffff;
+  --surface-elevated: #ffffff;
+  --surface-grey: #ececec;
 
-  --ink: #17232B;
-  --body: #17232B;
-  --mute: #64727A;
+  --ink: #1c1b1a;
+  --body: #393836;
+  --mute: #73706b;
 
-  --hairline: #DCE5E8;
-  --hairline-strong: #DCE5E8;
+  --hairline: #e1dcd3;
+  --hairline-strong: #ccc6bc;
 
-  /* Brand/Accent - Calming health-appropriate blue */
-  --primary: #08A9D6;
-  --primary-hover: #078DB5;
-  --primary-soft: #E6F7FA;
+  /* Decisive Action Blue — Oura's single conversion color */
+  --primary: #2a72de;
+  --primary-hover: #1e5ec2;
+  --primary-soft: #eaf1fc;
+
+  /* Stone — Warm Taupe Brand Neutral */
+  --stone: #4a4741;
+  --stone-hover: #33312c;
+  --stone-soft: #f0ede6;
+
+  /* Oura Earth Palette (for nutrition, macros, and scores) */
+  --olive: #5c6f5d;
+  --sage: #849671;
+  --sage-pale: #ced4b8;
+  --gold: #af751b;
+  --ochre: #bc924c;
+  --gold-soft: #ddaa61;
+  --clay: #6b443d;
+  --espresso: #39221e;
+
+  /* Macro / Nutrition Mapping */
+  --protein: #2a72de; /* Action Blue / Muscle */
+  --carbs: #af751b;   /* Gold / Daily Energy */
+  --fat: #6b443d;     /* Clay / Healthy Lipids */
+  --fiber: #5c6f5d;   /* Olive / Vitality */
 
   /* Status Colors */
-  --success: #16a34a;
-  --warning: #d97706;
-  --error: #dc2626;
+  --success: #5c6f5d;
+  --warning: #af751b;
+  --error: #e33a22;
 
-  --selection-bg: #E6F7FA;
-  --selection-fg: #075B82;
+  --selection-bg: #eaf1fc;
+  --selection-fg: #1c1b1a;
 
-  --shadow-color: 240deg 5% 65%;
-  --shadow-strength: 0.08;
+  --shadow-color: 25deg 10% 20%;
+  --shadow-strength: 0.04;
 }
 
 .dark {
-  /* Dark theme (Intentional near-black, professional) */
-  --bg: #08151C;
-  --bg-soft: #0D2029;
-  --bg-soft-2: #122A34;
-  --surface: #0D2029;
-  --surface-elevated: #122A34;
+  /* Oura Ink World (Deep charcoal-black with warm cream text) */
+  --bg: #141416;
+  --bg-soft: #1c1c1f;
+  --bg-soft-2: #242428;
+  --surface: #1c1c1f;
+  --surface-elevated: #242428;
+  --surface-grey: #2e2e33;
 
-  --ink: #EDF7F9;
-  --body: #EDF7F9;
-  --mute: #A9BBC2;
+  --ink: #f7f1e8;
+  --body: #d6d0c7;
+  --mute: #8e8b85;
 
-  --hairline: #28424C;
-  --hairline-strong: #28424C;
+  --hairline: #2e2d2a;
+  --hairline-strong: #3d3b37;
 
-  /* Brand/Accent - Adjusted for dark mode contrast */
-  --primary: #16B8E3;
-  --primary-hover: #39C5E8;
-  --primary-soft: #123641;
+  /* Adjusted Action Blue for dark mode readability */
+  --primary: #458bf5;
+  --primary-hover: #6ba4f8;
+  --primary-soft: #1a2638;
 
-  /* Status Colors */
-  --success: #22c55e;
-  --warning: #f59e0b;
-  --error: #ef4444;
+  --stone: #8e8b85;
+  --stone-hover: #a8a5a0;
+  --stone-soft: #252422;
 
-  --selection-bg: #0A6E96;
-  --selection-fg: #EDF7F9;
+  --olive: #738a74;
+  --sage: #9aab87;
+  --sage-pale: #363d30;
+  --gold: #c98a28;
+  --ochre: #d4a961;
+  --gold-soft: #e2ba73;
+  --clay: #8a5951;
+  --espresso: #4a302b;
+
+  --protein: #458bf5;
+  --carbs: #c98a28;
+  --fat: #8a5951;
+  --fiber: #738a74;
+
+  --success: #738a74;
+  --warning: #c98a28;
+  --error: #f0523a;
+
+  --selection-bg: #1e355b;
+  --selection-fg: #f7f1e8;
 
   --shadow-color: 0deg 0% 0%;
-  --shadow-strength: 0.3;
+  --shadow-strength: 0.4;
 }
 
 /* ------------------------------------------------------------------ */
-/* Theme mapping */
+/* Theme mapping                                                      */
 /* ------------------------------------------------------------------ */
 @theme inline {
-  --font-sans: "Geist Variable", system-ui, -apple-system, sans-serif;
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Newsreader", "Editorial New", "Playfair Display", Georgia, "Times New Roman", serif;
   --font-mono: "Geist Mono Variable", ui-monospace, SFMono-Regular, monospace;
 
   /* Surfaces & text */
@@ -83,6 +128,7 @@
   --color-canvas-soft-2: var(--bg-soft-2);
   --color-surface: var(--surface);
   --color-surface-elevated: var(--surface-elevated);
+  --color-surface-grey: var(--surface-grey);
   --color-ink: var(--ink);
   --color-body: var(--body);
   --color-mute: var(--mute);
@@ -93,25 +139,38 @@
   --color-brand: var(--primary);
   --color-brand-hover: var(--primary-hover);
   --color-brand-soft: var(--primary-soft);
+  --color-stone: var(--stone);
+  --color-stone-hover: var(--stone-hover);
+  --color-stone-soft: var(--stone-soft);
   --color-success: var(--success);
   --color-warning: var(--warning);
   --color-error: var(--error);
 
-  /* Macro / chart palette - more muted */
-  --color-protein: #0284c7;
-  --color-carbs: #d97706;
-  --color-fat: #be185d;
-  --color-fiber: #7e22ce;
+  /* Oura Earth Palette */
+  --color-olive: var(--olive);
+  --color-sage: var(--sage);
+  --color-sage-pale: var(--sage-pale);
+  --color-gold: var(--gold);
+  --color-ochre: var(--ochre);
+  --color-clay: var(--clay);
+  --color-espresso: var(--espresso);
 
-  /* Radius scale - More restrained */
-  --radius-xs: 2px;
-  --radius-sm: 4px;
-  --radius-md: 6px; /* Forms, controls */
-  --radius-lg: 10px; /* Small cards */
-  --radius-xl: 12px; /* Cards */
-  --radius-2xl: 16px; /* Major surfaces */
+  /* Macro / chart palette */
+  --color-protein: var(--protein);
+  --color-carbs: var(--carbs);
+  --color-fat: var(--fat);
+  --color-fiber: var(--fiber);
 
-  /* Spacing Scale - Consistent predictable values */
+  /* Radius scale — Oura features generous pill buttons and softly curved cards */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;  /* Inputs, selects */
+  --radius-lg: 16px;  /* Medium cards */
+  --radius-xl: 20px;  /* Large cards */
+  --radius-2xl: 24px; /* Feature containers */
+  --radius-full: 9999px; /* Oura pill buttons */
+
+  /* Spacing Scale */
   --spacing-1: 0.25rem; /* 4px */
   --spacing-2: 0.5rem;  /* 8px */
   --spacing-3: 0.75rem; /* 12px */
@@ -122,33 +181,33 @@
   --spacing-16: 4rem;   /* 64px */
   --spacing-20: 5rem;   /* 80px */
 
-  /* Type scale — fluid display sizes */
-  --text-display-xl: clamp(2.5rem, 1.6rem + 4vw, 4rem);
-  --text-display-xl--line-height: 1.05;
-  --text-display-xl--letter-spacing: -0.03em;
-  --text-display-xl--font-weight: 700;
+  /* Type scale — Oura Editorial display */
+  --text-display-xl: clamp(2.5rem, 1.8rem + 3.8vw, 4.25rem);
+  --text-display-xl--line-height: 1.08;
+  --text-display-xl--letter-spacing: -0.025em;
+  --text-display-xl--font-weight: 400;
 
-  --text-display-lg: clamp(2rem, 1.4rem + 2.6vw, 3rem);
-  --text-display-lg--line-height: 1.1;
-  --text-display-lg--letter-spacing: -0.025em;
-  --text-display-lg--font-weight: 700;
+  --text-display-lg: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+  --text-display-lg--line-height: 1.12;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 400;
 
-  --text-display-md: clamp(1.5rem, 1.2rem + 1.4vw, 2rem);
-  --text-display-md--line-height: 1.15;
-  --text-display-md--letter-spacing: -0.02em;
-  --text-display-md--font-weight: 700;
+  --text-display-md: clamp(1.5rem, 1.25rem + 1.2vw, 2rem);
+  --text-display-md--line-height: 1.2;
+  --text-display-md--letter-spacing: -0.015em;
+  --text-display-md--font-weight: 400;
 
   --text-display-sm: 1.25rem;
-  --text-display-sm--line-height: 1.4;
-  --text-display-sm--letter-spacing: -0.015em;
-  --text-display-sm--font-weight: 700;
+  --text-display-sm--line-height: 1.35;
+  --text-display-sm--letter-spacing: -0.01em;
+  --text-display-sm--font-weight: 500;
 
   /* Easing */
   --ease-out-soft: cubic-bezier(0.2, 0.0, 0, 1.0);
 }
 
 /* ------------------------------------------------------------------ */
-/* Base styles */
+/* Base styles                                                        */
 /* ------------------------------------------------------------------ */
 @layer base {
   html {
@@ -162,24 +221,31 @@
     background-color: var(--color-canvas);
     color: var(--color-body);
     font-family: var(--font-sans);
-    font-feature-settings: "cv01", "cv02", "ss03";
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     line-height: 1.6;
   }
 
-  /* Typography System */
-  h1, h2, h3, h4, h5, h6 {
+  /* Oura High-Contrast Editorial Serif for display headings */
+  h1, h2 {
+    font-family: var(--font-serif);
+    color: var(--color-ink);
+    text-wrap: balance;
+    font-weight: 400;
+  }
+
+  h3, h4, h5, h6 {
+    font-family: var(--font-sans);
     color: var(--color-ink);
     text-wrap: balance;
     font-weight: 600;
   }
 
   /* Heading Hierarchy */
-  h1 { font-size: clamp(2rem, 1.5rem + 2.5vw, 2.5rem); line-height: 1.2; letter-spacing: -0.02em; }
-  h2 { font-size: clamp(1.5rem, 1.2rem + 1.5vw, 1.75rem); line-height: 1.3; letter-spacing: -0.015em; }
-  h3 { font-size: clamp(1.25rem, 1.1rem + 1vw, 1.5rem); line-height: 1.4; letter-spacing: -0.01em; }
-  h4 { font-size: 1.125rem; line-height: 1.5; font-weight: 500; }
+  h1 { font-size: clamp(2.25rem, 1.6rem + 2.8vw, 3.25rem); line-height: 1.12; letter-spacing: -0.025em; }
+  h2 { font-size: clamp(1.65rem, 1.25rem + 1.8vw, 2.25rem); line-height: 1.2; letter-spacing: -0.02em; }
+  h3 { font-size: clamp(1.25rem, 1.1rem + 0.8vw, 1.5rem); line-height: 1.35; letter-spacing: -0.01em; }
+  h4 { font-size: 1.125rem; line-height: 1.45; font-weight: 600; }
 
   p { text-wrap: pretty; }
 
@@ -205,40 +271,41 @@
 }
 
 /* ------------------------------------------------------------------ */
-/* Reusable component utilities */
+/* Reusable component utilities                                       */
 /* ------------------------------------------------------------------ */
 @layer components {
-  /* Removed vibrant gradients. Replaced with simpler emphasis */
-  .text-gradient,
-  .text-gradient-vibrant {
-    color: var(--color-ink);
-  }
-
   .border-hairline {
     border: 1px solid var(--color-hairline);
   }
 
-  /* Professional Card - More border, less shadow */
+  /* Oura Restrained Card: Crisp hairline border, generous rounded corners, warm surface */
   .card {
     background-color: var(--color-surface);
     border: 1px solid var(--color-hairline);
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-2xl);
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / var(--shadow-strength));
-    transition: border-color 0.15s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
   .card:hover {
     border-color: var(--color-hairline-strong);
-  }
-
-  .bg-grid {
-    /* Removed decorative grid */
+    box-shadow: 0 4px 12px 0 rgb(0 0 0 / calc(var(--shadow-strength) * 1.5));
   }
 
   .container-page {
     width: 100%;
-    max-width: 1100px; /* Slightly tighter reading width */
+    max-width: 1120px;
     margin-inline: auto;
     padding-inline: 1.5rem;
+  }
+
+  /* Oura Eyebrow Tag */
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-brand);
   }
 
   /* Prose for articles and calculators */
@@ -246,46 +313,55 @@
     color: var(--color-body);
   }
   .prose-content h1,
-  .prose-content h2,
-  .prose-content h3,
-  .prose-content h4 {
+  .prose-content h2 {
+    font-family: var(--font-serif);
+    font-weight: 400;
     color: var(--color-ink);
   }
-  .prose-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+  .prose-content h3,
+  .prose-content h4 {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    color: var(--color-ink);
+  }
+  .prose-content h2 { margin-top: 2.75rem; margin-bottom: 1rem; }
   .prose-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; }
-  .prose-content p { color: var(--color-body); margin-bottom: 1.25rem; }
+  .prose-content p { color: var(--color-body); margin-bottom: 1.25rem; font-size: 1.0625rem; line-height: 1.7; }
   .prose-content ul, .prose-content ol { padding-left: 1.5rem; margin-bottom: 1.25rem; }
   .prose-content ul { list-style: disc; }
   .prose-content ol { list-style: decimal; }
-  .prose-content li { color: var(--color-body); margin-bottom: 0.5rem; }
+  .prose-content li { color: var(--color-body); margin-bottom: 0.5rem; font-size: 1.0625rem; }
   .prose-content a { color: var(--color-brand); text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
   .prose-content a:hover { color: var(--color-brand-hover); }
   .prose-content strong { color: var(--color-ink); font-weight: 600; }
   .prose-content blockquote {
-    border-left: 4px solid var(--color-hairline-strong);
-    padding-left: 1rem;
-    margin: 1.5rem 0;
-    color: var(--color-body);
+    border-left: 3px solid var(--color-stone);
+    padding-left: 1.25rem;
+    margin: 1.75rem 0;
+    color: var(--color-stone);
     font-style: italic;
+    background-color: var(--color-canvas-soft);
+    padding-block: 0.75rem;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
   }
   .prose-content table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     margin-bottom: 1.5rem;
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-md);
     display: block;
     overflow-x: auto;
   }
   .prose-content th, .prose-content td {
     border: 1px solid var(--color-hairline);
-    padding: 0.75rem 1rem;
+    padding: 0.875rem 1rem;
     text-align: left;
     color: var(--color-body);
   }
   .prose-content th {
     color: var(--color-ink);
-    font-weight: 500;
+    font-weight: 600;
     background: var(--color-canvas-soft);
   }
 
@@ -300,7 +376,7 @@
     --tw-prose-bullets: var(--color-mute);
     --tw-prose-hr: var(--color-hairline);
     --tw-prose-quotes: var(--color-body);
-    --tw-prose-quote-borders: var(--color-hairline-strong);
+    --tw-prose-quote-borders: var(--color-stone);
     --tw-prose-captions: var(--color-mute);
     --tw-prose-code: var(--color-ink);
     --tw-prose-pre-code: var(--color-ink);
@@ -359,28 +435,28 @@
   a { text-decoration: none !important; color: #000 !important; }
 }
 
-/* Form Controls System */
+/* Form Controls System — Oura Precision & Pill Form Styling */
 @layer components {
   /* Shared input styling */
   .form-input {
     width: 100%;
-    border: 1px solid var(--color-hairline-strong);
+    border: 1px solid var(--color-hairline);
     background-color: var(--color-surface);
     color: var(--color-ink);
     border-radius: var(--radius-md);
-    padding: 0.625rem 0.75rem;
+    padding: 0.6875rem 0.875rem;
     font-size: 1rem; /* Prevents iOS zoom */
     line-height: 1.5;
     transition: border-color 0.15s, box-shadow 0.15s;
     appearance: none;
   }
   .form-input:hover:not(:focus) {
-    border-color: var(--color-mute);
+    border-color: var(--color-hairline-strong);
   }
   .form-input:focus {
     outline: none;
     border-color: var(--color-brand);
-    box-shadow: 0 0 0 1px var(--color-brand);
+    box-shadow: 0 0 0 2px var(--color-brand-soft);
   }
   .form-input::placeholder { color: var(--color-mute); opacity: 0.7; }
 
@@ -403,6 +479,52 @@
     font-size: 0.75rem;
     color: var(--color-mute);
     margin-top: 0.25rem;
+  }
+
+  /* Oura Action Pill Button */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: var(--color-brand);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    padding: 0.75rem 1.75rem;
+    border-radius: var(--radius-full);
+    transition: all 0.2s var(--ease-out-soft);
+    box-shadow: 0 1px 2px rgba(42, 114, 222, 0.15);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-brand-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(42, 114, 222, 0.25);
+  }
+  .btn-primary:active {
+    transform: translateY(0);
+    scale: 0.98;
+  }
+
+  /* Oura Stone Pill Button */
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: var(--color-surface);
+    color: var(--color-stone);
+    border: 1px solid var(--color-hairline-strong);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    padding: 0.75rem 1.75rem;
+    border-radius: var(--radius-full);
+    transition: all 0.2s var(--ease-out-soft);
+  }
+  .btn-secondary:hover {
+    background-color: var(--color-canvas-soft);
+    color: var(--color-ink);
+    border-color: var(--color-stone);
   }
 }
 
